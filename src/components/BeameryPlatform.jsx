@@ -198,7 +198,7 @@ export const BeameryPlatform = () => {
   // Current language for prefixing internal links — matches LanguageLayout's
   // /:lang/* URL shape. Falls back to 'en' on the off chance this component
   // ever renders outside a /:lang route (it shouldn't).
-  const { lang = 'en' } = useParams();
+  const { locale: lang = 'en' } = useParams();
   const [active, setActive] = useState(0);
   const pillar = PILLARS[active];
   const data = {
@@ -262,7 +262,7 @@ export const BeameryPlatform = () => {
               ))}
             </ul>
             <Link
-              to={`/${lang}${pillar.href}`}
+              href={`/${lang}${pillar.href}`}
               className="mt-8 cs-btn cs-btn-ghost inline-flex"
               data-testid={`platform-cta-${pillar.key}`}
             >

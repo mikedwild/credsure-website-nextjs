@@ -1,5 +1,5 @@
-import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import { IntlClientProvider } from "@/components/IntlClientProvider";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Inter } from "next/font/google";
@@ -26,11 +26,11 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={inter.className}>
+    <html lang={locale} className={inter.className} suppressHydrationWarning>
       <body className="min-h-screen flex flex-col">
-        <NextIntlClientProvider messages={messages}>
+        <IntlClientProvider locale={locale} messages={messages}>
           {children}
-        </NextIntlClientProvider>
+        </IntlClientProvider>
       </body>
     </html>
   );

@@ -1,17 +1,17 @@
 "use client";
 import React from 'react';
 import { useNavigate, useParams, useLocation } from '@/lib/router-shim';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useLocale } from 'next-intl';
 import { Globe } from 'lucide-react';
 import { localePath } from '@/utils/localePath';
 
 export const LanguageSwitcher = () => {
-  const { i18n } = useTranslation();
-  const { lang } = useParams();
+  const locale = useLocale();
+  const { locale: lang } = useParams();
   const location = useLocation();
   const navigate = useNavigate();
 
-  const currentLang = lang || i18n.language || 'en';
+  const currentLang = lang || locale || 'en';
   const otherLang = currentLang === 'en' ? 'de' : 'en';
   const otherLabel = otherLang === 'en' ? 'English' : 'Deutsch';
 
@@ -20,8 +20,9 @@ export const LanguageSwitcher = () => {
     const currentPath = location.pathname;
     const slug = currentPath.replace(/^\/(en|de)\/?/, '/') || '/';
     const newPath = localePath(slug, otherLang);
-    i18n.changeLanguage(otherLang);
-    localStorage.setItem('credsure-lang', otherLang);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('credsure-lang', otherLang);
+    }
     navigate(newPath);
   };
 
