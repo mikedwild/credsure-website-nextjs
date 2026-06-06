@@ -2,7 +2,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useParams, useLocation } from '@/lib/router-shim';
 import { LocalizedLink as Link } from '@/components/LocalizedLink';
-import { useTranslations as useTranslation, useLocale } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
+import { useLocale } from 'next-intl';
 import { SEO, createArticleSchema, createBreadcrumbSchema, getBaseUrl } from '@/components/SEO';
 import { motion } from 'framer-motion';
 import DOMPurify from 'dompurify';

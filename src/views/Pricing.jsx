@@ -2,7 +2,7 @@
 import React, { lazy, Suspense } from 'react';
 import { LocalizedLink as Link } from '@/components/LocalizedLink';
 import { Calculator } from 'lucide-react';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { useLocalizedNavigate } from '@/hooks/useLocalizedNavigate';
 import { SEO, createBreadcrumbSchema, createPricingProductSchema, combineSchemas, getBaseUrl } from '@/components/SEO';
 import { Pricing2026 } from '@/components/Pricing2026';

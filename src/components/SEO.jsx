@@ -2,7 +2,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet-async';
-import { useTranslations as useTranslation, useLocale } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
+import { useLocale } from 'next-intl';
 import { useLocation } from '@/lib/router-shim';
 import { enToRoute, deToRoute } from '@/config/routeConfig';
 

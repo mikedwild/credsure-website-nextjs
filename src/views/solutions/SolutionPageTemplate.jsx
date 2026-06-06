@@ -18,7 +18,7 @@
  * One file change cascades across all 6 verticals.
  */
 import React from 'react';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { motion } from 'framer-motion';
 import { Sparkles, ArrowRight, TrendingUp, Award, ShieldCheck, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';

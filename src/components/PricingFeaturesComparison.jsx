@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { motion } from 'framer-motion';
 import { Check, X, Sparkles, Award, Shield, BarChart3, Users, Headphones, Building2 } from 'lucide-react';
 

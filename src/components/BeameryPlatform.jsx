@@ -18,7 +18,7 @@
  * so we don't have to touch translation files.
  */
 import React, { useState } from 'react';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { Link, useParams } from '@/lib/router-shim';
 import { Award, ShieldCheck, FileLock2, BarChart3, ArrowUpRight, Check } from 'lucide-react';
 import { PillarTabs, ProductUIWindow } from './system';

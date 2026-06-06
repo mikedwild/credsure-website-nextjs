@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { Cookie } from 'lucide-react';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { Button } from '../ui/button';
 
 export const CookieBanner = ({ onAcceptAll, onRejectAll, onCustomize }) => {

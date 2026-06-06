@@ -9,7 +9,7 @@
  * vertical solution pages so navigation never breaks.
  */
 import React from 'react';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { motion } from 'framer-motion';
 import { GraduationCap, HeartPulse, Stethoscope, Briefcase, Users, Factory, Sparkles, ArrowRight } from 'lucide-react';
 import { SEO, createBreadcrumbSchema, getBaseUrl } from '@/components/SEO';

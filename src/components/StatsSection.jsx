@@ -8,7 +8,7 @@
  */
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { NumberCounter } from './NumberCounter';
 import { TrendingUp, Users, Award, Globe } from 'lucide-react';
 

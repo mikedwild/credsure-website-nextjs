@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { useLocalizedNavigate } from '@/utils/useLocalizedNavigate';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { useLocation } from '@/lib/router-shim';
 import { motion } from 'framer-motion';
 import { CheckCircle, Sparkles, ArrowRight, ShieldCheck, Award, Zap } from 'lucide-react';

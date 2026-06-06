@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useCallback } from 'react';
 import { SEO, createHowToSchema, createSpeakableSchema, combineSchemas, getBaseUrl } from '@/components/SEO';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { PlayCircle, Clock, Award, Zap, BarChart3, CheckCircle2, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';

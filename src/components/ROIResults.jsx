@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { Clock, TrendingDown, Zap, Lock, ArrowDown } from 'lucide-react';
 import { Button } from './ui/button';
 import { useCurrency } from '@/utils/CurrencyContext';

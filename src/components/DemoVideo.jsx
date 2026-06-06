@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { Play, CheckCircle2 } from 'lucide-react';
 
 export const DemoVideo = () => {

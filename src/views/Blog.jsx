@@ -1,7 +1,8 @@
 "use client";
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { SEO, createBreadcrumbSchema, getBaseUrl } from '@/components/SEO';
-import { useTranslations as useTranslation, useLocale } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
+import { useLocale } from 'next-intl';
 import { Search, Filter, X, Tag } from 'lucide-react';
 import { getPostTopics } from '../utils/blogUtils';
 import { BlogCard } from './BlogCard';

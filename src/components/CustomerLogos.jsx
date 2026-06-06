@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 
 const logos = [
   { name: 'Apollo Medskills', src: '/images/logos/apollo.webp' },

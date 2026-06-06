@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { ArrowRight, FileText, Sparkles } from 'lucide-react';
 import { trackNewsletterSignup } from '@/lib/analytics';
 

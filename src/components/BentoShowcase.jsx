@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { Zap, Shield, Sparkles, TrendingUp, Globe, Award, BarChart3, Lock } from 'lucide-react';
 import { BentoHeroCard, BentoGlassCard, BentoStatCard, BentoCompactCard, BentoListCard } from './bento/BentoCards';
 

@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { LocalizedLink as Link } from '@/components/LocalizedLink';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 
 export const Footer = () => {
   const t = useTranslation();

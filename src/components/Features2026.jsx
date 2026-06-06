@@ -13,7 +13,7 @@
  */
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { ArrowUpRight, Check, Sparkles } from 'lucide-react';
 import { LocalizedLink as Link } from '@/components/LocalizedLink';
 import { ProductUIWindow } from './system';

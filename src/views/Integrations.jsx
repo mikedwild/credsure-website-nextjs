@@ -1,7 +1,8 @@
 "use client";
 import React from 'react';
 import { SEO, createBreadcrumbSchema, getBaseUrl } from '@/components/SEO';
-import { useTranslations as useTranslation, useLocale } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
+import { useLocale } from 'next-intl';
 import { motion } from 'framer-motion';
 import { LocalizedLink as Link } from '@/components/LocalizedLink';
 import { Sparkles, ArrowRight, Zap, GraduationCap, Users, BarChart3, ShoppingCart, FileSpreadsheet, Calendar, CheckCircle2, Globe } from 'lucide-react';

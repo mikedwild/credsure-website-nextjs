@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { Check, Star, Sparkles, Zap } from 'lucide-react';
 import { Button } from './ui/button';
 import { pricing } from '@/data/mock';

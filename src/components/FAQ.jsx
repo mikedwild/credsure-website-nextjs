@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { useLocation } from '@/lib/router-shim';
 import {
   Accordion,

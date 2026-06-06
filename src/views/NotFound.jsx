@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { LocalizedLink as Link } from '@/components/LocalizedLink';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { motion } from 'framer-motion';
 import { Home } from 'lucide-react';
 import { Button } from '@/components/ui/button';

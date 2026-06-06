@@ -13,7 +13,7 @@
  * so EN/DE keep working without locale-file edits.
  */
 import React, { useState } from 'react';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { LayoutDashboard, Shield, Share2, BarChart3 } from 'lucide-react';
 import { PillarTabs, ProductUIWindow } from './system';
 import { featureMedia } from '@/data/featureMedia';

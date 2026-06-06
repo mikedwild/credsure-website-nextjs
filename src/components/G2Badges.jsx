@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 
 const G2_BADGES = [
   { label: 'Easiest To Do Business With', season: 'Winter 2025' },

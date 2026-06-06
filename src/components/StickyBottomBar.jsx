@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect, useCallback } from 'react';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { useLocalizedNavigate } from '@/utils/useLocalizedNavigate';
 import { ArrowRight, X } from 'lucide-react';
 

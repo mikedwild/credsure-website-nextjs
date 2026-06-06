@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { Calculator } from 'lucide-react';
 import { roiCalculatorData, calculateROI } from '@/data/roiCalculator';
 import { ROIForm } from './ROIForm';

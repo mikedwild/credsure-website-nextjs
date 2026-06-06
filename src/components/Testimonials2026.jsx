@@ -10,7 +10,7 @@
  */
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { Sparkles, Star, ArrowUpRight } from 'lucide-react';
 import { LocalizedLink as Link } from '@/components/LocalizedLink';
 import { CustomerCard } from './system';

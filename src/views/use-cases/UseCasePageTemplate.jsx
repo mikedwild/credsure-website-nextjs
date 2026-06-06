@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { useLocalizedNavigate } from '@/utils/useLocalizedNavigate';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { motion } from 'framer-motion';
 import { CheckCircle, Sparkles, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';

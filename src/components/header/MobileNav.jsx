@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { LocalizedLink as Link } from '../LocalizedLink';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { Button } from '../ui/button';
 import { LanguageSwitcher } from '../LanguageSwitcher';
 import { useMegaMenuData } from './useMegaMenuData';

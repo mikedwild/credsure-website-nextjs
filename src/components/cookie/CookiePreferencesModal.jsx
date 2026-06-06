@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { X, Shield, BarChart3, Target, User } from 'lucide-react';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { Button } from '../ui/button';
 import { CookieToggle } from './CookieToggle';
 

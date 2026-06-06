@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { SEO } from '@/components/SEO';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { motion } from 'framer-motion';
 import { LocalizedLink as Link } from '@/components/LocalizedLink';
 import { ArrowLeft, Lock } from 'lucide-react';

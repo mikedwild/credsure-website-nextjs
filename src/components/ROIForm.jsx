@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { roiCalculatorData } from '@/data/roiCalculator';
 import { useCurrency } from '@/utils/CurrencyContext';

@@ -1,7 +1,7 @@
 "use client";
 import React, { lazy, Suspense } from 'react';
 import { SEO, createSpeakableSchema, createFAQSchema, combineSchemas, getBaseUrl } from '@/components/SEO';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { useLocation } from '@/lib/router-shim';
 import { motion } from 'framer-motion';
 import { LayoutDashboard, Shield, Share2, BarChart3, Zap, Plug, CheckCircle2, Award, Sparkles, ArrowRight } from 'lucide-react';

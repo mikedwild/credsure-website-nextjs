@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { Button } from '../ui/button';
 import { LanguageSwitcher } from '../LanguageSwitcher';
 

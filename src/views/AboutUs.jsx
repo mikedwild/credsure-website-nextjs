@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { SEO, createBreadcrumbSchema, createPersonSchema, getBaseUrl } from '@/components/SEO';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { Mail, MapPin, Shield, Database, Eye, Zap, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';

@@ -1,7 +1,8 @@
 "use client";
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useTranslations as useTranslation, useLocale } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
+import { useLocale } from 'next-intl';
 import DOMPurify from 'dompurify';
 
 /**

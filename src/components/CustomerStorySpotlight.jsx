@@ -8,7 +8,7 @@
  * give the homepage a real-world moment.
  */
 import React from 'react';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { ArrowUpRight } from 'lucide-react';
 import { LocalizedLink as Link } from '@/components/LocalizedLink';
 

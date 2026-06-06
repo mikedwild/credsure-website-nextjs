@@ -13,7 +13,7 @@
  *     small webp candidate set so it's not LCP-blocking on mobile.
  */
 import React from 'react';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { ArrowRight, Play, Sparkles } from 'lucide-react';
 import { Button } from './ui/button';
 import { useLocalizedNavigate } from '@/utils/useLocalizedNavigate';

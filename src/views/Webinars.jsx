@@ -1,7 +1,8 @@
 "use client";
 import React from 'react';
 import { SEO, createBreadcrumbSchema, createVideoObjectSchema, getBaseUrl } from '@/components/SEO';
-import { useTranslations as useTranslation, useLocale } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
+import { useLocale } from 'next-intl';
 import { motion } from 'framer-motion';
 import { LocalizedLink as Link } from '@/components/LocalizedLink';
 import { ArrowRight, Play, Calendar, Clock, Users } from 'lucide-react';

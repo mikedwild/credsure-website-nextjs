@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import { LocalizedLink as Link } from '@/components/LocalizedLink';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
-import { useTranslations as useTranslation, useLocale } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
+import { useLocale } from 'next-intl';
 import { getPostImage, formatDate } from '../utils/blogImageUtils';
 import { getPostTopics } from '../utils/blogUtils';
 

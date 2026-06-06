@@ -5,7 +5,7 @@
  */
 import React, { useEffect } from 'react';
 import { Outlet, Navigate, useParams, useLocation } from '@/lib/router-shim';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { SUPPORTED_LANGS, DEFAULT_LANG } from '@/utils/localePath';
 
 const LANG_KEY = 'credsure-lang';

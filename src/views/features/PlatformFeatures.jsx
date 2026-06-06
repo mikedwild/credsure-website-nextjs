@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { LocalizedLink as Link } from '@/components/LocalizedLink';
 import { motion } from 'framer-motion';
 import { Sparkles, LayoutDashboard, Shield, Share2, BarChart3, Zap, Plug, CheckCircle, Palette, Tag, Globe, Search, ShieldCheck } from 'lucide-react';

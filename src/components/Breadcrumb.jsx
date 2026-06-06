@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { useLocation } from '@/lib/router-shim';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import { ChevronRight, Home } from 'lucide-react';
 import { useLocalizedNavigate } from '@/utils/useLocalizedNavigate';
 
