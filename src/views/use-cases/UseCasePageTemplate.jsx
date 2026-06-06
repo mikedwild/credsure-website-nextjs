@@ -17,7 +17,8 @@ export const UseCasePageTemplate = ({ useCaseKey, Icon }) => {
   const t = useTranslation();
   const navigate = useLocalizedNavigate();
   const baseUrl = getBaseUrl();
-  const items = t(`useCases.${useCaseKey}.items`, { returnObjects: true });
+  const rawItems = t(`useCases.${useCaseKey}.items`, { returnObjects: true });
+  const items = Array.isArray(rawItems) ? rawItems : [];
   const title = t(`useCases.${useCaseKey}.title`);
   const titleWords = title.split(' ');
   const mainTitle = titleWords.slice(0, -1).join(' ');

@@ -18,8 +18,10 @@ export const PricingFeaturesComparison = () => {
   const t = useTranslation();
   const [expandedCategory, setExpandedCategory] = useState(0);
   
-  const categories = t('pricingFeatures.categories', { returnObjects: true }) || [];
-  const plans = t('pricingFeatures.plans', { returnObjects: true }) || ['Start', 'Grow', 'Boost'];
+  const rawCategories = t('pricingFeatures.categories', { returnObjects: true });
+  const categories = Array.isArray(rawCategories) ? rawCategories : [];
+  const rawPlans = t('pricingFeatures.plans', { returnObjects: true });
+  const plans = Array.isArray(rawPlans) ? rawPlans : ['Start', 'Grow', 'Boost'];
 
   const container = {
     hidden: { opacity: 0 },

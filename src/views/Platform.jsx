@@ -69,7 +69,8 @@ export const Platform = () => {
 
   const renderFeatureCard = (key, icons, showItems = false, isHero = false) => {
     const Icon = icons[key];
-    const items = t(`pages.platform.features.${key}.items`, { returnObjects: true });
+    const rawItems = t(`pages.platform.features.${key}.items`, { returnObjects: true });
+    const items = Array.isArray(rawItems) ? rawItems : [];
     const href = featureLinks[key];
     const card = (
       <motion.div key={key} whileHover={{ y: -4 }} className={`bg-white  border border-gray-200  rounded-2xl ${isHero ? 'p-8' : 'p-6'} hover:shadow-xl hover:border-[#5B22D6]/30 transition-all h-full group`}>

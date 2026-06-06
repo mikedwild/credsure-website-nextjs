@@ -14,7 +14,15 @@ import { StructuredData } from './StructuredData';
 export const FAQ = () => {
   const t = useTranslation();
   const location = useLocation();
-  const faqItems = t('faqSection.items', { returnObjects: true }) || [];
+  const DEFAULT_FAQS = [
+    { question: 'How quickly can I start issuing credentials?', answer: 'You can issue your first credential within minutes of signing up. Our onboarding wizard guides you through template creation, branding, and your first batch issue.' },
+    { question: 'Is Credsure GDPR compliant?', answer: 'Yes. All data is stored in EU data centres (Frankfurt), we are fully GDPR compliant, and we offer a Data Processing Agreement (DPA) for enterprise customers.' },
+    { question: 'Can recipients share their credentials on LinkedIn?', answer: 'Yes. Recipients get a shareable link and a one-click LinkedIn integration that adds the credential directly to their profile.' },
+    { question: 'What file formats are supported for bulk import?', answer: 'We support CSV and Excel uploads. You can map any column to credential fields, and our validation layer catches errors before issuance.' },
+    { question: 'Do you offer an API?', answer: 'Yes. Our REST API lets you integrate credential issuance into your LMS, HRIS, or custom systems. Full documentation and Postman collection available.' },
+  ];
+  const rawFaqItems = t('faqSection.items', { returnObjects: true });
+  const faqItems = Array.isArray(rawFaqItems) ? rawFaqItems : DEFAULT_FAQS;
 
   // Format FAQs for schema
   const faqSchemaData = Array.isArray(faqItems)

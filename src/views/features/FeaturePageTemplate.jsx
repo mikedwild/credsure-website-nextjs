@@ -27,7 +27,8 @@ export const FeaturePageTemplate = ({ featureKey, Icon }) => {
   const navigate = useLocalizedNavigate();
   const location = useLocation();
   const baseUrl = getBaseUrl();
-  const items = t(`features.${featureKey}.items`, { returnObjects: true });
+  const rawItems = t(`features.${featureKey}.items`, { returnObjects: true });
+  const items = Array.isArray(rawItems) ? rawItems : [];
   const title = t(`features.${featureKey}.title`);
   const titleWords = title.split(' ');
   const mainTitle = titleWords.slice(0, -1).join(' ');

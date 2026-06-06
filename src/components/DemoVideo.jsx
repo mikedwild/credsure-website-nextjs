@@ -69,7 +69,7 @@ export const DemoVideo = () => {
                 {t('demoSection.whatYoullLearn')}
               </h3>
               <ul className="space-y-4">
-                {(t('demoSection.features', { returnObjects: true }) || []).map((feature, index) => (
+                {(Array.isArray(t('demoSection.features', { returnObjects: true })) ? t('demoSection.features', { returnObjects: true }) : []).map((feature, index) => (
                   <li key={`demo-feature-${index}`} className="flex items-start gap-4">
                     <div className="flex-shrink-0 w-8 h-8 bg-brand-purple-light rounded-full flex items-center justify-center">
                       <span className="text-white font-semibold text-sm">{index + 1}</span>

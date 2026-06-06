@@ -71,7 +71,7 @@ export const ProductShowcase = () => {
               {t(`productShowcase.${activeKey}.description`)}
             </p>
             <ul className="space-y-2.5">
-              {(t(`productShowcase.${activeKey}.stats`, { returnObjects: true }) || []).map((stat, idx) => (
+              {(Array.isArray(t(`productShowcase.${activeKey}.stats`, { returnObjects: true })) ? t(`productShowcase.${activeKey}.stats`, { returnObjects: true }) : []).map((stat, idx) => (
                 <li key={`stat-${idx}`} className="flex items-start gap-3 text-base text-[#0F0E1A]">
                   <span className="w-1.5 h-1.5 mt-2.5 rounded-full shrink-0" style={{ background: '#5B22D6' }} aria-hidden="true" />
                   <span>{stat}</span>

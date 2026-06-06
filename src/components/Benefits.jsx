@@ -6,8 +6,16 @@ import { TrendingDown, Zap, Heart } from 'lucide-react';
 export const Benefits = () => {
   const t = useTranslation();
   const icons = [TrendingDown, Zap, Heart];
-  const benefitItems = t('benefitsSection.items', { returnObjects: true }) || [];
-  const categories = t('benefitsSection.categories', { returnObjects: true }) || [];
+  const DEFAULT_BENEFITS = [
+    { title: '80%', metric: 'Faster issuance', description: 'Issue credentials in seconds, not days. Bulk workflows handle thousands at once.' },
+    { title: '60%', metric: 'Cost reduction', description: 'Eliminate manual verification costs with blockchain-backed instant verification.' },
+    { title: '99.9%', metric: 'Uptime SLA', description: 'Enterprise-grade reliability with SOC 2 compliance and GDPR-ready infrastructure.' },
+  ];
+  const DEFAULT_CATEGORIES = ['Higher Education', 'Professional Bodies', 'Corporate Training', 'Healthcare', 'Government'];
+  const rawItems = t('benefitsSection.items', { returnObjects: true });
+  const rawCats = t('benefitsSection.categories', { returnObjects: true });
+  const benefitItems = Array.isArray(rawItems) ? rawItems : DEFAULT_BENEFITS;
+  const categories = Array.isArray(rawCats) ? rawCats : DEFAULT_CATEGORIES;
 
   return (
     <section className="py-24 brand-gradient relative overflow-hidden">
