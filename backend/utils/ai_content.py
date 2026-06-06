@@ -44,7 +44,7 @@ def _get_key():
 
 def _make_chat(session_prefix: str, system_message: str):
     """Helper to build a single-shot LlmChat configured for Claude Sonnet 4.5."""
-    from emergentintegrations.llm.chat import LlmChat
+    from utils.llm_chat import LlmChat
     chat = LlmChat(
         api_key=_get_key(),
         session_id=f"{session_prefix}-{uuid.uuid4().hex[:8]}",
@@ -113,7 +113,7 @@ async def _translate_one(
         return str(cached)
 
     # Cache miss (or cache disabled) — call the LLM under instrumentation
-    from emergentintegrations.llm.chat import LlmChat, UserMessage
+    from utils.llm_chat import LlmChat, UserMessage
     async with guard.call(intent):
         async with ai_telemetry.trace(
             db,
@@ -258,7 +258,7 @@ async def recommend_topics(db, count=8):
     call's cost/latency. Caching off (TTL=1 day per /ai/cache); cache
     instrumentation runs anyway to project would-have-hit rate.
     """
-    from emergentintegrations.llm.chat import LlmChat, UserMessage
+    from utils.llm_chat import LlmChat, UserMessage
     api_key = _get_key()
 
     # Get existing titles to avoid duplicates
@@ -351,7 +351,7 @@ Return as a JSON array:"""
 
 async def generate_blog_post(topic, keywords, category, excerpt_hint=""):
     """Generate a full SEO-optimized blog post from a topic. Returns dict with all blog fields."""
-    from emergentintegrations.llm.chat import LlmChat, UserMessage
+    from utils.llm_chat import LlmChat, UserMessage
     api_key = _get_key()
     import json
 

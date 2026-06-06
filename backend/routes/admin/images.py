@@ -119,17 +119,16 @@ async def admin_generate_featured_image(request: Request, body: GenerateFeatured
 
     try:
         if provider == "openai":
-            from emergentintegrations.llm.openai.image_generation import OpenAIImageGeneration  # noqa: E501
-            gen = OpenAIImageGeneration(api_key=api_key)
-            images = await gen.generate_images(
-                prompt=prompt, model=model_id, number_of_images=n,
+            from openai import AsyncOpenAI
+            import base64
+            client = AsyncOpenAI(api_key=api_key)
+            resp = await client.images.generate(
+                prompt=prompt, model=model_id, n=n, response_format="b64_json",
             )
+            images = [base64.b64decode(img.b64_json) for img in resp.data]
         elif provider == "gemini":
-            from emergentintegrations.llm.gemeni.image_generation import GeminiImageGeneration  # noqa: E501
-            gen = GeminiImageGeneration(api_key=api_key)
-            images = await gen.generate_images(
-                prompt=prompt, model=model_id, number_of_images=n,
-            )
+            raise HTTPException(status_code=400, detail="gemini_image_gen_not_supported")
+
         else:
             raise HTTPException(status_code=400, detail="unsupported_provider")
     except HTTPException:
