@@ -13,7 +13,7 @@ import { NumberCounter } from './NumberCounter';
 import { TrendingUp, Users, Award, Globe } from 'lucide-react';
 
 export const StatsSection = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
 
   const stats = [
     { icon: Users, value: 150, suffix: '+', labelKey: 'statsSection.orgsLabel', tile: '#F0DAD2' },

@@ -24,7 +24,7 @@ const TRUST_SIGNALS = [
 ];
 
 export const Demo = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const baseUrl = getBaseUrl();
   const breadcrumbs = [{ name: 'Home', path: '/' }, { name: 'Book a Demo', path: '/demo' }];
   const [formData, setFormData] = useState({ name: '', email: '', company: '', role: '' });

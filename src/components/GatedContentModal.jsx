@@ -6,7 +6,7 @@ import { X, Lock, Download, ArrowRight } from 'lucide-react';
 import { trackGatedUnlock } from '@/lib/analytics';
 
 export const GatedContentModal = ({ isOpen, onClose, contentTitle, contentType = 'guide' }) => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const [formData, setFormData] = useState({ email: '', name: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);

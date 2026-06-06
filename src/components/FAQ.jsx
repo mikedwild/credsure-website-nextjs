@@ -12,7 +12,7 @@ import { createFAQSchema, getBaseUrl } from './SEO';
 import { StructuredData } from './StructuredData';
 
 export const FAQ = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const location = useLocation();
   const faqItems = t('faqSection.items', { returnObjects: true }) || [];
 

@@ -90,7 +90,7 @@ const HERO_METRICS = [
 ];
 
 export const Solutions = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const navigate = useLocalizedNavigate();
   const baseUrl = getBaseUrl();
   const breadcrumbs = [{ name: 'Home', path: '/' }, { name: 'Solutions', path: '/solutions' }];

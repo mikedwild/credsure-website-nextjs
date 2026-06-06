@@ -5,7 +5,7 @@ import { useLocalizedNavigate } from '@/utils/useLocalizedNavigate';
 import { ArrowRight, X } from 'lucide-react';
 
 export const StickyBottomBar = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const navigate = useLocalizedNavigate();
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);

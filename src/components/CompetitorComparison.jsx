@@ -4,7 +4,7 @@ import { useTranslations as useTranslation } from 'next-intl';
 import { competitorComparison } from '@/data/mock';
 
 export const CompetitorComparison = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
 
   return (
     <section className="py-24 bg-white ">

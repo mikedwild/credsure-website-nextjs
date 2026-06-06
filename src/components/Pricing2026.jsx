@@ -14,7 +14,7 @@ const swapCurrencySymbol = (priceStr, symbol) => {
 };
 
 export const Pricing2026 = ({ onCtaClick }) => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const { symbol } = useCurrency();
   const container = {
     hidden: { opacity: 0 },

@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { Sparkles, Users, Target, Award } from 'lucide-react';
 
 export const About = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
 
   const values = [
     { icon: Users, titleKey: 'pages.about.mission', descKey: 'pages.about.missionDesc' },

@@ -11,7 +11,7 @@ import {
 import { Button } from '@/components/ui/button';
 
 export const Features = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const baseUrl = getBaseUrl();
   const breadcrumbs = [{ name: 'Home', path: '/' }, { name: 'Features', path: '/features' }];
 

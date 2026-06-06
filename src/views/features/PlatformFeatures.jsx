@@ -22,7 +22,7 @@ const featureList = [
 ];
 
 export const PlatformFeatures = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-[#FAFAFA] to-white   ">

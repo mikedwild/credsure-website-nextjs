@@ -15,7 +15,7 @@ const categoryGradients = [
 ];
 
 export const PricingFeaturesComparison = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const [expandedCategory, setExpandedCategory] = useState(0);
   
   const categories = t('pricingFeatures.categories', { returnObjects: true }) || [];

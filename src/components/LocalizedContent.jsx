@@ -15,7 +15,7 @@ export const LocalizedContent = ({
   className = '',
   as: Component = 'span'
 }) => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   
   const content = t(contentKey, { ...variables, defaultValue: fallback });
   
@@ -41,7 +41,7 @@ export const LocalizedHTML = ({
   className = '',
   as: Component = 'div'
 }) => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   
   const rawContent = t(contentKey, { ...variables, defaultValue: fallback });
   const sanitized = DOMPurify.sanitize(rawContent);

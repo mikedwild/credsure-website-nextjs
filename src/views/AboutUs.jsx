@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 import { LocalizedLink as Link } from '@/components/LocalizedLink';
 
 export const AboutUs = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const baseUrl = getBaseUrl();
 
   const team = [

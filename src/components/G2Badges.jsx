@@ -33,7 +33,7 @@ const Badge = ({ label, season, index }) => (
 );
 
 export const G2Badges = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
 
   return (
     <section className="py-16 md:py-20 bg-white " data-testid="g2-badges-section">

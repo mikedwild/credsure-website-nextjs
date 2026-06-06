@@ -30,7 +30,7 @@ const TAB_TO_MEDIA = {
 };
 
 export const ProductShowcase = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const [activeKey, setActiveKey] = useState('manage');
   const media = featureMedia[TAB_TO_MEDIA[activeKey]] || {};
 

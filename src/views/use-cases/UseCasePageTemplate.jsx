@@ -14,7 +14,7 @@ import { ProductUIWindow, TrustBand } from '@/components/system';
 const TINTS = ['#F0DAD2', '#E2D4F2', '#D8E5DA', '#FCE7B5', '#F8D9E1'];
 
 export const UseCasePageTemplate = ({ useCaseKey, Icon }) => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const navigate = useLocalizedNavigate();
   const baseUrl = getBaseUrl();
   const items = t(`useCases.${useCaseKey}.items`, { returnObjects: true });

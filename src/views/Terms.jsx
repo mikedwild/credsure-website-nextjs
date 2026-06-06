@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { FileText } from 'lucide-react';
 
 export const Terms = () => {
-  const { t } = useTranslation('legal');
+  const t = useTranslation('legal');
   const sections = t('terms.sections', { returnObjects: true, defaultValue: [] });
 
   return (

@@ -10,7 +10,7 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '..
 import { DollarSign, Calculator, X } from 'lucide-react';
 
 export const MobileNav = ({ currentLang, onLinkClick, onClose, onDemoClick }) => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const { megaMenus } = useMegaMenuData();
 
   // Lock body scroll when mobile nav is open

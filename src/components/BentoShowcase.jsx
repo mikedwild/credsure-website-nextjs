@@ -11,7 +11,7 @@ const container = {
 };
 
 export const BentoShowcase = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
 
   return (
     <section className="py-32 bg-white  relative overflow-hidden">

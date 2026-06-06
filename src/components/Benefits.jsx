@@ -4,7 +4,7 @@ import { useTranslations as useTranslation } from 'next-intl';
 import { TrendingDown, Zap, Heart } from 'lucide-react';
 
 export const Benefits = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const icons = [TrendingDown, Zap, Heart];
   const benefitItems = t('benefitsSection.items', { returnObjects: true }) || [];
   const categories = t('benefitsSection.categories', { returnObjects: true }) || [];

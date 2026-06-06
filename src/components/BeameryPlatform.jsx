@@ -194,7 +194,7 @@ const InsightsMock = () => (
 const MOCKS = { issue: IssuerMock, verify: VerifierMock, govern: GovernMock, insights: InsightsMock };
 
 export const BeameryPlatform = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   // Current language for prefixing internal links — matches LanguageLayout's
   // /:lang/* URL shape. Falls back to 'en' on the off chance this component
   // ever renders outside a /:lang route (it shouldn't).

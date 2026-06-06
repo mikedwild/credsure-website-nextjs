@@ -110,7 +110,7 @@ const VideoModal = ({ videoId, title, onClose }) => (
 );
 
 export const Tutorials = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const baseUrl = getBaseUrl();
   const [activeVideo, setActiveVideo] = useState(null);
 

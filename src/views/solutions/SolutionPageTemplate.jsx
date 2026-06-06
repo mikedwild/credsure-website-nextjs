@@ -45,7 +45,7 @@ const METRICS = {
 const METRIC_ICONS = [TrendingUp, Award, ShieldCheck, Globe];
 
 export const SolutionPageTemplate = ({ solutionKey, Icon }) => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const navigate = useLocalizedNavigate();
   const benefits = t(`pages.solutions.${solutionKey}.benefits`, { returnObjects: true });
   const safeBenefits = Array.isArray(benefits) ? benefits : [];

@@ -7,7 +7,7 @@ import { MegaMenuPanel } from './MegaMenuPanel';
 import { ResourcesMegaPanel } from './ResourcesMegaPanel';
 
 export const DesktopNav = ({ navItems, activeMegaMenu, focusedItemIndex, megaMenuRef, onMouseEnter, onMouseLeave, onFocusItem, onLinkClick }) => {
-  const { t } = useTranslation();
+  const t = useTranslation();
 
   return (
     <nav className="hidden xl:flex items-center gap-1" data-testid="desktop-nav">

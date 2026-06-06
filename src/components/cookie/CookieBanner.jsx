@@ -6,7 +6,7 @@ import { useTranslations as useTranslation } from 'next-intl';
 import { Button } from '../ui/button';
 
 export const CookieBanner = ({ onAcceptAll, onRejectAll, onCustomize }) => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const bannerRef = useRef(null);
 
   // Reserve scroll-space at the bottom of the page so the banner never

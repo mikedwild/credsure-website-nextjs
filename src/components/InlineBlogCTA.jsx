@@ -6,7 +6,7 @@ import { ArrowRight, FileText, Sparkles } from 'lucide-react';
 import { trackNewsletterSignup } from '@/lib/analytics';
 
 export const InlineBlogCTA = ({ variant = 'default', blogSlug }) => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);

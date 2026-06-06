@@ -8,7 +8,7 @@ import { LocalizedLink as Link } from '@/components/LocalizedLink';
 import { Button } from '@/components/ui/button';
 
 export const Tsaaro = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
 
   const highlights = t('pages.tsaaro.highlights', { returnObjects: true, defaultValue: [] });
 

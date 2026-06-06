@@ -56,7 +56,7 @@ const solutionFAQs = {
 };
 
 export const SolutionFAQ = ({ solutionKey }) => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const location = useLocation();
   const faqs = solutionFAQs[solutionKey] || [];
 

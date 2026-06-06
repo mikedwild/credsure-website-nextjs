@@ -9,7 +9,7 @@ import { useCurrency } from '@/utils/CurrencyContext';
 const swapSymbol = (label, sym) => label.replace(/[€$£]/, sym);
 
 export const ROIForm = ({ selectedVolume, manualMinutes, hourlyCost, roi, onVolumeChange, onManualMinutesChange, onHourlyCostChange }) => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const { symbol } = useCurrency();
 
   return (

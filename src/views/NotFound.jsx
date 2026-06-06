@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { SEO } from '@/components/SEO';
 
 export default function NotFound() {
-  const { t } = useTranslation();
+  const t = useTranslation();
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-purple-50/30  ">
       <SEO

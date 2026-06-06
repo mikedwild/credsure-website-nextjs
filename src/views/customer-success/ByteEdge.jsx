@@ -8,7 +8,7 @@ import { LocalizedLink as Link } from '@/components/LocalizedLink';
 import { Button } from '@/components/ui/button';
 
 export const ByteEdge = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
 
   const stats = [
     { icon: Zap, valueKey: 'pages.byteedge.stat1Value', labelKey: 'pages.byteedge.stat1Label' },

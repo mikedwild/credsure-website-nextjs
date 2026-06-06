@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { Shield, Lock, CheckCircle } from 'lucide-react';
 
 export const Security = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   
   const features = [
     { icon: Lock, titleKey: 'pages.security.encryption', descKey: 'pages.security.encryptionDesc' },

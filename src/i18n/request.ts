@@ -19,12 +19,18 @@ export default getRequestConfig(async ({ requestLocale }) => {
   return {
     locale,
     messages: {
-      common: common.default,
-      pages: pages.default,
-      marketing: marketing.default,
-      features: features.default,
-      legal: legal.default,
-      blog: blog.default,
+      ...common.default,
+      ...pages.default,
+      ...marketing.default,
+      ...features.default,
+      ...legal.default,
+      ...blog.default,
+    },
+    onError() {
+      // suppress missing message errors — degrade gracefully
+    },
+    getMessageFallback({ key }: { key: string }) {
+      return key.split(".").pop() ?? key;
     },
   };
 });

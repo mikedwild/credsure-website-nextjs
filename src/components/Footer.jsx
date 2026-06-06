@@ -4,7 +4,7 @@ import { LocalizedLink as Link } from '@/components/LocalizedLink';
 import { useTranslations as useTranslation } from 'next-intl';
 
 export const Footer = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const currentYear = new Date().getFullYear();
 
   const productLinks = [

@@ -8,7 +8,7 @@ import { LocalizedLink as Link } from '@/components/LocalizedLink';
 import { Button } from '@/components/ui/button';
 
 export const CustomerSuccess = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const baseUrl = getBaseUrl();
   const breadcrumbs = [{ name: 'Home', path: '/' }, { name: 'Customer Stories', path: '/customer-success' }];
 

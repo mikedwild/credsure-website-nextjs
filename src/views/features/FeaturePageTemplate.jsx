@@ -23,7 +23,7 @@ const TINTS = ['#F0DAD2', '#E2D4F2', '#D8E5DA', '#FCE7B5', '#F8D9E1'];
 const METRIC_ICONS = [Zap, ShieldCheck, Award];
 
 export const FeaturePageTemplate = ({ featureKey, Icon }) => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const navigate = useLocalizedNavigate();
   const location = useLocation();
   const baseUrl = getBaseUrl();

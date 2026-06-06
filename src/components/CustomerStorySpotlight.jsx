@@ -15,7 +15,7 @@ import { LocalizedLink as Link } from '@/components/LocalizedLink';
 const CUSTOMER_PHOTO = 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=900&q=80';
 
 export const CustomerStorySpotlight = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
 
   return (
     <section className="py-24 md:py-28 relative overflow-hidden" style={{ background: '#FAFAFC' }} data-testid="customer-spotlight">

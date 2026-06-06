@@ -6,7 +6,7 @@ import { ArrowRight, ShieldCheck, CheckCircle, Zap, HeadphonesIcon } from 'lucid
 import { Button } from './ui/button';
 
 export const CTASection = ({ onCtaClick }) => {
-  const { t } = useTranslation();
+  const t = useTranslation();
 
   const trustIndicators = [
     { icon: ShieldCheck, key: 'security' },

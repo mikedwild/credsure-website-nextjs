@@ -8,7 +8,7 @@ import { ROIForm } from './ROIForm';
 import { ROIResults } from './ROIResults';
 
 export const ROICalculator = ({ onCtaClick }) => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const [selectedVolume, setSelectedVolume] = useState(1000);
   const [manualMinutes, setManualMinutes] = useState(10);
   const [hourlyCost, setHourlyCost] = useState(50);

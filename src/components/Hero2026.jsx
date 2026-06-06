@@ -44,7 +44,7 @@ const HERO_WEBP_SRCSET = [
 const HERO_WEBP_FALLBACK = '/img/heroes/hero-passport-800.webp';
 
 export const Hero2026 = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const navigate = useLocalizedNavigate();
 
   return (

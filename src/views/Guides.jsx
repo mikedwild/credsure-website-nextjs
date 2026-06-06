@@ -92,7 +92,7 @@ const guides = [
 ];
 
 export const Guides = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const baseUrl = getBaseUrl();
   const [gateModal, setGateModal] = useState({ open: false, title: '', guideId: '' });
   const [activeGuide, setActiveGuide] = useState(null);

@@ -8,7 +8,7 @@ import { ArrowLeft, Lock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export const SignIn = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   

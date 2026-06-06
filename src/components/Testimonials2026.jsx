@@ -65,7 +65,7 @@ const DEFAULT_CUSTOMERS = [
 ];
 
 export const Testimonials2026 = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const i18nQuotes = t('testimonialsSection.quotes', { returnObjects: true });
   const useDefaults = !Array.isArray(i18nQuotes) || i18nQuotes.length === 0;
   const customers = useDefaults ? DEFAULT_CUSTOMERS : DEFAULT_CUSTOMERS; // i18n quotes are short; we render full cards from the curated trio for visual fidelity.

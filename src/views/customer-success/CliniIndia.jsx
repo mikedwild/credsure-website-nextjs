@@ -8,7 +8,7 @@ import { LocalizedLink as Link } from '@/components/LocalizedLink';
 import { Button } from '@/components/ui/button';
 
 export const CliniIndia = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
 
   const highlights = t('pages.cliniIndia.highlights', { returnObjects: true, defaultValue: [] });
   const challenges = t('pages.cliniIndia.challenges', { returnObjects: true, defaultValue: [] });

@@ -33,7 +33,7 @@ const platformFAQ = [
 ];
 
 export const Platform = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const location = useLocation();
   const baseUrl = getBaseUrl();
 

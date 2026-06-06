@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { Scale, Mail, Globe, Building2, FileText } from 'lucide-react';
 
 export const Impressum = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-[#FAFAFA] to-white   ">

@@ -7,7 +7,7 @@ import { Button } from '../ui/button';
 import { CookieToggle } from './CookieToggle';
 
 export const CookiePreferencesModal = ({ preferences, onToggle, onAcceptAll, onRejectAll, onSave, onClose }) => {
-  const { t } = useTranslation();
+  const t = useTranslation();
 
   const categories = [
     {

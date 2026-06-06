@@ -14,7 +14,7 @@ const logos = [
 ];
 
 export const CustomerLogos = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
 
   return (
     <section className="py-16 bg-white  border-y border-slate-200  transition-colors duration-300">

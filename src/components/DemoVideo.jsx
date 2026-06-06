@@ -4,7 +4,7 @@ import { useTranslations as useTranslation } from 'next-intl';
 import { Play, CheckCircle2 } from 'lucide-react';
 
 export const DemoVideo = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const [isPlaying, setIsPlaying] = React.useState(false);
 
   const videoUrl = "https://player.vimeo.com/video/922333120";

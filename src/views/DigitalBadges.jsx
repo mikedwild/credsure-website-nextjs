@@ -50,7 +50,7 @@ const useCases = [
 ];
 
 export const DigitalBadges = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const baseUrl = getBaseUrl();
   const breadcrumbs = [{ name: 'Home', path: '/' }, { name: 'Digital Badges', path: '/digital-badges' }];
 

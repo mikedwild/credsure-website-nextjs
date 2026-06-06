@@ -7,7 +7,7 @@ import { Sparkles, BookOpen, FileText, Users, HelpCircle, Mail, Play } from 'luc
 import { LocalizedLink as Link } from '@/components/LocalizedLink';
 
 export const Resources = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
 
   const sections = [
     { icon: BookOpen, titleKey: 'megaMenu.resources.blogLabel', descKey: 'megaMenu.resources.blogDesc', link: '/blog' },

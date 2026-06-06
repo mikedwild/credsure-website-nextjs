@@ -6,7 +6,7 @@ import { Button } from '../ui/button';
 import { LanguageSwitcher } from '../LanguageSwitcher';
 
 export const HeaderActions = ({ currentLang, onDemoClick }) => {
-  const { t } = useTranslation();
+  const t = useTranslation();
 
   return (
     <div className="hidden xl:flex items-center gap-3">

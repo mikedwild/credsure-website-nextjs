@@ -16,7 +16,7 @@ const PricingFeaturesComparison = lazy(() =>
 );
 
 export const Pricing = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const navigate = useLocalizedNavigate();
   const baseUrl = getBaseUrl();
 

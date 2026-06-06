@@ -59,7 +59,7 @@ const ROWS = [
 ];
 
 export const Features2026 = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
 
   return (
     <section

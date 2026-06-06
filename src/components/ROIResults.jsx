@@ -8,7 +8,7 @@ import { useCurrency } from '@/utils/CurrencyContext';
 import { trackRoiUnlock } from '@/lib/analytics';
 
 export const ROIResults = ({ roi, isAnimating, selectedVolume, onCtaClick }) => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const { symbol } = useCurrency();
   const [isUnlocked, setIsUnlocked] = useState(() => !!localStorage.getItem('roi-unlocked'));
   const [gateEmail, setGateEmail] = useState('');

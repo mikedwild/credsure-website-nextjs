@@ -7,7 +7,7 @@ import {
 } from 'lucide-react';
 
 export const useMegaMenuData = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
 
   const megaMenus = {
     platform: {

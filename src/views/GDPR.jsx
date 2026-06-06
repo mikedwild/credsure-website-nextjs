@@ -6,7 +6,7 @@ import { useTranslations as useTranslation } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Shield, CheckCircle } from 'lucide-react';
 export const GDPR = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const items = t('pages.gdpr.items', { returnObjects: true, defaultValue: [] });
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-[#FAFAFA] to-white">

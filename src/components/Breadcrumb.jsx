@@ -6,7 +6,7 @@ import { ChevronRight, Home } from 'lucide-react';
 import { useLocalizedNavigate } from '@/utils/useLocalizedNavigate';
 
 export const Breadcrumb = () => {
-  const { t } = useTranslation();
+  const t = useTranslation();
   const navigate = useLocalizedNavigate();
   const location = useLocation();
 
