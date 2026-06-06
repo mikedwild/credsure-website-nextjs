@@ -1,0 +1,700 @@
+{
+  "features": {
+    "title": "Powerful Features for Modern Credentialing",
+    "subtitle": "Everything you need to issue, manage, verify, and track digital credentials at scale",
+    "items": {
+      "platform": {
+        "title": "One Platform for Digital Credentials",
+        "description": "With more than 100 features, bring together your digital certificate management with easy collaboration and admin roles."
+      },
+      "blockchain": {
+        "title": "Easy Verification on Blockchain",
+        "description": "Digital badges and certificates issued on blockchain are recipient owned, vendor independent and instantly verifiable."
+      },
+      "sharing": {
+        "title": "Seamlessly Share Digital Credentials",
+        "description": "Make it easy for recipients to share digital badges & certificates. Public-verification URLs allow easy one-click verification."
+      },
+      "analytics": {
+        "title": "Get the Whole Picture",
+        "description": "Keep an eye on your digital credential analytics. Get real-time charts on share status, verifications, and data insights."
+      },
+      "security": {
+        "title": "Immutable & Secure",
+        "description": "Digital credentials issued on CredSure are secure and tamper-proof with bank-level encryption and blockchain anchoring."
+      },
+      "verification": {
+        "title": "Instantly Verifiable",
+        "description": "Credentials can be instantly verified and offer proof of ownership with one-click verification and QR codes."
+      }
+    },
+    "credentialManagement": {
+      "badge": "Digital Certificates",
+      "title": "Digital Certificates",
+      "subtitle": "Issue, manage, verify, and track digital certificates from a single dashboard",
+      "items": [
+        "Bulk issuance and management",
+        "Template library with version control",
+        "Expiration and renewal management",
+        "Role-based access control",
+        "Detailed audit logs"
+      ]
+    },
+    "blockchain": {
+      "badge": "Blockchain Verification",
+      "title": "Tamper-Proof Blockchain Verification",
+      "subtitle": "Anchor your credentials on blockchain for instant, cryptographic verification that can never be forged",
+      "items": [
+        "Immutable blockchain records",
+        "Real-time verification API",
+        "Zero fraud guarantee",
+        "Global trust network",
+        "Cryptographic proof of authenticity"
+      ]
+    },
+    "sharing": {
+      "badge": "Social Sharing",
+      "title": "One-Click Credential Sharing",
+      "subtitle": "Empower earners to share their achievements across LinkedIn, social media, and digital wallets",
+      "items": [
+        "LinkedIn one-click sharing",
+        "Social media optimized cards",
+        "QR code generation",
+        "Email sharing with tracking",
+        "Digital wallet integration"
+      ]
+    },
+    "analytics": {
+      "badge": "Analytics & Insights",
+      "title": "Real-Time Analytics Dashboard",
+      "subtitle": "Get actionable insights into credential issuance, verification, and engagement metrics",
+      "items": [
+        "Issuance analytics",
+        "Engagement tracking",
+        "ROI measurement",
+        "Custom report builder",
+        "Export and API access"
+      ]
+    },
+    "bulkIssuance": {
+      "badge": "Bulk Issuance",
+      "title": "Issue Thousands in Minutes",
+      "subtitle": "Automated bulk issuance workflows for high-volume credentialing programs",
+      "items": [
+        "CSV/Excel upload",
+        "Automated validation",
+        "Batch processing",
+        "Error handling and retry",
+        "Progress tracking"
+      ]
+    },
+    "apiIntegration": {
+      "badge": "API Integration",
+      "title": "Powerful REST API",
+      "subtitle": "Seamlessly integrate CredSure into your existing systems with our comprehensive API",
+      "items": [
+        "RESTful API endpoints",
+        "OAuth 2.0 authentication",
+        "Webhooks for real-time events",
+        "SDKs for popular languages",
+        "Comprehensive documentation"
+      ]
+    },
+    "autoIssue": {
+      "badge": "Auto-Issue",
+      "title": "Trigger-Based Automatic Issuance",
+      "subtitle": "Set up rules to automatically issue credentials when specific conditions are met",
+      "items": [
+        "LMS completion triggers",
+        "Assessment score thresholds",
+        "Custom event triggers",
+        "Scheduled issuance",
+        "Conditional logic"
+      ]
+    },
+    "templateDesigner": {
+      "badge": "Template Designer",
+      "title": "Intuitive Template Builder",
+      "subtitle": "Design stunning credential templates that reflect your brand identity",
+      "items": [
+        "Visual template editor",
+        "Brand customization",
+        "Dynamic fields",
+        "Template versioning",
+        "Preview and test"
+      ]
+    },
+    "whiteLabel": {
+      "badge": "White Label",
+      "title": "Fully Branded Experience",
+      "subtitle": "Deliver a seamless credential experience under your own brand",
+      "items": [
+        "Custom branding",
+        "Your logo and colors",
+        "Custom email templates",
+        "Branded verification pages",
+        "Custom domain support"
+      ]
+    },
+    "customDomains": {
+      "badge": "Custom Domains",
+      "title": "Host on Your Own Domain",
+      "subtitle": "Serve credentials from your own domain for complete brand consistency",
+      "items": [
+        "Custom domain setup",
+        "SSL certificate management",
+        "DNS configuration guide",
+        "Branded URLs",
+        "SEO benefits"
+      ]
+    },
+    "recipientWall": {
+      "badge": "Recipient Wall",
+      "title": "A Living Wall of Credentials",
+      "subtitle": "Every recipient gets a verifiable, shareable wall of every badge they have ever earned — across issuers, programmes, and years",
+      "items": [
+        "One verifiable URL per recipient",
+        "Auto-aggregates badges from any CredSure issuer",
+        "Recipients control what stays public",
+        "Native LinkedIn, X, WhatsApp share rails",
+        "Embeddable on personal sites and portfolios",
+        "Recruiter-ready PDF export"
+      ]
+    },
+    "instantVerification": {
+      "badge": "Instant Verification",
+      "title": "Verify Credentials in Seconds",
+      "subtitle": "Allow anyone to instantly verify the authenticity of credentials with a single click",
+      "items": [
+        "One-click verification",
+        "QR code scanning",
+        "API verification",
+        "Batch verification",
+        "Verification analytics"
+      ]
+    },
+    "security": {
+      "badge": "Security & Compliance",
+      "title": "Enterprise-Grade Security",
+      "subtitle": "GDPR and ISO 27001 compliant with end-to-end encryption",
+      "items": [
+        "ISO 27001 certified",
+        "GDPR compliant",
+        "ISO 27001 certified",
+        "End-to-end encryption",
+        "Regular security audits"
+      ]
+    }
+  },
+  "useCases": {
+    "courseCompletion": {
+      "badge": "Course Completion",
+      "title": "Automate Course Completion Credentials",
+      "subtitle": "Automatically issue verifiable credentials when learners complete courses, programs, or assessments",
+      "items": [
+        "LMS integration triggers",
+        "Custom completion criteria",
+        "Automated email delivery",
+        "Branded certificate design",
+        "Verification portal"
+      ]
+    },
+    "professionalLicenses": {
+      "badge": "Professional Licenses",
+      "title": "Digitize Professional Licenses",
+      "subtitle": "Issue and manage digital professional licenses with built-in expiration tracking and renewal automation",
+      "items": [
+        "License lifecycle management",
+        "Automated renewal reminders",
+        "Compliance tracking",
+        "Instant verification",
+        "Audit-ready records"
+      ]
+    },
+    "memberCredentials": {
+      "badge": "Member Credentials",
+      "title": "Digital Member Credentials",
+      "subtitle": "Issue digital membership cards, certifications, and achievement badges to your community members",
+      "items": [
+        "Digital membership cards",
+        "Achievement badges",
+        "CE credit tracking",
+        "Member directory integration",
+        "Social sharing enabled"
+      ]
+    },
+    "scaleProgram": {
+      "badge": "Scale Program",
+      "title": "Scale Your Credentialing Program",
+      "subtitle": "From hundreds to millions of credentials — our platform grows with your organization",
+      "items": [
+        "Unlimited scalability",
+        "Bulk processing",
+        "API-first architecture",
+        "Multi-tenant support",
+        "Enterprise SLA"
+      ]
+    },
+    "increaseEngagement": {
+      "badge": "Increase Engagement",
+      "title": "Boost Learner Engagement",
+      "subtitle": "Drive completion rates and engagement with shareable, verifiable digital credentials",
+      "items": [
+        "Gamification with badges",
+        "Social sharing incentives",
+        "Progress tracking",
+        "Leaderboards",
+        "Engagement analytics"
+      ]
+    },
+    "saveTime": {
+      "badge": "Save Time",
+      "title": "Save Hours on Credential Management",
+      "subtitle": "Automate manual credentialing processes and free your team to focus on what matters",
+      "items": [
+        "Automated workflows",
+        "Template reuse",
+        "Bulk operations",
+        "Scheduled issuance",
+        "Self-service verification"
+      ]
+    }
+  },
+  "megaMenu": {
+    "platform": {
+      "coreFeatures": "Core Features",
+      "automation": "Automation",
+      "customization": "Customization",
+      "credentialManagement": "Credential Management",
+      "credentialManagementDesc": "100+ features for easy certificate management",
+      "blockchainVerification": "Blockchain Verification",
+      "blockchainVerificationDesc": "Secure, tamper-proof credentials",
+      "socialSharing": "Social Sharing",
+      "socialSharingDesc": "One-click LinkedIn & digital wallet",
+      "analyticsDashboard": "Analytics Dashboard",
+      "analyticsDashboardDesc": "Real-time insights and reports",
+      "bulkIssuance": "Bulk Issuance",
+      "bulkIssuanceDesc": "Issue thousands instantly",
+      "apiIntegration": "API Integration",
+      "apiIntegrationDesc": "Seamless LMS connectivity",
+      "autoIssue": "Auto-Issue",
+      "autoIssueDesc": "Trigger-based automation",
+      "templateDesigner": "Template Designer",
+      "templateDesignerDesc": "Visual template builder",
+      "whiteLabel": "White Label",
+      "whiteLabelDesc": "Your brand, your way",
+      "customDomains": "Custom Domains",
+      "customDomainsDesc": "Branded verification pages",
+      "featuredTitle": "Most Popular",
+      "featuredSubtitle": "Blockchain-Verified Credentials",
+      "featuredDesc": "Issue tamper-proof, instantly verifiable certificates on the blockchain",
+      "featuredCta": "Explore Platform"
+    },
+    "solutions": {
+      "byIndustry": "By Industry",
+      "byUseCase": "By Use Case",
+      "byGoal": "By Goal",
+      "higherEducation": "Higher Education",
+      "higherEducationDesc": "Universities & colleges",
+      "associations": "Associations",
+      "associationsDesc": "Professional bodies",
+      "corporateTraining": "Corporate Training",
+      "corporateTrainingDesc": "Employee development",
+      "certificationBodies": "Certification Bodies",
+      "certificationBodiesDesc": "Awarding organizations",
+      "courseCompletion": "Course Completion",
+      "courseCompletionDesc": "Certificate automation",
+      "professionalLicenses": "Professional Licenses",
+      "professionalLicensesDesc": "Compliance tracking",
+      "memberCredentials": "Member Credentials",
+      "memberCredentialsDesc": "Membership verification",
+      "scaleProgram": "Scale Your Program",
+      "scaleProgramDesc": "Growth-focused solutions",
+      "increaseEngagement": "Increase Engagement",
+      "increaseEngagementDesc": "Boost completion rates",
+      "saveTime": "Save Time & Cost",
+      "saveTimeDesc": "Automation ROI",
+      "featuredTitle": "Featured",
+      "featuredSubtitle": "Higher Education Success Story",
+      "featuredDesc": "See how universities scaled digital credentials campus-wide with 95% adoption",
+      "featuredCta": "Read Case Study",
+      "healthcare": "Healthcare",
+      "healthcareDesc": "Medical credentials & compliance",
+      "manufacturing": "Manufacturing",
+      "manufacturingDesc": "Safety & equipment certifications"
+    },
+    "resources": {
+      "learn": "Learn",
+      "support": "Support",
+      "blogLabel": "Blog",
+      "blogDesc": "Latest insights & articles",
+      "customerStories": "Customer Stories",
+      "customerStoriesDesc": "Real success stories",
+      "aboutUs": "About Us",
+      "aboutUsDesc": "Meet the team",
+      "helpCenter": "Help Center",
+      "helpCenterDesc": "Documentation & guides",
+      "contactSupport": "Contact Support",
+      "contactSupportDesc": "Get help from our team",
+      "apiDocs": "API Documentation",
+      "apiDocsDesc": "Developer resources",
+      "videoTutorials": "Video Tutorials",
+      "videoTutorialsDesc": "Step-by-step guides",
+      "featuredTitle": "Resource Hub",
+      "featuredSubtitle": "Download Free Guide",
+      "featuredDesc": "Complete guide to digital credentialing in 2026",
+      "featuredCta": "Download Now"
+    }
+  },
+  "pricing": {
+    "title": "Choose Your",
+    "subtitle": "Transparent pricing with no hidden fees",
+    "monthly": "Monthly",
+    "annual": "Annual",
+    "save": "Save 20%",
+    "perMonth": "/month",
+    "perYear": "/year",
+    "perCredit": "per credit",
+    "credits": "credits",
+    "features": "Key Features",
+    "cta": {
+      "start": "Get Started",
+      "contact": "Contact Sales",
+      "demo": "Book Demo"
+    },
+    "plans": {
+      "starter": {
+        "name": "START",
+        "price": "€45",
+        "period": "/month",
+        "credits": "1,000 credits",
+        "description": "Perfect for small teams and pilot programs",
+        "features": [
+          "1,000 credentials per year",
+          "Blockchain verification",
+          "Email support",
+          "Basic templates",
+          "Social sharing"
+        ]
+      },
+      "professional": {
+        "name": "GROW",
+        "price": "Custom",
+        "description": "For growing organizations",
+        "features": [
+          "Custom credential volume",
+          "Priority support",
+          "Custom branding",
+          "API access",
+          "Advanced analytics",
+          "LMS integration"
+        ]
+      },
+      "enterprise": {
+        "name": "BOOST",
+        "price": "Custom",
+        "description": "Enterprise-grade solution",
+        "features": [
+          "Unlimited credentials",
+          "Dedicated account manager",
+          "White-label solution",
+          "Custom integrations",
+          "SLA guarantee",
+          "Advanced security"
+        ]
+      }
+    },
+    "titleHighlight": "Plan",
+    "affordable": "Start issuing blockchain-verified credentials with transparent, scalable pricing"
+  },
+  "pricingUI": {
+    "mostPopular": "Most Popular",
+    "billedAnnually": "Billed annually",
+    "custom": "Custom",
+    "getStarted": "Get Started",
+    "contactSales": "Contact Sales",
+    "startTrial": "Start Free Trial",
+    "perMonth": "month"
+  },
+  "pricingFeatures": {
+    "badge": "OUR EXTENSIVE FEATURES",
+    "title": "Features to cover everything",
+    "titleHighlight": "that you need",
+    "subtitle": "Here is our detailed list of features relevant to each pricing package. See, compare and choose what works best for you.",
+    "plans": [
+      "Start",
+      "Grow",
+      "Boost"
+    ],
+    "categories": [
+      {
+        "name": "Credential Issuing",
+        "features": [
+          {
+            "name": "Badge Designs",
+            "start": true,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Certificate Designs",
+            "start": true,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Email Templates",
+            "start": false,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Custom SMTP Settings",
+            "start": false,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "QR Code",
+            "start": true,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Transcript Letters",
+            "start": false,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Multilanguage Certificates",
+            "start": false,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Multipage Certificates",
+            "start": false,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Revoke Credentials",
+            "start": true,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Credential Expiry",
+            "start": true,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Skill & Competency Tags",
+            "start": true,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Recipient Directory",
+            "start": false,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Standard Integrations",
+            "start": false,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "API Access",
+            "start": false,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Advanced Integrations",
+            "start": false,
+            "grow": false,
+            "boost": true
+          },
+          {
+            "name": "Multiple Departments",
+            "start": false,
+            "grow": false,
+            "boost": true
+          },
+          {
+            "name": "Assessment Module",
+            "start": false,
+            "grow": false,
+            "boost": true
+          },
+          {
+            "name": "Digilocker Integration",
+            "start": false,
+            "grow": true,
+            "boost": true
+          }
+        ]
+      },
+      {
+        "name": "Manage Your Brand",
+        "features": [
+          {
+            "name": "Basic Branding",
+            "start": true,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Primary Branding",
+            "start": false,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Custom Whitelabelling",
+            "start": false,
+            "grow": false,
+            "boost": true
+          }
+        ]
+      },
+      {
+        "name": "Data Driven Insights",
+        "features": [
+          {
+            "name": "Activity Insights Reporting",
+            "start": false,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Engagement Insights Reporting",
+            "start": false,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Marketing Reach Analytics",
+            "start": false,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Exportable Credentials",
+            "start": false,
+            "grow": false,
+            "boost": true
+          }
+        ]
+      },
+      {
+        "name": "Deliver Recipient Sovereignty",
+        "features": [
+          {
+            "name": "Blockchain Credentials",
+            "start": true,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Issuer Verification",
+            "start": true,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Digital Wallet",
+            "start": true,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Skill Pass",
+            "start": true,
+            "grow": true,
+            "boost": true
+          }
+        ]
+      },
+      {
+        "name": "Support and Services",
+        "features": [
+          {
+            "name": "Self Serve Knowledgebase",
+            "start": true,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Email Support",
+            "start": true,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Dedicated Account Manager",
+            "start": false,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Program Growth Success Support",
+            "start": false,
+            "grow": false,
+            "boost": true
+          },
+          {
+            "name": "Specialized Onboarding & Training",
+            "start": false,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Professional Consulting Services",
+            "start": false,
+            "grow": false,
+            "boost": true
+          }
+        ]
+      },
+      {
+        "name": "Enterprise Ready",
+        "features": [
+          {
+            "name": "Premium Support",
+            "start": false,
+            "grow": false,
+            "boost": true
+          },
+          {
+            "name": "Custom SLAs",
+            "start": false,
+            "grow": false,
+            "boost": true
+          },
+          {
+            "name": "Custom Terms & DPA",
+            "start": false,
+            "grow": false,
+            "boost": true
+          },
+          {
+            "name": "Security Review Assistance",
+            "start": false,
+            "grow": false,
+            "boost": true
+          }
+        ]
+      }
+    ]
+  },
+  "pricingExtras": {
+    "affordable": "Start issuing blockchain-verified credentials with transparent, scalable pricing",
+    "includes": "All plans include blockchain verification, social sharing, and 24/7 support"
+  }
+}

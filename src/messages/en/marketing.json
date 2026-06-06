@@ -1,0 +1,295 @@
+{
+  "hero": {
+    "badge": "NEW: AI-POWERED CREDENTIAL ANALYTICS",
+    "title": "Transform Your Credentials into",
+    "subtitle": "Trusted by Organizations Worldwide",
+    "description": "Issue blockchain-verified certificates and badges that recipients can share, employers can verify, and everyone can trust.",
+    "cta": {
+      "primary": "Get Started Free",
+      "secondary": "Book a Demo",
+      "watch": "Watch Demo"
+    },
+    "stats": {
+      "credentials": "50M+ Credentials Issued",
+      "organizations": "150+ Organizations Trust Us",
+      "countries": "100+ Countries Worldwide",
+      "verification": "Instant Verification"
+    },
+    "titleHighlight": "Digital Trust"
+  },
+  "hero2026": {
+    "freeCredits": "20 Free Credits",
+    "g2Rating": "4.8/5 on G2",
+    "stats": {
+      "credentialsValue": "50M+",
+      "credentialsLabel": "Digital Credentials Earned & Managed",
+      "sharedValue": "500K+",
+      "sharedLabel": "Digital Credentials Shared",
+      "countriesValue": "50+",
+      "countriesLabel": "Countries where our Digital Credentials are Issued & Managed",
+      "orgsValue": "150+",
+      "orgsLabel": "Organizations Trust CredSure"
+    }
+  },
+  "statsSection": {
+    "orgsValue": "150+",
+    "orgsLabel": "Organizations Trust Us",
+    "credentialsValue": "2.5M+",
+    "credentialsLabel": "Credentials Issued",
+    "countriesValue": "45+",
+    "countriesLabel": "Countries Worldwide",
+    "uptimeValue": "99.9%",
+    "uptimeLabel": "Uptime Guarantee"
+  },
+  "bento": {
+    "badge": "Platform Highlights",
+    "title": "Everything You Need in One Platform",
+    "subtitle": "Powerful features designed for modern credentialing workflows",
+    "fastIssuance": "Lightning Fast Issuance",
+    "fastIssuanceDesc": "Issue thousands of credentials in seconds with our bulk upload feature. CSV, Excel, or API integration.",
+    "bulkUpload": "Bulk CSV/Excel upload",
+    "realtimeApi": "Real-time API integration",
+    "automatedWorkflows": "Automated workflows",
+    "blockchainVerified": "Blockchain Verified",
+    "blockchainVerifiedDesc": "Every credential is anchored on blockchain for tamper-proof verification.",
+    "uptimeSla": "Uptime SLA",
+    "advancedAnalytics": "Advanced Analytics",
+    "advancedAnalyticsDesc": "Track engagement, shares, and verification rates in real-time.",
+    "countries": "Countries",
+    "enterpriseSecurity": "Enterprise Security",
+    "soc2": "ISO 27001 certified",
+    "gdprCompliant": "GDPR compliant",
+    "encryption": "256-bit encryption",
+    "securityAudits": "Regular security audits",
+    "awardWinning": "Award Winning",
+    "platform2025": "Platform 2025"
+  },
+  "productShowcase": {
+    "title": "One Platform for",
+    "titleHighlight": "Digital Credentials",
+    "subtitle": "Everything you need to issue, manage, and track digital certificates and badges",
+    "featured": "Featured",
+    "productScreenshot": "Product Screenshot",
+    "manage": {
+      "title": "Manage all Credentials",
+      "description": "One platform for all your digital certificates and badges. Easy template design, bulk issuance, and recipient management.",
+      "stats": [
+        "100+ templates",
+        "Bulk CSV upload",
+        "Role-based access"
+      ]
+    },
+    "secure": {
+      "title": "Secure and Verifiable",
+      "description": "Blockchain-anchored credentials with instant verification. Tamper-proof, fraud-resistant, and always verifiable.",
+      "stats": [
+        "Blockchain verified",
+        "QR code scanning",
+        "Public verification"
+      ]
+    },
+    "share": {
+      "title": "Easily Shareable",
+      "description": "One-click sharing to LinkedIn, email, and digital wallets. Recipients can showcase achievements everywhere.",
+      "stats": [
+        "LinkedIn integration",
+        "Digital wallet",
+        "Social sharing"
+      ]
+    },
+    "analytics": {
+      "title": "Powerful Analytics",
+      "description": "Track engagement, sharing rates, and verification trends in real-time. Make data-driven decisions.",
+      "stats": [
+        "Real-time data",
+        "Export reports",
+        "Custom dashboards"
+      ]
+    }
+  },
+  "comparison": {
+    "feature": "Feature",
+    "youreHere": "(You're here!)",
+    "bottomLineTitle": "The Bottom Line:",
+    "bottomLineText": "CredSure gives you enterprise features at startup prices. No compromises on quality, security, or support."
+  },
+  "testimonials": {
+    "title": "Trusted by Leading Organizations",
+    "subtitle": "See what our customers say about CredSure"
+  },
+  "testimonialsSection": {
+    "badge": "Customer Success",
+    "titlePrefix": "Loved by",
+    "titleHighlight": "150+ organizations",
+    "ratingText": "4.8 out of 5",
+    "ratingSubtext": "Based on 50+ G2 reviews",
+    "verifiedReview": "Verified Review",
+    "readAllReviews": "Read All Reviews on G2",
+    "quotes": [
+      {
+        "quote": "The CredSure Dashboard is a one-stop shop for all certification needs, which is very helpful for institutions like us who specialize in training services. CredSure brings a new and updated approach to Certification.",
+        "author": "Francis Glenn T.",
+        "role": "Project Manager - Data Analyst",
+        "company": "Training Institution",
+        "avatar": "FG",
+        "date": "September 2022"
+      },
+      {
+        "quote": "Held a coding hackathon for 200+ students, the ease of issuing certificates was amazing. Best part was these were blockchain certificates so had a QR code for authenticity and could publish the same on their social accounts.",
+        "author": "Sanjiv D.",
+        "role": "Student Engagement Lead",
+        "company": "Educational Institution",
+        "avatar": "SD",
+        "date": "March 2022"
+      },
+      {
+        "quote": "Over 7000 certificates needed to be created and sent out. The team from CredSure provided us with amazing support - right from a great onboarding experience, to the team working over the weekend to make the certificates go out on time. Wonderful Service!",
+        "author": "Subhayu R.",
+        "role": "Co-founder",
+        "company": "Startup",
+        "avatar": "SR",
+        "date": "January 2022"
+      },
+      {
+        "quote": "Agile Team set up, top management attention for our individual needs, co-creation with the team, enthusiastic and highly skilled team members. Dedicated to achieving highest customer business impact. Customer-centric blockchain certificate professionals!",
+        "author": "Nils R.",
+        "role": "Co-Founder",
+        "company": "Woodify",
+        "avatar": "NR",
+        "date": "September 2021"
+      },
+      {
+        "quote": "Once the certificates are created as a template the issuing process is very simple and user-friendly. Specially the bulk processing on their system is super simple. Certs are encrypted and authenticated. Easy to use and convenient for bulk certificate requirements.",
+        "author": "Zoya N.",
+        "role": "Principal Consultant",
+        "company": "Consulting Firm",
+        "avatar": "ZN",
+        "date": "October 2021"
+      },
+      {
+        "quote": "It is easy to use or issue certificates quickly. Issuing certs/badges are seamless. The Great product, and a great support team! Good to understand and very simple to implement.",
+        "author": "Ramesh N.",
+        "role": "Head of Strategic Partner programs",
+        "company": "Enterprise",
+        "avatar": "RN",
+        "date": "June 2022"
+      }
+    ]
+  },
+  "ctaHomepage": {
+    "headline": "Ready to Transform Your Credentialing?",
+    "subheadline": "Join 150+ leading organizations issuing trusted, verifiable credentials.",
+    "ctaText": "Book a Demo",
+    "secondaryText": "Talk to our team • Customized solutions • Get started today",
+    "security": "Bank-Level Security",
+    "gdpr": "GDPR Compliant",
+    "uptime": "99.9% Uptime",
+    "support": "24/7 Support"
+  },
+  "faqSection": {
+    "title": "Frequently Asked",
+    "titleHighlight": "Questions",
+    "subtitle": "Everything you need to know about CredSure.",
+    "stillHaveQuestions": "Still have questions?",
+    "contactSupport": "Contact our support team",
+    "items": [
+      {
+        "question": "Are the credentials secure and verifiable?",
+        "answer": "Yes! All credentials are blockchain-anchored with bank-level encryption and ISO 27001 certification. Each credential has a unique verification URL that anyone can check instantly without login."
+      },
+      {
+        "question": "How long does it take to get started?",
+        "answer": "Most organizations issue their first credentials within 2 hours. Our intuitive template editor requires no technical expertise or design skills."
+      },
+      {
+        "question": "Can recipients add credentials to their digital wallets?",
+        "answer": "Absolutely! Recipients can add credentials to Apple Wallet and Google Pay with one click. They can also share directly to LinkedIn, download as PDF, or embed in portfolios."
+      },
+      {
+        "question": "What integrations do you support?",
+        "answer": "We integrate with popular LMS platforms (Moodle, Canvas, Blackboard, Thinkific), CRMs (Salesforce, HubSpot), automation tools (Zapier, Make), and offer full REST API access."
+      },
+      {
+        "question": "Is there a free trial? What's included?",
+        "answer": "Yes! We offer a 14-day free trial with full access to Professional plan features. No credit card required. You can issue up to 100 credentials during the trial."
+      },
+      {
+        "question": "Do you have a free plan?",
+        "answer": "Yes! Our free plan includes up to 25 credentials per month, basic templates, email delivery, social sharing, and blockchain verification."
+      },
+      {
+        "question": "What makes CredSure different from free certificate makers?",
+        "answer": "Unlike free PDF generators, CredSure credentials are verifiable, blockchain-secured, trackable, and shareable. You get analytics, LinkedIn integration, and digital wallet support."
+      }
+    ]
+  },
+  "benefitsSection": {
+    "headline": "Why Issue Digital Credentials on Blockchain?",
+    "subtitle": "Real results that make a difference to your bottom line.",
+    "items": [
+      {
+        "title": "Immutable",
+        "metric": "Bank-level security",
+        "description": "Digital credentials issued on CredSure are secure and tamper-proof."
+      },
+      {
+        "title": "Verifiable",
+        "metric": "One-click verification",
+        "description": "Credentials can be instantly verified and offer proof of ownership."
+      },
+      {
+        "title": "Shareable",
+        "metric": "Increase brand reach",
+        "description": "Social sharing of verifiable digital credentials boost brand credibility in the market."
+      }
+    ],
+    "socialProof": "Join organizations that have already made the switch",
+    "categories": [
+      "Fortune 500 Companies",
+      "Leading Universities",
+      "Professional Associations",
+      "Training Organizations"
+    ]
+  },
+  "features2026": {
+    "badge": "Platform Features",
+    "learnMore": "Learn more",
+    "explore": "Explore",
+    "discover": "Discover",
+    "viewDetails": "View details"
+  },
+  "demoSection": {
+    "headline": "See CredSure in Action",
+    "subheadline": "Watch how easy it is to create, customize, and issue digital credentials in under 3 minutes",
+    "noSignup": "No signup required",
+    "underMinutes": "Under 3 minutes",
+    "whatYoullLearn": "What you'll learn:",
+    "features": [
+      "Design custom credentials with our template editor",
+      "Bulk upload recipients via CSV",
+      "Send credentials via email instantly",
+      "Track engagement and sharing in real-time"
+    ],
+    "readyToTry": "Ready to try it yourself?",
+    "readyToTryDesc": "Start issuing credentials in minutes with our 14-day free trial. No credit card required.",
+    "startFreeTrial": "Start Free Trial"
+  },
+  "roiSection": {
+    "badge": "Efficiency Calculator",
+    "yourRequirements": "Your Current Process",
+    "monthlyVolume": "How many credentials do you issue monthly?",
+    "startSaving": "Start Saving Today — Free Trial",
+    "trialInfo": "14-day free trial • No credit card required • Cancel anytime",
+    "disclaimer": "* Savings estimates based on typical manual credentialing processes. Actual results may vary based on your specific workflow and volume."
+  },
+  "featuresCta": {
+    "ready": "See what fits your needs?",
+    "viewPricing": "View all pricing plans"
+  },
+  "calculateRoi": "Calculate ROI",
+  "pricingBanner": {
+    "title": "Not Sure Which Plan is Right for You?",
+    "subtitle": "Use our Efficiency Calculator to see how much time and money you can save",
+    "cta": "Calculate Your Savings"
+  }
+}

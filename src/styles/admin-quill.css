@@ -1,0 +1,74 @@
+/* Admin panel Quill editor dark theme overrides */
+.admin-quill-wrapper .ql-toolbar {
+  border-color: #334155 !important;
+  background: #0f172a;
+}
+
+.admin-quill-wrapper .ql-toolbar .ql-stroke {
+  stroke: #94a3b8;
+}
+
+.admin-quill-wrapper .ql-toolbar .ql-fill {
+  fill: #94a3b8;
+}
+
+.admin-quill-wrapper .ql-toolbar .ql-picker-label {
+  color: #94a3b8;
+}
+
+.admin-quill-wrapper .ql-toolbar button:hover .ql-stroke,
+.admin-quill-wrapper .ql-toolbar .ql-picker-label:hover {
+  stroke: #a78bfa;
+  color: #a78bfa;
+}
+
+.admin-quill-wrapper .ql-container {
+  border-color: #334155 !important;
+  font-size: 16px;
+  min-height: 350px;
+}
+
+.admin-quill-wrapper .ql-editor {
+  background: #0f172a;
+  color: #e2e8f0;
+  min-height: 350px;
+}
+
+.admin-quill-wrapper .ql-editor.ql-blank::before {
+  color: #475569;
+  font-style: normal;
+}
+
+.admin-quill-wrapper .ql-editor h1,
+.admin-quill-wrapper .ql-editor h2,
+.admin-quill-wrapper .ql-editor h3 {
+  color: #f1f5f9;
+}
+
+.admin-quill-wrapper .ql-editor blockquote {
+  border-left-color: #8b5cf6;
+  color: #cbd5e1;
+}
+
+.admin-quill-wrapper .ql-editor pre.ql-syntax {
+  background: #1e293b;
+  color: #e2e8f0;
+  border-radius: 8px;
+}
+
+.admin-quill-wrapper .ql-snow .ql-picker-options {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+.admin-quill-wrapper .ql-snow .ql-picker-item {
+  color: #cbd5e1;
+}
+
+.admin-quill-wrapper .ql-snow .ql-picker-item:hover {
+  color: #a78bfa;
+}
+
+.admin-quill-wrapper .ql-toolbar .ql-picker.ql-expanded .ql-picker-label {
+  border-color: #8b5cf6;
+}

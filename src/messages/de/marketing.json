@@ -1,0 +1,295 @@
+{
+  "hero": {
+    "badge": "NEU: KI-GESTÜTZTE ZERTIFIKATSANALYSE",
+    "title": "Verwandeln Sie Ihre Zertifikate in",
+    "subtitle": "Weltweit von Organisationen vertraut",
+    "description": "Stellen Sie blockchain-verifizierte Zertifikate und Badges aus, die Empfänger teilen, Arbeitgeber verifizieren und jeder vertrauen kann.",
+    "cta": {
+      "primary": "Kostenlos starten",
+      "secondary": "Demo buchen",
+      "watch": "Demo ansehen"
+    },
+    "stats": {
+      "credentials": "50M+ Ausgestellte Zertifikate",
+      "organizations": "150+ Organisationen vertrauen uns",
+      "countries": "100+ Länder weltweit",
+      "verification": "Sofortige Verifizierung"
+    },
+    "titleHighlight": "Digitales Vertrauen"
+  },
+  "hero2026": {
+    "freeCredits": "",
+    "g2Rating": "4,8/5 auf G2",
+    "stats": {
+      "credentialsValue": "50M+",
+      "credentialsLabel": "Digitale Zertifikate erstellt & verwaltet",
+      "sharedValue": "500K+",
+      "sharedLabel": "Digitale Zertifikate geteilt",
+      "countriesValue": "50+",
+      "countriesLabel": "Länder, in denen unsere digitalen Zertifikate ausgestellt & verwaltet werden",
+      "orgsValue": "150+",
+      "orgsLabel": "Organisationen vertrauen CredSure"
+    }
+  },
+  "statsSection": {
+    "orgsValue": "150+",
+    "orgsLabel": "Organisationen vertrauen uns",
+    "credentialsValue": "2,5M+",
+    "credentialsLabel": "Ausgestellte Zertifikate",
+    "countriesValue": "45+",
+    "countriesLabel": "Länder weltweit",
+    "uptimeValue": "99,9%",
+    "uptimeLabel": "Verfügbarkeitsgarantie"
+  },
+  "bento": {
+    "badge": "Plattform-Highlights",
+    "title": "Alles, was Sie brauchen, in einer Plattform",
+    "subtitle": "Leistungsstarke Funktionen für moderne Zertifizierungs-Workflows",
+    "fastIssuance": "Blitzschnelle Ausstellung",
+    "fastIssuanceDesc": "Stellen Sie Tausende von Zertifikaten in Sekunden mit unserem Massen-Upload aus. CSV, Excel oder API-Integration.",
+    "bulkUpload": "Massen-CSV/Excel-Upload",
+    "realtimeApi": "Echtzeit-API-Integration",
+    "automatedWorkflows": "Automatisierte Workflows",
+    "blockchainVerified": "Blockchain-verifiziert",
+    "blockchainVerifiedDesc": "Jedes Zertifikat ist auf der Blockchain verankert für fälschungssichere Verifizierung.",
+    "uptimeSla": "Verfügbarkeits-SLA",
+    "advancedAnalytics": "Erweiterte Analysen",
+    "advancedAnalyticsDesc": "Verfolgen Sie Engagement, Teilen und Verifizierungsraten in Echtzeit.",
+    "countries": "Länder",
+    "enterpriseSecurity": "Enterprise-Sicherheit",
+    "soc2": "ISO 27001 zertifiziert",
+    "gdprCompliant": "DSGVO-konform",
+    "encryption": "256-Bit-Verschlüsselung",
+    "securityAudits": "Regelmäßige Sicherheitsaudits",
+    "awardWinning": "Preisgekrönt",
+    "platform2025": "Plattform 2025"
+  },
+  "productShowcase": {
+    "title": "Eine Plattform für",
+    "titleHighlight": "Digitale Zertifikate",
+    "subtitle": "Alles, was Sie brauchen, um digitale Zertifikate und Badges auszustellen, zu verwalten und zu verfolgen",
+    "featured": "Empfohlen",
+    "productScreenshot": "Produktvorschau",
+    "manage": {
+      "title": "Alle Zertifikate verwalten",
+      "description": "Eine Plattform für alle Ihre digitalen Zertifikate und Badges. Einfaches Vorlagendesign, Massenausstellung und Empfängerverwaltung.",
+      "stats": [
+        "100+ Vorlagen",
+        "Massen-CSV-Upload",
+        "Rollenbasierter Zugriff"
+      ]
+    },
+    "secure": {
+      "title": "Sicher und verifizierbar",
+      "description": "Blockchain-verankerte Zertifikate mit sofortiger Verifizierung. Fälschungssicher, betrugsresistent und stets überprüfbar.",
+      "stats": [
+        "Blockchain-verifiziert",
+        "QR-Code-Scanning",
+        "Öffentliche Verifizierung"
+      ]
+    },
+    "share": {
+      "title": "Einfach teilbar",
+      "description": "Ein-Klick-Teilen auf LinkedIn, per E-Mail und in digitalen Wallets. Empfänger können ihre Erfolge überall präsentieren.",
+      "stats": [
+        "LinkedIn-Integration",
+        "Digitales Wallet",
+        "Social Sharing"
+      ]
+    },
+    "analytics": {
+      "title": "Leistungsstarke Analysen",
+      "description": "Verfolgen Sie Engagement, Teilungsraten und Verifizierungstrends in Echtzeit. Treffen Sie datengestützte Entscheidungen.",
+      "stats": [
+        "Echtzeit-Daten",
+        "Berichte exportieren",
+        "Individuelle Dashboards"
+      ]
+    }
+  },
+  "comparison": {
+    "feature": "Funktion",
+    "youreHere": "(Sie sind hier!)",
+    "bottomLineTitle": "Das Fazit:",
+    "bottomLineText": "CredSure bietet Ihnen Enterprise-Funktionen zu Startup-Preisen. Keine Kompromisse bei Qualität, Sicherheit oder Support."
+  },
+  "testimonials": {
+    "title": "Vertraut von führenden Organisationen",
+    "subtitle": "Sehen Sie, was unsere Kunden über CredSure sagen"
+  },
+  "testimonialsSection": {
+    "badge": "Kundenerfolge",
+    "titlePrefix": "Geliebt von",
+    "titleHighlight": "150+ Organisationen",
+    "ratingText": "4,8 von 5",
+    "ratingSubtext": "Basierend auf 50+ G2-Bewertungen",
+    "verifiedReview": "Verifizierte Bewertung",
+    "readAllReviews": "Alle Bewertungen auf G2 lesen",
+    "quotes": [
+      {
+        "quote": "Das CredSure-Dashboard ist eine zentrale Anlaufstelle für alle Zertifizierungsanforderungen, was für Institutionen wie uns, die sich auf Schulungsdienstleistungen spezialisiert haben, sehr hilfreich ist. CredSure bringt einen neuen und aktualisierten Ansatz für die Zertifizierung.",
+        "author": "Francis Glenn T.",
+        "role": "Projektmanager - Datenanalyst",
+        "company": "Schulungsinstitution",
+        "avatar": "FG",
+        "date": "September 2022"
+      },
+      {
+        "quote": "Wir haben einen Coding-Hackathon für über 200 Studierende veranstaltet, die einfache Ausstellung von Zertifikaten war erstaunlich. Das Beste war, dass es sich um Blockchain-Zertifikate handelte, die einen QR-Code zur Authentifizierung hatten und in sozialen Netzwerken veröffentlicht werden konnten.",
+        "author": "Sanjiv D.",
+        "role": "Leiter Studentenengagement",
+        "company": "Bildungseinrichtung",
+        "avatar": "SD",
+        "date": "März 2022"
+      },
+      {
+        "quote": "Über 7000 Zertifikate mussten erstellt und versandt werden. Das Team von CredSure hat uns fantastisch unterstützt – von einer großartigen Onboarding-Erfahrung bis hin zum Team, das am Wochenende arbeitete, damit die Zertifikate pünktlich versendet wurden. Wunderbarer Service!",
+        "author": "Subhayu R.",
+        "role": "Mitgründer",
+        "company": "Startup",
+        "avatar": "SR",
+        "date": "Januar 2022"
+      },
+      {
+        "quote": "Agiles Team-Setup, Aufmerksamkeit des Top-Managements für unsere individuellen Bedürfnisse, Co-Creation mit dem Team, begeisterte und hochqualifizierte Teammitglieder. Dem höchsten geschäftlichen Kundennutzen gewidmet. Kundenorientierte Blockchain-Zertifikat-Profis!",
+        "author": "Nils R.",
+        "role": "Mitgründer",
+        "company": "Woodify",
+        "avatar": "NR",
+        "date": "September 2021"
+      },
+      {
+        "quote": "Sobald die Zertifikate als Vorlage erstellt sind, ist der Ausstellungsprozess sehr einfach und benutzerfreundlich. Besonders die Massenverarbeitung auf ihrem System ist super einfach. Zertifikate sind verschlüsselt und authentifiziert. Einfach zu nutzen und praktisch für Massenanforderungen.",
+        "author": "Zoya N.",
+        "role": "Leitende Beraterin",
+        "company": "Beratungsunternehmen",
+        "avatar": "ZN",
+        "date": "Oktober 2021"
+      },
+      {
+        "quote": "Es ist einfach zu bedienen und Zertifikate schnell auszustellen. Die Ausstellung von Zertifikaten/Badges ist nahtlos. Ein großartiges Produkt und ein großartiges Support-Team! Einfach zu verstehen und sehr einfach zu implementieren.",
+        "author": "Ramesh N.",
+        "role": "Leiter Strategische Partnerprogramme",
+        "company": "Unternehmen",
+        "avatar": "RN",
+        "date": "Juni 2022"
+      }
+    ]
+  },
+  "ctaHomepage": {
+    "headline": "Bereit, Ihre Zertifizierung zu transformieren?",
+    "subheadline": "Schließen Sie sich 150+ führenden Organisationen an, die vertrauenswürdige, verifizierbare Zertifikate ausstellen.",
+    "ctaText": "Demo buchen",
+    "secondaryText": "Sprechen Sie mit unserem Team • Individuelle Lösungen • Starten Sie noch heute",
+    "security": "Sicherheit auf Bankenniveau",
+    "gdpr": "DSGVO-konform",
+    "uptime": "99,9% Verfügbarkeit",
+    "support": "24/7 Support"
+  },
+  "faqSection": {
+    "title": "Häufig gestellte",
+    "titleHighlight": "Fragen",
+    "subtitle": "Alles, was Sie über CredSure wissen müssen.",
+    "stillHaveQuestions": "Noch Fragen?",
+    "contactSupport": "Kontaktieren Sie unser Support-Team",
+    "items": [
+      {
+        "question": "Sind die Zertifikate sicher und verifizierbar?",
+        "answer": "Ja! Alle Zertifikate sind blockchain-verankert mit Verschlüsselung auf Bankenniveau und ISO 27001-Zertifizierung. Jedes Zertifikat hat eine einzigartige Verifizierungs-URL."
+      },
+      {
+        "question": "Wie lange dauert der Einstieg?",
+        "answer": "Die meisten Organisationen stellen ihre ersten Zertifikate innerhalb von 2 Stunden aus. Unser intuitiver Vorlagen-Editor erfordert keine technischen Kenntnisse."
+      },
+      {
+        "question": "Können Empfänger Zertifikate zu ihren digitalen Wallets hinzufügen?",
+        "answer": "Absolut! Empfänger können Zertifikate mit einem Klick zu Apple Wallet und Google Pay hinzufügen. Sie können auch direkt auf LinkedIn teilen, als PDF herunterladen oder in Portfolios einbetten."
+      },
+      {
+        "question": "Welche Integrationen werden unterstützt?",
+        "answer": "Wir integrieren mit gängigen LMS-Plattformen (Moodle, Canvas, Blackboard, Thinkific), CRMs (Salesforce, HubSpot), Automatisierungstools (Zapier, Make) und bieten vollen REST-API-Zugang."
+      },
+      {
+        "question": "Gibt es eine kostenlose Testversion?",
+        "answer": "Ja! Wir bieten eine 14-tägige kostenlose Testversion mit vollem Zugang zu Professional-Funktionen. Keine Kreditkarte erforderlich."
+      },
+      {
+        "question": "Gibt es einen kostenlosen Plan?",
+        "answer": "Ja! Unser kostenloser Plan umfasst bis zu 25 Zertifikate pro Monat, Basis-Vorlagen, E-Mail-Versand, Social Sharing und Blockchain-Verifizierung."
+      },
+      {
+        "question": "Was unterscheidet CredSure von kostenlosen Zertifikat-Erstellern?",
+        "answer": "Im Gegensatz zu kostenlosen PDF-Generatoren sind CredSure-Zertifikate verifizierbar, blockchain-gesichert, nachverfolgbar und teilbar. Sie erhalten Analysen, LinkedIn-Integration und digitale Wallet-Unterstützung."
+      }
+    ]
+  },
+  "benefitsSection": {
+    "headline": "Warum digitale Zertifikate auf Blockchain ausstellen?",
+    "subtitle": "Echte Ergebnisse, die einen Unterschied für Ihr Unternehmen machen.",
+    "items": [
+      {
+        "title": "Unveränderlich",
+        "metric": "Bankensichere Sicherheit",
+        "description": "Auf CredSure ausgestellte digitale Zertifikate sind sicher und fälschungssicher."
+      },
+      {
+        "title": "Verifizierbar",
+        "metric": "Ein-Klick-Verifizierung",
+        "description": "Zertifikate können sofort verifiziert werden und bieten Eigentumsnachweis."
+      },
+      {
+        "title": "Teilbar",
+        "metric": "Markenreichweite erhöhen",
+        "description": "Social Sharing verifizierbarer digitaler Zertifikate steigert die Markenglaubwürdigkeit am Markt."
+      }
+    ],
+    "socialProof": "Schließen Sie sich Organisationen an, die bereits gewechselt haben",
+    "categories": [
+      "Fortune-500-Unternehmen",
+      "Führende Universitäten",
+      "Berufsverbände",
+      "Schulungsorganisationen"
+    ]
+  },
+  "features2026": {
+    "badge": "Plattform-Funktionen",
+    "learnMore": "Mehr erfahren",
+    "explore": "Erkunden",
+    "discover": "Entdecken",
+    "viewDetails": "Details anzeigen"
+  },
+  "demoSection": {
+    "headline": "CredSure in Aktion erleben",
+    "subheadline": "Sehen Sie, wie einfach es ist, digitale Zertifikate in unter 3 Minuten zu erstellen, anzupassen und auszustellen",
+    "noSignup": "Keine Anmeldung erforderlich",
+    "underMinutes": "Unter 3 Minuten",
+    "whatYoullLearn": "Das lernen Sie:",
+    "features": [
+      "Individuelle Zertifikate mit unserem Vorlagen-Editor gestalten",
+      "Empfänger per CSV-Massenupload hinzufügen",
+      "Zertifikate sofort per E-Mail versenden",
+      "Engagement und Teilen in Echtzeit verfolgen"
+    ],
+    "readyToTry": "Bereit, es selbst auszuprobieren?",
+    "readyToTryDesc": "Beginnen Sie in Minuten mit der Ausstellung von Zertifikaten mit unserer 14-tägigen kostenlosen Testversion. Keine Kreditkarte erforderlich.",
+    "startFreeTrial": "Kostenlose Testversion starten"
+  },
+  "roiSection": {
+    "badge": "Effizienz-Rechner",
+    "yourRequirements": "Ihr aktueller Prozess",
+    "monthlyVolume": "Wie viele Zertifikate stellen Sie monatlich aus?",
+    "startSaving": "Heute sparen — Kostenlose Testversion",
+    "trialInfo": "14 Tage kostenlos testen • Keine Kreditkarte erforderlich • Jederzeit kündbar",
+    "disclaimer": "* Einsparungsschätzungen basieren auf typischen manuellen Zertifizierungsprozessen. Die tatsächlichen Ergebnisse können je nach Ihrem spezifischen Workflow variieren."
+  },
+  "featuresCta": {
+    "ready": "Finden Sie, was zu Ihnen passt?",
+    "viewPricing": "Alle Preispläne anzeigen"
+  },
+  "calculateRoi": "ROI berechnen",
+  "pricingBanner": {
+    "title": "Nicht sicher, welcher Plan der richtige ist?",
+    "subtitle": "Nutzen Sie unseren Effizienz-Rechner, um zu sehen, wie viel Zeit und Geld Sie sparen können",
+    "cta": "Einsparungen berechnen"
+  }
+}

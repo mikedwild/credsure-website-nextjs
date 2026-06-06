@@ -1,0 +1,192 @@
+{
+  "impressum": {
+    "title": "Impressum",
+    "subtitle": "Verantwortlich für den Inhalt dieser Seite",
+    "managingDirector": "Geschäftsführer",
+    "registeredOffice": "Sitz und Gerichtsstand",
+    "commercialRegister": "Handelsregister",
+    "vatId": "USt-ID",
+    "contentResponsible": "Verantwortlich für Websiteinhalte",
+    "conceptRealization": "Konzept und Umsetzung",
+    "legalNotice": "Rechtlicher Hinweis",
+    "lastRevised": "Letzte Überarbeitung",
+    "disclaimer": "In Bezug auf die technischen Merkmale des Internets kann keine Gewähr für die Authentizität, Richtigkeit und Vollständigkeit der im Internet bereitgestellten Informationen übernommen werden. Es besteht auch keine Garantie für die Verfügbarkeit oder den Betrieb dieser Website und ihrer Inhalte.\n\nJede Haftung für direkte, indirekte oder sonstige Schäden, unabhängig von deren Ursache, die aus der Nutzung oder Nichtverfügbarkeit der Daten und Informationen auf dieser Website entstehen, wird, soweit gesetzlich zulässig, ausgeschlossen.\n\nUnser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalt wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte keine Gewähr übernehmen. Der jeweilige Anbieter oder Betreiber der verlinkten Seiten ist stets für die Inhalte der verlinkten Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Zum Zeitpunkt der Verlinkung wurden keine rechtswidrigen Inhalte festgestellt.\n\nDer Inhalt dieser Website ist urheberrechtlich geschützt."
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "subtitle": "Wie wir Ihre personenbezogenen Daten auf credsure.io behandeln",
+    "lastUpdated": "Zuletzt aktualisiert: Mai 2026",
+    "controllerLabel": "Verantwortlicher (Art. 4 Abs. 7 DSGVO):",
+    "controllerLines": [
+      "Certif-ID International GmbH",
+      "Scheffelstraße 58a, Köln, Germany",
+      "E-Mail: admin@certif-id.com"
+    ],
+    "sections": [
+      {
+        "title": "1. Einleitung",
+        "body": "Im Folgenden informieren wir über die Verarbeitung personenbezogener Daten bei der Nutzung\n\n* unserer Website www.credsure.io\n* unserer Profile in Sozialen Medien.\n\nPersonenbezogene Daten sind alle Daten, die auf eine konkrete natürliche Person beziehbar sind, z. B. ihr Name oder ihre IP-Adresse."
+      },
+      {
+        "title": "1.1 Kontaktdaten",
+        "body": "Verantwortlicher gem. Art. 4 Abs. 7 EU-Datenschutz-Grundverordnung (DSGVO) ist Certif-ID International GmbH, Scheffelstraße 58a, Köln, Germany, E-Mail: admin@certif-id.com. Gesetzlich vertreten werden wir durch Timothy Miller.\n\nUnser Datenschutzbeauftragter ist über die heyData GmbH, Schützenstraße 5, 10117 Berlin, www.heydata.eu, E-Mail: datenschutz@heydata.eu erreichbar."
+      },
+      {
+        "title": "1.2 Umfang der Datenverarbeitung, Verarbeitungszwecke und Rechtsgrundlagen",
+        "body": "Den Umfang der Verarbeitung der Daten, Verarbeitungszwecke und Rechtsgrundlagen führen wir im Detail weiter unten aus. Als Rechtsgrundlage für eine Datenverarbeitung kommen grundsätzlich die folgenden in Betracht:\n\n* Art. 6 Abs. 1 S. 1 lit. a DSGVO dient uns als Rechtsgrundlage für Verarbeitungsvorgänge, für die wir eine Einwilligung einholen.\n* Art. 6 Abs. 1 S. 1 lit. b DSGVO ist Rechtsgrundlage, soweit die Verarbeitung personenbezogener Daten zur Erfüllung eines Vertrages erforderlich ist, z.B. wenn ein Seitenbesucher von uns ein Produkt erwirbt oder wir für ihn eine Leistung ausführen. Diese Rechtsgrundlage gilt auch für Verarbeitungen, die für vorvertragliche Maßnahmen erforderlich sind, etwa bei Anfragen zu unseren Produkten oder Leistungen.\n* Art. 6 Abs. 1 S. 1 lit. c DSGVO findet Anwendung, wenn wir mit der Verarbeitung personenbezogener Daten eine rechtliche Verpflichtung erfüllen, wie es z.B. im Steuerrecht der Fall sein kann.\n* Art. 6 Abs. 1 S. 1 lit. f DSGVO dient als Rechtsgrundlage, wenn wir uns zur Verarbeitung personenbezogener Daten auf berechtigte Interessen berufen können, z.B. für Cookies, die für den technischen Betrieb unserer Website erforderlich sind."
+      },
+      {
+        "title": "1.3 Datenverarbeitung außerhalb des EWR",
+        "body": "Soweit wir Daten an Dienstleister oder sonstige Dritte außerhalb des EWR übermitteln, garantieren Angemessenheitsbeschlüsse der EU-Kommission nach Art. 45 Ab. 3 DSGVO die Sicherheit der Daten bei der Weitergabe, soweit diese vorhanden sind, wie dies z.B. für Großbritannien, Kanada und Israel der Fall ist.\n\nBei der Datenweitergabe an Dienstleister in den USA, ist Rechtsgrundlage für die Datenweitergabe ein Angemessenheitsbeschluss der EU-Kommission, wenn sich der Dienstleister zusätzlich unter dem EU US Data Privacy Framework zertifiziert hat.\n\nIn anderen Fällen (z.B. wenn kein Angemessenheitsbeschluss existiert), sind Rechtsgrundlage für die Datenweitergabe im Regelfall, also soweit wir keinen abweichenden Hinweis geben, Standardvertragsklauseln. Diese sind ein von der EU-Kommission verabschiedetes Regelwerk und Teil des Vertrags mit dem jeweiligen Dritten. Nach Art. 46 Abs. 2 lit. b DSGVO gewährleisten sie die Sicherheit der Datenweitergabe. Viele der Anbieter haben über die Standardvertragsklauseln hinausgehende vertragliche Garantien abgegeben, die die Daten über die Standardvertragsklauseln hinaus schützen. Das sind z.B. Garantien hinsichtlich der Verschlüsselung der Daten oder hinsichtlich einer Pflicht des Dritten zum Hinweis an Betroffene, wenn Strafverfolgungsorgane auf Daten zugreifen wollen."
+      },
+      {
+        "title": "1.4 Speicherdauer",
+        "body": "Sofern nicht im Rahmen dieser Datenschutzerklärung ausdrücklich angegeben, werden die bei uns gespeicherten Daten gelöscht, sobald sie für ihre Zweckbestimmung nicht mehr erforderlich sind und der Löschung keine gesetzlichen Aufbewahrungspflichten entgegenstehen. Sofern die Daten nicht gelöscht werden, weil sie für andere und gesetzlich zulässige Zwecke erforderlich sind, wird ihre Verarbeitung eingeschränkt, d.h. die Daten werden gesperrt und nicht für andere Zwecke verarbeitet. Das gilt z.B. für Daten, die wir aus handels- oder steuerrechtlichen Gründen aufbewahren müssen."
+      },
+      {
+        "title": "1.5 Rechte der Betroffenen",
+        "body": "Betroffene haben gegenüber uns folgende Rechte hinsichtlich der sie betreffenden personenbezogenen Daten:\n\n* Recht auf Auskunft,\n* Recht auf Berichtigung oder Löschung,\n* Recht auf Einschränkung der Verarbeitung,\n* Recht auf Widerspruch gegen die Verarbeitung,\n* Recht auf Datenübertragbarkeit,\n* Recht, eine erteilte Einwilligung jederzeit zu widerrufen.\n\nBetroffene haben zudem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung ihrer personenbezogenen Daten zu beschweren. Kontaktdaten der Datenschutz-Aufsichtsbehörden sind unter https://www.bfdi.bund.de/DE/Service/Anschriften/Laender/Laender-node.html abrufbar."
+      },
+      {
+        "title": "1.6 Pflicht zur Bereitstellung von Daten",
+        "body": "Kunden, Interessenten oder Dritte müssen uns im Rahmen einer Geschäftsbeziehung oder sonstigen Beziehung nur diejenigen personenbezogenen Daten bereitstellen, die für die Begründung, Durchführung und Beendigung der Geschäftsbeziehung oder für die sonstige Beziehung erforderlich sind oder zu deren Erhebung wir gesetzlich verpflichtet sind. Ohne diese Daten werden wir in der Regel den Abschluss eines Vertrages oder die Bereitstellung einer Leistung ablehnen müssen oder einen bestehenden Vertrag oder sonstige Beziehung nicht mehr durchführen können.\n\nPflichtangaben sind als solche gekennzeichnet."
+      },
+      {
+        "title": "1.7 Keine automatische Entscheidungsfindung im Einzelfall",
+        "body": "Zur Begründung und Durchführung einer Geschäftsbeziehung oder sonstigen Beziehung nutzen wir grundsätzlich keine vollautomatisierte Entscheidungsfindung gemäß Artikel 22 DSGVO. Sollten wir diese Verfahren in Einzelfällen einsetzen, werden wir hierüber gesondert informieren, sofern dies gesetzlich geboten ist."
+      },
+      {
+        "title": "1.8 Kontaktaufnahme",
+        "body": "Bei der Kontaktaufnahme mit uns, z.B. per E-Mail oder Telefon, werden die uns mitgeteilten Daten (z.B. Namen und E-Mail-Adressen) von uns gespeichert, um Fragen zu beantworten. Rechtsgrundlage für die Verarbeitung ist unser berechtigtes Interesse (Art. 6 Abs. 1 S. 1 lit. f DSGVO), an uns gerichtete Anfragen zu beantworten. Die in diesem Zusammenhang anfallenden Daten löschen wir, nachdem die Speicherung nicht mehr erforderlich ist, oder schränken die Verarbeitung ein, falls gesetzliche Aufbewahrungspflichten bestehen."
+      },
+      {
+        "title": "1.9 Kundenumfragen",
+        "body": "Von Zeit zu Zeit führen wir Kundenumfragen durch, um unsere Kunden und ihre Wünsche besser kennenzulernen. Dabei erheben wir die jeweils abgefragten Daten. Es ist unser berechtigtes Interesse, unsere Kunden und ihre Wünsche besser kennenzulernen, so dass Rechtsgrundlage der damit einhergehenden Datenverarbeitung Art. 6 Abs. 1 S. 1 lit. f DSGVO ist. Die Daten löschen wir, wenn die Ergebnisse der Umfragen ausgewertet sind."
+      },
+      {
+        "title": "2. Newsletter",
+        "body": "Wir behalten uns vor, Kunden, die bereits Dienstleistungen von uns in Anspruch genommen haben oder Waren gekauft haben, von Zeit zu Zeit per E-Mail oder auf anderem Weg über unsere Angebote zu informieren, falls sie dem nicht widersprochen haben. Rechtsgrundlage für diese Datenverarbeitung ist Art. 6 Abs. 1 S. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt in der Direktwerbung (Erwägungsgrund 47 DSGVO). Kunden können der Verwendung ihrer E-Mail-Adresse zu Werbezwecken jederzeit ohne zusätzliche Kosten widersprechen, zum Beispiel über den Link am Ende einer jeden E-Mail oder per E-Mail an unsere oben genannte E-Mail-Adresse.\n\nInteressenten haben die Möglichkeit, einen kostenlosen Newsletter zu abonnieren. Wir verarbeiten die bei der Anmeldung angegebenen Daten ausschließlich für den Versand des Newsletters. Die Anmeldung erfolgt über die Auswahl des entsprechenden Feldes auf unserer Website, durch Ankreuzen des entsprechenden Feldes in einem Papierdokument oder durch eine andere eindeutige Handlung, wodurch Interessenten ihr Einverständnis in die Verarbeitung ihrer Daten erklären, so dass Rechtsgrundlage Art. 6 Abs. 1 S. 1 lit. a DSGVO ist. Die Einwilligung kann jederzeit widerrufen werden, z. B. durch Klicken des entsprechenden Links im Newsletter oder Hinweis an unsere oben angegebene E-Mail-Adresse. Die Verarbeitung der Daten bis zum Widerruf bleibt auch im Falle eines Widerrufs rechtmäßig.\n\nAuf Grundlage der Einwilligung der Empfänger (Art. 6 Abs. 1 S. 1 lit. a DSGVO) messen wir auch die Öffnungs- und Klickrate unserer Newsletter, um zu verstehen, welche Inhalte relevant für unsere Empfänger sind.\n\n* Wir versenden Newsletter mit dem Tool SendGrid des Anbieters Twilio Ireland Limited, 70 Sir John Rogerson's Quay, Dublin 2, D02 R296, Ireland. Der Anbieter verarbeitet dabei Inhalts-, Nutzungs-, Meta-/Kommunikationsdaten und Kontaktdaten in den USA. Weitere Informationen sind in der Datenschutzerklärung des Anbieters unter https://www.twilio.com/legal/privacy abrufbar.\n* Wir versenden Newsletter mit dem Tool Pipedrive des Anbieters Pipedrive OÜ, Mustamäe tee 3a, 10615 Tallinn, Estland. Der Anbieter verarbeitet dabei Inhalts-, Nutzungs-, Meta-/Kommunikationsdaten und Kontaktdaten in der EU. Weitere Informationen sind in der Datenschutzerklärung des Anbieters unter https://www.pipedrive.com/en/privacy abrufbar.\n* Wir versenden Newsletter mit dem Tool Arvana des Anbieters Arvana GmbH, Rosenstraße 16/17, 10178 Berlin. Der Anbieter verarbeitet dabei Inhalts-, Nutzungs-, Meta-/Kommunikationsdaten und Kontaktdaten in der EU. Weitere Informationen sind in der Datenschutzerklärung des Anbieters unter https://www.arvana.io/datenschutzerklarung abrufbar."
+      },
+      {
+        "title": "3. Datenverarbeitung auf unserer Website",
+        "body": ""
+      },
+      {
+        "title": "3.1 Hinweis für Websitebesucher aus Deutschland",
+        "body": "Unsere Website speichert Informationen in der Endeinrichtung von Websitebesuchern (z.B. Cookies) oder greift auf Informationen zu, die bereits in der Endeinrichtung gespeichert sind (z.B. IP-Adressen). Welche Informationen dies im Einzelnen sind, ist den folgenden Abschnitten zu entnehmen.\n\nDiese Speicherung und dieser Zugriff erfolgt auf Grundlage der folgenden Bestimmungen:\n\n* Soweit diese Speicherung oder dieser Zugriff unbedingt erforderlich ist, damit wir dem von Websitebesuchern ausdrücklich gewünschten Dienst unserer Website zur Verfügung stellen (z.B. zur Durchführung eines vom Websitebesucher genutzten Chatbot oder zur Sicherstellung der IT-Sicherheit unserer Website), erfolgt sie auf Grundlage von § 25 Abs. 2 Nr. 2 des Telekommunikation-Digitale-Dienste-Datenschutz-Gesetzes (TDDDG).\n* Im Übrigen erfolgt diese Speicherung oder dieser Zugriff auf Grundlage der Einwilligung der Websitebesucher (§ 25 Abs. 1 TDDDG).\n\nDie nachgelagerte Datenverarbeitung erfolgt nach Maßgabe der folgenden Abschnitte und auf Grundlage der Vorschriften der DSGVO."
+      },
+      {
+        "title": "3.2 Informatorische Nutzung der Website",
+        "body": "Bei der informatorischen Nutzung der Website, also wenn Seitenbesucher uns nicht gesondert Informationen übermitteln, erheben wir die personenbezogenen Daten, die der Browser an unseren Server übermittelt, um die Stabilität und Sicherheit unserer Website zu gewährleisten. Darin liegt unser berechtigtes Interesse, so dass Rechtsgrundlage Art. 6 Abs. 1 S. 1 lit. f DSGVO ist.\n\nDiese Daten sind:\n\n* IP-Adresse\n* Datum und Uhrzeit der Anfrage\n* Zeitzonendifferenz zur Greenwich Mean Time (GMT)\n* Inhalt der Anfrage (konkrete Seite)\n* Zugriffsstatus/HTTP-Statuscode\n* jeweils übertragene Datenmenge\n* Website, von der die Anfrage kommt\n* Browser\n* Betriebssystem und dessen Oberfläche\n* Sprache und Version der Browsersoftware.\n\nDiese Daten werden außerdem in Logfiles gespeichert. Sie werden gelöscht, wenn ihre Speicherung nicht mehr erforderlich ist, spätestens nach 14 Tagen."
+      },
+      {
+        "title": "3.3 Webhosting und Bereitstellung der Website",
+        "body": "Unsere Website hostet Amazon AWS. Anbieter ist Amazon Web Services EMEA Sàrl, Avenue John F. Kennedy 38, 1855 Luxemburg. Der Anbieter verarbeitet dabei die über die Website übermittelten personenbezogenen Daten, z.B. Inhalts-, Nutzungs-, Meta-/Kommunikationsdaten oder Kontaktdaten, in der EU. Weitere Informationen finden sich in der Datenschutzerklärung des Anbieters unter https://aws.amazon.com/de/privacy/?nc1=f_pr.\n\nEs ist unser berechtigtes Interesse, eine Website zur Verfügung zu stellen, so dass die Rechtsgrundlage der beschriebenen Datenverarbeitung Art. 6 Abs. 1 S. 1 lit. f DSGVO ist.\n\nWir nutzen das Content Delivery Network Cloudflare für unsere Website. Anbieter ist Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA. Der Anbieter verarbeitet dabei die über die Website übermittelten personenbezogenen Daten, z.B. Inhalts-, Nutzungs-, Meta-/Kommunikations- oder Kontaktdaten in den USA. Weitere Informationen finden Sie in der Datenschutzerklärung des Anbieters unter https://www.cloudflare.com/de-de/privacypolicy/.\n\nWir haben ein berechtigtes Interesse daran, ausreichende Speicher- und Auslieferungskapazitäten zu nutzen, um auch bei großen Lastspitzen einen optimalen Datendurchsatz zu gewährleisten. Die Rechtsgrundlage der beschriebenen Datenverarbeitung ist daher Art. 6 Abs. 1 S. 1 lit. f DSGVO.\n\nRechtsgrundlage der Übermittlung in ein Land außerhalb des EWR ist ein Angemessenheitsbeschluss. Die Sicherheit der in das Drittland (also einem Land außerhalb des EWR) übermittelten Daten ist gewährleistet, weil die EU-Kommission im Rahmen eines Angemessenheitsbeschlusses nach Art. 45 Abs. 3 DSGVO beschlossen hat, dass das Drittland ein angemessenes Schutzniveau bietet."
+      },
+      {
+        "title": "3.4 Kontaktformular",
+        "body": "Bei Kontaktaufnahme über das Kontaktformular auf unserer Website speichern wir die dort abgefragten Daten und den Inhalt der Nachricht. Rechtsgrundlage für die Verarbeitung ist unser berechtigtes Interesse, an uns gerichtete Anfragen zu beantworten. Rechtsgrundlage für die Verarbeitung ist deshalb Art. 6 Abs. 1 S. 1 lit. f DSGVO. Die in diesem Zusammenhang anfallenden Daten löschen wir, nachdem die Speicherung nicht mehr erforderlich ist, oder schränken die Verarbeitung ein, falls gesetzliche Aufbewahrungspflichten bestehen."
+      },
+      {
+        "title": "3.5 Stellenanzeigen",
+        "body": "Wir veröffentlichen Stellenanzeigen auf unserer Website, auf mit der Website verbundenen Seiten oder auf Websites von Dritten.\n\nDie Verarbeitung der im Rahmen der Bewerbung angegebenen Daten erfolgt zur Durchführung des Bewerbungsverfahrens. Soweit diese für unsere Entscheidung, ein Beschäftigungsverhältnis zu begründen, erforderlich sind, ist Rechtsgrundlage Art. 88 Abs. 1 DSGVO i. V. m. § 26 Abs. 1 BDSG. Die zur Durchführung des Bewerbungsverfahrens erforderlichen Daten haben wir entsprechend gekennzeichnet oder weisen auf sie hin. Wenn Bewerber diese Daten nicht angeben, können wir die Bewerbung nicht bearbeiten. Weitere Daten sind freiwillig und nicht für eine Bewerbung erforderlich. Falls Bewerber weitere Angaben machen, ist Grundlage ihre Einwilligung (Art. 6 Abs. 1 S. 1 lit. a DSGVO).\n\nWir bitten Bewerber, in Lebenslauf und Anschreiben auf Angaben zu politischen Meinungen, religiösen Anschauungen und ähnlich sensiblen Daten zu verzichten. Sie sind nicht für eine Bewerbung erforderlich. Wenn Bewerber dennoch entsprechende Angaben machen, können wir ihre Verarbeitung im Rahmen der Verarbeitung des Lebenslaufes oder Anschreibens nicht verhindern. Ihre Verarbeitung beruht dann auch auf der Einwilligung der Bewerber (Art. 9 Abs. 2 lit. a DSGVO).\n\nSchließlich verarbeiten wir die Daten der Bewerber für weitere Bewerbungsverfahren, wenn sie uns dazu ihre Einwilligung erteilt haben. In diesem Fall ist Rechtsgrundlage Art. 6 Abs. 1 S. 1 lit. a DSGVO.\n\nDie Daten der Bewerber geben wir an die zuständigen Mitarbeiter der Personalabteilung, an unsere Auftragsverarbeiter im Bereich Recruiting und an die im Übrigen im Bewerbungsverfahren beteiligten Mitarbeiter weiter.\n\nWenn wir im Anschluss an das Bewerbungsverfahren ein Beschäftigungsverhältnis mit dem Bewerber eingehen, löschen wir die Daten erst nach Beendigung des Beschäftigungsverhältnisses. Andernfalls löschen wir die Daten spätestens sechs Monate nach Ablehnung eines Bewerbers.\n\nWenn Bewerber uns ihre Einwilligung erteilt haben, ihre Daten auch für weitere Bewerbungsverfahren zu verwenden, löschen wir ihre Daten erst ein Jahr nach Erhalt der Bewerbung."
+      },
+      {
+        "title": "3.6 Buchung von Terminen",
+        "body": "Seitenbesucher können auf unserer Website Termine mit uns buchen. Dafür verarbeiten wir neben den eingegebenen Daten Meta- oder Kommunikationsdaten. Wir haben ein berechtigtes Interesse daran, Interessenten eine nutzerfreundliche Möglichkeit zur Vereinbarung von Terminen anzubieten. Deshalb ist Rechtsgrundlage der Datenverarbeitung Art. 6 Abs. 1 S. 1 lit. f DSGVO. Soweit wir für die Vereinbarung ein Tool eines Drittanbieters verwenden, sind die Informationen dazu unter \"Drittanbieter\" zu finden."
+      },
+      {
+        "title": "3.7 Zahlungsdienstleister",
+        "body": "Zur Abwicklung von Zahlungen nutzen wir Zahlungsabwickler, die selbst datenschutzrechtlich Verantwortliche im Sinne von Art. 4 Nr. 7 DSGVO sind. Soweit diese von uns im Bestellprozess eingegebene Daten und Zahlungsdaten erhalten, erfüllen wir damit den mit unseren Kunden geschlossenen Vertrag (Art. 6 Abs. 1 S. 1 lit. b DSGVO).\n\nDiese Zahlungsdienstleister sind:\n\n* Stripe Payments Europe, Ltd., Ireland"
+      },
+      {
+        "title": "3.8 Drittanbieter",
+        "body": ""
+      },
+      {
+        "title": "3.8.1 HubSpot",
+        "body": "Wir setzen HubSpot zur Analyse, zur Automatisierung des Marketings, zur Generierung von Leads ein. Der Anbieter ist HubSpot Germany GmbH, Am Postbahnhof 17, 10243 Berlin. Der Anbieter verarbeitet Nutzungsdaten (z.B. besuchte Webseiten, Interesse an Inhalten, Zugriffszeiten), Meta-/Kommunikationsdaten (z.B. Geräte-Informationen, IP-Adressen), Inhaltsdaten (z.B. Eingaben in Onlineformularen) in der EU.\n\nDie Rechtsgrundlage der Verarbeitung ist Art. 6 Abs. 1 S. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse, Daten auf einfachem und günstigen Weg zu verwalten.\n\nDie Daten werden gelöscht, wenn der Zweck ihrer Erhebung entfallen ist und keine Aufbewahrungspflichten entgegenstehen. Weitere Informationen sind in der Datenschutzerklärung des Anbieters unter https://legal.hubspot.com/privacy-policy abrufbar."
+      },
+      {
+        "title": "3.8.2 Pipedrive",
+        "body": "Wir setzen Pipedrive zum Leadmanagement ein. Der Anbieter ist Pipedrive OÜ, Mustamäe tee 3a, 10615 Tallinn, Estland. Der Anbieter verarbeitet Kontaktdaten (z.B. E-Mail-Adressen, Telefonnummern), Meta-/Kommunikationsdaten (z.B. Geräte-Informationen, IP-Adressen), Stammdaten (z.B. Namen, Adressen) in der EU.\n\nDie Rechtsgrundlage der Verarbeitung ist Art. 6 Abs. 1 S. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse, zum Zwecke des Direktmarketings Daten von Leads zu verwalten.\n\nWir löschen die Daten, wenn der Zweck ihrer Erhebung entfallen ist. Weitere Informationen sind in der Datenschutzerklärung des Anbieters unter https://www.pipedrive.com/en/privacy abrufbar."
+      },
+      {
+        "title": "4. Datenverarbeitung auf Social Media-Plattformen",
+        "body": "Wir sind in Social Media-Netzwerken vertreten, um dort unsere Organisation und unsere Leistungen vorzustellen. Die Betreiber dieser Netzwerke verarbeiten Daten ihrer Nutzer regelmäßig zu Werbezwecken. Unter anderem erstellen sie aus ihrem Onlineverhalten Nutzerprofile, die beispielsweise dazu verwendet werden, um auf den Seiten der Netzwerke und auch sonst im Internet Werbung zu zeigen, die den Interessen der Nutzer entspricht. Dazu speichern die Betreiber der Netzwerke Informationen zu dem Nutzungsverhalten in Cookies auf dem Rechner der Nutzer.\n\nEs ist außerdem nicht auszuschließen, dass die Betreiber diese Informationen mit weiteren Daten zusammenführen. Weitere Informationen sowie Hinweise, wie Nutzer der Verarbeitung durch die Seitenbetreiber widersprechen können, erhalten Nutzer in den unten aufgeführten Datenschutzerklärungen der jeweiligen Betreiber. Es kann auch sein, dass die Betreiber oder ihre Server in Nicht-EU-Staaten sitzen, so dass sie Daten dort verarbeiten. Hierdurch können sich für die Nutzer Risiken ergeben, z.B. weil die Durchsetzung ihrer Rechte erschwert wird oder staatliche Stellen Zugriff auf die Daten nehmen.\n\nWenn Nutzer der Netzwerke mit uns über unsere Profile in Kontakt treten, verarbeiten wir die uns mitgeteilten Daten, um die Anfragen zu beantworten. Darin liegt unser berechtigtes Interesse, so dass Rechtsgrundlage Art. 6 Abs. 1 S. 1 lit. f DSGVO ist."
+      },
+      {
+        "title": "4.1 Facebook",
+        "body": "Wir unterhalten ein Profil auf Facebook. Betreiber ist Meta Platforms Ireland Ltd., 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland. Die Datenschutzerklärung ist hier abrufbar: https://www.facebook.com/policy.php. Eine Möglichkeit, der Datenverarbeitung zu widersprechen, ergibt sich über Einstellungen für Werbeanzeigen: https://www.facebook.com/settings?tab=ads.\n\nWir sind auf Grundlage einer Vereinbarung gemeinsam im Sinne von Art. 26 DSGVO mit Facebook für die Verarbeitung der Daten der Besucher unseres Profils verantwortlich. Welche Daten genau verarbeitet werden, erklärt Facebook unter https://www.facebook.com/legal/terms/information_about_page_insights_data. Betroffene können ihre Rechte sowohl gegenüber uns als auch gegenüber Facebook wahrnehmen. Nach unserer Vereinbarung mit Facebook sind wir aber dazu verpflichtet, Anfragen an Facebook weiterzuleiten. Betroffene erhalten also eine schnellere Rückmeldung, wenn sie sich direkt an Facebook wenden."
+      },
+      {
+        "title": "4.2 Instagram",
+        "body": "Wir unterhalten ein Profil auf Instagram. Betreiber ist Meta Platforms Ireland Ltd., 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland. Die Datenschutzerklärung ist hier abrufbar: https://help.instagram.com/519522125107875."
+      },
+      {
+        "title": "4.3 YouTube",
+        "body": "Wir unterhalten ein Profil auf YouTube. Betreiber ist Google Ireland Limited Gordon House, Barrow Street Dublin 4. Ireland. Die Datenschutzerklärung ist hier abrufbar: https://policies.google.com/privacy?hl=de."
+      },
+      {
+        "title": "4.4 LinkedIn",
+        "body": "Wir unterhalten ein Profil auf LinkedIn. Betreiber ist LinkedIn Ireland Unlimited Company, Wilton Place, Dublin 2, Irland. Die Datenschutzerklärung ist hier abrufbar: https://www.linkedin.com/legal/privacy-policy?_l=de_DE. Eine Möglichkeit, der Datenverarbeitung zu widersprechen, ergibt sich über die Einstellungen für Werbeanzeigen: https://www.linkedin.com/psettings/guest-controls/retargeting-opt-out."
+      },
+      {
+        "title": "5. Änderungen dieser Datenschutzerklärung",
+        "body": "Wir behalten uns das Recht vor, diese Datenschutzerklärung mit Wirkung für die Zukunft zu ändern. Eine aktuelle Version ist jeweils hier verfügbar."
+      },
+      {
+        "title": "6. Fragen und Kommentare",
+        "body": "Für Fragen oder Kommentare bezüglich dieser Datenschutzerklärung stehen wir gern unter den oben angegebenen Kontaktdaten zur Verfügung."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Nutzungsbedingungen",
+    "subtitle": "Certif-ID International GmbH Rahmenvertrag",
+    "lastRevised": "Letzte Überarbeitung: Juni 20, 2022",
+    "preamble": "Dieses Vereinbarung von Certif-ID International GmbH gilt ab dem Datum des Inkrafttretens eines unterzeichneten Bestellformulars und wird von und zwischen Certif-ID International GmbH, einer deutschen Gesellschaft mit dem Geschaeftssitz Scheffelstr. 58a, 50935 Cologne, Germany (Certif-ID International GmbH), und dem auf dem Bestellformular angegebenen Kunden (Kunde) geschlossen.",
+    "sections": [
+      {
+        "title": "Abschnitt 1. Dienstleistungen",
+        "content": "Die Dienstleistungen sind die Produkte und Dienstleistungen, die vom Kunden bei Certif-ID in einem Bestellformular bestellt werden, das sich auf dieser Vereinbarung bezieht. Die Dienstleistungen schliessen alle Produkte oder Dienstleistungen aus, die von Dritten bereitgestellt werden, auch wenn der Kunde diese Produkte oder Dienstleistungen mit den Dienstleistungen verbunden hat. Vorbehaltlich der Bedingungen dieser Vereinbarung stellt Certif-ID dem Kunden die Dienstleistungen waehrend der Laufzeit zur Verfuegung."
+      },
+      {
+        "title": "Abschnitt 2. Gebuehren und Zahlung",
+        "content": "2.1. Gebuehren. Der Kunde zahlt die im Bestellformular angegebenen Gebuehren (die Gebuehren).\n\n2.2. Zahlung; Steuern. Certif-ID International GmbH stellt dem Kunden innerhalb von dreissig (30) Tagen nach dem Datum des Inkrafttretens die Gebuehren in Rechnung, entweder im Rahmen der Dienstleistungen oder direkt. Der Kunde zahlt alle in Rechnung gestellten Gebuehren bei Erhalt der Rechnung. Bei verspaeteter Zahlung wird eine Saeumnisgebuehr erhoben. Die Gebuehren beinhalten keine lokalen, staatlichen oder bundesstaatlichen Steuern oder Abgaben jeglicher Art."
+      },
+      {
+        "title": "Abschnitt 3. Laufzeit und Beendigung",
+        "content": "3.1. Laufzeit und Erneuerung. Diese Vereinbarung beginnt am Tag des Vertragsabschlusses und bleibt fuer die im Bestellformular angegebene Dauer in Kraft. Wenn das Bestellformular keine Angaben enthaelt, betraegt die Laufzeit ein Jahr und verlaengert sich automatisch um jeweils ein Jahr, es sei denn, der Kunde kuendigt mindestens dreissig (30) Tage vor Ablauf der Laufzeit.\n\n3.2. Beendigung aus wichtigem Grund. Eine Partei kann diese Vereinbarung aus wichtigem Grund kuendigen (a) durch Mitteilung an die andere Partei ueber einen Verstoss gegen diese Vereinbarung, wenn dieser Verstoss nach zehn (10) Tagen ab dem Datum des Erhalts der Mitteilung nicht behoben ist; (b) wenn die andere Partei Gegenstand eines Konkursantrags wird; oder (c) mit sofortiger Wirkung durch Certif-ID, wenn der Kunde eine verbotene Nutzung vornimmt.\n\n3.3. Auswirkung der Beendigung: Bei Beendigung werden alle Bestellformulare gleichzeitig beendet, der Kunde hat kein Recht mehr, die Dienstleistungen zu nutzen, und sofern nicht anders schriftlich festgelegt, hat der Kunde keinen Anspruch auf Rueckerstattung der gezahlten Gebuehren."
+      },
+      {
+        "title": "Abschnitt 4. Eigentum, Lizenz und Nutzung der Dienste",
+        "content": "4.1. Eigentumsrecht. Jede Partei behaelt alle Rechte, Titel und Interessen an ihren geistigen Eigentumsrechten. Certif-ID behaelt die geistigen Eigentumsrechte an den Dienstleistungen.\n\n4.2. Rueckmeldung. Der Kunde gewaehrt Certif-ID eine voll bezahlte, gebuehrenfreie, weltweite, uebertragbare Lizenz zur Implementierung jeglicher Rueckmeldungen.\n\n4.3. Lizenzen. Certif-ID gewaehrt dem Kunden ein nicht ausschliessliches, nicht uebertragbares Recht zur Nutzung der Dienstleistungen.\n\n4.4. Autorisierte Benutzer. Der Kunde kann Mitarbeiter, Vertreter oder autorisierte Auftragnehmer benennen und ihnen Zugang zu den Diensten gewaehren.\n\n4.5. Verbotene Nutzungen. Untersagt: Verteilen, Weiterverkaufen, Reverse-Engineering, Verwendung ungesetzlicher Informationen, Verwendung von Robotern oder Daten-Scraping-Tools, oder Bereitstellung des Zugangs an Wettbewerber von Certif-ID."
+      },
+      {
+        "title": "Abschnitt 5. Vertraulichkeit",
+        "content": "Der Begriff vertrauliche Informationen bezeichnet alle finanziellen, technischen oder geschaeftlichen Informationen der offenlegenden Partei. Die empfangende Partei wird vertrauliche Informationen ohne die vorherige schriftliche Zustimmung weder offenlegen, vervielfaeltigen, veroeffentlichen noch anderweitig zugaenglich machen. Die empfangende Partei wird die vertraulichen Informationen nur verwenden, um ihren Verpflichtungen im Rahmen dieser Vereinbarung nachzukommen."
+      },
+      {
+        "title": "Abschnitt 6. Datenschutz",
+        "content": "Certif-ID International GmbH betreibt die Dienste und behandelt, soweit zutreffend, persoenliche Daten gemaess der Datenschutzrichtlinie, die unter Privacy Policy - Certif-ID verfuegbar ist. Der Kunde muss die Zustimmung des Empfaengers zur Verarbeitung seiner Daten einholen."
+      },
+      {
+        "title": "Abschnitt 7. Zusicherungen, Garantien und Haftungsausschluesse",
+        "content": "7.1. Befugnis. Jede Vertragspartei versichert, dass sie diese Vereinbarung rechtsgueltig abgeschlossen hat.\n\n7.2. Garantien. Certif-ID garantiert, dass die Dienstleistungen im Wesentlichen in Uebereinstimmung mit der Dokumentation ausgefuehrt werden.\n\n7.3. Haftungsausschluesse. DIE DIENSTLEISTUNGEN WERDEN OHNE MAENGELGEWAEHR UND OHNE GARANTIEN JEGLICHER ART ZUR VERFUEGUNG GESTELLT. CERTIF-ID LEHNT AUSDRUECKLICH JEGLICHE GARANTIEN AB, OB AUSDRUECKLICH ODER STILLSCHWEIGEND."
+      },
+      {
+        "title": "Abschnitt 8. Entschaedigung",
+        "content": "8.1. Entschaedigung durch Certif-ID International GmbH. Certif-ID haelt den Kunden schadlos gegenueber allen Anspruechen Dritter, die behaupten, dass die Nutzung eines Dienstes Rechte Dritter verletzt.\n\n8.2. Entschaedigung durch den Kunden. Der Kunde haelt Certif-ID schadlos gegen jegliche Ansprueche Dritter, die aus der Nutzung eines Dienstes unter Verletzung dieser Vereinbarung entstehen."
+      },
+      {
+        "title": "Abschnitt 9. Haftungsbeschraenkung",
+        "content": "KEINE DER PARTEIEN HAFTET FUER ENTGANGENE GEWINNE, UMSATZVERLUSTE, DATENVERLUSTE, GESCHAEFTSUNTERBRECHUNGEN ODER JEDE ART VON INDIREKTEM, ZUFAELLIGEM, BESONDEREM ODER FOLGESCHADEN. DIE GESAMTHAFTUNG EINER PARTEI UEBERSTEIGT IN KEINEM FALL DIE VOM KUNDEN WAEHREND DER LETZTEN ZWOELF (12) MONATE GEZAHLTEN GEBUEHREN."
+      },
+      {
+        "title": "Abschnitt 10. Sonstiges",
+        "content": "10.1. Gesamte Vereinbarung. Diese Vereinbarung stellt die gesamte Vereinbarung dar und ersetzt alle vorherigen Vereinbarungen.\n\n10.2. Abtretung. Jede Partei kann diese Vereinbarung ohne Zustimmung der anderen Partei an ein verbundenes Unternehmen abtreten.\n\n10.3. Trennbarkeit. Sollte eine Bestimmung nicht durchsetzbar sein, wird sie vom Gericht geaendert.\n\n10.4. Verhaeltnis der Parteien. Die Parteien sind unabhaengige Vertragspartner.\n\n10.5. Benachrichtigungen. Alle Mitteilungen koennen schriftlich per Kurier oder per E-Mail zugestellt werden.\n\n10.6. Geltendes Recht. Diese Vereinbarung unterliegt den Gesetzen des Staates Cologne, Deutschland.\n\n10.7. Korruptionsbekaempfung. Der Kunde stimmt zu, dass er keine illegalen Bestechungsgelder erhalten hat.\n\n10.8. Oeffentlichkeitsarbeit. Certif-ID darf den Namen und das Logo des Kunden verwenden, um den Kunden als Kunden zu identifizieren.\n\n10.9. Aenderungen. Certif-ID kann diese Vereinbarung von Zeit zu Zeit aendern, wobei die neue Vereinbarung die vorherigen Versionen ersetzt."
+      }
+    ]
+  }
+}

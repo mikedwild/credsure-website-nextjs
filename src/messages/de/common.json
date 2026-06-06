@@ -1,0 +1,296 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "platform": "Plattform",
+    "solutions": "Lösungen",
+    "about": "Über uns",
+    "resources": "Ressourcen",
+    "blog": "Blog",
+    "pricing": "Preise",
+    "contact": "Kontakt",
+    "customerSuccess": "Kundenerfolge",
+    "bookDemo": "Demo buchen"
+  },
+  "footer": {
+    "description": "Enterprise-Grade digitale Zertifizierungsplattform, der weltweit Organisationen vertrauen",
+    "solutions": "Lösungen",
+    "platform": "Plattform",
+    "company": "Unternehmen",
+    "resources": "Ressourcen",
+    "legal": "Rechtliches",
+    "contact": "Kontaktieren Sie uns",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "address": "Adresse",
+    "copyright": "Alle Rechte vorbehalten",
+    "securityVerified": "Sicherheit verifiziert",
+    "links": {
+      "features": "Funktionen",
+      "pricing": "Preise",
+      "integrations": "Integrationen",
+      "about": "Über uns",
+      "careers": "Karriere",
+      "blog": "Blog",
+      "customerStories": "Kundenerfolge",
+      "helpCenter": "Hilfe-Center",
+      "privacy": "Datenschutz",
+      "terms": "Nutzungsbedingungen",
+      "impressum": "Impressum",
+      "apiDocs": "API-Dokumentation",
+      "templates": "Vorlagen",
+      "pressKit": "Pressemappe",
+      "caseStudies": "Fallstudien",
+      "webinars": "Webinare",
+      "guides": "Leitfäden",
+      "community": "Community",
+      "security": "Sicherheit",
+      "gdpr": "DSGVO",
+      "apiIntegration": "API-Integration",
+      "digitalCertificates": "Digitale Zertifikate",
+      "digitalBadges": "Digitale Badges"
+    },
+    "product": "Produkt",
+    "compare": "Vergleichen"
+  },
+  "cookies": {
+    "title": "Wir schätzen Ihre Privatsphäre",
+    "description": "Wir verwenden Cookies, um Ihr Surferlebnis zu verbessern, den Website-Traffic zu analysieren und Inhalte zu personalisieren. Sie können Ihre Einstellungen anpassen oder alle Cookies akzeptieren.",
+    "customize": "Anpassen",
+    "rejectAll": "Alle ablehnen",
+    "acceptAll": "Alle akzeptieren",
+    "savePreferences": "Einstellungen speichern",
+    "necessary": "Notwendige Cookies",
+    "necessaryDesc": "Erforderlich für die ordnungsgemäße Funktion der Website",
+    "analytics": "Analyse-Cookies",
+    "analyticsDesc": "Helfen uns zu verstehen, wie Besucher mit unserer Website interagieren",
+    "marketing": "Marketing-Cookies",
+    "marketingDesc": "Werden verwendet, um personalisierte Werbung zu liefern",
+    "functional": "Funktionale Cookies",
+    "functionalDesc": "Ermöglichen erweiterte Funktionalität und Personalisierung",
+    "personalization": "Personalisierung",
+    "personalizationDesc": "Ermöglicht es der Website, Ihre Einstellungen zu speichern und ein personalisiertes Erlebnis zu bieten."
+  },
+  "breadcrumb": {
+    "home": "Startseite",
+    "back": "Zurück"
+  },
+  "cta": {
+    "title": "Bereit, Ihre Zertifizierung zu transformieren?",
+    "description": "Schließen Sie sich 150+ Organisationen an, die blockchain-verifizierte digitale Zertifikate ausstellen",
+    "button": "Kostenlose Testversion starten",
+    "getStarted": "Loslegen"
+  },
+  "common": {
+    "learnMore": "Mehr erfahren",
+    "getStarted": "Jetzt starten",
+    "bookDemo": "Demo buchen",
+    "readMore": "Weiterlesen",
+    "loading": "Laden...",
+    "error": "Ein Fehler ist aufgetreten",
+    "success": "Erfolg",
+    "tryAgain": "Erneut versuchen",
+    "signIn": "Anmelden",
+    "signUp": "Registrieren"
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Haben Sie Fragen? Wir würden uns freuen, von Ihnen zu hören",
+    "form": {
+      "name": "Vollständiger Name",
+      "email": "E-Mail-Adresse",
+      "company": "Firmenname",
+      "role": "Ihre Rolle",
+      "message": "Nachricht",
+      "submit": "Nachricht senden",
+      "submitting": "Wird gesendet..."
+    }
+  },
+  "leadForm": {
+    "bookDemo": "Demo buchen",
+    "subtitle": "Sprechen Sie mit unserem Team - Starten Sie noch heute",
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "email": "Geschäftliche E-Mail",
+    "company": "Unternehmen/Organisation",
+    "role": "Ihre Rolle",
+    "orgType": "Organisationstyp",
+    "selectType": "Typ auswählen",
+    "orgTypes": {
+      "education": "Bildungseinrichtung",
+      "corporate": "Unternehmen/Konzern",
+      "association": "Berufsverband",
+      "training": "Schulungsanbieter",
+      "nonprofit": "Gemeinnützig",
+      "government": "Regierung",
+      "other": "Sonstiges"
+    },
+    "volume": "Erwartete Zertifikate pro Monat",
+    "selectRange": "Bereich auswählen",
+    "message": "Zusätzliche Informationen (Optional)",
+    "messagePlaceholder": "Erzählen Sie uns von Ihren Zertifizierungsanforderungen...",
+    "benefitsTitle": "Das erwartet Sie:",
+    "benefits": [
+      "Persönliche Demo-Sitzung",
+      "Individuelle Preisgestaltung",
+      "1000 Credits zum Einstieg",
+      "Dedizierter Account Manager"
+    ],
+    "submitting": "Anfrage wird gesendet...",
+    "submit": "Demo buchen",
+    "disclaimer": "Mit dem Absenden stimmen Sie unseren Nutzungsbedingungen und der Datenschutzerklärung zu.",
+    "errors": {
+      "failed": "Übermittlung fehlgeschlagen. Bitte versuchen Sie es erneut.",
+      "network": "Netzwerkfehler",
+      "networkDesc": "Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut.",
+      "rateLimit": "Zu viele Anfragen",
+      "rateLimitDesc": "Bitte warten Sie einen Moment, bevor Sie es erneut versuchen.",
+      "server": "Serverfehler",
+      "serverDesc": "Unser Team wurde benachrichtigt. Bitte versuchen Sie es später erneut."
+    },
+    "success": {
+      "title": "Demo-Anfrage gesendet!",
+      "desc": "Unser Team wird Sie innerhalb von 24 Stunden kontaktieren."
+    }
+  },
+  "trustedBy": "CredSure genießt das Vertrauen führender Organisationen",
+  "statsSection": {
+    "heading": "Die vertrauenswürdigste Plattform für digitale Zeugnisse",
+    "orgsLabel": "Organisationen vertrauen uns",
+    "credentialsLabel": "Ausgestellte Zeugnisse",
+    "countriesLabel": "Länder weltweit",
+    "uptimeLabel": "Verfügbarkeit"
+  },
+  "demo": {
+    "submitting": "Wird gesendet...",
+    "title": "Demo buchen",
+    "subtitle": "CredSure in Aktion erleben",
+    "seo": {
+      "title": "Demo buchen | CredSure Digitale Zertifizierungsplattform",
+      "description": "Vereinbaren Sie eine persönliche Demo von CredSure. Erfahren Sie, wie Sie blockchain-gesicherte digitale Zertifikate ausstellen und verwalten.",
+      "keywords": "CredSure Demo, digitale Zertifikate Demo, Zertifizierungsplattform Vorführung"
+    }
+  },
+  "platform": {
+    "seo": {
+      "title": "Plattform | CredSure Digitale Zertifikatverwaltung",
+      "description": "Entdecken Sie die CredSure-Plattform: Zertifikate ausstellen, Vorlagen gestalten, Echtheit verifizieren und Engagement verfolgen.",
+      "keywords": "Zertifikatverwaltungsplattform, digitale Badge-Plattform, Zertifikatmanagement"
+    }
+  },
+  "solutions": {
+    "associations": {
+      "seo": {
+        "title": "Verbände | CredSure Zertifizierungslösungen",
+        "description": "Digitale Zertifikate für Berufsverbände. Mitglieder zertifizieren, CPD verfolgen und Engagement steigern."
+      }
+    },
+    "certificationBodies": {
+      "seo": {
+        "title": "Zertifizierungsstellen | CredSure Lösungen",
+        "description": "Zertifizierungs-Workflows mit CredSure optimieren. Fälschungssichere Zertifikate ausstellen und Verlängerungen automatisieren."
+      }
+    },
+    "corporateTraining": {
+      "seo": {
+        "title": "Unternehmensschulung | CredSure Digitale Badges",
+        "description": "Mitarbeiter mit digitalen Badges und Zertifikaten motivieren. Kompetenzen verfolgen und ROI messen."
+      }
+    },
+    "healthcare": {
+      "seo": {
+        "title": "Gesundheitswesen | CredSure Zertifizierungslösungen",
+        "description": "Digitale Zertifikate für Gesundheitsfachkräfte. Klinische Kompetenzen verifizieren und Weiterbildung verfolgen."
+      }
+    },
+    "higherEducation": {
+      "seo": {
+        "title": "Hochschulbildung | CredSure Digitale Zertifikate",
+        "description": "Universitäten mit Micro-Credentials und digitalen Diplomen stärken. Einschreibungen fördern und Beschäftigungsfähigkeit verbessern."
+      }
+    },
+    "manufacturing": {
+      "seo": {
+        "title": "Fertigung | CredSure Sicherheits- & Compliance-Zertifikate",
+        "description": "Sicherheitszertifizierungen und Compliance-Schulungen für Fertigungsteams ausstellen und verifizieren."
+      }
+    }
+  },
+  "resources": {
+    "seo": {
+      "title": "Ressourcen | CredSure",
+      "description": "Blog-Beiträge, Tutorials, Kundenberichte und Leitfäden für Best Practices bei digitaler Zertifizierung."
+    }
+  },
+  "seo": {
+    "notFound": {
+      "title": "404 - Seite nicht gefunden | CredSure",
+      "description": "Die gesuchte Seite existiert nicht oder wurde verschoben. Zurück zur CredSure-Startseite."
+    },
+    "home": {
+      "title": "CredSure | Plattform für digitale Zeugnisse — Blockchain-verifiziert",
+      "description": "Erstellen, verwalten und verifizieren Sie blockchain-gesicherte digitale Zeugnisse, Zertifikate und Badges. Vertraut von 150+ Organisationen."
+    }
+  },
+  "impressum": {
+    "title": "Impressum | Certif-ID International GmbH"
+  },
+  "privacy": {
+    "title": "Datenschutzrichtlinie | CredSure"
+  },
+  "terms": {
+    "title": "Nutzungsbedingungen | CredSure"
+  },
+  "comparison": {
+    "pricingNote": "Preise basieren auf dem monatlichen Zertifikatsvolumen. Mengenrabatte für Jahrespläne verfügbar."
+  },
+  "g2": {
+    "title": "Geliebt von Teams auf G2",
+    "subtitle": "Verifizierte Bewertungen von Credentialing-Führungskräften weltweit",
+    "readReviews": "Alle Bewertungen lesen"
+  },
+  "gatedContent": {
+    "title": "Vollständigen Leitfaden freischalten",
+    "subtitle": "Geben Sie Ihre Daten ein und erhalten Sie sofortigen Zugriff auf die vollständige Ressource.",
+    "namePlaceholder": "Ihr vollständiger Name",
+    "emailPlaceholder": "Geschäftliche E-Mail",
+    "unlocking": "Wird freigeschaltet…",
+    "cta": "Sofortzugang erhalten",
+    "privacy": "Wir respektieren Ihre Privatsphäre. Jederzeit abbestellbar.",
+    "successTitle": "Sie sind dabei!",
+    "successDesc": "Prüfen Sie Ihren Posteingang — wir haben Ihnen die Ressource direkt per E-Mail gesendet.",
+    "continue": "Weiterlesen"
+  },
+  "hero2026": {
+    "startingFrom": "Ab",
+    "perMonth": "/Monat"
+  },
+  "inlineCTA": {
+    "badge": "Kostenloser Download",
+    "title": "Bereit, Ihr Zertifikatsprogramm zu skalieren?",
+    "subtitle": "Holen Sie sich unser komplettes Implementierungs-Playbook — aus über 150 Unternehmens-Rollouts.",
+    "compactTitle": "Bleiben Sie im Credentialing vorne",
+    "compactDesc": "Eine kurze E-Mail pro Monat. Kein Fluff.",
+    "emailPlaceholder": "Ihre geschäftliche E-Mail",
+    "subscribe": "Abonnieren",
+    "download": "Leitfaden herunterladen",
+    "success": "Danke! Prüfen Sie Ihren Posteingang.",
+    "privacy": "Kein Spam. Jederzeit mit einem Klick abbestellen."
+  },
+  "stickyBar": {
+    "text": "CredSure in Aktion sehen",
+    "subtext": "Buchen Sie eine 15-Min-Demo und erhalten Sie 1 Monat gratis",
+    "cta": "Demo buchen"
+  },
+  "megaMenu": {
+    "platform": {
+      "digitalCertificates": "Digitale Zertifikate",
+      "digitalCertificatesDesc": "Stellen Sie blockchain-verifizierte Zertifikate aus, die nicht gefälscht werden können",
+      "integrations": "Integrationen",
+      "integrationsDesc": "Verbinden Sie CredSure mit Ihrem LMS, HRIS oder Ihrer Lernplattform"
+    }
+  },
+  "demoPage": {
+    "successTitle": "Demo-Anfrage erhalten!",
+    "successDesc": "Unser Team meldet sich innerhalb eines Werktages, um Ihren persönlichen Walkthrough zu vereinbaren."
+  }
+}

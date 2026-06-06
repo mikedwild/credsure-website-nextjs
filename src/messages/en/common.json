@@ -1,0 +1,296 @@
+{
+  "nav": {
+    "home": "Home",
+    "platform": "Platform",
+    "solutions": "Solutions",
+    "about": "About Us",
+    "resources": "Resources",
+    "blog": "Blog",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "customerSuccess": "Customer Success",
+    "bookDemo": "Book a Demo"
+  },
+  "footer": {
+    "description": "Enterprise-grade digital credentialing platform trusted by organizations worldwide",
+    "solutions": "Solutions",
+    "platform": "Platform",
+    "company": "Company",
+    "resources": "Resources",
+    "legal": "Legal",
+    "contact": "Contact Us",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "copyright": "All rights reserved",
+    "securityVerified": "Security Verified",
+    "links": {
+      "features": "Features",
+      "pricing": "Pricing",
+      "integrations": "Integrations",
+      "about": "About Us",
+      "careers": "Careers",
+      "blog": "Blog",
+      "customerStories": "Customer Stories",
+      "helpCenter": "Help Center",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "impressum": "Legal Notice",
+      "apiDocs": "API Docs",
+      "templates": "Templates",
+      "pressKit": "Press Kit",
+      "caseStudies": "Case Studies",
+      "webinars": "Webinars",
+      "guides": "Guides",
+      "community": "Community",
+      "security": "Security",
+      "gdpr": "GDPR",
+      "apiIntegration": "API Integration",
+      "digitalCertificates": "Digital Certificates",
+      "digitalBadges": "Digital Badges"
+    },
+    "product": "Product",
+    "compare": "Compare"
+  },
+  "cookies": {
+    "title": "We value your privacy",
+    "description": "We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. You can customize your preferences or accept all cookies.",
+    "customize": "Customize",
+    "rejectAll": "Reject All",
+    "acceptAll": "Accept All",
+    "savePreferences": "Save Preferences",
+    "necessary": "Necessary Cookies",
+    "necessaryDesc": "Required for the website to function properly",
+    "analytics": "Analytics Cookies",
+    "analyticsDesc": "Help us understand how visitors interact with our website",
+    "marketing": "Marketing Cookies",
+    "marketingDesc": "Used to deliver personalized advertisements",
+    "functional": "Functional Cookies",
+    "functionalDesc": "Enable enhanced functionality and personalization",
+    "personalization": "Personalization",
+    "personalizationDesc": "Allows the website to remember your preferences and provide a more personalized experience."
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "back": "Back"
+  },
+  "cta": {
+    "title": "Ready to Transform Your Credentialing?",
+    "description": "Join 150+ organizations issuing blockchain-verified digital credentials",
+    "button": "Start Free Trial",
+    "getStarted": "Get Started"
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "bookDemo": "Book a Demo",
+    "readMore": "Read More",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success",
+    "tryAgain": "Try Again",
+    "signIn": "Sign In",
+    "signUp": "Sign Up"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have questions? We'd love to hear from you",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "company": "Company Name",
+      "role": "Your Role",
+      "message": "Message",
+      "submit": "Send Message",
+      "submitting": "Sending..."
+    }
+  },
+  "leadForm": {
+    "bookDemo": "Book a Demo",
+    "subtitle": "Talk to our team - Get started today",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Work Email",
+    "company": "Company/Organization",
+    "role": "Your Role",
+    "orgType": "Organization Type",
+    "selectType": "Select type",
+    "orgTypes": {
+      "education": "Educational Institution",
+      "corporate": "Corporate/Enterprise",
+      "association": "Professional Association",
+      "training": "Training Provider",
+      "nonprofit": "Non-profit",
+      "government": "Government",
+      "other": "Other"
+    },
+    "volume": "Expected Credentials Per Month",
+    "selectRange": "Select range",
+    "message": "Additional Information (Optional)",
+    "messagePlaceholder": "Tell us about your credentialing needs...",
+    "benefitsTitle": "What you'll get:",
+    "benefits": [
+      "Personalized demo session",
+      "Custom pricing for your needs",
+      "1000 credits to get started",
+      "Dedicated account manager"
+    ],
+    "submitting": "Submitting Request...",
+    "submit": "Book a Demo",
+    "disclaimer": "By submitting, you agree to our Terms of Service and Privacy Policy.",
+    "errors": {
+      "failed": "Failed to submit. Please try again.",
+      "network": "Network Error",
+      "networkDesc": "Please check your internet connection and try again.",
+      "rateLimit": "Too Many Requests",
+      "rateLimitDesc": "Please wait a moment before trying again.",
+      "server": "Server Error",
+      "serverDesc": "Our team has been notified. Please try again later."
+    },
+    "success": {
+      "title": "Demo Request Submitted!",
+      "desc": "Our team will contact you within 24 hours."
+    }
+  },
+  "trustedBy": "CredSure is Trusted by Leading Organisations",
+  "statsSection": {
+    "heading": "The most trusted digital credentialing platform",
+    "orgsLabel": "Organizations Trust Us",
+    "credentialsLabel": "Credentials Issued",
+    "countriesLabel": "Countries Worldwide",
+    "uptimeLabel": "Uptime SLA"
+  },
+  "demo": {
+    "submitting": "Submitting...",
+    "title": "Book a Demo",
+    "subtitle": "See CredSure in action",
+    "seo": {
+      "title": "Book a Demo | CredSure Digital Credential Platform",
+      "description": "Schedule a personalized demo of CredSure. See how to issue, manage, and verify blockchain-secured digital credentials for your organization.",
+      "keywords": "CredSure demo, digital credentials demo, credential platform walkthrough, book a demo"
+    }
+  },
+  "platform": {
+    "seo": {
+      "title": "Platform | CredSure Digital Credential Management",
+      "description": "Explore the CredSure platform: issue credentials, design templates, verify authenticity, and track engagement — all in one dashboard.",
+      "keywords": "credential management platform, digital badge platform, certificate management, credential analytics"
+    }
+  },
+  "solutions": {
+    "associations": {
+      "seo": {
+        "title": "Associations | CredSure Credentialing Solutions",
+        "description": "Digital credentials for professional associations. Certify members, track CPD, and boost engagement with blockchain-verified badges."
+      }
+    },
+    "certificationBodies": {
+      "seo": {
+        "title": "Certification Bodies | CredSure Solutions",
+        "description": "Streamline certification workflows with CredSure. Issue tamper-proof digital certificates, automate renewals, and simplify verification."
+      }
+    },
+    "corporateTraining": {
+      "seo": {
+        "title": "Corporate Training | CredSure Digital Badges",
+        "description": "Motivate employees with digital badges and certificates. Track skills, measure ROI, and scale your corporate training program."
+      }
+    },
+    "healthcare": {
+      "seo": {
+        "title": "Healthcare | CredSure Credential Solutions",
+        "description": "Digital credentials for healthcare professionals. Verify clinical competencies, track continuing education, and ensure compliance."
+      }
+    },
+    "higherEducation": {
+      "seo": {
+        "title": "Higher Education | CredSure Digital Credentials",
+        "description": "Empower universities with micro-credentials and digital diplomas. Boost enrollment, track outcomes, and enhance learner employability."
+      }
+    },
+    "manufacturing": {
+      "seo": {
+        "title": "Manufacturing | CredSure Safety & Compliance Credentials",
+        "description": "Issue and verify safety certifications, compliance training, and skill credentials for manufacturing teams."
+      }
+    }
+  },
+  "resources": {
+    "seo": {
+      "title": "Resources | CredSure",
+      "description": "Blog posts, tutorials, customer stories, and guides for digital credentialing best practices."
+    }
+  },
+  "seo": {
+    "notFound": {
+      "title": "404 - Page Not Found | CredSure",
+      "description": "The page you are looking for does not exist or has been moved. Return to CredSure homepage."
+    },
+    "home": {
+      "title": "CredSure | Digital Credential Platform — Blockchain Verified",
+      "description": "Issue, manage, and verify blockchain-secured digital credentials, certificates, and badges. Trusted by 150+ organizations."
+    }
+  },
+  "impressum": {
+    "title": "Imprint | Legal Information | Certif-ID International GmbH"
+  },
+  "privacy": {
+    "title": "Privacy Policy | CredSure Data Practices"
+  },
+  "terms": {
+    "title": "Terms of Service | CredSure Platform Agreement"
+  },
+  "comparison": {
+    "pricingNote": "Pricing based on monthly credential volume. Volume discounts available for annual plans."
+  },
+  "g2": {
+    "title": "Loved by teams on G2",
+    "subtitle": "Verified reviews from credentialing leaders worldwide",
+    "readReviews": "Read all reviews"
+  },
+  "gatedContent": {
+    "title": "Unlock the Full Guide",
+    "subtitle": "Enter your details and get instant access to the complete resource.",
+    "namePlaceholder": "Your full name",
+    "emailPlaceholder": "Work email",
+    "unlocking": "Unlocking…",
+    "cta": "Get Instant Access",
+    "privacy": "We respect your privacy. Unsubscribe at any time.",
+    "successTitle": "You're in!",
+    "successDesc": "Check your inbox — we've sent the resource directly to your email.",
+    "continue": "Continue reading"
+  },
+  "hero2026": {
+    "startingFrom": "Starting from",
+    "perMonth": "/month"
+  },
+  "inlineCTA": {
+    "badge": "Free download",
+    "title": "Ready to scale your credential program?",
+    "subtitle": "Get our complete implementation playbook — built from 150+ enterprise rollouts.",
+    "compactTitle": "Stay ahead in credentialing",
+    "compactDesc": "One short email per month. No fluff.",
+    "emailPlaceholder": "Your work email",
+    "subscribe": "Subscribe",
+    "download": "Download Guide",
+    "success": "Thanks! Check your inbox.",
+    "privacy": "No spam, ever. Unsubscribe in one click."
+  },
+  "stickyBar": {
+    "text": "See CredSure in action",
+    "subtext": "Book a 15-min demo and get 1 month free",
+    "cta": "Book Demo"
+  },
+  "megaMenu": {
+    "platform": {
+      "digitalCertificates": "Digital Certificates",
+      "digitalCertificatesDesc": "Issue blockchain-verified certificates that can't be forged",
+      "integrations": "Integrations",
+      "integrationsDesc": "Connect CredSure to your LMS, HRIS, or learning platform"
+    }
+  },
+  "demoPage": {
+    "successTitle": "Demo request received!",
+    "successDesc": "Our team will be in touch within one business day to schedule your personalized walkthrough."
+  }
+}

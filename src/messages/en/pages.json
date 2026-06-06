@@ -1,0 +1,907 @@
+{
+  "pages": {
+    "platform": {
+      "badge": "Platform Overview",
+      "title": "The Complete Digital",
+      "titleHighlight": "Credentialing Platform",
+      "subtitle": "Everything you need to issue, manage, and verify digital certificates at scale",
+      "coreFeatures": "Core Features",
+      "automation": "Automation",
+      "customization": "Customization",
+      "features": {
+        "credentialManagement": {
+          "title": "Digital Certificates",
+          "desc": "Centralized dashboard to issue, manage, and track all your digital certificates in one place",
+          "items": [
+            "Bulk issuance",
+            "Template library",
+            "Version control",
+            "Expiration management"
+          ]
+        },
+        "blockchainVerification": {
+          "title": "Blockchain Verification",
+          "desc": "Tamper-proof credentials anchored on blockchain for instant, cryptographic verification",
+          "items": [
+            "Immutable records",
+            "Real-time verification",
+            "Zero fraud",
+            "Global trust"
+          ]
+        },
+        "socialSharing": {
+          "title": "Social Sharing",
+          "desc": "One-click sharing to LinkedIn, Twitter, and digital wallets for maximum visibility",
+          "items": [
+            "LinkedIn integration",
+            "Social media cards",
+            "QR codes",
+            "Email sharing"
+          ]
+        },
+        "analytics": {
+          "title": "Analytics Dashboard",
+          "desc": "Real-time insights into credential issuance, verification, and engagement metrics",
+          "items": [
+            "Usage analytics",
+            "Engagement tracking",
+            "ROI metrics",
+            "Custom reports"
+          ]
+        },
+        "bulkIssuance": {
+          "title": "Bulk Issuance",
+          "desc": "Issue thousands of credentials in minutes with automated workflows"
+        },
+        "apiIntegration": {
+          "title": "API Integration",
+          "desc": "RESTful API for seamless integration with your existing systems"
+        },
+        "autoIssue": {
+          "title": "Auto-Issue",
+          "desc": "Trigger-based automatic credential issuance upon completion"
+        },
+        "templateDesigner": {
+          "title": "Template Designer",
+          "desc": "Design stunning credential templates with our drag-and-drop builder"
+        },
+        "whiteLabel": {
+          "title": "White Label",
+          "desc": "Fully branded credential experience with your logo and colors"
+        },
+        "customDomains": {
+          "title": "Custom Domains",
+          "desc": "Host credentials on your own domain for brand consistency"
+        }
+      },
+      "cta": "Start Free Trial",
+      "ctaDesc": "Get started with 20 free credits. No credit card required."
+    },
+    "pricing": {
+      "breadcrumb": "Pricing",
+      "plans": {
+        "free": {
+          "name": "Free",
+          "desc": "Perfect for getting started with digital certificates"
+        },
+        "professional": {
+          "name": "Professional",
+          "desc": "For growing teams and organizations"
+        },
+        "enterprise": {
+          "name": "Enterprise",
+          "desc": "Custom solutions for large organizations"
+        }
+      }
+    },
+    "blog": {
+      "badge": "Blog",
+      "title": "Insights &",
+      "subtitle": "Latest insights on digital certificateing, blockchain verification, and industry trends",
+      "readMore": "Read More",
+      "minRead": "min read",
+      "featured": "Featured",
+      "allPosts": "All Posts",
+      "categories": "Categories",
+      "titleHighlight": "Resources",
+      "showing": "Showing {{count}} of {{total}} posts",
+      "inCategory": "in {{category}}",
+      "matching": "matching \"{{term}}\"",
+      "searchPlaceholder": "Search articles…",
+      "stayUpdated": "Stay updated",
+      "stayUpdatedDesc": "Get the latest credentialing insights delivered to your inbox monthly.",
+      "emailPlaceholder": "Your work email",
+      "subscribe": "Subscribe",
+      "latest": "Latest articles",
+      "backToBlog": "Back to blog",
+      "shareArticle": "Share this article",
+      "share": "Share",
+      "ctaTitle": "Ready to digitize your credentials?",
+      "ctaDesc": "Join 150+ organizations issuing blockchain-verified certificates with CredSure.",
+      "scheduleDemo": "Schedule a demo"
+    },
+    "about": {
+      "badge": "About Us",
+      "title": "Empowering Organizations with",
+      "titleHighlight": "Digital Trust",
+      "subtitle": "We're on a mission to make credentials verifiable, shareable, and truly owned by the people who earn them",
+      "heroTitle": "Empowering Organizations with",
+      "heroTitleHighlight": "Digital Trust",
+      "heroDesc": "We're on a mission to make every credential verifiable, shareable, and truly owned by the people who earn them.",
+      "storyBadge": "Our Story",
+      "storyTitle": "How CredSure Began",
+      "storyP1": "Founded in Cologne, Germany, CredSure was born from the conviction that credentials should be more than paper certificates. Our founders — Tim Miller and Markus Dohm — saw organisations worldwide still relying on manual, fraud-prone processes to verify qualifications.",
+      "storyP2": "They set out to build a platform that leverages blockchain technology, making every certificate tamper-proof, instantly verifiable, and shareable across the digital world. Today, CredSure serves universities, corporate training programmes, and certification bodies across 30+ countries.",
+      "valuesBadge": "Core Values",
+      "valuesTitle": "What Drives Us",
+      "valueTrusted": "Trust & Security",
+      "valueTrustedDesc": "Every credential is secured on the blockchain, ensuring tamper-proof verification that organisations and recipients can rely on.",
+      "valueDataControl": "Data Sovereignty",
+      "valueDataControlDesc": "Recipients own their credentials. Full GDPR compliance ensures data privacy and individual control over personal achievements.",
+      "valueTransparent": "Transparency",
+      "valueTransparentDesc": "Open verification means anyone can confirm a credential's authenticity — no phone calls, no emails, just instant proof.",
+      "valueQuickVerification": "Instant Verification",
+      "valueQuickVerificationDesc": "Verify any credential in seconds. Our technology eliminates the days-long manual verification process entirely.",
+      "blockchainTitle": "Why Blockchain?",
+      "blockchainP1": "Blockchain technology makes credentials immutable and universally verifiable. Once a certificate is issued on the CredSure platform, it cannot be altered, forged, or revoked without a transparent audit trail.",
+      "blockchainP2": "This creates a global trust layer for education and professional development — where every achievement is permanently recorded and instantly accessible to anyone who needs to verify it.",
+      "teamBadge": "Leadership",
+      "teamTitle": "Meet the Team",
+      "teamDesc": "Our leadership team brings decades of experience in edtech, enterprise software, and digital identity.",
+      "teamTimBio": "Serial entrepreneur with 20+ years in digital transformation. Tim leads CredSure's vision to become the global standard for verifiable credentials.",
+      "teamMarkusBio": "Expert in quality management and certification processes. Markus brings deep industry knowledge from TÜV Rheinland to CredSure's product strategy.",
+      "teamMikeBio": "Operations leader with extensive experience scaling SaaS platforms across global markets. Mike drives CredSure's growth and customer success.",
+      "locationsBadge": "Global Presence",
+      "locationsTitle": "Our Offices",
+      "ctaTitle": "Ready to Transform Your Credentials?",
+      "ctaDesc": "Join hundreds of organisations issuing blockchain-verified digital certificates with CredSure.",
+      "ctaButton": "Get in Touch",
+      "mission": "Our Mission",
+      "missionDesc": "To create a world where every achievement is instantly verifiable and universally recognised.",
+      "vision": "Our Vision",
+      "visionDesc": "A global standard for digital certificates that empowers individuals and organisations.",
+      "values": "Our Values",
+      "valuesDesc": "Innovation, security, and customer success drive everything we do.",
+      "team": "Leadership Team",
+      "stats": "By the Numbers"
+    },
+    "resources": {
+      "badge": "Resources",
+      "title": "Everything You Need to",
+      "subtitle": "Comprehensive resources to help you get the most out of CredSure",
+      "titleHighlight": "Succeed"
+    },
+    "customerSuccess": {
+      "badge": "Customer Success",
+      "title": "Trusted by Industry Leaders",
+      "subtitle": "See how organizations worldwide are transforming their credentialing with CredSure",
+      "readStory": "Read Story",
+      "viewAll": "View All Stories",
+      "byteedgeTitle": "ByteEDGE Transforms Learning Credentials with Blockchain Verification",
+      "byteedgeImpact1": "10,000+ certificates issued in first year",
+      "byteedgeImpact2": "98% recipient engagement rate",
+      "byteedgeImpact3": "Zero fraud incidents since launch",
+      "tsaaroTitle": "Tsaaro Academy Automates Compliance Training Certificates",
+      "tsaaroImpact1": "Automated 100% of certificate issuance",
+      "tsaaroImpact2": "Reduced admin workload by 80%",
+      "tsaaroImpact3": "Instant verification for employers",
+      "cliniTitle": "Clini INDIA Digitises Healthcare Professional Credentials",
+      "cliniImpact1": "500+ healthcare professionals certified",
+      "cliniImpact2": "Instant credential verification",
+      "cliniImpact3": "Full regulatory compliance maintained",
+      "ctaTitle": "Ready to Join Our Success Stories?",
+      "ctaSubtitle": "Start issuing blockchain-verified credentials today and transform how your organisation recognises achievement.",
+      "ctaButton": "Start Your Free Trial"
+    },
+    "tutorials": {
+      "badge": "Video Tutorials",
+      "title": "Learn",
+      "subtitle": "Step-by-step video guides to help you master every feature",
+      "videos": "15+ Videos",
+      "hours": "3+ Hours",
+      "levels": "All Levels",
+      "titleHighlight": "CredSure",
+      "gettingStarted": "Getting Started",
+      "advancedFeatures": "Advanced Features",
+      "analyticsReporting": "Analytics & Reporting",
+      "min": "min",
+      "ctaTitle": "Need a hands-on walkthrough?",
+      "ctaDesc": "Our team can guide you through your first credential issue — live, in your environment.",
+      "bookDemo": "Book a Demo",
+      "helpCenter": "Help Center"
+    },
+    "solutions": {
+      "badge": "Solutions",
+      "title": "Solutions for Every Industry",
+      "subtitle": "CredSure adapts to your unique credentialing needs",
+      "higherEducation": {
+        "badge": "Higher Education",
+        "title": "Empower Students with",
+        "titleHighlight": "Verifiable Credentials",
+        "subtitle": "Transform how universities and colleges issue diplomas, certificates, and micro-credentials with blockchain-verified digital certificates",
+        "benefits": [
+          {
+            "title": "Digital Diplomas & Certificates",
+            "desc": "Issue tamper-proof credentials instantly"
+          },
+          {
+            "title": "Student Engagement",
+            "desc": "Increase completion rates with shareable badges"
+          },
+          {
+            "title": "Track Alumni Success",
+            "desc": "Monitor how graduates share their achievements"
+          },
+          {
+            "title": "Automate Issuance",
+            "desc": "Integrate with your LMS for automatic credential delivery"
+          }
+        ],
+        "cta": "Get Started"
+      },
+      "associations": {
+        "badge": "Professional Associations",
+        "title": "Modernize Member",
+        "subtitle": "Issue and manage professional certifications, memberships, and continuing education credits digitally",
+        "benefits": [
+          {
+            "title": "Member Certifications",
+            "desc": "Issue verifiable professional certifications"
+          },
+          {
+            "title": "CE Credit Tracking",
+            "desc": "Automate continuing education compliance"
+          },
+          {
+            "title": "Member Engagement",
+            "desc": "Boost retention with shareable achievement badges"
+          },
+          {
+            "title": "Verification Portal",
+            "desc": "Let employers verify members' credentials instantly"
+          }
+        ],
+        "titleHighlight": "Credentialing"
+      },
+      "corporateTraining": {
+        "badge": "Corporate Training",
+        "title": "Transform Employee",
+        "subtitle": "Recognize and verify employee skills, training completion, and professional development achievements",
+        "benefits": [
+          {
+            "title": "Training Completion",
+            "desc": "Auto-issue credentials upon course completion"
+          },
+          {
+            "title": "Skills Verification",
+            "desc": "Verifiable proof of employee competencies"
+          },
+          {
+            "title": "Compliance Training",
+            "desc": "Track and verify mandatory training requirements"
+          },
+          {
+            "title": "LMS Integration",
+            "desc": "Seamless integration with your learning platform"
+          }
+        ],
+        "titleHighlight": "Development"
+      },
+      "certificationBodies": {
+        "badge": "Certification Bodies",
+        "title": "Digitize Your",
+        "subtitle": "Modernize how you issue, manage, and verify professional certifications",
+        "benefits": [
+          {
+            "title": "Digital Certificates",
+            "desc": "Replace paper certificates with secure digital versions"
+          },
+          {
+            "title": "Automated Renewals",
+            "desc": "Manage certification lifecycles automatically"
+          },
+          {
+            "title": "Fraud Prevention",
+            "desc": "Blockchain-anchored credentials prevent forgery"
+          },
+          {
+            "title": "Global Verification",
+            "desc": "Allow anyone to verify credentials instantly"
+          }
+        ],
+        "titleHighlight": "Certification Programs"
+      },
+      "healthcare": {
+        "badge": "Healthcare",
+        "title": "Secure Medical",
+        "subtitle": "Issue and verify healthcare credentials, licenses, and compliance certifications",
+        "benefits": [
+          {
+            "title": "Medical Licenses",
+            "desc": "Digital, verifiable medical licenses"
+          },
+          {
+            "title": "Compliance Tracking",
+            "desc": "Automated compliance certificate management"
+          },
+          {
+            "title": "Continuing Education",
+            "desc": "Track CE credits for healthcare professionals"
+          },
+          {
+            "title": "Instant Verification",
+            "desc": "Verify practitioner credentials in seconds"
+          }
+        ],
+        "titleHighlight": "Credentialing"
+      },
+      "manufacturing": {
+        "badge": "Manufacturing",
+        "title": "Safety & Equipment",
+        "subtitle": "Digitize safety training, equipment certifications, and compliance credentials",
+        "benefits": [
+          {
+            "title": "Safety Training",
+            "desc": "Digital proof of safety training completion"
+          },
+          {
+            "title": "Equipment Certifications",
+            "desc": "Track equipment operator qualifications"
+          },
+          {
+            "title": "Compliance Records",
+            "desc": "Maintain verifiable compliance documentation"
+          },
+          {
+            "title": "Audit Ready",
+            "desc": "Instant access to all certification records"
+          }
+        ],
+        "titleHighlight": "Certifications"
+      },
+      "heroTitle": "Solutions for",
+      "heroTitleHighlight": "Every Industry",
+      "heroSubtitle": "CredSure adapts to your unique credentialing needs — from education to enterprise.",
+      "digitalCertificates": "Digital Certificates",
+      "digitalCertificatesDesc": "Issue, manage, and verify blockchain-anchored digital certificates that employers and institutions trust worldwide.",
+      "blockchainVerification": "Blockchain verification",
+      "recipientOwnership": "Recipient ownership",
+      "instantVerification": "Instant verification",
+      "tamperProofSecurity": "Tamper-proof security",
+      "digitalBadges": "Digital Badges",
+      "digitalBadgesDesc": "Recognize skills, achievements, and competencies with shareable digital badges that boost engagement and visibility.",
+      "socialMediaIntegration": "Social media integration",
+      "digitalWalletSupport": "Digital wallet support",
+      "oneClickSharing": "One-click sharing",
+      "professionalBranding": "Professional branding",
+      "analyticsInsights": "Analytics & Insights",
+      "analyticsInsightsDesc": "Track certificate engagement, sharing, and verification in real-time with actionable analytics.",
+      "realtimeDashboards": "Real-time dashboards",
+      "engagementTracking": "Engagement tracking",
+      "shareAnalytics": "Share analytics",
+      "roiMeasurement": "ROI measurement",
+      "ctaButton": "Book a Demo",
+      "digitalCredentials": "Digital Credentials",
+      "digitalCredentialsDesc": "Issue, manage, and verify blockchain-secured digital credentials at scale."
+    },
+    "signIn": {
+      "title": "Sign In",
+      "subtitle": "Welcome back to CredSure"
+    },
+    "apiDocs": {
+      "badge": "API Documentation",
+      "title": "Developer API",
+      "subtitle": "Integrate CredSure into your applications"
+    },
+    "helpCenter": {
+      "badge": "Help Center",
+      "title": "How Can We Help?",
+      "subtitle": "Find answers and get support",
+      "titleHighlight": "Help Center",
+      "documentation": "Documentation",
+      "documentationDesc": "Comprehensive technical docs, API references, and integration guides.",
+      "faqs": "Frequently Asked Questions",
+      "faqsDesc": "Quick answers to the most common questions about CredSure.",
+      "videoTutorials": "Video Tutorials",
+      "videoTutorialsDesc": "Step-by-step video walkthroughs for every feature in the platform."
+    },
+    "careers": {
+      "badge": "Careers",
+      "title": "Join Our Team",
+      "subtitle": "Help us build the future of digital certificates"
+    },
+    "notFound": {
+      "title": "Page Not Found",
+      "desc": "The page you're looking for doesn't exist or has been moved.",
+      "goHome": "Go Home",
+      "seoTitle": "404 - Page Not Found | CredSure",
+      "seoDesc": "The page you're looking for doesn't exist or has been moved. Return to CredSure homepage."
+    },
+    "integrations": {
+      "badge": "Integrations",
+      "heroTitle": "Connect Your",
+      "heroTitleHighlight": "Entire Stack",
+      "heroSubtitle": "Connect CredSure with your favourite tools. Automate credential issuance across 50+ platforms.",
+      "integrationsCount": "{{count}} integrations"
+    },
+    "features": {
+      "heroTitle": "The Complete",
+      "heroTitleHighlight": "Certification Platform",
+      "heroSubtitle": "Everything you need to issue, manage, verify, and track digital certificates and badges at scale.",
+      "scheduleDemo": "Book a Demo",
+      "viewPricing": "View Pricing",
+      "coreTitle": "Core Features",
+      "coreDesc": "Issue, manage, and verify digital certificates with enterprise-grade security.",
+      "credentialMgmt": "Digital Certificates",
+      "credentialMgmtDesc": "Issue and manage blockchain-verified digital certificates from a single dashboard.",
+      "blockchainVerification": "Blockchain Verification",
+      "blockchainVerificationDesc": "Every certificate is anchored on the blockchain for tamper-proof, instant verification.",
+      "socialSharing": "Social Sharing",
+      "socialSharingDesc": "Recipients share certificates on LinkedIn, Twitter, and other platforms with one click.",
+      "analyticsDashboard": "Analytics Dashboard",
+      "analyticsDashboardDesc": "Track certificate views, shares, verifications, and engagement in real-time.",
+      "automationTitle": "Automation & Integration",
+      "automationDesc": "Automate your entire certification workflow with powerful integrations.",
+      "bulkIssuance": "Bulk Issuance",
+      "bulkIssuanceDesc": "Issue thousands of certificates at once via CSV upload or API.",
+      "apiIntegration": "API Integration",
+      "apiIntegrationDesc": "Connect CredSure to your LMS, CRM, or any platform via REST API.",
+      "autoIssue": "Auto-Issue",
+      "autoIssueDesc": "Automatically issue certificates when learners complete courses or events.",
+      "customizationTitle": "Customization",
+      "customizationDesc": "Make every certificate reflect your brand identity.",
+      "templateDesigner": "Template Designer",
+      "templateDesignerDesc": "Design professional certificate templates with our visual editor.",
+      "whiteLabel": "White Label",
+      "whiteLabelDesc": "Full white-labeling with custom domains, branding, and sender emails.",
+      "customDomains": "Custom Domains",
+      "customDomainsDesc": "Use your own domain for verification pages and credential delivery.",
+      "moreTitle": "And Much More",
+      "instantVerification": "Instant Verification",
+      "securityCompliance": "Security & Compliance",
+      "multiLanguage": "Multi-Language Support",
+      "mobileOptimized": "Mobile Optimized",
+      "ctaTitle": "Ready to Get Started?",
+      "ctaSubtitle": "Join 150+ organizations using CredSure to issue verifiable digital certificates.",
+      "learnMore": "Learn more"
+    },
+    "security": {
+      "title": "Enterprise-Grade",
+      "titleHighlight": "Security",
+      "subtitle": "Your credentials and data are protected by bank-level security standards trusted by 150+ organizations worldwide.",
+      "encryption": "AES-256 Encryption at Rest & in Transit",
+      "encryptionDesc": "All credential data is encrypted with AES-256 in our databases and protected with TLS 1.3 in transit. Cryptographic hashes are anchored to a public blockchain for tamper-proof verification.",
+      "soc2": "ISO 27001 Certified",
+      "soc2Desc": "Independently audited controls over security, availability, and confidentiality. Our processes are reviewed annually by accredited third-party auditors.",
+      "gdpr": "GDPR Compliant",
+      "gdprDesc": "Full compliance with EU data protection regulations. EU-based data residency available, complete data portability, and the right to erasure honoured at the click of a button."
+    },
+    "gdpr": {
+      "title": "GDPR Compliance",
+      "subtitle": "How CredSure protects personal data and supports your obligations under the EU General Data Protection Regulation.",
+      "items": [
+        "Lawful basis: We only process personal data with explicit consent or to fulfil a contractual obligation.",
+        "Data minimisation: We collect only the personal data strictly necessary to issue and verify a credential.",
+        "EU-based data residency available — all credential data can be stored exclusively within the European Economic Area.",
+        "Right to access: Data subjects can request a complete export of their data at any time.",
+        "Right to erasure: Recipients can request deletion of their personal data; we honour requests within 30 days.",
+        "Right to portability: Credentials can be exported in JSON, PDF, and Open Badges 3.0 formats.",
+        "Sub-processor transparency: A current list of all sub-processors is published and updated quarterly.",
+        "Data Processing Agreement (DPA): Available for all paid plans on request.",
+        "Breach notification: Customers are informed within 72 hours of any confirmed personal data breach.",
+        "Regular audits: Annual penetration testing and ISO 27001 audits validate our security posture."
+      ]
+    },
+    "guides": {
+      "badge": "Guides",
+      "title": "In-depth playbooks for",
+      "titleHighlight": "credentialing leaders",
+      "subtitle": "Practical, downloadable guides built from real implementations at 150+ organizations.",
+      "ctaTitle": "Want a custom strategy session?",
+      "ctaDesc": "Our credentialing experts will review your program and recommend a tailored roadmap — free."
+    },
+    "templates": {
+      "subtitle": "Beautifully designed, ready-to-customize certificate and badge templates for every industry."
+    },
+    "webinars": {
+      "badge": "Webinars",
+      "title": "Live and on-demand",
+      "titleHighlight": "webinars",
+      "subtitle": "Learn from credentialing experts and CredSure customers — no fluff, just actionable strategy.",
+      "allWebinars": "All Webinars",
+      "ctaTitle": "Want to be the first to know about new webinars?",
+      "ctaDesc": "Subscribe and we'll email you whenever a new session is announced."
+    },
+    "byteedge": {
+      "backToStories": "Back to all stories",
+      "badge": "Education · Case Study",
+      "title": "How ByteEDGE",
+      "titleHighlight": "transformed learning credentials",
+      "subtitle": "A leading microlearning platform issued 10,000+ blockchain-verified certificates in the first year — with zero fraud and 98% recipient engagement.",
+      "aboutTitle": "About ByteEDGE",
+      "aboutP1": "ByteEDGE is a fast-growing microlearning platform serving enterprise clients across Asia and Europe. Their bite-sized learning modules cover compliance, leadership, and technical skills for over half a million learners.",
+      "aboutP2": "As ByteEDGE scaled, the team realised their PDF certificates were being shared inconsistently, often forged, and rarely engaged with on social platforms — leaving valuable brand reach on the table.",
+      "quote": "CredSure gave us blockchain-grade trust without engineering overhead. We were issuing verifiable credentials within a single sprint.",
+      "quoteName": "Priya Menon",
+      "quoteRole": "Head of Product, ByteEDGE",
+      "challengeTitle": "The Challenge",
+      "challengeDesc": "PDF certificates created friction for both learners and verifiers. Recipients couldn't easily share their achievements, employers couldn't verify them quickly, and the team faced rising fraud reports.",
+      "solutionTitle": "The CredSure Solution",
+      "solutionDesc": "ByteEDGE integrated CredSure's API with their LMS in two weeks. Every completion now triggers a blockchain-anchored credential, automatically branded, and shareable to LinkedIn with one click.",
+      "resultsTitle": "The Results",
+      "stat1Value": "10,000+",
+      "stat1Label": "Certificates issued in year 1",
+      "stat2Value": "98%",
+      "stat2Label": "Recipient engagement rate",
+      "stat3Value": "0",
+      "stat3Label": "Fraud incidents since launch",
+      "challenges": [
+        "PDF certificates easily forged or duplicated",
+        "No way for employers to verify in real time",
+        "Low share rate on social platforms",
+        "Manual reissue process consuming admin time"
+      ],
+      "solutions": [
+        "Blockchain-anchored credentials with one-click verification",
+        "LMS-integrated automatic issuance via API",
+        "LinkedIn-optimised sharing template",
+        "Self-service learner portal with instant download"
+      ],
+      "ctaTitle": "Want results like ByteEDGE?",
+      "ctaDesc": "Book a 15-minute call to see how CredSure can transform your credentialing program.",
+      "ctaButton": "Book a Demo"
+    },
+    "cliniIndia": {
+      "backToStories": "Back to all stories",
+      "badge": "Healthcare · Case Study",
+      "title": "Clini INDIA digitises",
+      "titleHighlight": "healthcare credentials",
+      "subtitle": "A national healthcare training network certified 500+ medical professionals with instant verification and full regulatory compliance.",
+      "aboutTitle": "About Clini INDIA",
+      "aboutP1": "Clini INDIA is one of the country's largest networks of clinical research and healthcare training institutes. They certify thousands of medical professionals annually across pharmacology, clinical trials, and regulatory affairs.",
+      "aboutP2": "In a regulated field where credential authenticity directly affects patient safety, Clini INDIA needed a verifiable, fraud-proof system that could integrate with their accreditation workflow.",
+      "aboutP3": "CredSure became the digital backbone of their certification program — giving every graduate a credential that hospitals, pharma companies, and regulators can verify in seconds.",
+      "quote1": "Verification used to take days of phone calls. With CredSure, employers verify a candidate's credentials in under five seconds — that's a game-changer for our graduates.",
+      "quote1Name": "Dr. Anil Kumar",
+      "quote1Role": "Director of Programs, Clini INDIA",
+      "quote2": "The blockchain layer gives our regulatory partners the confidence they need. We've cleared every audit since switching to CredSure.",
+      "quote2Name": "Meera Sharma",
+      "quote2Role": "Compliance Lead, Clini INDIA",
+      "highlightsTitle": "Programme Highlights",
+      "highlights": [
+        "500+ healthcare professionals certified",
+        "Instant credential verification for employers",
+        "Full alignment with Indian regulatory bodies",
+        "Zero credential fraud incidents to date",
+        "LinkedIn-shareable badges drive recruiter visibility",
+        "CME credit hours encoded in metadata"
+      ],
+      "challengeTitle": "The Challenge",
+      "challengeDesc": "In healthcare, a fake credential can put patients at risk. Clini INDIA was facing a rise in fraudulent certificates and slow manual verification that frustrated graduates and employers alike.",
+      "challenges": [
+        "Counterfeit paper certificates circulating",
+        "Manual verification taking days per request",
+        "No way for hospitals to bulk-verify new hires",
+        "Regulatory audit preparation consuming weeks"
+      ],
+      "result1Title": "60% lower admin cost",
+      "result1Desc": "Automated issuance and self-service verification removed nearly two-thirds of the program's administrative overhead.",
+      "result2Title": "<5s verification time",
+      "result2Desc": "Employers and regulators verify credentials instantly — down from an average of 48 hours via phone and email.",
+      "result3Title": "500+ certified",
+      "result3Desc": "Healthcare professionals certified through the platform, every one of them with a fraud-proof, instantly shareable credential.",
+      "resultsTitle": "The Results",
+      "resultsQuote": "Our graduates now carry credentials that employers actually trust — and we have the audit trail to prove it.",
+      "ctaTitle": "Modernise your certification program",
+      "ctaDesc": "See how CredSure can deliver instant verification and regulatory-grade trust for your credentials.",
+      "ctaButton": "Book a Demo"
+    },
+    "tsaaro": {
+      "backToStories": "Back to all stories",
+      "badge": "Compliance · Case Study",
+      "title": "Tsaaro Academy automates",
+      "titleHighlight": "compliance certificates",
+      "subtitle": "A leading data-privacy training academy automated 100% of certificate issuance and reduced admin workload by 80%.",
+      "aboutTitle": "About Tsaaro Academy",
+      "aboutP1": "Tsaaro Academy is the training arm of Tsaaro, a global cybersecurity and data-privacy consultancy. They train thousands of DPOs, privacy officers, and compliance professionals every year on GDPR, DPDP, and ISO frameworks.",
+      "aboutP2": "With training cohorts running weekly across multiple time zones, the team was drowning in certificate-issuance work — generating, signing, and emailing PDFs by hand for every learner who completed a course.",
+      "aboutP3": "After integrating CredSure, every Tsaaro Academy graduate receives a blockchain-verified credential the moment they finish a course — no human intervention required.",
+      "quote1": "Our admin team got back twenty hours a week. That's an entire workday recovered, every single week, for the price of a few coffees per learner.",
+      "quote1Name": "Akarsh Singh",
+      "quote1Role": "Co-founder, Tsaaro Academy",
+      "quote2": "Recipients love that they can prove their certification on LinkedIn instantly. Our share rate is the highest we've ever measured.",
+      "quote2Name": "Riya Kapoor",
+      "quote2Role": "Head of Learning, Tsaaro Academy",
+      "highlightsTitle": "Programme Highlights",
+      "highlights": [
+        "100% of certificate issuance automated",
+        "80% reduction in administrative workload",
+        "Instant employer verification of every certificate",
+        "LinkedIn integration drives recruiter visibility",
+        "Multi-language support for global cohorts",
+        "Built-in CPE credit tracking for compliance bodies"
+      ],
+      "benefit1Title": "Instant Issuance",
+      "benefit1Desc": "Credentials are minted automatically the moment a learner completes a course — no admin touch required.",
+      "benefit2Title": "Effortless Sharing",
+      "benefit2Desc": "One-click LinkedIn sharing puts every graduate's achievement in front of recruiters worldwide.",
+      "benefit3Title": "Verification Trust",
+      "benefit3Desc": "Blockchain-anchored proofs give employers and auditors the confidence they need in seconds.",
+      "benefitsTitle": "Why Tsaaro Chose CredSure",
+      "ctaTitle": "Automate your certification workflow",
+      "ctaDesc": "See how CredSure can give your admin team back their week — and your graduates a credential they'll actually share.",
+      "ctaButton": "Book a Demo"
+    }
+  },
+  "seo": {
+    "pricing": {
+      "title": "Pricing | CredSure Digital Certificate Platform",
+      "description": "Transparent pricing for CredSure digital certificates. Start free, scale as you grow. Compare plans and features.",
+      "keywords": "digital certificates pricing, certificate platform cost, credential management pricing"
+    },
+    "features": {
+      "title": "Features | CredSure Digital Certificate Platform",
+      "description": "Explore CredSure platform features: credential management, blockchain verification, analytics, sharing, and enterprise security.",
+      "keywords": "digital certificates features, blockchain verification, credential analytics, certificate management"
+    },
+    "roiCalculator": {
+      "title": "ROI Calculator | See Your Savings with CredSure",
+      "description": "Calculate how much time and money you save by automating credential management with CredSure. See your efficiency gains instantly.",
+      "keywords": "ROI calculator, credential automation savings, efficiency calculator, digital certificateing ROI"
+    },
+    "security": {
+      "title": "Security & Compliance | CredSure",
+      "description": "CredSure security: GDPR compliant, ISO 27001 certified, blockchain-anchored credentials with bank-level encryption.",
+      "keywords": "credential security, GDPR compliance, ISO 27001, blockchain security"
+    },
+    "customerSuccess": {
+      "title": "Customer Success Stories | CredSure",
+      "description": "See how 150+ organizations use CredSure to issue blockchain-verified digital certificates. Real results from real customers.",
+      "keywords": "customer success, case studies, digital certificates results, CredSure reviews"
+    },
+    "home": {
+      "title": "CredSure | Digital Credential Platform — Blockchain Verified",
+      "description": "Issue, manage, and verify blockchain-secured digital credentials, certificates, and badges. Trusted by 150+ organizations.",
+      "keywords": "digital credentials, blockchain certificates, digital badges, verifiable credentials"
+    },
+    "notFound": {
+      "title": "404 - Page Not Found | CredSure",
+      "description": "The page you're looking for doesn't exist or has been moved. Return to CredSure homepage."
+    },
+    "integrations": {
+      "title": "Integrations | CredSure Digital Credential Platform",
+      "description": "Connect CredSure with your LMS, CRM, HR systems, and more. Automate credential issuance with 50+ integrations including Moodle, Salesforce, HubSpot, and Zapier.",
+      "keywords": "credential integrations, LMS integration, CRM integration, Zapier credentials, Moodle certificates, API integration"
+    },
+    "about": {
+      "title": "About CredSure | Our Mission & Team",
+      "description": "Learn about CredSure's mission to make credentials verifiable and shareable. Meet our leadership team in Cologne, Bangalore, and Manila.",
+      "keywords": "about CredSure, digital credentials company, credential platform team, Cologne edtech"
+    },
+    "blog": {
+      "title": "Blog | Digital Credentialing Insights & Best Practices",
+      "description": "Expert articles on digital certificates, blockchain verification, credential management, and industry best practices. Updated weekly.",
+      "keywords": "digital credentials blog, certificate management articles, blockchain verification insights"
+    },
+    "solutions": {
+      "title": "Solutions | CredSure for Every Industry",
+      "description": "Discover how CredSure serves higher education, corporate training, certification bodies, healthcare, and manufacturing with tailored credential solutions.",
+      "keywords": "credential solutions, digital certificates for education, corporate training credentials"
+    },
+    "demo": {
+      "title": "Book a Demo | See CredSure in Action",
+      "description": "Schedule a personalised demo of CredSure's digital credential platform. See how you can issue, manage, and verify certificates in minutes.",
+      "keywords": "CredSure demo, credential platform demo, digital certificate demo, book demo"
+    },
+    "contact": {
+      "title": "Contact Us | Get in Touch with CredSure",
+      "description": "Reach our team in Cologne, Germany. Get answers about digital credentials, pricing, integrations, or partnership opportunities.",
+      "keywords": "contact CredSure, credential platform support, digital certificates enquiry"
+    },
+    "guides": {
+      "title": "Guides | In-Depth Credential Management Resources",
+      "description": "Comprehensive guides on implementing digital credentials, blockchain verification, compliance requirements, and programme design.",
+      "keywords": "credential management guides, digital certificate guides, blockchain verification guide"
+    },
+    "webinars": {
+      "title": "Webinars | Learn From Credential Experts",
+      "description": "Watch on-demand webinars about digital credentialing trends, implementation strategies, and success stories from industry leaders.",
+      "keywords": "credential webinars, digital certificate webinars, edtech webinars"
+    },
+    "tutorials": {
+      "title": "Tutorials | Step-by-Step Credential Platform Training",
+      "description": "Video tutorials and walkthroughs for setting up, customising, and managing your CredSure digital credential programmes.",
+      "keywords": "CredSure tutorials, credential platform training, digital certificate setup guide"
+    },
+    "helpCenter": {
+      "title": "Help Center | CredSure Support & Documentation",
+      "description": "Find answers to common questions about CredSure. Browse our knowledge base, FAQs, and documentation for quick solutions.",
+      "keywords": "CredSure help, credential platform support, digital certificates FAQ"
+    },
+    "digitalBadges": {
+      "title": "Digital Badges | Recognise Skills & Achievements",
+      "description": "Issue verifiable digital badges for micro-credentials, skills, and achievements. Shareable on LinkedIn, portfolios, and social media.",
+      "keywords": "digital badges, micro-credentials, skill badges, achievement badges, verifiable badges"
+    },
+    "compareAccredible": {
+      "title": "CredSure vs Accredible | Digital Credential Platform Comparison",
+      "description": "Compare CredSure and Accredible features, pricing, and capabilities. See why organisations choose CredSure for blockchain-verified credentials.",
+      "keywords": "CredSure vs Accredible, Accredible alternative, credential platform comparison"
+    },
+    "compareCredly": {
+      "title": "CredSure vs Credly | Digital Badge Platform Comparison",
+      "description": "Compare CredSure and Credly for digital badges and credentials. Discover the differences in features, pricing, and blockchain verification.",
+      "keywords": "CredSure vs Credly, Credly alternative, digital badge platform comparison"
+    },
+    "digitalCertificates": {
+      "title": "Digital Certificates | Blockchain-Verified Credentials",
+      "description": "Issue tamper-proof digital certificates with blockchain verification. Customisable templates, bulk issuance, and instant delivery.",
+      "keywords": "digital certificates, blockchain certificates, verifiable certificates, certificate issuance"
+    },
+    "blockchain": {
+      "title": "Blockchain Verification | Tamper-Proof Credentials",
+      "description": "Secure credentials with blockchain technology. Every certificate is immutable, instantly verifiable, and fraud-proof.",
+      "keywords": "blockchain verification, tamper-proof credentials, immutable certificates, credential security"
+    },
+    "sharing": {
+      "title": "Social Sharing | Share Credentials Everywhere",
+      "description": "Enable recipients to share verified credentials on LinkedIn, email signatures, portfolios, and social media with one click.",
+      "keywords": "credential sharing, share certificates LinkedIn, social media credentials"
+    },
+    "analytics": {
+      "title": "Analytics Dashboard | Credential Programme Insights",
+      "description": "Track credential engagement, sharing rates, verification clicks, and programme performance with real-time analytics dashboards.",
+      "keywords": "credential analytics, certificate tracking, programme insights, engagement metrics"
+    },
+    "bulkIssuance": {
+      "title": "Bulk Issuance | Issue Thousands of Credentials at Once",
+      "description": "Upload a CSV and issue thousands of digital certificates in minutes. Automated delivery via email with personalised branding.",
+      "keywords": "bulk credential issuance, mass certificate delivery, automated certificate issuance"
+    },
+    "apiIntegration": {
+      "title": "API Integration | Automate Credential Workflows",
+      "description": "RESTful API for automated credential issuance, verification, and management. Webhooks, SDKs, and comprehensive documentation.",
+      "keywords": "credential API, certificate automation API, REST API credentials, developer integration"
+    },
+    "autoIssue": {
+      "title": "Auto-Issue | Trigger-Based Credential Delivery",
+      "description": "Automatically issue credentials when learners complete courses, pass exams, or achieve milestones. Zero manual intervention.",
+      "keywords": "auto-issue credentials, automated certificates, trigger-based issuance"
+    },
+    "templateDesigner": {
+      "title": "Template Designer | Create Beautiful Certificate Designs",
+      "description": "Drag-and-drop certificate template designer. Choose from 50+ templates or create custom designs with your branding.",
+      "keywords": "certificate template designer, custom certificate design, credential templates"
+    },
+    "whiteLabel": {
+      "title": "White Label | Your Brand, Your Platform",
+      "description": "Fully white-labelled credential platform with your domain, logo, and colours. Recipients see only your brand.",
+      "keywords": "white label credentials, branded certificate platform, custom domain certificates"
+    },
+    "customDomains": {
+      "title": "Custom Domains | Host Credentials on Your Domain",
+      "description": "Serve credential verification pages from your own domain. Full SSL, custom branding, and seamless recipient experience.",
+      "keywords": "custom domain credentials, branded verification pages, own domain certificates"
+    },
+    "higherEducation": {
+      "title": "Higher Education | Digital Credentials for Universities",
+      "description": "Issue blockchain-verified diplomas, transcripts, and micro-credentials. Reduce fraud, streamline verification, and empower graduates.",
+      "keywords": "university digital credentials, higher education certificates, academic blockchain credentials"
+    },
+    "associations": {
+      "title": "Professional Associations | Member Credential Management",
+      "description": "Manage member certifications, continuing education credits, and professional designations with automated renewal tracking.",
+      "keywords": "association credentials, member certificates, professional designation management"
+    },
+    "corporateTraining": {
+      "title": "Corporate Training | Employee Credential Programmes",
+      "description": "Recognise employee learning with verifiable credentials. Integrate with your LMS, track completion, and boost engagement.",
+      "keywords": "corporate training credentials, employee certificates, L&D digital badges"
+    },
+    "certificationBodies": {
+      "title": "Certification Bodies | Scalable Credential Operations",
+      "description": "Manage thousands of certified professionals with automated issuance, renewal tracking, and public verification directories.",
+      "keywords": "certification body platform, professional certification management, scaled credentials"
+    },
+    "healthcare": {
+      "title": "Healthcare | Secure Clinical Credentials & Compliance",
+      "description": "Issue and verify healthcare credentials with blockchain security. CME tracking, licence verification, and compliance documentation.",
+      "keywords": "healthcare credentials, clinical certification, CME tracking, medical credential verification"
+    },
+    "manufacturing": {
+      "title": "Manufacturing | Workforce Skills & Safety Credentials",
+      "description": "Track workforce certifications, safety training, and compliance credentials. Automated expiry alerts and renewal workflows.",
+      "keywords": "manufacturing credentials, safety certification tracking, workforce compliance"
+    },
+    "gdpr": {
+      "title": "GDPR Compliance | Data Protection at CredSure",
+      "description": "How CredSure ensures full GDPR compliance. Data processing, storage policies, recipient rights, and our commitment to data protection.",
+      "keywords": "CredSure GDPR, data protection credentials, GDPR compliant certificates"
+    },
+    "privacy": {
+      "title": "Privacy Policy | CredSure Data Practices",
+      "description": "Read CredSure's privacy policy. Learn how we collect, use, and protect your personal data in compliance with GDPR and international standards.",
+      "keywords": "CredSure privacy policy, data practices, personal data protection"
+    },
+    "terms": {
+      "title": "Terms of Service | CredSure Platform Agreement",
+      "description": "Review CredSure's terms of service for platform usage, credential issuance, and data handling responsibilities.",
+      "keywords": "CredSure terms of service, platform agreement, usage terms"
+    },
+    "cookies": {
+      "title": "Cookie Policy | CredSure Website Cookies",
+      "description": "Information about cookies used on CredSure.io. Manage your preferences for analytics, functional, and marketing cookies.",
+      "keywords": "CredSure cookies, cookie policy, website tracking preferences"
+    },
+    "imprint": {
+      "title": "Imprint | Legal Information | Certif-ID International GmbH",
+      "description": "Legal imprint for CredSure by Certif-ID International GmbH. Company registration, managing directors, and contact information.",
+      "keywords": "CredSure imprint, Certif-ID GmbH, legal information, company registration"
+    },
+    "aboutUs": {
+      "title": "About CredSure | Our Mission, Team & Offices",
+      "description": "Learn about CredSure's mission to make credentials verifiable and shareable. Meet our leadership team in Cologne, Bangalore, and Manila.",
+      "keywords": "about CredSure, digital credentials company, credential platform team, Cologne edtech"
+    },
+    "apiDocs": {
+      "title": "API Documentation | CredSure Developer Reference",
+      "description": "Complete REST API documentation for CredSure. Endpoints, authentication, webhooks, and code examples for credential automation.",
+      "keywords": "CredSure API docs, credential API reference, REST API documentation"
+    },
+    "privacyPolicy": {
+      "title": "Privacy Policy | CredSure Data Practices",
+      "description": "Read CredSure's privacy policy. How we collect, use, and protect your personal data in compliance with GDPR.",
+      "keywords": "CredSure privacy, data protection, GDPR privacy policy"
+    },
+    "signIn": {
+      "title": "Sign In | CredSure Admin Portal",
+      "description": "Sign in to your CredSure admin dashboard. Manage credentials, view analytics, and configure your platform.",
+      "keywords": "CredSure sign in, admin login, credential dashboard"
+    },
+    "templates": {
+      "title": "Certificate Templates | Ready-to-Use Designs",
+      "description": "Browse 50+ professional certificate templates. Customise colours, logos, and layouts with our drag-and-drop designer.",
+      "keywords": "certificate templates, credential designs, certificate template gallery"
+    }
+  },
+  "demoPage": {
+    "badge": "Book a Demo",
+    "title": "See CredSure in Action",
+    "subtitle": "Schedule a personalized demo and discover how CredSure can transform your credentialing process",
+    "fullName": "Full Name",
+    "workEmail": "Work Email",
+    "companyName": "Company Name",
+    "jobTitle": "Job Title",
+    "messageOptional": "Message (Optional)",
+    "messagePlaceholder": "Tell us about your use case...",
+    "submitting": "Submitting...",
+    "requestDemo": "Request Demo",
+    "successToast": "Demo request submitted! We'll contact you within 24 hours.",
+    "errorToast": "Failed to submit. Please try again.",
+    "networkError": "Network error. Please try again later.",
+    "whatToExpect": "What to Expect",
+    "benefits": [
+      "Live product demonstration",
+      "Custom use case discussion",
+      "Q&A with our experts",
+      "No credit card required"
+    ],
+    "quickResponse": "Quick Response",
+    "quickResponseDesc": "Our team typically responds within 24 hours to schedule your personalized demo at a time that works for you."
+  },
+  "blog": {
+    "title": "Latest Insights",
+    "subtitle": "Explore articles on digital certificates, education technology, and industry trends",
+    "readMore": "Read Full Article",
+    "search": "Search articles...",
+    "categories": "Categories",
+    "allCategories": "All Categories",
+    "showing": "Showing",
+    "articles": "articles"
+  },
+  "tutorials": {
+    "videos": "15+ Videos",
+    "hours": "3+ Hours",
+    "levels": "All Levels"
+  }
+}

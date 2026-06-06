@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>CredSure OG Card</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    width: 1200px; height: 630px; overflow: hidden;
+    font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #110D26;
+    color: #fff;
+  }
+  .stage {
+    position: relative;
+    width: 1200px; height: 630px;
+    background:
+      radial-gradient(circle at 18% 22%, rgba(78,151,238,0.55) 0%, transparent 45%),
+      radial-gradient(circle at 88% 18%, rgba(124,58,237,0.45) 0%, transparent 50%),
+      radial-gradient(circle at 75% 95%, rgba(59,49,129,0.6) 0%, transparent 55%),
+      linear-gradient(135deg, #0f0a2b 0%, #1a1442 50%, #110D26 100%);
+    overflow: hidden;
+  }
+  .stage::after {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.18 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    opacity: 0.5;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
+  .grid {
+    position: absolute;
+    top: 50%; right: -120px;
+    transform: translateY(-50%);
+    width: 560px; height: 560px;
+    opacity: 0.18;
+    background-image:
+      linear-gradient(60deg, transparent 49%, rgba(255,255,255,0.6) 50%, transparent 51%),
+      linear-gradient(-60deg, transparent 49%, rgba(255,255,255,0.6) 50%, transparent 51%),
+      linear-gradient(0deg, transparent 49%, rgba(255,255,255,0.6) 50%, transparent 51%);
+    background-size: 78px 78px;
+    -webkit-mask-image: radial-gradient(circle, #000 0%, #000 50%, transparent 75%);
+            mask-image: radial-gradient(circle, #000 0%, #000 50%, transparent 75%);
+  }
+  .tile {
+    position: absolute;
+    top: 130px; right: 80px;
+    width: 280px; height: 360px;
+    background: linear-gradient(160deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.05) 100%);
+    border: 1.5px solid rgba(255,255,255,0.25);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+    transform: rotate(8deg);
+    padding: 28px;
+    display: flex; flex-direction: column;
+    color: #fff;
+  }
+  .tile .badge {
+    width: 56px; height: 56px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #4e97ee 0%, #7c3aed 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px; font-weight: 800;
+    margin-bottom: 22px;
+  }
+  .tile .title { font-size: 18px; font-weight: 700; line-height: 1.25; margin-bottom: 8px; }
+  .tile .sub { font-size: 13px; opacity: 0.7; line-height: 1.4; }
+  .tile .verified {
+    display: inline-flex; align-items: center; gap: 6px;
+    margin-top: 14px;
+    padding: 5px 11px;
+    border-radius: 999px;
+    background: rgba(34, 197, 94, 0.18);
+    border: 1px solid rgba(34, 197, 94, 0.4);
+    font-size: 11px; font-weight: 700;
+    color: #4ade80;
+    align-self: flex-start;
+  }
+  .tile .verified::before {
+    content: '';
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #4ade80;
+    box-shadow: 0 0 8px #4ade80;
+  }
+  .tile .hash {
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px dashed rgba(255,255,255,0.25);
+    font-family: 'Menlo', 'Monaco', monospace;
+    font-size: 10px;
+    opacity: 0.5;
+    letter-spacing: 0.04em;
+  }
+
+  .content {
+    position: absolute;
+    top: 80px; left: 80px;
+    width: 720px;
+    z-index: 2;
+  }
+  .logo-wrap {
+    margin-bottom: 56px;
+    display: flex; align-items: center;
+  }
+  .logo-wrap img {
+    height: 56px;
+    width: auto;
+    /* New brand logo includes its own gradient — render natively, no filter */
+  }
+
+  .pill {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 7px 14px;
+    border-radius: 999px;
+    background: rgba(78,151,238,0.18);
+    border: 1px solid rgba(78,151,238,0.4);
+    color: #b6d4ff;
+    font-size: 13px; font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 24px;
+  }
+  .pill::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #4e97ee;
+  }
+
+  h1 {
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 28px;
+  }
+  h1 .grad {
+    background: linear-gradient(90deg, #4e97ee 0%, #7c3aed 50%, #ec4899 100%);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+            color: transparent;
+  }
+  .desc {
+    font-size: 21px;
+    line-height: 1.45;
+    color: rgba(255,255,255,0.72);
+    max-width: 600px;
+  }
+
+  .strip {
+    position: absolute;
+    bottom: 56px; left: 80px;
+    display: flex; align-items: center; gap: 36px;
+    z-index: 2;
+    width: calc(1200px - 160px);
+  }
+  .strip .stat { color: #fff; }
+  .strip .stat .num { font-size: 24px; font-weight: 800; line-height: 1; }
+  .strip .stat .lbl { font-size: 12px; opacity: 0.6; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px; }
+  .strip .divider { width: 1px; height: 32px; background: rgba(255,255,255,0.18); }
+  .strip .domain { font-size: 16px; font-weight: 700; color: #4e97ee; margin-left: auto; }
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="grid"></div>
+
+  <div class="tile">
+    <div class="badge">✓</div>
+    <div class="title" id="og-tile-title">Certificate of Achievement</div>
+    <div class="sub" id="og-tile-sub">Issued to Sarah Müller</div>
+    <span class="verified">BLOCKCHAIN VERIFIED</span>
+    <div class="hash">0x7f3a · 4e9c · b21d · 8a55</div>
+  </div>
+
+  <div class="content">
+    <div class="logo-wrap">
+      <img id="og-logo" src="" alt="CredSure" />
+    </div>
+    <span class="pill" id="og-pill">Digital Credentialing Platform</span>
+    <h1 id="og-headline">Transform credentials into <span class="grad">digital trust</span>.</h1>
+    <p class="desc" id="og-desc">Issue blockchain-verified certificates and badges that recipients can share, employers can verify, and everyone can trust.</p>
+  </div>
+
+  <div class="strip">
+    <div class="stat"><div class="num">150+</div><div class="lbl">Organizations</div></div>
+    <div class="divider"></div>
+    <div class="stat"><div class="num">4.8/5</div><div class="lbl">G2 Rating</div></div>
+    <div class="domain">credsure.io</div>
+  </div>
+</div>
+<script>
+  // Logo loaded from query param (`?logo=data:image/png;base64,...`) or window var.
+  // Falls back to file:// path if running standalone.
+  const params = new URLSearchParams(location.search);
+  const logo = params.get('logo') || window.__CS_LOGO_DATA_URL__ || '/credsure-logo-main.webp';
+  document.getElementById('og-logo').src = logo;
+
+  // Optional template overrides via query string for dynamic OG generation.
+  const tplOverride = (id, key) => {
+    const v = params.get(key);
+    if (v !== null) document.getElementById(id).textContent = v;
+  };
+  tplOverride('og-pill', 'pill');
+  // Headline supports inline highlight: title=Plain text&highlight=word
+  const title = params.get('title');
+  const highlight = params.get('highlight');
+  if (title !== null) {
+    const h1 = document.getElementById('og-headline');
+    if (highlight) {
+      h1.innerHTML = `${title.replace(highlight, `<span class="grad">${highlight}</span>`)}`;
+    } else {
+      h1.textContent = title;
+    }
+  }
+  tplOverride('og-desc', 'desc');
+  tplOverride('og-tile-title', 'tileTitle');
+  tplOverride('og-tile-sub', 'tileSub');
+</script>
+</body>
+</html>

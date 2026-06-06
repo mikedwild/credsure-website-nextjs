@@ -1,0 +1,700 @@
+{
+  "features": {
+    "title": "Leistungsstarke Funktionen für moderne Zertifizierung",
+    "subtitle": "Alles, was Sie brauchen, um digitale Zertifikate in großem Umfang auszustellen, zu verwalten, zu verifizieren und zu verfolgen",
+    "items": {
+      "platform": {
+        "title": "Eine Plattform für digitale Zertifikate",
+        "description": "Mit mehr als 100 Funktionen können Sie Ihr digitales Zertifikatsmanagement mit einfacher Zusammenarbeit und Administratorrollen zusammenführen."
+      },
+      "blockchain": {
+        "title": "Einfache Verifizierung auf Blockchain",
+        "description": "Auf Blockchain ausgestellte digitale Badges und Zertifikate gehören dem Empfänger, sind herstellerunabhängig und überall sofort verifizierbar."
+      },
+      "sharing": {
+        "title": "Digitale Zertifikate nahtlos teilen",
+        "description": "Machen Sie es Ihren Empfängern leicht, digitale Badges und Zertifikate zu teilen. Öffentliche Verifizierungs-URLs ermöglichen einfache Ein-Klick-Verifizierung."
+      },
+      "analytics": {
+        "title": "Das vollständige Bild erhalten",
+        "description": "Behalten Sie Ihre digitalen Zertifikatsanalysen im Blick. Erhalten Sie Echtzeit-Diagramme zu Teilungsstatus, Verifizierungen und Dateneinblicken."
+      },
+      "security": {
+        "title": "Unveränderlich & sicher",
+        "description": "Auf CredSure ausgestellte digitale Zertifikate sind sicher und fälschungssicher mit Verschlüsselung auf Bankenniveau und Blockchain-Verankerung."
+      },
+      "verification": {
+        "title": "Sofort verifizierbar",
+        "description": "Zertifikate können sofort verifiziert werden und bieten Eigentumsnachweis mit Ein-Klick-Verifizierung und QR-Codes."
+      }
+    },
+    "credentialManagement": {
+      "badge": "Digitale Zertifikate",
+      "title": "Digitale Zertifikate",
+      "subtitle": "Digitale Zertifikate von einem einzigen Dashboard aus ausstellen, verwalten und verifizieren",
+      "items": [
+        "Massenausstellung und -verwaltung",
+        "Vorlagenbibliothek mit Versionskontrolle",
+        "Ablauf- und Erneuerungsverwaltung",
+        "Rollenbasierte Zugriffskontrolle",
+        "Detaillierte Prüfprotokolle"
+      ]
+    },
+    "blockchain": {
+      "badge": "Blockchain-Verifizierung",
+      "title": "Fälschungssichere Blockchain-Verifizierung",
+      "subtitle": "Verankern Sie Ihre Zertifikate auf der Blockchain für sofortige, kryptografische Verifizierung",
+      "items": [
+        "Unveränderliche Blockchain-Aufzeichnungen",
+        "Echtzeit-Verifizierungs-API",
+        "Garantie gegen Betrug",
+        "Globales Vertrauensnetzwerk",
+        "Kryptografischer Echtheitsbeweis"
+      ]
+    },
+    "sharing": {
+      "badge": "Social Sharing",
+      "title": "Zertifikate mit einem Klick teilen",
+      "subtitle": "Ermöglichen Sie Inhabern, ihre Leistungen auf LinkedIn, Social Media und in digitalen Wallets zu teilen",
+      "items": [
+        "LinkedIn Ein-Klick-Teilen",
+        "Social-Media-optimierte Karten",
+        "QR-Code-Generierung",
+        "E-Mail-Teilen mit Tracking",
+        "Integration digitaler Wallets"
+      ]
+    },
+    "analytics": {
+      "badge": "Analysen & Einblicke",
+      "title": "Echtzeit-Analyse-Dashboard",
+      "subtitle": "Erhalten Sie verwertbare Einblicke in Zertifikatausstellung, Verifizierung und Engagement-Metriken",
+      "items": [
+        "Ausstellungsanalysen",
+        "Engagement-Tracking",
+        "ROI-Messung",
+        "Benutzerdefinierte Berichte",
+        "Export und API-Zugang"
+      ]
+    },
+    "bulkIssuance": {
+      "badge": "Massenausstellung",
+      "title": "Tausende in Minuten ausstellen",
+      "subtitle": "Automatisierte Massenausstellungs-Workflows für Zertifizierungsprogramme mit hohem Volumen",
+      "items": [
+        "CSV/Excel-Upload",
+        "Automatische Validierung",
+        "Stapelverarbeitung",
+        "Fehlerbehandlung und Wiederholung",
+        "Fortschrittsverfolgung"
+      ]
+    },
+    "apiIntegration": {
+      "badge": "API-Integration",
+      "title": "Leistungsstarke REST API",
+      "subtitle": "Integrieren Sie CredSure nahtlos in Ihre bestehenden Systeme mit unserer umfassenden API",
+      "items": [
+        "RESTful API-Endpunkte",
+        "OAuth 2.0-Authentifizierung",
+        "Webhooks für Echtzeit-Events",
+        "SDKs für gängige Sprachen",
+        "Umfassende Dokumentation"
+      ]
+    },
+    "autoIssue": {
+      "badge": "Automatische Ausstellung",
+      "title": "Trigger-basierte automatische Ausstellung",
+      "subtitle": "Richten Sie Regeln ein, um Zertifikate automatisch auszustellen, wenn bestimmte Bedingungen erfüllt sind",
+      "items": [
+        "LMS-Abschluss-Trigger",
+        "Bewertungsschwellenwerte",
+        "Benutzerdefinierte Event-Trigger",
+        "Geplante Ausstellung",
+        "Bedingte Logik"
+      ]
+    },
+    "templateDesigner": {
+      "badge": "Vorlagen-Designer",
+      "title": "Intuitiver Vorlagen-Builder",
+      "subtitle": "Gestalten Sie beeindruckende Zertifikatsvorlagen, die Ihre Markenidentität widerspiegeln",
+      "items": [
+        "Visueller Vorlagen-Editor",
+        "Markenanpassung",
+        "Dynamische Felder",
+        "Vorlagenversionierung",
+        "Vorschau und Test"
+      ]
+    },
+    "whiteLabel": {
+      "badge": "White Label",
+      "title": "Vollständig gebrandete Erfahrung",
+      "subtitle": "Liefern Sie ein nahtloses Zertifikaterlebnis unter Ihrer eigenen Marke",
+      "items": [
+        "Individuelles Branding",
+        "Ihr Logo und Ihre Farben",
+        "Eigene E-Mail-Vorlagen",
+        "Gebrandete Verifizierungsseiten",
+        "Unterstützung eigener Domains"
+      ]
+    },
+    "customDomains": {
+      "badge": "Eigene Domains",
+      "title": "Hosting auf Ihrer eigenen Domain",
+      "subtitle": "Stellen Sie Zertifikate von Ihrer eigenen Domain bereit für vollständige Markenkonsistenz",
+      "items": [
+        "Einrichtung eigener Domains",
+        "SSL-Zertifikatverwaltung",
+        "DNS-Konfigurationsanleitung",
+        "Gebrandete URLs",
+        "SEO-Vorteile"
+      ]
+    },
+    "recipientWall": {
+      "badge": "Empfänger-Wand",
+      "title": "Eine lebendige Wand voller Zertifikate",
+      "subtitle": "Jeder Empfänger erhält eine verifizierbare, teilbare Wand aller Abzeichen, die er jemals erworben hat — über Aussteller, Programme und Jahre hinweg",
+      "items": [
+        "Eine verifizierbare URL pro Empfänger",
+        "Sammelt automatisch Abzeichen von jedem CredSure-Aussteller",
+        "Empfänger entscheiden, was öffentlich bleibt",
+        "Native Sharing-Optionen für LinkedIn, X und WhatsApp",
+        "Einbettbar auf persönlichen Websites und Portfolios",
+        "Recruiter-fähiger PDF-Export"
+      ]
+    },
+    "instantVerification": {
+      "badge": "Sofortige Verifizierung",
+      "title": "Zertifikate in Sekunden verifizieren",
+      "subtitle": "Ermöglichen Sie jedem, die Echtheit von Zertifikaten mit einem einzigen Klick sofort zu überprüfen",
+      "items": [
+        "Ein-Klick-Verifizierung",
+        "QR-Code-Scanning",
+        "API-Verifizierung",
+        "Massenverifizierung",
+        "Verifizierungsanalysen"
+      ]
+    },
+    "security": {
+      "badge": "Sicherheit & Compliance",
+      "title": "Enterprise-Grade Sicherheit",
+      "subtitle": "DSGVO- und ISO-27001-konform mit End-to-End-Verschlüsselung",
+      "items": [
+        "ISO 27001 zertifiziert",
+        "DSGVO-konform",
+        "ISO 27001 zertifiziert",
+        "End-to-End-Verschlüsselung",
+        "Regelmäßige Sicherheitsaudits"
+      ]
+    }
+  },
+  "useCases": {
+    "courseCompletion": {
+      "badge": "Kursabschluss",
+      "title": "Automatische Kursabschluss-Zertifikate",
+      "subtitle": "Stellen Sie automatisch verifizierbare Zertifikate aus, wenn Lernende Kurse, Programme oder Prüfungen abschließen",
+      "items": [
+        "LMS-Integrations-Trigger",
+        "Benutzerdefinierte Abschlusskriterien",
+        "Automatischer E-Mail-Versand",
+        "Gebrandetes Zertifikatdesign",
+        "Verifizierungsportal"
+      ]
+    },
+    "professionalLicenses": {
+      "badge": "Berufslizenzen",
+      "title": "Berufslizenzen digitalisieren",
+      "subtitle": "Digitale Berufslizenzen mit integrierter Ablaufverfolgung und automatischer Erneuerung ausstellen und verwalten",
+      "items": [
+        "Lizenz-Lebenszyklusverwaltung",
+        "Automatische Erneuerungserinnerungen",
+        "Compliance-Tracking",
+        "Sofortige Verifizierung",
+        "Audit-bereite Aufzeichnungen"
+      ]
+    },
+    "memberCredentials": {
+      "badge": "Mitglieder-Zertifikate",
+      "title": "Digitale Mitglieder-Zertifikate",
+      "subtitle": "Digitale Mitgliedskarten, Zertifizierungen und Leistungsabzeichen für Ihre Community-Mitglieder ausstellen",
+      "items": [
+        "Digitale Mitgliedskarten",
+        "Leistungsabzeichen",
+        "Fortbildungspunkt-Tracking",
+        "Mitgliederverzeichnis-Integration",
+        "Social Sharing aktiviert"
+      ]
+    },
+    "scaleProgram": {
+      "badge": "Programm skalieren",
+      "title": "Skalieren Sie Ihr Zertifizierungsprogramm",
+      "subtitle": "Von Hunderten bis Millionen von Zertifikaten — unsere Plattform wächst mit Ihrer Organisation",
+      "items": [
+        "Unbegrenzte Skalierbarkeit",
+        "Massenverarbeitung",
+        "API-First-Architektur",
+        "Multi-Tenant-Unterstützung",
+        "Enterprise SLA"
+      ]
+    },
+    "increaseEngagement": {
+      "badge": "Engagement steigern",
+      "title": "Lerner-Engagement steigern",
+      "subtitle": "Abschlussraten und Engagement mit teilbaren, verifizierbaren digitalen Zertifikaten steigern",
+      "items": [
+        "Gamification mit Badges",
+        "Social-Sharing-Anreize",
+        "Fortschrittsverfolgung",
+        "Bestenlisten",
+        "Engagement-Analysen"
+      ]
+    },
+    "saveTime": {
+      "badge": "Zeit sparen",
+      "title": "Stunden bei der Zertifikatverwaltung sparen",
+      "subtitle": "Manuelle Zertifizierungsprozesse automatisieren und Ihr Team für das Wesentliche freisetzen",
+      "items": [
+        "Automatisierte Workflows",
+        "Vorlagen-Wiederverwendung",
+        "Massenoperationen",
+        "Geplante Ausstellung",
+        "Self-Service-Verifizierung"
+      ]
+    }
+  },
+  "megaMenu": {
+    "platform": {
+      "coreFeatures": "Kernfunktionen",
+      "automation": "Automatisierung",
+      "customization": "Anpassung",
+      "credentialManagement": "Zertifikatsverwaltung",
+      "credentialManagementDesc": "100+ Funktionen für einfache Zertifikatsverwaltung",
+      "blockchainVerification": "Blockchain-Verifizierung",
+      "blockchainVerificationDesc": "Sichere, fälschungssichere Zertifikate",
+      "socialSharing": "Soziale Freigabe",
+      "socialSharingDesc": "Ein-Klick LinkedIn & digitale Geldbörse",
+      "analyticsDashboard": "Analyse-Dashboard",
+      "analyticsDashboardDesc": "Echtzeit-Einblicke und Berichte",
+      "bulkIssuance": "Massenausgabe",
+      "bulkIssuanceDesc": "Tausende sofort ausstellen",
+      "apiIntegration": "API-Integration",
+      "apiIntegrationDesc": "Nahtlose LMS-Konnektivität",
+      "autoIssue": "Auto-Ausgabe",
+      "autoIssueDesc": "Ereignisbasierte Automatisierung",
+      "templateDesigner": "Vorlagen-Designer",
+      "templateDesignerDesc": "Visueller Vorlagen-Builder",
+      "whiteLabel": "White Label",
+      "whiteLabelDesc": "Ihre Marke, Ihr Weg",
+      "customDomains": "Benutzerdefinierte Domains",
+      "customDomainsDesc": "Markenbezogene Verifizierungsseiten",
+      "featuredTitle": "Am beliebtesten",
+      "featuredSubtitle": "Blockchain-verifizierte Zertifikate",
+      "featuredDesc": "Stellen Sie fälschungssichere, sofort verifizierbare Zertifikate auf der Blockchain aus",
+      "featuredCta": "Plattform erkunden"
+    },
+    "solutions": {
+      "byIndustry": "Nach Branche",
+      "byUseCase": "Nach Anwendungsfall",
+      "byGoal": "Nach Ziel",
+      "higherEducation": "Hochschulbildung",
+      "higherEducationDesc": "Universitäten & Hochschulen",
+      "associations": "Verbände",
+      "associationsDesc": "Berufsverbände",
+      "corporateTraining": "Unternehmensschulung",
+      "corporateTrainingDesc": "Mitarbeiterentwicklung",
+      "certificationBodies": "Zertifizierungsstellen",
+      "certificationBodiesDesc": "Auszeichnende Organisationen",
+      "courseCompletion": "Kursabschluss",
+      "courseCompletionDesc": "Zertifikat-Automatisierung",
+      "professionalLicenses": "Berufszulassungen",
+      "professionalLicensesDesc": "Compliance-Tracking",
+      "memberCredentials": "Mitglieds-Zertifikate",
+      "memberCredentialsDesc": "Mitgliedschaftsverifizierung",
+      "scaleProgram": "Programm skalieren",
+      "scaleProgramDesc": "Wachstumsorientierte Lösungen",
+      "increaseEngagement": "Engagement erhöhen",
+      "increaseEngagementDesc": "Abschlussraten steigern",
+      "saveTime": "Zeit & Kosten sparen",
+      "saveTimeDesc": "Automatisierungs-ROI",
+      "featuredTitle": "Empfohlen",
+      "featuredSubtitle": "Erfolgsgeschichte Hochschulbildung",
+      "featuredDesc": "Erfahren Sie, wie Universitäten digitale Zertifikate campusweit mit 95% Akzeptanz skalierten",
+      "featuredCta": "Fallstudie lesen",
+      "healthcare": "Gesundheitswesen",
+      "healthcareDesc": "Medizinische Zertifikate & Compliance",
+      "manufacturing": "Fertigung",
+      "manufacturingDesc": "Sicherheits- & Gerätezertifizierungen"
+    },
+    "resources": {
+      "learn": "Lernen",
+      "support": "Support",
+      "blogLabel": "Blog",
+      "blogDesc": "Neueste Einblicke & Artikel",
+      "customerStories": "Kundenerfolge",
+      "customerStoriesDesc": "Echte Erfolgsgeschichten",
+      "aboutUs": "Über uns",
+      "aboutUsDesc": "Team kennenlernen",
+      "helpCenter": "Hilfe-Center",
+      "helpCenterDesc": "Dokumentation & Anleitungen",
+      "contactSupport": "Support kontaktieren",
+      "contactSupportDesc": "Hilfe von unserem Team",
+      "apiDocs": "API-Dokumentation",
+      "apiDocsDesc": "Entwickler-Ressourcen",
+      "videoTutorials": "Video-Tutorials",
+      "videoTutorialsDesc": "Schritt-für-Schritt-Anleitungen",
+      "featuredTitle": "Ressourcen-Hub",
+      "featuredSubtitle": "Kostenlosen Leitfaden herunterladen",
+      "featuredDesc": "Vollständiger Leitfaden zur digitalen Zertifizierung 2026",
+      "featuredCta": "Jetzt herunterladen"
+    }
+  },
+  "pricing": {
+    "title": "Wählen Sie Ihren",
+    "subtitle": "Transparente Preise ohne versteckte Gebühren",
+    "monthly": "Monatlich",
+    "annual": "Jährlich",
+    "save": "20% sparen",
+    "perMonth": "/Monat",
+    "perYear": "/Jahr",
+    "perCredit": "pro Kredit",
+    "credits": "Kredite",
+    "features": "Hauptmerkmale",
+    "cta": {
+      "start": "Jetzt starten",
+      "contact": "Vertrieb kontaktieren",
+      "demo": "Demo buchen"
+    },
+    "plans": {
+      "starter": {
+        "name": "START",
+        "price": "€45",
+        "period": "/Monat",
+        "credits": "1.000 Kredite",
+        "description": "Perfekt für kleine Teams und Pilotprogramme",
+        "features": [
+          "1.000 Zertifikate pro Jahr",
+          "Blockchain-Verifizierung",
+          "E-Mail-Support",
+          "Basis-Vorlagen",
+          "Soziale Freigabe"
+        ]
+      },
+      "professional": {
+        "name": "WACHSEN",
+        "price": "Individuell",
+        "description": "Für wachsende Organisationen",
+        "features": [
+          "Individuelles Zertifikatsvolumen",
+          "Prioritäts-Support",
+          "Individuelles Branding",
+          "API-Zugang",
+          "Erweiterte Analysen",
+          "LMS-Integration"
+        ]
+      },
+      "enterprise": {
+        "name": "BOOST",
+        "price": "Individuell",
+        "description": "Enterprise-Lösung",
+        "features": [
+          "Unbegrenzte Zertifikate",
+          "Dedizierter Account-Manager",
+          "White-Label-Lösung",
+          "Individuelle Integrationen",
+          "SLA-Garantie",
+          "Erweiterte Sicherheit"
+        ]
+      }
+    },
+    "titleHighlight": "Plan",
+    "affordable": "Beginnen Sie mit der Ausstellung von Blockchain-verifizierten Zertifikaten mit transparenter, skalierbarer Preisgestaltung"
+  },
+  "pricingUI": {
+    "mostPopular": "Beliebteste Option",
+    "billedAnnually": "Jährliche Abrechnung",
+    "custom": "Individuell",
+    "getStarted": "Jetzt starten",
+    "contactSales": "Vertrieb kontaktieren",
+    "startTrial": "Kostenlos testen",
+    "perMonth": "Monat"
+  },
+  "pricingFeatures": {
+    "badge": "UNSERE UMFANGREICHEN FUNKTIONEN",
+    "title": "Funktionen für alles,",
+    "titleHighlight": "was Sie brauchen",
+    "subtitle": "Hier ist unsere detaillierte Liste der Funktionen für jedes Preispaket. Vergleichen und wählen Sie, was am besten zu Ihnen passt.",
+    "plans": [
+      "Start",
+      "Grow",
+      "Boost"
+    ],
+    "categories": [
+      {
+        "name": "Zertifikatsausstellung",
+        "features": [
+          {
+            "name": "Badge-Designs",
+            "start": true,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Zertifikatsdesigns",
+            "start": true,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "E-Mail-Vorlagen",
+            "start": false,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Eigene SMTP-Einstellungen",
+            "start": false,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "QR-Code",
+            "start": true,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Transkript-Briefe",
+            "start": false,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Mehrsprachige Zertifikate",
+            "start": false,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Mehrseitige Zertifikate",
+            "start": false,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Zertifikate widerrufen",
+            "start": true,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Zertifikatsablauf",
+            "start": true,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Kompetenz-Tags",
+            "start": true,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Empfängerverzeichnis",
+            "start": false,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Standard-Integrationen",
+            "start": false,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "API-Zugang",
+            "start": false,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Erweiterte Integrationen",
+            "start": false,
+            "grow": false,
+            "boost": true
+          },
+          {
+            "name": "Mehrere Abteilungen",
+            "start": false,
+            "grow": false,
+            "boost": true
+          },
+          {
+            "name": "Bewertungsmodul",
+            "start": false,
+            "grow": false,
+            "boost": true
+          },
+          {
+            "name": "Digilocker-Integration",
+            "start": false,
+            "grow": true,
+            "boost": true
+          }
+        ]
+      },
+      {
+        "name": "Markenmanagement",
+        "features": [
+          {
+            "name": "Basis-Branding",
+            "start": true,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Primäres Branding",
+            "start": false,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Individuelles Whitelabelling",
+            "start": false,
+            "grow": false,
+            "boost": true
+          }
+        ]
+      },
+      {
+        "name": "Datengestützte Einblicke",
+        "features": [
+          {
+            "name": "Aktivitätsberichte",
+            "start": false,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Engagement-Berichte",
+            "start": false,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Marketing-Reichweiten-Analysen",
+            "start": false,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Exportierbare Zertifikate",
+            "start": false,
+            "grow": false,
+            "boost": true
+          }
+        ]
+      },
+      {
+        "name": "Empfänger-Souveränität",
+        "features": [
+          {
+            "name": "Blockchain-Zertifikate",
+            "start": true,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Aussteller-Verifizierung",
+            "start": true,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Digitales Wallet",
+            "start": true,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Skill Pass",
+            "start": true,
+            "grow": true,
+            "boost": true
+          }
+        ]
+      },
+      {
+        "name": "Support und Services",
+        "features": [
+          {
+            "name": "Self-Service-Wissensdatenbank",
+            "start": true,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "E-Mail-Support",
+            "start": true,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Dedizierter Account Manager",
+            "start": false,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Programm-Wachstums-Support",
+            "start": false,
+            "grow": false,
+            "boost": true
+          },
+          {
+            "name": "Spezialisiertes Onboarding & Training",
+            "start": false,
+            "grow": true,
+            "boost": true
+          },
+          {
+            "name": "Professionelle Beratungsdienste",
+            "start": false,
+            "grow": false,
+            "boost": true
+          }
+        ]
+      },
+      {
+        "name": "Enterprise-Ready",
+        "features": [
+          {
+            "name": "Premium-Support",
+            "start": false,
+            "grow": false,
+            "boost": true
+          },
+          {
+            "name": "Individuelle SLAs",
+            "start": false,
+            "grow": false,
+            "boost": true
+          },
+          {
+            "name": "Individuelle Verträge & DPA",
+            "start": false,
+            "grow": false,
+            "boost": true
+          },
+          {
+            "name": "Sicherheitsüberprüfung",
+            "start": false,
+            "grow": false,
+            "boost": true
+          }
+        ]
+      }
+    ]
+  },
+  "pricingExtras": {
+    "affordable": "Blockchain-verifizierte Zertifikate mit transparenter, skalierbarer Preisgestaltung",
+    "includes": "Alle Pläne beinhalten Blockchain-Verifizierung, Social Sharing und 24/7 Support"
+  }
+}

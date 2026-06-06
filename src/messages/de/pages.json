@@ -1,0 +1,907 @@
+{
+  "pages": {
+    "platform": {
+      "badge": "Plattform-Überblick",
+      "title": "Die komplette Plattform für digitale Zertifizierung",
+      "titleHighlight": "Zertifizierungsplattform",
+      "subtitle": "Alles, was Sie brauchen, um digitale Zertifikate in großem Umfang auszustellen, zu verwalten und zu verifizieren",
+      "coreFeatures": "Kernfunktionen",
+      "automation": "Automatisierung",
+      "customization": "Anpassung",
+      "features": {
+        "credentialManagement": {
+          "title": "Digitale Zertifikate",
+          "desc": "Zentrales Dashboard zum Ausstellen, Verwalten und Verfolgen aller digitalen Zertifikate",
+          "items": [
+            "Massenausstellung",
+            "Vorlagenbibliothek",
+            "Versionskontrolle",
+            "Ablaufverwaltung"
+          ]
+        },
+        "blockchainVerification": {
+          "title": "Blockchain-Verifizierung",
+          "desc": "Fälschungssichere Zertifikate auf der Blockchain für sofortige, kryptografische Verifizierung",
+          "items": [
+            "Unveränderliche Aufzeichnungen",
+            "Echtzeit-Verifizierung",
+            "Kein Betrug",
+            "Globales Vertrauen"
+          ]
+        },
+        "socialSharing": {
+          "title": "Social Sharing",
+          "desc": "Ein-Klick-Teilen auf LinkedIn, Twitter und digitalen Wallets für maximale Sichtbarkeit",
+          "items": [
+            "LinkedIn-Integration",
+            "Social-Media-Karten",
+            "QR-Codes",
+            "E-Mail-Teilen"
+          ]
+        },
+        "analytics": {
+          "title": "Analyse-Dashboard",
+          "desc": "Echtzeit-Einblicke in Zertifikatausstellung, Verifizierung und Engagement-Metriken",
+          "items": [
+            "Nutzungsanalyse",
+            "Engagement-Tracking",
+            "ROI-Metriken",
+            "Benutzerdefinierte Berichte"
+          ]
+        },
+        "bulkIssuance": {
+          "title": "Massenausstellung",
+          "desc": "Stellen Sie Tausende von Zertifikaten in Minuten mit automatisierten Workflows aus"
+        },
+        "apiIntegration": {
+          "title": "API-Integration",
+          "desc": "RESTful API für nahtlose Integration in Ihre bestehenden Systeme"
+        },
+        "autoIssue": {
+          "title": "Automatische Ausstellung",
+          "desc": "Trigger-basierte automatische Zertifikatausstellung bei Abschluss"
+        },
+        "templateDesigner": {
+          "title": "Vorlagen-Designer",
+          "desc": "Erstellen Sie ansprechende Zertifikatvorlagen mit unserem Drag-and-Drop-Builder"
+        },
+        "whiteLabel": {
+          "title": "White Label",
+          "desc": "Vollständig markenkonforme Zertifikaterfahrung mit Ihrem Logo und Ihren Farben"
+        },
+        "customDomains": {
+          "title": "Eigene Domains",
+          "desc": "Hosten Sie Zertifikate auf Ihrer eigenen Domain für Markenkonsistenz"
+        }
+      },
+      "cta": "Kostenlos testen",
+      "ctaDesc": "Starten Sie mit 20 kostenlosen Credits. Keine Kreditkarte erforderlich."
+    },
+    "pricing": {
+      "breadcrumb": "Preise",
+      "plans": {
+        "free": {
+          "name": "Kostenlos",
+          "desc": "Perfekt für den Einstieg in digitale Zertifikate"
+        },
+        "professional": {
+          "name": "Professional",
+          "desc": "Für wachsende Teams und Organisationen"
+        },
+        "enterprise": {
+          "name": "Enterprise",
+          "desc": "Individuelle Lösungen für große Organisationen"
+        }
+      }
+    },
+    "blog": {
+      "badge": "Blog",
+      "title": "Einblicke &",
+      "subtitle": "Neueste Erkenntnisse zu digitaler Zertifizierung, Blockchain-Verifizierung und Branchentrends",
+      "readMore": "Weiterlesen",
+      "minRead": "Min. Lesezeit",
+      "featured": "Empfohlen",
+      "allPosts": "Alle Beiträge",
+      "categories": "Kategorien",
+      "titleHighlight": "Ressourcen",
+      "showing": "Zeige {{count}} von {{total}} Beiträgen",
+      "inCategory": "in {{category}}",
+      "matching": "passend zu \"{{term}}\"",
+      "searchPlaceholder": "Artikel suchen…",
+      "stayUpdated": "Auf dem Laufenden bleiben",
+      "stayUpdatedDesc": "Erhalten Sie monatlich die neuesten Credentialing-Insights direkt in Ihren Posteingang.",
+      "emailPlaceholder": "Ihre geschäftliche E-Mail",
+      "subscribe": "Abonnieren",
+      "latest": "Neueste Artikel",
+      "backToBlog": "Zurück zum Blog",
+      "shareArticle": "Artikel teilen",
+      "share": "Teilen",
+      "ctaTitle": "Bereit, Ihre Zertifikate zu digitalisieren?",
+      "ctaDesc": "Schließen Sie sich 150+ Organisationen an, die mit CredSure blockchain-verifizierte Zertifikate ausstellen.",
+      "scheduleDemo": "Demo vereinbaren"
+    },
+    "about": {
+      "badge": "Über uns",
+      "title": "Organisationen stärken mit",
+      "titleHighlight": "Digitalem Vertrauen",
+      "subtitle": "Wir haben es uns zur Aufgabe gemacht, Zertifikate verifizierbar, teilbar und im Besitz der Menschen zu machen, die sie verdienen",
+      "heroTitle": "Organisationen stärken mit",
+      "heroTitleHighlight": "Digitalem Vertrauen",
+      "heroDesc": "Wir haben es uns zur Aufgabe gemacht, jedes Zertifikat verifizierbar, teilbar und wirklich im Besitz der Menschen zu machen, die es verdienen.",
+      "storyBadge": "Unsere Geschichte",
+      "storyTitle": "Wie CredSure begann",
+      "storyP1": "CredSure wurde in Köln gegründet, aus der Überzeugung heraus, dass Zertifikate mehr sein sollten als Papierdokumente. Unsere Gründer — Tim Miller und Markus Dohm — sahen, dass Organisationen weltweit immer noch auf manuelle, betrugsanfällige Prozesse zur Überprüfung von Qualifikationen angewiesen waren.",
+      "storyP2": "Sie machten sich daran, eine Plattform zu entwickeln, die Blockchain-Technologie nutzt, um jedes Zertifikat fälschungssicher, sofort verifizierbar und digital teilbar zu machen. Heute bedient CredSure Universitäten, Unternehmenstrainingsprogramme und Zertifizierungsstellen in über 30 Ländern.",
+      "valuesBadge": "Kernwerte",
+      "valuesTitle": "Was uns antreibt",
+      "valueTrusted": "Vertrauen & Sicherheit",
+      "valueTrustedDesc": "Jedes Zertifikat wird auf der Blockchain gesichert und gewährleistet eine fälschungssichere Verifizierung, auf die sich Organisationen und Empfänger verlassen können.",
+      "valueDataControl": "Datenhoheit",
+      "valueDataControlDesc": "Empfänger besitzen ihre Zertifikate. Volle DSGVO-Konformität gewährleistet Datenschutz und individuelle Kontrolle über persönliche Leistungen.",
+      "valueTransparent": "Transparenz",
+      "valueTransparentDesc": "Offene Verifizierung bedeutet, dass jeder die Echtheit eines Zertifikats bestätigen kann — keine Anrufe, keine E-Mails, nur sofortiger Nachweis.",
+      "valueQuickVerification": "Sofortige Verifizierung",
+      "valueQuickVerificationDesc": "Verifizieren Sie jedes Zertifikat in Sekunden. Unsere Technologie eliminiert den tagelangen manuellen Verifizierungsprozess vollständig.",
+      "blockchainTitle": "Warum Blockchain?",
+      "blockchainP1": "Blockchain-Technologie macht Zertifikate unveränderlich und universell verifizierbar. Einmal auf der CredSure-Plattform ausgestellt, kann ein Zertifikat nicht mehr verändert, gefälscht oder ohne transparenten Audit-Trail widerrufen werden.",
+      "blockchainP2": "Dies schafft eine globale Vertrauensebene für Bildung und berufliche Entwicklung — in der jede Leistung dauerhaft aufgezeichnet und für jeden, der sie überprüfen muss, sofort zugänglich ist.",
+      "teamBadge": "Führungsteam",
+      "teamTitle": "Unser Team",
+      "teamDesc": "Unser Führungsteam bringt jahrzehntelange Erfahrung in EdTech, Unternehmenssoftware und digitaler Identität mit.",
+      "teamTimBio": "Serienunternehmer mit über 20 Jahren Erfahrung in der digitalen Transformation. Tim leitet CredSures Vision, der globale Standard für verifizierbare Zertifikate zu werden.",
+      "teamMarkusBio": "Experte für Qualitätsmanagement und Zertifizierungsprozesse. Markus bringt tiefgreifendes Branchenwissen vom TÜV Rheinland in die Produktstrategie von CredSure ein.",
+      "teamMikeBio": "Operations-Leader mit umfangreicher Erfahrung in der Skalierung von SaaS-Plattformen auf globalen Märkten. Mike treibt das Wachstum und den Kundenerfolg von CredSure voran.",
+      "locationsBadge": "Globale Präsenz",
+      "locationsTitle": "Unsere Büros",
+      "ctaTitle": "Bereit, Ihre Zertifikate zu transformieren?",
+      "ctaDesc": "Schließen Sie sich Hunderten von Organisationen an, die blockchain-verifizierte digitale Zertifikate mit CredSure ausstellen.",
+      "ctaButton": "Kontakt aufnehmen",
+      "mission": "Unsere Mission",
+      "missionDesc": "Eine Welt zu schaffen, in der jede Leistung sofort verifizierbar und universell anerkannt ist.",
+      "vision": "Unsere Vision",
+      "visionDesc": "Ein globaler Standard für digitale Zertifikate, der Einzelpersonen und Organisationen stärkt.",
+      "values": "Unsere Werte",
+      "valuesDesc": "Innovation, Sicherheit und Kundenerfolg treiben alles an, was wir tun.",
+      "team": "Führungsteam",
+      "stats": "In Zahlen"
+    },
+    "resources": {
+      "badge": "Ressourcen",
+      "title": "Alles, was Sie für den Erfolg brauchen",
+      "subtitle": "Umfassende Ressourcen, um das Beste aus CredSure herauszuholen",
+      "titleHighlight": "Erfolg"
+    },
+    "customerSuccess": {
+      "badge": "Kundenerfolge",
+      "title": "Unsere Erfolgsgeschichten",
+      "subtitle": "Erfahren Sie, wie Organisationen weltweit mit CredSure ihre Zertifizierungsprogramme transformieren.",
+      "readStory": "Geschichte lesen",
+      "viewAll": "Alle anzeigen",
+      "byteedgeTitle": "ByteEDGE transformiert Lernzertifikate mit Blockchain-Verifizierung",
+      "byteedgeImpact1": "10.000+ Zertifikate im ersten Jahr ausgestellt",
+      "byteedgeImpact2": "98% Empfänger-Engagement-Rate",
+      "byteedgeImpact3": "Null Betrugsfälle seit dem Start",
+      "tsaaroTitle": "Tsaaro Academy automatisiert Compliance-Trainingszertifikate",
+      "tsaaroImpact1": "100% der Zertifikatsausstellung automatisiert",
+      "tsaaroImpact2": "Verwaltungsaufwand um 80% reduziert",
+      "tsaaroImpact3": "Sofortige Verifizierung für Arbeitgeber",
+      "cliniTitle": "Clini INDIA digitalisiert Gesundheitsfachkraft-Credentials",
+      "cliniImpact1": "500+ Gesundheitsfachkräfte zertifiziert",
+      "cliniImpact2": "Sofortige Credential-Verifizierung",
+      "cliniImpact3": "Volle regulatorische Compliance gewährleistet",
+      "ctaTitle": "Bereit, Teil unserer Erfolgsgeschichten zu werden?",
+      "ctaSubtitle": "Starten Sie heute mit blockchain-verifizierten Credentials und transformieren Sie, wie Ihre Organisation Leistungen anerkennt.",
+      "ctaButton": "Kostenlos starten"
+    },
+    "tutorials": {
+      "badge": "Video-Tutorials",
+      "title": "CredSure",
+      "subtitle": "Schritt-für-Schritt-Videoanleitungen, die Ihnen helfen, jede Funktion zu meistern",
+      "videos": "15+ Videos",
+      "hours": "3+ Stunden",
+      "levels": "Alle Stufen",
+      "titleHighlight": "lernen",
+      "gettingStarted": "Erste Schritte",
+      "advancedFeatures": "Erweiterte Funktionen",
+      "analyticsReporting": "Analytics & Reporting",
+      "min": "Min",
+      "ctaTitle": "Brauchen Sie einen praxisnahen Walkthrough?",
+      "ctaDesc": "Unser Team führt Sie durch Ihre erste Zertifikatsausstellung — live, in Ihrer Umgebung.",
+      "bookDemo": "Demo buchen",
+      "helpCenter": "Hilfe-Center"
+    },
+    "solutions": {
+      "badge": "Lösungen",
+      "title": "Lösungen für jede Branche",
+      "subtitle": "CredSure passt sich Ihren individuellen Zertifizierungsanforderungen an",
+      "higherEducation": {
+        "badge": "Hochschulbildung",
+        "title": "Studierende stärken mit",
+        "titleHighlight": "Verifizierbaren Zertifikaten",
+        "subtitle": "Transformieren Sie, wie Universitäten und Hochschulen Diplome, Zertifikate und Micro-Credentials mit blockchain-verifizierten digitalen Zertifikaten ausstellen",
+        "benefits": [
+          {
+            "title": "Digitale Diplome & Zertifikate",
+            "desc": "Fälschungssichere Zertifikate sofort ausstellen"
+          },
+          {
+            "title": "Studenten-Engagement",
+            "desc": "Abschlussraten mit teilbaren Badges erhöhen"
+          },
+          {
+            "title": "Alumni-Erfolg verfolgen",
+            "desc": "Verfolgen Sie, wie Absolventen ihre Erfolge teilen"
+          },
+          {
+            "title": "Ausstellung automatisieren",
+            "desc": "LMS-Integration für automatische Zertifikatauslieferung"
+          }
+        ],
+        "cta": "Jetzt starten"
+      },
+      "associations": {
+        "badge": "Berufsverbände",
+        "title": "Mitglieder-Zertifizierung modernisieren",
+        "subtitle": "Stellen Sie berufliche Zertifizierungen, Mitgliedschaften und Weiterbildungsnachweise digital aus und verwalten Sie diese",
+        "benefits": [
+          {
+            "title": "Mitglieder-Zertifizierungen",
+            "desc": "Verifizierbare berufliche Zertifizierungen ausstellen"
+          },
+          {
+            "title": "Weiterbildungs-Tracking",
+            "desc": "Fortbildungspflichten automatisch verwalten"
+          },
+          {
+            "title": "Mitglieder-Engagement",
+            "desc": "Bindung mit teilbaren Leistungs-Badges steigern"
+          },
+          {
+            "title": "Verifizierungsportal",
+            "desc": "Arbeitgeber können Zertifikate sofort überprüfen"
+          }
+        ],
+        "titleHighlight": "Zertifizierung"
+      },
+      "corporateTraining": {
+        "badge": "Unternehmensschulung",
+        "title": "Mitarbeiterentwicklung transformieren",
+        "subtitle": "Mitarbeiter-Skills, Schulungsabschlüsse und berufliche Weiterentwicklung anerkennen und verifizieren",
+        "benefits": [
+          {
+            "title": "Schulungsabschluss",
+            "desc": "Automatische Zertifikatausstellung bei Kursabschluss"
+          },
+          {
+            "title": "Skill-Verifizierung",
+            "desc": "Überprüfbarer Nachweis der Mitarbeiterkompetenz"
+          },
+          {
+            "title": "Compliance-Schulung",
+            "desc": "Pflichtschulungen nachverfolgen und verifizieren"
+          },
+          {
+            "title": "LMS-Integration",
+            "desc": "Nahtlose Integration in Ihre Lernplattform"
+          }
+        ],
+        "titleHighlight": "Entwicklung"
+      },
+      "certificationBodies": {
+        "badge": "Zertifizierungsstellen",
+        "title": "Zertifizierungsprogramme digitalisieren",
+        "subtitle": "Modernisieren Sie, wie Sie berufliche Zertifizierungen ausstellen, verwalten und verifizieren",
+        "benefits": [
+          {
+            "title": "Digitale Zertifikate",
+            "desc": "Papierzertifikate durch sichere digitale Versionen ersetzen"
+          },
+          {
+            "title": "Automatische Erneuerungen",
+            "desc": "Zertifizierungslebenszyklen automatisch verwalten"
+          },
+          {
+            "title": "Betrugsprävention",
+            "desc": "Blockchain-verankerte Zertifikate verhindern Fälschungen"
+          },
+          {
+            "title": "Globale Verifizierung",
+            "desc": "Jeder kann Zertifikate sofort verifizieren"
+          }
+        ],
+        "titleHighlight": "Zertifizierungsprogramme"
+      },
+      "healthcare": {
+        "badge": "Gesundheitswesen",
+        "title": "Sichere medizinische",
+        "subtitle": "Gesundheitszertifikate, Lizenzen und Compliance-Zertifizierungen ausstellen und verifizieren",
+        "benefits": [
+          {
+            "title": "Medizinische Lizenzen",
+            "desc": "Digitale, verifizierbare medizinische Lizenzen"
+          },
+          {
+            "title": "Compliance-Tracking",
+            "desc": "Automatisierte Compliance-Zertifikatverwaltung"
+          },
+          {
+            "title": "Fortbildung",
+            "desc": "Fortbildungspunkte für Gesundheitsfachkräfte verfolgen"
+          },
+          {
+            "title": "Sofortige Verifizierung",
+            "desc": "Arztzertifikate in Sekunden verifizieren"
+          }
+        ],
+        "titleHighlight": "Zertifizierung"
+      },
+      "manufacturing": {
+        "badge": "Fertigung",
+        "title": "Sicherheits- & Gerätezertifizierungen",
+        "subtitle": "Sicherheitsschulungen, Gerätezertifizierungen und Compliance-Nachweise digitalisieren",
+        "benefits": [
+          {
+            "title": "Sicherheitsschulung",
+            "desc": "Digitaler Nachweis abgeschlossener Sicherheitsschulungen"
+          },
+          {
+            "title": "Gerätezertifizierungen",
+            "desc": "Qualifikationen von Gerätebedienern nachverfolgen"
+          },
+          {
+            "title": "Compliance-Aufzeichnungen",
+            "desc": "Überprüfbare Compliance-Dokumentation pflegen"
+          },
+          {
+            "title": "Audit-bereit",
+            "desc": "Sofortiger Zugriff auf alle Zertifizierungsunterlagen"
+          }
+        ],
+        "titleHighlight": "Zertifizierungen"
+      },
+      "heroTitle": "Lösungen für",
+      "heroTitleHighlight": "Jede Branche",
+      "heroSubtitle": "CredSure passt sich Ihren individuellen Zertifizierungsanforderungen an.",
+      "digitalCertificates": "Digitale Zertifikate",
+      "digitalCertificatesDesc": "Blockchain-verifizierte digitale Zertifikate ausstellen, verwalten und verifizieren.",
+      "blockchainVerification": "Blockchain-Verifizierung",
+      "recipientOwnership": "Empfänger-Eigentum",
+      "instantVerification": "Sofortige Verifizierung",
+      "tamperProofSecurity": "Manipulationssichere Sicherheit",
+      "digitalBadges": "Digitale Badges",
+      "digitalBadgesDesc": "Fähigkeiten und Leistungen mit teilbaren digitalen Badges anerkennen.",
+      "socialMediaIntegration": "Social-Media-Integration",
+      "digitalWalletSupport": "Digital-Wallet-Unterstützung",
+      "oneClickSharing": "Ein-Klick-Teilen",
+      "professionalBranding": "Professionelles Branding",
+      "analyticsInsights": "Analysen & Einblicke",
+      "analyticsInsightsDesc": "Zertifikats-Engagement, Teilen und Verifizierung in Echtzeit verfolgen.",
+      "realtimeDashboards": "Echtzeit-Dashboards",
+      "engagementTracking": "Engagement-Tracking",
+      "shareAnalytics": "Share-Analysen",
+      "roiMeasurement": "ROI-Messung",
+      "ctaButton": "Demo buchen",
+      "digitalCredentials": "Digitale Zertifikate",
+      "digitalCredentialsDesc": "Stellen Sie blockchain-gesicherte digitale Zertifikate skalierbar aus, verwalten und verifizieren Sie sie."
+    },
+    "signIn": {
+      "title": "Anmelden",
+      "subtitle": "Willkommen zurück bei CredSure"
+    },
+    "apiDocs": {
+      "badge": "API-Dokumentation",
+      "title": "Entwickler-API",
+      "subtitle": "Integrieren Sie CredSure in Ihre Anwendungen"
+    },
+    "helpCenter": {
+      "badge": "Hilfe-Center",
+      "title": "Wie können wir helfen?",
+      "subtitle": "Antworten finden und Support erhalten",
+      "titleHighlight": "Hilfe-Center",
+      "documentation": "Dokumentation",
+      "documentationDesc": "Umfassende technische Dokumentation, API-Referenzen und Integrationsleitfäden.",
+      "faqs": "Häufig gestellte Fragen",
+      "faqsDesc": "Schnelle Antworten auf die häufigsten Fragen zu CredSure.",
+      "videoTutorials": "Video-Tutorials",
+      "videoTutorialsDesc": "Schritt-für-Schritt-Video-Walkthroughs für jede Funktion der Plattform."
+    },
+    "careers": {
+      "badge": "Karriere",
+      "title": "Werden Sie Teil unseres Teams",
+      "subtitle": "Helfen Sie uns, die Zukunft digitaler Zertifikate zu gestalten"
+    },
+    "notFound": {
+      "title": "Seite nicht gefunden",
+      "desc": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+      "goHome": "Zur Startseite",
+      "seoTitle": "404 - Seite nicht gefunden | CredSure",
+      "seoDesc": "Die gesuchte Seite existiert nicht oder wurde verschoben. Zurück zur CredSure Startseite."
+    },
+    "integrations": {
+      "badge": "Integrationen",
+      "heroTitle": "Verbinden Sie Ihren",
+      "heroTitleHighlight": "gesamten Stack",
+      "heroSubtitle": "Verbinden Sie CredSure mit Ihren Lieblingstools. Automatisieren Sie die Zertifikatsausstellung über 50+ Plattformen.",
+      "integrationsCount": "{{count}} Integrationen"
+    },
+    "features": {
+      "heroTitle": "Die Komplette",
+      "heroTitleHighlight": "Zertifizierungsplattform",
+      "heroSubtitle": "Alles, was Sie brauchen, um digitale Zertifikate und Badges in großem Umfang auszustellen, zu verwalten und zu verifizieren.",
+      "scheduleDemo": "Demo buchen",
+      "viewPricing": "Preise ansehen",
+      "coreTitle": "Kernfunktionen",
+      "coreDesc": "Digitale Zertifikate mit Enterprise-Sicherheit ausstellen, verwalten und verifizieren.",
+      "credentialMgmt": "Digitale Zertifikate",
+      "credentialMgmtDesc": "Blockchain-verifizierte digitale Zertifikate von einem einzigen Dashboard aus ausstellen und verwalten.",
+      "blockchainVerification": "Blockchain-Verifizierung",
+      "blockchainVerificationDesc": "Jedes Zertifikat wird auf der Blockchain verankert.",
+      "socialSharing": "Social Sharing",
+      "socialSharingDesc": "Empfänger teilen Zertifikate mit einem Klick auf LinkedIn, Twitter und mehr.",
+      "analyticsDashboard": "Analytics Dashboard",
+      "analyticsDashboardDesc": "Verfolgen Sie Aufrufe, Shares und Verifizierungen in Echtzeit.",
+      "automationTitle": "Automatisierung & Integration",
+      "automationDesc": "Automatisieren Sie Ihren gesamten Zertifizierungs-Workflow.",
+      "bulkIssuance": "Massenausstellung",
+      "bulkIssuanceDesc": "Stellen Sie Tausende von Zertifikaten auf einmal aus.",
+      "apiIntegration": "API-Integration",
+      "apiIntegrationDesc": "Verbinden Sie CredSure mit Ihrem LMS, CRM oder jeder Plattform.",
+      "autoIssue": "Auto-Ausstellung",
+      "autoIssueDesc": "Automatische Ausstellung bei Kursabschluss.",
+      "customizationTitle": "Anpassung",
+      "customizationDesc": "Jedes Zertifikat spiegelt Ihre Markenidentität wider.",
+      "templateDesigner": "Vorlagen-Designer",
+      "templateDesignerDesc": "Professionelle Vorlagen mit unserem visuellen Editor gestalten.",
+      "whiteLabel": "White Label",
+      "whiteLabelDesc": "Vollständiges White-Labeling mit eigener Domain und Branding.",
+      "customDomains": "Eigene Domains",
+      "customDomainsDesc": "Eigene Domain für Verifizierungsseiten verwenden.",
+      "moreTitle": "Und Vieles Mehr",
+      "instantVerification": "Sofortige Verifizierung",
+      "securityCompliance": "Sicherheit & Compliance",
+      "multiLanguage": "Mehrsprachig",
+      "mobileOptimized": "Mobil Optimiert",
+      "ctaTitle": "Bereit zum Starten?",
+      "ctaSubtitle": "Schließen Sie sich 150+ Organisationen an, die CredSure nutzen.",
+      "learnMore": "Mehr erfahren"
+    },
+    "security": {
+      "title": "Sicherheit auf",
+      "titleHighlight": "Enterprise-Niveau",
+      "subtitle": "Ihre Zertifikate und Daten werden durch Sicherheitsstandards auf Bank-Niveau geschützt, denen über 150 Organisationen weltweit vertrauen.",
+      "encryption": "AES-256-Verschlüsselung im Speicher & bei der Übertragung",
+      "encryptionDesc": "Alle Zertifikatsdaten werden in unseren Datenbanken mit AES-256 verschlüsselt und bei der Übertragung mit TLS 1.3 geschützt. Kryptografische Hashes werden in einer öffentlichen Blockchain verankert, um eine fälschungssichere Verifizierung zu gewährleisten.",
+      "soc2": "ISO 27001 zertifiziert",
+      "soc2Desc": "Unabhängig geprüfte Kontrollen zu Sicherheit, Verfügbarkeit und Vertraulichkeit. Unsere Prozesse werden jährlich von akkreditierten externen Prüfern überprüft.",
+      "gdpr": "DSGVO-konform",
+      "gdprDesc": "Vollständige Einhaltung der EU-Datenschutzbestimmungen. Datenresidenz in der EU verfügbar, umfassende Datenübertragbarkeit und das Recht auf Löschung mit einem Klick."
+    },
+    "gdpr": {
+      "title": "DSGVO-Konformität",
+      "subtitle": "Wie CredSure personenbezogene Daten schützt und Ihre Verpflichtungen aus der EU-Datenschutz-Grundverordnung unterstützt.",
+      "items": [
+        "Rechtsgrundlage: Wir verarbeiten personenbezogene Daten ausschließlich mit ausdrücklicher Einwilligung oder zur Erfüllung eines Vertrags.",
+        "Datenminimierung: Wir erfassen nur die personenbezogenen Daten, die zwingend erforderlich sind, um ein Zertifikat auszustellen und zu verifizieren.",
+        "EU-Datenresidenz verfügbar — alle Zertifikatsdaten können ausschließlich im Europäischen Wirtschaftsraum gespeichert werden.",
+        "Auskunftsrecht: Betroffene können jederzeit einen vollständigen Export ihrer Daten anfordern.",
+        "Recht auf Löschung: Empfänger können die Löschung ihrer personenbezogenen Daten verlangen; wir bearbeiten Anfragen innerhalb von 30 Tagen.",
+        "Recht auf Datenübertragbarkeit: Zertifikate können in den Formaten JSON, PDF und Open Badges 3.0 exportiert werden.",
+        "Transparenz bei Sub-Auftragsverarbeitern: Eine aktuelle Liste aller Sub-Auftragsverarbeiter wird vierteljährlich veröffentlicht und aktualisiert.",
+        "Auftragsverarbeitungsvertrag (AVV): Auf Anfrage für alle kostenpflichtigen Pläne verfügbar.",
+        "Meldung von Datenpannen: Kunden werden innerhalb von 72 Stunden über jede bestätigte Verletzung des Schutzes personenbezogener Daten informiert.",
+        "Regelmäßige Audits: Jährliche Penetrationstests und ISO 27001-Audits validieren unsere Sicherheitslage."
+      ]
+    },
+    "guides": {
+      "badge": "Leitfäden",
+      "title": "Tiefgehende Playbooks für",
+      "titleHighlight": "Credentialing-Verantwortliche",
+      "subtitle": "Praxisnahe, herunterladbare Leitfäden basierend auf echten Implementierungen bei 150+ Organisationen.",
+      "ctaTitle": "Möchten Sie eine individuelle Strategiesitzung?",
+      "ctaDesc": "Unsere Credentialing-Experten überprüfen Ihr Programm und empfehlen eine maßgeschneiderte Roadmap — kostenlos."
+    },
+    "templates": {
+      "subtitle": "Wunderschön gestaltete, sofort anpassbare Zertifikats- und Badge-Vorlagen für jede Branche."
+    },
+    "webinars": {
+      "badge": "Webinare",
+      "title": "Live- und On-Demand-",
+      "titleHighlight": "Webinare",
+      "subtitle": "Lernen Sie von Credentialing-Experten und CredSure-Kunden — keine Floskeln, nur umsetzbare Strategien.",
+      "allWebinars": "Alle Webinare",
+      "ctaTitle": "Möchten Sie als Erster über neue Webinare informiert werden?",
+      "ctaDesc": "Abonnieren Sie und wir senden Ihnen eine E-Mail, sobald eine neue Sitzung angekündigt wird."
+    },
+    "byteedge": {
+      "backToStories": "Zurück zu allen Stories",
+      "badge": "Bildung · Fallstudie",
+      "title": "Wie ByteEDGE",
+      "titleHighlight": "Lernzertifikate transformierte",
+      "subtitle": "Eine führende Microlearning-Plattform stellte im ersten Jahr über 10.000 blockchain-verifizierte Zertifikate aus — mit null Betrugsfällen und 98% Empfänger-Engagement.",
+      "aboutTitle": "Über ByteEDGE",
+      "aboutP1": "ByteEDGE ist eine schnell wachsende Microlearning-Plattform, die Unternehmenskunden in Asien und Europa bedient. Ihre kompakten Lernmodule decken Compliance, Leadership und technische Fähigkeiten für über eine halbe Million Lernende ab.",
+      "aboutP2": "Mit der Skalierung von ByteEDGE erkannte das Team, dass ihre PDF-Zertifikate inkonsistent geteilt, oft gefälscht und auf Social-Media-Plattformen kaum genutzt wurden — wertvolle Markenreichweite blieb ungenutzt.",
+      "quote": "CredSure gab uns Blockchain-Vertrauen ohne Engineering-Aufwand. Wir stellten innerhalb eines Sprints verifizierbare Zertifikate aus.",
+      "quoteName": "Priya Menon",
+      "quoteRole": "Head of Product, ByteEDGE",
+      "challengeTitle": "Die Herausforderung",
+      "challengeDesc": "PDF-Zertifikate verursachten Reibungsverluste für Lernende und Prüfer. Empfänger konnten ihre Erfolge nicht einfach teilen, Arbeitgeber konnten sie nicht schnell verifizieren, und das Team sah sich mit zunehmenden Betrugsmeldungen konfrontiert.",
+      "solutionTitle": "Die CredSure-Lösung",
+      "solutionDesc": "ByteEDGE integrierte die CredSure-API in zwei Wochen mit ihrem LMS. Jeder Abschluss löst nun ein blockchain-verankertes Zertifikat aus, automatisch gebrandet und mit einem Klick auf LinkedIn teilbar.",
+      "resultsTitle": "Die Ergebnisse",
+      "stat1Value": "10.000+",
+      "stat1Label": "Zertifikate im 1. Jahr ausgestellt",
+      "stat2Value": "98 %",
+      "stat2Label": "Empfänger-Engagement-Rate",
+      "stat3Value": "0",
+      "stat3Label": "Betrugsfälle seit dem Start",
+      "challenges": [
+        "PDF-Zertifikate leicht zu fälschen oder zu duplizieren",
+        "Keine Möglichkeit für Arbeitgeber, in Echtzeit zu verifizieren",
+        "Niedrige Teilen-Rate auf Social-Media-Plattformen",
+        "Manueller Neuausstellungsprozess verbrauchte Verwaltungszeit"
+      ],
+      "solutions": [
+        "Blockchain-verankerte Zertifikate mit Ein-Klick-Verifizierung",
+        "LMS-integrierte automatische Ausstellung über API",
+        "LinkedIn-optimierte Teilen-Vorlage",
+        "Self-Service-Lerner-Portal mit Sofort-Download"
+      ],
+      "ctaTitle": "Möchten Sie Ergebnisse wie ByteEDGE?",
+      "ctaDesc": "Buchen Sie ein 15-minütiges Gespräch und sehen Sie, wie CredSure Ihr Zertifikatsprogramm transformieren kann.",
+      "ctaButton": "Demo buchen"
+    },
+    "cliniIndia": {
+      "backToStories": "Zurück zu allen Stories",
+      "badge": "Gesundheitswesen · Fallstudie",
+      "title": "Clini INDIA digitalisiert",
+      "titleHighlight": "Gesundheitszertifikate",
+      "subtitle": "Ein nationales Gesundheitstrainingsnetzwerk zertifizierte über 500 Mediziner mit sofortiger Verifizierung und vollständiger regulatorischer Compliance.",
+      "aboutTitle": "Über Clini INDIA",
+      "aboutP1": "Clini INDIA ist eines der größten Netzwerke des Landes für klinische Forschung und Gesundheitstraining. Sie zertifizieren jährlich tausende Mediziner in Pharmakologie, klinischen Studien und Regulatory Affairs.",
+      "aboutP2": "In einem regulierten Bereich, in dem die Authentizität von Zertifikaten direkt die Patientensicherheit beeinflusst, brauchte Clini INDIA ein verifizierbares, fälschungssicheres System, das sich in ihren Akkreditierungs-Workflow integrieren ließ.",
+      "aboutP3": "CredSure wurde zum digitalen Rückgrat ihres Zertifizierungsprogramms — und gibt jedem Absolventen ein Zertifikat, das Krankenhäuser, Pharmaunternehmen und Regulierungsbehörden in Sekunden verifizieren können.",
+      "quote1": "Verifizierungen dauerten früher tagelang. Mit CredSure verifizieren Arbeitgeber Zertifikate eines Kandidaten in unter fünf Sekunden — das ist ein Gamechanger für unsere Absolventen.",
+      "quote1Name": "Dr. Anil Kumar",
+      "quote1Role": "Director of Programs, Clini INDIA",
+      "quote2": "Die Blockchain-Schicht gibt unseren regulatorischen Partnern das Vertrauen, das sie brauchen. Wir haben jedes Audit seit dem Wechsel zu CredSure bestanden.",
+      "quote2Name": "Meera Sharma",
+      "quote2Role": "Compliance Lead, Clini INDIA",
+      "highlightsTitle": "Programm-Highlights",
+      "highlights": [
+        "Über 500 Mediziner zertifiziert",
+        "Sofortige Zertifikatsverifizierung für Arbeitgeber",
+        "Vollständige Übereinstimmung mit indischen Regulierungsbehörden",
+        "Bisher null Zertifikatsbetrugsfälle",
+        "LinkedIn-fähige Badges erhöhen die Recruiter-Sichtbarkeit",
+        "CME-Credits in den Metadaten kodiert"
+      ],
+      "challengeTitle": "Die Herausforderung",
+      "challengeDesc": "Im Gesundheitswesen kann ein gefälschtes Zertifikat Patienten gefährden. Clini INDIA war mit einer Zunahme gefälschter Zertifikate und langsamer manueller Verifizierung konfrontiert, was Absolventen und Arbeitgeber gleichermaßen frustrierte.",
+      "challenges": [
+        "Gefälschte Papierzertifikate im Umlauf",
+        "Manuelle Verifizierung dauert Tage pro Anfrage",
+        "Keine Möglichkeit für Krankenhäuser, neue Mitarbeiter in Bulk zu verifizieren",
+        "Audit-Vorbereitung verbraucht Wochen"
+      ],
+      "result1Title": "60% niedrigere Admin-Kosten",
+      "result1Desc": "Automatische Ausstellung und Self-Service-Verifizierung beseitigten fast zwei Drittel des administrativen Aufwands des Programms.",
+      "result2Title": "<5s Verifizierungszeit",
+      "result2Desc": "Arbeitgeber und Behörden verifizieren Zertifikate sofort — runter von durchschnittlich 48 Stunden via Telefon und E-Mail.",
+      "result3Title": "Über 500 zertifiziert",
+      "result3Desc": "Mediziner über die Plattform zertifiziert — jeder mit einem fälschungssicheren, sofort teilbaren Zertifikat.",
+      "resultsTitle": "Die Ergebnisse",
+      "resultsQuote": "Unsere Absolventen tragen jetzt Zertifikate, denen Arbeitgeber wirklich vertrauen — und wir haben den Audit-Trail als Beweis.",
+      "ctaTitle": "Modernisieren Sie Ihr Zertifizierungsprogramm",
+      "ctaDesc": "Sehen Sie, wie CredSure sofortige Verifizierung und regulatorisches Vertrauen für Ihre Zertifikate liefern kann.",
+      "ctaButton": "Demo buchen"
+    },
+    "tsaaro": {
+      "backToStories": "Zurück zu allen Stories",
+      "badge": "Compliance · Fallstudie",
+      "title": "Tsaaro Academy automatisiert",
+      "titleHighlight": "Compliance-Zertifikate",
+      "subtitle": "Eine führende Datenschutz-Trainingsakademie automatisierte 100% der Zertifikatsausstellung und reduzierte den Verwaltungsaufwand um 80%.",
+      "aboutTitle": "Über Tsaaro Academy",
+      "aboutP1": "Tsaaro Academy ist der Trainingsbereich von Tsaaro, einer globalen Beratungsfirma für Cybersicherheit und Datenschutz. Sie schulen jährlich tausende DPOs, Datenschutzbeauftragte und Compliance-Profis zu DSGVO-, DPDP- und ISO-Frameworks.",
+      "aboutP2": "Mit wöchentlichen Trainingskohorten in mehreren Zeitzonen ertrank das Team in Zertifikatsausstellungsarbeit — manuelle Erstellung, Signierung und E-Mail-Versand von PDFs für jeden Lernenden, der einen Kurs abschloss.",
+      "aboutP3": "Nach der Integration von CredSure erhält jeder Tsaaro-Academy-Absolvent in dem Moment, in dem er einen Kurs beendet, ein blockchain-verifiziertes Zertifikat — ohne menschliches Eingreifen.",
+      "quote1": "Unser Admin-Team gewann zwanzig Stunden pro Woche zurück. Das ist ein ganzer Arbeitstag, jede Woche, zum Preis von ein paar Kaffees pro Lernendem.",
+      "quote1Name": "Akarsh Singh",
+      "quote1Role": "Co-Founder, Tsaaro Academy",
+      "quote2": "Empfänger lieben es, dass sie ihre Zertifizierung sofort auf LinkedIn nachweisen können. Unsere Teilen-Rate ist die höchste, die wir je gemessen haben.",
+      "quote2Name": "Riya Kapoor",
+      "quote2Role": "Head of Learning, Tsaaro Academy",
+      "highlightsTitle": "Programm-Highlights",
+      "highlights": [
+        "100% der Zertifikatsausstellung automatisiert",
+        "80% Reduktion des administrativen Aufwands",
+        "Sofortige Arbeitgeber-Verifizierung jedes Zertifikats",
+        "LinkedIn-Integration erhöht Recruiter-Sichtbarkeit",
+        "Mehrsprachen-Support für globale Kohorten",
+        "Eingebautes CPE-Credit-Tracking für Compliance-Behörden"
+      ],
+      "benefit1Title": "Sofortige Ausstellung",
+      "benefit1Desc": "Zertifikate werden automatisch in dem Moment geprägt, in dem ein Lernender einen Kurs abschließt — kein Admin-Eingriff erforderlich.",
+      "benefit2Title": "Müheloses Teilen",
+      "benefit2Desc": "Ein-Klick-LinkedIn-Sharing präsentiert die Leistung jedes Absolventen weltweit Recruitern.",
+      "benefit3Title": "Verifizierungs-Vertrauen",
+      "benefit3Desc": "Blockchain-verankerte Nachweise geben Arbeitgebern und Auditoren in Sekunden das benötigte Vertrauen.",
+      "benefitsTitle": "Warum Tsaaro CredSure wählte",
+      "ctaTitle": "Automatisieren Sie Ihren Zertifizierungs-Workflow",
+      "ctaDesc": "Sehen Sie, wie CredSure Ihrem Admin-Team die Woche zurückgibt — und Ihren Absolventen ein Zertifikat, das sie tatsächlich teilen.",
+      "ctaButton": "Demo buchen"
+    }
+  },
+  "seo": {
+    "pricing": {
+      "title": "Preise | CredSure Digitale Zertifikatsplattform",
+      "description": "Transparente Preise für CredSure. Kostenlos starten, skalieren nach Bedarf. Pläne und Funktionen vergleichen.",
+      "keywords": "digitale Zertifikate Preise, Zertifikatsplattform Kosten, Credential-Management Preise"
+    },
+    "features": {
+      "title": "Funktionen | CredSure Digitale Zertifikatsplattform",
+      "description": "Entdecken Sie CredSure-Funktionen: Credential-Management, Blockchain-Verifizierung, Vorlagen-Designer, Analysen und Integrationen.",
+      "keywords": "digitale Zertifikate Funktionen, Blockchain-Verifizierung, Credential-Management"
+    },
+    "roiCalculator": {
+      "title": "ROI-Rechner | Ihre Einsparungen mit CredSure",
+      "description": "Berechnen Sie, wie viel Zeit und Geld Sie durch die Automatisierung des Credential-Managements sparen.",
+      "keywords": "ROI-Rechner, Credential-Automatisierung Einsparungen, Effizienzrechner"
+    },
+    "security": {
+      "title": "Sicherheit & Compliance | CredSure",
+      "description": "CredSure-Sicherheit: DSGVO-konform, ISO 27001-zertifiziert, Blockchain-verankerte Credentials.",
+      "keywords": "Credential-Sicherheit, DSGVO-Konformität, ISO 27001, Blockchain-Sicherheit"
+    },
+    "customerSuccess": {
+      "title": "Kundenerfolge | CredSure Erfolgsgeschichten",
+      "description": "Erfahren Sie, wie über 150 Organisationen CredSure nutzen, um blockchain-verifizierte digitale Zertifikate auszustellen.",
+      "keywords": "Kundenerfolge, Fallstudien, digitale Zertifikate Ergebnisse"
+    },
+    "home": {
+      "title": "CredSure | Plattform für digitale Zeugnisse — Blockchain-verifiziert",
+      "description": "Erstellen, verwalten und verifizieren Sie blockchain-gesicherte digitale Zeugnisse, Zertifikate und Badges. Vertraut von 150+ Organisationen.",
+      "keywords": "digitale Zertifikate, Blockchain-Zertifikate, digitale Badges, Credential-Management"
+    },
+    "notFound": {
+      "title": "404 - Seite nicht gefunden | CredSure",
+      "description": "Die gesuchte Seite existiert nicht oder wurde verschoben. Zurück zur CredSure Startseite."
+    },
+    "integrations": {
+      "title": "Integrationen | CredSure Digitale Zertifikatsplattform",
+      "description": "Verbinden Sie CredSure mit Ihrem LMS, CRM, HR-Systemen und mehr. Automatisieren Sie die Zertifikatsausstellung mit über 50 Integrationen.",
+      "keywords": "Zertifikats-Integrationen, LMS-Integration, CRM-Integration, API-Integration"
+    },
+    "about": {
+      "title": "Über CredSure | Unsere Mission & Team",
+      "description": "Erfahren Sie mehr über CredSures Mission, Zertifikate verifizierbar und teilbar zu machen. Lernen Sie unser Team in Köln, Bangalore und Manila kennen.",
+      "keywords": "über CredSure, digitale Zertifikate Unternehmen, Credential-Plattform Team"
+    },
+    "blog": {
+      "title": "Blog | Einblicke in Digitale Zertifizierung",
+      "description": "Expertenbeiträge zu digitalen Zertifikaten, Blockchain-Verifizierung, Credential-Management und Best Practices der Branche.",
+      "keywords": "digitale Zertifikate Blog, Zertifikat-Management Artikel, Blockchain-Verifizierung"
+    },
+    "solutions": {
+      "title": "Lösungen | CredSure für Jede Branche",
+      "description": "Entdecken Sie, wie CredSure Hochschulen, Unternehmenstraining, Zertifizierungsstellen und mehr mit maßgeschneiderten Credential-Lösungen bedient.",
+      "keywords": "Credential-Lösungen, digitale Zertifikate für Bildung, Unternehmens-Credentials"
+    },
+    "demo": {
+      "title": "Demo Buchen | CredSure Live Erleben",
+      "description": "Vereinbaren Sie eine persönliche Demo der CredSure-Plattform. Sehen Sie, wie Sie Zertifikate in Minuten ausstellen und verwalten können.",
+      "keywords": "CredSure Demo, Credential-Plattform Demo, digitale Zertifikate Demo"
+    },
+    "contact": {
+      "title": "Kontakt | CredSure Erreichen",
+      "description": "Kontaktieren Sie unser Team in Köln. Fragen zu digitalen Credentials, Preisen, Integrationen oder Partnerschaftsmöglichkeiten.",
+      "keywords": "CredSure Kontakt, Credential-Plattform Support, Anfrage digitale Zertifikate"
+    },
+    "guides": {
+      "title": "Leitfäden | Credential-Management Ressourcen",
+      "description": "Umfassende Leitfäden zur Implementierung digitaler Credentials, Blockchain-Verifizierung und Programmgestaltung.",
+      "keywords": "Credential-Management Leitfäden, digitale Zertifikate Anleitungen"
+    },
+    "webinars": {
+      "title": "Webinare | Von Credential-Experten Lernen",
+      "description": "On-Demand-Webinare über Trends, Implementierungsstrategien und Erfolgsgeschichten im digitalen Credentialing.",
+      "keywords": "Credential-Webinare, digitale Zertifikate Webinare, EdTech-Webinare"
+    },
+    "tutorials": {
+      "title": "Tutorials | Schritt-für-Schritt Plattform-Training",
+      "description": "Video-Tutorials für die Einrichtung, Anpassung und Verwaltung Ihrer CredSure Credential-Programme.",
+      "keywords": "CredSure Tutorials, Credential-Plattform Training, Zertifikate Einrichtung"
+    },
+    "helpCenter": {
+      "title": "Hilfe-Center | CredSure Support & Dokumentation",
+      "description": "Finden Sie Antworten auf häufige Fragen. Durchsuchen Sie unsere Wissensdatenbank und FAQs für schnelle Lösungen.",
+      "keywords": "CredSure Hilfe, Credential-Plattform Support, FAQ digitale Zertifikate"
+    },
+    "digitalBadges": {
+      "title": "Digitale Badges | Fähigkeiten & Leistungen Anerkennen",
+      "description": "Verifizierbare digitale Badges für Micro-Credentials und Fähigkeiten ausstellen. Teilbar auf LinkedIn und sozialen Medien.",
+      "keywords": "digitale Badges, Micro-Credentials, Skill-Badges, verifizierbare Badges"
+    },
+    "compareAccredible": {
+      "title": "CredSure vs Accredible | Plattformvergleich",
+      "description": "Vergleichen Sie CredSure und Accredible: Funktionen, Preise und Fähigkeiten für Blockchain-verifizierte Credentials.",
+      "keywords": "CredSure vs Accredible, Accredible Alternative, Credential-Plattform Vergleich"
+    },
+    "compareCredly": {
+      "title": "CredSure vs Credly | Badge-Plattform Vergleich",
+      "description": "Vergleichen Sie CredSure und Credly für digitale Badges. Unterschiede in Funktionen, Preisen und Blockchain-Verifizierung.",
+      "keywords": "CredSure vs Credly, Credly Alternative, Badge-Plattform Vergleich"
+    },
+    "digitalCertificates": {
+      "title": "Digitale Zertifikate | Blockchain-Verifiziert",
+      "description": "Fälschungssichere digitale Zertifikate mit Blockchain-Verifizierung ausstellen. Anpassbare Vorlagen und Massenausstellung.",
+      "keywords": "digitale Zertifikate, Blockchain-Zertifikate, verifizierbare Zertifikate"
+    },
+    "blockchain": {
+      "title": "Blockchain-Verifizierung | Fälschungssichere Credentials",
+      "description": "Credentials mit Blockchain-Technologie sichern. Unveränderlich, sofort verifizierbar und betrugssicher.",
+      "keywords": "Blockchain-Verifizierung, fälschungssichere Credentials, unveränderliche Zertifikate"
+    },
+    "sharing": {
+      "title": "Social Sharing | Credentials Überall Teilen",
+      "description": "Empfänger können verifizierte Credentials auf LinkedIn, in E-Mail-Signaturen und sozialen Medien mit einem Klick teilen.",
+      "keywords": "Credential-Sharing, Zertifikate auf LinkedIn teilen, Social-Media-Credentials"
+    },
+    "analytics": {
+      "title": "Analytics | Credential-Programm Einblicke",
+      "description": "Credential-Engagement, Sharing-Raten und Programmleistung mit Echtzeit-Analysen verfolgen.",
+      "keywords": "Credential-Analytics, Zertifikats-Tracking, Programm-Einblicke"
+    },
+    "bulkIssuance": {
+      "title": "Massenausstellung | Tausende Credentials Auf Einmal",
+      "description": "CSV hochladen und tausende digitale Zertifikate in Minuten ausstellen. Automatische Zustellung per E-Mail.",
+      "keywords": "Massen-Credential-Ausstellung, automatisierte Zertifikatszustellung"
+    },
+    "apiIntegration": {
+      "title": "API-Integration | Credential-Workflows Automatisieren",
+      "description": "RESTful API für automatisierte Credential-Ausstellung, Verifizierung und Verwaltung. Webhooks und SDKs.",
+      "keywords": "Credential-API, Zertifikats-Automatisierung API, REST API Credentials"
+    },
+    "autoIssue": {
+      "title": "Auto-Issue | Trigger-Basierte Credential-Zustellung",
+      "description": "Credentials automatisch ausstellen, wenn Lernende Kurse abschließen oder Meilensteine erreichen.",
+      "keywords": "Auto-Issue Credentials, automatisierte Zertifikate, trigger-basierte Ausstellung"
+    },
+    "templateDesigner": {
+      "title": "Vorlagen-Designer | Schöne Zertifikats-Designs",
+      "description": "Drag-and-Drop Zertifikats-Vorlagen-Designer. Über 50 Vorlagen oder eigene Designs mit Ihrem Branding.",
+      "keywords": "Zertifikats-Vorlagen-Designer, benutzerdefiniertes Zertifikats-Design"
+    },
+    "whiteLabel": {
+      "title": "White Label | Ihre Marke, Ihre Plattform",
+      "description": "Vollständig White-Label Credential-Plattform mit Ihrer Domain, Logo und Farben.",
+      "keywords": "White-Label Credentials, gebrandete Zertifikatsplattform"
+    },
+    "customDomains": {
+      "title": "Custom Domains | Credentials auf Ihrer Domain",
+      "description": "Credential-Verifizierungsseiten von Ihrer eigenen Domain bereitstellen. Volles SSL und eigenes Branding.",
+      "keywords": "Custom Domain Credentials, gebrandete Verifizierungsseiten"
+    },
+    "higherEducation": {
+      "title": "Hochschulen | Digitale Credentials für Universitäten",
+      "description": "Blockchain-verifizierte Diplome, Transkripte und Micro-Credentials ausstellen. Betrug reduzieren und Absolventen stärken.",
+      "keywords": "Universitäts-Credentials, Hochschul-Zertifikate, akademische Blockchain-Credentials"
+    },
+    "associations": {
+      "title": "Verbände | Mitglieder-Credential-Management",
+      "description": "Mitgliederzertifizierungen, Weiterbildungspunkte und Berufsbezeichnungen mit automatisierter Verlängerung verwalten.",
+      "keywords": "Verbands-Credentials, Mitgliederzertifikate, Berufsbezeichnungs-Management"
+    },
+    "corporateTraining": {
+      "title": "Unternehmenstraining | Mitarbeiter-Credential-Programme",
+      "description": "Mitarbeiterlernen mit verifizierbaren Credentials anerkennen. LMS-Integration und Engagement steigern.",
+      "keywords": "Unternehmens-Training-Credentials, Mitarbeiterzertifikate, L&D digitale Badges"
+    },
+    "certificationBodies": {
+      "title": "Zertifizierungsstellen | Skalierbare Credential-Operationen",
+      "description": "Tausende zertifizierte Fachleute mit automatisierter Ausstellung und Verlängerungs-Tracking verwalten.",
+      "keywords": "Zertifizierungsstellen-Plattform, professionelles Zertifizierungsmanagement"
+    },
+    "healthcare": {
+      "title": "Gesundheitswesen | Sichere Klinische Credentials",
+      "description": "Gesundheits-Credentials mit Blockchain-Sicherheit ausstellen und verifizieren. CME-Tracking und Compliance.",
+      "keywords": "Gesundheitswesen-Credentials, klinische Zertifizierung, CME-Tracking"
+    },
+    "manufacturing": {
+      "title": "Fertigung | Workforce Skills & Sicherheits-Credentials",
+      "description": "Workforce-Zertifizierungen, Sicherheitstraining und Compliance-Credentials verfolgen. Automatisierte Ablauferinnerungen.",
+      "keywords": "Fertigungs-Credentials, Sicherheitszertifizierungs-Tracking, Workforce-Compliance"
+    },
+    "gdpr": {
+      "title": "DSGVO-Konformität | Datenschutz bei CredSure",
+      "description": "Wie CredSure volle DSGVO-Konformität sicherstellt. Datenverarbeitung, Speicherrichtlinien und Betroffenenrechte.",
+      "keywords": "CredSure DSGVO, Datenschutz Credentials, DSGVO-konforme Zertifikate"
+    },
+    "privacy": {
+      "title": "Datenschutzrichtlinie | CredSure Datenpraktiken",
+      "description": "Lesen Sie CredSures Datenschutzrichtlinie. Erfahren Sie, wie wir Ihre Daten DSGVO-konform erheben und schützen.",
+      "keywords": "CredSure Datenschutzrichtlinie, Datenpraktiken, personenbezogene Daten"
+    },
+    "terms": {
+      "title": "Nutzungsbedingungen | CredSure Plattformvereinbarung",
+      "description": "Lesen Sie CredSures Nutzungsbedingungen für Plattformnutzung, Credential-Ausstellung und Datenverarbeitung.",
+      "keywords": "CredSure Nutzungsbedingungen, Plattformvereinbarung"
+    },
+    "cookies": {
+      "title": "Cookie-Richtlinie | CredSure Website-Cookies",
+      "description": "Informationen über Cookies auf CredSure.io. Verwalten Sie Ihre Präferenzen für Analytics und Marketing.",
+      "keywords": "CredSure Cookies, Cookie-Richtlinie, Website-Tracking"
+    },
+    "imprint": {
+      "title": "Impressum | Certif-ID International GmbH",
+      "description": "Rechtliches Impressum für CredSure. Handelsregistereintrag, Geschäftsführer und Kontaktdaten.",
+      "keywords": "CredSure Impressum, Certif-ID GmbH, rechtliche Informationen"
+    },
+    "aboutUs": {
+      "title": "Über CredSure | Mission, Team & Standorte",
+      "description": "Erfahren Sie mehr über CredSures Mission. Lernen Sie unser Führungsteam in Köln, Bangalore und Manila kennen.",
+      "keywords": "über CredSure, digitale Zertifikate Unternehmen, Credential-Plattform Team"
+    },
+    "apiDocs": {
+      "title": "API-Dokumentation | CredSure Entwickler-Referenz",
+      "description": "Vollständige REST-API-Dokumentation für CredSure. Endpunkte, Authentifizierung und Code-Beispiele.",
+      "keywords": "CredSure API-Dokumentation, Credential API Referenz"
+    },
+    "privacyPolicy": {
+      "title": "Datenschutzrichtlinie | CredSure Datenpraktiken",
+      "description": "Lesen Sie CredSures Datenschutzrichtlinie. Wie wir Ihre Daten DSGVO-konform erheben und schützen.",
+      "keywords": "CredSure Datenschutz, Datenschutzrichtlinie, DSGVO"
+    },
+    "signIn": {
+      "title": "Anmelden | CredSure Admin-Portal",
+      "description": "Melden Sie sich bei Ihrem CredSure Admin-Dashboard an. Credentials verwalten und Analysen einsehen.",
+      "keywords": "CredSure Anmeldung, Admin-Login, Credential-Dashboard"
+    },
+    "templates": {
+      "title": "Zertifikatsvorlagen | Fertige Designs",
+      "description": "Über 50 professionelle Zertifikatsvorlagen durchsuchen. Farben, Logos und Layouts anpassen.",
+      "keywords": "Zertifikatsvorlagen, Credential-Designs, Vorlagengalerie"
+    }
+  },
+  "demoPage": {
+    "badge": "Demo buchen",
+    "title": "CredSure in Aktion erleben",
+    "subtitle": "Planen Sie eine persönliche Demo und entdecken Sie, wie CredSure Ihren Zertifizierungsprozess transformieren kann",
+    "fullName": "Vollständiger Name",
+    "workEmail": "Geschäftliche E-Mail",
+    "companyName": "Firmenname",
+    "jobTitle": "Berufsbezeichnung",
+    "messageOptional": "Nachricht (Optional)",
+    "messagePlaceholder": "Erzählen Sie uns von Ihrem Anwendungsfall...",
+    "submitting": "Wird gesendet...",
+    "requestDemo": "Demo anfragen",
+    "successToast": "Demo-Anfrage gesendet! Wir werden Sie innerhalb von 24 Stunden kontaktieren.",
+    "errorToast": "Übermittlung fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "networkError": "Netzwerkfehler. Bitte versuchen Sie es später erneut.",
+    "whatToExpect": "Was Sie erwartet",
+    "benefits": [
+      "Live-Produktdemonstration",
+      "Individuelle Anwendungsfalldiskussion",
+      "Fragen & Antworten mit unseren Experten",
+      "Keine Kreditkarte erforderlich"
+    ],
+    "quickResponse": "Schnelle Antwort",
+    "quickResponseDesc": "Unser Team antwortet in der Regel innerhalb von 24 Stunden, um Ihre persönliche Demo zu einem für Sie passenden Zeitpunkt zu planen."
+  },
+  "blog": {
+    "title": "Neueste Einblicke",
+    "subtitle": "Entdecken Sie Artikel über digitale Zertifikate, Bildungstechnologie und Branchentrends",
+    "readMore": "Vollständigen Artikel lesen",
+    "search": "Artikel suchen...",
+    "categories": "Kategorien",
+    "allCategories": "Alle Kategorien",
+    "showing": "Zeige",
+    "articles": "Artikel"
+  },
+  "tutorials": {
+    "videos": "15+ Videos",
+    "hours": "3+ Stunden",
+    "levels": "Alle Stufen"
+  }
+}

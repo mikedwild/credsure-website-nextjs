@@ -1,0 +1,219 @@
+/* ─────────────────────────────────────────────────────────────────────
+   beamery-system.css  (v2 — corrected palette)
+   --------------------------------------------------------------------
+   Site-wide design tokens & utility primitives matched faithfully to
+   beamery.com + talentsure.de visual DNA.
+
+   Real palette (from live screenshots):
+     - Hero base: pure white with subtle peach/lavender/pink orb washes
+     - Display ink: near-black (#0F0E1A)
+     - Accent gradient: PURPLE → MAGENTA → PINK → ORANGE
+        (#5B22D6 → #B82BC4 → #E22B8A → #E83C5C)
+     - Primary CTA: deep indigo/violet (#3F2BD9) — Beamery's button
+     - Gradient CTA: purple-to-magenta-to-orange pill — TalentSure's button
+     - Logos: navy/indigo (Beamery) or near-black (TalentSure)
+   ───────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* ── Surfaces ─────────────────────────────────────────────────── */
+  --cs-paper:       #FFFFFF;
+  --cs-canvas:      #FAFAFC;   /* subtlest off-white wash */
+  --cs-cream:       #F8F5FB;   /* hint of lavender */
+  --cs-line:        #ECE7F1;
+  --cs-line-strong: #DCD3E4;
+
+  /* ── Ink (text) ───────────────────────────────────────────────── */
+  --cs-ink:    #0F0E1A;
+  --cs-ink-2:  #2E2A3D;
+  --cs-mute:   #6A6478;
+
+  /* ── Accent — Beamery / TalentSure palette ───────────────────── */
+  --cs-purple:       #3F2BD9;   /* Beamery primary button */
+  --cs-purple-deep:  #2818B0;
+  --cs-violet:       #5B22D6;   /* gradient start */
+  --cs-magenta:      #B82BC4;
+  --cs-pink:         #E22B8A;
+  --cs-rose:         #E83C5C;
+  --cs-orange:       #FF6B3D;   /* TalentSure gradient end */
+
+  /* Subtle hero-orb tints (peach / lavender / pink — barely visible). */
+  --cs-orb-peach:    rgba(255, 184, 158, 0.45);
+  --cs-orb-lavender: rgba(187, 158, 255, 0.35);
+  --cs-orb-pink:     rgba(255, 158, 215, 0.40);
+
+  /* ── Gradients ───────────────────────────────────────────────── */
+  /* The signature accent gradient — used on hero highlight + headlines. */
+  --cs-grad: linear-gradient(95deg, #5B22D6 0%, #B82BC4 35%, #E22B8A 70%, #E83C5C 100%);
+  /* Soft / two-stop variants. */
+  --cs-grad-soft:  linear-gradient(95deg, #5B22D6 0%, #E22B8A 100%);
+  --cs-grad-warm:  linear-gradient(95deg, #B82BC4 0%, #FF6B3D 100%);
+  /* TalentSure-style CTA pill (purple→magenta→orange). */
+  --cs-grad-button: linear-gradient(95deg, #5B22D6 0%, #B82BC4 50%, #E83C5C 100%);
+
+  /* ── Shadows ─────────────────────────────────────────────────── */
+  --cs-shadow-sm: 0 1px 2px rgba(15,14,26,0.05);
+  --cs-shadow-md: 0 12px 30px -16px rgba(15,14,26,0.18);
+  --cs-shadow-lg: 0 24px 60px -24px rgba(15,14,26,0.22);
+  --cs-shadow-purple: 0 12px 32px -10px rgba(91,34,214,0.45);
+
+  /* ── Radii ───────────────────────────────────────────────────── */
+  --cs-radius-sm: 8px;
+  --cs-radius:    14px;
+  --cs-radius-lg: 24px;
+  --cs-radius-xl: 32px;
+
+  /* ── Type tracking ───────────────────────────────────────────── */
+  --cs-tracking-display: -0.025em;
+  --cs-tracking-tight:   -0.015em;
+  --cs-meta-track:       0.16em;
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   Gradient text utilities — Beamery's signature on accent words.
+   ───────────────────────────────────────────────────────────────────── */
+.cs-grad-text       { background: var(--cs-grad);       -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+.cs-grad-text-soft  { background: var(--cs-grad-soft);  -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+.cs-grad-text-warm  { background: var(--cs-grad-warm);  -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+
+/* ─────────────────────────────────────────────────────────────────────
+   Buttons
+   - cs-btn-primary  → deep indigo pill (Beamery's "Book a demo")
+   - cs-btn-gradient → purple→magenta→orange pill (TalentSure's CTA)
+   - cs-btn-ghost    → white pill with ink border (Beamery's "Why Beamery")
+   ───────────────────────────────────────────────────────────────────── */
+.cs-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 9999px;
+  transition: background 200ms ease, transform 200ms ease, filter 200ms ease, box-shadow 200ms ease;
+  white-space: nowrap;
+}
+.cs-btn-primary {
+  background: var(--cs-purple);
+  color: var(--cs-paper);
+}
+.cs-btn-primary:hover { background: var(--cs-purple-deep); }
+
+.cs-btn-gradient {
+  background: var(--cs-grad-button);
+  color: #FFFFFF;
+  box-shadow: var(--cs-shadow-purple);
+}
+.cs-btn-gradient:hover { transform: translateY(-1px); filter: brightness(1.06); }
+
+.cs-btn-ghost {
+  color: var(--cs-ink);
+  background: var(--cs-paper);
+  border: 1.5px solid var(--cs-ink);
+}
+.cs-btn-ghost:hover { background: var(--cs-ink); color: var(--cs-paper); }
+
+/* Legacy alias kept so older templates that wrote cs-btn-secondary keep
+   rendering — now points to the gradient variant. */
+.cs-btn-secondary { background: var(--cs-grad-button); color: #FFFFFF; box-shadow: var(--cs-shadow-purple); }
+.cs-btn-secondary:hover { transform: translateY(-1px); filter: brightness(1.06); }
+
+/* ─────────────────────────────────────────────────────────────────────
+   Cards & meta utilities
+   ───────────────────────────────────────────────────────────────────── */
+.cs-card {
+  background: var(--cs-paper);
+  border: 1px solid var(--cs-line);
+  border-radius: var(--cs-radius-lg);
+  box-shadow: var(--cs-shadow-md);
+}
+.cs-card-flat {
+  background: var(--cs-paper);
+  border: 1px solid var(--cs-line);
+  border-radius: var(--cs-radius-lg);
+}
+.cs-pillar-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.1rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--cs-mute);
+  border-bottom: 2px solid transparent;
+  transition: color 200ms ease, border-color 200ms ease;
+}
+.cs-pillar-tab[data-active="true"] {
+  color: var(--cs-ink);
+  border-bottom-color: var(--cs-purple);
+}
+.cs-meta {
+  font-size: 0.7rem;
+  letter-spacing: var(--cs-meta-track);
+  text-transform: uppercase;
+  color: var(--cs-mute);
+  font-weight: 600;
+}
+.cs-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  background: var(--cs-cream);
+  border: 1px solid var(--cs-line);
+  color: var(--cs-ink-2);
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   Hero ambient — peach + lavender + pink orb wash on white. This is the
+   exact backdrop pattern beamery.com and talentsure.de share.
+   ───────────────────────────────────────────────────────────────────── */
+.cs-hero-canvas { background: #FFFFFF; }
+.cs-hero-orb-1 { background: radial-gradient(circle, var(--cs-orb-pink) 0%, transparent 70%); }
+.cs-hero-orb-2 { background: radial-gradient(circle, var(--cs-orb-lavender) 0%, transparent 70%); }
+
+/* Hero highlight underline — soft purple→pink wash. */
+.cs-hero-underline {
+  background: linear-gradient(90deg, rgba(91,34,214,0.20) 0%, rgba(232,60,92,0.20) 100%);
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   Footer — keep dark for contrast, but use a deep ink-violet base
+   (matches Beamery's footer ink, not slate-blue).
+   ───────────────────────────────────────────────────────────────────── */
+.cs-footer-bg { background: #0F0E1A; }
+.cs-footer-divider { border-color: rgba(255,255,255,0.08); }
+.cs-footer-link { color: rgba(255,255,255,0.65); transition: color 200ms ease; }
+.cs-footer-link:hover { color: var(--cs-pink); }
+.cs-footer-social { background: rgba(255,255,255,0.06); transition: background 200ms ease, color 200ms ease; }
+.cs-footer-social:hover { background: var(--cs-purple); color: #FFFFFF; }
+
+/* ─────────────────────────────────────────────────────────────────────
+   Header — light surface with subtle bottom border on scroll.
+   ───────────────────────────────────────────────────────────────────── */
+.cs-header { background: rgba(255,255,255,0.96); backdrop-filter: blur(12px); }
+.cs-header-scrolled { box-shadow: 0 1px 0 rgba(15,14,26,0.05), 0 8px 24px -16px rgba(15,14,26,0.10); }
+
+/* ─────────────────────────────────────────────────────────────────────
+   Shared display heading typography
+   ───────────────────────────────────────────────────────────────────── */
+.cs-display    { font-weight: 700; letter-spacing: var(--cs-tracking-display); line-height: 1.05; }
+.cs-display-md { font-weight: 700; letter-spacing: var(--cs-tracking-tight);   line-height: 1.10; }
+
+/* ─────────────────────────────────────────────────────────────────────
+   Brand-scoped overrides — re-point legacy purple classes to the new
+   Beamery purple/violet so unmigrated pages auto-inherit the palette.
+   ───────────────────────────────────────────────────────────────────── */
+.text-brand-purple   { color: var(--cs-purple) !important; }
+.bg-brand-purple     { background-color: var(--cs-purple) !important; }
+.border-brand-purple { border-color: var(--cs-purple) !important; }
+.brand-gradient      { background-image: var(--cs-grad-button) !important; }
+.hover\:bg-brand-purple-light:hover { background-color: var(--cs-violet) !important; }
+
+/* Reduce motion — respect user preferences for everything we add. */
+@media (prefers-reduced-motion: reduce) {
+  .cs-hero-orb-1, .cs-hero-orb-2 { animation: none !important; }
+  .cs-btn, .cs-pillar-tab, .cs-footer-link, .cs-footer-social { transition: none !important; }
+}
