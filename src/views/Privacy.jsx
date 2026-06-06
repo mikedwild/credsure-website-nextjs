@@ -62,7 +62,7 @@ const renderBody = (body) => {
 };
 
 export const Privacy = () => {
-  const { t, i18n } = useTranslation('legal');
+  const t = useTranslation();
 
   // Resolve section + controller arrays. Sometimes a user lands here with
   // a stale cached locale JSON (older service-worker cache, in-flight
@@ -76,7 +76,9 @@ export const Privacy = () => {
   //      English bundle (always present, always shipped).
   //   2. If that fails too, render a minimal "loading" placeholder so
   //      the page still feels alive while i18n catches up.
-  const tFallback = (key) => i18n.getResource('en', 'legal', key);
+  // next-intl has no getResource; messages are already flattened and the
+  // active locale always resolves. Degrade to an empty array if missing.
+  const tFallback = () => [];
   const asArray = (v) => (Array.isArray(v) ? v : []);
 
   const sections =

@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet-async';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslations as useTranslation, useLocale } from 'next-intl';
 import { useLocation } from '@/lib/router-shim';
 import { enToRoute, deToRoute } from '@/config/routeConfig';
 
@@ -31,9 +31,10 @@ export const SEO = ({
   noIndex = false,
   structuredData 
 }) => {
-  const { t, i18n } = useTranslation(['common', 'pages', 'features', 'marketing', 'legal']);
+  const t = useTranslation();
+  const locale = useLocale();
   const location = useLocation();
-  const currentLang = i18n.language || 'en';
+  const currentLang = locale || 'en';
 
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
   

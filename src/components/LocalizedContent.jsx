@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslations as useTranslation, useLocale } from 'next-intl';
 import DOMPurify from 'dompurify';
 
 /**
@@ -67,8 +67,7 @@ LocalizedHTML.propTypes = {
  * Renders blog post content with language support (sanitized via DOMPurify)
  */
 export const LocalizedBlogPost = ({ post, field = 'content' }) => {
-  const { i18n } = useTranslation();
-  const lang = i18n.language || 'en';
+  const lang = useLocale() || 'en';
   
   const localizedField = `${field}_${lang}`;
   const rawContent = post[localizedField] || post[`${field}_en`] || post[field] || '';

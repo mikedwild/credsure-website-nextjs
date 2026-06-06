@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { SEO, createBreadcrumbSchema, getBaseUrl } from '@/components/SEO';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslations as useTranslation, useLocale } from 'next-intl';
 import { Search, Filter, X, Tag } from 'lucide-react';
 import { getPostTopics } from '../utils/blogUtils';
 import { BlogCard } from './BlogCard';
@@ -11,7 +11,8 @@ import { BlogPagination } from './BlogPagination';
 const POSTS_PER_PAGE = 12;
 
 export const Blog = () => {
-  const { t, i18n } = useTranslation(['common', 'blog']);
+  const t = useTranslation();
+  const i18n = { language: useLocale() };
   const [blogData, setBlogData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');

@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { SEO, createBreadcrumbSchema, createVideoObjectSchema, getBaseUrl } from '@/components/SEO';
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslations as useTranslation, useLocale } from 'next-intl';
 import { motion } from 'framer-motion';
 import { LocalizedLink as Link } from '@/components/LocalizedLink';
 import { ArrowRight, Play, Calendar, Clock, Users } from 'lucide-react';
@@ -80,7 +80,8 @@ const formatWebinarDate = (dateStr, lang = 'en') => {
 };
 
 export const Webinars = () => {
-  const { t, i18n } = useTranslation();
+  const t = useTranslation();
+  const i18n = { language: useLocale() };
   const baseUrl = getBaseUrl();
 
   const featured = webinars.find(w => w.featured);
