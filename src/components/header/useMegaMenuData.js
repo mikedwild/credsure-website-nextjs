@@ -1,4 +1,4 @@
-import { useTranslations as useTranslation } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
 import {
   Award, LayoutDashboard, Shield, Share2, BarChart3, Zap, Plug,
   BookOpen, FileText, Users, HelpCircle, Mail, CheckCircle2,
