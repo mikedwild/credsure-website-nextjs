@@ -87,7 +87,7 @@ export const Footer = () => {
 
           {/* Product links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">{t('footer.product', t('footer.platform'))}</h4>
+            <h3 className="text-white font-semibold mb-4">{t('footer.product', t('footer.platform'))}</h3>
             <ul className="space-y-3">
               {productLinks.map((link) => (
                 <li key={link.to}>
@@ -104,7 +104,7 @@ export const Footer = () => {
 
           {/* Company links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">{t('footer.company')}</h4>
+            <h3 className="text-white font-semibold mb-4">{t('footer.company')}</h3>
             <ul className="space-y-3">
               {companyLinks.map((link) => (
                 <li key={link.to}>
@@ -121,7 +121,7 @@ export const Footer = () => {
 
           {/* Resources links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">{t('footer.resources')}</h4>
+            <h3 className="text-white font-semibold mb-4">{t('footer.resources')}</h3>
             <ul className="space-y-3">
               {resourcesLinks.map((link) => (
                 <li key={link.to}>

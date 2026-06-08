@@ -22,7 +22,7 @@ export const ROIForm = ({ selectedVolume, manualMinutes, hourlyCost, roi, onVolu
           {t('roiSection.monthlyVolume', 'How many credentials do you issue monthly?')}
         </label>
         <Select value={selectedVolume.toString()} onValueChange={(value) => onVolumeChange(Number(value))}>
-          <SelectTrigger className="w-full border-slate-300 focus:border-[#5B22D6] h-14 text-lg" data-testid="roi-volume-select">
+          <SelectTrigger aria-label={t('roiSection.monthlyVolume', 'How many credentials do you issue monthly?')} className="w-full border-slate-300 focus:border-[#5B22D6] h-14 text-lg" data-testid="roi-volume-select">
             <SelectValue />
           </SelectTrigger>
           <SelectContent>

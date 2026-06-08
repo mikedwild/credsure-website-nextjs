@@ -48,6 +48,7 @@ export const IndustryUseCases = () => {
               <Link
                 key={useCase.title}
                 to={link}
+                aria-label={`Learn more — ${useCase.title}`}
                 className="block bg-white border border-slate-200 rounded-3xl p-10 hover:shadow-2xl hover:border-brand-purple/30 transition-all duration-500 group"
               >
                 {/* Icon */}

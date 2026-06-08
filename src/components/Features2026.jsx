@@ -146,7 +146,7 @@ export const Features2026 = () => {
                       </li>
                     ))}
                   </ul>
-                  <Link to={row.href} className="cs-btn cs-btn-ghost" data-testid={`features-row-cta-${row.key}`}>
+                  <Link to={row.href} className="cs-btn cs-btn-ghost" data-testid={`features-row-cta-${row.key}`} aria-label={`${t('features2026.learnMore', 'Learn more')} — ${t(`features.items.${row.key}.title`)}`}>
                     {t('features2026.learnMore', 'Learn more')} <ArrowUpRight className="w-4 h-4" />
                   </Link>
                 </div>
