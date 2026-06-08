@@ -118,7 +118,8 @@
       "share": "Share",
       "ctaTitle": "Ready to digitize your credentials?",
       "ctaDesc": "Join 150+ organizations issuing blockchain-verified certificates with CredSure.",
-      "scheduleDemo": "Schedule a demo"
+      "scheduleDemo": "Schedule a demo",
+      "aiDisclosure": "Drafted with AI, reviewed by CredSure editors"
     },
     "about": {
       "badge": "About Us",

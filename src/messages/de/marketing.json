@@ -15,7 +15,9 @@
       "countries": "100+ Länder weltweit",
       "verification": "Sofortige Verifizierung"
     },
-    "titleHighlight": "Digitales Vertrauen"
+    "titleHighlight": "Digitales Vertrauen",
+    "eyebrow": "NEU · Ausstellen, verifizieren und verwalten an einem Ort",
+    "imageAlt": "Ihr digitaler Vertrauenspass — Alex Morgans verifiziertes Zertifikatsportfolio auf CredSure, mit 4 verifizierten Zertifikaten (Master Educator, Advanced Data Science, Cybersecurity Fundamentals, Leadership Essentials), QR-Verifizierung, teilbarem Link, lebenslangem Nachweis, blockchain-verankerter fälschungssicherer Speicherung und vertraut von führenden Organisationen"
   },
   "hero2026": {
     "freeCredits": "",
@@ -39,7 +41,8 @@
     "countriesValue": "45+",
     "countriesLabel": "Länder weltweit",
     "uptimeValue": "99,9%",
-    "uptimeLabel": "Verfügbarkeitsgarantie"
+    "uptimeLabel": "Verfügbarkeitsgarantie",
+    "subtitle": "Zahlen, die unser Versprechen belegen — in 45 Ländern und stetig wachsend."
   },
   "bento": {
     "badge": "Plattform-Highlights",
@@ -256,7 +259,9 @@
     "learnMore": "Mehr erfahren",
     "explore": "Erkunden",
     "discover": "Entdecken",
-    "viewDetails": "Details anzeigen"
+    "viewDetails": "Details anzeigen",
+    "titleAccent": "nicht Papierkram.",
+    "explorePlatform": "Die gesamte Plattform entdecken"
   },
   "demoSection": {
     "headline": "CredSure in Aktion erleben",
@@ -291,5 +296,24 @@
     "title": "Nicht sicher, welcher Plan der richtige ist?",
     "subtitle": "Nutzen Sie unseren Effizienz-Rechner, um zu sehen, wie viel Zeit und Geld Sie sparen können",
     "cta": "Einsparungen berechnen"
+  },
+  "platformPillars": {
+    "sectionEyebrow": "Die Plattform",
+    "sectionTitle": "Eine Plattform. Jeder Zertifikats-Workflow.",
+    "sectionTitleAccent": "Kein Glue-Code.",
+    "sectionSubtitle": "Von der Massenausstellung über die Offline-Verifizierung bis zu prüfungssicheren Audit-Logs — jedes Team und jeder Workflow an einem Ort."
+  },
+  "customerSpotlight": {
+    "author": "Dr. Eleanor Whitfield",
+    "hq": "Vereinigtes Königreich",
+    "industry": "Hochschulbildung",
+    "role": "Leiterin Digitales Credentialing · Cambridge Training",
+    "since": "6 Tage · 50.000 Diplome",
+    "imageAlt": "Hochschulleiterin betrachtet die Credentialing-Plattform",
+    "quote": {
+      "lead": "Wir haben achtzehn Jahre Papierdiplome ersetzt in",
+      "bold": "sechs Wochen",
+      "tail": ". CredSure brauchte keinen einzigen Entwickler — es funktionierte einfach."
+    }
   }
 }

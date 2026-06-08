@@ -15,7 +15,9 @@
       "countries": "100+ Countries Worldwide",
       "verification": "Instant Verification"
     },
-    "titleHighlight": "Digital Trust"
+    "titleHighlight": "Digital Trust",
+    "eyebrow": "NEW · Issue, verify and govern in one place",
+    "imageAlt": "Your Digital Trust Passport — Alex Morgan's verified credential portfolio on CredSure, with 4 verified credentials (Master Educator, Advanced Data Science, Cybersecurity Fundamentals, Leadership Essentials), QR verification, shareable link, lifetime record, blockchain-anchored tamper-proof storage, and trusted by top organizations"
   },
   "hero2026": {
     "freeCredits": "20 Free Credits",
@@ -39,7 +41,8 @@
     "countriesValue": "45+",
     "countriesLabel": "Countries Worldwide",
     "uptimeValue": "99.9%",
-    "uptimeLabel": "Uptime Guarantee"
+    "uptimeLabel": "Uptime Guarantee",
+    "subtitle": "Numbers that prove what we promise — across 45 countries and growing."
   },
   "bento": {
     "badge": "Platform Highlights",
@@ -256,7 +259,9 @@
     "learnMore": "Learn more",
     "explore": "Explore",
     "discover": "Discover",
-    "viewDetails": "View details"
+    "viewDetails": "View details",
+    "titleAccent": "not paperwork.",
+    "explorePlatform": "Explore the full platform"
   },
   "demoSection": {
     "headline": "See CredSure in Action",
@@ -291,5 +296,24 @@
     "title": "Not Sure Which Plan is Right for You?",
     "subtitle": "Use our Efficiency Calculator to see how much time and money you can save",
     "cta": "Calculate Your Savings"
+  },
+  "platformPillars": {
+    "sectionEyebrow": "The Platform",
+    "sectionTitle": "One platform. Every credential workflow.",
+    "sectionTitleAccent": "No glue code.",
+    "sectionSubtitle": "From bulk issuance to offline verification to regulator-ready audit logs — every team and every workflow, in one place."
+  },
+  "customerSpotlight": {
+    "author": "Dr. Eleanor Whitfield",
+    "hq": "United Kingdom",
+    "industry": "Higher Education",
+    "role": "Director of Digital Credentialing · Cambridge Training",
+    "since": "6 days · 50K diplomas",
+    "imageAlt": "University leader reviewing credentialing platform",
+    "quote": {
+      "lead": "We replaced eighteen years of paper diplomas in",
+      "bold": "six weeks",
+      "tail": ". CredSure didn't ask for a single engineer — it just worked."
+    }
   }
 }
