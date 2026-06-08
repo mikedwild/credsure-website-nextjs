@@ -263,6 +263,12 @@ export default function AdminSettings({ token }) {
   const [form, setForm] = useState({
     site_title: 'CredSure', site_description: '', default_author: 'CredSure Team',
     social_linkedin: '', social_twitter: '', contact_email: '', ga_tracking_id: '',
+    anthropic_api_key: '', openai_api_key: '',
+  });
+  // Masked metadata for the secret key fields (the raw keys are never returned).
+  const [keyMeta, setKeyMeta] = useState({
+    anthropic_api_key_set: false, anthropic_api_key_hint: '',
+    openai_api_key_set: false, openai_api_key_hint: '',
   });
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
@@ -271,7 +277,18 @@ export default function AdminSettings({ token }) {
     fetch(`${API_URL}/api/admin/settings`, { headers: { 'Authorization': `Bearer ${token}` } })
       .then(r => r.json())
       .then(data => {
-        if (data.settings) setForm(prev => ({ ...prev, ...data.settings }));
+        if (data.settings) {
+          const s = data.settings;
+          // Keep the secret inputs blank so saving the form never wipes a stored
+          // key; track set/hint metadata separately for the status display.
+          setForm(prev => ({ ...prev, ...s, anthropic_api_key: '', openai_api_key: '' }));
+          setKeyMeta({
+            anthropic_api_key_set: !!s.anthropic_api_key_set,
+            anthropic_api_key_hint: s.anthropic_api_key_hint || '',
+            openai_api_key_set: !!s.openai_api_key_set,
+            openai_api_key_hint: s.openai_api_key_hint || '',
+          });
+        }
       });
   }, [token]);
 
@@ -311,6 +328,38 @@ export default function AdminSettings({ token }) {
     </div>
   );
 
+  // Secret-key input: password type, shows a "configured ✓ …last4" badge when a
+  // key is already stored, and only sends a new value when the admin types one.
+  const KeyField = ({ label, field, placeholder }) => {
+    const isSet = keyMeta[`${field}_set`];
+    const hint = keyMeta[`${field}_hint`];
+    return (
+      <div>
+        <label className="flex items-center justify-between text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+          <span>{label}</span>
+          {isSet ? (
+            <span className="inline-flex items-center gap-1 text-emerald-600 normal-case tracking-normal font-medium">
+              <CheckCircle className="w-3.5 h-3.5" /> Configured {hint && <code className="text-gray-400">{hint}</code>}
+            </span>
+          ) : (
+            <span className="inline-flex items-center gap-1 text-amber-600 normal-case tracking-normal font-medium">
+              <AlertTriangle className="w-3.5 h-3.5" /> Not set
+            </span>
+          )}
+        </label>
+        <input
+          type="password"
+          autoComplete="new-password"
+          value={form[field]}
+          onChange={e => setField(field, e.target.value)}
+          placeholder={isSet ? '•••••••• (leave blank to keep current)' : (placeholder || 'Paste API key')}
+          className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-gray-900 text-sm font-mono placeholder-gray-400 outline-none focus:ring-2 focus:ring-violet-500"
+          data-testid={`settings-${field}`}
+        />
+      </div>
+    );
+  };
+
   return (
     <div className="max-w-2xl space-y-8" data-testid="admin-settings">
       {/* MFA Section */}
@@ -333,6 +382,19 @@ export default function AdminSettings({ token }) {
       <div className="bg-white  border border-gray-200  rounded-2xl p-6 space-y-5">
         <h3 className="text-sm font-semibold text-gray-900  uppercase tracking-wider">Analytics</h3>
         <Field label="Google Analytics Tracking ID" field="ga_tracking_id" />
+      </div>
+
+      <div className="bg-white border border-gray-200 rounded-2xl p-6 space-y-5" data-testid="settings-api-keys">
+        <div>
+          <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider">AI / API Keys</h3>
+          <p className="text-xs text-gray-500 mt-1">
+            Powers AI blog generation, topic recommendations, translation (Anthropic)
+            and featured-image generation (OpenAI). Stored securely server-side and
+            never shown again after saving.
+          </p>
+        </div>
+        <KeyField label="Anthropic API Key" field="anthropic_api_key" placeholder="sk-ant-..." />
+        <KeyField label="OpenAI API Key" field="openai_api_key" placeholder="sk-..." />
       </div>
 
       <div className="flex items-center gap-4">

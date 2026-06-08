@@ -9,6 +9,7 @@ from datetime import datetime, timezone
 from pydantic import BaseModel
 import uuid
 import os
+from utils.llm_keys import get_llm_key
 import logging
 
 from utils.storage import upload_image, get_object
@@ -109,13 +110,14 @@ async def admin_generate_featured_image(request: Request, body: GenerateFeatured
     if model_cfg is None:
         raise HTTPException(status_code=400, detail="unsupported_model")
 
-    api_key = os.environ.get("EMERGENT_LLM_KEY")
-    if not api_key:
-        raise HTTPException(status_code=503, detail="EMERGENT_LLM_KEY not configured")
-
     provider = model_cfg["provider"]
     model_id = model_cfg["model_id"]
     n = max(1, min(int(body.number_of_images or 1), 2))
+
+    try:
+        api_key = await get_llm_key(db, provider)
+    except RuntimeError as e:
+        raise HTTPException(status_code=503, detail=str(e))
 
     try:
         if provider == "openai":

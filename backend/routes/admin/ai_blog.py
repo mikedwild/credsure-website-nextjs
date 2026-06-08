@@ -51,7 +51,7 @@ async def admin_ai_generate(request: Request, body: GenerateRequest):
     # Generate the English post
     post_data = await generate_blog_post(
         topic=body.topic, keywords=body.keywords,
-        category=body.category, excerpt_hint=body.excerpt,
+        category=body.category, excerpt_hint=body.excerpt, db=db,
     )
     if not post_data:
         raise HTTPException(status_code=500, detail="Failed to generate blog content")
@@ -293,7 +293,7 @@ async def _perform_generate_draft(db, body: "GenerateDraftRequest") -> dict:
         topic=body.keyword,
         keywords=[body.keyword],
         category=body.industry.replace("-", " ").title(),
-        excerpt_hint=steering_hint,
+        excerpt_hint=steering_hint, db=db,
     )
     if not post_data:
         raise HTTPException(status_code=500, detail="Failed to generate blog content")

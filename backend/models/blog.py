@@ -56,3 +56,7 @@ class SiteSettings(BaseModel):
     social_twitter: str = ""
     contact_email: str = ""
     ga_tracking_id: str = ""
+    # LLM provider API keys for AI blog generation / translation / images.
+    # Stored server-side; never returned verbatim by the API (masked on GET).
+    anthropic_api_key: str = ""
+    openai_api_key: str = ""

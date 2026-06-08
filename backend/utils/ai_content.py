@@ -18,6 +18,7 @@ from ai import cache as ai_cache
 from ai import routing as ai_routing
 from ai.guard import RequestGuard
 from ai.knowledge import brand_names_for_prompt
+from utils.llm_keys import get_llm_key
 
 logger = logging.getLogger(__name__)
 
@@ -35,22 +36,9 @@ _BRANDS = brand_names_for_prompt()
 TRANSLATION_MODEL = ("anthropic", "claude-sonnet-4-5-20250929")
 
 
-def _get_key():
-    key = os.environ.get("EMERGENT_LLM_KEY")
-    if not key:
-        raise RuntimeError("EMERGENT_LLM_KEY not configured")
-    return key
-
-
-def _make_chat(session_prefix: str, system_message: str):
-    """Helper to build a single-shot LlmChat configured for Claude Sonnet 4.5."""
-    from utils.llm_chat import LlmChat
-    chat = LlmChat(
-        api_key=_get_key(),
-        session_id=f"{session_prefix}-{uuid.uuid4().hex[:8]}",
-        system_message=system_message,
-    ).with_model(*TRANSLATION_MODEL)
-    return chat
+# Key resolution now goes through utils.llm_keys.get_llm_key(db, provider),
+# which reads the admin-configured key (site_settings) → env (ANTHROPIC_API_KEY /
+# OPENAI_API_KEY) → legacy EMERGENT_LLM_KEY. The async call sites pass `db`.
 
 
 def _clean(text: str) -> str:
@@ -124,7 +112,7 @@ async def _translate_one(
             request_id=request_id, user_email=user_email,
         ) as t:
             chat = LlmChat(
-                api_key=_get_key(),
+                api_key=await get_llm_key(db, spec.provider),
                 session_id=f"{intent}-{uuid.uuid4().hex[:8]}",
                 system_message=system_message,
             ).with_model(spec.provider, spec.model)
@@ -259,7 +247,6 @@ async def recommend_topics(db, count=8):
     instrumentation runs anyway to project would-have-hit rate.
     """
     from utils.llm_chat import LlmChat, UserMessage
-    api_key = _get_key()
 
     # Get existing titles to avoid duplicates
     existing = await db.blog_posts.find({}, {"_id": 0, "title": 1, "category": 1}).limit(500).to_list(500)
@@ -319,7 +306,7 @@ Return as a JSON array:"""
         cache_hit=(False if status == "miss" else "would_have_hit" if status == "would_have_hit" else None),
     ) as t:
         chat = LlmChat(
-            api_key=api_key,
+            api_key=await get_llm_key(db, spec.provider),
             session_id=f"recommend-{uuid.uuid4().hex[:8]}",
             system_message=system_message,
         ).with_model(spec.provider, spec.model)
@@ -349,10 +336,14 @@ Return as a JSON array:"""
     return []
 
 
-async def generate_blog_post(topic, keywords, category, excerpt_hint=""):
-    """Generate a full SEO-optimized blog post from a topic. Returns dict with all blog fields."""
+async def generate_blog_post(topic, keywords, category, excerpt_hint="", *, db=None):
+    """Generate a full SEO-optimized blog post from a topic. Returns dict with all blog fields.
+
+    `db` (optional, kw-only) lets the key resolver read the admin-configured
+    Anthropic key from site_settings; falls back to env / legacy if omitted.
+    """
     from utils.llm_chat import LlmChat, UserMessage
-    api_key = _get_key()
+    api_key = await get_llm_key(db, "anthropic")
     import json
 
     kw_str = ", ".join(keywords) if isinstance(keywords, list) else keywords
