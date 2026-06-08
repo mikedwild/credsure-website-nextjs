@@ -9,8 +9,8 @@ import { DEFAULT_LANG, SUPPORTED_LANGS } from './localePath';
  */
 export function useLocalizedNavigate() {
   const navigate = useNavigate();
-  const { lang } = useParams();
-  const currentLang = SUPPORTED_LANGS.includes(lang) ? lang : DEFAULT_LANG;
+  const { locale } = useParams();
+  const currentLang = SUPPORTED_LANGS.includes(locale) ? locale : DEFAULT_LANG;
 
   return useCallback((to, options) => {
     // Allow numeric navigation (e.g., navigate(-1))
