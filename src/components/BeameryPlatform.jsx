@@ -125,6 +125,8 @@ const IssuerMock = () => (
       alt="CredSure bulk-issuance workflow in three steps: (1) Upload recipients — import 50,000 rows from Recipients.csv, (2) Choose template — select your credential design, (3) Issue credentials — automatic generation and delivery. Central panel shows the 'Issuing Credentials 50,000' confirmation with a 100% complete progress bar and 50,000 recipients matched. Certificate stack on the right shows generated certificates for Alex Johnson, Priya Sharma, James Wilson, and David Lee for the Data Privacy Fundamentals course."
       width="1350"
       height="594"
+      loading="lazy"
+      decoding="async"
       className="w-full h-auto max-h-full object-contain"
       data-testid="issuer-mock-image"
     />
