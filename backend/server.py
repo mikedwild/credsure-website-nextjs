@@ -63,6 +63,7 @@ CORS_ORIGINS = os.environ.get('CORS_ORIGINS', '').strip()
 _DEFAULT_ORIGINS = [
     "https://credsure.io",
     "https://www.credsure.io",
+    "https://credsure-website-nextjs.vercel.app",
     "http://localhost:3000",
     "http://localhost:3001",
 ]
@@ -73,12 +74,12 @@ else:
     # because that breaks credentialed requests.
     ALLOWED_ORIGINS = list(_DEFAULT_ORIGINS)
 
-# Regex to cover Emergent preview / deployed-app domains without enumerating
-# every preview URL by hand. Matches both `*.preview.emergentagent.com` and
-# `*.emergent.host` (current native deploy domain).
+# Regex to cover Vercel preview deployments (credsure-website-nextjs-<hash>-…
+# .vercel.app) without enumerating each one. (Replaces the old Emergent preview/
+# deploy-domain pattern, which is no longer used.)
 ALLOWED_ORIGIN_REGEX = os.environ.get(
     'CORS_ORIGIN_REGEX',
-    r"https://([a-z0-9-]+\.)*(preview\.emergentagent\.com|emergent\.host)",
+    r"https://credsure-website-nextjs[a-z0-9-]*\.vercel\.app",
 )
 
 # Initialize rate limiter
