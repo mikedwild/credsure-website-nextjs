@@ -174,9 +174,9 @@ export const Footer = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/5 hover:bg-white/10 rounded-full transition-colors"
               >
-                <img 
-                  src="https://customer-assets.emergentagent.com/job_2a005751-62c3-4c3b-ae97-72692875beb4/artifacts/h0pvii2j_GDPR-light.svg" 
-                  alt="Vanta Secure" 
+                <img
+                  src="/images/badges/gdpr-light.svg"
+                  alt="Vanta Secure"
                   width="80"
                   height="28"
                   className="h-7 w-auto"
