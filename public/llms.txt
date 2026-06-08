@@ -1,0 +1,20 @@
+# CredSure — Digital Credential Management
+> Issue, manage, and verify blockchain-backed digital certificates and badges at scale. GDPR-compliant, EU-hosted.
+
+## Core pages
+- [Platform](https://credsure.io/en/platform): The complete digital credentialing platform — issue, verify, govern.
+- [Features](https://credsure.io/en/features): Bulk issuance, blockchain verification, sharing, analytics, API.
+- [Solutions](https://credsure.io/en/solutions): Higher education, corporate training, associations, certification bodies, healthcare, manufacturing.
+- [Pricing](https://credsure.io/en/pricing): Transparent plans, starting free.
+- [Integrations](https://credsure.io/en/integrations): LMS, CRM, productivity, e-commerce connectors.
+- [Security](https://credsure.io/en/security): Data protection and compliance posture.
+- [GDPR](https://credsure.io/en/gdpr): EU data-protection compliance.
+
+## Resources
+- [Blog](https://credsure.io/en/blog)
+- [Webinars](https://credsure.io/en/webinars)
+- [Guides](https://credsure.io/en/guides)
+- [Help Center](https://credsure.io/en/help-center)
+
+## Languages
+Available in English (/en/...) and German (/de/... with localized slugs, e.g. /de/preise, /de/plattform).
