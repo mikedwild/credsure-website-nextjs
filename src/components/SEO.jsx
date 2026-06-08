@@ -106,50 +106,18 @@ export const SEO = ({
 
   return (
     <Helmet>
-      {/* Primary Meta Tags */}
-      <title>{title}</title>
-      <meta name="title" content={title} />
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      
-      {/* Language */}
-      <html lang={currentLang} />
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={canonicalUrl} />
-      
-      {/* hreflang Tags for Bilingual Support */}
-      <link rel="alternate" hrefLang="en" href={enUrl} />
-      <link rel="alternate" hrefLang="de" href={deUrl} />
-      <link rel="alternate" hrefLang="x-default" href={enUrl} />
-      
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImageUrl} />
-      <meta property="og:locale" content={currentLang === 'de' ? 'de_DE' : 'en_US'} />
-      <meta property="og:locale:alternate" content={currentLang === 'de' ? 'en_US' : 'de_DE'} />
-      <meta property="og:site_name" content="CredSure" />
-      
-      {/* Twitter Cards */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:url" content={canonicalUrl} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImageUrl} />
-      
-      {/* Additional SEO.
-          The robots directive is dynamic so callers can `noIndex` 404s,
-          admin pages, and any URL that should stay out of the index.
-          Without this, our soft 404 page returns 200 + index/follow,
-          which Search Console flags as "Excluded by noindex" in confusing
-          ways and clutters the indexing report. */}
-      <meta name="robots" content={noIndex ? 'noindex, follow' : 'index, follow'} />
-      <meta name="googlebot" content={noIndex ? 'noindex, follow' : 'index, follow'} />
-      <meta name="revisit-after" content="7 days" />
-      
+      {/* Title, description, canonical, hreflang, OG and Twitter tags are now
+          emitted SERVER-SIDE by Next.js generateMetadata (see lib/pageMetadata
+          + the [locale] route wrappers). Duplicating them here in client-side
+          react-helmet produced conflicting/duplicate <title> and <link
+          rel="canonical"> tags (one of them resolved to "undefined/..."), which
+          search engines ignore. This component now only injects what Next's
+          Metadata API doesn't: a per-page noindex directive (when requested)
+          and JSON-LD structured data. */}
+      {noIndex && (
+        <meta name="robots" content="noindex, follow" />
+      )}
+
       {/* Structured Data (JSON-LD).
           Filters null entries so callers can pass `combineSchemas(maybeNull, ...)`
           without emitting an empty/invalid block. Falsy values + empty arrays
