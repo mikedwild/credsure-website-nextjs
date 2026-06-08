@@ -21,7 +21,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate, useLocation } from '@/lib/router-shim';
 
-const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || '';
 
 export default function AuthCallback() {
   const navigate = useNavigate();

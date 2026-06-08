@@ -21,7 +21,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import AISteeringPanel, { AI_STEERING_DEFAULTS } from '@/components/admin/AISteeringPanel';
 
-const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || '';
 
 const INDUSTRIES = [
   { value: 'higher-education',     label: 'Higher Education',     color: 'bg-blue-50 border-blue-200',     hint: 'Universities, MOOCs, diplomas, alumni' },

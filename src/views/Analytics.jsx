@@ -4,7 +4,7 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 import { TrendingUp, TrendingDown, Users, BarChart3, Activity, Lock, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || '';
 const COLORS = ['#5B22D6', '#3F2BD9', '#E22B8A', '#B82BC4', '#6366f1', '#8b5cf6', '#06b6d4'];
 
 const StatCard = ({ title, value, subtitle, trend, icon: Icon }) => (

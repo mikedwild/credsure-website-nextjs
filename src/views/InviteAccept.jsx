@@ -22,7 +22,7 @@ import { useParams, useLocation } from '@/lib/router-shim';
 import { Mail, Shield, FileText, AlertCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || '';
 const PENDING_INVITE_KEY = 'credsure-pending-invite-token';
 
 const GoogleIcon = (props) => (

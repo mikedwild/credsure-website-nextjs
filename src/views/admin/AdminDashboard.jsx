@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { TrendingUp, Users, FileText, BarChart } from 'lucide-react';
 
-const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || '';
 
 export default function AdminDashboard({ token }) {
   const [analytics, setAnalytics] = useState(null);

@@ -16,7 +16,7 @@ export const GatedContentModal = ({ isOpen, onClose, contentTitle, contentType =
     if (!formData.email) return;
     setIsSubmitting(true);
     try {
-      const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+      const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || '';
       const response = await fetch(`${API_URL}/api/leads`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

@@ -3,7 +3,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Mail, Trash2, Edit2, Shield, FileText, Check, X, Eye, EyeOff, Send, Copy, Hourglass } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || '';
 
 function RoleBadge({ role }) {
   return role === 'admin' ? (

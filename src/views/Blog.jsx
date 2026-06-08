@@ -25,7 +25,7 @@ export const Blog = () => {
   const blogTopRef = useRef(null);
 
   useEffect(() => {
-    const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+    const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || '';
     fetch(`${API_URL}/api/blogs?limit=200&lang=${i18n.language}`)
       .then(res => res.json())
       .then(data => {

@@ -34,7 +34,7 @@ import AdminAIContent from './admin/AdminAIContent';
 import AdminUsers from './admin/AdminUsers';
 import AIBlogGenerator from './admin/AIBlogGenerator';
 
-const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || '';
 
 const ALL_NAV_ITEMS = [
   { key: 'dashboard',    label: 'Dashboard',     icon: LayoutDashboard, adminOnly: true  },

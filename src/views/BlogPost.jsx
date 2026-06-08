@@ -82,7 +82,7 @@ export const BlogPost = () => {
   const viewPingedRef = useRef('');
 
   useEffect(() => {
-    const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+    const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || '';
     fetch(`${API_URL}/api/blogs/${slug}?lang=${urlLang}`)
       .then(res => {
         if (!res.ok) throw new Error('Not found');

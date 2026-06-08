@@ -19,7 +19,7 @@
 import React, { useEffect, useState } from 'react';
 import { Sparkles } from 'lucide-react';
 
-const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || '';
 
 export const AI_STEERING_DEFAULTS = {
   preset: 'balanced',

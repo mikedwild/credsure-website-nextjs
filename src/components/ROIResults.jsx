@@ -19,7 +19,7 @@ export const ROIResults = ({ roi, isAnimating, selectedVolume, onCtaClick }) => 
     if (!gateEmail) return;
     setIsGateSubmitting(true);
     try {
-      const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+      const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || '';
       await fetch(`${API_URL}/api/leads`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

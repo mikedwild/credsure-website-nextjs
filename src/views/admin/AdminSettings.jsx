@@ -3,7 +3,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Save, CheckCircle, Shield, ShieldOff, Smartphone, Copy, AlertTriangle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || '';
 
 // ─── MFA Section Component ──────────────────────────────────────────
 

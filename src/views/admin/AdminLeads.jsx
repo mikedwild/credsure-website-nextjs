@@ -3,7 +3,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Search, Download, Trash2, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || '';
 
 export default function AdminLeads({ token }) {
   const [leads, setLeads] = useState([]);

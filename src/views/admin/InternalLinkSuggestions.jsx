@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Link2, Loader2, RefreshCw, ExternalLink, ArrowRight } from 'lucide-react';
 
-const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || '';
 
 /**
  * Sidebar widget that surfaces published posts the writer can link to

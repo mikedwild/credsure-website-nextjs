@@ -11,7 +11,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Plus, Search, Edit2, Trash2, Copy, FileText, CheckSquare, Square, Eye, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || '';
 
 function StatusBadge({ status }) {
   const colors = {

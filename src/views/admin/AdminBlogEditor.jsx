@@ -12,7 +12,7 @@ import SocialCardPreviews from './SocialCardPreviews';
 import 'react-quill-new/dist/quill.snow.css';
 import '@/styles/admin-quill.css';
 
-const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || '';
 
 // ─── Content metrics helpers ─────────────────────────────────────────
 // Extracted so the editor can show live word count + reading time as

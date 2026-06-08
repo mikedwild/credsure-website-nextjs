@@ -16,7 +16,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { Search, X, Trash2, Loader2, ImageOff, Upload } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || '';
 const PAGE_SIZE = 30;
 
 const formatBytes = (n) => {

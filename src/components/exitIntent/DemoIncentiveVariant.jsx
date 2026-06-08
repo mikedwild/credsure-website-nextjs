@@ -10,7 +10,7 @@ export const DemoIncentiveVariant = ({ onSubmitted }) => {
     // Fire a tracking lead before navigating (no email required for this variant).
     // keepalive ensures the request completes even after navigation starts.
     try {
-      const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+      const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || '';
       fetch(`${API_URL}/api/leads`, {
         method: 'POST',
         keepalive: true,

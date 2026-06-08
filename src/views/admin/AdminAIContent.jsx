@@ -3,7 +3,7 @@ import React, { useState, useCallback } from 'react';
 import { Sparkles, Loader2, FileText, TrendingUp, Tag, ArrowRight, CheckCircle, AlertCircle, RefreshCw, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || '';
 
 function IntentBadge({ intent }) {
   const colors = {
