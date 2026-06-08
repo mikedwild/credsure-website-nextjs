@@ -16,6 +16,8 @@ User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /signin
+Disallow: /admin
+Disallow: /invite
 Disallow: /static/
 
 # ── AI search bots (citation traffic) — ALLOW ───────────────────────

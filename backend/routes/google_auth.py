@@ -1,45 +1,55 @@
 """
-Google OAuth (Emergent-managed) auth routes.
+Google OAuth (direct) auth routes — the sole authentication path for the admin.
 
-This is the SOLE authentication path for the admin panel. We intentionally
-removed username/password sign-in — Google is now the only way in. The
-existing /api/auth/login endpoints in routes/auth.py remain mounted for
-backwards-compat (e.g. the legacy seed admin can still issue a JWT via
-testing tooling), but the React UI no longer surfaces them.
+Previously this went through Emergent's managed OAuth
+(auth.emergentagent.com + demobackend.emergentagent.com/.../session-data).
+That dependency is removed: we now run the standard Google OAuth 2.0
+Authorization-Code flow ourselves.
 
 Flow:
-  1. Frontend redirects to https://auth.emergentagent.com/?redirect=<this-app>/en/admin
-  2. Emergent does the Google OAuth dance and bounces back with #session_id=...
-  3. AuthCallback.jsx posts that session_id to /api/auth/google/session
-  4. We call Emergent's /session-data, validate the email domain, upsert into
-     the existing `users` collection, store a session_token in `user_sessions`,
-     and set a httpOnly session_token cookie.
-  5. /api/auth/me reads the cookie and returns the user (used by ProtectedRoute).
+  1. Frontend sends the browser to  GET /api/auth/google/start?redirect=<spa-url>&invite=<token?>
+  2. We stash a one-time `state` (with the redirect + optional invite) and 302
+     to Google's consent screen (redirect_uri = <backend>/api/auth/google/callback).
+  3. Google bounces back to /api/auth/google/callback?code=...&state=...
+  4. We exchange the code for tokens, read the Google profile from the userinfo
+     endpoint, validate the email domain, upsert into `users`, create a session
+     in `user_sessions`, set the httpOnly session cookie, and 302 back to the SPA
+     redirect with `#token=<session_token>` (and `#error=...` on failure).
+  5. /api/auth/me (legacy router) and /api/auth/google/me read the cookie/bearer.
   6. /api/auth/logout deletes the session and clears the cookie.
 
-Domain whitelist + approval:
-  • Only @credsure.io and @certif-id.com may complete the exchange.
-  • Brand-new users land with role="editor" and active=False — an existing
-    admin must flip active=True via /admin/users before they can log in.
-  • Existing users (e.g. the seeded admin@credsure.io) are matched by email
-    so their role/active state is preserved across the OAuth migration.
+Config (env):
+  GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET   — from Google Cloud → Credentials
+  OAUTH_CALLBACK_URL                        — must EXACTLY match an Authorized
+                                              redirect URI on the OAuth client,
+                                              e.g. https://api.credsure.io/api/auth/google/callback
+                                              (falls back to BACKEND_PUBLIC_URL + path,
+                                              else derived from the request)
+
+Domain whitelist + approval (unchanged): only @credsure.io / @certif-id.com;
+new users land role=editor active=False pending admin approval; invites and
+BOOTSTRAP_ADMIN_EMAILS auto-activate.
 """
 
 import os
 import uuid
+import secrets
 import logging
 import httpx
+from urllib.parse import urlencode, quote, urlparse
 from datetime import datetime, timezone, timedelta
 from typing import Optional
 
 from fastapi import APIRouter, Request, Response, HTTPException, Cookie
-from pydantic import BaseModel
+from fastapi.responses import RedirectResponse
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
 
-# Emergent-managed Google OAuth session-data endpoint
-EMERGENT_SESSION_URL = "https://demobackend.emergentagent.com/auth/v1/env/oauth/session-data"
+# ── Google OAuth endpoints ──────────────────────────────────────────────
+GOOGLE_AUTH_URL = "https://accounts.google.com/o/oauth2/v2/auth"
+GOOGLE_TOKEN_URL = "https://oauth2.googleapis.com/token"
+GOOGLE_USERINFO_URL = "https://www.googleapis.com/oauth2/v3/userinfo"
 
 # Email domains allowed to complete OAuth and provision an account
 ALLOWED_EMAIL_DOMAINS = {"credsure.io", "certif-id.com"}
@@ -48,56 +58,55 @@ ALLOWED_EMAIL_DOMAINS = {"credsure.io", "certif-id.com"}
 # by an existing admin before they can actually log in)
 DEFAULT_NEW_USER_ROLE = "editor"
 
+SESSION_TTL_DAYS = 7
+SESSION_COOKIE_NAME = "session_token"
+STATE_TTL_MINUTES = 10
 
-async def _notify_slack_pending_approval(email: str, name: str, request: Request) -> None:
-    """
-    Fire-and-forget Slack notification when a domain-approved user signs in
-    via Google but is awaiting admin approval. Lets admins act on the
-    pending request without polling the user-management screen.
 
-    Falls back silently if SLACK_WEBHOOK_URL is unset (e.g. local dev).
-    """
+def _google_client():
+    cid = os.getenv("GOOGLE_CLIENT_ID")
+    secret = os.getenv("GOOGLE_CLIENT_SECRET")
+    if not cid or not secret:
+        raise HTTPException(
+            status_code=503,
+            detail="Google OAuth is not configured (set GOOGLE_CLIENT_ID / GOOGLE_CLIENT_SECRET).",
+        )
+    return cid, secret
+
+
+def _callback_url(request: Request) -> str:
+    """The redirect_uri sent to Google — must match an Authorized redirect URI."""
+    explicit = os.getenv("OAUTH_CALLBACK_URL")
+    if explicit:
+        return explicit
+    base = os.getenv("BACKEND_PUBLIC_URL")
+    if base:
+        return base.rstrip("/") + "/api/auth/google/callback"
+    # Last resort: derive from the incoming request (works in simple setups).
+    return str(request.url_for("google_oauth_callback"))
+
+
+async def _notify_slack_pending_approval(email: str, name: str, base_url: str) -> None:
+    """Fire-and-forget Slack ping when a domain-approved user is awaiting approval."""
     webhook_url = os.getenv("SLACK_WEBHOOK_URL")
     if not webhook_url:
         return
-
-    # Derive the admin users URL from the request's Origin header so the
-    # link works for both preview and prod without hardcoding domains.
-    origin = request.headers.get("origin") or request.headers.get("referer") or ""
-    if origin:
-        # Strip any path off referer; keep scheme+host.
-        from urllib.parse import urlparse
-        parsed = urlparse(origin)
-        origin = f"{parsed.scheme}://{parsed.netloc}" if parsed.scheme else origin
-    admin_users_url = f"{origin}/en/admin/users?filter=pending" if origin else "(visit /en/admin/users)"
-
+    admin_users_url = f"{base_url}/en/admin/users?filter=pending" if base_url else "(visit /en/admin/users)"
     payload = {
         "text": f":wave: New admin sign-in pending approval: {email}",
         "blocks": [
             {"type": "header", "text": {"type": "plain_text", "text": "👋 New admin sign-in — pending approval"}},
-            {
-                "type": "section",
-                "fields": [
-                    {"type": "mrkdwn", "text": f"*Email:*\n{email}"},
-                    {"type": "mrkdwn", "text": f"*Name:*\n{name or '—'}"},
-                ],
-            },
-            {
-                "type": "section",
-                "text": {
-                    "type": "mrkdwn",
-                    "text": "They signed in with Google but their account is `active=false`. Approve them in the admin user-management screen, or send them an invite to auto-activate next time.",
-                },
-            },
-            {
-                "type": "actions",
-                "elements": [{
-                    "type": "button",
-                    "style": "primary",
-                    "text": {"type": "plain_text", "text": "Open user management"},
-                    "url": admin_users_url,
-                }],
-            },
+            {"type": "section", "fields": [
+                {"type": "mrkdwn", "text": f"*Email:*\n{email}"},
+                {"type": "mrkdwn", "text": f"*Name:*\n{name or '—'}"},
+            ]},
+            {"type": "section", "text": {"type": "mrkdwn",
+                "text": "They signed in with Google but their account is `active=false`. Approve them in user management or send an invite to auto-activate."}},
+            {"type": "actions", "elements": [{
+                "type": "button", "style": "primary",
+                "text": {"type": "plain_text", "text": "Open user management"},
+                "url": admin_users_url,
+            }]},
         ],
     }
     try:
@@ -110,32 +119,10 @@ async def _notify_slack_pending_approval(email: str, name: str, request: Request
 
 
 def _bootstrap_admin_emails() -> set[str]:
-    """
-    Comma-separated list of emails that should be force-activated as admin
-    on Google sign-in. Used for the FIRST admin (or to recover when no one
-    has access). Read fresh on every request so the operator can rotate the
-    env var without a restart.
-
-    Example: BOOTSTRAP_ADMIN_EMAILS="mikedwild@certif-id.com,me@credsure.io"
-
-    Once you're in and the proper users are activated, clear the env var
-    (or set it to empty) and restart to re-lock the bootstrap door.
-    """
+    """Comma-separated emails force-activated as admin on Google sign-in
+    (first-admin onboarding / access recovery). Read fresh each request."""
     raw = os.getenv("BOOTSTRAP_ADMIN_EMAILS", "")
     return {e.strip().lower() for e in raw.split(",") if e.strip()}
-
-SESSION_TTL_DAYS = 7
-SESSION_COOKIE_NAME = "session_token"
-
-
-class GoogleSessionRequest(BaseModel):
-    """Body for /api/auth/google/session — the session_id Emergent put in the URL fragment."""
-    session_id: str
-    # Optional: when the user came in via an invite link, the frontend
-    # stashes the invite token in localStorage before the OAuth roundtrip
-    # and replays it here. We then auto-activate (skip manual admin
-    # approval) and apply the invited role.
-    invite_token: str | None = None
 
 
 def _email_domain_allowed(email: str) -> bool:
@@ -145,20 +132,10 @@ def _email_domain_allowed(email: str) -> bool:
 
 
 def _set_session_cookie(response: Response, token: str) -> None:
-    """
-    httpOnly session cookie.
-    samesite=None + secure=True is required for cross-site preview-domain
-    deployments (e.g. credsure.io front-end → emergent backend during local
-    smoke tests). Cookie is bound to the API domain.
-    """
     response.set_cookie(
-        key=SESSION_COOKIE_NAME,
-        value=token,
+        key=SESSION_COOKIE_NAME, value=token,
         max_age=SESSION_TTL_DAYS * 24 * 3600,
-        httponly=True,
-        secure=True,
-        samesite="none",
-        path="/",
+        httponly=True, secure=True, samesite="none", path="/",
     )
 
 
@@ -166,122 +143,67 @@ def _clear_session_cookie(response: Response) -> None:
     response.delete_cookie(key=SESSION_COOKIE_NAME, path="/", samesite="none", secure=True)
 
 
-@router.post("/auth/google/session")
-async def google_session_exchange(req: GoogleSessionRequest, request: Request, response: Response):
-    """
-    Exchange Emergent OAuth session_id (URL fragment) for an app session.
+class _AuthError(Exception):
+    """Provisioning rejection carrying a user-facing message + HTTP status."""
+    def __init__(self, status: int, message: str):
+        self.status = status
+        self.message = message
+        super().__init__(message)
 
-    Returns the upserted user document on success and sets the session cookie.
-    """
-    db = request.app.state.db
 
-    # 1. Look up Google identity from Emergent
-    try:
-        async with httpx.AsyncClient(timeout=10.0) as client:
-            res = await client.get(
-                EMERGENT_SESSION_URL,
-                headers={"X-Session-ID": req.session_id},
-            )
-    except httpx.HTTPError as e:
-        logger.warning(f"Emergent session-data call failed: {e}")
-        raise HTTPException(status_code=502, detail="Auth provider unavailable")
+async def _provision_and_issue_session(
+    db, *, email: str, name: str, picture: Optional[str], google_sub: Optional[str],
+    invite_token: Optional[str], base_url: str,
+) -> tuple[dict, str]:
+    """Shared post-identity logic: domain gate → invite/bootstrap → upsert →
+    approval gate → create session. Returns (safe_user, session_token).
+    Raises _AuthError on rejection."""
+    email = (email or "").strip().lower()
+    name = name or (email.split("@", 1)[0] if email else "")
 
-    if res.status_code != 200:
-        raise HTTPException(status_code=401, detail="Invalid or expired session_id")
+    if not email:
+        raise _AuthError(400, "Google returned an incomplete profile (no email).")
 
-    payload = res.json()
-    email = (payload.get("email") or "").strip().lower()
-    name = payload.get("name") or email.split("@", 1)[0]
-    picture = payload.get("picture")
-    google_sub = payload.get("id")
-    session_token = payload.get("session_token")
-
-    if not email or not session_token:
-        raise HTTPException(status_code=400, detail="Auth provider returned an incomplete profile")
-
-    # 2. Domain whitelist gate
+    # Domain whitelist gate
     if not _email_domain_allowed(email):
         logger.info(f"Google sign-in rejected for non-whitelisted domain: {email}")
-        raise HTTPException(
-            status_code=403,
-            detail="Email domain not allowed. Sign in with a @credsure.io or @certif-id.com account.",
-        )
+        raise _AuthError(403, "Email domain not allowed. Sign in with a @credsure.io or @certif-id.com account.")
 
-    # 2a. Bootstrap-admin override. If the operator has set
-    #     BOOTSTRAP_ADMIN_EMAILS, those emails are force-activated as admin
-    #     even without an invite. This is the recovery path when no one has
-    #     access (e.g. first admin onboarding, or if every active admin's
-    #     account got deactivated). Operator should clear the env var once
-    #     real admins are in.
     is_bootstrap = email in _bootstrap_admin_emails()
 
-    # 2b. If an invite_token was supplied, validate it now. Must be active,
-    #     unexpired, and the invite email must match the Google email.
+    # Validate invite (if any)
     invite_doc = None
-    if req.invite_token:
+    if invite_token:
         from routes.invites import load_active_invite  # local import avoids cycle
-        try:
-            invite_doc = await load_active_invite(db, req.invite_token)
-        except HTTPException as e:
-            # Surface the underlying invite error to the client unchanged.
-            raise e
+        invite_doc = await load_active_invite(db, invite_token)  # raises HTTPException on bad invite
         if (invite_doc.get("email") or "").lower() != email:
-            raise HTTPException(
-                status_code=403,
-                detail=f"This invite was issued for {invite_doc.get('email')}. Sign in with that Google account instead.",
-            )
+            raise _AuthError(403, f"This invite was issued for {invite_doc.get('email')}. Sign in with that Google account instead.")
 
-    # 3. Upsert into `users`. Match by email so the seeded admin@credsure.io
-    #    keeps its role+active state on first Google login.
     existing = await db.users.find_one({"email": email}, {"_id": 0})
     now_iso = datetime.now(timezone.utc).isoformat()
 
     if existing is None:
         user_id = f"user_{uuid.uuid4().hex[:12]}"
-        # Bootstrap admin > invite > default. Bootstrap forces admin role +
-        # active so the operator can recover access without poking the DB.
         if is_bootstrap:
-            new_role = "admin"
-            new_active = True
+            new_role, new_active = "admin", True
         elif invite_doc:
-            new_role = invite_doc.get("role", DEFAULT_NEW_USER_ROLE)
-            new_active = True
+            new_role, new_active = invite_doc.get("role", DEFAULT_NEW_USER_ROLE), True
         else:
-            new_role = DEFAULT_NEW_USER_ROLE
-            new_active = False
+            new_role, new_active = DEFAULT_NEW_USER_ROLE, False
         user_doc = {
-            "user_id": user_id,
-            "email": email,
-            "name": name,
-            "picture": picture,
-            "google_sub": google_sub,
-            "role": new_role,
-            "active": new_active,
-            "mfa_enabled": False,
-            "created_at": now_iso,
-            "auth_provider": "google",
+            "user_id": user_id, "email": email, "name": name, "picture": picture,
+            "google_sub": google_sub, "role": new_role, "active": new_active,
+            "mfa_enabled": False, "created_at": now_iso, "auth_provider": "google",
             "invited_by": invite_doc.get("invited_by") if invite_doc else None,
         }
         await db.users.insert_one(user_doc)
-        if is_bootstrap:
-            logger.info(f"Google sign-in BOOTSTRAP-ADMIN provisioned: {email}")
-        elif invite_doc:
-            logger.info(f"Google sign-in accepted invite (auto-activated): {email} role={new_role}")
-        else:
-            logger.info(f"Google sign-in provisioned new user (pending approval): {email}")
-        # Mongo's insert_one mutates user_doc by adding _id — drop it before returning
         user_doc.pop("_id", None)
+        logger.info(f"Google sign-in provisioned: {email} role={new_role} active={new_active}")
     else:
-        # Link Google identity onto existing record. If this sign-in is
-        # consuming an invite OR the email is in BOOTSTRAP_ADMIN_EMAILS,
-        # also flip active=True. Bootstrap additionally forces role=admin
-        # (lets an operator recover full access).
         update = {
             "name": existing.get("name") or name,
             "picture": picture or existing.get("picture"),
-            "google_sub": google_sub,
-            "auth_provider": "google",
-            "last_login_at": now_iso,
+            "google_sub": google_sub, "auth_provider": "google", "last_login_at": now_iso,
             "active": True if (invite_doc or is_bootstrap) else existing.get("active", True),
         }
         if is_bootstrap:
@@ -294,65 +216,166 @@ async def google_session_exchange(req: GoogleSessionRequest, request: Request, r
             await db.users.update_one({"email": email}, {"$set": {"user_id": user_id}})
         user_doc = {**existing, **update, "user_id": user_id}
         user_doc.pop("_id", None)
-        if is_bootstrap:
-            logger.info(f"Google sign-in BOOTSTRAP-ADMIN re-activated: {email}")
 
-    # 3a. Mark the invite as consumed — must run AFTER the user upsert so
-    #     a partial failure doesn't burn the invite without provisioning.
+    # Consume invite after successful upsert
     if invite_doc:
         await db.user_invites.update_one(
-            {"token": req.invite_token},
-            {"$set": {
-                "accepted_at": datetime.now(timezone.utc),
-                "accepted_user_id": user_id,
-            }},
+            {"token": invite_token},
+            {"$set": {"accepted_at": datetime.now(timezone.utc), "accepted_user_id": user_id}},
         )
 
-    # 4. Approval gate — block login if the user hasn't been activated yet.
+    # Approval gate
     if user_doc.get("active") is False:
         logger.info(f"Google sign-in blocked (pending approval): {email}")
-        # Best-effort Slack ping so admins know someone is waiting. Only
-        # fire on the FIRST attempt (i.e. user was just created in step 3).
-        # Repeat sign-in attempts by the same pending user don't re-notify.
         if existing is None:
             try:
-                await _notify_slack_pending_approval(email, name, request)
-            except Exception as e:  # noqa: BLE001 — never let Slack break auth
+                await _notify_slack_pending_approval(email, name, base_url)
+            except Exception as e:  # noqa: BLE001
                 logger.warning(f"Slack pending-approval notification failed (ignored): {e}")
-        raise HTTPException(
-            status_code=403,
-            detail=(
-                "Your account is awaiting approval from an administrator. "
-                "We've notified the admin team — you'll be able to sign in "
-                "once they activate your account. For urgent access, contact "
-                "your inviter or email admin@credsure.io."
-            ),
-        )
+        raise _AuthError(403,
+            "Your account is awaiting approval from an administrator. "
+            "We've notified the admin team — you'll be able to sign in once they "
+            "activate your account. For urgent access, email admin@credsure.io.")
 
-    # 5. Persist session token + set cookie
+    # Issue our own session token (no longer provided by Emergent)
+    session_token = secrets.token_urlsafe(32)
     await db.user_sessions.insert_one({
-        "user_id": user_id,
-        "email": email,
-        "session_token": session_token,
+        "user_id": user_id, "email": email, "session_token": session_token,
         "expires_at": datetime.now(timezone.utc) + timedelta(days=SESSION_TTL_DAYS),
         "created_at": datetime.now(timezone.utc),
     })
 
-    _set_session_cookie(response, session_token)
+    safe_user = {k: v for k, v in user_doc.items()
+                 if k not in ("password_hash", "mfa_secret", "mfa_pending_secret", "recovery_codes", "google_sub")}
+    return safe_user, session_token
 
-    # Strip sensitive fields before returning
-    safe_user = {k: v for k, v in user_doc.items() if k not in ("password_hash", "mfa_secret", "mfa_pending_secret", "recovery_codes", "google_sub")}
 
-    return {"user": safe_user, "token": session_token}
+# ── OAuth: start ─────────────────────────────────────────────────────────
 
+@router.get("/auth/google/start")
+async def google_oauth_start(request: Request, redirect: str = "", invite: str = ""):
+    """Kick off Google OAuth. Stashes a one-time state then 302s to Google."""
+    db = request.app.state.db
+    client_id, _ = _google_client()
+
+    state = secrets.token_urlsafe(24)
+    await db.oauth_states.insert_one({
+        "state": state,
+        "redirect": redirect or "",
+        "invite_token": invite or "",
+        "created_at": datetime.now(timezone.utc),
+    })
+
+    params = {
+        "client_id": client_id,
+        "redirect_uri": _callback_url(request),
+        "response_type": "code",
+        "scope": "openid email profile",
+        "state": state,
+        "access_type": "online",
+        "prompt": "select_account",
+        "include_granted_scopes": "true",
+    }
+    return RedirectResponse(f"{GOOGLE_AUTH_URL}?{urlencode(params)}", status_code=302)
+
+
+# ── OAuth: callback ──────────────────────────────────────────────────────
+
+def _spa_base(redirect: str) -> str:
+    if not redirect:
+        return ""
+    p = urlparse(redirect)
+    return f"{p.scheme}://{p.netloc}" if p.scheme else ""
+
+
+def _redirect_with_error(redirect: str, message: str) -> RedirectResponse:
+    target = redirect or "/en/admin"
+    return RedirectResponse(f"{target}#error={quote(message)}", status_code=302)
+
+
+@router.get("/auth/google/callback", name="google_oauth_callback")
+async def google_oauth_callback(request: Request, code: str = "", state: str = "", error: str = ""):
+    """Handle Google's redirect: exchange code → profile → provision → session,
+    then 302 back to the SPA with #token=... (or #error=...)."""
+    db = request.app.state.db
+    client_id, client_secret = _google_client()
+
+    # Resolve + consume state
+    st = await db.oauth_states.find_one({"state": state}) if state else None
+    spa_redirect = (st or {}).get("redirect") or ""
+    invite_token = (st or {}).get("invite_token") or ""
+    if st:
+        await db.oauth_states.delete_one({"state": state})
+        created = st.get("created_at")
+        if created and created.tzinfo is None:
+            created = created.replace(tzinfo=timezone.utc)
+        if created and created < datetime.now(timezone.utc) - timedelta(minutes=STATE_TTL_MINUTES):
+            return _redirect_with_error(spa_redirect, "Login link expired, please try again.")
+
+    def _fail(msg: str):
+        return _redirect_with_error(spa_redirect, msg)
+
+    if error:
+        return _fail(f"Google sign-in was cancelled ({error}).")
+    if not state or not st:
+        return _fail("Invalid or expired login state, please try again.")
+    if not code:
+        return _fail("Google did not return an authorization code.")
+
+    # Exchange the code for tokens, then read the verified profile
+    try:
+        async with httpx.AsyncClient(timeout=10.0) as client:
+            tok = await client.post(GOOGLE_TOKEN_URL, data={
+                "code": code,
+                "client_id": client_id,
+                "client_secret": client_secret,
+                "redirect_uri": _callback_url(request),
+                "grant_type": "authorization_code",
+            })
+            if tok.status_code != 200:
+                logger.warning(f"Google token exchange failed: {tok.status_code} {tok.text[:200]}")
+                return _fail("Could not complete sign-in with Google. Please try again.")
+            access_token = tok.json().get("access_token")
+
+            info = await client.get(GOOGLE_USERINFO_URL, headers={"Authorization": f"Bearer {access_token}"})
+            if info.status_code != 200:
+                return _fail("Could not read your Google profile. Please try again.")
+            profile = info.json()
+    except httpx.HTTPError as e:
+        logger.warning(f"Google OAuth HTTP error: {e}")
+        return _fail("Google is unavailable right now. Please try again shortly.")
+
+    if not profile.get("email_verified", True):
+        return _fail("Your Google email is not verified.")
+
+    base_url = _spa_base(spa_redirect)
+    try:
+        _safe_user, session_token = await _provision_and_issue_session(
+            db,
+            email=profile.get("email", ""),
+            name=profile.get("name", ""),
+            picture=profile.get("picture"),
+            google_sub=profile.get("sub"),
+            invite_token=invite_token or None,
+            base_url=base_url,
+        )
+    except _AuthError as e:
+        return _fail(e.message)
+    except HTTPException as e:  # invite errors
+        return _fail(e.detail if isinstance(e.detail, str) else "Sign-in failed.")
+
+    # Success: set cookie + bounce back to the SPA with the token in the fragment
+    # (fragments aren't sent to servers / logged). The SPA stores it as a bearer.
+    target = spa_redirect or "/en/admin"
+    resp = RedirectResponse(f"{target}#token={quote(session_token)}", status_code=302)
+    _set_session_cookie(resp, session_token)
+    return resp
+
+
+# ── Session resolution / me / logout (unchanged behaviour) ───────────────
 
 async def _resolve_session_user(db, request: Request) -> Optional[dict]:
-    """
-    Read session_token from cookie first, then Authorization header as
-    fallback (testing/scripting). Returns the user doc or None.
-
-    Mirrors the get_current_admin pattern but cookie-first.
-    """
+    """Cookie-first, then Authorization bearer fallback. Returns user or None."""
     token = request.cookies.get(SESSION_COOKIE_NAME)
     if not token:
         auth_header = request.headers.get("Authorization", "")
@@ -384,12 +407,6 @@ async def _resolve_session_user(db, request: Request) -> Optional[dict]:
 
 @router.get("/auth/google/me")
 async def auth_me_google(request: Request):
-    """
-    Diagnostic endpoint — returns the current user when authenticated via
-    the Google session_token cookie. Mostly useful for the testing agent;
-    production code should hit `/api/auth/me` (handled by the legacy
-    auth router which now also echoes the token).
-    """
     db = request.app.state.db
     user = await _resolve_session_user(db, request)
     if not user:
@@ -400,8 +417,7 @@ async def auth_me_google(request: Request):
 
 @router.post("/auth/logout")
 async def auth_logout(request: Request, response: Response, session_token: Optional[str] = Cookie(default=None)):
-    """Delete the session and clear the cookie. Accepts bearer too because
-    Emergent's ingress wildcard ACAO blocks the cookie path on the SPA."""
+    """Delete the session and clear the cookie. Accepts bearer too."""
     db = request.app.state.db
     token = session_token or request.cookies.get(SESSION_COOKIE_NAME)
     if not token:

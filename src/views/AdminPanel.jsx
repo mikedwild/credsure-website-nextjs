@@ -89,6 +89,29 @@ export default function AdminPanel() {
     if (initialUser) return;
     let cancelled = false;
     (async () => {
+      // Post-OAuth landing: the backend redirects here with the session token
+      // (or an error) in the URL fragment. Fragments aren't sent to servers,
+      // so this keeps the token out of logs/referrers. Persist it, then clean
+      // the URL before the auth check below picks it up.
+      try {
+        const hash = window.location.hash || '';
+        if (hash.length > 1) {
+          const params = new URLSearchParams(hash.replace(/^#/, ''));
+          const hashToken = params.get('token');
+          const hashError = params.get('error');
+          if (hashToken) {
+            localStorage.setItem('credsure-admin-token', hashToken);
+          }
+          if (hashError) {
+            setError(hashError);
+          }
+          if (hashToken || hashError) {
+            // Strip the fragment so a refresh doesn't re-process it.
+            window.history.replaceState(null, '', window.location.pathname + window.location.search);
+          }
+        }
+      } catch (e) { /* private mode / SSR guard */ }
+
       let storedToken = '';
       try { storedToken = localStorage.getItem('credsure-admin-token') || ''; } catch (e) { /* private mode */ }
       if (!storedToken) {
@@ -122,11 +145,12 @@ export default function AdminPanel() {
   const handleGoogleLogin = useCallback(() => {
     setLoading(true);
     setError('');
-    // REMINDER: DO NOT HARDCODE THE URL, OR ADD ANY FALLBACKS OR REDIRECT
-    // URLS, THIS BREAKS THE AUTH. Use window.location.origin so the user
-    // returns to the exact same domain (preview vs prod).
+    // Direct Google OAuth (no Emergent). We hand the backend a `redirect`
+    // (this same admin page) so it can bounce the browser back here with
+    // #token=... once Google + provisioning succeed. window.location.origin
+    // keeps preview vs prod on the correct domain.
     const redirectUrl = window.location.origin + location.pathname;
-    window.location.href = `https://auth.emergentagent.com/?redirect=${encodeURIComponent(redirectUrl)}`;
+    window.location.href = `${API_URL}/api/auth/google/start?redirect=${encodeURIComponent(redirectUrl)}`;
   }, [location.pathname]);
 
   const handleLogout = useCallback(async () => {

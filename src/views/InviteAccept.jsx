@@ -69,14 +69,12 @@ export default function InviteAccept() {
 
   const handleAcceptWithGoogle = () => {
     setRedirecting(true);
-    // Stash the invite token so AuthCallback can replay it after the
-    // Google round-trip. localStorage survives the cross-origin redirect.
-    try { localStorage.setItem(PENDING_INVITE_KEY, token); } catch (e) { /* private mode */ }
-    // REMINDER: DO NOT HARDCODE THE URL, OR ADD ANY FALLBACKS OR REDIRECT
-    // URLS, THIS BREAKS THE AUTH. Send the user to the admin path so once
-    // they're activated they land in the panel.
+    // Direct Google OAuth. The invite token rides through the backend `state`
+    // (no localStorage needed): the callback validates it and auto-activates
+    // the account, then bounces the browser to the admin path with #token=...
     const redirectUrl = window.location.origin + adminPath;
-    window.location.href = `https://auth.emergentagent.com/?redirect=${encodeURIComponent(redirectUrl)}`;
+    const params = new URLSearchParams({ redirect: redirectUrl, invite: token });
+    window.location.href = `${API_URL}/api/auth/google/start?${params.toString()}`;
   };
 
   if (loadingInvite) {
