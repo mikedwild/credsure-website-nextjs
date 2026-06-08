@@ -36,7 +36,7 @@ async def admin_upload_image(request: Request, file: UploadFile = File(...)):
     if len(data) > 5 * 1024 * 1024:
         raise HTTPException(status_code=400, detail="File too large (max 5MB)")
 
-    path = upload_image(data, file.filename, file.content_type)
+    path = await upload_image(db, data, file.filename, file.content_type)
 
     await db.files.insert_one({
         "id": str(uuid.uuid4()),
@@ -148,7 +148,7 @@ async def admin_generate_featured_image(request: Request, body: GenerateFeatured
             logger.warning(f"[admin/images/generate] non-bytes payload from {provider}")
             continue
         filename = f"ai-{uuid.uuid4().hex[:10]}.png"
-        path = upload_image(bytes(image_bytes), filename, "image/png")
+        path = await upload_image(db, bytes(image_bytes), filename, "image/png")
         await db.files.insert_one({
             "id": str(uuid.uuid4()),
             "storage_path": path,
@@ -182,7 +182,10 @@ async def serve_file(request: Request, path: str):
     if not record:
         raise HTTPException(status_code=404, detail="File not found")
 
-    data, content_type = get_object(path)
+    try:
+        data, content_type = await get_object(db, path)
+    except FileNotFoundError:
+        raise HTTPException(status_code=404, detail="File not found")
     return Response(content=data, media_type=record.get("content_type", content_type))
 
 

@@ -160,12 +160,8 @@ async def startup_db_client():
     app.state.mongo_client = AsyncIOMotorClient(MONGO_URL)
     app.state.db = app.state.mongo_client[DB_NAME]
     logger.info(f"Connected to MongoDB: {DB_NAME}")
-    # Init object storage
-    try:
-        from utils.storage import init_storage
-        init_storage()
-    except Exception as e:
-        logger.warning(f"Object storage init deferred: {e}")
+    # Blog image/file storage is now MongoDB GridFS (utils.storage) — no separate
+    # object-store service or warm-up step needed.
     # Seed admin user
     try:
         from utils.auth import seed_admin
