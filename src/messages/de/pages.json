@@ -862,6 +862,89 @@
       "title": "Zertifikatsvorlagen | Fertige Designs",
       "description": "Über 50 professionelle Zertifikatsvorlagen durchsuchen. Farben, Logos und Layouts anpassen.",
       "keywords": "Zertifikatsvorlagen, Credential-Designs, Vorlagengalerie"
+    },
+    "platform": {
+      "title": "Plattform | Das komplette System für digitale Zeugnisse",
+      "description": "Zertifikate durchgängig ausstellen, verwalten, verifizieren und steuern – auf einer Plattform. Blockchain-gestützt, DSGVO-konform, skalierbar.",
+      "keywords": "Zertifikatsplattform, Plattform für digitale Zeugnisse, Credential-Management"
+    },
+    "resources": {
+      "title": "Ressourcen | Leitfäden, Webinare & Hilfe | CredSure",
+      "description": "Leitfäden, Webinare, Anleitungen und Hilfeartikel rund um digitale Zertifikate mit CredSure.",
+      "keywords": "Ressourcen Zertifikate, Leitfäden digitale Badges, Webinare"
+    },
+    "signin": {
+      "title": "Anmelden | CredSure",
+      "description": "Melden Sie sich bei Ihrem CredSure-Konto an."
+    },
+    "impressum": {
+      "title": "Impressum | CredSure",
+      "description": "Rechtliche Hinweise und Unternehmensangaben zu CredSure."
+    },
+    "featuresPlatform": {
+      "title": "Plattform-Funktionen | Ein System für jeden Workflow",
+      "description": "Wie die CredSure-Plattform Ausstellung, Verifizierung, Governance und Analytics in einem Workflow vereint.",
+      "keywords": "Plattform-Funktionen, Credential-Workflow"
+    },
+    "verification": {
+      "title": "Sofortige Verifizierung | Fälschungssichere Prüfung",
+      "description": "Jeder kann ein Zertifikat in Sekunden über eine öffentliche, blockchain-verankerte Seite verifizieren – ohne Login.",
+      "keywords": "Zertifikat verifizieren, digitale Verifizierung, Sofortprüfung"
+    },
+    "credentialManagement": {
+      "title": "Zertifikatsverwaltung | Ausstellen & Verwalten im großen Stil",
+      "description": "Zertifikate erstellen, organisieren, widerrufen und nachverfolgen – alles in einem Dashboard.",
+      "keywords": "Zertifikatsverwaltung, digitale Zertifikate verwalten, Dashboard"
+    },
+    "recipientWall": {
+      "title": "Empfänger-Wand | Teilbare Zertifikatsprofile",
+      "description": "Geben Sie Empfängern eine schöne, teilbare Wand ihrer verifizierten Zertifikate für Arbeitgeber und Kollegen.",
+      "keywords": "Zertifikatswand, teilbare Zertifikate, Empfängerprofil"
+    },
+    "courseCompletion": {
+      "title": "Kursabschluss-Zertifikate | Ausstellung automatisieren",
+      "description": "Stellen Sie automatisch verifizierbare Zertifikate aus, sobald ein Kurs abgeschlossen ist.",
+      "keywords": "Kursabschluss-Zertifikat, Schulungszertifikate, LMS-Zertifikate"
+    },
+    "professionalLicenses": {
+      "title": "Berufslizenzen | Verifizierbare digitale Nachweise",
+      "description": "Stellen Sie fälschungssichere Berufslizenzen aus, die Behörden und Arbeitgeber sofort verifizieren können.",
+      "keywords": "Berufslizenz, digitale Lizenzierung, verifizierbare Zertifizierung"
+    },
+    "memberCredentials": {
+      "title": "Mitglieder-Zertifikate | Verbands-Badges",
+      "description": "Stellen Sie verifizierbare Mitgliedschafts-Zertifikate und Badges aus, die Engagement und Status belegen.",
+      "keywords": "Mitglieder-Zertifikate, Verbands-Badges, Mitgliederverifizierung"
+    },
+    "scaleProgram": {
+      "title": "Programm skalieren | Massenausstellung & API",
+      "description": "Von Hunderten zu Millionen Zertifikaten – mit Massenausstellung, Automatisierung und einer robusten API.",
+      "keywords": "Credentialing skalieren, Massenausstellung, Zertifikats-API"
+    },
+    "increaseEngagement": {
+      "title": "Engagement steigern | Teilbare digitale Badges",
+      "description": "Mehr Teilen, Empfehlungen und Reichweite mit schönen, social-tauglichen digitalen Badges.",
+      "keywords": "Engagement Zertifikate, teilbare Badges, Badge-Marketing"
+    },
+    "saveTime": {
+      "title": "Zeit sparen | Zertifikatsausstellung automatisieren",
+      "description": "Schluss mit manueller Zertifikatsarbeit dank automatisierter, vorlagenbasierter Massenausstellung.",
+      "keywords": "Zertifikate automatisieren, Zeit sparen, Automatisierung"
+    },
+    "byteedge": {
+      "title": "ByteEdge Kundenstory | CredSure",
+      "description": "Wie ByteEdge mit CredSure digitale Lernzertifikate im großen Stil ausstellt und verifiziert.",
+      "keywords": "ByteEdge Fallstudie, Erfolgsgeschichte"
+    },
+    "tsaaro": {
+      "title": "Tsaaro Kundenstory | CredSure",
+      "description": "Wie Tsaaro mit CredSure verifizierbare Datenschutz- und Compliance-Zertifizierungen liefert.",
+      "keywords": "Tsaaro Fallstudie, Compliance-Zertifikate"
+    },
+    "cliniIndia": {
+      "title": "Clini India Kundenstory | CredSure",
+      "description": "Wie Clini India mit CredSure verifizierbare Zertifikate für klinische Forschung ausstellt.",
+      "keywords": "Clini India Fallstudie, klinische Zertifikate"
     }
   },
   "demoPage": {

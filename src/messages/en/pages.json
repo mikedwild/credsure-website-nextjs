@@ -862,6 +862,89 @@
       "title": "Certificate Templates | Ready-to-Use Designs",
       "description": "Browse 50+ professional certificate templates. Customise colours, logos, and layouts with our drag-and-drop designer.",
       "keywords": "certificate templates, credential designs, certificate template gallery"
+    },
+    "platform": {
+      "title": "Platform | The Complete Digital Credentialing System",
+      "description": "Issue, manage, verify, and govern digital credentials end to end on one platform. Blockchain-backed, GDPR-compliant, built for scale.",
+      "keywords": "credentialing platform, digital certificate platform, credential management system"
+    },
+    "resources": {
+      "title": "Resources | Guides, Webinars & Help | CredSure",
+      "description": "Guides, webinars, tutorials, and help articles to get the most out of digital credentialing with CredSure.",
+      "keywords": "credentialing resources, digital badge guides, credential webinars"
+    },
+    "signin": {
+      "title": "Sign In | CredSure",
+      "description": "Sign in to your CredSure account."
+    },
+    "impressum": {
+      "title": "Impressum | CredSure",
+      "description": "Legal notice and company information for CredSure."
+    },
+    "featuresPlatform": {
+      "title": "Platform Features | One System for Every Credential Workflow",
+      "description": "See how the CredSure platform unifies issuance, verification, governance, and analytics in a single workflow.",
+      "keywords": "credential platform features, credentialing workflow"
+    },
+    "verification": {
+      "title": "Instant Verification | Tamper-Proof Credential Checks",
+      "description": "Let anyone verify a credential in seconds with a public, blockchain-anchored verification page — no logins, no friction.",
+      "keywords": "credential verification, verify digital certificate, instant verification"
+    },
+    "credentialManagement": {
+      "title": "Credential Management | Issue & Manage at Scale",
+      "description": "Create, organize, revoke, and track every credential from one dashboard — built for programs of any size.",
+      "keywords": "credential management, manage digital certificates, credential dashboard"
+    },
+    "recipientWall": {
+      "title": "Recipient Wall | Shareable Credential Profiles",
+      "description": "Give recipients a beautiful, shareable wall of their verified credentials they can show employers and peers.",
+      "keywords": "credential wall, shareable credentials, recipient profile"
+    },
+    "courseCompletion": {
+      "title": "Course Completion Credentials | Automate Issuance",
+      "description": "Automatically issue verifiable certificates the moment a learner finishes a course or module.",
+      "keywords": "course completion certificate, training credentials, LMS credentials"
+    },
+    "professionalLicenses": {
+      "title": "Professional Licenses | Verifiable Digital Credentials",
+      "description": "Issue tamper-proof professional licenses and certifications that regulators and employers can verify instantly.",
+      "keywords": "professional license, digital licensing, verifiable certification"
+    },
+    "memberCredentials": {
+      "title": "Member Credentials | Association Membership Badges",
+      "description": "Issue verifiable membership credentials and badges that boost engagement and prove standing.",
+      "keywords": "membership credentials, association badges, member verification"
+    },
+    "scaleProgram": {
+      "title": "Scale Your Credential Program | Bulk Issuance & API",
+      "description": "Grow from hundreds to millions of credentials with bulk issuance, automation, and a robust API.",
+      "keywords": "scale credentialing, bulk credential issuance, credential API"
+    },
+    "increaseEngagement": {
+      "title": "Increase Engagement | Shareable Digital Badges",
+      "description": "Drive sharing, referrals, and brand reach with beautiful, social-ready digital badges.",
+      "keywords": "credential engagement, shareable badges, badge marketing"
+    },
+    "saveTime": {
+      "title": "Save Time | Automate Credential Issuance",
+      "description": "Eliminate manual certificate work with automated, templated, bulk credential issuance.",
+      "keywords": "automate credentials, save time issuing certificates, credential automation"
+    },
+    "byteedge": {
+      "title": "ByteEdge Customer Story | CredSure",
+      "description": "How ByteEdge uses CredSure to issue and verify digital learning credentials at scale.",
+      "keywords": "ByteEdge case study, credentialing success story"
+    },
+    "tsaaro": {
+      "title": "Tsaaro Customer Story | CredSure",
+      "description": "How Tsaaro uses CredSure to deliver verifiable privacy and compliance certifications.",
+      "keywords": "Tsaaro case study, compliance credentials"
+    },
+    "cliniIndia": {
+      "title": "Clini India Customer Story | CredSure",
+      "description": "How Clini India uses CredSure to issue verifiable clinical research credentials.",
+      "keywords": "Clini India case study, clinical credentials"
     }
   },
   "demoPage": {

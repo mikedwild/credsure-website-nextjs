@@ -3,6 +3,7 @@ import { IntlClientProvider } from "@/components/IntlClientProvider";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Inter } from "next/font/google";
+import { organizationJsonLd, websiteJsonLd } from "@/lib/orgSchema";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +29,18 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={inter.className} suppressHydrationWarning>
       <body className="min-h-screen flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd()),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteJsonLd(locale)),
+          }}
+        />
         <IntlClientProvider locale={locale} messages={messages}>
           {children}
         </IntlClientProvider>
