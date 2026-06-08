@@ -32,3 +32,24 @@ Mobile PageSpeed is ~82–86 (Accessibility/SEO/Best-Practices all 100, CLS 0). 
 - `LocalizedLink` `/enundefined` bug — every nav link was broken site-wide
 - `useNavigate` returned the router object instead of a callable function — broke mega-menu, CTAs, language switcher, breadcrumbs
 - PageSpeed: Accessibility 94→100, SEO 92→100, CLS→0
+
+---
+
+## De-Emergent migration progress (2026-06-08)
+
+### ✅ Done
+- **AI LLM keys**: `EMERGENT_LLM_KEY` → provider keys (`utils/llm_keys.py`); admin "AI / API Keys" page (Settings tab). Anthropic = blog gen/translation, OpenAI = images.
+- **Storage**: Emergent object store → MongoDB GridFS (`utils/storage.py`). 0 images existed to migrate.
+- **Auth (code)**: Emergent OAuth → direct Google OAuth (`routes/google_auth.py`, `/auth/google/start` + `/callback`). Admin SPA now routed (`[locale]/admin`, `[locale]/invite/[token]`).
+- **Blog content migrated**: 133 posts (126 published + 7 drafts) + site_settings + 5 users + 1 invite copied from old Emergent Mongo → new Atlas (via temp export endpoint + `scripts/import_credsure_dump.py`). DE translations (3 published) intact, umlauts preserved.
+- **Railway↔Atlas**: fixed (Atlas Network Access `0.0.0.0/0`) — was a TLS handshake block.
+- **Vercel blog fetch**: client now uses relative `/api/*` (Vercel proxy → Railway); `NEXT_PUBLIC_BACKEND_URL` unset was causing empty blog page.
+- **Temp Emergent export endpoint**: removed (404 verified).
+
+### ⏳ Remaining
+- **Rotate old `bilingual-lead-gen` Mongo password** (exposed in chat; nothing depends on it anymore).
+- **Google OAuth env setup** before admin login works on new stack: `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `OAUTH_CALLBACK_URL`/`BACKEND_PUBLIC_URL`, `BOOTSTRAP_ADMIN_EMAILS` (see `backend/.env.example`). Add the callback as an Authorized redirect URI in Google Cloud.
+- **Footer GDPR badge** still loads from `customer-assets.emergentagent.com` (`Footer.jsx:178`) — will 404 when Emergent dies; move asset to `/public`.
+- **CORS allowlist regex** (`server.py`) + test `BASE_URL`s still reference emergent domains — cleanup.
+- **13 published posts have empty bodies** (old certif-id press releases) — fill or unpublish later.
+- Optional: per-page blog **Article JSON-LD** still client-side (SEO #7 follow-on).
