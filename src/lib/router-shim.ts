@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import NextLink, { type LinkProps as NextLinkProps } from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 export { usePathname } from "next/navigation";
 export { useParams } from "next/navigation";
@@ -48,8 +48,33 @@ export const Link = React.forwardRef<HTMLAnchorElement, ShimLinkProps>(
 // Navigate component shim (redirect)
 export { redirect as Navigate } from "next/navigation";
 
-// useSearchParams
-export { useSearchParams } from "next/navigation";
+// useSearchParams shim — React Router's useSearchParams() returns a
+// [searchParams, setSearchParams] TUPLE, but next/navigation's returns the
+// ReadonlyURLSearchParams object DIRECTLY. The CRA codebase destructures it
+// (`const [searchParams] = useSearchParams()`); applied to next's return value
+// that grabs the first [key,value] entry (or undefined) instead of the params
+// object, so `.get(...)` throws and crashes the page. This wrapper restores the
+// React Router tuple signature.
+import { useSearchParams as useNextSearchParams } from "next/navigation";
+
+export function useSearchParams() {
+  const params = useNextSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
+  const setSearchParams = (
+    next:
+      | URLSearchParams
+      | Record<string, string>
+      | ((prev: URLSearchParams) => URLSearchParams | Record<string, string>)
+  ) => {
+    const prev = new URLSearchParams(params?.toString() ?? "");
+    const resolved = typeof next === "function" ? next(prev) : next;
+    const sp = resolved instanceof URLSearchParams ? resolved : new URLSearchParams(resolved);
+    const qs = sp.toString();
+    router.push(qs ? `${pathname}?${qs}` : pathname);
+  };
+  return [params, setSearchParams] as const;
+}
 
 // useLocation shim
 export function useLocation() {
