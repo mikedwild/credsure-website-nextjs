@@ -62,11 +62,8 @@ SUPPORTED_IMAGE_MODELS = {
         "provider": "openai",
         "model_id": "gpt-image-1",
     },
-    "nano-banana": {
-        "label": "Gemini Nano Banana (artistic)",
-        "provider": "gemini",
-        "model_id": "gemini-2.5-flash-image-preview",
-    },
+    # Gemini ("nano-banana") image generation is not wired up — omitted from the
+    # picker so the UI never offers a model that errors on submit.
 }
 DEFAULT_IMAGE_MODEL = "gpt-image-1"
 
@@ -123,14 +120,12 @@ async def admin_generate_featured_image(request: Request, body: GenerateFeatured
         if provider == "openai":
             from openai import AsyncOpenAI
             import base64
-            client = AsyncOpenAI(api_key=api_key)
-            resp = await client.images.generate(
-                prompt=prompt, model=model_id, n=n, response_format="b64_json",
-            )
-            images = [base64.b64decode(img.b64_json) for img in resp.data]
-        elif provider == "gemini":
-            raise HTTPException(status_code=400, detail="gemini_image_gen_not_supported")
-
+            client = AsyncOpenAI(api_key=api_key, timeout=180.0)
+            # NOTE: gpt-image-1 ALWAYS returns base64 (b64_json) and REJECTS the
+            # `response_format` parameter — passing it raises a 400 BadRequest,
+            # which previously made every generation fail. So we don't send it.
+            resp = await client.images.generate(prompt=prompt, model=model_id, n=n)
+            images = [base64.b64decode(img.b64_json) for img in resp.data if img.b64_json]
         else:
             raise HTTPException(status_code=400, detail="unsupported_provider")
     except HTTPException:

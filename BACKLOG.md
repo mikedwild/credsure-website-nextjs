@@ -2,6 +2,15 @@
 
 Open items for upcoming sessions. Newest context at top.
 
+## ✅ Google OAuth login — DONE (2026-06-09)
+- Fixed `/en/admin` "This page couldn't load" crash → `useSearchParams` shim returned next's object instead of React Router's `[params,setter]` tuple + missing `<Suspense>`. Committed (`d5d12ea`) + deployed.
+- Railway vars all set: `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `OAUTH_CALLBACK_URL`, `BOOTSTRAP_ADMIN_EMAILS=mikedwild@certif-id.com`.
+- Verified: `GET /api/auth/google/start` returns **302 → accounts.google.com** with correct client_id, redirect_uri, scopes, state. Login flow live.
+- Client ID file (public): `~/Desktop/credsure oauth secret.txt`.
+
+**Remaining (optional):** add `ANTHROPIC_API_KEY` + `OPENAI_API_KEY` for AI blog gen/images (Railway vars or admin Settings page once logged in).
+
+
 ## 🔐 Security — rotate & de-token (priority)
 Live credentials are sitting in plaintext and the GitHub PAT is duplicated across several places:
 - `~/.claude/settings.json` — GitHub PAT, Supabase access token, MongoDB keys (plaintext)

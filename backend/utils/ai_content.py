@@ -11,6 +11,7 @@ don't (legacy callers) still work but skip telemetry.
 """
 import os
 import uuid
+import asyncio
 import logging
 
 from ai import telemetry as ai_telemetry
@@ -169,72 +170,57 @@ async def translate_fields(
     common = {"source_lang": source_lang, "target_lang": target_lang}
     rid = request_id or ai_telemetry.new_request_id()
 
-    if title.strip():
-        resp = await _translate_one(
-            intent="translate.title",
-            system_message=f"You are a professional marketing translator. Translate the following blog title from {src} to {tgt}. Preserve brand names ({_BRANDS}) verbatim. Return ONLY the translated text — no quotes, no commentary.",
-            user_text=title,
-            cache_inputs={**common, "field": "title", "input": title},
-            db=db, guard=guard, workflow=workflow, request_id=rid, user_email=user_email,
-        )
-        results["title"] = _clean(resp)
+    # Build one task per non-empty field, then run them CONCURRENTLY. The old
+    # code awaited each field in sequence, so a single blog translation made 6
+    # back-to-back Sonnet round-trips (60–120s). The HTML body dominates the
+    # latency, so fanning out collapses the wall-clock time to roughly the
+    # single slowest field. Each field is still an isolated session, so there's
+    # no cross-field bleed-through. (asyncio.gather here is event-loop
+    # concurrency, not threads — the RequestGuard counter stays consistent.)
+    field_specs = [
+        ("title", title, _clean,
+         "translate.title",
+         f"You are a professional marketing translator. Translate the following blog title from {src} to {tgt}. Preserve brand names ({_BRANDS}) verbatim. Return ONLY the translated text — no quotes, no commentary."),
+        ("excerpt", excerpt, _clean,
+         "translate.excerpt",
+         f"You are a professional marketing translator. Translate the following blog excerpt from {src} to {tgt}. Preserve brand names verbatim. Keep tone concise and benefit-led. Return ONLY the translated text."),
+        ("content_html", content_html, _strip_code_fence,
+         "translate.html_body",
+         (f"You are a professional marketing translator working with rich HTML blog content. "
+          f"Translate the visible text from {src} to {tgt} while STRICTLY preserving every HTML tag, "
+          f"attribute, class, id, href, src, alt, data-* attribute, list structure, heading hierarchy, "
+          f"inline formatting, links, and image references unchanged. Translate alt text and image "
+          f"captions. Preserve brand names ({_BRANDS}) verbatim. "
+          f"Do NOT add Markdown. Do NOT wrap the output in code fences. Return ONLY the translated HTML.")),
+        ("tags", tags, _clean,
+         "translate.tags",
+         f"Translate the following comma-separated blog tags from {src} to {tgt}. Keep them concise (1–3 words each). Preserve brand names. Return ONLY the translated comma-separated tags — no numbering, no commentary."),
+        ("seo_title", seo_title, _clean,
+         "translate.seo_title",
+         f"You are an SEO copywriter. Translate the following SEO meta title from {src} to {tgt}. Keep it under 60 characters when possible. Preserve brand names verbatim. Return ONLY the translated text."),
+        ("seo_description", seo_description, _clean,
+         "translate.seo_description",
+         f"You are an SEO copywriter. Translate the following SEO meta description from {src} to {tgt}. Aim for 150–160 characters. Preserve brand names verbatim. Return ONLY the translated text."),
+    ]
 
-    if excerpt.strip():
-        resp = await _translate_one(
-            intent="translate.excerpt",
-            system_message=f"You are a professional marketing translator. Translate the following blog excerpt from {src} to {tgt}. Preserve brand names verbatim. Keep tone concise and benefit-led. Return ONLY the translated text.",
-            user_text=excerpt,
-            cache_inputs={**common, "field": "excerpt", "input": excerpt},
-            db=db, guard=guard, workflow=workflow, request_id=rid, user_email=user_email,
-        )
-        results["excerpt"] = _clean(resp)
+    active = [s for s in field_specs if (s[1] or "").strip()]
+    if not active:
+        return results
 
-    if content_html.strip():
-        resp = await _translate_one(
-            intent="translate.html_body",
-            system_message=(
-                f"You are a professional marketing translator working with rich HTML blog content. "
-                f"Translate the visible text from {src} to {tgt} while STRICTLY preserving every HTML tag, "
-                f"attribute, class, id, href, src, alt, data-* attribute, list structure, heading hierarchy, "
-                f"inline formatting, links, and image references unchanged. Translate alt text and image "
-                f"captions. Preserve brand names ({_BRANDS}) verbatim. "
-                f"Do NOT add Markdown. Do NOT wrap the output in code fences. Return ONLY the translated HTML."
-            ),
-            user_text=content_html,
-            cache_inputs={**common, "field": "content_html", "input": content_html},
+    coros = [
+        _translate_one(
+            intent=intent,
+            system_message=system_message,
+            user_text=text,
+            cache_inputs={**common, "field": field, "input": text},
             db=db, guard=guard, workflow=workflow, request_id=rid, user_email=user_email,
         )
-        results["content_html"] = _strip_code_fence(resp)
+        for (field, text, _post, intent, system_message) in active
+    ]
+    responses = await asyncio.gather(*coros)
 
-    if tags.strip():
-        resp = await _translate_one(
-            intent="translate.tags",
-            system_message=f"Translate the following comma-separated blog tags from {src} to {tgt}. Keep them concise (1–3 words each). Preserve brand names. Return ONLY the translated comma-separated tags — no numbering, no commentary.",
-            user_text=tags,
-            cache_inputs={**common, "field": "tags", "input": tags},
-            db=db, guard=guard, workflow=workflow, request_id=rid, user_email=user_email,
-        )
-        results["tags"] = _clean(resp)
-
-    if seo_title.strip():
-        resp = await _translate_one(
-            intent="translate.seo_title",
-            system_message=f"You are an SEO copywriter. Translate the following SEO meta title from {src} to {tgt}. Keep it under 60 characters when possible. Preserve brand names verbatim. Return ONLY the translated text.",
-            user_text=seo_title,
-            cache_inputs={**common, "field": "seo_title", "input": seo_title},
-            db=db, guard=guard, workflow=workflow, request_id=rid, user_email=user_email,
-        )
-        results["seo_title"] = _clean(resp)
-
-    if seo_description.strip():
-        resp = await _translate_one(
-            intent="translate.seo_description",
-            system_message=f"You are an SEO copywriter. Translate the following SEO meta description from {src} to {tgt}. Aim for 150–160 characters. Preserve brand names verbatim. Return ONLY the translated text.",
-            user_text=seo_description,
-            cache_inputs={**common, "field": "seo_description", "input": seo_description},
-            db=db, guard=guard, workflow=workflow, request_id=rid, user_email=user_email,
-        )
-        results["seo_description"] = _clean(resp)
+    for (field, _text, post, _intent, _sys), resp in zip(active, responses):
+        results[field] = post(resp)
 
     return results
 
@@ -348,8 +334,12 @@ async def generate_blog_post(topic, keywords, category, excerpt_hint="", *, db=N
 
     kw_str = ", ".join(keywords) if isinstance(keywords, list) else keywords
 
+    # Long/pillar posts wrapped in a JSON object can run well past the default
+    # output budget; give generation plenty of headroom so the JSON never gets
+    # cut mid-string (which would make json.loads fail and return None).
     chat = LlmChat(
         api_key=api_key,
+        max_tokens=16000,
         session_id=f"generate-{uuid.uuid4().hex[:8]}",
         system_message="""You are an expert SEO blog writer for CredSure, a leading digital credentialing platform.
 Write comprehensive, authoritative blog posts that rank well in search engines.
