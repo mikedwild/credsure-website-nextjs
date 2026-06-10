@@ -40,6 +40,9 @@ All app routes are dynamic (`ƒ`) — server-rendered on demand. The marketing p
 
 ---
 
+## ✅ Done — footer heyData seal (2026-06-10)
+- **heyData GDPR privacy seal in the footer** — mirrors the trust badge on `talentsure.de`. Added to the bottom-bar trust cluster (next to the Vanta badge): an `<a>` to `heydata.eu` wrapping the seal `<img>` from `api.heydata.eu/privacy-seal/seal/{id}`. Reuses the Certif-ID International GmbH seal (same legal entity as TalentSure); `lang` param follows the active locale (`en`/`de`). Verified rendering on both locales locally (real SVG, correct 406×226 aspect → no CLS). (`a59cb3e`)
+
 ## ✅ Done — SSR/SEO hardening (2026-06-10)
 Audited how much of the site actually uses Next's SSR (the CRA→Next migration left a lot client-only) and closed the gaps:
 - **Blog "Discovered – currently not indexed"** (GSC, 128 pages) — posts were absent from the sitemap AND `blog/[slug]` was `ssr:false` + no metadata. Sitemap now emits all 126 posts (hreflang `de` only when translated); `blog/[slug]` is a server component with `generateMetadata` + SSR body via pure-JS `sanitize-html` (jsdom failed on Vercel). (`2c5a25d`, `dfb2c07`)
