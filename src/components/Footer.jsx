@@ -1,11 +1,18 @@
 "use client";
 import React from 'react';
+import { useLocale } from 'next-intl';
 import { LocalizedLink as Link } from '@/components/LocalizedLink';
 import { useTranslation } from '@/lib/useTranslation';
 
 export const Footer = () => {
   const t = useTranslation();
+  const locale = useLocale();
   const currentYear = new Date().getFullYear();
+
+  // heyData GDPR privacy seal for Certif-ID International GmbH (shared with talentsure.de)
+  const heyDataSealUrl =
+    `https://api.heydata.eu/privacy-seal/seal/32205f8d-5344-43d5-8f54-2abd4100da7d` +
+    `?lang=${locale}&design=design1&sealType=GDPR`;
 
   const productLinks = [
     { label: t('footer.links.features'), to: '/features' },
@@ -184,6 +191,26 @@ export const Footer = () => {
                   decoding="async"
                 />
                 <span className="text-xs text-[rgba(248,245,240,0.85)]">{t('footer.securityVerified')}</span>
+              </a>
+
+              {/* heyData privacy seal */}
+              <a
+                href="https://heydata.eu/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="heyData privacy seal"
+                className="hover:opacity-80 transition-opacity"
+              >
+                <img
+                  src={heyDataSealUrl}
+                  alt="heyData GDPR privacy seal"
+                  width="406"
+                  height="226"
+                  className="h-16 w-auto"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  decoding="async"
+                />
               </a>
             </div>
 
