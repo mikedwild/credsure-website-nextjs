@@ -25,8 +25,9 @@ Mobile PageSpeed **82** (LCP 3.5s, CLS 0, A11y/BP/SEO 100); **Desktop 99** (all 
 - **Next lever (deliberate, mobile-only visual change):** gate the hero's `blur-3xl` animated mesh orbs behind a mobile breakpoint + `prefers-reduced-motion`. That's what holds TBT (300ms) and Speed Index (4.3s) back; freeing the main thread would likely push LCP under the 2.5s green line. Desktop (99) unaffected.
 
 ## ✨ Minor polish / SEO follow-ons
-- **Blog `<title>` is server-generic** — `/blog` and `/blog/[slug]` emit the root default title in server HTML (real title is set client-side). Add `generateMetadata` for `blog/[slug]` for cleaner SEO.
-- Per-page blog **Article JSON-LD** still client-side (SEO #7 follow-on).
+- **GSC: resubmit `/sitemap.xml`** in Search Console — it last fetched 01/06 (pre-fix, no blog posts). Resubmitting forces a re-read so Google discovers all 126 posts. Then let the "Discovered – currently not indexed" validation (started 10/06) run.
+- Per-page blog **Article JSON-LD** still client-side via SEO.jsx/react-helmet (no HelmetProvider → effectively a no-op server-side). The blog `<title>`/canonical/hreflang are now server-rendered (see Done), but the Article schema isn't in the SSR HTML — emit it from `blog/[slug]/page.tsx` for the full win.
+- **`/blog` list page** still emits the generic root title server-side (only `blog/[slug]` got `generateMetadata`). Add metadata for the list page too.
 - **Dead CSS classes** on the hero — `hero-rise`, `hero-delay-*`, `hero-underline` are no-ops (animation CSS dropped in migration; underline still renders via `cs-hero-underline`). Tidy up.
 - **13 published posts have empty bodies** (old certif-id press releases) — fill or unpublish.
 - **GA4 verify:** confirm the `GTM-NSZF3Q8` container has its GA4 (`G-K0QTRESXBJ`) tags published — accept cookies, check GA4 Realtime. Code loads GTM correctly; tag publishing is a GTM-dashboard action.
@@ -45,6 +46,10 @@ Mobile PageSpeed **82** (LCP 3.5s, CLS 0, A11y/BP/SEO 100); **Desktop 99** (all 
 - **Currency geo-detection** made robust to Cloudflare proxy mode — fell back to ipapi only on a failed `/cdn-cgi/trace`; now falls back whenever `loc=` is absent (works DNS-only) (`9c205a4`). Verified GB → £.
 - **Feature description band** restyled as an editorial lead (gradient "Why it matters" eyebrow, 22px copy, purple payoff line, gradient hairline) — one shared template, all feature pages (`581dd36`).
 - **Hero image preload** → mobile LCP 4.8s → 3.5s (`1d8d1ff`).
+- **Blog SEO — fixed GSC "Discovered – currently not indexed"** (128 pages, mostly `/de/blog/*`). Root cause: posts were absent from the sitemap AND `blog/[slug]` was `"use client"` + `ssr:false` with no metadata (generic root title, no canonical/hreflang, JS-only body). (`2c5a25d`, `dfb2c07`)
+  - Sitemap now async + emits all 126 published posts with `de` hreflang only when a translation exists (`title_de`). 57 → 183 URLs.
+  - `blog/[slug]/page.tsx` → server component with `generateMetadata`: per-post title, description, self-canonical, hreflang (en/de/x-default), Article OG/Twitter. DE posts that fall back to EN content (`served_lang='en'`) canonicalize to EN.
+  - SSR the article body: page server-fetches the post and seeds `BlogPost` via an `initialPost` prop. **Gotcha:** `isomorphic-dompurify`'s jsdom worked under `next start` but silently failed in Vercel's serverless runtime → body fell back to client-only (caught by diffing raw SSR HTML vs post-hydration DOM). Fixed by sanitizing server-side with pure-JS `sanitize-html` in `lib/blogApi.ts` (cache()'d, ISR 5m/10m). Verified body in raw SSR HTML on live.
 - Git remotes de-tokenized (both repos).
 
 ## ✅ Done — earlier (pre-cutover, 2026-06-09→10)
