@@ -5,15 +5,13 @@ import { ThemeProvider } from "./ThemeProvider";
 import { CurrencyProvider } from "@/utils/CurrencyContext";
 import { SkipLinks } from "./SkipLinks";
 import { ScrollToTop } from "./ScrollToTop";
+// Header + Footer are SSR'd (static import): they carry the whole internal-link
+// graph (mega-menu + footer), so crawlers/AI bots must see them in the raw HTML,
+// and rendering them server-side removes the post-hydration chrome pop-in (CLS).
+// Both verified free of render-time browser/location access.
+import { HeaderWithMegaMenu } from "./HeaderWithMegaMenu";
+import { Footer } from "./Footer";
 
-const HeaderWithMegaMenu = dynamic(
-  () => import("./HeaderWithMegaMenu").then((m) => ({ default: m.HeaderWithMegaMenu })),
-  { ssr: false }
-);
-const Footer = dynamic(
-  () => import("./Footer").then((m) => ({ default: m.Footer })),
-  { ssr: false }
-);
 const CookieConsent = dynamic(
   () => import("./CookieConsent").then((m) => ({ default: m.CookieConsent })),
   { ssr: false }

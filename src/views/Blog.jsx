@@ -11,11 +11,15 @@ import { BlogPagination } from './BlogPagination';
 
 const POSTS_PER_PAGE = 12;
 
-export const Blog = () => {
+/**
+ * @param {{ initialPosts?: Array<Record<string, unknown>> | null }} props
+ *   Server-fetched post list (SSR seed); falls back to a client fetch when absent.
+ */
+export const Blog = ({ initialPosts = null }) => {
   const t = useTranslation();
   const i18n = { language: useLocale() };
-  const [blogData, setBlogData] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [blogData, setBlogData] = useState(initialPosts || []);
+  const [isLoading, setIsLoading] = useState(!initialPosts);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedTopics, setSelectedTopics] = useState([]);
@@ -25,6 +29,9 @@ export const Blog = () => {
   const blogTopRef = useRef(null);
 
   useEffect(() => {
+    // Server already seeded the list for this locale (keyed remount on locale
+    // change supplies fresh data) — skip the client refetch.
+    if (initialPosts) return;
     const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || '';
     fetch(`${API_URL}/api/blogs?limit=200&lang=${i18n.language}`)
       .then(res => res.json())
@@ -33,7 +40,7 @@ export const Blog = () => {
         setIsLoading(false);
       })
       .catch(() => setIsLoading(false));
-  }, [i18n.language]);
+  }, [i18n.language, initialPosts]);
 
   useEffect(() => {
     if (blogTopRef.current) {

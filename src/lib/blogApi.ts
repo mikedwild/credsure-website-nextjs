@@ -77,6 +77,22 @@ export const getBlogPost = cache(
   }
 );
 
+export const getBlogList = cache(
+  async (locale: string): Promise<BlogPostData[]> => {
+    const lang = locale === "de" ? "de" : "en";
+    try {
+      const res = await fetch(`${BACKEND}/api/blogs?lang=${lang}&limit=200`, {
+        next: { revalidate: 300 },
+      });
+      if (!res.ok) return [];
+      const data = await res.json();
+      return (data?.posts as BlogPostData[]) || [];
+    } catch {
+      return [];
+    }
+  }
+);
+
 export type BlogSlug = { slug: string; hasDe: boolean; date?: string };
 
 export const getBlogSlugs = cache(async (): Promise<BlogSlug[]> => {
