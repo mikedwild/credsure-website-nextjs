@@ -15,6 +15,10 @@ const CookieConsent = dynamic(
   () => import("./CookieConsent").then((m) => ({ default: m.CookieConsent })),
   { ssr: false }
 );
+const StickyBottomBar = dynamic(
+  () => import("./StickyBottomBar").then((m) => ({ default: m.StickyBottomBar })),
+  { ssr: false }
+);
 
 export default function PageShell({ children }: { children: React.ReactNode }) {
   return (
@@ -28,6 +32,7 @@ export default function PageShell({ children }: { children: React.ReactNode }) {
       </div>
       <Footer />
       <CookieConsent />
+      <StickyBottomBar />
     </ThemeProvider>
   );
 }
