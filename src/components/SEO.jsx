@@ -1,11 +1,6 @@
 "use client";
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet-async';
-import { useTranslation } from '@/lib/useTranslation';
-import { useLocale } from 'next-intl';
-import { useLocation } from '@/lib/router-shim';
-import { enToRoute, deToRoute } from '@/config/routeConfig';
 
 /**
  * SEO Component for CredSure
@@ -19,147 +14,44 @@ import { enToRoute, deToRoute } from '@/config/routeConfig';
  * @param {string} type - Open Graph type (default: "website")
  * @param {object} structuredData - JSON-LD structured data (optional)
  */
-export const SEO = ({ 
-  title: titleProp,
-  description: descriptionProp,
-  titleKey, 
-  descriptionKey, 
-  keywordsKey,
-  canonical, 
-  canonicalLang,
-  ogImage,
-  type = 'website',
-  noIndex = false,
-  structuredData 
-}) => {
-  const t = useTranslation();
-  const locale = useLocale();
-  const location = useLocation();
-  const currentLang = locale || 'en';
-
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
-  
-  // Get translated content. When a key is set but i18n returns the key
-  // itself (i.e. the translation is missing), fall back to the global
-  // defaults so we never render literal i18n paths into <title> or
-  // <meta description> for crawlers.
-  const safeT = (key, fallback) => {
-    if (!key) return fallback;
-    const v = t(key);
-    return !v || v === key ? fallback : v;
-  };
-  const DEFAULT_TITLE = 'CredSure | Digital Credential Platform — Blockchain Verified';
-  const DEFAULT_DESC = 'Issue, manage, and verify blockchain-secured digital credentials, certificates, and badges.';
-  const DEFAULT_KEYWORDS = 'digital credentials, blockchain certificates, credential verification, digital badges';
-  // Direct `title`/`description` props win over the i18n-key path so
-  // pages with awkward locale paths can pass strings directly.
-  const rawTitle = titleProp || safeT(titleKey, DEFAULT_TITLE);
-  const title = rawTitle === DEFAULT_TITLE || rawTitle.toLowerCase().includes('credsure')
-    ? rawTitle
-    : `${rawTitle} | CredSure`;
-  const description = descriptionProp || safeT(descriptionKey, DEFAULT_DESC);
-  const keywords = safeT(keywordsKey, DEFAULT_KEYWORDS);
-
-  // Construct full URLs.
-  // canonicalLang lets a page (e.g. a DE blog post that is rendering an EN
-  // fallback because no translation exists) point its canonical at a
-  // DIFFERENT language. Without this, Google sees `/en/blog/x` and
-  // `/de/blog/x` serving identical HTML with self-canonicals and flags it
-  // as "Duplicate without user-selected canonical" in Search Console.
-  const canonicalLangPrefix = canonicalLang || currentLang;
-  // Pages pass `canonical` as the ENGLISH slug (e.g. "/pricing").
-  // When the current page is the German variant, the canonical must
-  // point at the LOCALIZED slug ("/de/preise" — NOT "/de/pricing",
-  // which would 404 because no such route exists). Translate via the
-  // same enToRoute map we already use for hreflang to stay consistent.
-  const translateCanonicalSlug = (slug) => {
-    if (!slug) return '';
-    const clean = slug.replace(/^\/+/, '').replace(/\/$/, '');
-    if (canonicalLangPrefix === 'de') {
-      const e = enToRoute[clean];
-      if (e && e.de) return e.de;
-    } else {
-      const d = deToRoute[clean];
-      if (d && d.en) return d.en;
+export const SEO = ({ noIndex = false, structuredData }) => {
+  // Title/description/canonical/hreflang/OG are owned by Next's Metadata API
+  // (generateMetadata + lib/pageMetadata). This component used to render
+  // everything through react-helmet-async, but no <HelmetProvider> is mounted,
+  // so it was a silent no-op and JSON-LD never reached the HTML. The views that
+  // render <SEO> now SSR, so emitting the structured data as a plain <script>
+  // lands it in the server HTML for crawlers + AI search; React 19 hoists the
+  // <meta> to <head>. Legacy meta props (titleKey, canonical, ogImage, …) are
+  // accepted-and-ignored for back-compat with the existing call sites.
+  const ld = (() => {
+    if (!structuredData) return null;
+    if (Array.isArray(structuredData)) {
+      const cleaned = structuredData.filter(Boolean);
+      if (cleaned.length === 0) return null;
+      return cleaned.length === 1 ? cleaned[0] : cleaned;
     }
-    return clean;
-  };
-  const canonicalUrl = canonical
-    ? `${baseUrl}/${canonicalLangPrefix}/${translateCanonicalSlug(canonical)}`
-    : `${baseUrl}${location.pathname}`;
-  const ogImageUrl = ogImage || `${baseUrl}/og-image.jpg`;
-
-  // Alternate language URLs for hreflang.
-  // Translated slug map: /en/features/digital-certificates ↔
-  // /de/funktionen/digitale-zertifikate. Without this, Google flags
-  // "Duplicate without user-selected canonical" in Search Console because
-  // the DE alternate would point at /de/features/digital-certificates,
-  // which redirects/404s rather than serving the German page.
-  const currentPath = location.pathname;
-  const pathWithoutLang = currentPath.replace(/^\/(en|de)\/?/, '');
-  const trimmedSlug = pathWithoutLang.replace(/\/$/, ''); // strip trailing slash for lookup
-  const routeEntry = enToRoute[trimmedSlug] || deToRoute[trimmedSlug];
-  const enSlug = routeEntry ? routeEntry.en : trimmedSlug;
-  const deSlug = routeEntry ? routeEntry.de : trimmedSlug;
-  const enUrl = trimmedSlug ? `${baseUrl}/en/${enSlug}` : `${baseUrl}/en`;
-  const deUrl = trimmedSlug ? `${baseUrl}/de/${deSlug}` : `${baseUrl}/de`;
+    return structuredData;
+  })();
 
   return (
-    <Helmet>
-      {/* Title, description, canonical, hreflang, OG and Twitter tags are now
-          emitted SERVER-SIDE by Next.js generateMetadata (see lib/pageMetadata
-          + the [locale] route wrappers). Duplicating them here in client-side
-          react-helmet produced conflicting/duplicate <title> and <link
-          rel="canonical"> tags (one of them resolved to "undefined/..."), which
-          search engines ignore. This component now only injects what Next's
-          Metadata API doesn't: a per-page noindex directive (when requested)
-          and JSON-LD structured data. */}
-      {noIndex && (
-        <meta name="robots" content="noindex, follow" />
+    <>
+      {noIndex && <meta name="robots" content="noindex, follow" />}
+      {ld && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }}
+        />
       )}
-
-      {/* Structured Data (JSON-LD).
-          Filters null entries so callers can pass `combineSchemas(maybeNull, ...)`
-          without emitting an empty/invalid block. Falsy values + empty arrays
-          are skipped entirely so we never inject `<script>null</script>` or
-          `<script>[]</script>`. */}
-      {(() => {
-        if (!structuredData) return null;
-        if (Array.isArray(structuredData)) {
-          const cleaned = structuredData.filter(Boolean);
-          if (cleaned.length === 0) return null;
-          return (
-            <script type="application/ld+json">
-              {JSON.stringify(cleaned.length === 1 ? cleaned[0] : cleaned)}
-            </script>
-          );
-        }
-        return (
-          <script type="application/ld+json">
-            {JSON.stringify(structuredData)}
-          </script>
-        );
-      })()}
-    </Helmet>
+    </>
   );
 };
 
 SEO.propTypes = {
-  titleKey: PropTypes.string,
-  descriptionKey: PropTypes.string,
-  keywordsKey: PropTypes.string,
-  canonical: PropTypes.string,
-  canonicalLang: PropTypes.oneOf(['en', 'de']),
-  schema: PropTypes.oneOfType([
-    PropTypes.object,
-    PropTypes.arrayOf(PropTypes.object)
-  ]),
-  ogImage: PropTypes.string,
   noIndex: PropTypes.bool,
-};
-
-SEO.defaultProps = {
-  noIndex: false,
+  structuredData: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.arrayOf(PropTypes.object),
+  ]),
 };
 
 /**

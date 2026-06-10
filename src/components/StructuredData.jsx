@@ -8,14 +8,17 @@
  * the page-level <SEO> component.
  */
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 export const StructuredData = ({ data }) => {
   if (!data) return null;
+  // Plain <script> (not react-helmet, which is a no-op without a provider) so
+  // the JSON-LD lands in the SSR HTML — the FAQ/Solution views that render this
+  // are server-rendered.
   return (
-    <Helmet>
-      <script type="application/ld+json">{JSON.stringify(data)}</script>
-    </Helmet>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
   );
 };
 
