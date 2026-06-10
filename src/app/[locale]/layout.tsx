@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Inter } from "next/font/google";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/orgSchema";
+import { GtmScripts, PostHogScript } from "@/components/AnalyticsScripts";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,6 +30,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={inter.className} suppressHydrationWarning>
       <body className="min-h-screen flex flex-col">
+        <GtmScripts />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -44,6 +46,7 @@ export default async function LocaleLayout({
         <IntlClientProvider locale={locale} messages={messages}>
           {children}
         </IntlClientProvider>
+        <PostHogScript />
       </body>
     </html>
   );
