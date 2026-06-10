@@ -24,10 +24,14 @@ Mobile PageSpeed **82** (LCP 3.5s, CLS 0, A11y/BP/SEO 100); **Desktop 99** (all 
 - ✅ Done this session: hero image is the mobile LCP element — added a homepage `<link rel="preload" as="image">` (responsive srcset) → **LCP 4.8s → 3.5s**.
 - **Next lever (deliberate, mobile-only visual change):** gate the hero's `blur-3xl` animated mesh orbs behind a mobile breakpoint + `prefers-reduced-motion`. That's what holds TBT (300ms) and Speed Index (4.3s) back; freeing the main thread would likely push LCP under the 2.5s green line. Desktop (99) unaffected.
 
+## 🧊 SSG / ISR for marketing pages (nice to have)
+All app routes are dynamic (`ƒ`) — server-rendered on demand. The marketing pages (home, catch-all `[...slug]`) render from i18n JSON + static data, so their HTML is identical per request; recomputing it every hit is wasted work. Making them **static** (prerendered, edge-cached) would give lower TTFB globally (helps crawl speed/SEO), lower serverless cost, and better spike resilience — with no downside since the per-user bits (currency geo, cookie consent) are client-side.
+- **How:** add `generateStaticParams` to enumerate routes (`routeConfig` × locales) so Next prerenders them (`○`). Keep the **blog on ISR** (already `revalidate` 5m/10m) — not pure static — so DB-published posts stay fresh without a redeploy.
+- **Cost:** longer builds (~240 route×locale combos); must ensure no route uses a request-time API (`cookies()`/`headers()`) that forces dynamic.
+- **Verdict:** polish, not a problem — the site already scores Desktop 99. Worth it if optimizing crawl/TTFB or serverless cost; fine to defer otherwise.
+
 ## ✨ Minor polish / SEO follow-ons
 - **GSC: resubmit `/sitemap.xml`** in Search Console — it last fetched 01/06 (pre-fix, no blog posts). Resubmitting forces a re-read so Google discovers all 126 posts. Then let the "Discovered – currently not indexed" validation (started 10/06) run.
-- Per-page blog **Article JSON-LD** still client-side via SEO.jsx/react-helmet (no HelmetProvider → effectively a no-op server-side). The blog `<title>`/canonical/hreflang are now server-rendered (see Done), but the Article schema isn't in the SSR HTML — emit it from `blog/[slug]/page.tsx` for the full win.
-- **`/blog` list page** still emits the generic root title server-side (only `blog/[slug]` got `generateMetadata`). Add metadata for the list page too.
 - **Dead CSS classes** on the hero — `hero-rise`, `hero-delay-*`, `hero-underline` are no-ops (animation CSS dropped in migration; underline still renders via `cs-hero-underline`). Tidy up.
 - **13 published posts have empty bodies** (old certif-id press releases) — fill or unpublish.
 - **GA4 verify:** confirm the `GTM-NSZF3Q8` container has its GA4 (`G-K0QTRESXBJ`) tags published — accept cookies, check GA4 Realtime. Code loads GTM correctly; tag publishing is a GTM-dashboard action.
@@ -35,6 +39,14 @@ Mobile PageSpeed **82** (LCP 3.5s, CLS 0, A11y/BP/SEO 100); **Desktop 99** (all 
 - German eyebrow: feature-page overview eyebrow falls back to EN "Why it matters"; add `features.overviewEyebrow` to the DE messages if a translation is wanted.
 
 ---
+
+## ✅ Done — SSR/SEO hardening (2026-06-10)
+Audited how much of the site actually uses Next's SSR (the CRA→Next migration left a lot client-only) and closed the gaps:
+- **Blog "Discovered – currently not indexed"** (GSC, 128 pages) — posts were absent from the sitemap AND `blog/[slug]` was `ssr:false` + no metadata. Sitemap now emits all 126 posts (hreflang `de` only when translated); `blog/[slug]` is a server component with `generateMetadata` + SSR body via pure-JS `sanitize-html` (jsdom failed on Vercel). (`2c5a25d`, `dfb2c07`)
+- **Header + Footer SSR** — were `ssr:false` (blanket migration default), so the mega-menu + footer link graph was absent from server HTML. Audited safe, switched to static imports. (`d698eda`)
+- **`/blog` index SSR + metadata** — was `ssr:false`/client-fetch with a generic title; now a server component (`generateMetadata` + `getBlogList`, ISR 5m, seeds `Blog` via `initialPosts`). (`d698eda`)
+- **Per-page JSON-LD server-side** — `SEO.jsx`/`StructuredData.jsx` rendered JSON-LD via react-helmet with no provider (no-op). Switched to plain `<script>` → Article/BreadcrumbList/FAQPage/Speakable now in SSR HTML; removed the `react-helmet-async` dependency; 404 `noIndex` now works. (`ac345fb`)
+- **Header logo → next/image** — every-page logo now optimizer-served (AVIF, right-sized) with priority. Other raw `<img>` left as-is on purpose (dead/admin/external-billing/already-optimized). (`567b0df`)
 
 ## ✅ Done — go-live session (2026-06-10)
 - **Domain cutover** to Vercel + `www→apex` 308 redirect; domains attached to the project.
