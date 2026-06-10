@@ -180,16 +180,28 @@ export const FeaturePageTemplate = ({ featureKey, Icon }) => {
         </div>
       </section>
 
-      {/* ─── Detailed description band ─── */}
-      {content.description && (
-        <section className="py-16 border-t" style={{ background: '#FAFAFC', borderColor: '#ECE7F1' }}>
-          <div className="container mx-auto px-6 md:px-12 max-w-4xl">
-            <p className="text-lg md:text-xl text-[#2E2A3D] leading-relaxed text-center">
-              {content.description}
-            </p>
-          </div>
-        </section>
-      )}
+      {/* ─── Detailed description band — editorial lead ─── */}
+      {content.description && (() => {
+        // Peel off the final sentence as an emphasized "payoff" line.
+        const desc = content.description.trim();
+        const splitAt = desc.lastIndexOf('. ');
+        const lead = splitAt > 0 ? desc.slice(0, splitAt + 1) : desc;
+        const payoff = splitAt > 0 ? desc.slice(splitAt + 2) : '';
+        return (
+          <section className="py-16 border-t" style={{ background: '#FAFAFC', borderColor: '#ECE7F1' }}>
+            <div className="container mx-auto px-6 md:px-12 max-w-2xl text-center">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] mb-4 cs-grad-text">
+                {t('features.overviewEyebrow', 'Why it matters')}
+              </p>
+              <p className="feature-overview text-xl md:text-[22px] text-[#1D1A2B] leading-normal">
+                {lead}
+                {payoff && <> <span className="font-semibold text-[#5B22D6]">{payoff}</span></>}
+              </p>
+              <div className="mx-auto mt-6 h-[3px] w-12 rounded-full" style={{ background: 'linear-gradient(90deg,#5B22D6,#E22B8A)' }} />
+            </div>
+          </section>
+        );
+      })()}
 
       {/* ─── Key Capabilities — pastel-tinted grid ─── */}
       {Array.isArray(items) && items.length > 0 && (
