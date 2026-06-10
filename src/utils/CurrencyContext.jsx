@@ -42,17 +42,20 @@ export const CurrencyProvider = ({ children }) => {
       // (credsure.io is). It's CORS-friendly, free, no rate limit, no API key.
       // Falls back to ipapi.co as a backup.
       // Returns text in the form: "loc=DE\nip=1.2.3.4\n..."
+      const ipapiFallback = () =>
+        fetch('https://ipapi.co/json/')
+          .then(r => (r.ok ? r.json() : null))
+          .then(d => (d && d.country_code) ? d.country_code : null);
+
       fetch('/cdn-cgi/trace')
         .then(r => (r.ok ? r.text() : null))
         .then(text => {
-          if (!text) {
-            // Fallback path — wrap in another fetch silently
-            return fetch('https://ipapi.co/json/')
-              .then(r => (r.ok ? r.json() : null))
-              .then(d => (d && d.country_code) ? d.country_code : null);
-          }
-          const match = text.match(/loc=([A-Z]{2})/);
-          return match ? match[1] : null;
+          // Only Cloudflare-proxied (orange-cloud) domains return a real trace
+          // with `loc=`. On DNS-only / non-CF hosts the path 200s with app HTML
+          // (no loc), so fall back to ipapi whenever loc is absent — this keeps
+          // currency detection working regardless of the Cloudflare proxy mode.
+          const match = text && text.match(/loc=([A-Z]{2})/);
+          return match ? match[1] : ipapiFallback();
         })
         .then(cc => {
           if (!cc) return;
