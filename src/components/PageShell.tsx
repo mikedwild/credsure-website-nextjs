@@ -2,6 +2,9 @@
 import dynamic from "next/dynamic";
 import { Toaster } from "./ui/sonner";
 import { ThemeProvider } from "./ThemeProvider";
+import { CurrencyProvider } from "@/utils/CurrencyContext";
+import { SkipLinks } from "./SkipLinks";
+import { ScrollToTop } from "./ScrollToTop";
 
 const HeaderWithMegaMenu = dynamic(
   () => import("./HeaderWithMegaMenu").then((m) => ({ default: m.HeaderWithMegaMenu })),
@@ -27,17 +30,21 @@ const ExitIntentPopup = dynamic(
 export default function PageShell({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider>
-      <Toaster position="top-right" />
-      <HeaderWithMegaMenu />
-      <div className="pt-20">
-        <main id="main-content" role="main">
-          {children}
-        </main>
-      </div>
-      <Footer />
-      <CookieConsent />
-      <StickyBottomBar />
-      <ExitIntentPopup onSubmit={() => {}} />
+      <CurrencyProvider>
+        <SkipLinks />
+        <ScrollToTop />
+        <Toaster position="top-right" />
+        <HeaderWithMegaMenu />
+        <div className="pt-20">
+          <main id="main-content" role="main">
+            {children}
+          </main>
+        </div>
+        <Footer />
+        <CookieConsent />
+        <StickyBottomBar />
+        <ExitIntentPopup onSubmit={() => {}} />
+      </CurrencyProvider>
     </ThemeProvider>
   );
 }
