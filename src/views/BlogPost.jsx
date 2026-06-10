@@ -6,7 +6,7 @@ import { useTranslation } from '@/lib/useTranslation';
 import { useLocale } from 'next-intl';
 import { SEO, createArticleSchema, createBreadcrumbSchema, getBaseUrl } from '@/components/SEO';
 import { motion } from 'framer-motion';
-import DOMPurify from 'dompurify';
+import DOMPurify from 'isomorphic-dompurify';
 import { Calendar, Clock, User, ArrowLeft, Share2, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { InlineBlogCTA } from '@/components/InlineBlogCTA';
@@ -59,7 +59,12 @@ const getPostImage = (post) => {
   return catMap[post.category] || topicImages.default;
 };
 
-export const BlogPost = () => {
+/**
+ * @param {{ initialPost?: Record<string, unknown> | null }} props
+ *   `initialPost` is the server-fetched post (SSR seed). When omitted the
+ *   component fetches client-side as a fallback.
+ */
+export const BlogPost = ({ initialPost = null }) => {
   const { slug } = useParams();
   const location = useLocation();
   const navigate = useLocalizedNavigate();
@@ -73,32 +78,38 @@ export const BlogPost = () => {
   // briefly point at /de/... on an /en/... URL — which is exactly the
   // signal Search Console flags as "Duplicate without canonical".
   const urlLang = location.pathname.startsWith('/de/') ? 'de' : 'en';
-  const [postMeta, setPostMeta] = useState(null);
-  const [sections, setSections] = useState([]);
-  const [contentHtml, setContentHtml] = useState('');
-  const [isLoading, setIsLoading] = useState(true);
+  // Seed from the server-fetched post (SSR) so the article is in the initial
+  // HTML and there's no loading flash; fall back to a client fetch only when
+  // it's absent (e.g. a stale client navigation that didn't hit the server).
+  const [postMeta, setPostMeta] = useState(initialPost);
+  const [sections, setSections] = useState(initialPost?.sections || []);
+  const [contentHtml, setContentHtml] = useState(initialPost?.content_html || '');
+  const [isLoading, setIsLoading] = useState(!initialPost);
   // Sentinel to dedupe the view ping under React 18 StrictMode dev
   // double-invocation. Per-slug so navigating between posts re-fires.
   const viewPingedRef = useRef('');
 
   useEffect(() => {
     const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || '';
-    fetch(`${API_URL}/api/blogs/${slug}?lang=${urlLang}`)
-      .then(res => {
-        if (!res.ok) throw new Error('Not found');
-        return res.json();
-      })
-      .then(fetchedData => {
-        const post = fetchedData.post;
-        setPostMeta(post);
-        setSections(post.sections || []);
-        setContentHtml(post.content_html || '');
-        setIsLoading(false);
-      })
-      .catch(() => {
-        setIsLoading(false);
-        navigate('/blog');
-      });
+    // Server already provided the post for this slug — skip the refetch.
+    if (!initialPost) {
+      fetch(`${API_URL}/api/blogs/${slug}?lang=${urlLang}`)
+        .then(res => {
+          if (!res.ok) throw new Error('Not found');
+          return res.json();
+        })
+        .then(fetchedData => {
+          const post = fetchedData.post;
+          setPostMeta(post);
+          setSections(post.sections || []);
+          setContentHtml(post.content_html || '');
+          setIsLoading(false);
+        })
+        .catch(() => {
+          setIsLoading(false);
+          navigate('/blog');
+        });
+    }
 
     // Fire-and-forget view ping. We use `keepalive` so the request still
     // goes through if the user navigates away within the same tick (rare
@@ -112,7 +123,7 @@ export const BlogPost = () => {
         keepalive: true,
       }).catch(() => { /* analytics noop */ });
     }
-  }, [slug, navigate, urlLang]);
+  }, [slug, navigate, urlLang, initialPost]);
 
   if (isLoading) {
     return (

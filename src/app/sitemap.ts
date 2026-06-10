@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { routeConfig } from "@/config/routeConfig";
+import { getBlogSlugs } from "@/lib/blogApi";
 
 /**
  * Generates /sitemap.xml from the central routeConfig, with hreflang
@@ -20,7 +21,7 @@ type RouteEntry = {
   redirectTo?: string;
 };
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
 
   const entries: MetadataRoute.Sitemap = [];
@@ -60,6 +61,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
           "x-default": enUrl,
         },
       },
+    });
+  }
+
+  // Blog posts — previously absent from the sitemap (the `:slug` skip above
+  // covers only the routeConfig stub). Emit each published post with a `de`
+  // hreflang alternate only when a German translation exists.
+  const posts = await getBlogSlugs();
+  for (const post of posts) {
+    const enUrl = `${SITE_URL}/en/blog/${post.slug}`;
+    const deUrl = `${SITE_URL}/de/blog/${post.slug}`;
+    const languages: Record<string, string> = { en: enUrl, "x-default": enUrl };
+    if (post.hasDe) languages.de = deUrl;
+
+    entries.push({
+      url: enUrl,
+      lastModified: post.date ? new Date(post.date) : now,
+      changeFrequency: "monthly",
+      priority: 0.6,
+      alternates: { languages },
     });
   }
 
