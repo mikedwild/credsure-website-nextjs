@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import { useNavigate, useLocation, useParams } from '@/lib/router-shim';
 import { Menu, X } from 'lucide-react';
 import { useMegaMenuData } from './header/useMegaMenuData';
@@ -123,13 +124,14 @@ export const HeaderWithMegaMenu = () => {
               }}
               data-testid="header-logo"
             >
-              <img
+              <Image
                 src="/credsure-logo-main.webp"
                 alt="CredSure"
-                width="640"
-                height="360"
-                fetchpriority="high"
-                className="h-16 md:h-20 lg:h-24 w-auto group-hover:scale-105 transition-transform  "
+                width={640}
+                height={360}
+                priority
+                sizes="200px"
+                className="h-16 md:h-20 lg:h-24 w-auto group-hover:scale-105 transition-transform"
               />
             </div>
 
