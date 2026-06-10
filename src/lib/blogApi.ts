@@ -1,4 +1,33 @@
 import { cache } from "react";
+import sanitizeHtml from "sanitize-html";
+
+/**
+ * Sanitize blog body HTML on the server (pure JS — no jsdom, so it runs in
+ * Vercel's serverless runtime; isomorphic-dompurify's jsdom silently failed
+ * SSR there and dropped the body to client-only rendering). Allowlist covers
+ * the formatting the CMS actually emits plus a generous superset.
+ */
+const SANITIZE_OPTS: sanitizeHtml.IOptions = {
+  allowedTags: [
+    "h1", "h2", "h3", "h4", "h5", "h6", "p", "ul", "ol", "li",
+    "strong", "b", "em", "i", "u", "a", "blockquote", "br", "hr",
+    "code", "pre", "img", "figure", "figcaption", "span",
+    "table", "thead", "tbody", "tr", "td", "th",
+  ],
+  allowedAttributes: {
+    a: ["href", "name", "target", "rel"],
+    img: ["src", "alt", "width", "height", "loading"],
+    "*": ["class"],
+  },
+  allowedSchemes: ["http", "https", "mailto"],
+};
+
+function sanitizeBody(post: BlogPostData | null): BlogPostData | null {
+  if (post && typeof post.content_html === "string" && post.content_html) {
+    post.content_html = sanitizeHtml(post.content_html, SANITIZE_OPTS);
+  }
+  return post;
+}
 
 /**
  * Server-side blog fetch helpers (for generateMetadata + SSR + sitemap).
@@ -41,7 +70,7 @@ export const getBlogPost = cache(
       );
       if (!res.ok) return null;
       const data = await res.json();
-      return (data?.post as BlogPostData) || null;
+      return sanitizeBody((data?.post as BlogPostData) || null);
     } catch {
       return null;
     }

@@ -6,7 +6,6 @@ import { useTranslation } from '@/lib/useTranslation';
 import { useLocale } from 'next-intl';
 import { SEO, createArticleSchema, createBreadcrumbSchema, getBaseUrl } from '@/components/SEO';
 import { motion } from 'framer-motion';
-import DOMPurify from 'isomorphic-dompurify';
 import { Calendar, Clock, User, ArrowLeft, Share2, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { InlineBlogCTA } from '@/components/InlineBlogCTA';
@@ -98,11 +97,15 @@ export const BlogPost = ({ initialPost = null }) => {
           if (!res.ok) throw new Error('Not found');
           return res.json();
         })
-        .then(fetchedData => {
+        .then(async fetchedData => {
           const post = fetchedData.post;
+          // Server-fetched posts are already sanitized (lib/blogApi). This
+          // client-only fallback path sanitizes with a browser-loaded
+          // DOMPurify (dynamic import keeps it out of the SSR module graph).
+          const { default: DOMPurify } = await import('dompurify');
           setPostMeta(post);
           setSections(post.sections || []);
-          setContentHtml(post.content_html || '');
+          setContentHtml(DOMPurify.sanitize(post.content_html || ''));
           setIsLoading(false);
         })
         .catch(() => {
@@ -255,7 +258,7 @@ export const BlogPost = ({ initialPost = null }) => {
               <div className="space-y-8">
                 <div
                   className="prose prose-lg max-w-none text-gray-700   [&_h2]:text-2xl [&_h2]:md:text-3xl [&_h2]:font-bold [&_h2]:text-[#0F0E1A] [&_h2]: [&_h2]:mt-10 [&_h2]:mb-4 [&_p]:leading-relaxed [&_li]:leading-relaxed"
-                  dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(contentHtml) }}
+                  dangerouslySetInnerHTML={{ __html: contentHtml }}
                 />
                 <InlineBlogCTA variant="default" blogSlug={slug} />
               </div>
