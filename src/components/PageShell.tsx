@@ -19,6 +19,10 @@ const StickyBottomBar = dynamic(
   () => import("./StickyBottomBar").then((m) => ({ default: m.StickyBottomBar })),
   { ssr: false }
 );
+const ExitIntentPopup = dynamic(
+  () => import("./ExitIntentPopup").then((m) => ({ default: m.ExitIntentPopup })),
+  { ssr: false }
+);
 
 export default function PageShell({ children }: { children: React.ReactNode }) {
   return (
@@ -33,6 +37,7 @@ export default function PageShell({ children }: { children: React.ReactNode }) {
       <Footer />
       <CookieConsent />
       <StickyBottomBar />
+      <ExitIntentPopup onSubmit={() => {}} />
     </ThemeProvider>
   );
 }
