@@ -237,7 +237,7 @@ export const BlogPost = ({ initialPost = null }) => {
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-6 lg:px-12 max-w-4xl">
           <Button
-            onClick={() => navigate(-1)}
+            onClick={() => navigate('/blog')}
             variant="outline"
             className="mb-8 border-2 border-slate-300  hover:border-[#5B22D6]"
           >
