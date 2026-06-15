@@ -40,6 +40,13 @@ All app routes are dynamic (`ƒ`) — server-rendered on demand. The marketing p
 
 ---
 
+## ✅ Done — favicon + mobile spacing (2026-06-15)
+Three reported homepage issues, all fixed and verified live on `credsure.io` (`6e1b3ec`, deploy `dpl_4baPwo…`):
+- **Favicon was the stock `create-next-app` icon** (black circle/white triangle) — `src/app/favicon.ico` (App Router metadata file) shadowed the real brand `public/favicon.ico`, so the live `<link>` pointed at the Next default with a broken `sizes="256x256"`. Swapped the brand icon into `src/app/favicon.ico`, added `src/app/apple-icon.png` (now emits `<link rel="apple-touch-icon">`, was absent), removed the duplicate `public/favicon.ico`. Live link now `sizes="32x32"` + apple-touch present.
+- **Oversized mobile spacing (site-wide)** — 16 section components used `py-24/28/32` (96–128px) on mobile; set the mobile base to `py-16` (64px) across all of them, **preserving every desktop `md:` value**. Hero top padding `pt-28`→`pt-12` (112px→48px) to tighten the nav→hero gap (h1 top 246px→182px on a 375px viewport).
+- **The big mobile gaps in the screenshot** — `system/ProductUIWindow` hardcoded `minHeight: 420px` at *all* breakpoints, letterboxing the short landscape product mocks with ~250–290px of dead space on mobile. Gated the reserve to `md+` only (no CLS — the mock `<img>`s carry `width`/`height`); removed the redundant inner inline `minHeight:420` in `Features2026` + `ProductShowcase`. Dead space per panel ~290px→~32px on mobile; desktop 420px reserve unchanged.
+- **Side fix:** `next.config.ts` now pins `turbopack.root` to the project dir — a stray `~/package-lock.json` was making Next infer the home dir as the workspace root, 404ing `/en` in local dev. (Underlying cause: delete that stray lockfile when convenient.)
+
 ## ✅ Done — footer heyData seal (2026-06-10)
 - **heyData GDPR privacy seal in the footer** — mirrors the trust badge on `talentsure.de`. Added to the bottom-bar trust cluster (next to the Vanta badge): an `<a>` to `heydata.eu` wrapping the seal `<img>` from `api.heydata.eu/privacy-seal/seal/{id}`. Reuses the Certif-ID International GmbH seal (same legal entity as TalentSure); `lang` param follows the active locale (`en`/`de`). Verified rendering on both locales locally (real SVG, correct 406×226 aspect → no CLS). (`a59cb3e`)
 
