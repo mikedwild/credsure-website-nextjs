@@ -7,7 +7,7 @@ export const CompetitorComparison = () => {
   const t = useTranslation();
 
   return (
-    <section className="py-24 bg-white ">
+    <section className="py-16 md:py-24 bg-white ">
       <div className="container mx-auto px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center max-w-3xl mx-auto mb-16">

@@ -64,7 +64,7 @@ export const Features2026 = () => {
   return (
     <section
       id="features"
-      className="py-28 md:py-32 relative overflow-hidden"
+      className="py-16 md:py-32 relative overflow-hidden"
       style={{ background: '#FFFFFF' }}
       data-testid="features-2026"
     >
@@ -115,7 +115,7 @@ export const Features2026 = () => {
                     <div className="relative">
                       {/* Halo cushion removed — hero PNGs are transparent now. */}
                       <ProductUIWindow url={media.urlBar} minHeight={420} className="relative">
-                        <div className="w-full h-full flex items-center justify-center p-4" style={{ minHeight: 420 }}>
+                        <div className="w-full h-full flex items-center justify-center p-4">
                           <img
                             src={media.hero}
                             alt={media.alt || row.eyebrow}

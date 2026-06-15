@@ -14,7 +14,7 @@ export const BentoShowcase = () => {
   const t = useTranslation();
 
   return (
-    <section className="py-32 bg-white  relative overflow-hidden">
+    <section className="py-16 md:py-32 bg-white  relative overflow-hidden">
       {/* Animated gradient mesh background */}
       <div className="absolute inset-0 opacity-30 ">
         <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-gradient-to-br from-purple-400 via-pink-400 to-transparent rounded-full blur-3xl animate-blob" />

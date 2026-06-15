@@ -16,7 +16,7 @@ export const CTASection = ({ onCtaClick }) => {
   ];
 
   return (
-    <section className="py-28 md:py-32 relative overflow-hidden" style={{ background: '#FFFFFF' }}>
+    <section className="py-16 md:py-32 relative overflow-hidden" style={{ background: '#FFFFFF' }}>
       {/* Subtle peach + lavender wash — Beamery restraint */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-[520px] h-[520px] rounded-full blur-3xl" style={{ background: 'radial-gradient(circle, rgba(255,184,158,0.40) 0%, transparent 70%)' }} />

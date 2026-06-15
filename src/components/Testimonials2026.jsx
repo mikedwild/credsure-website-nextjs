@@ -72,7 +72,7 @@ export const Testimonials2026 = () => {
 
   return (
     <section
-      className="py-28 md:py-32 relative overflow-hidden"
+      className="py-16 md:py-32 relative overflow-hidden"
       style={{ background: '#FAFAFC' }}
       data-testid="testimonials-2026"
     >

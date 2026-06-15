@@ -24,7 +24,7 @@ const industryLinks = {
 
 export const IndustryUseCases = () => {
   return (
-    <section className="py-32 bg-gradient-to-b from-slate-50 via-white to-slate-50">
+    <section className="py-16 md:py-32 bg-gradient-to-b from-slate-50 via-white to-slate-50">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Section header */}
         <div className="text-center max-w-4xl mx-auto mb-20">

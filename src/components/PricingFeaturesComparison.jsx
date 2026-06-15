@@ -34,7 +34,7 @@ export const PricingFeaturesComparison = () => {
   };
 
   return (
-    <section className="py-24 bg-slate-50  transition-colors duration-300">
+    <section className="py-16 md:py-24 bg-slate-50  transition-colors duration-300">
       <div className="container mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <motion.div

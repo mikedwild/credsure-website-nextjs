@@ -35,7 +35,7 @@ export const ProductShowcase = () => {
   const media = featureMedia[TAB_TO_MEDIA[activeKey]] || {};
 
   return (
-    <section className="py-24 md:py-28 relative overflow-hidden" style={{ background: '#FFFFFF' }} data-testid="product-showcase">
+    <section className="py-16 md:py-28 relative overflow-hidden" style={{ background: '#FFFFFF' }} data-testid="product-showcase">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full blur-3xl pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(187,158,255,0.18) 0%, transparent 70%)' }} aria-hidden="true" />
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
@@ -85,7 +85,7 @@ export const ProductShowcase = () => {
               <div className="relative">
                 {/* Halo cushion removed — hero PNGs are transparent now. */}
                 <ProductUIWindow url={media.urlBar} minHeight={420} className="relative">
-                  <div className="w-full h-full flex items-center justify-center p-4" style={{ minHeight: 420 }}>
+                  <div className="w-full h-full flex items-center justify-center p-4">
                     <img
                       src={media.hero}
                       alt={media.alt || t(`productShowcase.${activeKey}.title`)}

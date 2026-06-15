@@ -49,7 +49,7 @@ export const Hero2026 = () => {
 
   return (
     <GradientMeshBackground className="relative flex items-center transition-colors duration-300">
-      <div className="container mx-auto px-6 md:px-12 pt-28 pb-16 md:pt-32 md:pb-24 relative z-10">
+      <div className="container mx-auto px-6 md:px-12 pt-12 pb-16 md:pt-32 md:pb-24 relative z-10">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
 
           {/* ─── Left column — text + CTAs ─── */}

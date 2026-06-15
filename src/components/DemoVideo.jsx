@@ -11,7 +11,7 @@ export const DemoVideo = () => {
   const duration = "2:30";
 
   return (
-    <section id="demo-video" className="py-24 bg-gradient-to-br from-slate-900 to-slate-800">
+    <section id="demo-video" className="py-16 md:py-24 bg-gradient-to-br from-slate-900 to-slate-800">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Section header */}

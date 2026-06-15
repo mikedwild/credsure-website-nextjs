@@ -18,7 +18,7 @@ export const CustomerStorySpotlight = () => {
   const t = useTranslation();
 
   return (
-    <section className="py-24 md:py-28 relative overflow-hidden" style={{ background: '#FAFAFC' }} data-testid="customer-spotlight">
+    <section className="py-16 md:py-28 relative overflow-hidden" style={{ background: '#FAFAFC' }} data-testid="customer-spotlight">
       <div className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full blur-3xl pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(187,158,255,0.20) 0%, transparent 70%)' }} aria-hidden="true" />
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">

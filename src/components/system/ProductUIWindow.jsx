@@ -13,14 +13,21 @@
  * `minHeight` keeps reserving consistent vertical space across pages —
  * eliminates CLS while images load. `url` is retained for API stability
  * but intentionally unused.
+ *
+ * The reserved height is applied at `md+` ONLY. On mobile the panel
+ * stacks below the copy and the landscape mocks are short (~150px),
+ * so a fixed 420px reserve left ~250px of dead space under the image.
+ * The mock <img>s all carry width/height attributes, so the browser
+ * already reserves an aspect-ratio box — no CLS from dropping the mobile
+ * min-height.
  */
 import React from 'react';
 
 // eslint-disable-next-line no-unused-vars
 export const ProductUIWindow = ({ url, children, minHeight = 420, className = '' }) => (
   <div
-    className={className}
-    style={{ minHeight }}
+    className={`md:[min-height:var(--puw-min-h)] ${className}`.trim()}
+    style={{ '--puw-min-h': `${minHeight}px` }}
     data-testid="product-ui-window"
   >
     {children}

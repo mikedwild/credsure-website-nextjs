@@ -18,7 +18,7 @@ export const Benefits = () => {
   const categories = Array.isArray(rawCats) ? rawCats : DEFAULT_CATEGORIES;
 
   return (
-    <section className="py-24 brand-gradient relative overflow-hidden">
+    <section className="py-16 md:py-24 brand-gradient relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>

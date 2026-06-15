@@ -30,7 +30,7 @@ export const ROICalculator = ({ onCtaClick }) => {
   }, [computeROI]);
 
   return (
-    <section id="roi-calculator" className="py-24 bg-gradient-to-br from-purple-50 via-indigo-50 to-slate-50 relative overflow-hidden" data-testid="roi-calculator-section">
+    <section id="roi-calculator" className="py-16 md:py-24 bg-gradient-to-br from-purple-50 via-indigo-50 to-slate-50 relative overflow-hidden" data-testid="roi-calculator-section">
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-96 h-96 bg-purple-200/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-200/20 rounded-full blur-3xl"></div>

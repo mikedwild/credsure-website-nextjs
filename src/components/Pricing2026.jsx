@@ -32,7 +32,7 @@ export const Pricing2026 = ({ onCtaClick }) => {
   };
 
   return (
-    <section id="pricing" className="py-32 bg-gradient-to-b from-slate-50 via-white to-purple-50/20    relative overflow-hidden transition-colors duration-300">
+    <section id="pricing" className="py-16 md:py-32 bg-gradient-to-b from-slate-50 via-white to-purple-50/20    relative overflow-hidden transition-colors duration-300">
       {/* Background Elements */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-[#B82BC4]/10 to-transparent rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-br from-[#E22B8A]/10 to-transparent rounded-full blur-3xl" />

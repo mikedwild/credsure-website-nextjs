@@ -214,7 +214,7 @@ export const BeameryPlatform = () => {
   const Mock = MOCKS[pillar.key];
 
   return (
-    <section className="py-24 md:py-32 relative overflow-hidden" style={{ background: '#FAFAFC' }}>
+    <section className="py-16 md:py-32 relative overflow-hidden" style={{ background: '#FAFAFC' }}>
       {/* Subtle ambient orb */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full blur-3xl pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(187,158,255,0.20) 0%, transparent 70%)' }} aria-hidden="true" />
 
