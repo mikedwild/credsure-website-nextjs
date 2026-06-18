@@ -40,6 +40,15 @@ All app routes are dynamic (`ƒ`) — server-rendered on demand. The marketing p
 
 ---
 
+## ✅ Done — German pages rendering English (i18n) (2026-06-18)
+Reported: `/de/digitale-badges` (and many pages) showed English despite German URLs. Root cause was **not** the message data (EN/DE key parity was already exact, 1416 keys) — ~25 view/components **hardcoded English in JSX and bypassed next-intl entirely**. The original route audit also missed two classes: the **homepage** (not a `routeConfig` route) and **shared child components** (`CustomerCard`, `SolutionEnrichment/FAQ`). (`f5b2f98`)
+- Migrated all user-visible copy into **12 locale-isolated message files** (`src/messages/{en,de}/*-extra.json`: solutions/templates/resources/pages/misc/homepage), deep-merged via `src/i18n/request.ts`. Read back through `useTranslation()` / `t(key, { returnObjects: true })`. **English byte-identical; German added.**
+- Fixed ~42 public routes + homepage: solution/feature/use-case shared templates (repairs 26+ routes), DigitalBadges, compare/*, Integrations, Guides, Webinars, Tutorials, Templates, CustomerSuccess, ROICalculatorPage, Demo, Blog filter UI, SignIn, PoliciesTerms chrome, plus homepage IndustryUseCases / Testimonials2026 / Features2026 / BeameryPlatform pillars (added `platformPillars.{issue,verify,govern,insights}`) / G2Badges / CustomerCard.
+- Verified: `next build` passes, EN/DE parity exact, live `/de` render checks show no English leftovers, `/en` unchanged, fresh reviewer PASS.
+- **Open follow-ons:**
+  - **Run the blog backfill** — `backend/scripts/backfill_blog_translations.py` (dry-run default, idempotent, `--apply` to write) translates the ~123 English-only blog posts to German via the existing `translate_fields` pipeline. Written this session, **not yet run**. `/de/blog/*` still falls back to English until run.
+  - **Terms/MSA legal body still English on `/de`** — page chrome is German, but the contract clauses in `src/data/msa` (`MSA_SECTIONS`) were intentionally left English. The German chrome is **machine-translated and flagged in-code for legal review**. Get a human/legal pass before relying on any German legal copy.
+
 ## ✅ Done — favicon + mobile spacing (2026-06-15)
 Three reported homepage issues, all fixed and verified live on `credsure.io` (`6e1b3ec`, deploy `dpl_4baPwo…`):
 - **Favicon was the stock `create-next-app` icon** (black circle/white triangle) — `src/app/favicon.ico` (App Router metadata file) shadowed the real brand `public/favicon.ico`, so the live `<link>` pointed at the Next default with a broken `sizes="256x256"`. Swapped the brand icon into `src/app/favicon.ico`, added `src/app/apple-icon.png` (now emits `<link rel="apple-touch-icon">`, was absent), removed the duplicate `public/favicon.ico`. Live link now `sizes="32x32"` + apple-touch present.
