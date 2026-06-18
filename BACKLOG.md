@@ -41,11 +41,9 @@ All app routes are dynamic (`ƒ`) — server-rendered on demand. The marketing p
 ## ✅ DONE — Blog bodies restored (2026-06-18)
 Ran `repair_blog_bodies.py --apply` against production Mongo via `railway run` (commit `33b54ee` deployed). **123 post bodies restored** from `blog_content.json` (10 already-healthy left untouched; 1 — `digitale-zertifikate-unternehmen` — has no recoverable source). Verified live: `/en/blog/digital-certificates-vs-digital-badges` now renders the full article (0 → 10,845 body chars). Migration bug also fixed at source in `migrate_blogs.py`.
 
-## ⛔ BLOCKED — German blog translation (no LLM key on Railway)
-`backfill_blog_translations.py` is ready, but **the Railway backend has no `ANTHROPIC_API_KEY`/`OPENAI_API_KEY`**, so `translate_fields` can't run. Also local Python is 3.9 (< the 3.10 `utils.ai_content` needs), so it can't run via `railway run` either — it must run **inside the container** (Python 3.11). To complete:
-1. Add `ANTHROPIC_API_KEY` (and/or `OPENAI_API_KEY`) to the Railway service vars.
-2. Run in-container (register a Railway SSH key, then `railway ssh … "python -m scripts.backfill_blog_translations --apply"`), starting with `--limit 1` to eyeball quality.
-Note: blog **titles + excerpts** are already German for 123 posts via `blog.json` i18n; this step translates the **article bodies** (and fixes the English SEO `<title>`).
+## ✅ DONE — German blog bodies translated & published (2026-06-18)
+All **126 posts now serve full German bodies** on `/de/blog/*` (verified: backend `served_lang=de` for 126/126, live spot-checks render German). Did NOT use the backend LLM pipeline (no key on Railway) — instead translated the bodies directly (parallel translators) into `backend/data/blog_content_de.json` (German mirror of `blog_content.json`), then published `content_html_de` + `title_de`/`excerpt_de` to Mongo via `scripts/apply_blog_de.py` (run with `railway run`, idempotent). To re-run or extend: edit `blog_content_de.json`, then `railway run python3 -m scripts.apply_blog_de --apply`.
+- The unused `backfill_blog_translations.py` (backend-LLM path) remains as an alternative if an `ANTHROPIC_API_KEY` is ever added to Railway.
 
 ## ~~🩹 Blog bodies lost in migration — restore from source~~ (DONE above)
 **Root cause found (2026-06-18):** `backend/scripts/migrate_blogs.py` read each scraped section's body from a field named `paragraphs`, but `backend/data/blog_content.json` stores body text in **`content`**. The mismatch dropped every paragraph on import — so **123 of 126 posts render as headings-only (110) or empty (13)**; only the 3 posts sourced from `blog_posts_bilingual.json` have real bodies. The text is intact in `blog_content.json` (~650K chars) → fully recoverable.
