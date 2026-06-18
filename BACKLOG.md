@@ -38,7 +38,16 @@ All app routes are dynamic (`ƒ`) — server-rendered on demand. The marketing p
 - **Optional AI keys:** add `ANTHROPIC_API_KEY` + `OPENAI_API_KEY` (Railway vars or admin Settings) for AI blog gen/images.
 - German eyebrow: feature-page overview eyebrow falls back to EN "Why it matters"; add `features.overviewEyebrow` to the DE messages if a translation is wanted.
 
-## 🩹 Blog bodies lost in migration — restore from source (needs Railway run, do BEFORE the DE translation)
+## ✅ DONE — Blog bodies restored (2026-06-18)
+Ran `repair_blog_bodies.py --apply` against production Mongo via `railway run` (commit `33b54ee` deployed). **123 post bodies restored** from `blog_content.json` (10 already-healthy left untouched; 1 — `digitale-zertifikate-unternehmen` — has no recoverable source). Verified live: `/en/blog/digital-certificates-vs-digital-badges` now renders the full article (0 → 10,845 body chars). Migration bug also fixed at source in `migrate_blogs.py`.
+
+## ⛔ BLOCKED — German blog translation (no LLM key on Railway)
+`backfill_blog_translations.py` is ready, but **the Railway backend has no `ANTHROPIC_API_KEY`/`OPENAI_API_KEY`**, so `translate_fields` can't run. Also local Python is 3.9 (< the 3.10 `utils.ai_content` needs), so it can't run via `railway run` either — it must run **inside the container** (Python 3.11). To complete:
+1. Add `ANTHROPIC_API_KEY` (and/or `OPENAI_API_KEY`) to the Railway service vars.
+2. Run in-container (register a Railway SSH key, then `railway ssh … "python -m scripts.backfill_blog_translations --apply"`), starting with `--limit 1` to eyeball quality.
+Note: blog **titles + excerpts** are already German for 123 posts via `blog.json` i18n; this step translates the **article bodies** (and fixes the English SEO `<title>`).
+
+## ~~🩹 Blog bodies lost in migration — restore from source~~ (DONE above)
 **Root cause found (2026-06-18):** `backend/scripts/migrate_blogs.py` read each scraped section's body from a field named `paragraphs`, but `backend/data/blog_content.json` stores body text in **`content`**. The mismatch dropped every paragraph on import — so **123 of 126 posts render as headings-only (110) or empty (13)**; only the 3 posts sourced from `blog_posts_bilingual.json` have real bodies. The text is intact in `blog_content.json` (~650K chars) → fully recoverable.
 - **Fixed the migration bug** in `migrate_blogs.py` (now reads `content`) so a re-migration can't repeat it (`<commit>`). The live DB still has the broken bodies, though (migration is insert-once / idempotent-guarded).
 - **Repair script written (not run):** `backend/scripts/repair_blog_bodies.py` — dry-run default, idempotent; rebuilds `content_html` from `blog_content.json` for "thin" posts only (skips the 3 healthy ones), `--apply` to write. Locally verified it restores e.g. `digital-certificates-vs-digital-badges` from 0 → ~10.8K body chars.
