@@ -1,0 +1,58 @@
+{
+  "tplx": {
+    "feature": {
+      "explorePlatform": "Explore platform",
+      "trustEyebrow": "CredSure Platform",
+      "trustTagline": "Built into every workflow",
+      "capabilitiesEyebrow": "Capabilities",
+      "capabilitiesHeading": "Everything you need to make this ",
+      "capabilitiesHeadingHighlight": "work at scale.",
+      "metricsEyebrow": "Proof in numbers",
+      "metricsHeading": "Metrics that matter.",
+      "useCasesEyebrow": "In production",
+      "useCasesHeading": "How teams use this ",
+      "useCasesHeadingHighlight": "today.",
+      "faqEyebrow": "FAQ",
+      "faqHeading": "Frequently asked.",
+      "ctaHeading": "Ready to ",
+      "ctaHeadingHighlight": "see it live?",
+      "ctaSubtitle": "See how CredSure transforms credentialing for your team. Personalised demo, 15 minutes."
+    },
+    "useCase": {
+      "explorePlatform": "Explore platform",
+      "itemsEyebrow": "What teams ship",
+      "itemsHeading": "Everything you need ",
+      "itemsHeadingHighlight": "in one place.",
+      "ctaHeading": "Ready to ",
+      "ctaHeadingHighlight": "put this to work?",
+      "ctaSubtitle": "See how CredSure fits your stack with a 15-minute personalised demo."
+    },
+    "platform": {
+      "heroSubtitleExtra": "Blockchain-verified digital certificates and badges trusted by 150+ organizations worldwide. Issue, manage, verify, and track credentials at any scale — from 10 to 10 million.",
+      "howItWorksHeading": "How CredSure ",
+      "howItWorksHeadingHighlight": "Works",
+      "howItWorksSubtitle": "From design to verification in four simple steps",
+      "coreFeaturesHeading": "Core ",
+      "coreFeaturesHeadingHighlight": "Features",
+      "coreFeaturesSubtitle": "The foundation of your credentialing program",
+      "automationHeadingHighlight": "Automation",
+      "automationSubtitle": "Eliminate manual work with intelligent automation",
+      "customizationHeadingHighlight": "Customization",
+      "customizationSubtitle": "Make it yours with full brand control",
+      "learnMore": "Learn more",
+      "integrationsHeading": "Integrates With Your ",
+      "integrationsHeadingHighlight": "Tech Stack",
+      "integrationsSubtitle": "Connect CredSure to 3,000+ tools via API and Zapier",
+      "faqHeading": "Frequently Asked ",
+      "faqHeadingHighlight": "Questions",
+      "ctaHeading": "Ready to transform your credentialing?",
+      "faq": [
+        { "question": "How long does it take to get started with CredSure?", "answer": "Most organizations are up and running within a day. Create your account, design your first credential template, and issue your first batch — no technical setup required. Enterprise integrations (LMS, API) typically take 1-2 weeks." },
+        { "question": "Can I migrate from another credentialing platform?", "answer": "Yes. CredSure supports migration from Accredible, Credly, Certifier, and custom systems. Our migration team handles data import, template recreation, and recipient notification at no extra cost on Professional and Enterprise plans." },
+        { "question": "What makes CredSure different from Credly or Accredible?", "answer": "CredSure offers blockchain verification (not just digital storage), transparent pricing (no hidden fees), full white-label capability, and bilingual support (English & German). Our platform is built for both certificates and badges, with a unified dashboard." },
+        { "question": "Is there a free trial?", "answer": "Yes. Every account starts with 20 free credits to issue and test credentials. No credit card required. Upgrade to a paid plan when you are ready to scale." },
+        { "question": "Do credentials work offline?", "answer": "Yes. Recipients can download their credentials as PDF or add them to digital wallets for offline access. Verification requires an internet connection, but the credential itself is always accessible." }
+      ]
+    }
+  }
+}

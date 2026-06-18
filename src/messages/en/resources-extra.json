@@ -1,0 +1,320 @@
+{
+  "resx": {
+    "integrations": {
+      "categories": [
+        {
+          "id": "lms",
+          "title": "Learning Management Systems",
+          "description": "Automatically issue credentials when learners complete courses, modules, or assessments.",
+          "integrations": [
+            { "name": "Moodle", "desc": "Issue credentials for course completions and enrollments" },
+            { "name": "LearnDash", "desc": "WordPress LMS with automated certificate triggers" },
+            { "name": "Teachable", "desc": "Online course platform credential automation" },
+            { "name": "TalentLMS", "desc": "Enterprise training completion credentials" },
+            { "name": "Thinkific", "desc": "Course completion and milestone badges" },
+            { "name": "LearnWorlds", "desc": "Interactive course credential delivery" },
+            { "name": "Skilljar", "desc": "Customer education certification" },
+            { "name": "LearnUpon", "desc": "Corporate training program credentials" },
+            { "name": "EdApp", "desc": "Microlearning completion badges" },
+            { "name": "Pluto LMS", "desc": "Custom LMS integration via API" }
+          ]
+        },
+        {
+          "id": "crm",
+          "title": "CRM & Marketing",
+          "description": "Sync credential data with your CRM to track engagement and nurture certified contacts.",
+          "integrations": [
+            { "name": "Salesforce", "desc": "Sync credential status and recipient data" },
+            { "name": "HubSpot", "desc": "Trigger workflows based on credential events" },
+            { "name": "Microsoft Dynamics 365", "desc": "Enterprise CRM credential tracking" },
+            { "name": "ActiveCampaign", "desc": "Email automation for credential holders" }
+          ]
+        },
+        {
+          "id": "productivity",
+          "title": "Productivity & Data",
+          "description": "Connect your existing tools to automate credential workflows without code.",
+          "integrations": [
+            { "name": "Google Sheets", "desc": "Bulk issue from spreadsheet data" },
+            { "name": "Airtable", "desc": "Database-driven credential automation" },
+            { "name": "Typeform", "desc": "Issue credentials on form submission" },
+            { "name": "Asana", "desc": "Project milestone credential triggers" },
+            { "name": "Calendly", "desc": "Event attendance verification" }
+          ]
+        },
+        {
+          "id": "ecommerce",
+          "title": "E-Commerce & Websites",
+          "description": "Issue credentials for purchases, course enrollments, and membership achievements.",
+          "integrations": [
+            { "name": "WooCommerce", "desc": "WordPress e-commerce credential delivery" },
+            { "name": "Wix", "desc": "Website builder integration" }
+          ]
+        },
+        {
+          "id": "social",
+          "title": "Social & Communication",
+          "description": "Enable credential sharing and team notifications across communication platforms.",
+          "integrations": [
+            { "name": "LinkedIn", "desc": "One-click credential sharing to profiles", "color": "#0A66C2" },
+            { "name": "Slack", "desc": "Team notifications for issued credentials", "color": "#4A154B" },
+            { "name": "Microsoft Teams", "desc": "Credential alerts in team channels", "color": "#6264A7" },
+            { "name": "Google Workspace", "desc": "Gmail and Drive integration", "color": "#4285F4" }
+          ]
+        }
+      ],
+      "statIntegrations": "Integrations",
+      "statApps": "Apps via Zapier",
+      "statCustom": "Custom Integration",
+      "zapierTitle": "Connect to 8,000+ Apps",
+      "zapierSubtitle": "CredSure connects seamlessly to thousands of apps via Zapier — no code required.",
+      "zapierCta": "View on Zapier",
+      "customTitle": "Need a Custom Integration?",
+      "customSubtitle": "Our REST API allows integration with any platform. Our team will help you build it.",
+      "customCards": [
+        { "title": "REST API", "desc": "Full API documentation for developers" },
+        { "title": "Webhooks", "desc": "Real-time notifications for credential events" },
+        { "title": "SSO / SAML", "desc": "Enterprise single sign-on integration" }
+      ],
+      "customCta": "Discuss Your Integration"
+    },
+    "guides": {
+      "guides": [
+        {
+          "id": "complete-guide-digital-credentials",
+          "title": "The Complete Guide to Digital Credentials in 2026",
+          "description": "Everything you need to know about implementing, managing, and scaling a digital credentialing program. From strategy to execution.",
+          "category": "Getting Started",
+          "readTime": "25 min read",
+          "image": "https://images.unsplash.com/photo-1641580550451-3a452effc5b7?w=800&h=450&fit=crop",
+          "featured": true,
+          "content": [
+            { "heading": "What Are Digital Credentials?", "body": "Digital credentials are verified, tamper-proof records of achievements, skills, or qualifications issued electronically. Unlike paper certificates, they can be instantly verified by employers, shared on social platforms like LinkedIn, and stored securely using blockchain technology. In 2026, organizations worldwide are adopting digital credentials to reduce fraud, increase efficiency, and empower their learners." },
+            { "heading": "Why Digital Credentials Matter in 2026", "body": "The credentialing landscape has shifted dramatically. With remote work, global hiring, and skills-based recruitment on the rise, employers need instant, trustworthy verification. Digital credentials solve this by providing cryptographically secure, one-click verification that eliminates manual background checks and reduces time-to-hire by up to 60%." },
+            { "heading": "Building Your Credential Strategy", "body": "A successful credentialing program starts with clear goals: Are you issuing completion certificates, professional badges, or micro-credentials? Define your audience, choose your verification method (blockchain vs. digital signature), and design credentials that recipients will actually want to share. The best programs see 3x higher engagement when credentials are visually appealing and easily shareable." },
+            { "heading": "Implementation Roadmap", "body": "Phase 1: Audit your current certification process and identify pain points. Phase 2: Select a credentialing platform that supports your scale (CredSure handles 10M+ credentials). Phase 3: Design your credential templates with your brand guidelines. Phase 4: Integrate with your LMS or HR system via API. Phase 5: Launch with a pilot group, gather feedback, and iterate. Most organizations complete this in 4-8 weeks." },
+            { "heading": "Measuring Success", "body": "Track these KPIs: credential issuance rate, recipient share rate (aim for 40%+), employer verification clicks, time saved vs. manual processes, and learner satisfaction scores. Organizations using CredSure report an average 35% reduction in administrative costs and 4x increase in credential sharing compared to PDF certificates." }
+          ]
+        },
+        {
+          "id": "blockchain-verification-whitepaper",
+          "title": "Blockchain Verification: A Technical Deep Dive",
+          "description": "Understand how blockchain technology secures digital credentials and why it matters for your organization.",
+          "category": "Technology",
+          "readTime": "15 min read",
+          "image": "https://images.unsplash.com/photo-1635840418908-772c54d7931f?w=800&h=450&fit=crop",
+          "content": [
+            { "heading": "How Blockchain Secures Credentials", "body": "Each credential is hashed and anchored to a public blockchain, creating an immutable record that cannot be altered or forged. When a verifier checks a credential, they compare the document hash against the blockchain record — if they match, the credential is authentic. This process takes under 2 seconds and requires no contact with the issuing organization." },
+            { "heading": "Public vs. Private Blockchains", "body": "CredSure uses a hybrid approach: credential hashes are stored on public blockchains (Ethereum, Polygon) for maximum transparency, while personal data remains off-chain in encrypted databases compliant with GDPR. This gives you the security of blockchain without exposing sensitive information." },
+            { "heading": "Integration Architecture", "body": "The verification flow is simple: Issue credential → Generate hash → Anchor to blockchain → Provide verification URL. Recipients share their credential link, and anyone can verify it instantly without creating an account or installing software. The entire system is API-first, making integration with existing platforms straightforward." }
+          ]
+        },
+        {
+          "id": "roi-credentialing-program",
+          "title": "Measuring ROI of Your Credentialing Program",
+          "description": "A practical framework for calculating and communicating the return on investment of digital credentials.",
+          "category": "Strategy",
+          "readTime": "12 min read",
+          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop",
+          "content": [
+            { "heading": "The ROI Framework", "body": "Calculate your credentialing ROI using this formula: (Time saved + Cost reduction + Revenue from increased engagement) - Platform cost = Net ROI. Most organizations see positive ROI within the first quarter. Factor in: printing/shipping elimination ($3-8 per certificate), administrative hours saved (avg. 15 hrs/month), and increased program enrollment from shareable credentials." },
+            { "heading": "Hidden Value Drivers", "body": "Beyond direct cost savings, digital credentials drive brand visibility (each shared credential reaches an average of 200 LinkedIn connections), reduce fraud liability, improve audit readiness, and increase learner retention by 25%. These indirect benefits often exceed the direct cost savings." },
+            { "heading": "Making the Business Case", "body": "Present your ROI case to leadership using three lenses: operational efficiency (cost/time savings), strategic value (brand reach, competitive advantage), and risk mitigation (fraud prevention, compliance). Use CredSure's ROI Calculator to generate a customized projection for your organization." }
+          ]
+        },
+        {
+          "id": "gdpr-compliance-credentials",
+          "title": "GDPR Compliance for Credential Programs",
+          "description": "Navigate European data protection regulations when issuing and managing digital credentials.",
+          "category": "Compliance",
+          "readTime": "18 min read",
+          "image": "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&h=450&fit=crop",
+          "content": [
+            { "heading": "GDPR and Digital Credentials", "body": "Digital credentials contain personal data (names, achievements, dates), making them subject to GDPR. Key requirements: obtain explicit consent before issuing, provide data portability (recipients must be able to download/transfer), implement right to erasure, and maintain records of processing activities. CredSure is fully GDPR-compliant with EU data centers." },
+            { "heading": "Data Minimization Best Practices", "body": "Only include necessary information on credentials. A blockchain hash of the credential provides verification without storing personal data on-chain. Use pseudonymization where possible, and implement automatic data retention policies. CredSure's architecture ensures personal data never touches the blockchain." },
+            { "heading": "Cross-Border Considerations", "body": "When issuing credentials to recipients in multiple countries, ensure your data processing agreements cover international transfers. Use Standard Contractual Clauses (SCCs) for non-EU transfers, and maintain a Record of Processing Activities (ROPA) that documents your credential lifecycle." }
+          ]
+        },
+        {
+          "id": "micro-credentials-higher-education",
+          "title": "Micro-Credentials in Higher Education: A Complete Playbook",
+          "description": "How universities are using stackable micro-credentials to drive enrollment, retention, and career outcomes.",
+          "category": "Higher Education",
+          "readTime": "20 min read",
+          "image": "https://images.unsplash.com/photo-1763673404757-e6dfe627941b?w=800&h=450&fit=crop",
+          "content": [
+            { "heading": "The Micro-Credential Revolution", "body": "Universities are supplementing traditional degrees with stackable micro-credentials that validate specific skills. These shorter, focused certifications attract working professionals, boost enrollment in continuing education, and provide students with shareable proof of in-demand competencies. Institutions using micro-credentials report 40% higher enrollment in professional development programs." },
+            { "heading": "Designing Stackable Pathways", "body": "Create credential pathways where individual micro-credentials combine into larger qualifications. For example: 4 data science micro-credentials → Data Analytics Certificate → combined with electives for a Master's pathway. This modular approach increases flexibility and student retention." },
+            { "heading": "Implementation for Universities", "body": "Start with your most popular continuing education courses. Partner with industry advisors to ensure credentials align with employer needs. Use CredSure's LMS integration to auto-issue credentials upon course completion, and track which credentials drive the most enrollment and career outcomes." }
+          ]
+        },
+        {
+          "id": "digital-badges-employee-training",
+          "title": "Digital Badges for Employee Training Programs",
+          "description": "Design and implement a badge-based recognition system that motivates learners and tracks competencies.",
+          "category": "Corporate Training",
+          "readTime": "14 min read",
+          "image": "https://images.pexels.com/photos/7647951/pexels-photo-7647951.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop",
+          "content": [
+            { "heading": "Why Badges Work", "body": "Digital badges tap into intrinsic motivation by providing visible recognition of achievement. Employees who earn badges are 3x more likely to complete additional training modules. Badges also create a skills map across your organization, helping HR identify expertise gaps and plan targeted upskilling programs." },
+            { "heading": "Badge Design Principles", "body": "Effective badges are: visually distinct (use unique colors/icons per skill area), clearly named (avoid jargon), criteria-transparent (recipients and viewers know exactly what was demonstrated), and shareable (one-click LinkedIn sharing). Include metadata like issuer, date, criteria, and evidence links." },
+            { "heading": "Measuring Training Impact", "body": "Track badge earn rates, time-to-completion, share rates, and correlation with performance metrics. Organizations using CredSure badges report 45% higher training completion rates and can demonstrate clear ROI on their L&D investment to leadership." }
+          ]
+        }
+      ],
+      "backToGuides": "Back to All Guides",
+      "pdfAvailable": "PDF Available",
+      "featuredLabel": "Featured",
+      "readGuide": "Read Guide",
+      "unlockGuide": "Unlock Guide",
+      "read": "Read",
+      "unlock": "Unlock",
+      "readerCtaTitle": "Ready to Get Started?",
+      "readerCtaDesc": "See how CredSure can transform your credentialing program.",
+      "readerCtaButton": "Book a Demo",
+      "ctaButton": "Talk to an Expert"
+    },
+    "webinars": {
+      "webinars": [
+        {
+          "id": "digital-credentials-101",
+          "title": "Digital Credentials 101: Getting Started with CredSure",
+          "description": "Learn the fundamentals of digital credentialing — from setting up your first template to issuing blockchain-verified certificates at scale. Perfect for organizations new to digital credentials.",
+          "date": "2025-03-15T10:00:00+00:00",
+          "duration": "45 min",
+          "speakers": ["CredSure Product Team"],
+          "status": "recorded",
+          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop",
+          "featured": true
+        },
+        {
+          "id": "blockchain-verification-explained",
+          "title": "How Blockchain Verification Works in CredSure",
+          "description": "A technical overview of how CredSure anchors credentials on the blockchain, ensuring tamper-proof verification that employers and institutions can trust globally.",
+          "date": "2025-02-20T10:00:00+00:00",
+          "duration": "35 min",
+          "speakers": ["CredSure Engineering Team"],
+          "status": "recorded",
+          "image": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=450&fit=crop"
+        },
+        {
+          "id": "scaling-credential-programs",
+          "title": "Scaling Your Credential Program: From Hundreds to Millions",
+          "description": "Best practices for organizations looking to scale their digital credentialing programs, including bulk issuance workflows, API integration, and automated delivery.",
+          "date": "2025-01-25T10:00:00+00:00",
+          "duration": "50 min",
+          "speakers": ["CredSure Customer Success Team"],
+          "status": "recorded",
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop"
+        },
+        {
+          "id": "gdpr-compliant-credentialing",
+          "title": "GDPR-Compliant Digital Credentialing",
+          "description": "A practical guide to ensuring your credentialing program meets European data protection regulations. Covers data handling, consent management, and CredSure's built-in compliance features.",
+          "date": "2024-12-10T10:00:00+00:00",
+          "duration": "40 min",
+          "speakers": ["CredSure Compliance Team"],
+          "status": "recorded",
+          "image": "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&h=450&fit=crop"
+        },
+        {
+          "id": "api-integration-masterclass",
+          "title": "CredSure API Integration Masterclass",
+          "description": "A hands-on workshop walking through the CredSure REST API to automate credential issuance, verification, and management. Includes live coding examples with Moodle, Canvas, and Zapier.",
+          "date": "2024-11-18T10:00:00+00:00",
+          "duration": "60 min",
+          "speakers": ["CredSure Developer Relations"],
+          "status": "recorded",
+          "image": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&h=450&fit=crop"
+        },
+        {
+          "id": "micro-credentials-higher-education",
+          "title": "Micro-Credentials in Higher Education: A CredSure Guide",
+          "description": "How universities and colleges are implementing stackable micro-credentials using CredSure to meet the demands of modern learners and employers worldwide.",
+          "date": "2024-10-05T10:00:00+00:00",
+          "duration": "45 min",
+          "speakers": ["CredSure Education Team"],
+          "status": "recorded",
+          "image": "https://images.unsplash.com/photo-1523050854058-8df90110c476?w=800&h=450&fit=crop"
+        }
+      ],
+      "featuredLabel": "Featured",
+      "onDemand": "On-Demand",
+      "requestAccess": "Request Access",
+      "watch": "Watch",
+      "ctaButton": "Book a Demo"
+    },
+    "tutorials": {
+      "categories": [
+        {
+          "titleKey": "pages.tutorials.gettingStarted",
+          "tutorials": [
+            {
+              "title": "What are Digital Credentials?",
+              "duration": "5",
+              "desc": "Learn what digital credentials are, why they matter, and how they are transforming certification across industries.",
+              "videoId": "lvtywaANJE4",
+              "level": "Beginner"
+            },
+            {
+              "title": "CredSure Product Features Overview",
+              "duration": "3",
+              "desc": "A complete walkthrough of the CredSure platform — from credential issuance to verification and analytics.",
+              "videoId": "d1Ctb7rEWxs",
+              "level": "Beginner"
+            }
+          ]
+        },
+        {
+          "titleKey": "pages.tutorials.advancedFeatures",
+          "tutorials": [
+            {
+              "title": "Branding & Custom URL Setup",
+              "duration": "2",
+              "desc": "Customize your credentialing portal with your own branding, logo, colors, and custom URL for a seamless experience.",
+              "videoId": "x9TzOBB7PSA",
+              "level": "Intermediate"
+            },
+            {
+              "title": "Boost Brand Visibility with Credentials",
+              "duration": "3",
+              "desc": "Discover how shareable digital certificates and badges drive organic brand exposure across social platforms.",
+              "videoId": "wP0txFtPMTg",
+              "level": "Intermediate"
+            }
+          ]
+        },
+        {
+          "titleKey": "pages.tutorials.analyticsReporting",
+          "tutorials": [
+            {
+              "title": "Digital Badges & Brand Amplification",
+              "duration": "4",
+              "desc": "Understand how digital badges unleash brand visibility and help you track engagement across your credential ecosystem.",
+              "videoId": "8t_W_mvLjtk",
+              "level": "Intermediate"
+            },
+            {
+              "title": "Digital Credentialing in Education",
+              "duration": "6",
+              "desc": "Explore how online education institutions use digital credentials to validate learning and boost student outcomes.",
+              "videoId": "0BYkonjQiDM",
+              "level": "Advanced"
+            }
+          ]
+        }
+      ],
+      "speakableTitle": "CredSure Video Tutorials",
+      "levelBeginner": "Beginner",
+      "levelIntermediate": "Intermediate",
+      "levelAdvanced": "Advanced"
+    },
+    "templates": {
+      "badge": "Templates",
+      "heroTitlePrefix": "500+ Professional",
+      "heroTitleHighlight": "Certificate Templates",
+      "categories": ["Education", "Corporate", "Healthcare", "Technology", "Professional", "Events"],
+      "templateCount": "50+ templates"
+    }
+  }
+}

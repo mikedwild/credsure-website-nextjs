@@ -62,13 +62,9 @@ export const CustomerSuccess = () => {
       id: 4,
       company: 'EADSM',
       logo: null,
-      title: 'From Paper to Digital: EADSM Automates Certification with CredSure',
+      title: t('pgx.customerSuccess.eadsmTitle'),
       date: 'April 17, 2025',
-      impact: [
-        'Improved visibility and credibility',
-        'Streamlined membership certifications',
-        'Enhanced social sharing capabilities'
-      ],
+      impact: t('pgx.customerSuccess.eadsmImpact', { returnObjects: true }),
       category: 'Associations',
       gradient: 'from-indigo-600 to-purple-600',
       link: '/demo'
@@ -77,13 +73,9 @@ export const CustomerSuccess = () => {
       id: 5,
       company: 'ASDC',
       logo: null,
-      title: 'ASDC Issues 200K+ Digital Credentials via CredSure',
+      title: t('pgx.customerSuccess.asdcTitle'),
       date: 'September 3, 2021',
-      impact: [
-        '200,000+ credentials issued',
-        'Automated certification process',
-        'Improved operational efficiency'
-      ],
+      impact: t('pgx.customerSuccess.asdcImpact', { returnObjects: true }),
       category: 'Skills Development',
       gradient: 'from-orange-600 to-red-600',
       link: '/demo'
@@ -92,13 +84,9 @@ export const CustomerSuccess = () => {
       id: 6,
       company: 'ASTS Global Education',
       logo: null,
-      title: 'ASTS Global Education Makes Students Industry-Ready with CredSure',
+      title: t('pgx.customerSuccess.astsTitle'),
       date: 'May 19, 2021',
-      impact: [
-        'Industry-ready digital credentials',
-        'Enhanced employability',
-        'Global recognition'
-      ],
+      impact: t('pgx.customerSuccess.astsImpact', { returnObjects: true }),
       category: 'Education',
       gradient: 'from-pink-600 to-rose-600',
       link: '/demo'
@@ -106,9 +94,9 @@ export const CustomerSuccess = () => {
   ];
 
   const stats = [
-    { icon: Users, value: '500K+', label: 'Credentials Issued' },
-    { icon: Award, value: '200+', label: 'Organizations' },
-    { icon: TrendingUp, value: '95%', label: 'Efficiency Gain' }
+    { icon: Users, value: '500K+', label: t('pgx.customerSuccess.statCredentialsIssuedLabel') },
+    { icon: Award, value: '200+', label: t('pgx.customerSuccess.statOrganizationsLabel') },
+    { icon: TrendingUp, value: '95%', label: t('pgx.customerSuccess.statEfficiencyGainLabel') }
   ];
 
   const container = {
@@ -210,7 +198,7 @@ export const CustomerSuccess = () => {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                       {isFeatured && (
                         <div className="absolute top-4 right-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold text-[#5B22D6]">
-                          Featured
+                          {t('pgx.customerSuccess.featuredLabel')}
                         </div>
                       )}
                     </div>

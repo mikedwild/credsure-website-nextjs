@@ -1,0 +1,262 @@
+{
+  "pgx": {
+    "digitalBadges": {
+      "heroEyebrow": "Digitale Badges",
+      "heroTitleLead": "Verifizierbare",
+      "heroTitleHighlight": "Digitale Badges ausstellen",
+      "heroSubtitle": "Erstellen und stellen Sie standardkonforme digitale Badges aus, die Empfänger auf LinkedIn teilen, sofort verifizieren und zu umfassenderen Credentials kombinieren können.",
+      "heroPrimaryCta": "Badges ausstellen",
+      "heroSecondaryCta": "Vorlagen durchsuchen",
+      "statOrganisationsLabel": "Organisationen",
+      "statBadgesSharedLabel": "Geteilte Badges",
+      "statCountriesLabel": "Länder",
+      "featuresTitle": "Alles, was Sie für digitale Badges brauchen",
+      "featuresSubtitle": "Badge-Ausstellung auf Unternehmensniveau mit der Einfachheit für Endnutzer.",
+      "badgeFeatures": [
+        {
+          "title": "Standardkonform",
+          "desc": "Jeder auf CredSure ausgestellte Badge erfüllt Branchenstandards und gewährleistet so globale Interoperabilität und Maschinenlesbarkeit."
+        },
+        {
+          "title": "Blockchain-verifiziert",
+          "desc": "Jeder Badge wird auf der Blockchain verankert, ist dadurch fälschungssicher und für jeden Arbeitgeber oder jede Institution sofort verifizierbar."
+        },
+        {
+          "title": "Teilen mit einem Klick",
+          "desc": "Empfänger können Badges mit einem einzigen Klick direkt auf LinkedIn, Twitter und anderen Plattformen teilen — und steigern so die Sichtbarkeit Ihrer Marke."
+        },
+        {
+          "title": "Echtzeit-Analysen",
+          "desc": "Verfolgen Sie Badge-Aufrufe, geteilte Inhalte, Verifizierungen und Engagement in Echtzeit über Ihr Analyse-Dashboard."
+        },
+        {
+          "title": "LinkedIn-Integration",
+          "desc": "Badges können direkt zu LinkedIn-Profilen hinzugefügt werden und steigern so die berufliche Glaubwürdigkeit und die Reichweite Ihres Programms."
+        },
+        {
+          "title": "Mehrsprachige Unterstützung",
+          "desc": "Stellen und verifizieren Sie Badges auf Englisch und Deutsch, mit Metadaten, die sich an die bevorzugte Sprache des Empfängers anpassen."
+        }
+      ],
+      "howItWorksTitle": "So funktioniert es",
+      "howItWorks": [
+        {
+          "step": "1",
+          "title": "Badge gestalten",
+          "desc": "Erstellen Sie mit unserem Vorlagen-Editor in wenigen Minuten professionelle Badge-Designs."
+        },
+        {
+          "step": "2",
+          "title": "Empfänger hochladen",
+          "desc": "Fügen Sie Empfänger einzeln hinzu oder importieren Sie sie per CSV oder API im Stapel."
+        },
+        {
+          "step": "3",
+          "title": "Ausstellen & versenden",
+          "desc": "Versenden Sie Badges per E-Mail mit bestätigter Zustellung und individuellem Branding."
+        },
+        {
+          "step": "4",
+          "title": "Verfolgen & analysieren",
+          "desc": "Beobachten Sie geteilte Inhalte, Verifizierungen und Engagement in Echtzeit."
+        }
+      ],
+      "useCasesTitle": "Anwendungsfälle für Badges",
+      "useCases": [
+        {
+          "title": "Kompetenz- & Fähigkeiten-Badges",
+          "desc": "Bestätigen Sie konkrete Fähigkeiten wie Datenanalyse, Projektmanagement oder Programmierkenntnisse mit Micro-Credential-Badges."
+        },
+        {
+          "title": "Badges für Kursabschlüsse",
+          "desc": "Stellen Sie automatisch Badges aus, wenn Lernende Kurse in Ihrem LMS abschließen (Moodle, LearnDash, Thinkific usw.)."
+        },
+        {
+          "title": "Event- & Konferenz-Badges",
+          "desc": "Würdigen Sie Teilnahme und Engagement bei Konferenzen, Webinaren und Workshops mit teilbaren digitalen Badges."
+        },
+        {
+          "title": "Berufliche Weiterbildung",
+          "desc": "Stellen Sie CPD- und CPE-Badges aus, die sich zu umfassenderen Credentials kombinieren lassen und Fachkräften helfen, ihre Weiterbildung zu verfolgen."
+        },
+        {
+          "title": "Mitgliedschaft & Zugehörigkeit",
+          "desc": "Bieten Sie Mitgliedschafts-Badges an, die aktiven Status und berufliche Zugehörigkeit zu Ihrer Organisation bestätigen."
+        },
+        {
+          "title": "Leistungs- & Meilenstein-Badges",
+          "desc": "Feiern Sie Meilensteine wie Firmenjubiläen von Mitarbeitenden, erworbene Zertifizierungen oder abgeschlossene Projekte."
+        }
+      ],
+      "ctaTitle": "Stellen Sie noch heute digitale Badges aus",
+      "ctaSubtitle": "Schließen Sie sich 150+ Organisationen an, die CredSure nutzen, um digitale Badges in großem Umfang auszustellen, zu verifizieren und zu verfolgen.",
+      "ctaPrimary": "Demo vereinbaren",
+      "ctaSecondary": "Alternativen vergleichen"
+    },
+    "customerSuccess": {
+      "featuredLabel": "Hervorgehoben",
+      "statCredentialsIssuedLabel": "Ausgestellte Credentials",
+      "statOrganizationsLabel": "Organisationen",
+      "statEfficiencyGainLabel": "Effizienzsteigerung",
+      "eadsmTitle": "Von Papier zu Digital: EADSM automatisiert die Zertifizierung mit CredSure",
+      "eadsmImpact": [
+        "Verbesserte Sichtbarkeit und Glaubwürdigkeit",
+        "Optimierte Mitgliedschaftszertifizierungen",
+        "Erweiterte Funktionen zum Teilen in sozialen Netzwerken"
+      ],
+      "asdcTitle": "ASDC stellt über 200.000 digitale Credentials mit CredSure aus",
+      "asdcImpact": [
+        "200.000+ ausgestellte Credentials",
+        "Automatisierter Zertifizierungsprozess",
+        "Verbesserte betriebliche Effizienz"
+      ],
+      "astsTitle": "ASTS Global Education macht Studierende mit CredSure praxisbereit",
+      "astsImpact": [
+        "Praxisbereite digitale Credentials",
+        "Verbesserte Beschäftigungsfähigkeit",
+        "Globale Anerkennung"
+      ]
+    },
+    "compareAccredible": {
+      "tagline": "CredSure bietet transparente Preise, schnellere Einrichtung, garantierte E-Mail-Zustellung und vollständiges White-Labeling — alles, was Sie brauchen, um Ihr digitales Credentialing-Programm zu skalieren.",
+      "reasons": [
+        {
+          "title": "Transparente Preise",
+          "desc": "CredSure startet bei €45/Monat ohne versteckte Kosten. Accredible berechnet $45/Monat für nur 50 Empfänger mit eingeschränktem Testzugang."
+        },
+        {
+          "title": "Schnellere Markteinführung",
+          "desc": "Stellen Sie Ihr erstes Credential mit CredSure in unter 10 Minuten aus. Accredible erfordert in der Regel 2-4 Wochen Onboarding und Einrichtung."
+        },
+        {
+          "title": "100% E-Mail-Zustellbarkeit",
+          "desc": "CredSure nutzt optimiertes DNS, DMARC und eigene Absenderdomains, um zu garantieren, dass jedes Credential im Posteingang ankommt. Keine Probleme mehr mit dem Spam-Ordner."
+        },
+        {
+          "title": "White-Label in allen Tarifen",
+          "desc": "Vollständiges White-Labeling in allen kostenpflichtigen Tarifen enthalten. Keine Zusatzkosten für individuelles Branding, Absenderdomains oder gebrandete Verifizierungsseiten."
+        },
+        {
+          "title": "Standardkonform",
+          "desc": "Jeder Badge und jedes Zertifikat, das über CredSure ausgestellt wird, ist standardkonform und plattformübergreifend interoperabel."
+        },
+        {
+          "title": "Zweisprachige Plattform",
+          "desc": "Vollständige Unterstützung für Englisch und Deutsch integriert. Stellen, verifizieren und verwalten Sie Credentials in der bevorzugten Sprache Ihrer Empfänger."
+        }
+      ],
+      "features": [
+        { "feature": "Startpreis", "credsure": "€45/Monat", "competitor": "$45/Monat" },
+        { "feature": "Kostenlose Testversion", "credsure": "Voller Plattformzugang", "competitor": "Eingeschränkt — auf Anfrage" },
+        { "feature": "Einrichtungszeit", "credsure": "10 Minuten", "competitor": "2-4 Wochen" },
+        { "feature": "White-Label", "credsure": "Alle kostenpflichtigen Tarife", "competitor": "Verfügbar (eingeschränkt)" },
+        { "feature": "Eigener E-Mail-Absender", "credsure": true, "competitor": "Zustellbarkeitsprobleme" },
+        { "feature": "Blockchain-Verifizierung", "credsure": true, "competitor": true },
+        { "feature": "Standardkonform", "credsure": true, "competitor": true },
+        { "feature": "Eigene Schriftarten", "credsure": true, "competitor": "$500 Einrichtungsgebühr" },
+        { "feature": "QR-Code-Credentials", "credsure": true, "competitor": true },
+        { "feature": "SSO / SAML", "credsure": true, "competitor": "Nur SAML" },
+        { "feature": "Zapier-Integration", "credsure": true, "competitor": true },
+        { "feature": "REST-API", "credsure": true, "competitor": true },
+        { "feature": "Analyse-Dashboard", "credsure": true, "competitor": true },
+        { "feature": "LinkedIn-Sharing", "credsure": "Ein Klick", "competitor": true },
+        { "feature": "CSV-Massenimport", "credsure": true, "competitor": true },
+        { "feature": "Mehrsprachige Unterstützung", "credsure": "EN, DE", "competitor": "Nur EN" },
+        { "feature": "ISO 27001 zertifiziert", "credsure": true, "competitor": true }
+      ],
+      "faqs": [
+        {
+          "q": "Wie viel kostet Accredible?",
+          "a": "Accredible startet bei $45/Monat für 50 Empfänger. Höhere Tarife haben individuelle Preise und erfordern Jahresverträge. CredSure bietet transparente Preise ab €45/Monat mit monatlicher Abrechnung, jährlich fakturiert."
+        },
+        {
+          "q": "Bietet Accredible eine kostenlose Testversion an?",
+          "a": "Accredible bietet auf Anfrage eine eingeschränkte kostenlose Testversion mit begrenzten Funktionen an. CredSure gewährt während des Testzeitraums vollen Plattformzugang."
+        },
+        {
+          "q": "Kann ich von Accredible zu CredSure migrieren?",
+          "a": "Ja. CredSure bietet kostenlose Migrationsunterstützung. Unser Team hilft Ihnen, Ihre Vorlagen, Empfängerdaten und Credentials ohne Ausfallzeiten zu übertragen."
+        },
+        {
+          "q": "Ist CredSure für Unternehmensorganisationen geeignet?",
+          "a": "Absolut. CredSure bedient Organisationen vom Start-up bis zum Großunternehmen mit SSO/SAML, eigenen Domains, White-Labeling und dediziertem Account-Management."
+        },
+        {
+          "q": "Welche Integrationen unterstützt CredSure?",
+          "a": "CredSure lässt sich mit Zapier (8.000+ Apps), Moodle, Salesforce, HubSpot, Google Sheets und vielen weiteren integrieren. Unsere REST-API ermöglicht individuelle Integrationen mit jeder Plattform."
+        }
+      ]
+    },
+    "compareCredly": {
+      "tagline": "CredSure bietet Ihnen Credentialing auf Unternehmensniveau ohne die Preise nur für Großunternehmen. Self-Service-Einrichtung, transparente Tarife und vollständiges White-Labeling vom ersten Tag an.",
+      "reasons": [
+        {
+          "title": "Keine Preise nur für Großunternehmen",
+          "desc": "Credly startet bei $2.500/Jahr mit auf Großunternehmen ausgerichteten Preisen. CredSure startet bei €45/Monat und ist damit für Organisationen jeder Größe zugänglich."
+        },
+        {
+          "title": "Self-Service-Einrichtung",
+          "desc": "Mit CredSure richten Sie Credentials in wenigen Minuten ein und stellen sie aus. Credly erfordert einen vertriebsgeführten Onboarding-Prozess, der 3-4 Wochen dauern kann."
+        },
+        {
+          "title": "Vollständiges White-Labeling",
+          "desc": "CredSure umfasst White-Labeling in allen kostenpflichtigen Tarifen. Credly zeigt sein eigenes Branding auf Credential-Seiten und verringert so die Sichtbarkeit Ihrer Marke."
+        },
+        {
+          "title": "Transparenter Funktionszugang",
+          "desc": "Alle CredSure-Funktionen sind ohne gestaffelte Tarife verfügbar. Credly sperrt erweiterte Funktionen hinter Unternehmensverträgen."
+        },
+        {
+          "title": "Credential-Zertifikate + Badges",
+          "desc": "CredSure unterstützt sowohl digitale Zertifikate als auch Badges über eine einzige Plattform. Credly konzentriert sich primär nur auf digitale Badges."
+        },
+        {
+          "title": "Standardmäßig zweisprachig",
+          "desc": "Vollständige Unterstützung für Englisch und Deutsch. Stellen und verifizieren Sie Credentials in mehreren Sprachen. Credly bietet eine rein englischsprachige Oberfläche."
+        }
+      ],
+      "features": [
+        { "feature": "Startpreis", "credsure": "€45/Monat", "competitor": "$2.500/Jahr" },
+        { "feature": "Preismodell", "credsure": "Monatlich (jährlich fakturiert)", "competitor": "Nur Jahresverträge" },
+        { "feature": "Self-Service-Registrierung", "credsure": true, "competitor": false },
+        { "feature": "Einrichtungszeit", "credsure": "10 Minuten", "competitor": "3-4 Wochen" },
+        { "feature": "Digitale Zertifikate", "credsure": true, "competitor": false },
+        { "feature": "Digitale Badges", "credsure": true, "competitor": true },
+        { "feature": "White-Label", "credsure": "Alle kostenpflichtigen Tarife", "competitor": "Nur Großunternehmen" },
+        { "feature": "Blockchain-Verifizierung", "credsure": true, "competitor": false },
+        { "feature": "Standardkonform", "credsure": true, "competitor": true },
+        { "feature": "Vorlagenbibliothek", "credsure": "500+ Vorlagen", "competitor": "Begrenzt" },
+        { "feature": "Individuelles Branding", "credsure": true, "competitor": "Nur Großunternehmen" },
+        { "feature": "Zapier-Integration", "credsure": true, "competitor": true },
+        { "feature": "REST-API", "credsure": true, "competitor": true },
+        { "feature": "Analyse-Dashboard", "credsure": true, "competitor": true },
+        { "feature": "LinkedIn-Sharing", "credsure": "Ein Klick", "competitor": "Ein Klick" },
+        { "feature": "CSV-Massenimport", "credsure": true, "competitor": true },
+        { "feature": "Mehrsprachige Unterstützung", "credsure": "EN, DE", "competitor": "Nur EN" },
+        { "feature": "ISO 27001 zertifiziert", "credsure": true, "competitor": true }
+      ],
+      "faqs": [
+        {
+          "q": "Wie viel kostet Credly?",
+          "a": "Credly startet bei etwa $2.500/Jahr für den Basiszugang und skaliert auf $11.000+/Jahr für Unternehmenstarife. CredSure startet bei €45/Monat (jährlich fakturiert) ohne Beschränkungen nur für Großunternehmen."
+        },
+        {
+          "q": "Unterstützt Credly digitale Zertifikate?",
+          "a": "Credly konzentriert sich primär auf digitale Badges. Wenn Sie sowohl Zertifikate als auch Badges benötigen, bietet CredSure beides über eine einzige Plattform."
+        },
+        {
+          "q": "Kann ich Credly kostenlos testen?",
+          "a": "Credly bietet keine kostenlose Self-Service-Testversion an. Sie müssen den Vertrieb kontaktieren. CredSure gewährt sofortigen Zugang mit einer voll funktionsfähigen Testversion."
+        },
+        {
+          "q": "Kann ich von Credly zu CredSure migrieren?",
+          "a": "Ja. CredSure bietet kostenlose Migrationsunterstützung. Unser Team hilft Ihnen, Ihre Badge-Programme, Vorlagen und Empfängerdaten zu übertragen."
+        },
+        {
+          "q": "Ist CredSure für große Organisationen geeignet?",
+          "a": "Ja. CredSure bedient Organisationen vom Start-up bis zum Großunternehmen mit SSO/SAML, eigenen Domains, White-Labeling und dediziertem Account-Management — ohne Verträge nur für Großunternehmen vorauszusetzen."
+        }
+      ]
+    }
+  }
+}

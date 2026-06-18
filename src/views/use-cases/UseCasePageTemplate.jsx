@@ -82,7 +82,7 @@ export const UseCasePageTemplate = ({ useCaseKey, Icon }) => {
                   onClick={() => navigate('/platform')}
                   className="!bg-white !border-2 !border-[#0F0E1A] !text-[#0F0E1A] hover:!bg-[#0F0E1A] hover:!text-white !rounded-full !px-7 !py-6 !text-base !font-bold"
                 >
-                  Explore platform
+                  {t('tplx.useCase.explorePlatform')}
                 </Button>
               </div>
             </motion.div>
@@ -129,9 +129,9 @@ export const UseCasePageTemplate = ({ useCaseKey, Icon }) => {
         <section className="py-24" data-testid={`${useCaseKey}-items`}>
           <div className="container mx-auto px-6 md:px-12 max-w-6xl">
             <div className="max-w-2xl mb-12">
-              <p className="text-xs uppercase tracking-[0.18em] font-bold mb-3 cs-grad-text">What teams ship</p>
+              <p className="text-xs uppercase tracking-[0.18em] font-bold mb-3 cs-grad-text">{t('tplx.useCase.itemsEyebrow')}</p>
               <h2 className="text-3xl md:text-4xl font-bold text-[#0F0E1A] tracking-tight leading-tight">
-                Everything you need <span className="cs-grad-text">in one place.</span>
+                {t('tplx.useCase.itemsHeading')}<span className="cs-grad-text">{t('tplx.useCase.itemsHeadingHighlight')}</span>
               </h2>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -168,10 +168,10 @@ export const UseCasePageTemplate = ({ useCaseKey, Icon }) => {
       <section className="py-20">
         <div className="container mx-auto px-6 md:px-12 max-w-3xl text-center">
           <h2 className="text-3xl md:text-5xl font-bold text-[#0F0E1A] mb-5 tracking-tight leading-tight">
-            Ready to <span className="cs-grad-text">put this to work?</span>
+            {t('tplx.useCase.ctaHeading')}<span className="cs-grad-text">{t('tplx.useCase.ctaHeadingHighlight')}</span>
           </h2>
           <p className="text-base md:text-lg text-[#2E2A3D] mb-8 max-w-xl mx-auto">
-            See how CredSure fits your stack with a 15-minute personalised demo.
+            {t('tplx.useCase.ctaSubtitle')}
           </p>
           <Button
             onClick={() => navigate('/demo')}

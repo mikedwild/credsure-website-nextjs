@@ -66,9 +66,10 @@ const DEFAULT_CUSTOMERS = [
 
 export const Testimonials2026 = () => {
   const t = useTranslation();
-  const i18nQuotes = t('testimonialsSection.quotes', { returnObjects: true });
-  const useDefaults = !Array.isArray(i18nQuotes) || i18nQuotes.length === 0;
-  const customers = useDefaults ? DEFAULT_CUSTOMERS : DEFAULT_CUSTOMERS; // i18n quotes are short; we render full cards from the curated trio for visual fidelity.
+  const i18nCustomers = t('hpx.testimonials.customers', { returnObjects: true });
+  const customers = Array.isArray(i18nCustomers) && i18nCustomers.length > 0
+    ? i18nCustomers
+    : DEFAULT_CUSTOMERS;
 
   return (
     <section
@@ -152,7 +153,7 @@ export const Testimonials2026 = () => {
         {/* Bottom links */}
         <div className="mt-16 flex flex-wrap justify-center gap-x-8 gap-y-3">
           <Link to="/customer-success" className="inline-flex items-center gap-1.5 font-bold text-sm cs-grad-text" data-testid="testimonials-see-stories">
-            See all customer stories <ArrowUpRight className="w-3.5 h-3.5" style={{ color: '#5B22D6' }} />
+            {t('hpx.testimonials.seeAllStories')} <ArrowUpRight className="w-3.5 h-3.5" style={{ color: '#5B22D6' }} />
           </Link>
           <a
             href="https://www.g2.com/products/credsure/reviews"
@@ -160,7 +161,7 @@ export const Testimonials2026 = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#6A6478] hover:text-[#0F0E1A]"
           >
-            Read all G2 reviews <ArrowUpRight className="w-3.5 h-3.5" />
+            {t('hpx.testimonials.readG2Reviews')} <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
         </div>
       </div>

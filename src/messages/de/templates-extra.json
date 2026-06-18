@@ -1,0 +1,58 @@
+{
+  "tplx": {
+    "feature": {
+      "explorePlatform": "Plattform entdecken",
+      "trustEyebrow": "CredSure Plattform",
+      "trustTagline": "In jeden Workflow integriert",
+      "capabilitiesEyebrow": "Funktionen",
+      "capabilitiesHeading": "Alles, was Sie brauchen, damit das ",
+      "capabilitiesHeadingHighlight": "in großem Umfang funktioniert.",
+      "metricsEyebrow": "Belege in Zahlen",
+      "metricsHeading": "Kennzahlen, die zählen.",
+      "useCasesEyebrow": "Im Einsatz",
+      "useCasesHeading": "Wie Teams das ",
+      "useCasesHeadingHighlight": "heute nutzen.",
+      "faqEyebrow": "FAQ",
+      "faqHeading": "Häufig gefragt.",
+      "ctaHeading": "Bereit, ",
+      "ctaHeadingHighlight": "es live zu erleben?",
+      "ctaSubtitle": "Erfahren Sie, wie CredSure das Credentialing für Ihr Team transformiert. Persönliche Demo, 15 Minuten."
+    },
+    "useCase": {
+      "explorePlatform": "Plattform entdecken",
+      "itemsEyebrow": "Was Teams liefern",
+      "itemsHeading": "Alles, was Sie brauchen, ",
+      "itemsHeadingHighlight": "an einem Ort.",
+      "ctaHeading": "Bereit, ",
+      "ctaHeadingHighlight": "das umzusetzen?",
+      "ctaSubtitle": "Erfahren Sie in einer 15-minütigen persönlichen Demo, wie CredSure in Ihren Stack passt."
+    },
+    "platform": {
+      "heroSubtitleExtra": "Blockchain-verifizierte digitale Zertifikate und Badges, denen 150+ Organisationen weltweit vertrauen. Stellen Sie Credentials in jedem Umfang aus, verwalten, verifizieren und verfolgen Sie sie — von 10 bis 10 Millionen.",
+      "howItWorksHeading": "So funktioniert ",
+      "howItWorksHeadingHighlight": "CredSure",
+      "howItWorksSubtitle": "Vom Design bis zur Verifizierung in vier einfachen Schritten",
+      "coreFeaturesHeading": "Kern",
+      "coreFeaturesHeadingHighlight": "funktionen",
+      "coreFeaturesSubtitle": "Das Fundament Ihres Credentialing-Programms",
+      "automationHeadingHighlight": "Automatisierung",
+      "automationSubtitle": "Beseitigen Sie manuelle Arbeit mit intelligenter Automatisierung",
+      "customizationHeadingHighlight": "Anpassung",
+      "customizationSubtitle": "Machen Sie es zu Ihrem – mit voller Markenkontrolle",
+      "learnMore": "Mehr erfahren",
+      "integrationsHeading": "Integriert sich in Ihren ",
+      "integrationsHeadingHighlight": "Tech-Stack",
+      "integrationsSubtitle": "Verbinden Sie CredSure über API und Zapier mit 3.000+ Tools",
+      "faqHeading": "Häufig gestellte ",
+      "faqHeadingHighlight": "Fragen",
+      "ctaHeading": "Bereit, Ihre Zertifizierung zu transformieren?",
+      "faq": [
+        { "question": "Wie lange dauert der Einstieg in CredSure?", "answer": "Die meisten Organisationen sind innerhalb eines Tages einsatzbereit. Erstellen Sie Ihr Konto, gestalten Sie Ihre erste Zertifikatvorlage und stellen Sie Ihren ersten Stapel aus — ohne technische Einrichtung. Enterprise-Integrationen (LMS, API) dauern in der Regel 1–2 Wochen." },
+        { "question": "Kann ich von einer anderen Credentialing-Plattform migrieren?", "answer": "Ja. CredSure unterstützt die Migration von Accredible, Credly, Certifier und individuellen Systemen. Unser Migrationsteam übernimmt Datenimport, Vorlagennachbau und Empfängerbenachrichtigung ohne Zusatzkosten in den Professional- und Enterprise-Tarifen." },
+        { "question": "Was unterscheidet CredSure von Credly oder Accredible?", "answer": "CredSure bietet Blockchain-Verifizierung (nicht nur digitale Speicherung), transparente Preise (keine versteckten Gebühren), vollständige White-Label-Fähigkeit und zweisprachigen Support (Englisch & Deutsch). Unsere Plattform ist für Zertifikate und Badges gleichermaßen konzipiert, mit einem einheitlichen Dashboard." },
+        { "question": "Gibt es eine kostenlose Testversion?", "answer": "Ja. Jedes Konto startet mit 20 kostenlosen Credits, um Zertifikate auszustellen und zu testen. Keine Kreditkarte erforderlich. Wechseln Sie zu einem kostenpflichtigen Tarif, wenn Sie bereit sind zu skalieren." },
+        { "question": "Funktionieren Zertifikate offline?", "answer": "Ja. Empfänger können ihre Zertifikate als PDF herunterladen oder zu digitalen Wallets hinzufügen, um offline darauf zuzugreifen. Die Verifizierung erfordert eine Internetverbindung, aber das Zertifikat selbst ist immer zugänglich." }
+      ]
+    }
+  }
+}

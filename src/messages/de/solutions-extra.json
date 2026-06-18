@@ -1,0 +1,294 @@
+{
+  "solx": {
+    "headings": {
+      "comparisonSubtitle": "Sehen Sie, wie digitale Credentials Ihren Workflow transformieren",
+      "comparisonFeature": "Funktion",
+      "comparisonTraditional": "Traditionell",
+      "comparisonCredsure": "CredSure",
+      "howItWorksTitle": "So",
+      "howItWorksHighlight": "funktioniert es",
+      "howItWorksSubtitle": "In Minuten startklar, Ergebnisse in wenigen Tagen",
+      "capabilitiesTitle": "Plattform",
+      "capabilitiesHighlight": "Funktionen",
+      "capabilitiesSubtitle": "Funktionen über alle Tarife vergleichen",
+      "capabilitiesFeature": "Funktion",
+      "capabilitiesStarter": "Starter",
+      "capabilitiesProfessional": "Professional",
+      "capabilitiesEnterprise": "Enterprise",
+      "faqTitle": "Häufig gestellte",
+      "faqHighlight": "Fragen"
+    },
+    "stats": {
+      "higherEducation": [
+        { "value": "90%", "label": "Weniger Zertifikatsbetrug", "suffix": "" },
+        { "value": "85%", "label": "Schnellere Credential-Verifizierung", "suffix": "" },
+        { "value": "60%", "label": "Kostenersparnis gegenüber Papierzertifikaten", "suffix": "" },
+        { "value": "2M+", "label": "Weltweit ausgestellte Credentials", "suffix": "" }
+      ],
+      "corporateTraining": [
+        { "value": "90%", "label": "Weniger Verwaltungsaufwand bei Zertifizierungen", "suffix": "" },
+        { "value": "20%", "label": "Höhere Abschlussquote bei Schulungen", "suffix": "" },
+        { "value": "80%", "label": "Kostenreduktion gegenüber manuellen Prozessen", "suffix": "" },
+        { "value": "3x", "label": "Mehr Credential-Sharing auf LinkedIn", "suffix": "" }
+      ],
+      "associations": [
+        { "value": "40%", "label": "Mehr Mitgliedschaftsverlängerungen", "suffix": "" },
+        { "value": "5x", "label": "Mehr Markenkontakte pro Credential", "suffix": "" },
+        { "value": "95%", "label": "Mitgliederzufriedenheit mit digitalen Badges", "suffix": "" },
+        { "value": "70%", "label": "Weniger Verifizierungsanfragen", "suffix": "" }
+      ],
+      "certificationBodies": [
+        { "value": "100%", "label": "Fälschungssichere Blockchain-Verifizierung", "suffix": "" },
+        { "value": "10K+", "label": "Credentials pro Stapel ausgestellt", "suffix": "" },
+        { "value": "<3s", "label": "Durchschnittliche Verifizierungszeit", "suffix": "" },
+        { "value": "99.9%", "label": "Plattform-Verfügbarkeit (SLA)", "suffix": "" }
+      ],
+      "healthcare": [
+        { "value": "100%", "label": "Audit-fertige Compliance-Nachweise", "suffix": "" },
+        { "value": "75%", "label": "Schnelleres Onboarding mit sofortiger Verifizierung", "suffix": "" },
+        { "value": "0", "label": "Manuelle Verifizierungsschritte nötig", "suffix": "" },
+        { "value": "24/7", "label": "Echtzeit-Überwachung des Credential-Status", "suffix": "" }
+      ],
+      "manufacturing": [
+        { "value": "99%", "label": "Audit-Bestehensquote mit digitalen Nachweisen", "suffix": "" },
+        { "value": "50%", "label": "Weniger Compliance-Lücken", "suffix": "" },
+        { "value": "80%", "label": "Weniger Zeitaufwand für Zertifizierungs-Tracking", "suffix": "" },
+        { "value": "100%", "label": "Rückverfolgbarkeit von Sicherheitszertifizierungen", "suffix": "" }
+      ]
+    },
+    "comparison": {
+      "higherEducation": {
+        "title": "Traditionelle Zertifikate vs CredSure Digitale Credentials",
+        "rows": [
+          { "feature": "Ausstellungszeit", "traditional": "Tage bis Wochen", "credsure": "Sekunden" },
+          { "feature": "Verifizierung", "traditional": "Manuelle Anrufe/E-Mails", "credsure": "Sofort per QR/Link" },
+          { "feature": "Fälschungsschutz", "traditional": "Leicht zu fälschen", "credsure": "Blockchain-gesichert" },
+          { "feature": "Teilen", "traditional": "Postversand/Scan", "credsure": "Mit einem Klick auf LinkedIn" },
+          { "feature": "Kosten pro Credential", "traditional": "5–15 $ (Druck + Versand)", "credsure": "0,50–2,00 $" },
+          { "feature": "Analysen", "traditional": "Keine", "credsure": "Echtzeit-Dashboard" },
+          { "feature": "Umweltauswirkung", "traditional": "Papierabfall", "credsure": "Kein Papier" }
+        ]
+      },
+      "corporateTraining": {
+        "title": "Manuelle Zertifizierungsverwaltung vs CredSure Automatisierung",
+        "rows": [
+          { "feature": "Zertifikatserstellung", "traditional": "Manuelles Design pro Mitarbeiter", "credsure": "Vorlagenbasierte Stapelerstellung" },
+          { "feature": "Verteilung", "traditional": "E-Mail-Anhänge", "credsure": "Automatische Auslieferung + Wallet" },
+          { "feature": "Ablauf-Tracking", "traditional": "Tabellenkalkulationen", "credsure": "Automatische Benachrichtigungen" },
+          { "feature": "Compliance-Berichte", "traditional": "Manuelle Audits", "credsure": "Echtzeit-Dashboards" },
+          { "feature": "Mitarbeiter-Engagement", "traditional": "Geringe Sichtbarkeit", "credsure": "LinkedIn-Sharing + Badges" },
+          { "feature": "LMS-Integration", "traditional": "Keine", "credsure": "API + Zapier" }
+        ]
+      },
+      "associations": {
+        "title": "Traditionelle Mitgliedschaft vs Digitale Credentials",
+        "rows": [
+          { "feature": "Mitglieder-Anerkennung", "traditional": "Papierzertifikate", "credsure": "Digitale Badges + Zertifikate" },
+          { "feature": "Markensichtbarkeit", "traditional": "Auf Veranstaltungen beschränkt", "credsure": "Verstärkung über soziale Medien" },
+          { "feature": "CEU-Tracking", "traditional": "Manuelle Tabellen", "credsure": "Automatisches Fortschritts-Tracking" },
+          { "feature": "Credential-Verifizierung", "traditional": "Telefon-/E-Mail-Anfragen", "credsure": "Sofortige QR-Verifizierung" },
+          { "feature": "Verlängerungserinnerungen", "traditional": "Manuelle Nachfassaktionen", "credsure": "Automatische Benachrichtigungen" }
+        ]
+      },
+      "certificationBodies": {
+        "title": "Veraltete Zertifizierungssysteme vs CredSure Plattform",
+        "rows": [
+          { "feature": "Fälschungsprävention", "traditional": "Hologramme/Wasserzeichen", "credsure": "Blockchain-Unveränderlichkeit" },
+          { "feature": "Stapel-Ausstellung", "traditional": "Hunderte pro Tag", "credsure": "10.000+ pro Stapel" },
+          { "feature": "Globale Verifizierung", "traditional": "Regionale Datenbanken", "credsure": "Sofortiger weltweiter Zugriff" },
+          { "feature": "Standard-Konformität", "traditional": "Je nach Region unterschiedlich", "credsure": "W3C Verifiable Credentials" },
+          { "feature": "API-Zugriff", "traditional": "Begrenzt/keiner", "credsure": "Vollständige REST-API + Webhooks" },
+          { "feature": "White-Labeling", "traditional": "Nicht verfügbar", "credsure": "Vollständige Markenanpassung" }
+        ]
+      },
+      "healthcare": {
+        "title": "Papierbasierte Nachweise vs Digitale Credential-Verwaltung",
+        "rows": [
+          { "feature": "Lizenzverifizierung", "traditional": "24–72 Stunden", "credsure": "Unter 3 Sekunden" },
+          { "feature": "Audit-Vorbereitung", "traditional": "Wochenlanges Zusammensuchen von Dokumenten", "credsure": "Stets audit-fertig" },
+          { "feature": "Ablaufverwaltung", "traditional": "Kalendererinnerungen", "credsure": "Automatische Benachrichtigungen nach 90/60/30 Tagen" },
+          { "feature": "Übertragbarkeit zwischen Einrichtungen", "traditional": "Erneute Verifizierung nötig", "credsure": "Universelles digitales Wallet" },
+          { "feature": "Datensicherheit", "traditional": "Aktenschränke + Scans", "credsure": "Verschlüsselt + Blockchain" }
+        ]
+      },
+      "manufacturing": {
+        "title": "Manuelles Sicherheits-Tracking vs CredSure Digitale Compliance",
+        "rows": [
+          { "feature": "Tracking von Sicherheitszertifikaten", "traditional": "Ordnersysteme", "credsure": "Echtzeit-Dashboard" },
+          { "feature": "Audit-Nachweise", "traditional": "Papierspur", "credsure": "Blockchain-verifizierte Nachweise" },
+          { "feature": "Standortübergreifende Verwaltung", "traditional": "Systeme je Standort", "credsure": "Zentrale Plattform" },
+          { "feature": "ISO-Konformitätsnachweis", "traditional": "Manuelle Dokumentation", "credsure": "Sofortige digitale Verifizierung" },
+          { "feature": "Erkennung von Schulungslücken", "traditional": "Vierteljährliche Überprüfungen", "credsure": "Echtzeit-Lückenanalyse" }
+        ]
+      }
+    },
+    "steps": {
+      "higherEducation": [
+        { "step": "1", "title": "Credential gestalten", "desc": "Nutzen Sie unseren Vorlagen-Designer, um gebrandete digitale Zertifikate und Badges zu erstellen, die zur Identität Ihrer Hochschule passen." },
+        { "step": "2", "title": "Stapelweise an Absolventen ausstellen", "desc": "Laden Sie eine CSV-Datei hoch oder verbinden Sie Ihr LMS, um in Minuten automatisch Tausende von Credentials auszustellen." },
+        { "step": "3", "title": "Empfänger teilen & verifizieren", "desc": "Absolventen erhalten ihre Credentials per E-Mail, teilen sie auf LinkedIn, und Arbeitgeber verifizieren sie sofort per QR-Code." },
+        { "step": "4", "title": "Verfolgen & analysieren", "desc": "Überwachen Sie Sharing-Analysen, Verifizierungsraten und die Marketing-Reichweite, die Ihre digitalen Credentials erzeugen." }
+      ],
+      "corporateTraining": [
+        { "step": "1", "title": "LMS verbinden", "desc": "Integrieren Sie CredSure über API, Zapier oder ein direktes LMS-Plugin in Ihre Schulungsplattform." },
+        { "step": "2", "title": "Ausstellungsregeln festlegen", "desc": "Definieren Sie, welche abgeschlossenen Schulungen die automatische Credential-Ausstellung auslösen, und legen Sie Ablauffristen fest." },
+        { "step": "3", "title": "Zertifikate automatisch ausstellen", "desc": "Mitarbeiter erhalten automatisch gebrandete digitale Zertifikate, sobald sie Schulungsprogramme abschließen." },
+        { "step": "4", "title": "Compliance überwachen", "desc": "Verfolgen Sie Zertifizierungsstatus, anstehende Abläufe und Compliance-Lücken in Ihrer gesamten Organisation." }
+      ],
+      "associations": [
+        { "step": "1", "title": "Badge-Programme erstellen", "desc": "Gestalten Sie digitale Badge-Programme für Zertifizierungen, Weiterbildung und Veranstaltungsteilnahme." },
+        { "step": "2", "title": "An Mitglieder ausstellen", "desc": "Verleihen Sie Credentials beim Erreichen von Meilensteinen – manuell oder automatisiert über Ihr Mitgliederverwaltungssystem." },
+        { "step": "3", "title": "Mitglieder teilen Erfolge", "desc": "Mitglieder präsentieren Badges stolz auf LinkedIn, Websites und in E-Mail-Signaturen und stärken so Ihre Marke." },
+        { "step": "4", "title": "Mitgliedschaftswert steigern", "desc": "Nutzen Sie Analysen, um den Wert von Credentials zu belegen und Mitgliedschaftsverlängerungen zu fördern." }
+      ],
+      "certificationBodies": [
+        { "step": "1", "title": "Standards konfigurieren", "desc": "Richten Sie Credential-Typen ein, die an W3C Verifiable Credentials oder Ihre eigenen Standards angelehnt sind." },
+        { "step": "2", "title": "Sichere Ausstellung", "desc": "Stellen Sie blockchain-verankerte Credentials einzeln oder in Stapeln von 10.000+ per CSV oder API aus." },
+        { "step": "3", "title": "Sofortige Verifizierung", "desc": "Dritte verifizieren jedes Credential in Sekunden per QR-Code oder Verifizierungslink – ganz ohne Konto." },
+        { "step": "4", "title": "Lebenszyklus verwalten", "desc": "Verwalten Sie Verlängerungen, Widerrufe und Versionsaktualisierungen mit vollständigem Audit-Trail." }
+      ],
+      "healthcare": [
+        { "step": "1", "title": "Organisation einrichten", "desc": "Richten Sie Credential-Vorlagen für medizinische Lizenzen, Zertifizierungen und Weiterbildungsanforderungen ein." },
+        { "step": "2", "title": "Credentials ausstellen & verfolgen", "desc": "Stellen Sie digitale Credentials an Mitarbeiter aus und richten Sie ein automatisches Ablauf-Tracking mit mehrstufigen Erinnerungen ein." },
+        { "step": "3", "title": "Sofortige Verifizierung ermöglichen", "desc": "Patienten, Einrichtungen und Aufsichtsbehörden verifizieren Mitarbeiter-Credentials in Sekunden per QR-Code." },
+        { "step": "4", "title": "Compliance sicherstellen", "desc": "Echtzeit-Dashboards zeigen den Credential-Status aller Mitarbeiter und gewährleisten durchgängige Compliance." }
+      ],
+      "manufacturing": [
+        { "step": "1", "title": "Sicherheitsanforderungen abbilden", "desc": "Definieren Sie Credential-Typen für ISO, OSHA, Six Sigma und andere branchenspezifische Zertifizierungen." },
+        { "step": "2", "title": "Digitale Zertifizierungen ausstellen", "desc": "Stellen Sie automatisch Credentials aus, sobald Mitarbeiter Schulungen in Ihrem ERP oder LMS abschließen." },
+        { "step": "3", "title": "Standortübergreifend verfolgen", "desc": "Ein zentrales Dashboard zeigt den Zertifizierungsstatus aller Fertigungsstandorte in Echtzeit." },
+        { "step": "4", "title": "Jedes Audit meistern", "desc": "Liefern Sie Auditoren sofortige, blockchain-verifizierte Nachweise der Qualifikationen Ihrer Mitarbeiter." }
+      ]
+    },
+    "capabilities": [
+      {
+        "name": "Credential-Verwaltung",
+        "features": [
+          { "name": "Digitale Zertifikate", "starter": true, "professional": true, "enterprise": true },
+          { "name": "Digitale Badges", "starter": true, "professional": true, "enterprise": true },
+          { "name": "Blockchain-Verifizierung", "starter": true, "professional": true, "enterprise": true },
+          { "name": "QR-Code-Verifizierung", "starter": true, "professional": true, "enterprise": true },
+          { "name": "Stapel-Ausstellung (CSV)", "starter": false, "professional": true, "enterprise": true },
+          { "name": "Credential-Widerruf", "starter": false, "professional": true, "enterprise": true }
+        ]
+      },
+      {
+        "name": "Automatisierung & Integration",
+        "features": [
+          { "name": "REST-API-Zugriff", "starter": false, "professional": true, "enterprise": true },
+          { "name": "Webhook-Benachrichtigungen", "starter": false, "professional": true, "enterprise": true },
+          { "name": "LMS-Integration (Moodle, Canvas)", "starter": false, "professional": false, "enterprise": true },
+          { "name": "Zapier / Make Automatisierung", "starter": false, "professional": true, "enterprise": true },
+          { "name": "SSO / SAML", "starter": false, "professional": false, "enterprise": true },
+          { "name": "Individuelle ERP-Integration", "starter": false, "professional": false, "enterprise": true }
+        ]
+      },
+      {
+        "name": "Anpassung & Branding",
+        "features": [
+          { "name": "Vorlagen-Designer", "starter": true, "professional": true, "enterprise": true },
+          { "name": "Individuelles Branding", "starter": false, "professional": true, "enterprise": true },
+          { "name": "White-Label-Portal", "starter": false, "professional": false, "enterprise": true },
+          { "name": "Eigene Domain", "starter": false, "professional": false, "enterprise": true },
+          { "name": "Individuelle E-Mail-Vorlagen", "starter": false, "professional": true, "enterprise": true }
+        ]
+      },
+      {
+        "name": "Analysen & Berichte",
+        "features": [
+          { "name": "Grundlegende Sharing-Analysen", "starter": true, "professional": true, "enterprise": true },
+          { "name": "Erweiterte Engagement-Metriken", "starter": false, "professional": true, "enterprise": true },
+          { "name": "Berichte exportieren (CSV/PDF)", "starter": false, "professional": true, "enterprise": true },
+          { "name": "Individuelle Dashboards", "starter": false, "professional": false, "enterprise": true },
+          { "name": "Compliance-Berichte", "starter": false, "professional": false, "enterprise": true }
+        ]
+      }
+    ],
+    "metrics": {
+      "higherEducation": [
+        { "stat": "90%", "label": "Weniger Zertifikatsbetrug" },
+        { "stat": "85%", "label": "Schnellere Credential-Verifizierung" },
+        { "stat": "60%", "label": "Kostenersparnis gegenüber Papierzertifikaten" }
+      ],
+      "corporateTraining": [
+        { "stat": "90%", "label": "Weniger Verwaltungsaufwand bei Zertifizierungen" },
+        { "stat": "20%", "label": "Höhere Abschlussquote bei Schulungen" },
+        { "stat": "3×", "label": "Mehr Credential-Sharing auf LinkedIn" }
+      ],
+      "associations": [
+        { "stat": "40%", "label": "Mehr Mitgliedschaftsverlängerungen" },
+        { "stat": "5×", "label": "Mehr Markenkontakte pro Credential" },
+        { "stat": "95%", "label": "Mitgliederzufriedenheit mit digitalen Badges" }
+      ],
+      "certificationBodies": [
+        { "stat": "100%", "label": "Fälschungssichere Blockchain-Verifizierung" },
+        { "stat": "10K+", "label": "Credentials pro Stapel ausgestellt" },
+        { "stat": "<3s", "label": "Durchschnittliche Verifizierungszeit" }
+      ],
+      "healthcare": [
+        { "stat": "100%", "label": "Audit-fertige Compliance-Nachweise" },
+        { "stat": "75%", "label": "Schnelleres Onboarding mit Verifizierung" },
+        { "stat": "24/7", "label": "Echtzeit-Überwachung von Credentials" }
+      ],
+      "manufacturing": [
+        { "stat": "99%", "label": "Audit-Bestehensquote mit digitalen Nachweisen" },
+        { "stat": "50%", "label": "Weniger Compliance-Lücken" },
+        { "stat": "100%", "label": "Rückverfolgbarkeit von Sicherheitszertifizierungen" }
+      ]
+    },
+    "template": {
+      "explorePlatform": "Plattform entdecken",
+      "credsureSolutions": "CredSure Lösungen",
+      "builtFor": "Entwickelt für",
+      "forYourTeam": "Für Ihr Team",
+      "personasTitle": "Entwickelt für die Menschen, die",
+      "personasTitleHighlight": "das hier wirklich stemmen.",
+      "customerStory": "Kundengeschichte",
+      "inProductionWith": "Im Einsatz bei",
+      "whatYouShip": "Was Sie liefern",
+      "benefitsTitle": "Der gesamte Workflow.",
+      "benefitsTitleHighlight": "Nicht nur das Credential.",
+      "ctaTitle": "Bereit,",
+      "ctaTitleHighlight": "das in die Praxis umzusetzen?",
+      "ctaSubtitle": "Sehen Sie in einer 15-minütigen personalisierten Demo, wie CredSure zu Ihrem Stack passt."
+    },
+    "faqs": {
+      "higherEducation": [
+        { "question": "Wie stellen Universitäten mit CredSure digitale Credentials aus?", "answer": "Universitäten können über die Plattform von CredSure blockchain-verifizierte digitale Zertifikate und Badges ausstellen. Die Stapel-Ausstellung per CSV-Upload ermöglicht es, Tausende von Credentials in Minuten auszustellen, mit automatischer Auslieferung an Absolventen per E-Mail." },
+        { "question": "Können Studierende digitale Credentials auf LinkedIn teilen?", "answer": "Ja. Empfänger können ihre digitalen CredSure-Credentials mit einem einzigen Klick direkt auf LinkedIn, Twitter, Facebook und anderen Plattformen teilen. Das Credential enthält einen Verifizierungslink, mit dem Arbeitgeber die Echtheit sofort bestätigen können." },
+        { "question": "Wie verhindert die Blockchain-Verifizierung gefälschte Abschlüsse?", "answer": "CredSure verankert jedes Credential in der Blockchain und schafft so einen unveränderlichen Datensatz. Das bedeutet, dass Credentials nach der Ausstellung nicht mehr verändert oder gefälscht werden können. Arbeitgeber können jedes Credential in Sekunden verifizieren, indem sie den QR-Code scannen oder auf den Verifizierungslink klicken." },
+        { "question": "Lässt sich CredSure in LMS-Plattformen von Universitäten integrieren?", "answer": "Ja. CredSure lässt sich per REST-API in beliebte LMS-Plattformen wie Moodle, Canvas, Blackboard und individuelle Systeme integrieren. Credentials können nach Kursabschluss automatisch ausgestellt werden." }
+      ],
+      "corporateTraining": [
+        { "question": "Wie können Unternehmen die Mitarbeiterzertifizierung automatisieren?", "answer": "CredSure integriert sich per API in Ihr LMS oder Ihre HR-Systeme, um automatisch digitale Zertifikate auszustellen, sobald Mitarbeiter Schulungsprogramme abschließen. Das macht die manuelle Erstellung und Verteilung von Zertifikaten überflüssig." },
+        { "question": "Kann CredSure den Ablauf von Mitarbeiter-Credentials verfolgen?", "answer": "Ja. CredSure unterstützt Ablaufdaten für Credentials und automatische Verlängerungserinnerungen. Manager können Dashboards einsehen, die zeigen, welche Mitarbeiter eine Rezertifizierung benötigen, und so die Compliance aufrechterhalten." },
+        { "question": "Wie verbessert digitales Credentialing das Mitarbeiter-Engagement?", "answer": "Mitarbeiter können ihre Erfolge auf LinkedIn und in beruflichen Profilen teilen, was Sichtbarkeit und Motivation erhöht. Analysen zeigen, dass teilbare Credentials die Abschlussquote von Schulungen um bis zu 20 % steigern." },
+        { "question": "Welchen ROI können Unternehmen von digitalen Credentials erwarten?", "answer": "Unternehmen sparen in der Regel 60–80 % der Kosten für die Credential-Verwaltung, indem sie Druck, Porto und manuelle Verifizierung wegfallen lassen. Digitale Credentials reduzieren zudem den Verwaltungsaufwand um bis zu 90 %." }
+      ],
+      "associations": [
+        { "question": "Wie stellen Berufsverbände digitale Badges aus?", "answer": "CredSure ermöglicht es Verbänden, gebrandete digitale Badges und Zertifikate zu erstellen, die Mitglieder durch Weiterbildung, Veranstaltungsteilnahme oder berufliche Entwicklungsmeilensteine erwerben." },
+        { "question": "Können Mitglieder Credentials in ihren beruflichen Profilen anzeigen?", "answer": "Ja. Mitglieder können CredSure-Credentials zu LinkedIn, persönlichen Websites, E-Mail-Signaturen und digitalen Wallets hinzufügen. Jedes Credential verweist auf eine Verifizierungsseite, die die Echtheit bestätigt." },
+        { "question": "Wie hilft CredSure Verbänden, den Wert der Mitgliedschaft zu steigern?", "answer": "Digitale Credentials geben Mitgliedern einen greifbaren, teilbaren Nachweis ihrer beruflichen Erfolge. Das erhöht den wahrgenommenen Wert der Mitgliedschaft und fördert Verlängerungen. Analysen zeigen, dass geteilte Credentials Markenkontakte für den Verband generieren." },
+        { "question": "Unterstützt CredSure Weiterbildungspunkte (CEUs)?", "answer": "Ja. CredSure kann CEU-Anforderungen verfolgen, Credentials nach Abschluss ausstellen und Ablauf-/Verlängerungszyklen verwalten. Mitglieder und Administratoren können Fortschritts-Dashboards einsehen." }
+      ],
+      "certificationBodies": [
+        { "question": "Wie verhindern Zertifizierungsstellen Credential-Betrug?", "answer": "CredSure nutzt Blockchain-Technologie, um fälschungssichere digitale Credentials zu erstellen. Jedes Zertifikat wird in einem unveränderlichen Ledger verankert, wodurch Fälschungen unmöglich werden. Dritte können jedes Credential sofort per QR-Code oder Verifizierungslink verifizieren." },
+        { "question": "Kann CredSure die Ausstellung großer Mengen an Credentials bewältigen?", "answer": "Ja. CredSure unterstützt die Stapel-Ausstellung von Tausenden von Credentials gleichzeitig per CSV-Upload oder API-Integration. Die Plattform ist darauf ausgelegt, Mengen auf Enterprise-Niveau ohne Leistungseinbußen zu bewältigen." },
+        { "question": "Wie funktioniert die sofortige Verifizierung?", "answer": "Jedes CredSure-Credential enthält einen eindeutigen QR-Code und eine Verifizierungs-URL. Jeder kann scannen oder klicken, um die Credential-Details, Informationen zum Aussteller und den Blockchain-Verifizierungsstatus in Echtzeit zu sehen – ganz ohne Konto oder Login." },
+        { "question": "Erfüllt CredSure internationale Credential-Standards?", "answer": "Ja. CredSure unterstützt W3C Verifiable Credentials und die Standards der European Digital Credentials. Das gewährleistet die Interoperabilität mit globalen Credential-Ökosystemen." }
+      ],
+      "healthcare": [
+        { "question": "Wie können Gesundheitseinrichtungen Mitarbeiterzertifizierungen digital verwalten?", "answer": "CredSure bietet eine zentrale Plattform zum Ausstellen, Verfolgen und Verifizieren von Credentials für Gesundheitspersonal. Automatische Ablaufbenachrichtigungen gewährleisten die Einhaltung medizinischer Lizenzanforderungen." },
+        { "question": "Ist CredSure DSGVO- und HIPAA-kompatibel?", "answer": "Ja. CredSure ist vollständig DSGVO-konform und kann so konfiguriert werden, dass es die HIPAA-Anforderungen erfüllt. Credential-Daten sind verschlüsselt, und Empfänger bestimmen, wer auf ihre Informationen zugreifen kann." },
+        { "question": "Können Patienten die Credentials von Gesundheitsdienstleistern verifizieren?", "answer": "Ja. Gesundheitsdienstleister können einen Verifizierungslink oder QR-Code teilen, mit dem Patienten oder Einrichtungen ihre Qualifikationen, Zertifizierungen und ihren Lizenzstatus sofort bestätigen können." },
+        { "question": "Wie handhabt CredSure die Verlängerung von Credentials für medizinische Lizenzen?", "answer": "CredSure verfolgt die Ablaufdaten aller ausgestellten Credentials. Automatische Benachrichtigungen werden vor dem Ablauf sowohl an den Credential-Inhaber als auch an die ausstellende Organisation gesendet und vereinfachen so den Verlängerungsprozess." }
+      ],
+      "manufacturing": [
+        { "question": "Wie können Hersteller die Sicherheitszertifizierungen von Mitarbeitern verfolgen?", "answer": "CredSure bietet Echtzeit-Dashboards, die zeigen, welche Mitarbeiter über aktuelle Sicherheitszertifizierungen verfügen, welche bald ablaufen und welche eine Verlängerung benötigen. Automatische Benachrichtigungen verhindern Compliance-Lücken." },
+        { "question": "Unterstützt CredSure ISO- und branchenspezifische Compliance-Zertifizierungen?", "answer": "Ja. CredSure kann Credentials für ISO 9001, ISO 14001, Six Sigma, OSHA und andere branchenspezifische Zertifizierungen ausstellen und verwalten. Jedes Credential ist für die Audit-Bereitschaft blockchain-verifiziert." },
+        { "question": "Lässt sich CredSure in ERP-Systeme der Fertigung integrieren?", "answer": "Ja. Die REST-API von CredSure ermöglicht die Integration in SAP, Oracle und andere ERP-Systeme. Credentials können automatisch ausgestellt werden, sobald Schulungsmodule innerhalb Ihrer bestehenden Systeme abgeschlossen sind." },
+        { "question": "Wie verbessert digitales Credentialing die Audit-Bereitschaft in der Fertigung?", "answer": "Blockchain-verifizierte Credentials liefern bei Audits sofortige, fälschungssichere Nachweise der Mitarbeiterqualifikationen. Kein Durchsuchen von Aktenschränken mehr – Auditoren können jedes Credential in Sekunden verifizieren." }
+      ]
+    }
+  }
+}

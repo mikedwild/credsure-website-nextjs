@@ -29,19 +29,11 @@ import { SolutionFAQ } from '@/components/SolutionFAQ';
 import { SolutionHowItWorks, SolutionComparison } from '@/components/SolutionEnrichment';
 import { solutionMedia } from '@/data/solutionMedia';
 
-// Per-vertical 4-stat metric snapshots. These mirror the SolutionStats
+// Per-vertical 4-stat metric snapshots now live in i18n
+// (solx.metrics.<solutionKey>, EN + DE). They mirror the SolutionStats
 // numbers in SolutionEnrichment.jsx so we don't drift, but we render them
 // inside the system `<MetricStrip>` for visual consistency with feature
 // pages.
-const METRICS = {
-  higherEducation:    [{ stat: '90%',   label: 'Reduction in certificate fraud' },     { stat: '85%',  label: 'Faster credential verification' },     { stat: '60%',   label: 'Cost savings vs paper certificates' }],
-  corporateTraining:  [{ stat: '90%',   label: 'Less admin time on certifications' },  { stat: '20%',  label: 'Higher training completion rate' },    { stat: '3×',    label: 'More credential sharing on LinkedIn' }],
-  associations:       [{ stat: '40%',   label: 'Increase in membership renewals' },    { stat: '5×',   label: 'More brand impressions per credential' },{ stat: '95%',  label: 'Member satisfaction with digital badges' }],
-  certificationBodies:[{ stat: '100%',  label: 'Tamper-proof blockchain verification' },{ stat: '10K+', label: 'Credentials issued per batch' },      { stat: '<3s',   label: 'Average verification time' }],
-  healthcare:         [{ stat: '100%',  label: 'Audit-ready compliance records' },     { stat: '75%',  label: 'Faster onboarding with verification' },{ stat: '24/7', label: 'Real-time credential monitoring' }],
-  manufacturing:      [{ stat: '99%',   label: 'Audit pass rate with digital records' },{ stat: '50%', label: 'Reduction in compliance gaps' },        { stat: '100%', label: 'Traceability of safety certifications' }],
-};
-
 const METRIC_ICONS = [TrendingUp, Award, ShieldCheck, Globe];
 
 export const SolutionPageTemplate = ({ solutionKey, Icon }) => {
@@ -50,7 +42,8 @@ export const SolutionPageTemplate = ({ solutionKey, Icon }) => {
   const benefits = t(`pages.solutions.${solutionKey}.benefits`, { returnObjects: true });
   const safeBenefits = Array.isArray(benefits) ? benefits : [];
   const media = solutionMedia[solutionKey] || {};
-  const metrics = (METRICS[solutionKey] || []).map((m, i) => ({
+  const rawMetrics = t(`solx.metrics.${solutionKey}`, { returnObjects: true });
+  const metrics = (Array.isArray(rawMetrics) ? rawMetrics : []).map((m, i) => ({
     icon: METRIC_ICONS[i % METRIC_ICONS.length],
     stat: m.stat,
     label: m.label,
@@ -110,7 +103,7 @@ export const SolutionPageTemplate = ({ solutionKey, Icon }) => {
                     onClick={() => navigate('/platform')}
                     className="!bg-white !border-2 !border-[#0F0E1A] !text-[#0F0E1A] hover:!bg-[#0F0E1A] hover:!text-white !rounded-full !px-7 !py-6 !text-base !font-bold"
                   >
-                    Explore platform
+                    {t('solx.template.explorePlatform')}
                   </Button>
                 </div>
 
@@ -120,8 +113,8 @@ export const SolutionPageTemplate = ({ solutionKey, Icon }) => {
                       <Icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <p className="text-[10px] uppercase tracking-[0.18em] font-bold text-[#6A6478]">CredSure Solutions</p>
-                      <p className="text-sm font-bold text-[#0F0E1A]">Built for {t(`pages.solutions.${solutionKey}.badge`)}</p>
+                      <p className="text-[10px] uppercase tracking-[0.18em] font-bold text-[#6A6478]">{t('solx.template.credsureSolutions')}</p>
+                      <p className="text-sm font-bold text-[#0F0E1A]">{t('solx.template.builtFor')} {t(`pages.solutions.${solutionKey}.badge`)}</p>
                     </div>
                   </div>
                 )}
@@ -171,9 +164,9 @@ export const SolutionPageTemplate = ({ solutionKey, Icon }) => {
           <section className="py-24" data-testid={`${solutionKey}-personas`}>
             <div className="container mx-auto px-6 md:px-12 max-w-6xl">
               <div className="max-w-2xl mb-12">
-                <p className="text-xs uppercase tracking-[0.18em] font-bold mb-3 cs-grad-text">For your team</p>
+                <p className="text-xs uppercase tracking-[0.18em] font-bold mb-3 cs-grad-text">{t('solx.template.forYourTeam')}</p>
                 <h2 className="text-3xl md:text-4xl font-bold text-[#0F0E1A] tracking-tight leading-tight">
-                  Built for the people who <span className="cs-grad-text">actually run this.</span>
+                  {t('solx.template.personasTitle')} <span className="cs-grad-text">{t('solx.template.personasTitleHighlight')}</span>
                 </h2>
               </div>
               <div className="grid md:grid-cols-3 gap-5">
@@ -198,9 +191,9 @@ export const SolutionPageTemplate = ({ solutionKey, Icon }) => {
           <section className="py-20" style={{ background: '#FAFAFC' }} data-testid={`${solutionKey}-customer`}>
             <div className="container mx-auto px-6 md:px-12 max-w-5xl">
               <div className="max-w-2xl mb-10">
-                <p className="text-xs uppercase tracking-[0.18em] font-bold mb-3 cs-grad-text">Customer story</p>
+                <p className="text-xs uppercase tracking-[0.18em] font-bold mb-3 cs-grad-text">{t('solx.template.customerStory')}</p>
                 <h2 className="text-3xl md:text-4xl font-bold text-[#0F0E1A] tracking-tight leading-tight">
-                  In production with <span className="cs-grad-text">{media.customer.name}.</span>
+                  {t('solx.template.inProductionWith')} <span className="cs-grad-text">{media.customer.name}.</span>
                 </h2>
               </div>
               <CustomerCard
@@ -223,9 +216,9 @@ export const SolutionPageTemplate = ({ solutionKey, Icon }) => {
           <section className="py-24" data-testid={`${solutionKey}-benefits`}>
             <div className="container mx-auto px-6 md:px-12 max-w-6xl">
               <div className="max-w-2xl mb-12">
-                <p className="text-xs uppercase tracking-[0.18em] font-bold mb-3 cs-grad-text">What you ship</p>
+                <p className="text-xs uppercase tracking-[0.18em] font-bold mb-3 cs-grad-text">{t('solx.template.whatYouShip')}</p>
                 <h2 className="text-3xl md:text-4xl font-bold text-[#0F0E1A] tracking-tight leading-tight">
-                  The whole workflow. <span className="cs-grad-text">Not just the credential.</span>
+                  {t('solx.template.benefitsTitle')} <span className="cs-grad-text">{t('solx.template.benefitsTitleHighlight')}</span>
                 </h2>
               </div>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -265,10 +258,10 @@ export const SolutionPageTemplate = ({ solutionKey, Icon }) => {
         <section className="py-20" style={{ background: '#FAFAFC' }}>
           <div className="container mx-auto px-6 md:px-12 max-w-3xl text-center">
             <h2 className="text-3xl md:text-5xl font-bold text-[#0F0E1A] mb-5 tracking-tight leading-tight">
-              Ready to <span className="cs-grad-text">put this to work?</span>
+              {t('solx.template.ctaTitle')} <span className="cs-grad-text">{t('solx.template.ctaTitleHighlight')}</span>
             </h2>
             <p className="text-base md:text-lg text-[#2E2A3D] mb-8 max-w-xl mx-auto">
-              See how CredSure fits your stack with a 15-minute personalised demo.
+              {t('solx.template.ctaSubtitle')}
             </p>
             <Button
               onClick={() => navigate('/demo')}

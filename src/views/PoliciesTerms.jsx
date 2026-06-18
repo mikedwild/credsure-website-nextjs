@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
 import { FileText, Mail, Globe, Calendar, Building2 } from 'lucide-react';
+import { useTranslation } from '@/lib/useTranslation';
 import { MSA_META, MSA_SECTIONS } from '../data/msa';
 
 const Section = ({ section }) => (
@@ -47,11 +48,16 @@ Section.propTypes = {
 };
 
 export const PoliciesTerms = () => {
+  // NOTE: DE legal copy is machine-translated and MUST be reviewed by legal before being
+  // relied upon. This applies to the German values under `mscx.terms.*` in
+  // src/messages/de/misc-extra.json AND to the contract body itself in src/data/msa
+  // (MSA_META / MSA_SECTIONS), which is outside the scope of this i18n migration.
+  const t = useTranslation();
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-[#FAFAFA] to-white">
       <SEO
-        title="Master Subscription Agreement | CredSure"
-        description="The CredSure Master Subscription Agreement governing access to and use of the CredSure platform and related services."
+        title={t('mscx.terms.seoTitle')}
+        description={t('mscx.terms.seoDescription')}
         canonical="/policies/terms"
       />
 
@@ -70,10 +76,10 @@ export const PoliciesTerms = () => {
               data-testid="policies-terms-title"
               className="text-4xl md:text-5xl font-extrabold text-[#0F0E1A] mb-3"
             >
-              Master Subscription Agreement
+              {t('mscx.terms.heading')}
             </h1>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              The terms governing your access to and use of the CredSure platform and related Services.
+              {t('mscx.terms.subtitle')}
             </p>
           </motion.div>
 
@@ -82,14 +88,14 @@ export const PoliciesTerms = () => {
             <div className="flex items-center gap-3 bg-white border border-gray-200 rounded-xl p-4">
               <Calendar className="w-5 h-5 text-[#5B22D6] flex-shrink-0" />
               <div>
-                <p className="text-xs uppercase tracking-wider text-gray-500 font-semibold">Effective</p>
+                <p className="text-xs uppercase tracking-wider text-gray-500 font-semibold">{t('mscx.terms.effectiveLabel')}</p>
                 <p className="text-sm font-bold text-[#0F0E1A]">{MSA_META.effectiveDate} · {MSA_META.version}</p>
               </div>
             </div>
             <div className="flex items-center gap-3 bg-white border border-gray-200 rounded-xl p-4">
               <Building2 className="w-5 h-5 text-[#5B22D6] flex-shrink-0" />
               <div>
-                <p className="text-xs uppercase tracking-wider text-gray-500 font-semibold">Supplier</p>
+                <p className="text-xs uppercase tracking-wider text-gray-500 font-semibold">{t('mscx.terms.supplierLabel')}</p>
                 <p className="text-sm font-bold text-[#0F0E1A]">{MSA_META.supplier.legalName}</p>
               </div>
             </div>
@@ -99,7 +105,7 @@ export const PoliciesTerms = () => {
           <div className="lg:grid lg:grid-cols-[260px_minmax(0,1fr)] lg:gap-10">
             {/* TOC */}
             <aside className="hidden lg:block sticky top-32 self-start max-h-[calc(100vh-10rem)] overflow-y-auto pr-2">
-              <p className="text-xs uppercase tracking-widest font-bold text-gray-500 mb-3">Contents</p>
+              <p className="text-xs uppercase tracking-widest font-bold text-gray-500 mb-3">{t('mscx.terms.contentsLabel')}</p>
               <nav className="space-y-1" data-testid="msa-toc">
                 {MSA_SECTIONS.map((s) => (
                   <a
@@ -122,7 +128,7 @@ export const PoliciesTerms = () => {
 
               {/* Footer card with supplier info */}
               <div className="bg-gradient-to-br from-[#5B22D6]/5 to-[#E22B8A]/5 border border-[#5B22D6]/15 rounded-2xl p-6 md:p-8">
-                <h3 className="text-lg font-bold text-[#0F0E1A] mb-4">Supplier Information</h3>
+                <h3 className="text-lg font-bold text-[#0F0E1A] mb-4">{t('mscx.terms.supplierInfoHeading')}</h3>
                 <div className="space-y-2 text-sm text-gray-700">
                   <p className="font-semibold">{MSA_META.supplier.legalName}</p>
                   {MSA_META.supplier.addressLines.map((line) => (
@@ -142,7 +148,7 @@ export const PoliciesTerms = () => {
                   </p>
                 </div>
                 <p className="text-xs text-gray-500 mt-5 pt-4 border-t border-[#5B22D6]/10">
-                  Document version {MSA_META.version} · Effective {MSA_META.effectiveDate} · Subject to change in accordance with Section 25.
+                  {t('mscx.terms.documentFooter', { version: MSA_META.version, effectiveDate: MSA_META.effectiveDate })}
                 </p>
               </div>
             </div>

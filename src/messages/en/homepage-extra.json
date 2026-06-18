@@ -1,0 +1,164 @@
+{
+  "hpx": {
+    "industries": {
+      "titlePrefix": "Built for",
+      "titleHighlight": "Every Industry",
+      "subtitle": "From education to enterprise, CredSure powers credentials across all sectors",
+      "learnMore": "Learn more",
+      "ctaQuestion": "Don't see your industry? We work with all types of organizations.",
+      "ctaLink": "See Pricing for All Plans",
+      "guidesLink": "Read our industry guides",
+      "webinarsLink": "Watch webinars",
+      "storiesLink": "Customer stories",
+      "items": [
+        {
+          "icon": "GraduationCap",
+          "title": "Education & Universities",
+          "description": "Award course completions, degrees, and continuing education credits",
+          "stats": "Used by 150+ universities worldwide"
+        },
+        {
+          "icon": "Building2",
+          "title": "Corporate Training",
+          "description": "Recognize employee skills, compliance training, and professional development",
+          "stats": "10,000+ credentials issued monthly"
+        },
+        {
+          "icon": "Users",
+          "title": "Professional Associations",
+          "description": "Issue member certifications, CE credits, and event participation badges",
+          "stats": "150+ organizations trust CredSure"
+        },
+        {
+          "icon": "Award",
+          "title": "Certification Bodies",
+          "description": "Manage exam-based certifications with expiration tracking and renewals",
+          "stats": "99.9% verification success rate"
+        },
+        {
+          "icon": "Laptop",
+          "title": "Online Learning Platforms",
+          "description": "Add verified credentials to courses and bootcamp programs",
+          "stats": "Integrate with any LMS"
+        },
+        {
+          "icon": "Briefcase",
+          "title": "Product Certifications",
+          "description": "Certify partners, vendors, and customers on product knowledge",
+          "stats": "Track credential engagement"
+        }
+      ]
+    },
+    "features": {
+      "rows": {
+        "sharing": {
+          "eyebrow": "Recipients become recruiters",
+          "bullets": [
+            "One-click LinkedIn, X, WhatsApp, email shares",
+            "Branded share images optimised per channel",
+            "Recipient wall — every badge in one URL",
+            "7× more shares than legacy issuers"
+          ]
+        },
+        "analytics": {
+          "eyebrow": "Stop reporting in spreadsheets",
+          "bullets": [
+            "Live dashboards on issuance, share velocity, verification",
+            "Cohort, programme, and year comparisons",
+            "CSV export for ops, dashboards for executives",
+            "Forrester ROI lift baked into every metric"
+          ]
+        },
+        "verification": {
+          "eyebrow": "Border-grade verification",
+          "bullets": [
+            "387ms p99 verification across 14 EU countries",
+            "Polygon-anchored, eIDAS-trusted, GDPR-compliant",
+            "Works on any device, on any signal — even offline",
+            "98.4% verified on first scan"
+          ]
+        }
+      }
+    },
+    "testimonials": {
+      "seeAllStories": "See all customer stories",
+      "readG2Reviews": "Read all G2 reviews",
+      "customers": [
+        {
+          "name": "ByteEDGE",
+          "industry": "Microlearning · EdTech",
+          "hq": "Bengaluru, India",
+          "employees": "Enterprise",
+          "tags": [
+            "LMS integration",
+            "API",
+            "Analytics"
+          ],
+          "quote": {
+            "lead": "CredSure gave us blockchain-grade trust without engineering overhead. We were issuing verifiable credentials",
+            "bold": "within a single sprint",
+            "tail": "."
+          },
+          "author": {
+            "name": "Priya Menon",
+            "role": "Head of Product, ByteEDGE"
+          },
+          "caseStudyHref": "/customer-success/byteedge"
+        },
+        {
+          "name": "Tsaaro Academy",
+          "industry": "Data-privacy training",
+          "hq": "Bengaluru, India",
+          "employees": "Enterprise",
+          "tags": [
+            "100% automated issuance",
+            "80% admin reduction",
+            "GDPR"
+          ],
+          "quote": {
+            "lead": "Our admin team got back twenty hours a week. That’s",
+            "bold": "an entire workday recovered, every single week",
+            "tail": ", for the price of a few coffees per learner."
+          },
+          "author": {
+            "name": "Akarsh Singh",
+            "role": "Co-founder, Tsaaro Academy"
+          },
+          "caseStudyHref": "/customer-success/tsaaro"
+        },
+        {
+          "name": "Clini INDIA",
+          "industry": "Healthcare training network",
+          "hq": "India",
+          "employees": "Enterprise",
+          "tags": [
+            "CME",
+            "Verification",
+            "Regulatory compliance"
+          ],
+          "quote": {
+            "lead": "Verification used to take days of phone calls. With CredSure, employers verify a candidate’s credentials",
+            "bold": "in under five seconds",
+            "tail": " — that’s a game-changer for our graduates."
+          },
+          "author": {
+            "name": "Dr. Anil Kumar",
+            "role": "Director of Programs, Clini INDIA"
+          },
+          "caseStudyHref": "/customer-success/clini-india"
+        }
+      ]
+    },
+    "customerCard": {
+      "industry": "Industry",
+      "headquarters": "Headquarters",
+      "employees": "Employees",
+      "readCaseStudy": "Read case study"
+    }
+  },
+  "g2": {
+    "subtitle": "Rated by Real Users on G2",
+    "title": "CredSure Ranks at the Top for Digital Credential Management",
+    "readReviews": "Read our G2 Reviews"
+  }
+}

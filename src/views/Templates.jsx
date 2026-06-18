@@ -24,18 +24,18 @@ export const Templates = () => {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-purple-200 rounded-full mb-6">
               <Sparkles className="w-4 h-4 text-[#B82BC4]" />
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#3F2BD9]">Templates</span>
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#3F2BD9]">{t('resx.templates.badge')}</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-extrabold text-[#0F0E1A] mb-6">
-              500+ Professional{' '}
+              {t('resx.templates.heroTitlePrefix')}{' '}
               <span className="text-transparent bg-gradient-to-r from-[#5B22D6] to-[#E22B8A] bg-clip-text">
-                Certificate Templates
+                {t('resx.templates.heroTitleHighlight')}
               </span>
             </h1>
             <p className="text-lg text-gray-600">{t('pages.templates.subtitle', 'Choose from industry-leading designs or create your own with our intuitive template builder.')}</p>
           </motion.div>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {['Education', 'Corporate', 'Healthcare', 'Technology', 'Professional', 'Events'].map((cat, i) => (
+            {t('resx.templates.categories', { returnObjects: true }).map((cat, i) => (
               <motion.div
                 key={cat}
                 initial={{ opacity: 0, y: 20 }}
@@ -46,7 +46,7 @@ export const Templates = () => {
               >
                 <Layout className="w-12 h-12 text-[#5B22D6] mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-[#0F0E1A] mb-2">{cat}</h3>
-                <p className="text-gray-600 text-sm">50+ templates</p>
+                <p className="text-gray-600 text-sm">{t('resx.templates.templateCount')}</p>
               </motion.div>
             ))}
           </div>

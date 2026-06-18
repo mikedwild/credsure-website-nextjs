@@ -17,11 +17,7 @@ const LOGOS = [
   { name: "King's Business School", src: '/images/logos/kc.webp' },
 ];
 
-const TRUST_SIGNALS = [
-  { icon: Clock, text: '30-min personalized session' },
-  { icon: CreditCard, text: 'Free, no credit card required' },
-  { icon: Shield, text: 'GDPR compliant & secure' },
-];
+const TRUST_SIGNAL_ICONS = [Clock, CreditCard, Shield];
 
 export const Demo = () => {
   const t = useTranslation();
@@ -34,10 +30,10 @@ export const Demo = () => {
 
   const validate = () => {
     const errs = {};
-    if (!formData.name.trim()) errs.name = 'Name is required';
-    if (!formData.email.trim()) errs.email = 'Email is required';
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) errs.email = 'Enter a valid email';
-    if (!formData.company.trim()) errs.company = 'Company is required';
+    if (!formData.name.trim()) errs.name = t('mscx.demo.validation.nameRequired');
+    if (!formData.email.trim()) errs.email = t('mscx.demo.validation.emailRequired');
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) errs.email = t('mscx.demo.validation.emailInvalid');
+    if (!formData.company.trim()) errs.company = t('mscx.demo.validation.companyRequired');
     setErrors(errs);
     return Object.keys(errs).length === 0;
   };
@@ -78,6 +74,11 @@ export const Demo = () => {
   };
 
   const benefits = t('demoPage.benefits', { returnObjects: true });
+  const trustSignalLabels = t('mscx.demo.trustSignals', { returnObjects: true });
+  const trustSignals = TRUST_SIGNAL_ICONS.map((icon, index) => ({
+    icon,
+    text: Array.isArray(trustSignalLabels) ? trustSignalLabels[index] : '',
+  }));
 
   const inputClass = (field) =>
     `w-full pl-11 pr-4 py-3 border-2 rounded-xl text-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#5B22D6]/20   ${
@@ -123,7 +124,7 @@ export const Demo = () => {
                               type="text"
                               value={formData.name}
                               onChange={(e) => handleChange('name', e.target.value)}
-                              placeholder="John Smith"
+                              placeholder={t('mscx.demo.placeholders.name')}
                               className={inputClass('name')}
                               data-testid="demo-input-name"
                             />
@@ -142,7 +143,7 @@ export const Demo = () => {
                               type="email"
                               value={formData.email}
                               onChange={(e) => handleChange('email', e.target.value)}
-                              placeholder="john@company.com"
+                              placeholder={t('mscx.demo.placeholders.email')}
                               className={inputClass('email')}
                               data-testid="demo-input-email"
                             />
@@ -161,7 +162,7 @@ export const Demo = () => {
                               type="text"
                               value={formData.company}
                               onChange={(e) => handleChange('company', e.target.value)}
-                              placeholder="Acme Corp"
+                              placeholder={t('mscx.demo.placeholders.company')}
                               className={inputClass('company')}
                               data-testid="demo-input-company"
                             />
@@ -172,7 +173,7 @@ export const Demo = () => {
                         {/* Role (optional) */}
                         <div>
                           <label className="block text-sm font-semibold text-gray-700  mb-1.5">
-                            {t('demoPage.jobTitle', 'Job Title')} <span className="text-gray-600 text-xs font-normal">(optional)</span>
+                            {t('demoPage.jobTitle', 'Job Title')} <span className="text-gray-600 text-xs font-normal">{t('mscx.demo.optional')}</span>
                           </label>
                           <div className="relative">
                             <Briefcase className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-600" />
@@ -180,7 +181,7 @@ export const Demo = () => {
                               type="text"
                               value={formData.role}
                               onChange={(e) => handleChange('role', e.target.value)}
-                              placeholder="Head of L&D"
+                              placeholder={t('mscx.demo.placeholders.role')}
                               className={inputClass('role')}
                               data-testid="demo-input-role"
                             />
@@ -198,7 +199,7 @@ export const Demo = () => {
                         {isSubmitting ? (
                           <span className="flex items-center justify-center gap-2">
                             <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                            Sending...
+                            {t('mscx.demo.sending')}
                           </span>
                         ) : (
                           <span className="flex items-center justify-center gap-2">
@@ -210,7 +211,7 @@ export const Demo = () => {
 
                       {/* Trust Signals */}
                       <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 mt-5">
-                        {TRUST_SIGNALS.map((signal) => (
+                        {trustSignals.map((signal) => (
                           <div key={signal.text} className="flex items-center gap-1.5 text-xs text-gray-500 ">
                             <signal.icon className="w-3.5 h-3.5 text-[#5B22D6] " />
                             <span>{signal.text}</span>
@@ -254,7 +255,7 @@ export const Demo = () => {
 
                   <div className="bg-white border border-gray-200 rounded-2xl p-6">
                     <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-5">
-                      Trusted by 150+ organizations
+                      {t('mscx.demo.trustedBy')}
                     </p>
                     <div className="grid grid-cols-3 gap-x-6 gap-y-5">
                       {LOGOS.map((logo) => (

@@ -19,43 +19,12 @@ import { LocalizedLink as Link } from '@/components/LocalizedLink';
 import { ProductUIWindow } from './system';
 import { featureMedia } from '@/data/featureMedia';
 
+// Display copy (eyebrow + bullets) is read from i18n via `hpx.features.rows.<key>`
+// so it localises on /de; `key`/`href`/`mediaKey` are stable code references.
 const ROWS = [
-  {
-    key: 'sharing',
-    href: '/features/sharing',
-    mediaKey: 'sharing',
-    eyebrow: 'Recipients become recruiters',
-    bullets: [
-      'One-click LinkedIn, X, WhatsApp, email shares',
-      'Branded share images optimised per channel',
-      'Recipient wall — every badge in one URL',
-      '7× more shares than legacy issuers',
-    ],
-  },
-  {
-    key: 'analytics',
-    href: '/features/analytics',
-    mediaKey: 'analytics',
-    eyebrow: 'Stop reporting in spreadsheets',
-    bullets: [
-      'Live dashboards on issuance, share velocity, verification',
-      'Cohort, programme, and year comparisons',
-      'CSV export for ops, dashboards for executives',
-      'Forrester ROI lift baked into every metric',
-    ],
-  },
-  {
-    key: 'verification',
-    href: '/features/verification',
-    mediaKey: 'instantVerification',
-    eyebrow: 'Border-grade verification',
-    bullets: [
-      '387ms p99 verification across 14 EU countries',
-      'Polygon-anchored, eIDAS-trusted, GDPR-compliant',
-      'Works on any device, on any signal — even offline',
-      '98.4% verified on first scan',
-    ],
-  },
+  { key: 'sharing', href: '/features/sharing', mediaKey: 'sharing' },
+  { key: 'analytics', href: '/features/analytics', mediaKey: 'analytics' },
+  { key: 'verification', href: '/features/verification', mediaKey: 'instantVerification' },
 ];
 
 export const Features2026 = () => {
@@ -99,6 +68,8 @@ export const Features2026 = () => {
           {ROWS.map((row, i) => {
             const media = featureMedia[row.mediaKey] || {};
             const flipped = i % 2 === 1;
+            const eyebrow = t(`hpx.features.rows.${row.key}.eyebrow`);
+            const bullets = t(`hpx.features.rows.${row.key}.bullets`, { returnObjects: true });
             return (
               <motion.div
                 key={row.key}
@@ -118,7 +89,7 @@ export const Features2026 = () => {
                         <div className="w-full h-full flex items-center justify-center p-4">
                           <img
                             src={media.hero}
-                            alt={media.alt || row.eyebrow}
+                            alt={media.alt || eyebrow}
                             loading="lazy"
                             decoding="async"
                             className="max-w-full max-h-[400px] w-auto h-auto object-contain block"
@@ -131,7 +102,7 @@ export const Features2026 = () => {
 
                 {/* Text */}
                 <div className={`lg:col-span-6 ${flipped ? 'lg:order-1' : ''}`}>
-                  <p className="text-xs uppercase tracking-[0.18em] font-bold text-[#6A6478] mb-3">{row.eyebrow}</p>
+                  <p className="text-xs uppercase tracking-[0.18em] font-bold text-[#6A6478] mb-3">{eyebrow}</p>
                   <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#0F0E1A] leading-[1.1] mb-5">
                     {t(`features.items.${row.key}.title`)}
                   </h3>
@@ -139,7 +110,7 @@ export const Features2026 = () => {
                     {t(`features.items.${row.key}.description`)}
                   </p>
                   <ul className="space-y-2.5 mb-7">
-                    {row.bullets.map(b => (
+                    {(Array.isArray(bullets) ? bullets : []).map(b => (
                       <li key={b} className="flex items-start gap-3 text-base text-[#0F0E1A]">
                         <Check className="w-4 h-4 mt-1 shrink-0" style={{ color: '#5B22D6' }} strokeWidth={3} />
                         <span>{b}</span>

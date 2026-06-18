@@ -119,7 +119,7 @@ export const Blog = ({ initialPosts = null }) => {
       {(selectedTopics.length > 0 || selectedCategory !== 'All') && (
         <div className="container mx-auto px-6 md:px-12 pt-6">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="text-sm text-slate-500  mr-1">Filtering by:</span>
+            <span className="text-sm text-slate-500  mr-1">{t('mscx.blog.filteringBy')}</span>
             {selectedCategory !== 'All' && (
               <span className="inline-flex items-center gap-1 px-3 py-1 bg-[#5B22D6]/10  text-[#5B22D6]  rounded-full text-xs font-medium">
                 {selectedCategory}
@@ -133,7 +133,7 @@ export const Blog = ({ initialPosts = null }) => {
                 <button onClick={() => toggleTopic(topic)} className="ml-1 hover:text-red-500"><X className="w-3 h-3" /></button>
               </span>
             ))}
-            <button onClick={clearAllFilters} className="text-xs text-slate-500 hover:text-red-500 underline ml-2">Clear all</button>
+            <button onClick={clearAllFilters} className="text-xs text-slate-500 hover:text-red-500 underline ml-2">{t('mscx.blog.clearAll')}</button>
           </div>
         </div>
       )}
@@ -147,7 +147,7 @@ export const Blog = ({ initialPosts = null }) => {
             data-testid="blog-mobile-filter-toggle"
           >
             <Filter className="w-4 h-4" />
-            Filters {activeFilterCount > 0 && `(${activeFilterCount})`}
+            {t('mscx.blog.filters')} {activeFilterCount > 0 && `(${activeFilterCount})`}
           </button>
 
           <div className="flex gap-8">
@@ -171,7 +171,7 @@ export const Blog = ({ initialPosts = null }) => {
                 <div className="absolute inset-0 bg-black/50" onClick={() => setShowMobileFilters(false)} />
                 <div className="absolute left-0 top-0 bottom-0 w-80 max-w-[85vw] bg-white  overflow-y-auto p-6">
                   <div className="flex items-center justify-between mb-6">
-                    <h3 className="text-lg font-bold text-slate-900 ">Filters</h3>
+                    <h3 className="text-lg font-bold text-slate-900 ">{t('mscx.blog.filters')}</h3>
                     <button onClick={() => setShowMobileFilters(false)}>
                       <X className="w-5 h-5 text-slate-600 " />
                     </button>
@@ -213,8 +213,8 @@ export const Blog = ({ initialPosts = null }) => {
 
               {paginatedPosts.length === 0 ? (
                 <div className="text-center py-20">
-                  <p className="text-xl text-gray-600  mb-4">No posts found matching your criteria.</p>
-                  <button onClick={clearAllFilters} className="text-[#5B22D6] hover:underline font-medium">Clear all filters</button>
+                  <p className="text-xl text-gray-600  mb-4">{t('mscx.blog.noPostsFound')}</p>
+                  <button onClick={clearAllFilters} className="text-[#5B22D6] hover:underline font-medium">{t('mscx.blog.clearAllFilters')}</button>
                 </div>
               ) : (
                 <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">

@@ -1,0 +1,118 @@
+{
+  "mscx": {
+    "demo": {
+      "trustSignals": [
+        "30-min personalized session",
+        "Free, no credit card required",
+        "GDPR compliant & secure"
+      ],
+      "validation": {
+        "nameRequired": "Name is required",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Enter a valid email",
+        "companyRequired": "Company is required"
+      },
+      "placeholders": {
+        "name": "John Smith",
+        "email": "john@company.com",
+        "company": "Acme Corp",
+        "role": "Head of L&D"
+      },
+      "optional": "(optional)",
+      "sending": "Sending...",
+      "trustedBy": "Trusted by 150+ organizations"
+    },
+    "roi": {
+      "backToHome": "Back to Home",
+      "titleLead": "Efficiency",
+      "titleHighlight": "Calculator",
+      "subtitle": "See how much time and money you save by automating credential management",
+      "ctaTitle": "Ready to Start Saving?",
+      "ctaSubtitle": "Join 150+ organizations that have already switched to CredSure and are saving thousands every year.",
+      "bookDemo": "Book a Demo",
+      "viewPricing": "View Pricing"
+    },
+    "blog": {
+      "filteringBy": "Filtering by:",
+      "clearAll": "Clear all",
+      "filters": "Filters",
+      "noPostsFound": "No posts found matching your criteria.",
+      "clearAllFilters": "Clear all filters"
+    },
+    "signin": {
+      "title": "Sign In",
+      "subtitle": "Access your CredSure account",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "you@example.com",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "••••••••",
+      "submit": "Sign In",
+      "backToHome": "Back to Home"
+    },
+    "terms": {
+      "seoTitle": "Master Subscription Agreement | CredSure",
+      "seoDescription": "The CredSure Master Subscription Agreement governing access to and use of the CredSure platform and related services.",
+      "heading": "Master Subscription Agreement",
+      "subtitle": "The terms governing your access to and use of the CredSure platform and related Services.",
+      "effectiveLabel": "Effective",
+      "supplierLabel": "Supplier",
+      "contentsLabel": "Contents",
+      "supplierInfoHeading": "Supplier Information",
+      "documentFooter": "Document version {version} · Effective {effectiveDate} · Subject to change in accordance with Section 25."
+    }
+  },
+  "platformPillars": {
+    "issue": {
+      "tab": "Issue",
+      "eyebrow": "For Issuers",
+      "title": "Bulk-issue 50,000 credentials. In one click.",
+      "body": "CSV in. Beautiful, brand-customised credentials out. No engineers required, most teams go live in under a week.",
+      "bullets": [
+        "Drag-and-drop CSV — 50,000 recipients in one upload",
+        "80+ templates, full brand-kit customisation",
+        "Trigger-based auto-issue from Moodle, Canvas, Workday",
+        "One-click LinkedIn share for every recipient"
+      ],
+      "cta": "Explore CredSure Issue"
+    },
+    "verify": {
+      "tab": "Verify",
+      "eyebrow": "For Verifiers",
+      "title": "Tamper-proof verification. In 387ms. Even offline.",
+      "body": "Border-grade cryptography anchored on-chain. Works on any device, on any signal — even a flip phone.",
+      "bullets": [
+        "p99 verification in 387ms across 14 EU countries",
+        "Polygon-anchored, eIDAS-trusted, GDPR-compliant",
+        "No app downloads — recipients share a single URL",
+        "98.4% verified on first scan"
+      ],
+      "cta": "Explore CredSure Verify"
+    },
+    "govern": {
+      "tab": "Govern",
+      "eyebrow": "For Compliance",
+      "title": "Audit logs every regulator already loves.",
+      "body": "ISO 27001 · eIDAS · GDPR — all certified, all included, all ready for your next audit.",
+      "bullets": [
+        "Immutable audit log of every issue, revoke, and share",
+        "Role-based access for issuers, registrars, and verifiers",
+        "One-click export to your regulator's preferred format",
+        "WCAG 2.1 AA aligned on every credential"
+      ],
+      "cta": "Explore Security & Compliance"
+    },
+    "insights": {
+      "tab": "Insights",
+      "eyebrow": "For Leaders",
+      "title": "Stop reporting in spreadsheets. Start telling stories.",
+      "body": "Real-time dashboards on issuance, share velocity, verification rates and recipient engagement — by cohort, programme, or year.",
+      "bullets": [
+        "Live share-velocity tracker per cohort",
+        "Verification heatmap by region and channel",
+        "Cohort comparisons across years and programmes",
+        "CSV export for ops, dashboards for executives"
+      ],
+      "cta": "Explore Insights"
+    }
+  }
+}

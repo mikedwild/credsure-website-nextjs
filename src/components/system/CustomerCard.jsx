@@ -17,6 +17,7 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { LocalizedLink as Link } from '../LocalizedLink';
+import { useTranslation } from '@/lib/useTranslation';
 
 const Meta = ({ label, value }) => (
   <div>
@@ -37,7 +38,9 @@ export const CustomerCard = ({
   author,
   caseStudyHref,
   testId = 'customer-card',
-}) => (
+}) => {
+  const t = useTranslation();
+  return (
   <article
     className="rounded-2xl p-7 md:p-9 h-full flex flex-col"
     style={{ background: '#FFFFFF', border: '1px solid #ECE7F1', boxShadow: '0 12px 30px -16px rgba(15,14,26,0.12)' }}
@@ -54,9 +57,9 @@ export const CustomerCard = ({
     )}
 
     <div className="grid grid-cols-3 gap-4 pb-5 mb-5 border-b" style={{ borderColor: '#ECE7F1' }}>
-      <Meta label="Industry" value={industry} />
-      <Meta label="Headquarters" value={hq} />
-      <Meta label="Employees" value={employees} />
+      <Meta label={t('hpx.customerCard.industry', 'Industry')} value={industry} />
+      <Meta label={t('hpx.customerCard.headquarters', 'Headquarters')} value={hq} />
+      <Meta label={t('hpx.customerCard.employees', 'Employees')} value={employees} />
     </div>
 
     {tags.length > 0 && (
@@ -90,12 +93,13 @@ export const CustomerCard = ({
             className="cs-btn cs-btn-ghost !text-sm !py-2 !px-4 shrink-0"
             data-testid={`${testId}-link`}
           >
-            Read case study <ArrowUpRight className="w-3.5 h-3.5" />
+            {t('hpx.customerCard.readCaseStudy', 'Read case study')} <ArrowUpRight className="w-3.5 h-3.5" />
           </Link>
         )}
       </div>
     )}
   </article>
-);
+  );
+};
 
 export default CustomerCard;

@@ -1,0 +1,118 @@
+{
+  "mscx": {
+    "demo": {
+      "trustSignals": [
+        "30-minütige persönliche Sitzung",
+        "Kostenlos, keine Kreditkarte erforderlich",
+        "DSGVO-konform und sicher"
+      ],
+      "validation": {
+        "nameRequired": "Name ist erforderlich",
+        "emailRequired": "E-Mail ist erforderlich",
+        "emailInvalid": "Bitte eine gültige E-Mail-Adresse eingeben",
+        "companyRequired": "Unternehmen ist erforderlich"
+      },
+      "placeholders": {
+        "name": "John Smith",
+        "email": "john@company.com",
+        "company": "Acme Corp",
+        "role": "Head of L&D"
+      },
+      "optional": "(optional)",
+      "sending": "Wird gesendet...",
+      "trustedBy": "Vertraut von über 150 Organisationen"
+    },
+    "roi": {
+      "backToHome": "Zurück zur Startseite",
+      "titleLead": "Effizienz",
+      "titleHighlight": "Rechner",
+      "subtitle": "Sehen Sie, wie viel Zeit und Geld Sie durch die Automatisierung Ihrer Zertifikatsverwaltung sparen",
+      "ctaTitle": "Bereit zu sparen?",
+      "ctaSubtitle": "Schließen Sie sich über 150 Organisationen an, die bereits zu CredSure gewechselt sind und jedes Jahr Tausende sparen.",
+      "bookDemo": "Demo buchen",
+      "viewPricing": "Preise ansehen"
+    },
+    "blog": {
+      "filteringBy": "Gefiltert nach:",
+      "clearAll": "Alle zurücksetzen",
+      "filters": "Filter",
+      "noPostsFound": "Keine Beiträge gefunden, die Ihren Kriterien entsprechen.",
+      "clearAllFilters": "Alle Filter zurücksetzen"
+    },
+    "signin": {
+      "title": "Anmelden",
+      "subtitle": "Zugriff auf Ihr CredSure-Konto",
+      "emailLabel": "E-Mail-Adresse",
+      "emailPlaceholder": "you@example.com",
+      "passwordLabel": "Passwort",
+      "passwordPlaceholder": "••••••••",
+      "submit": "Anmelden",
+      "backToHome": "Zurück zur Startseite"
+    },
+    "terms": {
+      "seoTitle": "Master Subscription Agreement | CredSure",
+      "seoDescription": "Das CredSure Master Subscription Agreement regelt den Zugriff auf die CredSure-Plattform und die zugehörigen Dienste sowie deren Nutzung.",
+      "heading": "Master Subscription Agreement",
+      "subtitle": "Die Bedingungen, die Ihren Zugriff auf die CredSure-Plattform und die zugehörigen Services sowie deren Nutzung regeln.",
+      "effectiveLabel": "Gültig ab",
+      "supplierLabel": "Anbieter",
+      "contentsLabel": "Inhalt",
+      "supplierInfoHeading": "Anbieterinformationen",
+      "documentFooter": "Dokumentversion {version} · Gültig ab {effectiveDate} · Änderungen vorbehalten gemäß Abschnitt 25."
+    }
+  },
+  "platformPillars": {
+    "issue": {
+      "tab": "Ausstellen",
+      "eyebrow": "Für Aussteller",
+      "title": "50.000 Credentials ausstellen. Mit einem Klick.",
+      "body": "CSV rein. Schöne, markenindividuelle Credentials raus. Keine Entwickler nötig – die meisten Teams sind in unter einer Woche live.",
+      "bullets": [
+        "Drag-and-drop-CSV – 50.000 Empfänger in einem Upload",
+        "80+ Vorlagen, vollständige Markenkit-Anpassung",
+        "Trigger-basierte Auto-Ausstellung aus Moodle, Canvas, Workday",
+        "Ein-Klick-LinkedIn-Teilen für jeden Empfänger"
+      ],
+      "cta": "CredSure Issue entdecken"
+    },
+    "verify": {
+      "tab": "Verifizieren",
+      "eyebrow": "Für Prüfer",
+      "title": "Fälschungssichere Verifizierung. In 387 ms. Sogar offline.",
+      "body": "Kryptografie auf Grenzkontroll-Niveau, on-chain verankert. Funktioniert auf jedem Gerät, bei jedem Signal – sogar auf einem Tastenhandy.",
+      "bullets": [
+        "p99-Verifizierung in 387 ms in 14 EU-Ländern",
+        "Polygon-verankert, eIDAS-vertrauenswürdig, DSGVO-konform",
+        "Keine App-Downloads – Empfänger teilen eine einzige URL",
+        "98,4 % beim ersten Scan verifiziert"
+      ],
+      "cta": "CredSure Verify entdecken"
+    },
+    "govern": {
+      "tab": "Verwalten",
+      "eyebrow": "Für Compliance",
+      "title": "Audit-Logs, die jede Aufsichtsbehörde liebt.",
+      "body": "ISO 27001 · eIDAS · DSGVO – alle zertifiziert, alle enthalten, alle bereit für Ihr nächstes Audit.",
+      "bullets": [
+        "Unveränderliches Audit-Log jeder Ausstellung, Sperrung und Freigabe",
+        "Rollenbasierter Zugriff für Aussteller, Registrare und Prüfer",
+        "Ein-Klick-Export in das bevorzugte Format Ihrer Aufsichtsbehörde",
+        "WCAG 2.1 AA-konform auf jedem Credential"
+      ],
+      "cta": "Sicherheit & Compliance entdecken"
+    },
+    "insights": {
+      "tab": "Insights",
+      "eyebrow": "Für Führungskräfte",
+      "title": "Schluss mit Reporting in Tabellen. Erzählen Sie Geschichten.",
+      "body": "Echtzeit-Dashboards zu Ausstellung, Teilgeschwindigkeit, Verifizierungsraten und Empfänger-Engagement – nach Kohorte, Programm oder Jahr.",
+      "bullets": [
+        "Live-Tracker der Teilgeschwindigkeit pro Kohorte",
+        "Verifizierungs-Heatmap nach Region und Kanal",
+        "Kohortenvergleiche über Jahre und Programme hinweg",
+        "CSV-Export fürs Operative, Dashboards für die Führungsebene"
+      ],
+      "cta": "Insights entdecken"
+    }
+  }
+}

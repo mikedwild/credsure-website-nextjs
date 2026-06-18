@@ -107,7 +107,7 @@ export const FeaturePageTemplate = ({ featureKey, Icon }) => {
                   onClick={() => navigate('/platform')}
                   className="!bg-white !border-2 !border-[#0F0E1A] !text-[#0F0E1A] hover:!bg-[#0F0E1A] hover:!text-white !rounded-full !px-7 !py-6 !text-base !font-bold"
                 >
-                  Explore platform
+                  {t('tplx.feature.explorePlatform')}
                 </Button>
               </div>
 
@@ -117,8 +117,8 @@ export const FeaturePageTemplate = ({ featureKey, Icon }) => {
                   <Icon className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <p className="text-[10px] uppercase tracking-[0.18em] font-bold text-[#6A6478]">CredSure Platform</p>
-                  <p className="text-sm font-bold text-[#0F0E1A]">Built into every workflow</p>
+                  <p className="text-[10px] uppercase tracking-[0.18em] font-bold text-[#6A6478]">{t('tplx.feature.trustEyebrow')}</p>
+                  <p className="text-sm font-bold text-[#0F0E1A]">{t('tplx.feature.trustTagline')}</p>
                 </div>
               </div>
             </motion.div>
@@ -208,9 +208,9 @@ export const FeaturePageTemplate = ({ featureKey, Icon }) => {
         <section className="py-24" data-testid={`${featureKey}-capabilities`}>
           <div className="container mx-auto px-6 md:px-12 max-w-6xl">
             <div className="max-w-2xl mb-12">
-              <p className="text-xs uppercase tracking-[0.18em] font-bold mb-3 cs-grad-text">Capabilities</p>
+              <p className="text-xs uppercase tracking-[0.18em] font-bold mb-3 cs-grad-text">{t('tplx.feature.capabilitiesEyebrow')}</p>
               <h2 className="text-3xl md:text-4xl font-bold text-[#0F0E1A] tracking-tight leading-tight">
-                Everything you need to make this <span className="cs-grad-text">work at scale.</span>
+                {t('tplx.feature.capabilitiesHeading')}<span className="cs-grad-text">{t('tplx.feature.capabilitiesHeadingHighlight')}</span>
               </h2>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -241,9 +241,9 @@ export const FeaturePageTemplate = ({ featureKey, Icon }) => {
         <section className="py-20" style={{ background: '#FAFAFC' }} data-testid={`${featureKey}-metrics`}>
           <div className="container mx-auto px-6 md:px-12 max-w-6xl">
             <div className="max-w-2xl mb-10">
-              <p className="text-xs uppercase tracking-[0.18em] font-bold mb-3 cs-grad-text">Proof in numbers</p>
+              <p className="text-xs uppercase tracking-[0.18em] font-bold mb-3 cs-grad-text">{t('tplx.feature.metricsEyebrow')}</p>
               <h2 className="text-3xl md:text-4xl font-bold text-[#0F0E1A] tracking-tight leading-tight">
-                Metrics that matter.
+                {t('tplx.feature.metricsHeading')}
               </h2>
             </div>
             <MetricStrip
@@ -263,9 +263,9 @@ export const FeaturePageTemplate = ({ featureKey, Icon }) => {
         <section className="py-24" data-testid={`${featureKey}-use-cases`}>
           <div className="container mx-auto px-6 md:px-12 max-w-6xl">
             <div className="max-w-2xl mb-12">
-              <p className="text-xs uppercase tracking-[0.18em] font-bold mb-3 cs-grad-text">In production</p>
+              <p className="text-xs uppercase tracking-[0.18em] font-bold mb-3 cs-grad-text">{t('tplx.feature.useCasesEyebrow')}</p>
               <h2 className="text-3xl md:text-4xl font-bold text-[#0F0E1A] tracking-tight leading-tight">
-                How teams use this <span className="cs-grad-text">today.</span>
+                {t('tplx.feature.useCasesHeading')}<span className="cs-grad-text">{t('tplx.feature.useCasesHeadingHighlight')}</span>
               </h2>
             </div>
             <div className="grid md:grid-cols-3 gap-6">
@@ -296,9 +296,9 @@ export const FeaturePageTemplate = ({ featureKey, Icon }) => {
         <section className="py-24" style={{ background: '#FAFAFC' }} data-testid={`${featureKey}-faq`}>
           <div className="container mx-auto px-6 md:px-12 max-w-3xl">
             <div className="text-center mb-12">
-              <p className="text-xs uppercase tracking-[0.18em] font-bold mb-3 cs-grad-text">FAQ</p>
+              <p className="text-xs uppercase tracking-[0.18em] font-bold mb-3 cs-grad-text">{t('tplx.feature.faqEyebrow')}</p>
               <h2 className="text-3xl md:text-4xl font-bold text-[#0F0E1A] tracking-tight leading-tight">
-                Frequently asked.
+                {t('tplx.feature.faqHeading')}
               </h2>
             </div>
             <Accordion type="single" collapsible className="space-y-3">
@@ -333,10 +333,10 @@ export const FeaturePageTemplate = ({ featureKey, Icon }) => {
       <section className="py-20" style={{ background: '#FAFAFC' }}>
         <div className="container mx-auto px-6 md:px-12 max-w-3xl text-center">
           <h2 className="text-3xl md:text-5xl font-bold text-[#0F0E1A] mb-5 tracking-tight leading-tight">
-            Ready to <span className="cs-grad-text">see it live?</span>
+            {t('tplx.feature.ctaHeading')}<span className="cs-grad-text">{t('tplx.feature.ctaHeadingHighlight')}</span>
           </h2>
           <p className="text-base md:text-lg text-[#2E2A3D] mb-8 max-w-xl mx-auto">
-            See how CredSure transforms credentialing for your team. Personalised demo, 15 minutes.
+            {t('tplx.feature.ctaSubtitle')}
           </p>
           <Button
             onClick={() => navigate('/demo')}

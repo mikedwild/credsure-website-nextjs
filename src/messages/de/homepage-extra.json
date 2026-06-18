@@ -1,0 +1,164 @@
+{
+  "hpx": {
+    "industries": {
+      "titlePrefix": "Gemacht für",
+      "titleHighlight": "Jede Branche",
+      "subtitle": "Von der Bildung bis zum Großunternehmen — CredSure betreibt Zertifikate in allen Branchen",
+      "learnMore": "Mehr erfahren",
+      "ctaQuestion": "Ihre Branche nicht dabei? Wir arbeiten mit allen Arten von Organisationen.",
+      "ctaLink": "Preise für alle Pläne ansehen",
+      "guidesLink": "Unsere Branchen-Leitfäden lesen",
+      "webinarsLink": "Webinare ansehen",
+      "storiesLink": "Kundenstories",
+      "items": [
+        {
+          "icon": "GraduationCap",
+          "title": "Bildung & Universitäten",
+          "description": "Kursabschlüsse, Abschlüsse und Weiterbildungspunkte vergeben",
+          "stats": "Genutzt von 150+ Universitäten weltweit"
+        },
+        {
+          "icon": "Building2",
+          "title": "Unternehmensschulung",
+          "description": "Mitarbeiterkompetenzen, Compliance-Schulungen und berufliche Weiterentwicklung anerkennen",
+          "stats": "10.000+ Zertifikate monatlich ausgestellt"
+        },
+        {
+          "icon": "Users",
+          "title": "Berufsverbände",
+          "description": "Mitgliederzertifizierungen, Weiterbildungspunkte und Teilnahme-Badges für Veranstaltungen ausstellen",
+          "stats": "150+ Organisationen vertrauen CredSure"
+        },
+        {
+          "icon": "Award",
+          "title": "Zertifizierungsstellen",
+          "description": "Prüfungsbasierte Zertifizierungen mit Ablauf-Tracking und Erneuerungen verwalten",
+          "stats": "99,9% Verifizierungserfolgsrate"
+        },
+        {
+          "icon": "Laptop",
+          "title": "Online-Lernplattformen",
+          "description": "Verifizierte Zertifikate zu Kursen und Bootcamp-Programmen hinzufügen",
+          "stats": "Mit jedem LMS integrierbar"
+        },
+        {
+          "icon": "Briefcase",
+          "title": "Produktzertifizierungen",
+          "description": "Partner, Anbieter und Kunden im Produktwissen zertifizieren",
+          "stats": "Zertifikats-Engagement verfolgen"
+        }
+      ]
+    },
+    "features": {
+      "rows": {
+        "sharing": {
+          "eyebrow": "Empfänger werden zu Recruitern",
+          "bullets": [
+            "Ein-Klick-Teilen auf LinkedIn, X, WhatsApp und per E-Mail",
+            "Gebrandete Share-Bilder, optimiert für jeden Kanal",
+            "Empfänger-Wall — jedes Badge in einer URL",
+            "7× mehr Shares als bei herkömmlichen Anbietern"
+          ]
+        },
+        "analytics": {
+          "eyebrow": "Schluss mit Berichten in Tabellen",
+          "bullets": [
+            "Live-Dashboards zu Ausstellung, Teilen-Geschwindigkeit und Verifizierung",
+            "Vergleiche nach Kohorte, Programm und Jahr",
+            "CSV-Export für Operations, Dashboards für die Geschäftsführung",
+            "Forrester-ROI-Steigerung in jeder Kennzahl verankert"
+          ]
+        },
+        "verification": {
+          "eyebrow": "Verifizierung auf Grenzkontroll-Niveau",
+          "bullets": [
+            "387 ms p99-Verifizierung in 14 EU-Ländern",
+            "Polygon-verankert, eIDAS-vertrauenswürdig, DSGVO-konform",
+            "Funktioniert auf jedem Gerät, bei jedem Signal — sogar offline",
+            "98,4% beim ersten Scan verifiziert"
+          ]
+        }
+      }
+    },
+    "testimonials": {
+      "seeAllStories": "Alle Kundenstories ansehen",
+      "readG2Reviews": "Alle G2-Bewertungen lesen",
+      "customers": [
+        {
+          "name": "ByteEDGE",
+          "industry": "Microlearning · EdTech",
+          "hq": "Bengaluru, Indien",
+          "employees": "Enterprise",
+          "tags": [
+            "LMS-Integration",
+            "API",
+            "Analysen"
+          ],
+          "quote": {
+            "lead": "CredSure gab uns Blockchain-Vertrauen ohne Engineering-Aufwand. Wir stellten verifizierbare Zertifikate aus",
+            "bold": "innerhalb eines einzigen Sprints",
+            "tail": "."
+          },
+          "author": {
+            "name": "Priya Menon",
+            "role": "Head of Product, ByteEDGE"
+          },
+          "caseStudyHref": "/customer-success/byteedge"
+        },
+        {
+          "name": "Tsaaro Academy",
+          "industry": "Datenschutz-Training",
+          "hq": "Bengaluru, Indien",
+          "employees": "Enterprise",
+          "tags": [
+            "100% automatisierte Ausstellung",
+            "80% weniger Verwaltungsaufwand",
+            "DSGVO"
+          ],
+          "quote": {
+            "lead": "Unser Admin-Team gewann zwanzig Stunden pro Woche zurück. Das ist",
+            "bold": "ein ganzer Arbeitstag, jede Woche, wiedergewonnen",
+            "tail": " — zum Preis von ein paar Kaffees pro Lernendem."
+          },
+          "author": {
+            "name": "Akarsh Singh",
+            "role": "Mitgründer, Tsaaro Academy"
+          },
+          "caseStudyHref": "/customer-success/tsaaro"
+        },
+        {
+          "name": "Clini INDIA",
+          "industry": "Gesundheitstrainings-Netzwerk",
+          "hq": "Indien",
+          "employees": "Enterprise",
+          "tags": [
+            "CME",
+            "Verifizierung",
+            "Regulatorische Compliance"
+          ],
+          "quote": {
+            "lead": "Verifizierungen dauerten früher tagelange Telefonate. Mit CredSure verifizieren Arbeitgeber die Zertifikate eines Kandidaten",
+            "bold": "in unter fünf Sekunden",
+            "tail": " — das ist ein Gamechanger für unsere Absolventen."
+          },
+          "author": {
+            "name": "Dr. Anil Kumar",
+            "role": "Director of Programs, Clini INDIA"
+          },
+          "caseStudyHref": "/customer-success/clini-india"
+        }
+      ]
+    },
+    "customerCard": {
+      "industry": "Branche",
+      "headquarters": "Hauptsitz",
+      "employees": "Mitarbeitende",
+      "readCaseStudy": "Fallstudie lesen"
+    }
+  },
+  "g2": {
+    "subtitle": "Von echten Nutzern auf G2 bewertet",
+    "title": "CredSure rangiert ganz oben bei der Verwaltung digitaler Credentials",
+    "readReviews": "Unsere G2-Bewertungen lesen"
+  }
+}

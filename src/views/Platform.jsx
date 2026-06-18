@@ -24,18 +24,13 @@ const PlatformCapabilityTable = lazy(() =>
   import('../components/SolutionEnrichment').then(m => ({ default: m.PlatformCapabilityTable }))
 );
 
-const platformFAQ = [
-  { question: 'How long does it take to get started with CredSure?', answer: 'Most organizations are up and running within a day. Create your account, design your first credential template, and issue your first batch — no technical setup required. Enterprise integrations (LMS, API) typically take 1-2 weeks.' },
-  { question: 'Can I migrate from another credentialing platform?', answer: 'Yes. CredSure supports migration from Accredible, Credly, Certifier, and custom systems. Our migration team handles data import, template recreation, and recipient notification at no extra cost on Professional and Enterprise plans.' },
-  { question: 'What makes CredSure different from Credly or Accredible?', answer: 'CredSure offers blockchain verification (not just digital storage), transparent pricing (no hidden fees), full white-label capability, and bilingual support (English & German). Our platform is built for both certificates and badges, with a unified dashboard.' },
-  { question: 'Is there a free trial?', answer: 'Yes. Every account starts with 20 free credits to issue and test credentials. No credit card required. Upgrade to a paid plan when you are ready to scale.' },
-  { question: 'Do credentials work offline?', answer: 'Yes. Recipients can download their credentials as PDF or add them to digital wallets for offline access. Verification requires an internet connection, but the credential itself is always accessible.' },
-];
-
 export const Platform = () => {
   const t = useTranslation();
   const location = useLocation();
   const baseUrl = getBaseUrl();
+
+  const rawFAQ = t('tplx.platform.faq', { returnObjects: true });
+  const platformFAQ = Array.isArray(rawFAQ) ? rawFAQ : [];
 
   const featureKeys = ['credentialManagement', 'blockchainVerification', 'socialSharing', 'analytics'];
   const featureIcons = { credentialManagement: LayoutDashboard, blockchainVerification: Shield, socialSharing: Share2, analytics: BarChart3 };
@@ -91,7 +86,7 @@ export const Platform = () => {
         )}
         {href && (
           <div className="mt-4 flex items-center text-[#5B22D6] font-medium text-sm group-hover:translate-x-1 transition-transform">
-            Learn more <ArrowRight className="w-4 h-4 ml-1" />
+            {t('tplx.platform.learnMore')} <ArrowRight className="w-4 h-4 ml-1" />
           </div>
         )}
       </motion.div>
@@ -115,7 +110,7 @@ export const Platform = () => {
               {t('pages.platform.title')} <span className="text-transparent bg-gradient-to-r from-[#5B22D6] to-[#E22B8A] bg-clip-text">{t('pages.platform.titleHighlight')}</span>
             </h1>
             <p className="platform-description text-base md:text-lg text-gray-600  leading-relaxed max-w-3xl mx-auto">
-              {t('pages.platform.subtitle')}. Blockchain-verified digital certificates and badges trusted by 150+ organizations worldwide. Issue, manage, verify, and track credentials at any scale — from 10 to 10 million.
+              {t('pages.platform.subtitle')}. {t('tplx.platform.heroSubtitleExtra')}
             </p>
           </motion.div>
         </div>
@@ -139,9 +134,9 @@ export const Platform = () => {
       <section className="py-20 bg-slate-50 " data-testid="platform-how-it-works">
         <div className="container mx-auto px-6 md:px-12 max-w-5xl">
           <h2 className="text-3xl font-bold text-[#0F0E1A]  mb-4 text-center">
-            How CredSure <span className="text-transparent bg-gradient-to-r from-[#5B22D6] to-[#E22B8A] bg-clip-text">Works</span>
+            {t('tplx.platform.howItWorksHeading')}<span className="text-transparent bg-gradient-to-r from-[#5B22D6] to-[#E22B8A] bg-clip-text">{t('tplx.platform.howItWorksHeadingHighlight')}</span>
           </h2>
-          <p className="text-center text-gray-500  mb-12 text-sm">From design to verification in four simple steps</p>
+          <p className="text-center text-gray-500  mb-12 text-sm">{t('tplx.platform.howItWorksSubtitle')}</p>
           <div className="grid md:grid-cols-4 gap-6">
             {platformHowItWorks.map((step, i) => (
               <motion.div key={step.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="relative">
@@ -168,9 +163,9 @@ export const Platform = () => {
         <div className="container mx-auto px-6 md:px-12 max-w-6xl">
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-[#0F0E1A]  mb-4 text-center">
-              Core <span className="text-transparent bg-gradient-to-r from-[#5B22D6] to-[#E22B8A] bg-clip-text">Features</span>
+              {t('tplx.platform.coreFeaturesHeading')}<span className="text-transparent bg-gradient-to-r from-[#5B22D6] to-[#E22B8A] bg-clip-text">{t('tplx.platform.coreFeaturesHeadingHighlight')}</span>
             </h2>
-            <p className="text-center text-gray-500  mb-8 text-sm">The foundation of your credentialing program</p>
+            <p className="text-center text-gray-500  mb-8 text-sm">{t('tplx.platform.coreFeaturesSubtitle')}</p>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {featureKeys.map((key) => (
                 <div key={key}>
@@ -183,9 +178,9 @@ export const Platform = () => {
           {/* Automation */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-[#0F0E1A]  mb-4 text-center">
-              <span className="text-transparent bg-gradient-to-r from-[#5B22D6] to-[#E22B8A] bg-clip-text">Automation</span>
+              <span className="text-transparent bg-gradient-to-r from-[#5B22D6] to-[#E22B8A] bg-clip-text">{t('tplx.platform.automationHeadingHighlight')}</span>
             </h2>
-            <p className="text-center text-gray-500  mb-8 text-sm">Eliminate manual work with intelligent automation</p>
+            <p className="text-center text-gray-500  mb-8 text-sm">{t('tplx.platform.automationSubtitle')}</p>
             <div className="grid md:grid-cols-3 gap-6">
               {automationKeys.map(key => renderFeatureCard(key, automationIcons))}
             </div>
@@ -194,9 +189,9 @@ export const Platform = () => {
           {/* Customization */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-[#0F0E1A]  mb-4 text-center">
-              <span className="text-transparent bg-gradient-to-r from-[#5B22D6] to-[#E22B8A] bg-clip-text">Customization</span>
+              <span className="text-transparent bg-gradient-to-r from-[#5B22D6] to-[#E22B8A] bg-clip-text">{t('tplx.platform.customizationHeadingHighlight')}</span>
             </h2>
-            <p className="text-center text-gray-500  mb-8 text-sm">Make it yours with full brand control</p>
+            <p className="text-center text-gray-500  mb-8 text-sm">{t('tplx.platform.customizationSubtitle')}</p>
             <div className="grid md:grid-cols-3 gap-6">
               {customizationKeys.map(key => renderFeatureCard(key, customizationIcons))}
             </div>
@@ -208,9 +203,9 @@ export const Platform = () => {
       <section className="py-16 bg-slate-50 " data-testid="platform-integrations">
         <div className="container mx-auto px-6 md:px-12 max-w-5xl">
           <h2 className="text-3xl font-bold text-[#0F0E1A]  mb-4 text-center">
-            Integrates With Your <span className="text-transparent bg-gradient-to-r from-[#5B22D6] to-[#E22B8A] bg-clip-text">Tech Stack</span>
+            {t('tplx.platform.integrationsHeading')}<span className="text-transparent bg-gradient-to-r from-[#5B22D6] to-[#E22B8A] bg-clip-text">{t('tplx.platform.integrationsHeadingHighlight')}</span>
           </h2>
-          <p className="text-center text-gray-500  mb-10 text-sm">Connect CredSure to 3,000+ tools via API and Zapier</p>
+          <p className="text-center text-gray-500  mb-10 text-sm">{t('tplx.platform.integrationsSubtitle')}</p>
           <div className="flex flex-wrap justify-center gap-4">
             {platformIntegrations.map((name, i) => (
               <motion.div
@@ -238,7 +233,7 @@ export const Platform = () => {
       <section className="py-20 bg-slate-50 " data-testid="platform-faq">
         <div className="container mx-auto px-6 md:px-12 max-w-4xl">
           <h2 className="text-3xl font-bold text-[#0F0E1A]  mb-8 text-center">
-            Frequently Asked <span className="text-transparent bg-gradient-to-r from-[#5B22D6] to-[#E22B8A] bg-clip-text">Questions</span>
+            {t('tplx.platform.faqHeading')}<span className="text-transparent bg-gradient-to-r from-[#5B22D6] to-[#E22B8A] bg-clip-text">{t('tplx.platform.faqHeadingHighlight')}</span>
           </h2>
           <Accordion type="single" collapsible className="space-y-4">
             {platformFAQ.map((faq, index) => (
@@ -264,7 +259,7 @@ export const Platform = () => {
       <section className="py-16 bg-white ">
         <div className="container mx-auto px-6 md:px-12 max-w-3xl text-center">
           <h2 className="text-2xl font-bold text-[#0F0E1A]  mb-4">
-            Ready to transform your credentialing?
+            {t('tplx.platform.ctaHeading')}
           </h2>
           <p className="text-sm text-gray-500  mb-8">{t('pages.platform.ctaDesc')}</p>
           <Link to="/demo">

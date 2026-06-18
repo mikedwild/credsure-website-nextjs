@@ -1,0 +1,320 @@
+{
+  "resx": {
+    "integrations": {
+      "categories": [
+        {
+          "id": "lms",
+          "title": "Lernmanagementsysteme",
+          "description": "Automatische Ausstellung von Zertifikaten, wenn Lernende Kurse, Module oder Prüfungen abschließen.",
+          "integrations": [
+            { "name": "Moodle", "desc": "Zertifikate für Kursabschlüsse und Anmeldungen ausstellen" },
+            { "name": "LearnDash", "desc": "WordPress-LMS mit automatisierten Zertifikats-Triggern" },
+            { "name": "Teachable", "desc": "Zertifikatsautomatisierung für Online-Kursplattformen" },
+            { "name": "TalentLMS", "desc": "Zertifikate für abgeschlossene Unternehmensschulungen" },
+            { "name": "Thinkific", "desc": "Badges für Kursabschlüsse und Meilensteine" },
+            { "name": "LearnWorlds", "desc": "Zertifikatszustellung für interaktive Kurse" },
+            { "name": "Skilljar", "desc": "Zertifizierung für Kundenschulungen" },
+            { "name": "LearnUpon", "desc": "Zertifikate für betriebliche Schulungsprogramme" },
+            { "name": "EdApp", "desc": "Badges für abgeschlossenes Microlearning" },
+            { "name": "Pluto LMS", "desc": "Individuelle LMS-Integration über API" }
+          ]
+        },
+        {
+          "id": "crm",
+          "title": "CRM & Marketing",
+          "description": "Synchronisieren Sie Zertifikatsdaten mit Ihrem CRM, um Engagement zu verfolgen und zertifizierte Kontakte zu pflegen.",
+          "integrations": [
+            { "name": "Salesforce", "desc": "Zertifikatsstatus und Empfängerdaten synchronisieren" },
+            { "name": "HubSpot", "desc": "Workflows auf Basis von Zertifikatsereignissen auslösen" },
+            { "name": "Microsoft Dynamics 365", "desc": "Zertifikats-Tracking im Enterprise-CRM" },
+            { "name": "ActiveCampaign", "desc": "E-Mail-Automatisierung für Zertifikatsinhaber" }
+          ]
+        },
+        {
+          "id": "productivity",
+          "title": "Produktivität & Daten",
+          "description": "Verbinden Sie Ihre bestehenden Tools, um Zertifikats-Workflows ohne Code zu automatisieren.",
+          "integrations": [
+            { "name": "Google Sheets", "desc": "Massenausstellung aus Tabellendaten" },
+            { "name": "Airtable", "desc": "Datenbankgesteuerte Zertifikatsautomatisierung" },
+            { "name": "Typeform", "desc": "Zertifikate bei Formularübermittlung ausstellen" },
+            { "name": "Asana", "desc": "Zertifikats-Trigger für Projektmeilensteine" },
+            { "name": "Calendly", "desc": "Überprüfung der Veranstaltungsteilnahme" }
+          ]
+        },
+        {
+          "id": "ecommerce",
+          "title": "E-Commerce & Webseiten",
+          "description": "Vergeben Sie Zertifikate für Käufe, Kursanmeldungen und Mitgliedschaftsleistungen.",
+          "integrations": [
+            { "name": "WooCommerce", "desc": "Zertifikatszustellung für WordPress-E-Commerce" },
+            { "name": "Wix", "desc": "Integration mit dem Website-Baukasten" }
+          ]
+        },
+        {
+          "id": "social",
+          "title": "Social & Kommunikation",
+          "description": "Ermöglichen Sie das Teilen von Zertifikaten und Team-Benachrichtigungen über Kommunikationsplattformen.",
+          "integrations": [
+            { "name": "LinkedIn", "desc": "Zertifikate mit einem Klick im Profil teilen", "color": "#0A66C2" },
+            { "name": "Slack", "desc": "Team-Benachrichtigungen für ausgestellte Zertifikate", "color": "#4A154B" },
+            { "name": "Microsoft Teams", "desc": "Zertifikats-Hinweise in Team-Kanälen", "color": "#6264A7" },
+            { "name": "Google Workspace", "desc": "Integration mit Gmail und Drive", "color": "#4285F4" }
+          ]
+        }
+      ],
+      "statIntegrations": "Integrationen",
+      "statApps": "Apps via Zapier",
+      "statCustom": "Individuelle Integration",
+      "zapierTitle": "Verbinden Sie sich mit 8.000+ Apps",
+      "zapierSubtitle": "CredSure lässt sich nahtlos über Zapier mit Tausenden von Apps verbinden — ohne Code.",
+      "zapierCta": "Auf Zapier ansehen",
+      "customTitle": "Individuelle Integration benötigt?",
+      "customSubtitle": "Unsere REST API ermöglicht die Integration mit jeder Plattform. Unser Team unterstützt Sie beim Aufbau.",
+      "customCards": [
+        { "title": "REST API", "desc": "Vollständige API-Dokumentation für Entwickler" },
+        { "title": "Webhooks", "desc": "Echtzeit-Benachrichtigungen für Zertifikatsereignisse" },
+        { "title": "SSO / SAML", "desc": "Enterprise Single Sign-On Integration" }
+      ],
+      "customCta": "Integration besprechen"
+    },
+    "guides": {
+      "guides": [
+        {
+          "id": "complete-guide-digital-credentials",
+          "title": "Der vollständige Leitfaden zu digitalen Zertifikaten im Jahr 2026",
+          "description": "Alles, was Sie über die Einführung, Verwaltung und Skalierung eines digitalen Zertifizierungsprogramms wissen müssen. Von der Strategie bis zur Umsetzung.",
+          "category": "Erste Schritte",
+          "readTime": "25 Min. Lesezeit",
+          "image": "https://images.unsplash.com/photo-1641580550451-3a452effc5b7?w=800&h=450&fit=crop",
+          "featured": true,
+          "content": [
+            { "heading": "Was sind digitale Zertifikate?", "body": "Digitale Zertifikate sind verifizierte, fälschungssichere Nachweise von Leistungen, Fähigkeiten oder Qualifikationen, die elektronisch ausgestellt werden. Anders als Papierzertifikate können sie von Arbeitgebern sofort überprüft, auf sozialen Plattformen wie LinkedIn geteilt und mithilfe der Blockchain-Technologie sicher gespeichert werden. Im Jahr 2026 setzen Organisationen weltweit auf digitale Zertifikate, um Betrug zu reduzieren, die Effizienz zu steigern und ihre Lernenden zu stärken." },
+            { "heading": "Warum digitale Zertifikate 2026 wichtig sind", "body": "Die Zertifizierungslandschaft hat sich grundlegend verändert. Mit dem Aufstieg von Remote-Arbeit, globaler Personalbeschaffung und kompetenzbasierter Rekrutierung benötigen Arbeitgeber eine sofortige, vertrauenswürdige Überprüfung. Digitale Zertifikate lösen dies durch eine kryptografisch gesicherte Verifizierung mit nur einem Klick, die manuelle Hintergrundprüfungen überflüssig macht und die Einstellungsdauer um bis zu 60 % verkürzt." },
+            { "heading": "Ihre Zertifizierungsstrategie aufbauen", "body": "Ein erfolgreiches Zertifizierungsprogramm beginnt mit klaren Zielen: Stellen Sie Abschlusszertifikate, Berufsabzeichen oder Micro-Credentials aus? Definieren Sie Ihre Zielgruppe, wählen Sie Ihre Verifizierungsmethode (Blockchain oder digitale Signatur) und gestalten Sie Zertifikate, die Empfänger tatsächlich teilen möchten. Die besten Programme verzeichnen ein dreimal höheres Engagement, wenn Zertifikate optisch ansprechend und leicht teilbar sind." },
+            { "heading": "Umsetzungs-Roadmap", "body": "Phase 1: Prüfen Sie Ihren aktuellen Zertifizierungsprozess und identifizieren Sie Schwachstellen. Phase 2: Wählen Sie eine Zertifizierungsplattform, die Ihre Größenordnung unterstützt (CredSure verarbeitet über 10 Mio. Zertifikate). Phase 3: Gestalten Sie Ihre Zertifikatsvorlagen gemäß Ihren Markenrichtlinien. Phase 4: Integrieren Sie über die API Ihr LMS oder HR-System. Phase 5: Starten Sie mit einer Pilotgruppe, sammeln Sie Feedback und optimieren Sie. Die meisten Organisationen schließen dies in 4–8 Wochen ab." },
+            { "heading": "Erfolg messen", "body": "Verfolgen Sie diese KPIs: Ausstellungsrate von Zertifikaten, Teilungsrate der Empfänger (Ziel: 40 %+), Klicks zur Verifizierung durch Arbeitgeber, eingesparte Zeit gegenüber manuellen Prozessen und Zufriedenheitswerte der Lernenden. Organisationen, die CredSure nutzen, berichten im Durchschnitt von einer 35 % geringeren Verwaltungskosten und einem vierfachen Anstieg beim Teilen von Zertifikaten im Vergleich zu PDF-Zertifikaten." }
+          ]
+        },
+        {
+          "id": "blockchain-verification-whitepaper",
+          "title": "Blockchain-Verifizierung: Ein technischer Deep Dive",
+          "description": "Verstehen Sie, wie die Blockchain-Technologie digitale Zertifikate sichert und warum das für Ihre Organisation wichtig ist.",
+          "category": "Technologie",
+          "readTime": "15 Min. Lesezeit",
+          "image": "https://images.unsplash.com/photo-1635840418908-772c54d7931f?w=800&h=450&fit=crop",
+          "content": [
+            { "heading": "Wie die Blockchain Zertifikate sichert", "body": "Jedes Zertifikat wird gehasht und in einer öffentlichen Blockchain verankert, wodurch ein unveränderlicher Nachweis entsteht, der nicht manipuliert oder gefälscht werden kann. Wenn ein Prüfer ein Zertifikat überprüft, vergleicht er den Dokument-Hash mit dem Blockchain-Eintrag — stimmen sie überein, ist das Zertifikat authentisch. Dieser Vorgang dauert unter 2 Sekunden und erfordert keinen Kontakt zur ausstellenden Organisation." },
+            { "heading": "Öffentliche vs. private Blockchains", "body": "CredSure verfolgt einen hybriden Ansatz: Zertifikats-Hashes werden für maximale Transparenz in öffentlichen Blockchains (Ethereum, Polygon) gespeichert, während personenbezogene Daten DSGVO-konform in verschlüsselten Datenbanken außerhalb der Blockchain verbleiben. So erhalten Sie die Sicherheit der Blockchain, ohne sensible Informationen preiszugeben." },
+            { "heading": "Integrationsarchitektur", "body": "Der Verifizierungsablauf ist einfach: Zertifikat ausstellen → Hash generieren → in der Blockchain verankern → Verifizierungs-URL bereitstellen. Empfänger teilen ihren Zertifikatslink, und jeder kann ihn sofort überprüfen, ohne ein Konto zu erstellen oder Software zu installieren. Das gesamte System ist API-first, was die Integration in bestehende Plattformen unkompliziert macht." }
+          ]
+        },
+        {
+          "id": "roi-credentialing-program",
+          "title": "Den ROI Ihres Zertifizierungsprogramms messen",
+          "description": "Ein praxisnahes Rahmenkonzept zur Berechnung und Vermittlung des Return on Investment digitaler Zertifikate.",
+          "category": "Strategie",
+          "readTime": "12 Min. Lesezeit",
+          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop",
+          "content": [
+            { "heading": "Das ROI-Rahmenkonzept", "body": "Berechnen Sie den ROI Ihrer Zertifizierung mit dieser Formel: (eingesparte Zeit + Kostensenkung + Umsatz durch höheres Engagement) − Plattformkosten = Netto-ROI. Die meisten Organisationen erzielen bereits im ersten Quartal einen positiven ROI. Berücksichtigen Sie: Wegfall von Druck/Versand (3–8 $ pro Zertifikat), eingesparte Verwaltungsstunden (durchschn. 15 Std./Monat) und gestiegene Programmanmeldungen durch teilbare Zertifikate." },
+            { "heading": "Verborgene Werttreiber", "body": "Über die direkten Kosteneinsparungen hinaus steigern digitale Zertifikate die Markensichtbarkeit (jedes geteilte Zertifikat erreicht im Durchschnitt 200 LinkedIn-Kontakte), reduzieren das Betrugsrisiko, verbessern die Audit-Bereitschaft und erhöhen die Bindung der Lernenden um 25 %. Diese indirekten Vorteile übersteigen oft die direkten Kosteneinsparungen." },
+            { "heading": "Den Business Case aufbauen", "body": "Präsentieren Sie Ihren ROI-Fall der Führungsebene aus drei Perspektiven: operative Effizienz (Kosten-/Zeitersparnis), strategischer Wert (Markenreichweite, Wettbewerbsvorteil) und Risikominderung (Betrugsprävention, Compliance). Nutzen Sie den ROI-Rechner von CredSure, um eine maßgeschneiderte Prognose für Ihre Organisation zu erstellen." }
+          ]
+        },
+        {
+          "id": "gdpr-compliance-credentials",
+          "title": "DSGVO-Konformität für Zertifizierungsprogramme",
+          "description": "Navigieren Sie durch die europäischen Datenschutzbestimmungen bei der Ausstellung und Verwaltung digitaler Zertifikate.",
+          "category": "Compliance",
+          "readTime": "18 Min. Lesezeit",
+          "image": "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&h=450&fit=crop",
+          "content": [
+            { "heading": "DSGVO und digitale Zertifikate", "body": "Digitale Zertifikate enthalten personenbezogene Daten (Namen, Leistungen, Daten) und unterliegen daher der DSGVO. Wichtige Anforderungen: Einholung einer ausdrücklichen Einwilligung vor der Ausstellung, Gewährleistung der Datenportabilität (Empfänger müssen herunterladen/übertragen können), Umsetzung des Rechts auf Löschung und Führung eines Verzeichnisses von Verarbeitungstätigkeiten. CredSure ist vollständig DSGVO-konform mit Rechenzentren in der EU." },
+            { "heading": "Best Practices zur Datenminimierung", "body": "Geben Sie nur notwendige Informationen auf Zertifikaten an. Ein Blockchain-Hash des Zertifikats ermöglicht die Verifizierung, ohne personenbezogene Daten in der Blockchain zu speichern. Verwenden Sie nach Möglichkeit Pseudonymisierung und setzen Sie automatische Aufbewahrungsrichtlinien um. Die Architektur von CredSure stellt sicher, dass personenbezogene Daten niemals die Blockchain berühren." },
+            { "heading": "Grenzüberschreitende Aspekte", "body": "Wenn Sie Zertifikate an Empfänger in mehreren Ländern ausstellen, stellen Sie sicher, dass Ihre Auftragsverarbeitungsverträge internationale Übermittlungen abdecken. Verwenden Sie Standardvertragsklauseln (SCCs) für Übermittlungen außerhalb der EU und führen Sie ein Verzeichnis von Verarbeitungstätigkeiten (VVT), das Ihren Zertifikats-Lebenszyklus dokumentiert." }
+          ]
+        },
+        {
+          "id": "micro-credentials-higher-education",
+          "title": "Micro-Credentials in der Hochschulbildung: Ein vollständiges Playbook",
+          "description": "Wie Universitäten stapelbare Micro-Credentials nutzen, um Anmeldungen, Bindung und Karriereergebnisse zu fördern.",
+          "category": "Hochschulbildung",
+          "readTime": "20 Min. Lesezeit",
+          "image": "https://images.unsplash.com/photo-1763673404757-e6dfe627941b?w=800&h=450&fit=crop",
+          "content": [
+            { "heading": "Die Micro-Credential-Revolution", "body": "Universitäten ergänzen klassische Abschlüsse durch stapelbare Micro-Credentials, die spezifische Fähigkeiten validieren. Diese kürzeren, fokussierten Zertifizierungen ziehen Berufstätige an, steigern die Anmeldungen in der Weiterbildung und liefern Studierenden einen teilbaren Nachweis gefragter Kompetenzen. Einrichtungen, die Micro-Credentials nutzen, berichten von 40 % höheren Anmeldungen bei Weiterbildungsprogrammen." },
+            { "heading": "Stapelbare Lernpfade gestalten", "body": "Erstellen Sie Zertifikatspfade, bei denen sich einzelne Micro-Credentials zu größeren Qualifikationen kombinieren lassen. Zum Beispiel: 4 Data-Science-Micro-Credentials → Data-Analytics-Zertifikat → kombiniert mit Wahlfächern zu einem Master-Pfad. Dieser modulare Ansatz erhöht die Flexibilität und die Bindung der Studierenden." },
+            { "heading": "Umsetzung für Universitäten", "body": "Beginnen Sie mit Ihren beliebtesten Weiterbildungskursen. Arbeiten Sie mit Branchenberatern zusammen, um sicherzustellen, dass die Zertifikate den Anforderungen der Arbeitgeber entsprechen. Nutzen Sie die LMS-Integration von CredSure, um Zertifikate bei Kursabschluss automatisch auszustellen, und verfolgen Sie, welche Zertifikate die meisten Anmeldungen und Karriereergebnisse bewirken." }
+          ]
+        },
+        {
+          "id": "digital-badges-employee-training",
+          "title": "Digitale Badges für Mitarbeiterschulungsprogramme",
+          "description": "Entwerfen und implementieren Sie ein badgebasiertes Anerkennungssystem, das Lernende motiviert und Kompetenzen erfasst.",
+          "category": "Unternehmensschulung",
+          "readTime": "14 Min. Lesezeit",
+          "image": "https://images.pexels.com/photos/7647951/pexels-photo-7647951.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop",
+          "content": [
+            { "heading": "Warum Badges funktionieren", "body": "Digitale Badges sprechen die intrinsische Motivation an, indem sie Leistungen sichtbar anerkennen. Mitarbeitende, die Badges erhalten, schließen mit dreimal höherer Wahrscheinlichkeit weitere Schulungsmodule ab. Badges erstellen außerdem eine Kompetenzkarte Ihrer Organisation und helfen der Personalabteilung, Wissenslücken zu erkennen und gezielte Weiterbildungsprogramme zu planen." },
+            { "heading": "Gestaltungsprinzipien für Badges", "body": "Wirksame Badges sind: optisch unverwechselbar (eigene Farben/Symbole je Kompetenzbereich), klar benannt (Fachjargon vermeiden), kriterientransparent (Empfänger und Betrachter wissen genau, was nachgewiesen wurde) und teilbar (Teilen auf LinkedIn mit einem Klick). Fügen Sie Metadaten wie Aussteller, Datum, Kriterien und Nachweis-Links hinzu." },
+            { "heading": "Schulungswirkung messen", "body": "Verfolgen Sie Erwerbsraten von Badges, Abschlusszeiten, Teilungsraten und die Korrelation mit Leistungskennzahlen. Organisationen, die CredSure-Badges nutzen, berichten von 45 % höheren Abschlussraten bei Schulungen und können der Führungsebene einen klaren ROI ihrer L&D-Investition nachweisen." }
+          ]
+        }
+      ],
+      "backToGuides": "Zurück zu allen Leitfäden",
+      "pdfAvailable": "PDF verfügbar",
+      "featuredLabel": "Empfohlen",
+      "readGuide": "Leitfaden lesen",
+      "unlockGuide": "Leitfaden freischalten",
+      "read": "Lesen",
+      "unlock": "Freischalten",
+      "readerCtaTitle": "Bereit loszulegen?",
+      "readerCtaDesc": "Erfahren Sie, wie CredSure Ihr Zertifizierungsprogramm transformieren kann.",
+      "readerCtaButton": "Demo buchen",
+      "ctaButton": "Mit einem Experten sprechen"
+    },
+    "webinars": {
+      "webinars": [
+        {
+          "id": "digital-credentials-101",
+          "title": "Digitale Zertifikate 101: Erste Schritte mit CredSure",
+          "description": "Lernen Sie die Grundlagen der digitalen Zertifizierung — vom Einrichten Ihrer ersten Vorlage bis zur skalierbaren Ausstellung blockchain-verifizierter Zertifikate. Ideal für Organisationen, die neu im Bereich digitaler Zertifikate sind.",
+          "date": "2025-03-15T10:00:00+00:00",
+          "duration": "45 Min.",
+          "speakers": ["CredSure Produktteam"],
+          "status": "recorded",
+          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop",
+          "featured": true
+        },
+        {
+          "id": "blockchain-verification-explained",
+          "title": "So funktioniert die Blockchain-Verifizierung in CredSure",
+          "description": "Ein technischer Überblick darüber, wie CredSure Zertifikate in der Blockchain verankert und so eine fälschungssichere Verifizierung gewährleistet, der Arbeitgeber und Institutionen weltweit vertrauen können.",
+          "date": "2025-02-20T10:00:00+00:00",
+          "duration": "35 Min.",
+          "speakers": ["CredSure Engineering-Team"],
+          "status": "recorded",
+          "image": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=450&fit=crop"
+        },
+        {
+          "id": "scaling-credential-programs",
+          "title": "Ihr Zertifizierungsprogramm skalieren: Von Hunderten zu Millionen",
+          "description": "Best Practices für Organisationen, die ihre digitalen Zertifizierungsprogramme skalieren möchten, einschließlich Workflows zur Massenausstellung, API-Integration und automatisierter Zustellung.",
+          "date": "2025-01-25T10:00:00+00:00",
+          "duration": "50 Min.",
+          "speakers": ["CredSure Customer-Success-Team"],
+          "status": "recorded",
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop"
+        },
+        {
+          "id": "gdpr-compliant-credentialing",
+          "title": "DSGVO-konforme digitale Zertifizierung",
+          "description": "Ein praxisnaher Leitfaden, um sicherzustellen, dass Ihr Zertifizierungsprogramm die europäischen Datenschutzbestimmungen erfüllt. Behandelt Datenverarbeitung, Einwilligungsmanagement und die integrierten Compliance-Funktionen von CredSure.",
+          "date": "2024-12-10T10:00:00+00:00",
+          "duration": "40 Min.",
+          "speakers": ["CredSure Compliance-Team"],
+          "status": "recorded",
+          "image": "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&h=450&fit=crop"
+        },
+        {
+          "id": "api-integration-masterclass",
+          "title": "CredSure API-Integration Masterclass",
+          "description": "Ein praxisorientierter Workshop, der die CredSure REST API durchläuft, um die Ausstellung, Verifizierung und Verwaltung von Zertifikaten zu automatisieren. Mit Live-Coding-Beispielen für Moodle, Canvas und Zapier.",
+          "date": "2024-11-18T10:00:00+00:00",
+          "duration": "60 Min.",
+          "speakers": ["CredSure Developer Relations"],
+          "status": "recorded",
+          "image": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&h=450&fit=crop"
+        },
+        {
+          "id": "micro-credentials-higher-education",
+          "title": "Micro-Credentials in der Hochschulbildung: Ein CredSure-Leitfaden",
+          "description": "Wie Universitäten und Hochschulen stapelbare Micro-Credentials mit CredSure einführen, um den Anforderungen moderner Lernender und Arbeitgeber weltweit gerecht zu werden.",
+          "date": "2024-10-05T10:00:00+00:00",
+          "duration": "45 Min.",
+          "speakers": ["CredSure Bildungsteam"],
+          "status": "recorded",
+          "image": "https://images.unsplash.com/photo-1523050854058-8df90110c476?w=800&h=450&fit=crop"
+        }
+      ],
+      "featuredLabel": "Empfohlen",
+      "onDemand": "On-Demand",
+      "requestAccess": "Zugang anfragen",
+      "watch": "Ansehen",
+      "ctaButton": "Demo buchen"
+    },
+    "tutorials": {
+      "categories": [
+        {
+          "titleKey": "pages.tutorials.gettingStarted",
+          "tutorials": [
+            {
+              "title": "Was sind digitale Zertifikate?",
+              "duration": "5",
+              "desc": "Erfahren Sie, was digitale Zertifikate sind, warum sie wichtig sind und wie sie die Zertifizierung branchenübergreifend verändern.",
+              "videoId": "lvtywaANJE4",
+              "level": "Beginner"
+            },
+            {
+              "title": "Überblick über die CredSure-Produktfunktionen",
+              "duration": "3",
+              "desc": "Ein vollständiger Rundgang durch die CredSure-Plattform — von der Zertifikatsausstellung über die Verifizierung bis hin zur Analyse.",
+              "videoId": "d1Ctb7rEWxs",
+              "level": "Beginner"
+            }
+          ]
+        },
+        {
+          "titleKey": "pages.tutorials.advancedFeatures",
+          "tutorials": [
+            {
+              "title": "Branding & Einrichtung der individuellen URL",
+              "duration": "2",
+              "desc": "Passen Sie Ihr Zertifizierungsportal mit eigenem Branding, Logo, Farben und einer individuellen URL für ein nahtloses Erlebnis an.",
+              "videoId": "x9TzOBB7PSA",
+              "level": "Intermediate"
+            },
+            {
+              "title": "Markensichtbarkeit mit Zertifikaten steigern",
+              "duration": "3",
+              "desc": "Entdecken Sie, wie teilbare digitale Zertifikate und Badges organische Markenpräsenz über soziale Plattformen hinweg fördern.",
+              "videoId": "wP0txFtPMTg",
+              "level": "Intermediate"
+            }
+          ]
+        },
+        {
+          "titleKey": "pages.tutorials.analyticsReporting",
+          "tutorials": [
+            {
+              "title": "Digitale Badges & Markenverstärkung",
+              "duration": "4",
+              "desc": "Verstehen Sie, wie digitale Badges die Markensichtbarkeit entfesseln und Ihnen helfen, Engagement in Ihrem Zertifikats-Ökosystem zu verfolgen.",
+              "videoId": "8t_W_mvLjtk",
+              "level": "Intermediate"
+            },
+            {
+              "title": "Digitale Zertifizierung in der Bildung",
+              "duration": "6",
+              "desc": "Erfahren Sie, wie Online-Bildungseinrichtungen digitale Zertifikate nutzen, um Lernerfolge zu validieren und die Ergebnisse der Studierenden zu verbessern.",
+              "videoId": "0BYkonjQiDM",
+              "level": "Advanced"
+            }
+          ]
+        }
+      ],
+      "speakableTitle": "CredSure Video-Tutorials",
+      "levelBeginner": "Anfänger",
+      "levelIntermediate": "Fortgeschritten",
+      "levelAdvanced": "Profi"
+    },
+    "templates": {
+      "badge": "Vorlagen",
+      "heroTitlePrefix": "500+ professionelle",
+      "heroTitleHighlight": "Zertifikatsvorlagen",
+      "categories": ["Bildung", "Unternehmen", "Gesundheitswesen", "Technologie", "Berufe", "Veranstaltungen"],
+      "templateCount": "50+ Vorlagen"
+    }
+  }
+}

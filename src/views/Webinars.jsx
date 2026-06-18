@@ -10,69 +10,6 @@ import { ArrowRight, Play, Calendar, Clock, Users } from 'lucide-react';
 // Webinar dates are stored as ISO 8601 with UTC offset so Google's VideoObject
 // schema validator accepts them (Search Console previously flagged the bare
 // YYYY-MM-DD form with "Datetime property 'uploadDate' is missing a time zone").
-const webinars = [
-  {
-    id: 'digital-credentials-101',
-    title: 'Digital Credentials 101: Getting Started with CredSure',
-    description: 'Learn the fundamentals of digital credentialing — from setting up your first template to issuing blockchain-verified certificates at scale. Perfect for organizations new to digital credentials.',
-    date: '2025-03-15T10:00:00+00:00',
-    duration: '45 min',
-    speakers: ['CredSure Product Team'],
-    status: 'recorded',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop',
-    featured: true,
-  },
-  {
-    id: 'blockchain-verification-explained',
-    title: 'How Blockchain Verification Works in CredSure',
-    description: 'A technical overview of how CredSure anchors credentials on the blockchain, ensuring tamper-proof verification that employers and institutions can trust globally.',
-    date: '2025-02-20T10:00:00+00:00',
-    duration: '35 min',
-    speakers: ['CredSure Engineering Team'],
-    status: 'recorded',
-    image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=450&fit=crop',
-  },
-  {
-    id: 'scaling-credential-programs',
-    title: 'Scaling Your Credential Program: From Hundreds to Millions',
-    description: 'Best practices for organizations looking to scale their digital credentialing programs, including bulk issuance workflows, API integration, and automated delivery.',
-    date: '2025-01-25T10:00:00+00:00',
-    duration: '50 min',
-    speakers: ['CredSure Customer Success Team'],
-    status: 'recorded',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop',
-  },
-  {
-    id: 'gdpr-compliant-credentialing',
-    title: 'GDPR-Compliant Digital Credentialing',
-    description: 'A practical guide to ensuring your credentialing program meets European data protection regulations. Covers data handling, consent management, and CredSure\'s built-in compliance features.',
-    date: '2024-12-10T10:00:00+00:00',
-    duration: '40 min',
-    speakers: ['CredSure Compliance Team'],
-    status: 'recorded',
-    image: 'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&h=450&fit=crop',
-  },
-  {
-    id: 'api-integration-masterclass',
-    title: 'CredSure API Integration Masterclass',
-    description: 'A hands-on workshop walking through the CredSure REST API to automate credential issuance, verification, and management. Includes live coding examples with Moodle, Canvas, and Zapier.',
-    date: '2024-11-18T10:00:00+00:00',
-    duration: '60 min',
-    speakers: ['CredSure Developer Relations'],
-    status: 'recorded',
-    image: 'https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&h=450&fit=crop',
-  },
-  {
-    id: 'micro-credentials-higher-education',
-    title: 'Micro-Credentials in Higher Education: A CredSure Guide',
-    description: 'How universities and colleges are implementing stackable micro-credentials using CredSure to meet the demands of modern learners and employers worldwide.',
-    date: '2024-10-05T10:00:00+00:00',
-    duration: '45 min',
-    speakers: ['CredSure Education Team'],
-    status: 'recorded',
-    image: 'https://images.unsplash.com/photo-1523050854058-8df90110c476?w=800&h=450&fit=crop',
-  },
-];
 
 const formatWebinarDate = (dateStr, lang = 'en') => {
   const d = new Date(dateStr);
@@ -84,6 +21,7 @@ export const Webinars = () => {
   const t = useTranslation();
   const i18n = { language: useLocale() };
   const baseUrl = getBaseUrl();
+  const webinars = t('resx.webinars.webinars', { returnObjects: true });
 
   const featured = webinars.find(w => w.featured);
   const rest = webinars.filter(w => !w.featured);
@@ -148,7 +86,7 @@ export const Webinars = () => {
                     </div>
                   </div>
                   <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 bg-[#5B22D6]/90 backdrop-blur-sm rounded-full text-xs font-bold text-white">Featured</span>
+                    <span className="px-3 py-1 bg-[#5B22D6]/90 backdrop-blur-sm rounded-full text-xs font-bold text-white">{t('resx.webinars.featuredLabel')}</span>
                   </div>
                 </div>
                 <div className="p-8 md:p-12 flex flex-col justify-center">
@@ -163,7 +101,7 @@ export const Webinars = () => {
                     <span className="text-sm text-gray-500">{featured.speakers.join(', ')}</span>
                   </div>
                   <Link to="/demo" className="inline-flex items-center text-[#5B22D6] hover:text-[#3F2BD9] font-bold" data-testid="webinar-featured-cta">
-                    Request Access <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-2 transition-transform" />
+                    {t('resx.webinars.requestAccess')} <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-2 transition-transform" />
                   </Link>
                 </div>
               </div>
@@ -194,7 +132,7 @@ export const Webinars = () => {
                     </div>
                   </div>
                   <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold text-[#5B22D6]">On-Demand</span>
+                    <span className="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold text-[#5B22D6]">{t('resx.webinars.onDemand')}</span>
                   </div>
                 </div>
                 <div className="p-6">
@@ -207,7 +145,7 @@ export const Webinars = () => {
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-gray-500 flex items-center gap-1"><Users className="w-3.5 h-3.5" />{webinar.speakers.join(', ')}</span>
                     <Link to="/demo" className="inline-flex items-center text-[#5B22D6] hover:text-[#3F2BD9] font-bold text-sm" data-testid={`webinar-${webinar.id}-cta`}>
-                      Watch <ArrowRight className="ml-1 w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                      {t('resx.webinars.watch')} <ArrowRight className="ml-1 w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </div>
                 </div>
@@ -223,7 +161,7 @@ export const Webinars = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">{t('pages.webinars.ctaTitle', 'Want a Live Demo?')}</h2>
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">{t('pages.webinars.ctaDesc', 'See CredSure in action with a personalized walkthrough from our team.')}</p>
           <Link to="/demo" className="inline-flex items-center px-8 py-4 bg-white text-[#5B22D6] rounded-xl font-bold hover:bg-white/90 transition-colors" data-testid="webinars-cta-btn">
-            Book a Demo <ArrowRight className="ml-2 w-5 h-5" />
+            {t('resx.webinars.ctaButton')} <ArrowRight className="ml-2 w-5 h-5" />
           </Link>
         </div>
       </section>

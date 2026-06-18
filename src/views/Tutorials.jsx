@@ -9,68 +9,12 @@ import { LocalizedLink as Link } from '@/components/LocalizedLink';
 
 const ytThumb = (id) => `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
 
-const TUTORIAL_CATEGORIES = [
-  {
-    titleKey: 'pages.tutorials.gettingStarted',
-    icon: Award,
-    tutorials: [
-      {
-        title: 'What are Digital Credentials?',
-        duration: '5',
-        desc: 'Learn what digital credentials are, why they matter, and how they are transforming certification across industries.',
-        videoId: 'lvtywaANJE4',
-        level: 'Beginner'
-      },
-      {
-        title: 'CredSure Product Features Overview',
-        duration: '3',
-        desc: 'A complete walkthrough of the CredSure platform — from credential issuance to verification and analytics.',
-        videoId: 'd1Ctb7rEWxs',
-        level: 'Beginner'
-      }
-    ]
-  },
-  {
-    titleKey: 'pages.tutorials.advancedFeatures',
-    icon: Zap,
-    tutorials: [
-      {
-        title: 'Branding & Custom URL Setup',
-        duration: '2',
-        desc: 'Customize your credentialing portal with your own branding, logo, colors, and custom URL for a seamless experience.',
-        videoId: 'x9TzOBB7PSA',
-        level: 'Intermediate'
-      },
-      {
-        title: 'Boost Brand Visibility with Credentials',
-        duration: '3',
-        desc: 'Discover how shareable digital certificates and badges drive organic brand exposure across social platforms.',
-        videoId: 'wP0txFtPMTg',
-        level: 'Intermediate'
-      }
-    ]
-  },
-  {
-    titleKey: 'pages.tutorials.analyticsReporting',
-    icon: BarChart3,
-    tutorials: [
-      {
-        title: 'Digital Badges & Brand Amplification',
-        duration: '4',
-        desc: 'Understand how digital badges unleash brand visibility and help you track engagement across your credential ecosystem.',
-        videoId: '8t_W_mvLjtk',
-        level: 'Intermediate'
-      },
-      {
-        title: 'Digital Credentialing in Education',
-        duration: '6',
-        desc: 'Explore how online education institutions use digital credentials to validate learning and boost student outcomes.',
-        videoId: '0BYkonjQiDM',
-        level: 'Advanced'
-      }
-    ]
-  }
-];
+// Icons stay in code (not serializable to JSON); matched to category titleKey.
+const CATEGORY_ICONS = {
+  'pages.tutorials.gettingStarted': Award,
+  'pages.tutorials.advancedFeatures': Zap,
+  'pages.tutorials.analyticsReporting': BarChart3,
+};
 
 const VideoModal = ({ videoId, title, onClose }) => (
   <AnimatePresence>
@@ -113,6 +57,7 @@ export const Tutorials = () => {
   const t = useTranslation();
   const baseUrl = getBaseUrl();
   const [activeVideo, setActiveVideo] = useState(null);
+  const tutorialCategories = t('resx.tutorials.categories', { returnObjects: true });
 
   const openVideo = useCallback((videoId, title) => {
     setActiveVideo({ videoId, title });
@@ -129,7 +74,14 @@ export const Tutorials = () => {
     return 'bg-gray-100 text-gray-700';
   };
 
-  const howToSchemas = TUTORIAL_CATEGORIES.flatMap(cat =>
+  const getLevelLabel = (level) => {
+    if (level === 'Beginner') return t('resx.tutorials.levelBeginner');
+    if (level === 'Intermediate') return t('resx.tutorials.levelIntermediate');
+    if (level === 'Advanced') return t('resx.tutorials.levelAdvanced');
+    return level;
+  };
+
+  const howToSchemas = tutorialCategories.flatMap(cat =>
     cat.tutorials.map(tut => createHowToSchema({
       name: tut.title,
       description: tut.desc,
@@ -139,7 +91,7 @@ export const Tutorials = () => {
   );
 
   const speakableSchema = createSpeakableSchema(
-    { title: 'CredSure Video Tutorials', description: t('pages.tutorials.subtitle') },
+    { title: t('resx.tutorials.speakableTitle'), description: t('pages.tutorials.subtitle') },
     ['h1', '.tutorial-description', 'h2']
   );
 
@@ -191,8 +143,8 @@ export const Tutorials = () => {
         </section>
 
         {/* Tutorial Categories */}
-        {TUTORIAL_CATEGORIES.map((category, categoryIndex) => {
-          const CategoryIcon = category.icon;
+        {tutorialCategories.map((category, categoryIndex) => {
+          const CategoryIcon = CATEGORY_ICONS[category.titleKey];
           return (
             <section key={category.titleKey} className="py-16">
               <div className="container mx-auto px-6 lg:px-12">
@@ -226,7 +178,7 @@ export const Tutorials = () => {
                         </div>
                         <div className="absolute top-4 right-4">
                           <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getLevelColor(tutorial.level)}`}>
-                            {tutorial.level}
+                            {getLevelLabel(tutorial.level)}
                           </span>
                         </div>
                       </div>
