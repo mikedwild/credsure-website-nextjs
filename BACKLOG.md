@@ -38,6 +38,17 @@ All app routes are dynamic (`ƒ`) — server-rendered on demand. The marketing p
 - **Optional AI keys:** add `ANTHROPIC_API_KEY` + `OPENAI_API_KEY` (Railway vars or admin Settings) for AI blog gen/images.
 - German eyebrow: feature-page overview eyebrow falls back to EN "Why it matters"; add `features.overviewEyebrow` to the DE messages if a translation is wanted.
 
+## 🌍 i18n — translate blog posts to German (needs Railway run)
+The static site is now fully EN/DE, but the **blog content is ~98% English-only**: of 126 posts, only **3 have German** — `/de/blog/*` falls back to English for the other **123** (the backend serves `served_lang: en`). Dry run confirmed the 123 candidates (slug list in the commit + transcript 2026-06-18).
+- **Script ready (not yet run):** `backend/scripts/backfill_blog_translations.py` — dry-run default, idempotent, writes the six `*_de` fields via the existing `translate_fields` pipeline (Claude Sonnet 4.5). Lazy-imports the LLM stack so dry-run needs no provider SDK.
+- **Run it in the Railway backend** (where `MONGO_URL`/`DB_NAME` + LLM key live; local macOS can't — no Mongo creds + Python 3.9 < the 3.10 the AI module needs):
+  ```bash
+  python -m scripts.backfill_blog_translations              # dry run — re-confirm 123
+  python -m scripts.backfill_blog_translations --apply --limit 1   # translate ONE, eyeball it
+  python -m scripts.backfill_blog_translations --apply             # full run (~6 LLM calls/post)
+  ```
+- **Caveats:** machine-translated → spot-review before relying on it; costs LLM tokens; writes to the live DB. After it runs, `/de/blog/*` serves German and the sitemap auto-emits `de` hreflang for translated posts.
+
 ---
 
 ## ✅ Done — German pages rendering English (i18n) (2026-06-18)
