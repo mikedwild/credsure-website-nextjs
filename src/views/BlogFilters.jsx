@@ -1,8 +1,9 @@
 "use client";
 import React from 'react';
 import PropTypes from 'prop-types';
-import { X } from 'lucide-react';
-import { blogCategories, blogTopics } from '../utils/blogUtils';
+import { useLocale } from 'next-intl';
+import { useTranslation } from '@/lib/useTranslation';
+import { blogCategories, blogTopics, localizeBlogLabel } from '../utils/blogUtils';
 
 export const BlogFilters = ({
   selectedCategory,
@@ -12,27 +13,30 @@ export const BlogFilters = ({
   onToggleTopic,
   onClearAll,
 }) => {
+  const t = useTranslation();
+  const locale = useLocale();
   const categories = ['All', ...blogCategories];
+  const catLabel = (cat) => (cat === 'All' ? t('mscx.blog.all', 'All') : localizeBlogLabel(cat, locale));
 
   return (
     <div className="space-y-6" data-testid="blog-filter-sidebar">
       {activeFilterCount > 0 && (
         <div className="flex items-center justify-between">
           <span className="text-sm font-medium text-slate-600 ">
-            {activeFilterCount} {activeFilterCount === 1 ? 'filter' : 'filters'} active
+            {t('mscx.blog.filtersActive', { count: activeFilterCount })}
           </span>
           <button
             onClick={onClearAll}
             className="text-sm text-[#5B22D6] hover:underline font-medium"
             data-testid="blog-clear-filters"
           >
-            Reset all
+            {t('mscx.blog.resetAll', 'Reset all')}
           </button>
         </div>
       )}
 
       <div>
-        <h4 className="text-sm font-bold text-slate-900  mb-3 uppercase tracking-wider">Industry</h4>
+        <h4 className="text-sm font-bold text-slate-900  mb-3 uppercase tracking-wider">{t('mscx.blog.industry', 'Industry')}</h4>
         <div className="space-y-1">
           {categories.map((cat) => (
             <button
@@ -45,14 +49,14 @@ export const BlogFilters = ({
               }`}
               data-testid={`blog-category-${cat.toLowerCase().replace(/\s+/g, '-')}`}
             >
-              {cat}
+              {catLabel(cat)}
             </button>
           ))}
         </div>
       </div>
 
       <div>
-        <h4 className="text-sm font-bold text-slate-900  mb-3 uppercase tracking-wider">Topic</h4>
+        <h4 className="text-sm font-bold text-slate-900  mb-3 uppercase tracking-wider">{t('mscx.blog.topic', 'Topic')}</h4>
         <div className="space-y-1">
           {blogTopics.map((topic) => (
             <label
@@ -72,7 +76,7 @@ export const BlogFilters = ({
                   </svg>
                 )}
               </div>
-              <span className="text-sm text-slate-600 ">{topic}</span>
+              <span className="text-sm text-slate-600 ">{localizeBlogLabel(topic, locale)}</span>
             </label>
           ))}
         </div>

@@ -37,7 +37,12 @@
       "clearAll": "Clear all",
       "filters": "Filters",
       "noPostsFound": "No posts found matching your criteria.",
-      "clearAllFilters": "Clear all filters"
+      "clearAllFilters": "Clear all filters",
+      "industry": "Industry",
+      "topic": "Topic",
+      "all": "All",
+      "resetAll": "Reset all",
+      "filtersActive": "{count, plural, one {# filter active} other {# filters active}}"
     },
     "signin": {
       "title": "Sign In",

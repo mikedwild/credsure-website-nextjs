@@ -4,7 +4,7 @@ import { SEO, createBreadcrumbSchema, getBaseUrl } from '@/components/SEO';
 import { useTranslation } from '@/lib/useTranslation';
 import { useLocale } from 'next-intl';
 import { Search, Filter, X, Tag } from 'lucide-react';
-import { getPostTopics } from '../utils/blogUtils';
+import { getPostTopics, localizeBlogLabel } from '../utils/blogUtils';
 import { BlogCard } from './BlogCard';
 import { BlogFilters } from './BlogFilters';
 import { BlogPagination } from './BlogPagination';
@@ -129,7 +129,7 @@ export const Blog = ({ initialPosts = null }) => {
             {selectedTopics.map(topic => (
               <span key={topic} className="inline-flex items-center gap-1 px-3 py-1 bg-[#E22B8A]/10  text-[#E22B8A]  rounded-full text-xs font-medium">
                 <Tag className="w-3 h-3" />
-                {topic}
+                {localizeBlogLabel(topic, i18n.language)}
                 <button onClick={() => toggleTopic(topic)} className="ml-1 hover:text-red-500"><X className="w-3 h-3" /></button>
               </span>
             ))}
@@ -207,7 +207,7 @@ export const Blog = ({ initialPosts = null }) => {
               <>
               <div className="mb-6 text-sm text-gray-500 ">
                 {t('pages.blog.showing', { count: paginatedPosts.length, total: filteredPosts.length, ns: 'pages' })}
-                {selectedCategory !== 'All' && ` ${t('pages.blog.inCategory', { category: selectedCategory, ns: 'pages' })}`}
+                {selectedCategory !== 'All' && ` ${t('pages.blog.inCategory', { category: localizeBlogLabel(selectedCategory, i18n.language), ns: 'pages' })}`}
                 {searchTerm && ` ${t('pages.blog.matching', { term: searchTerm, ns: 'common' })}`}
               </div>
 

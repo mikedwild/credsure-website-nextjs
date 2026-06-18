@@ -104,9 +104,9 @@
       "allPosts": "All Posts",
       "categories": "Categories",
       "titleHighlight": "Resources",
-      "showing": "Showing {{count}} of {{total}} posts",
-      "inCategory": "in {{category}}",
-      "matching": "matching \"{{term}}\"",
+      "showing": "Showing {count} of {total} posts",
+      "inCategory": "in {category}",
+      "matching": "matching \"{term}\"",
       "searchPlaceholder": "Search articles…",
       "stayUpdated": "Stay updated",
       "stayUpdatedDesc": "Get the latest credentialing insights delivered to your inbox monthly.",
@@ -423,7 +423,7 @@
       "heroTitle": "Connect Your",
       "heroTitleHighlight": "Entire Stack",
       "heroSubtitle": "Connect CredSure with your favourite tools. Automate credential issuance across 50+ platforms.",
-      "integrationsCount": "{{count}} integrations"
+      "integrationsCount": "{count} integrations"
     },
     "features": {
       "heroTitle": "The Complete",

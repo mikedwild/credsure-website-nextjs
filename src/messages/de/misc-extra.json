@@ -37,7 +37,12 @@
       "clearAll": "Alle zurücksetzen",
       "filters": "Filter",
       "noPostsFound": "Keine Beiträge gefunden, die Ihren Kriterien entsprechen.",
-      "clearAllFilters": "Alle Filter zurücksetzen"
+      "clearAllFilters": "Alle Filter zurücksetzen",
+      "industry": "Branche",
+      "topic": "Thema",
+      "all": "Alle",
+      "resetAll": "Alle zurücksetzen",
+      "filtersActive": "{count, plural, one {# aktiver Filter} other {# aktive Filter}}"
     },
     "signin": {
       "title": "Anmelden",

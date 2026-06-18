@@ -15,6 +15,42 @@ export const blogTopics = [
   "Program Growth", "Security & Compliance", "Skill Development", "Verification",
 ];
 
+// German display labels for the (English) category/topic filter VALUES. The
+// English value stays the filter key (post.category / getPostTopics return
+// English); only the rendered label is localized. EN renders the value as-is.
+export const blogCategoryLabelsDe = {
+  "Customer Success": "Erfolgsgeschichten",
+  "Education": "Bildung",
+  "Events": "Veranstaltungen",
+  "Healthcare": "Gesundheitswesen",
+  "Industry": "Branche",
+  "Insights": "Einblicke",
+  "News": "Neuigkeiten",
+  "Technology": "Technologie",
+};
+
+export const blogTopicLabelsDe = {
+  "Blockchain": "Blockchain",
+  "Digital Badges": "Digitale Badges",
+  "Digital Certificates": "Digitale Zertifikate",
+  "Digital Credentials": "Digitale Nachweise",
+  "Employee Training": "Mitarbeiterschulung",
+  "Engagement": "Engagement",
+  "Higher Education": "Hochschulbildung",
+  "Integrations": "Integrationen",
+  "Micro-Credentials": "Micro-Credentials",
+  "Program Growth": "Programmwachstum",
+  "Security & Compliance": "Sicherheit & Compliance",
+  "Skill Development": "Kompetenzentwicklung",
+  "Verification": "Verifizierung",
+};
+
+/** Localize a category OR topic filter value for display. Falls back to the raw value. */
+export const localizeBlogLabel = (value, locale) =>
+  locale === "de"
+    ? (blogCategoryLabelsDe[value] || blogTopicLabelsDe[value] || value)
+    : value;
+
 const topicAssignmentRules = [
   [['blockchain', 'tamper-proof', 'immutable', 'decentrali'], 'Blockchain'],
   [['digital-badge', 'open-badge', 'badge-maker', 'micro-credential', 'badge'], 'Digital Badges'],

@@ -104,9 +104,9 @@
       "allPosts": "Alle Beiträge",
       "categories": "Kategorien",
       "titleHighlight": "Ressourcen",
-      "showing": "Zeige {{count}} von {{total}} Beiträgen",
-      "inCategory": "in {{category}}",
-      "matching": "passend zu \"{{term}}\"",
+      "showing": "Zeige {count} von {total} Beiträgen",
+      "inCategory": "in {category}",
+      "matching": "passend zu \"{term}\"",
       "searchPlaceholder": "Artikel suchen…",
       "stayUpdated": "Auf dem Laufenden bleiben",
       "stayUpdatedDesc": "Erhalten Sie monatlich die neuesten Credentialing-Insights direkt in Ihren Posteingang.",
@@ -423,7 +423,7 @@
       "heroTitle": "Verbinden Sie Ihren",
       "heroTitleHighlight": "gesamten Stack",
       "heroSubtitle": "Verbinden Sie CredSure mit Ihren Lieblingstools. Automatisieren Sie die Zertifikatsausstellung über 50+ Plattformen.",
-      "integrationsCount": "{{count}} Integrationen"
+      "integrationsCount": "{count} Integrationen"
     },
     "features": {
       "heroTitle": "Die Komplette",
