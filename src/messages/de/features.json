@@ -288,7 +288,9 @@
       "featuredTitle": "Am beliebtesten",
       "featuredSubtitle": "Blockchain-verifizierte Zertifikate",
       "featuredDesc": "Stellen Sie fälschungssichere, sofort verifizierbare Zertifikate auf der Blockchain aus",
-      "featuredCta": "Plattform erkunden"
+      "featuredCta": "Plattform erkunden",
+      "digitalBadges": "Digitale Badges",
+      "digitalBadgesDesc": "Verifizierbare digitale Badges ausstellen"
     },
     "solutions": {
       "byIndustry": "Nach Branche",

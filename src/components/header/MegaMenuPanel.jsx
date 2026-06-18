@@ -17,7 +17,7 @@ export const MegaMenuPanel = ({
   return (
     <div
       ref={megaMenuRef}
-      className={`fixed left-1/2 -translate-x-1/2 bg-white  rounded-2xl shadow-2xl border border-slate-200  p-8 animate-in fade-in slide-in-from-top-4 duration-200 z-50`}
+      className={`fixed left-1/2 -translate-x-1/2 bg-white  rounded-2xl shadow-2xl border border-slate-200  p-8 animate-in fade-in slide-in-from-top-4 duration-200 z-[110] max-h-[calc(100vh-104px)] overflow-y-auto`}
       style={{ top: '82px', width }}
       role="menu"
       aria-label={ariaLabel}

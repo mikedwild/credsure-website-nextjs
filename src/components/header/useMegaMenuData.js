@@ -16,7 +16,7 @@ export const useMegaMenuData = () => {
           title: t('megaMenu.platform.coreFeatures'),
           items: [
             { icon: LayoutDashboard, label: t('megaMenu.platform.digitalCertificates', 'Digital Certificates'), description: t('megaMenu.platform.digitalCertificatesDesc', 'Issue and manage certificates'), href: "/features/digital-certificates" },
-            { icon: Award, label: 'Digital Badges', description: 'Issue verifiable digital badges', href: "/digital-badges" },
+            { icon: Award, label: t('megaMenu.platform.digitalBadges', 'Digital Badges'), description: t('megaMenu.platform.digitalBadgesDesc', 'Issue verifiable digital badges'), href: "/digital-badges" },
             { icon: Shield, label: t('megaMenu.platform.blockchainVerification'), description: t('megaMenu.platform.blockchainVerificationDesc'), href: "/features/blockchain" },
             { icon: Share2, label: t('megaMenu.platform.socialSharing'), description: t('megaMenu.platform.socialSharingDesc'), href: "/features/sharing" },
             { icon: BarChart3, label: t('megaMenu.platform.analyticsDashboard'), description: t('megaMenu.platform.analyticsDashboardDesc'), href: "/features/analytics" }

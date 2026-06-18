@@ -288,7 +288,9 @@
       "featuredTitle": "Most Popular",
       "featuredSubtitle": "Blockchain-Verified Credentials",
       "featuredDesc": "Issue tamper-proof, instantly verifiable certificates on the blockchain",
-      "featuredCta": "Explore Platform"
+      "featuredCta": "Explore Platform",
+      "digitalBadges": "Digital Badges",
+      "digitalBadgesDesc": "Issue verifiable digital badges"
     },
     "solutions": {
       "byIndustry": "By Industry",
