@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { useNavigate, useLocation, useParams } from '@/lib/router-shim';
+import { localePath } from '@/utils/localePath';
 import { Menu, X } from 'lucide-react';
 import { useMegaMenuData } from './header/useMegaMenuData';
 import { DesktopNav } from './header/DesktopNav';
@@ -11,8 +12,11 @@ import { MobileNav } from './header/MobileNav';
 export const HeaderWithMegaMenu = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { lang } = useParams();
-  const currentLang = lang || 'en';
+  // The dynamic route segment is `[locale]`, so useParams() exposes `locale`
+  // (NOT `lang`). Reading `lang` here silently left currentLang = 'en' on every
+  // page, so all main-nav clicks routed to /en/* even from German pages.
+  const { locale } = useParams();
+  const currentLang = locale || 'en';
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeMegaMenu, setActiveMegaMenu] = useState(null);
@@ -89,8 +93,9 @@ export const HeaderWithMegaMenu = () => {
     setIsMobileMenuOpen(false);
     if (href.startsWith('http')) { window.open(href, '_blank'); return; }
     if (href.startsWith('/')) {
-      const langPrefix = `/${currentLang}`;
-      navigate(href.startsWith(langPrefix) ? href : `${langPrefix}${href}`);
+      // localePath both prefixes the locale AND translates the slug
+      // (/features/digital-certificates → /de/funktionen/digitale-zertifikate).
+      navigate(localePath(href, currentLang));
       return;
     }
     if (href.startsWith('#')) {

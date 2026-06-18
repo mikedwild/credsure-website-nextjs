@@ -44,6 +44,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     pagesExtra,
     miscExtra,
     homepageExtra,
+    featureContentExtra,
   ] = await Promise.all([
     import(`../messages/${locale}/common.json`),
     import(`../messages/${locale}/pages.json`),
@@ -58,6 +59,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     import(`../messages/${locale}/pages-extra.json`),
     import(`../messages/${locale}/misc-extra.json`),
     import(`../messages/${locale}/homepage-extra.json`),
+    import(`../messages/${locale}/feature-content-extra.json`),
   ]);
 
   const messages = [
@@ -73,6 +75,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     pagesExtra,
     miscExtra,
     homepageExtra,
+    featureContentExtra,
   ].reduce((acc, m) => deepMerge(acc, m.default as Dict), {} as Dict);
 
   return {

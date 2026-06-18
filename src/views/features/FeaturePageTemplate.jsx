@@ -36,14 +36,23 @@ export const FeaturePageTemplate = ({ featureKey, Icon }) => {
   const subtitle = t(`features.${featureKey}.subtitle`);
   const badge = t(`features.${featureKey}.badge`);
 
-  const content = featureContent[featureKey] || {};
+  const enContent = featureContent[featureKey] || {};
   const media = featureMedia[featureKey] || {};
-  const faqData = content.faq || [];
+
+  // Localizable rich content: German via i18n (namespace `featx`), English
+  // sourced from the canonical data file as the default value.
+  const description = t(`featx.content.${featureKey}.description`, enContent.description || '');
+  const rawUseCases = t(`featx.content.${featureKey}.useCases`, { returnObjects: true, defaultValue: enContent.useCases || [] });
+  const useCases = Array.isArray(rawUseCases) ? rawUseCases : [];
+  const rawFaq = t(`featx.content.${featureKey}.faq`, { returnObjects: true, defaultValue: enContent.faq || [] });
+  const faqData = Array.isArray(rawFaq) ? rawFaq : [];
+  const rawMetrics = t(`featx.content.${featureKey}.metrics`, { returnObjects: true, defaultValue: enContent.metrics || [] });
+  const metrics = Array.isArray(rawMetrics) ? rawMetrics : [];
 
   const schemas = [];
-  if (content.description) {
+  if (description) {
     schemas.push(createSpeakableSchema(
-      { title, description: content.description },
+      { title, description },
       ['h1', '.feature-description', 'h2']
     ));
   }
@@ -181,9 +190,9 @@ export const FeaturePageTemplate = ({ featureKey, Icon }) => {
       </section>
 
       {/* ─── Detailed description band — editorial lead ─── */}
-      {content.description && (() => {
+      {description && (() => {
         // Peel off the final sentence as an emphasized "payoff" line.
-        const desc = content.description.trim();
+        const desc = description.trim();
         const splitAt = desc.lastIndexOf('. ');
         const lead = splitAt > 0 ? desc.slice(0, splitAt + 1) : desc;
         const payoff = splitAt > 0 ? desc.slice(splitAt + 2) : '';
@@ -237,7 +246,7 @@ export const FeaturePageTemplate = ({ featureKey, Icon }) => {
       )}
 
       {/* ─── Metrics strip — system MetricStrip on cream band ─── */}
-      {content.metrics && content.metrics.length > 0 && (
+      {metrics.length > 0 && (
         <section className="py-20" style={{ background: '#FAFAFC' }} data-testid={`${featureKey}-metrics`}>
           <div className="container mx-auto px-6 md:px-12 max-w-6xl">
             <div className="max-w-2xl mb-10">
@@ -248,7 +257,7 @@ export const FeaturePageTemplate = ({ featureKey, Icon }) => {
             </div>
             <MetricStrip
               testId={`${featureKey}-metric-strip`}
-              metrics={content.metrics.slice(0, 3).map((m, i) => ({
+              metrics={metrics.slice(0, 3).map((m, i) => ({
                 icon: METRIC_ICONS[i % METRIC_ICONS.length],
                 stat: m.value,
                 label: m.label,
@@ -259,7 +268,7 @@ export const FeaturePageTemplate = ({ featureKey, Icon }) => {
       )}
 
       {/* ─── Use cases ─── */}
-      {content.useCases && content.useCases.length > 0 && (
+      {useCases.length > 0 && (
         <section className="py-24" data-testid={`${featureKey}-use-cases`}>
           <div className="container mx-auto px-6 md:px-12 max-w-6xl">
             <div className="max-w-2xl mb-12">
@@ -269,7 +278,7 @@ export const FeaturePageTemplate = ({ featureKey, Icon }) => {
               </h2>
             </div>
             <div className="grid md:grid-cols-3 gap-6">
-              {content.useCases.map((uc, i) => (
+              {useCases.map((uc, i) => (
                 <motion.article
                   key={`uc-${i}`}
                   initial={{ opacity: 0, y: 20 }}

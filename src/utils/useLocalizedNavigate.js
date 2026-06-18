@@ -1,11 +1,17 @@
 import { useNavigate, useParams } from '@/lib/router-shim';
 import { useCallback } from 'react';
-import { DEFAULT_LANG, SUPPORTED_LANGS } from './localePath';
+import { localePath, DEFAULT_LANG, SUPPORTED_LANGS } from './localePath';
 
 /**
- * A navigate wrapper that automatically prefixes paths with the current language.
- * Usage: const navigate = useLocalizedNavigate();
- *        navigate('/demo') → navigates to /en/demo (or /de/demo)
+ * A navigate wrapper that prefixes the current language AND translates the slug
+ * to that language. Usage: const navigate = useLocalizedNavigate();
+ *   navigate('/demo')     → /en/demo     or /de/demo
+ *   navigate('/platform') → /en/platform or /de/plattform   (slug translated)
+ *
+ * Previously this only prefixed the locale, so German pages navigated to English
+ * slugs (e.g. /de/platform instead of /de/plattform). localePath handles both
+ * the prefix and the EN↔DE slug mapping, and is idempotent on already-prefixed
+ * paths.
  */
 export function useLocalizedNavigate() {
   const navigate = useNavigate();
@@ -17,15 +23,8 @@ export function useLocalizedNavigate() {
     if (typeof to === 'number') {
       return navigate(to);
     }
-    // Already prefixed with a supported lang
     if (typeof to === 'string') {
-      const segments = to.split('/').filter(Boolean);
-      if (segments.length > 0 && SUPPORTED_LANGS.includes(segments[0])) {
-        return navigate(to, options);
-      }
-      // Prefix with current lang
-      const prefixed = to.startsWith('/') ? `/${currentLang}${to}` : `/${currentLang}/${to}`;
-      return navigate(prefixed, options);
+      return navigate(localePath(to, currentLang), options);
     }
     return navigate(to, options);
   }, [navigate, currentLang]);

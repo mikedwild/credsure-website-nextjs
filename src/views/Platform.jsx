@@ -32,6 +32,12 @@ export const Platform = () => {
   const rawFAQ = t('tplx.platform.faq', { returnObjects: true });
   const platformFAQ = Array.isArray(rawFAQ) ? rawFAQ : [];
 
+  // Localizable: German via i18n (namespace `featx`), English from data file.
+  const rawStats = t('featx.platform.stats', { returnObjects: true, defaultValue: platformStats });
+  const stats = Array.isArray(rawStats) ? rawStats : platformStats;
+  const rawHowItWorks = t('featx.platform.howItWorks', { returnObjects: true, defaultValue: platformHowItWorks });
+  const howItWorks = Array.isArray(rawHowItWorks) ? rawHowItWorks : platformHowItWorks;
+
   const featureKeys = ['credentialManagement', 'blockchainVerification', 'socialSharing', 'analytics'];
   const featureIcons = { credentialManagement: LayoutDashboard, blockchainVerification: Shield, socialSharing: Share2, analytics: BarChart3 };
 
@@ -120,7 +126,7 @@ export const Platform = () => {
       <section className="py-14 bg-gradient-to-r from-[#5B22D6] to-[#3F2BD9]" data-testid="platform-stats">
         <div className="container mx-auto px-6 md:px-12 max-w-6xl">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {platformStats.map((stat) => (
+            {stats.map((stat) => (
               <motion.div key={stat.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="text-center">
                 <div className="text-3xl md:text-4xl font-extrabold text-white mb-2">{stat.value}</div>
                 <div className="text-sm text-white/80">{stat.label}</div>
@@ -138,7 +144,7 @@ export const Platform = () => {
           </h2>
           <p className="text-center text-gray-500  mb-12 text-sm">{t('tplx.platform.howItWorksSubtitle')}</p>
           <div className="grid md:grid-cols-4 gap-6">
-            {platformHowItWorks.map((step, i) => (
+            {howItWorks.map((step, i) => (
               <motion.div key={step.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="relative">
                 <div className="bg-white  border border-gray-200  rounded-2xl p-6 h-full hover:shadow-lg transition-shadow">
                   <div className="w-10 h-10 bg-gradient-to-br from-[#5B22D6] to-[#E22B8A] rounded-xl flex items-center justify-center mb-4">
@@ -147,7 +153,7 @@ export const Platform = () => {
                   <h3 className="text-lg font-bold text-[#0F0E1A]  mb-2">{step.title}</h3>
                   <p className="text-gray-600  text-sm leading-relaxed">{step.desc}</p>
                 </div>
-                {i < platformHowItWorks.length - 1 && (
+                {i < howItWorks.length - 1 && (
                   <div className="hidden md:flex absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
                     <ArrowRight className="w-6 h-6 text-[#5B22D6]/30" />
                   </div>

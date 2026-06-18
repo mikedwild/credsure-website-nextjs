@@ -1,0 +1,242 @@
+{
+  "featx": {
+    "content": {
+      "recipientWall": {
+        "description": "Die Empfänger-Wall ist die öffentliche, empfängereigene Heimat für jedes Credential, das eine Person über alle CredSure-Aussteller hinweg erworben hat. Inhaber teilen eine einzige verifizierbare URL — Recruiter, Arbeitgeber und Zulassungsstellen sehen ein lebendiges Portfolio aus Badges, Zeugnissen und Fähigkeiten, das sich in Echtzeit aktualisiert, sobald neue Credentials hinzukommen.",
+        "useCases": [
+          { "title": "Showcase für Jobsuchende", "desc": "Ein Lernender teilt eine einzige URL mit jedem Recruiter — verifizierte Diplome, Kursabschlüsse und Skills-Pässe an einem Ort." },
+          { "title": "Verstärker für Alumni-Netzwerke", "desc": "Universitäten binden Alumni-Walls auf Fachbereichsseiten ein und machen die Leistungen jedes Absolventen zum lebendigen Beleg für Programmergebnisse." },
+          { "title": "Interne Mobilität", "desc": "HR-Teams übernehmen Empfänger-Wall-Daten in Workday oder SAP SuccessFactors, um interne Kandidaten sichtbar zu machen, deren Credentials zu einer offenen Stelle passen." }
+        ],
+        "metrics": [
+          { "value": "12×", "label": "Recruiter-Klicks vs. LinkedIn" },
+          { "value": "4.2", "label": "Ø Credentials pro Wall" },
+          { "value": "94%", "label": "Empfänger halten Wall öffentlich" }
+        ],
+        "faq": [
+          { "q": "Wer kontrolliert, was auf einer Wall angezeigt wird?", "a": "Der Empfänger. Jedes Credential kann auf öffentlich, nur-per-Link oder privat gesetzt werden. Empfänger können ein Credential jederzeit von der Wall entfernen, ohne den On-Chain-Datensatz zu beeinträchtigen." },
+          { "q": "Kann die Wall Credentials von anderen CredSure-Ausstellern abrufen?", "a": "Ja — genau das ist der Sinn. Wenn Sie 2023 ein Badge von einem CredSure-Aussteller und 2026 einen CredSure-gestützten Kursabschluss von einem anderen erwerben, erscheinen beide automatisch auf derselben Wall." },
+          { "q": "Funktioniert die Wall für nicht verifizierte Credentials?", "a": "Nein. Jedes Credential auf einer Empfänger-Wall ist On-Chain verifizierbar. Walls können keine selbst beanspruchten Leistungen aufnehmen." }
+        ]
+      },
+      "credentialManagement": {
+        "description": "Der Hub für digitale Zertifikate von CredSure gibt Administratoren ein zentrales Dashboard, um digitale Zertifikate und Badges auszustellen, zu verfolgen, zu widerrufen und zu erneuern. Konzipiert für Teams jeder Größe, beseitigt das zentrale Dashboard Tabellen und manuelle Prozesse und gibt Ihnen zugleich Echtzeit-Einblick in Ihr gesamtes Zertifizierungsprogramm.",
+        "useCases": [
+          { "title": "Universitäts-Studierendensekretariat", "desc": "Stellen Sie über 10.000 digitale Diplome in einem einzigen Stapel aus und senden Sie jedem Absolventen automatisch eine personalisierte Credential-E-Mail." },
+          { "title": "HR-Compliance-Manager", "desc": "Verfolgen Sie, welche Mitarbeitenden gültige Zertifizierungen haben, und erhalten Sie automatische Warnungen 90 Tage vor Ablauf eines Credentials." },
+          { "title": "Administrator eines Zertifizierungsgremiums", "desc": "Verwalten Sie den gesamten Credential-Lebenszyklus — von der Beantragung über die Ausstellung bis zur Erneuerung — mit lückenlosen Prüfprotokollen." }
+        ],
+        "metrics": [
+          { "value": "90%", "label": "Weniger Verwaltungsaufwand" },
+          { "value": "10K+", "label": "Credentials pro Stapel" },
+          { "value": "100%", "label": "Abdeckung des Prüfprotokolls" }
+        ],
+        "faq": [
+          { "q": "Wie viele Credentials kann ich verwalten?", "a": "Es gibt keine Begrenzung. Unsere Plattform bewältigt alles von 10 Credentials bis zu Millionen und skaliert automatisch mit Ihrem Bedarf." },
+          { "q": "Kann ich ein Credential nach der Ausstellung widerrufen?", "a": "Ja. Administratoren können jedes Credential sofort widerrufen. Der Widerruf wird in Echtzeit auf der Verifizierungsseite und im Blockchain-Datensatz abgebildet." }
+        ]
+      },
+      "blockchain": {
+        "description": "Jedes über CredSure ausgestellte Credential ist in der Blockchain verankert und erzeugt einen unveränderlichen, fälschungssicheren Datensatz, der niemals geändert oder gefälscht werden kann. Unser Verifizierungssystem ermöglicht es jedem — Arbeitgebern, Institutionen oder Aufsichtsbehörden —, die Echtheit eines Credentials in unter 3 Sekunden zu bestätigen, ganz ohne Konto.",
+        "useCases": [
+          { "title": "Arbeitgeber-Verifizierung", "desc": "Ein Personalverantwortlicher scannt den QR-Code eines Kandidaten und sieht sofort die vollständigen Credential-Details, Aussteller-Informationen und den Blockchain-Nachweis." },
+          { "title": "Grenzüberschreitende Anerkennung", "desc": "Internationale Institutionen verifizieren Credentials ohne Sprachbarrieren — der Blockchain-Nachweis ist universell und sprachunabhängig." },
+          { "title": "Audit & Compliance", "desc": "Aufsichtsbehörden greifen auf ein unveränderliches Prüfprotokoll zu, das genau zeigt, wann jedes Credential von wem und an wen ausgestellt wurde." }
+        ],
+        "metrics": [
+          { "value": "<3s", "label": "Verifizierungszeit" },
+          { "value": "0%", "label": "Betrugsrate" },
+          { "value": "100%", "label": "Fälschungssicher" }
+        ],
+        "faq": [
+          { "q": "Welche Blockchain verwendet CredSure?", "a": "CredSure nutzt einen hybriden Ansatz und verankert Credential-Hashes in öffentlichen Blockchains für Unveränderlichkeit, während personenbezogene Daten zur Wahrung des Datenschutzes verschlüsselt und Off-Chain bleiben." },
+          { "q": "Benötigen Verifizierende eine Blockchain-Wallet?", "a": "Nein. Jeder kann ein Credential durch Scannen des QR-Codes oder Klicken auf den Verifizierungslink verifizieren — ohne technisches Wissen oder Wallet." }
+        ]
+      },
+      "sharing": {
+        "description": "CredSure macht das Teilen von Credentials mühelos. Empfänger können ihre digitalen Zertifikate und Badges mit einem einzigen Klick auf LinkedIn, Twitter, Facebook und per E-Mail teilen. Jedes geteilte Credential erzeugt eine markenindividuelle Social-Card, die auf Engagement optimiert ist und Ihrer Organisation organische Sichtbarkeit verschafft.",
+        "useCases": [
+          { "title": "Absolventen-Feier", "desc": "Frischgebackene Absolventen teilen ihren verifizierten Abschluss auf LinkedIn und schaffen einen viralen Moment, der Ihre Institution ihrem gesamten Netzwerk präsentiert." },
+          { "title": "Mitarbeiter-Skills-Showcase", "desc": "Mitarbeitende fügen Schulungsabschlüsse zu ihren LinkedIn-Profilen hinzu und schaffen ein lebendiges Portfolio verifizierter Kompetenzen." },
+          { "title": "Marketing-Verstärkung", "desc": "Jedes geteilte Credential wird zu einem markenindividuellen Marketing-Asset und erzeugt Tausende von Impressionen für Ihre Organisation." }
+        ],
+        "metrics": [
+          { "value": "5x", "label": "Marken-Impressionen pro Teilung" },
+          { "value": "72%", "label": "LinkedIn-Teilungsrate" },
+          { "value": "1M+", "label": "Erzeugte Social-Reichweite" }
+        ],
+        "faq": [
+          { "q": "Können Empfänger auf anderen Plattformen als LinkedIn teilen?", "a": "Ja. CredSure unterstützt das Teilen auf LinkedIn, Twitter, Facebook, per E-Mail und über Direktlink. Empfänger können Credentials auch auf Websites einbetten." },
+          { "q": "Verlinken geteilte Credentials zurück zur Verifizierung?", "a": "Ja. Jedes geteilte Credential enthält einen Verifizierungslink, den jeder anklicken kann, um die Echtheit in Echtzeit zu bestätigen." }
+        ]
+      },
+      "analytics": {
+        "description": "Das Analyse-Dashboard von CredSure liefert Echtzeit-Einblicke in die Leistung Ihres Credentialing-Programms. Verfolgen Sie Ausstellungsvolumen, Verifizierungsraten, Social-Sharing-Kennzahlen und Empfänger-Engagement — alles über ein einziges, anpassbares Dashboard mit exportierbaren Berichten.",
+        "useCases": [
+          { "title": "Programm-ROI-Reporting", "desc": "Erstellen Sie geschäftsführungsreife Berichte, die den ROI des Credential-Programms aufzeigen, einschließlich Kosteneinsparungen, Engagement-Kennzahlen und Marketing-Reichweite." },
+          { "title": "Engagement-Optimierung", "desc": "Erkennen Sie, welche Credentials das meiste Social-Sharing antreiben, und passen Sie Ihr Programm an, um die organische Reichweite zu maximieren." },
+          { "title": "Compliance-Überwachung", "desc": "Verfolgen Sie die Ablaufraten von Credentials in Ihrer gesamten Organisation und stellen Sie mit automatisierten Dashboards 100% Compliance sicher." }
+        ],
+        "metrics": [
+          { "value": "Real-time", "label": "Datenaktualisierungen" },
+          { "value": "20+", "label": "Berichtsvorlagen" },
+          { "value": "CSV/PDF", "label": "Exportformate" }
+        ],
+        "faq": [
+          { "q": "Kann ich benutzerdefinierte Berichte erstellen?", "a": "Ja. Die Professional- und Enterprise-Tarife enthalten einen benutzerdefinierten Berichts-Generator mit Filtern für Zeitraum, Credential-Typ, Aussteller und mehr." },
+          { "q": "Gibt es eine Analytics-API?", "a": "Ja. Alle Analysedaten sind über unsere REST-API verfügbar und ermöglichen die Integration mit Ihren bestehenden BI-Tools wie Tableau oder Power BI." }
+        ]
+      },
+      "bulkIssuance": {
+        "description": "Stellen Sie Tausende von Credentials in Minuten aus, nicht in Tagen. Die Massenausstellungs-Engine von CredSure verarbeitet CSV-Uploads mit integrierter Validierung, Fehlerbehandlung und Fortschrittsverfolgung. Automatisieren Sie volumenstarke Credentialing-Ereignisse wie Abschlussfeiern, Zertifizierungszyklen und Schulungsabschlüsse.",
+        "useCases": [
+          { "title": "Abschlusssaison", "desc": "Laden Sie eine CSV mit 15.000 Absolventen hoch und stellen Sie personalisierte, blockchain-verifizierte digitale Diplome in unter 10 Minuten aus." },
+          { "title": "Jährliche Rezertifizierung", "desc": "Verarbeiten Sie Tausende von jährlichen Rezertifizierungen mit einem einzigen Upload und lösen Sie automatisch Erneuerungs-E-Mails an die Empfänger aus." },
+          { "title": "Veranstaltungsteilnahme", "desc": "Stellen Sie Teilnahme-Credentials an alle Konferenzteilnehmer innerhalb weniger Stunden nach Veranstaltungsende aus." }
+        ],
+        "metrics": [
+          { "value": "10K+", "label": "Kapazität pro Stapel" },
+          { "value": "<10min", "label": "Verarbeitungszeit" },
+          { "value": "99.9%", "label": "Erfolgsrate" }
+        ],
+        "faq": [
+          { "q": "Welche Dateiformate werden unterstützt?", "a": "CSV- und Excel-Dateien (.xlsx) werden unterstützt. Unser System enthält eine automatische Validierung, um Formatierungsfehler vor der Verarbeitung zu erkennen." },
+          { "q": "Was passiert, wenn einige Datensätze fehlschlagen?", "a": "Fehlgeschlagene Datensätze werden mit spezifischen Fehlermeldungen markiert. Sie können nur die fehlgeschlagenen Datensätze korrigieren und erneut hochladen — erfolgreich verarbeitete Credentials sind nicht betroffen." }
+        ]
+      },
+      "apiIntegration": {
+        "description": "Die RESTful-API von CredSure ermöglicht die nahtlose Integration in Ihren bestehenden Technologie-Stack. Verbinden Sie Ihr LMS, HRIS, CRM oder individuelle Anwendungen, um Credential-Ausstellung, -Verifizierung und -Verwaltung zu automatisieren. Umfassende Dokumentation, SDKs und Webhook-Unterstützung machen die Integration unkompliziert.",
+        "useCases": [
+          { "title": "LMS-Auto-Ausstellung", "desc": "Verbinden Sie Moodle, Canvas oder Blackboard, um Credentials automatisch auszustellen, sobald Lernende Kurse abschließen." },
+          { "title": "HRIS-Integration", "desc": "Synchronisieren Sie Mitarbeiterzertifizierungen mit Ihrem HR-System, um Compliance-Datensätze in Echtzeit zu pflegen." },
+          { "title": "Individuelle Anwendung", "desc": "Integrieren Sie die Credential-Ausstellung mithilfe unserer API und Webhooks direkt in Ihr SaaS-Produkt." }
+        ],
+        "metrics": [
+          { "value": "50+", "label": "API-Endpunkte" },
+          { "value": "99.9%", "label": "API-Verfügbarkeit" },
+          { "value": "<200ms", "label": "Durchschnittliche Antwortzeit" }
+        ],
+        "faq": [
+          { "q": "Welche LMS-Plattformen werden unterstützt?", "a": "CredSure integriert sich mit Moodle, Canvas, Blackboard, TalentLMS und jedem System, das LTI oder REST-API-Webhooks unterstützt. Die Zapier-Integration deckt 3.000+ weitere Apps ab." },
+          { "q": "Gibt es eine Ratenbegrenzung?", "a": "Standard-Tarife enthalten großzügige Ratenbegrenzungen (1.000 Anfragen/Minute). Enterprise-Tarife bieten individuelle Limits basierend auf Ihren Volumenanforderungen." }
+        ]
+      },
+      "autoIssue": {
+        "description": "Richten Sie auslöserbasierte Regeln ein, um Credentials automatisch ohne manuellen Eingriff auszustellen. Wenn Lernende einen Kurs abschließen, eine Prüfung bestehen oder individuelle Kriterien erfüllen, erstellt und liefert CredSure ihr Credential automatisch — und spart so Stunden an Verwaltungsarbeit.",
+        "useCases": [
+          { "title": "Kursabschluss", "desc": "Stellen Sie automatisch ein Zertifikat aus, sobald ein Lernender einen Kurs in Ihrem LMS als abgeschlossen markiert." },
+          { "title": "Prüfungsschwelle", "desc": "Stellen Sie Credentials nur aus, wenn Lernende eine Mindestpunktzahl (z. B. 80%) in ihrer Abschlussprüfung erreichen." },
+          { "title": "Mehrstufige Programme", "desc": "Erstellen Sie Credential-Pfade, bei denen der Abschluss mehrerer Kurse automatisch eine übergeordnete Zertifizierung auslöst." }
+        ],
+        "metrics": [
+          { "value": "0", "label": "Manuelle Schritte nötig" },
+          { "value": "24/7", "label": "Ausstellungsverfügbarkeit" },
+          { "value": "100%", "label": "Gleichbleibende Genauigkeit" }
+        ],
+        "faq": [
+          { "q": "Kann ich bedingte Logik einrichten?", "a": "Ja. Auto-Ausstellungs-Regeln unterstützen UND/ODER-Bedingungen, Punkteschwellen, Zeiträume und individuelle Metadatenprüfungen." },
+          { "q": "Kann ich vor der automatischen Ausstellung eine Vorschau anzeigen?", "a": "Ja. Sie können eine Prüfungswarteschlange aktivieren, in der automatisch ausgelöste Credentials zur manuellen Freigabe vor der Zustellung zurückgehalten werden." }
+        ]
+      },
+      "templateDesigner": {
+        "description": "Gestalten Sie atemberaubende, markenkonforme Credential-Vorlagen mit dem intuitiven Vorlagen-Builder von CredSure. Wählen Sie aus professionell gestalteten Startvorlagen oder bauen Sie von Grund auf. Fügen Sie Ihr Logo, Ihre Markenfarben, dynamische Felder, QR-Codes und Sicherheitselemente hinzu — ganz ohne Designkenntnisse.",
+        "useCases": [
+          { "title": "Universitäts-Branding", "desc": "Erstellen Sie Diplomvorlagen, die zur visuellen Identität Ihrer Institution passen, mit offiziellen Siegeln, Unterschriften und Wappenplatzierung." },
+          { "title": "Abteilungsübergreifende Varianten", "desc": "Gestalten Sie eine Basisvorlage und erstellen Sie abteilungsspezifische Varianten, die Aktualisierungen von der Master-Vorlage übernehmen." },
+          { "title": "Badge-Design", "desc": "Erstellen Sie visuell überzeugende digitale Badges mit Skill-Tags, Aussteller-Informationen und Leistungs-Metadaten." }
+        ],
+        "metrics": [
+          { "value": "50+", "label": "Startvorlagen" },
+          { "value": "Unlimited", "label": "Individuelle Designs" },
+          { "value": "Intuitive", "label": "Kein Code nötig" }
+        ],
+        "faq": [
+          { "q": "Kann ich meine eigenen Schriftarten verwenden?", "a": "Ja. Laden Sie individuelle Schriftarten hoch, damit Credentials exakt Ihren Markenrichtlinien entsprechen." },
+          { "q": "Unterstützen Vorlagen dynamische Felder?", "a": "Ja. Fügen Sie dynamische Felder für Empfängername, Datum, Kursname, Punktzahl und beliebige individuelle Metadaten ein. Die Felder werden bei der Ausstellung automatisch befüllt." }
+        ]
+      },
+      "whiteLabel": {
+        "description": "Bieten Sie Ihren Empfängern ein vollständig gebrandetes Credential-Erlebnis. Mit der White-Label-Lösung von CredSure trägt jeder Berührungspunkt — von der Ausstellungs-E-Mail bis zur Verifizierungsseite — Ihre Markenidentität. Empfänger sehen den Namen CredSure niemals; es ist Ihre Plattform, auf Ihre Weise.",
+        "useCases": [
+          { "title": "Enterprise-Schulungsanbieter", "desc": "Bieten Sie gebrandete digitale Credentials als Mehrwert zu Ihren Schulungsprogrammen an und stärken Sie so Ihre Marktposition." },
+          { "title": "Universitäts-Konsortium", "desc": "Mehrere Institutionen teilen sich eine einzige White-Label-Plattform und behalten dabei das individuelle Branding pro Hochschule bei." },
+          { "title": "Zertifizierungsstelle", "desc": "Stellen Sie Credentials aus, die ausschließlich das Branding Ihrer Stelle tragen, und stärken Sie so Vertrauen und Wiedererkennung." }
+        ],
+        "metrics": [
+          { "value": "100%", "label": "Ihr Branding" },
+          { "value": "0%", "label": "CredSure-Sichtbarkeit" },
+          { "value": "Full", "label": "Volle Anpassungskontrolle" }
+        ],
+        "faq": [
+          { "q": "Kann ich die Verifizierungsseite anpassen?", "a": "Ja. White-Label umfasst die volle Kontrolle über Layout, Farben, Logo und Texte der Verifizierungsseite." },
+          { "q": "Werden E-Mails von meiner Domain gesendet?", "a": "Ja. Konfigurieren Sie individuelle SMTP-Einstellungen, sodass alle Credential-E-Mails von der E-Mail-Domain Ihrer Organisation stammen." }
+        ]
+      },
+      "customDomains": {
+        "description": "Hosten Sie Ihre Credential-Verifizierungsseiten auf Ihrer eigenen Domain (z. B. credentials.ihredomain.com) für vollständige Markenkonsistenz und SEO-Vorteile. CredSure übernimmt die Verwaltung von SSL-Zertifikaten und die DNS-Konfiguration — Sie verweisen lediglich auf Ihre Subdomain.",
+        "useCases": [
+          { "title": "Markenkonsistenz", "desc": "Empfänger sehen Ihre Domain bei der Verifizierung von Credentials, was das Vertrauen in Ihre Organisation statt in eine Drittanbieter-Plattform stärkt." },
+          { "title": "SEO-Autorität", "desc": "Verifizierungsseiten auf Ihrer Domain bauen Backlinks und Autorität für Ihre Website auf und verbessern so die gesamte SEO-Leistung." },
+          { "title": "Compliance-Anforderungen", "desc": "Einige regulierte Branchen verlangen, dass alle offiziellen Kommunikationen von der eigenen Domain der Organisation ausgehen." }
+        ],
+        "metrics": [
+          { "value": "Your Domain", "label": "Markenkontrolle" },
+          { "value": "Auto", "label": "SSL-Verwaltung" },
+          { "value": "SEO", "label": "Backlink-Vorteile" }
+        ],
+        "faq": [
+          { "q": "Wie lange dauert die Domain-Einrichtung?", "a": "In der Regel 15–30 Minuten. Sie erstellen einen CNAME-Eintrag, der auf CredSure verweist, und unser System stellt automatisch das SSL-Zertifikat bereit." },
+          { "q": "Kann ich mehrere individuelle Domains verwenden?", "a": "Ja. Enterprise-Tarife unterstützen mehrere individuelle Domains, was für Multi-Marken-Organisationen oder Universitätssysteme nützlich ist." }
+        ]
+      },
+      "instantVerification": {
+        "description": "Das Sofort-Verifizierungssystem von CredSure ermöglicht es jedem, die Echtheit eines Credentials in unter 3 Sekunden zu bestätigen. Kein Konto, kein Login, kein technisches Wissen erforderlich. Scannen Sie einfach den QR-Code oder klicken Sie auf den Verifizierungslink, um die vollständigen Credential-Details, Aussteller-Informationen und den Blockchain-Nachweis zu sehen.",
+        "useCases": [
+          { "title": "Vorstellungsgespräch", "desc": "Ein Personalverantwortlicher scannt während eines Gesprächs den QR-Code eines Kandidaten-Credentials und sieht sofort die verifizierten Details auf seinem Smartphone." },
+          { "title": "Regulatorisches Audit", "desc": "Ein Prüfer klickt auf Verifizierungslinks, um alle Mitarbeiter-Credentials in einem Bruchteil der Zeit zu bestätigen, verglichen mit dem Anrufen jeder ausstellenden Institution." },
+          { "title": "Krankenhaus-Credentialing", "desc": "Ein Krankenhaus verifiziert die Qualifikationen eines neuen Arztes vor dessen erster Schicht — in Sekunden, nicht in Wochen." }
+        ],
+        "metrics": [
+          { "value": "<3s", "label": "Verifizierungszeit" },
+          { "value": "0", "label": "Konto erforderlich" },
+          { "value": "24/7", "label": "Immer verfügbar" }
+        ],
+        "faq": [
+          { "q": "Benötigt die verifizierende Person ein CredSure-Konto?", "a": "Nein. Die Verifizierung ist vollständig öffentlich und kostenlos. Jeder mit dem QR-Code oder Verifizierungslink kann die Echtheit eines Credentials bestätigen." },
+          { "q": "Welche Informationen sieht die verifizierende Person?", "a": "Die verifizierende Person sieht den Credential-Titel, den Namen des Ausstellers, den Namen des Empfängers, das Ausstellungsdatum, das Ablaufdatum (falls zutreffend), den Credential-Status und den Blockchain-Verifizierungsnachweis." }
+        ]
+      },
+      "security": {
+        "description": "CredSure ist mit Sicherheit auf Enterprise-Niveau in jeder Ebene konzipiert. Wir sind DSGVO-konform und ISO 27001-zertifiziert. Alle Daten werden bei der Übertragung und im Ruhezustand mit AES-256-Verschlüsselung verschlüsselt, und Credentials sind zur fälschungssicheren Integrität in der Blockchain verankert.",
+        "useCases": [
+          { "title": "DSGVO-Compliance", "desc": "EU-Organisationen vertrauen CredSure für vollständige DSGVO-Compliance, einschließlich Datenminimierung, Recht auf Löschung und Auftragsverarbeitungsverträgen." },
+          { "title": "Enterprise-Beschaffung", "desc": "Bestehen Sie die Sicherheitsprüfung Ihrer Organisation mit unserem umfassenden ISO-27001-Bericht, Penetrationstest-Ergebnissen und Unterstützung beim Sicherheitsfragebogen." },
+          { "title": "Regulierte Branchen", "desc": "Organisationen aus dem Gesundheitswesen, Finanzwesen und der öffentlichen Verwaltung verlassen sich auf die Sicherheitslage von CredSure für sensible Credential-Daten." }
+        ],
+        "metrics": [
+          { "value": "ISO 27001", "label": "Zertifiziert" },
+          { "value": "AES-256", "label": "Verschlüsselungsstandard" },
+          { "value": "99.9%", "label": "Verfügbarkeits-SLA" }
+        ],
+        "faq": [
+          { "q": "Wo werden die Daten gespeichert?", "a": "Daten werden in ISO-27001-zertifizierten Rechenzentren in der EU und den USA gespeichert. Enterprise-Kunden können ihre bevorzugte Datenresidenz-Region wählen." },
+          { "q": "Unterstützen Sie Single Sign-On (SSO)?", "a": "Ja. Enterprise-Tarife umfassen die SAML-2.0-SSO-Integration mit Anbietern wie Okta, Azure AD und Google Workspace." }
+        ]
+      }
+    },
+    "platform": {
+      "stats": [
+        { "value": "2M+", "label": "Ausgestellte Credentials" },
+        { "value": "150+", "label": "Organisationen vertrauen CredSure" },
+        { "value": "99.9%", "label": "Plattform-Verfügbarkeit" },
+        { "value": "<3s", "label": "Durchschnittliche Verifizierungszeit" }
+      ],
+      "howItWorks": [
+        { "step": "1", "title": "Gestalten", "desc": "Erstellen Sie markenindividuelle Credential-Vorlagen mit unserem intuitiven Vorlagen-Designer oder wählen Sie aus über 50 professionellen Vorlagen." },
+        { "step": "2", "title": "Ausstellen", "desc": "Stellen Sie Credentials einzeln, in großen Mengen per CSV oder automatisch über LMS-/API-Integration aus." },
+        { "step": "3", "title": "Teilen", "desc": "Empfänger teilen verifizierte Credentials mit einem Klick auf LinkedIn, in sozialen Medien und in digitalen Wallets." },
+        { "step": "4", "title": "Verifizieren", "desc": "Jeder kann die Echtheit eines Credentials sofort per QR-Code oder Verifizierungslink bestätigen — ohne Konto." }
+      ]
+    }
+  }
+}
