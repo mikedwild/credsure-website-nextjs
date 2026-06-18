@@ -2,6 +2,7 @@
 import asyncio
 import json
 import os
+import re
 from pathlib import Path
 from motor.motor_asyncio import AsyncIOMotorClient
 from datetime import datetime, timezone
@@ -42,8 +43,15 @@ async def migrate():
         for sec in sections:
             if sec.get("heading"):
                 content_html += f"<h2>{sec['heading']}</h2>\n"
-            for p in sec.get("paragraphs", []):
-                content_html += f"<p>{p}</p>\n"
+            # Body text lives in `content`, NOT `paragraphs`. The original code
+            # read `sec.get("paragraphs", [])` — a field that never exists in
+            # blog_content.json — so it silently dropped every paragraph and
+            # left posts as headings-only. See scripts/repair_blog_bodies.py.
+            body = (sec.get("content") or "").strip()
+            for para in re.split(r"\n\s*\n", body):
+                para = para.strip()
+                if para:
+                    content_html += f"<p>{para}</p>\n"
 
         doc = {
             "id": str(uuid.uuid4()),

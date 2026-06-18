@@ -33,10 +33,20 @@ All app routes are dynamic (`ƒ`) — server-rendered on demand. The marketing p
 ## ✨ Minor polish / SEO follow-ons
 - **GSC: resubmit `/sitemap.xml`** in Search Console — it last fetched 01/06 (pre-fix, no blog posts). Resubmitting forces a re-read so Google discovers all 126 posts. Then let the "Discovered – currently not indexed" validation (started 10/06) run.
 - **Dead CSS classes** on the hero — `hero-rise`, `hero-delay-*`, `hero-underline` are no-ops (animation CSS dropped in migration; underline still renders via `cs-hero-underline`). Tidy up.
-- **13 published posts have empty bodies** (old certif-id press releases) — fill or unpublish.
+- ~~**13 published posts have empty bodies**~~ — superseded: root-caused as a migration bug affecting **123 posts** (see "Blog bodies lost in migration" below).
 - **GA4 verify:** confirm the `GTM-NSZF3Q8` container has its GA4 (`G-K0QTRESXBJ`) tags published — accept cookies, check GA4 Realtime. Code loads GTM correctly; tag publishing is a GTM-dashboard action.
 - **Optional AI keys:** add `ANTHROPIC_API_KEY` + `OPENAI_API_KEY` (Railway vars or admin Settings) for AI blog gen/images.
 - German eyebrow: feature-page overview eyebrow falls back to EN "Why it matters"; add `features.overviewEyebrow` to the DE messages if a translation is wanted.
+
+## 🩹 Blog bodies lost in migration — restore from source (needs Railway run, do BEFORE the DE translation)
+**Root cause found (2026-06-18):** `backend/scripts/migrate_blogs.py` read each scraped section's body from a field named `paragraphs`, but `backend/data/blog_content.json` stores body text in **`content`**. The mismatch dropped every paragraph on import — so **123 of 126 posts render as headings-only (110) or empty (13)**; only the 3 posts sourced from `blog_posts_bilingual.json` have real bodies. The text is intact in `blog_content.json` (~650K chars) → fully recoverable.
+- **Fixed the migration bug** in `migrate_blogs.py` (now reads `content`) so a re-migration can't repeat it (`<commit>`). The live DB still has the broken bodies, though (migration is insert-once / idempotent-guarded).
+- **Repair script written (not run):** `backend/scripts/repair_blog_bodies.py` — dry-run default, idempotent; rebuilds `content_html` from `blog_content.json` for "thin" posts only (skips the 3 healthy ones), `--apply` to write. Locally verified it restores e.g. `digital-certificates-vs-digital-badges` from 0 → ~10.8K body chars.
+  ```bash
+  python -m scripts.repair_blog_bodies              # dry run
+  python -m scripts.repair_blog_bodies --apply      # restore EN bodies
+  ```
+- **Order matters:** run THIS repair first, THEN `backfill_blog_translations.py --apply` — otherwise the DE translation would translate bare headings.
 
 ## 🌍 i18n — translate blog posts to German (needs Railway run)
 The static site is now fully EN/DE, but the **blog content is ~98% English-only**: of 126 posts, only **3 have German** — `/de/blog/*` falls back to English for the other **123** (the backend serves `served_lang: en`). Dry run confirmed the 123 candidates (slug list in the commit + transcript 2026-06-18).
