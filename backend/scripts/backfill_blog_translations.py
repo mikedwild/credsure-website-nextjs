@@ -44,7 +44,10 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from dotenv import load_dotenv
 from motor.motor_asyncio import AsyncIOMotorClient
 
-from utils.ai_content import translate_fields
+# NOTE: `utils.ai_content` (the LLM stack) is imported lazily inside
+# `_translate_one`, NOT at module top — so a dry run can list candidates
+# without needing the translation provider SDK or Python 3.10+ `X | None`
+# syntax present in that module. Only `--apply` pulls it in.
 
 load_dotenv()
 
@@ -70,6 +73,8 @@ def _tags_to_str(tags) -> str:
 
 async def _translate_one(doc: dict, *, db) -> dict:
     """Return the `$set` patch of `*_de` fields for a single post."""
+    from utils.ai_content import translate_fields  # lazy: only needed for --apply
+
     tr = await translate_fields(
         title=doc.get("title", ""),
         excerpt=doc.get("excerpt", ""),
