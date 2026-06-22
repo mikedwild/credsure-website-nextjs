@@ -8,7 +8,10 @@
  * the server-fetched post), so crawlers get a unique, fully-rendered page.
  */
 import type { Metadata } from "next";
+import { getMessages } from "next-intl/server";
 import PageShell from "@/components/PageShell";
+import { ScopedMessagesProvider } from "@/components/ScopedMessagesProvider";
+import { getBlogMessages } from "@/i18n/messageScopes";
 import { BlogPost } from "@/views/BlogPost";
 import { getBlogPost } from "@/lib/blogApi";
 
@@ -85,9 +88,12 @@ export default async function Page({
   const { locale, slug } = await params;
   const loc = locale === "de" ? "de" : "en";
   const post = await getBlogPost(slug, loc);
+  const blogMessages = await getBlogMessages(await getMessages(), locale);
   return (
-    <PageShell>
-      <BlogPost key={slug} initialPost={post} />
-    </PageShell>
+    <ScopedMessagesProvider extra={blogMessages}>
+      <PageShell>
+        <BlogPost key={slug} initialPost={post} />
+      </PageShell>
+    </ScopedMessagesProvider>
   );
 }

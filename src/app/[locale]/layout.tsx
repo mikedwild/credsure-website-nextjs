@@ -1,5 +1,6 @@
 import { getMessages } from "next-intl/server";
 import { IntlClientProvider } from "@/components/IntlClientProvider";
+import { getGlobalMessages } from "@/i18n/messageScopes";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Inter } from "next/font/google";
@@ -25,7 +26,11 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  const messages = await getMessages();
+  // Global provider ships everything EXCEPT the route-isolated blog + legal
+  // namespaces (~77 KB). Those are merged back on their own routes via
+  // <ScopedMessagesProvider>, keeping them off the homepage + marketing-page
+  // RSC flight (the dominant mobile-LCP cost).
+  const messages = await getGlobalMessages(await getMessages(), locale);
 
   return (
     <html lang={locale} className={inter.className} suppressHydrationWarning>

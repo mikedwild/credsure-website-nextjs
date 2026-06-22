@@ -7,7 +7,10 @@
  * per-page metadata (title/description/canonical/hreflang) at request time.
  */
 import type { Metadata } from "next";
+import { getMessages } from "next-intl/server";
 import { buildPageMetadata } from "@/lib/pageMetadata";
+import { ScopedMessagesProvider } from "@/components/ScopedMessagesProvider";
+import { getLegalMessages, isLegalSlug } from "@/i18n/messageScopes";
 import { CatchAllClient } from "./CatchAllClient";
 
 export async function generateMetadata({
@@ -26,5 +29,18 @@ export default async function CatchAllPage({
 }) {
   const { locale, slug } = await params;
   const slugStr = Array.isArray(slug) ? slug.join("/") : slug || "";
+
+  // Legal views (Privacy/Impressum) consume the legal namespaces the global
+  // provider drops — merge them back only on those slugs. Every other catch-all
+  // page renders under the (lighter) global catalog unchanged.
+  if (isLegalSlug(slugStr)) {
+    const legalMessages = await getLegalMessages(await getMessages(), locale);
+    return (
+      <ScopedMessagesProvider extra={legalMessages}>
+        <CatchAllClient locale={locale} slug={slugStr} />
+      </ScopedMessagesProvider>
+    );
+  }
+
   return <CatchAllClient locale={locale} slug={slugStr} />;
 }
