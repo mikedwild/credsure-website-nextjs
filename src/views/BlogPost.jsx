@@ -214,12 +214,22 @@ export const BlogPost = ({ initialPost = null }) => {
         <div className="absolute inset-0 bg-gradient-to-t from-[#5B22D6]/90 via-[#5B22D6]/50 to-[#3F2BD9]/30" />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="container mx-auto px-6 lg:px-12">
-            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl mx-auto text-center text-white">
+            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="max-w-5xl mx-auto text-center text-white">
               <span className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold mb-6">{postMeta.category}</span>
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">{translatedTitle}</h1>
               <div className="flex items-center justify-center gap-6 text-white/90 flex-wrap">
                 <div className="flex items-center gap-2"><User className="w-5 h-5" />{postMeta.author || 'CredSure Team'}</div>
-                <div className="flex items-center gap-2"><Calendar className="w-5 h-5" />{new Date(postMeta.date).toLocaleDateString(i18n.language === 'de' ? 'de-DE' : 'en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</div>
+                <div className="flex items-center gap-2"><Calendar className="w-5 h-5" />{(() => {
+                  const fmt = (d) => new Date(d).toLocaleDateString(i18n.language === 'de' ? 'de-DE' : 'en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+                  const pub = new Date(postMeta.date).getTime();
+                  const mod = postMeta.date_modified ? new Date(postMeta.date_modified).getTime() : null;
+                  // Show the modified date (labelled) when it's meaningfully newer
+                  // than the publish date so refreshed posts read as fresh, instead
+                  // of showing the original (possibly years-old) publish date.
+                  return mod && mod - pub > 86400000
+                    ? `${t('pages.blog.updated', 'Updated')} ${fmt(postMeta.date_modified)}`
+                    : fmt(postMeta.date);
+                })()}</div>
                 <div className="flex items-center gap-2"><Clock className="w-5 h-5" />{postMeta.readTime}</div>
               </div>
               {postMeta.ai_generated && (

@@ -129,3 +129,46 @@ h1, h2, h3, h4, h5, h6 {
 .bg-brand-purple { background-color: #5B22D6; }
 .bg-brand-purple-light { background-color: #3F2BD9; }
 .border-brand-purple { border-color: #5B22D6; }
+
+/* Blog post body styling. No @tailwindcss/typography plugin, and Tailwind's
+   reset strips list markers and table borders, so rich content (tables, lists)
+   rendered unstyled. Restore the elements the blog sanitizer allows. Scoped to
+   .blog-content. */
+.blog-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.75rem 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.blog-content th,
+.blog-content td {
+  border: 1px solid #e5e7eb;
+  padding: 0.625rem 0.875rem;
+  text-align: left;
+  vertical-align: top;
+}
+.blog-content thead th {
+  background: #f8fafc;
+  font-weight: 600;
+  color: #0f0e1a;
+}
+.blog-content ul,
+.blog-content ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+.blog-content ul { list-style: disc; }
+.blog-content ol { list-style: decimal; }
+.blog-content li { margin: 0.4rem 0; }
+.blog-content blockquote {
+  border-left: 4px solid #5B22D6;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  color: #475569;
+  font-style: italic;
+}
+.blog-content a {
+  color: #5B22D6;
+  text-decoration: underline;
+}
