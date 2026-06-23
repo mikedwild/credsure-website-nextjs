@@ -94,8 +94,8 @@ export const Blog = ({ initialPosts = null }) => {
     return blogData
       .filter(post => {
         const matchesSearch = !searchTerm ||
-          post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
+          (post.title || '').toLowerCase().includes(searchTerm.toLowerCase()) ||
+          (post.excerpt || '').toLowerCase().includes(searchTerm.toLowerCase());
         const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;
         const matchesTopics = selectedTopics.length === 0 ||
           selectedTopics.some(topic => getPostTopics(post).includes(topic));

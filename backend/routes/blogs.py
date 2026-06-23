@@ -2,6 +2,10 @@ from fastapi import APIRouter, HTTPException, Query, Request
 from fastapi.responses import JSONResponse
 from datetime import datetime, timezone
 
+from slowapi.util import get_remote_address
+
+from utils.rate_limit import limiter
+
 router = APIRouter()
 
 
@@ -76,7 +80,11 @@ async def get_blog_post(request: Request, slug: str, lang: str = Query("en")):
     # back to EN content makes /de/blog/x and /en/blog/x serve identical
     # HTML with self-canonicals → Search Console flags it as "Duplicate
     # without user-selected canonical".
-    has_de = bool(post.get("title_de"))
+    # A post counts as German only when BOTH the title AND the body exist —
+    # otherwise a half-translated post (German title, empty German body) would
+    # set served_lang="de" and serve an empty article. Mirrors the translate
+    # helper's own definition of "has a German translation".
+    has_de = bool((post.get("title_de") or "").strip() and (post.get("content_html_de") or "").strip())
     served_lang = "de" if (lang == "de" and has_de) else "en"
 
     # `date_modified` is the canonical "last meaningfully edited" timestamp.
@@ -96,16 +104,18 @@ async def get_blog_post(request: Request, slug: str, lang: str = Query("en")):
         normalized = {
             "id": post.get("id", slug),
             "slug": post.get("slug", slug),
-            "title": post.get("title_de", post.get("title", "")),
-            "excerpt": post.get("excerpt_de", post.get("excerpt", "")),
-            "content_html": post.get("content_html_de", post.get("content_html", "")),
+            # Truthy (`or`) fallbacks so an empty German field falls back to the
+            # English value rather than serving a blank.
+            "title": post.get("title_de") or post.get("title", ""),
+            "excerpt": post.get("excerpt_de") or post.get("excerpt", ""),
+            "content_html": post.get("content_html_de") or post.get("content_html", ""),
             "category": post.get("category", ""),
             "author": post.get("author", ""),
             "date": post.get("date", ""),
             "date_modified": date_modified,
             "readTime": post.get("read_time", ""),
             "featured_image": post.get("featured_image", ""),
-            "tags": post.get("tags_de", post.get("tags", [])),
+            "tags": post.get("tags_de") or post.get("tags", []),
             # SEO meta overrides — prefer the German override, fall back to
             # the English override so a translated post never ships with
             # nothing in <title>/<meta name="description">.
@@ -148,16 +158,20 @@ async def get_blog_post(request: Request, slug: str, lang: str = Query("en")):
 
 
 @router.post("/blogs/{slug}/view")
+@limiter.limit("30/minute")
 async def record_blog_view(request: Request, slug: str):
     """
     Lightweight, fire-and-forget hit counter. Increments
     `blog_posts.view_count` and, for the dashboard's recent-views chart,
-    inserts a row into `blog_views` with a coarse hourly bucket so the
-    collection stays bounded even on viral posts.
+    inserts a row into `blog_views` with a coarse hourly bucket.
 
-    Public endpoint — no auth. We accept that this can be inflated;
-    the admin dashboard treats this as a relative signal, not absolute
-    truth (analytics tools handle absolute).
+    Public endpoint — no auth — so it has two abuse guards:
+      1. A per-IP rate limit (slowapi, 30/min) caps raw request volume.
+      2. Per-IP+slug+hour dedupe: the view_count / blog_views increments
+         only fire on the FIRST hit from an IP for a slug in a given hour,
+         so a refresh/loop can't inflate the counter. The dedupe rows live
+         in `blog_view_dedupe` and self-expire via a TTL index (server.py).
+    The dashboard treats these as a relative signal, not absolute truth.
     """
     db = request.app.state.db
     # Verify the slug exists so bots can't grow the collection by hitting
@@ -167,11 +181,19 @@ async def record_blog_view(request: Request, slug: str):
         raise HTTPException(status_code=404, detail="Post not found")
 
     now = datetime.now(timezone.utc)
-    # Round down to the hour so a refresh-spamming user gets capped per
-    # hour-bucket via the daily aggregation. We still increment the
-    # global counter on every hit because that mirrors GA's "pageviews"
-    # (vs "users") and is what writers expect to see.
+    # Round down to the hour for both the dedupe key and the chart bucket.
     bucket = now.replace(minute=0, second=0, microsecond=0).isoformat()
+
+    # Dedupe: only the first hit from this IP for this slug+hour counts.
+    ip = get_remote_address(request)
+    dedupe = await db.blog_view_dedupe.update_one(
+        {"ip": ip, "slug": slug, "hour": bucket},
+        {"$setOnInsert": {"ip": ip, "slug": slug, "hour": bucket, "created_at": now}},
+        upsert=True,
+    )
+    if dedupe.upserted_id is None:
+        # Already counted this IP for this slug+hour — no-op.
+        return JSONResponse({"ok": True, "counted": False}, headers={"Cache-Control": "no-store"})
 
     await db.blog_posts.update_one(
         {"slug": slug},
@@ -182,4 +204,4 @@ async def record_blog_view(request: Request, slug: str):
         {"$inc": {"count": 1}, "$setOnInsert": {"slug": slug, "hour": bucket}},
         upsert=True,
     )
-    return JSONResponse({"ok": True}, headers={"Cache-Control": "no-store"})
+    return JSONResponse({"ok": True, "counted": True}, headers={"Cache-Control": "no-store"})

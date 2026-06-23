@@ -7,11 +7,13 @@ from fastapi import APIRouter, Request, HTTPException
 from typing import Optional, List
 from datetime import datetime, timezone
 from pydantic import BaseModel
+import re
 import uuid
 
 from models.blog import BlogPostCreate, BlogPostUpdate
 from utils.auth import get_current_admin
 from utils.blog_translate import auto_translate_missing as _auto_translate_missing
+from utils.sanitize import sanitize_blog_fields
 
 
 router = APIRouter()
@@ -34,9 +36,12 @@ async def admin_list_blogs(
     if category:
         query["category"] = category
     if search:
+        # Escape + length-cap the user input so it can't inject a
+        # catastrophic-backtracking regex (ReDoS) or force a full scan.
+        safe = re.escape(search.strip()[:100])
         query["$or"] = [
-            {"title": {"$regex": search, "$options": "i"}},
-            {"slug": {"$regex": search, "$options": "i"}},
+            {"title": {"$regex": safe, "$options": "i"}},
+            {"slug": {"$regex": safe, "$options": "i"}},
         ]
 
     total = await db.blog_posts.count_documents(query)
@@ -199,6 +204,9 @@ async def admin_create_blog(request: Request, body: BlogPostCreate):
     # Auto-translate missing language
     doc = await _auto_translate_missing(doc, db=db)
 
+    # Sanitize HTML on write (defense-in-depth — don't trust the client).
+    doc = sanitize_blog_fields(doc)
+
     await db.blog_posts.insert_one(doc)
     doc.pop("_id", None)
     return {"post": doc, "message": "Post created"}
@@ -244,6 +252,9 @@ async def admin_update_blog(request: Request, slug: str, body: BlogPostUpdate):
         ]:
             if key not in updates and translated.get(key) != existing.get(key) and translated.get(key):
                 updates[key] = translated[key]
+
+    # Sanitize any HTML body fields being written (defense-in-depth).
+    updates = sanitize_blog_fields(updates)
 
     result = await db.blog_posts.update_one({"slug": slug}, {"$set": updates})
     if result.matched_count == 0:

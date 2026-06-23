@@ -3,8 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
 from starlette.middleware.base import BaseHTTPMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
-from slowapi import Limiter, _rate_limit_exceeded_handler
-from slowapi.util import get_remote_address
+from slowapi import _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
 from slowapi.middleware import SlowAPIMiddleware
 import os
@@ -82,8 +81,9 @@ ALLOWED_ORIGIN_REGEX = os.environ.get(
     r"https://credsure-website-nextjs[a-z0-9-]*\.vercel\.app",
 )
 
-# Initialize rate limiter
-limiter = Limiter(key_func=get_remote_address)
+# Rate limiter — shared instance lives in utils.rate_limit so route modules
+# can import it for @limiter.limit(...) without a circular import on server.
+from utils.rate_limit import limiter
 
 # Create FastAPI app
 app = FastAPI(
@@ -170,6 +170,15 @@ async def startup_db_client():
         logger.info("Admin user seeded")
     except Exception as e:
         logger.warning(f"Admin seed error: {e}")
+    # TTL index so the blog view-dedupe collection self-expires (keeps it
+    # bounded). `created_at` is stored as a BSON Date (datetime) for TTL to
+    # apply. 2h covers the per-hour dedupe window with margin.
+    try:
+        await app.state.db.blog_view_dedupe.create_index(
+            "created_at", expireAfterSeconds=7200
+        )
+    except Exception as e:
+        logger.warning(f"view-dedupe index error: {e}")
 
 @app.on_event("shutdown")
 async def shutdown_db_client():

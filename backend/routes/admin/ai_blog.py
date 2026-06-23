@@ -13,6 +13,8 @@ import logging
 from utils.auth import get_current_admin
 from utils.ai_content import recommend_topics, generate_blog_post
 from utils.blog_translate import auto_translate_missing as _auto_translate_missing
+from utils.sanitize import sanitize_blog_fields
+from utils.rate_limit import limiter
 from ai import feature_flags as ai_flags
 from ai import job_store as ai_jobs
 
@@ -42,6 +44,7 @@ async def admin_ai_recommend(request: Request):
 
 
 @router.post("/admin/ai/generate")
+@limiter.limit("20/hour")
 async def admin_ai_generate(request: Request, body: GenerateRequest):
     """Generate a full blog post from a topic, auto-translate, and save as draft."""
     await get_current_admin(request)
@@ -94,6 +97,9 @@ async def admin_ai_generate(request: Request, body: GenerateRequest):
 
     # Auto-translate to German
     doc = await _auto_translate_missing(doc, db=db)
+
+    # Sanitize LLM-produced HTML on write — model output is untrusted input.
+    doc = sanitize_blog_fields(doc)
 
     await db.blog_posts.insert_one(doc)
     doc.pop("_id", None)
@@ -338,6 +344,8 @@ async def _perform_generate_draft(db, body: "GenerateDraftRequest") -> dict:
         "updated_at": now,
     }
     doc = await _auto_translate_missing(doc, db=db)
+    # Sanitize LLM-produced HTML on write — model output is untrusted input.
+    doc = sanitize_blog_fields(doc)
     await db.blog_posts.insert_one(doc)
     doc.pop("_id", None)
 
@@ -353,6 +361,7 @@ async def _perform_generate_draft(db, body: "GenerateDraftRequest") -> dict:
 
 
 @router.post("/admin/ai/generate-draft")
+@limiter.limit("20/hour")
 async def admin_ai_generate_draft(request: Request, body: GenerateDraftRequest):
     """
     Synchronous draft generation — kept for backwards compatibility and
@@ -368,6 +377,7 @@ async def admin_ai_generate_draft(request: Request, body: GenerateDraftRequest):
 # ─── Async AI Jobs (avoids 100s proxy timeout for long generation) ────
 
 @router.post("/admin/ai/jobs/generate-draft")
+@limiter.limit("20/hour")
 async def admin_ai_jobs_generate_draft(
     request: Request,
     body: GenerateDraftRequest,

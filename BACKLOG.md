@@ -13,23 +13,24 @@ The Next.js site on Vercel now serves `credsure.io` — the old Emergent/CRA sit
 ## 🔎 Blog audit (2026-06-23)
 Full-stack blog audit (frontend SSR/SEO/i18n + FastAPI backend), verified against the running app + production API. Overall healthy — SSR/SEO correct, filters work, sanitization in place, EN/DE i18n complete.
 
-### ✅ Fixed this session
+### ✅ Fixed — frontend (2026-06-23, shipped c4c2130)
 - **Dead newsletter form on `/[locale]/blog`** — the "Stay Updated" CTA (`src/views/Blog.jsx`) had no `<form>`, no handler, an uncontrolled input and a no-op Subscribe button. Wired it to `/api/leads` (mirrors `InlineBlogCTA`, `source: "blog-index-newsletter"`) with success state. Verified live: captured POST + success render, no navigation.
 - **Soft-404 on missing post slugs** — `blog/[slug]/page.tsx` returned HTTP 200 + perpetual spinner for unknown slugs (Google soft-404). Now calls `notFound()` when the post is null. Verified: bad slug → 404, real post → 200.
 
-### 🟠 Open — backend hardening (`backend/routes/...`, needs Railway deploy)
-- **Stored XSS — HTML never sanitized on write** (`admin/blogs.py:182/208`, `ai_blog.py`). Sanitization is read-path only (frontend `sanitize-html`/DOMPurify); the DB trusts the client. Sanitize server-side on write with `nh3`/`bleach` (defense-in-depth).
-- **Public view-ping unbounded** (`blogs.py:150`) — `POST /blogs/{slug}/view` has no auth, no rate limit, no IP/session dedupe; `view_count` is trivially inflatable. Docstring wrongly claims it's capped. Add `@limiter.limit` + per-IP+slug+hour dedupe.
-- **DE half-translation** (`blogs.py:79`) — `has_de` keys only on `title_de`, so a German title with an empty German body serves `served_lang="de"` + empty article. Gate on title AND body; use truthy (`or`) fallbacks for empty strings.
-- **Editor role can delete/publish/run paid AI** — only bulk-delete re-checks `admin` (`admin/blogs.py` vs `utils/auth.py`). Decide policy; AI-generate endpoints also lack a cost/rate ceiling.
-- **Regex injection / ReDoS** in admin search (`admin/blogs.py:38`) — `re.escape(search)` + cap length.
-- **`BlogPostUpdate.status` unvalidated** (`models/blog.py:42`) — arbitrary status silently hides a post; add the create model's `draft|published|scheduled` pattern.
+### ✅ Fixed — backend hardening + frontend polish (2026-06-23) — NEEDS RAILWAY DEPLOY to take effect
+Backend changes verified by py_compile + a real `bleach` unit test of the sanitizer + import test of the shared limiter (full boot is healthcheck-gated on Railway). Fresh reviewer PASS.
+- **Stored XSS — now sanitized on write.** New `backend/utils/sanitize.py` (`bleach==6.1.0`, allowlist mirrors the frontend `sanitize-html` config). Called in `admin/blogs.py` create+update and both `ai_blog.py` AI write paths. Defense-in-depth on top of the read-path sanitizer; also closes the gap that `blogApi.ts` never sanitized `content_html_de`.
+- **View-ping rate-limited + deduped** (`blogs.py`) — `@limiter.limit("30/minute")` + per-IP+slug+hour dedupe via new `blog_view_dedupe` collection (only the first hit increments `view_count`). TTL index (2h, `created_at` as BSON Date) created in `server.py` startup. Limiter moved to shared `backend/utils/rate_limit.py` to avoid a circular import.
+- **DE half-translation fixed** (`blogs.py`) — `has_de` now requires `title_de` AND `content_html_de`; DE branch uses truthy (`or`) fallbacks so an empty German field falls back to EN instead of serving a blank.
+- **Regex injection / ReDoS** — `re.escape` + 100-char cap on admin search (`admin/blogs.py`).
+- **`BlogPostUpdate.status` validated** (`models/blog.py`) — now has the `draft|published|scheduled` pattern.
+- **AI generate endpoints rate-limited** — `@limiter.limit("20/hour")` on the 3 `ai_blog.py` generate endpoints (cost ceiling). **Editor access kept** (per decision) — editors can still delete/publish/generate.
+- **Frontend:** search-filter crash guard (`Blog.jsx` — `(post.title||'')`); post-hero `<img>` now `loading="eager" fetchPriority="high"` for LCP (`BlogPost.jsx`).
+- **Post-deploy smoke test:** Railway startup log should have no `view-dedupe index error`; `POST /blogs/{slug}/view` returns `{counted:true}` then `{counted:false}` on immediate repeat.
 
-### 🟡 Open — frontend lower priority
-- **Latent search-filter crash** (`Blog.jsx:60-61`) — `post.title.toLowerCase()` throws if a post lacks `title`/`excerpt` (not triggerable on current data; add `(post.title || '')` guards).
-- **Redundant double-translation** — list API already returns localized `title`/`excerpt`, yet cards re-translate via `t('${slug}.title')` from `blog.json`. Two sources of truth; **126 API posts vs 123 catalog entries** (3 fall through to `defaultValue`).
-- **Post hero `<img loading="lazy">`** (`BlogPost.jsx:209`) is the LCP element — lazy + 40% opacity hurts LCP; use eager/priority (ties into mobile-LCP work).
-- **List endpoint omits `served_lang`/`date_modified`/`ai_generated`** so cards can't reflect per-post language — minor SEO inconsistency vs detail endpoint.
+### 🟡 Open — deliberately deferred (not a bug)
+- **Redundant double-translation** — list API already returns localized `title`/`excerpt`, yet cards re-translate via `t('${slug}.title')` from `blog.json`. Both sources are genuine German (DE catalog 122/123 translated), so **no visible bug** — pure tech debt. Removing it is a 126-page, SEO-affecting refactor with ~zero user benefit; left as-is intentionally.
+- **List endpoint omits `served_lang`/`date_modified`/`ai_generated`** — cards can't reflect per-post language; minor SEO nicety vs the detail endpoint. Low value, deferred.
 
 ### ⚠️ Out of scope (noted)
 - **Hydration mismatch in `<GtmScripts>`** (GTM/PostHog injection) at the layout level — affects every page incl. blog; not blog code. Worth a separate look.

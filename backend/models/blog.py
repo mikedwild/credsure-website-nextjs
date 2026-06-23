@@ -39,7 +39,7 @@ class BlogPostUpdate(BaseModel):
     tags_de: Optional[List[str]] = None
     author: Optional[str] = None
     read_time: Optional[str] = None
-    status: Optional[str] = None
+    status: Optional[str] = Field(default=None, pattern="^(draft|published|scheduled)$")
     scheduled_at: Optional[str] = None
     featured_image: Optional[str] = None
     seo_title: Optional[str] = None
