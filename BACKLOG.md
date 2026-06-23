@@ -40,8 +40,9 @@ The DB/API is now the single source of truth for blog translations (was a real c
 ### 🟡 Open — deliberately deferred (low value)
 - **List endpoint omits `served_lang`/`date_modified`/`ai_generated`** — cards can't show an AI badge / "updated" date / per-card language; minor SEO/UX nicety vs the detail endpoint. Additive + low-risk, but no current consumer — do only on demand.
 
-### ⚠️ Out of scope (noted) — recommended next, as its own task
-- **Hydration mismatch in `<GtmScripts>`** (GTM/PostHog injection, `src/components/AnalyticsScripts.tsx`) at the layout level — raw inline `<script>` in the hydrated `<body>` mutates the DOM before hydration → React falls back to client-re-rendering the body (hurts LCP/TBT) and logs an every-page error. Fix: move to `next/script` (`beforeInteractive` for consent+GTM to preserve GDPR ordering, `afterInteractive`/`lazyOnload` for PostHog). Highest site-wide value; affects every page incl. blog; not blog code.
+### ✅ Fixed — GtmScripts hydration mismatch → next/script (2026-06-23)
+The GTM/PostHog loaders were raw inline `<script>` children of `<body>`; GTM/PostHog injected sibling `<script>`s that shifted positions → React hydration mismatch on **every page**, forcing a client re-render of the body (hurt LCP/TBT + every-page console error). Converted `src/components/AnalyticsScripts.tsx` to `next/script`: consent-default + gtm-loader `strategy="beforeInteractive"` (injected into `<head>`, run before hydration, in placement order — so the GDPR consent→GTM sequence is preserved), PostHog `strategy="afterInteractive"`. Suppressed the `no-before-interactive-script-outside-document` eslint warning (Pages-Router-only rule; App Router puts beforeInteractive in the root layout, which `[locale]/layout.tsx` is). **Verified live:** SSR HTML has consent-default before gtm-loader, `gtag`/`dataLayer`/`posthog` all functional, consent defaults to denied, and **zero console errors** (hydration mismatch gone) on homepage + blog post. Fresh reviewer PASS against the Next 16 docs.
+- Note: the two `<script type="application/ld+json">` tags in `[locale]/layout.tsx` remain plain body children — inert (`ld+json` never executes, no sibling injection), so they don't reproduce the bug. Left as-is.
 
 ---
 

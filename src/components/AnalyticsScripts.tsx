@@ -10,10 +10,17 @@
  * Ordering is load-bearing: the Consent Mode v2 default (everything DENIED)
  * MUST execute before GTM so GA4 starts in a compliant state. `useCookieConsent`
  * flips storage to 'granted' (and opts PostHog in) once the user accepts.
- * Raw inline <script> tags execute in document parse order, which guarantees
- * that sequence — more reliably than next/script strategy juggling.
+ *
+ * These load via `next/script` rather than raw inline <script> tags. Raw inline
+ * scripts were rendered as React children of <body>, so when GTM/PostHog
+ * injected their own <script> siblings the body's hydration reconciliation
+ * mismatched ("a tree hydrated but some attributes didn't match") on every page,
+ * forcing a client re-render of the body. `next/script` with
+ * `strategy="beforeInteractive"` is injected into the initial HTML OUTSIDE the
+ * React tree and still executes in placement order (per the Next 16 docs), so
+ * the consent→GTM sequence is preserved without the hydration mismatch.
  */
-import React from "react";
+import Script from "next/script";
 
 const GTM_ID = "GTM-NSZF3Q8";
 
@@ -40,14 +47,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','${GTM_ID}');`;
 
 /**
- * Consent default + GTM loader + GTM <noscript> fallback.
- * Render as the FIRST children of <body> so they run before anything else.
+ * Consent default + GTM loader + GTM <noscript> fallback. The two scripts are
+ * `beforeInteractive` (injected into the initial HTML, run before hydration, in
+ * order — consent first), so DOM position no longer matters for execution.
  */
 export function GtmScripts() {
   return (
     <>
-      <script dangerouslySetInnerHTML={{ __html: CONSENT_DEFAULT }} />
-      <script dangerouslySetInnerHTML={{ __html: GTM_LOADER }} />
+      {/* eslint-disable-next-line @next/next/no-before-interactive-script-outside-document --
+         App Router has no _document; beforeInteractive belongs in the root layout
+         (this renders <html>/<body>) per the Next 16 docs. Rule is Pages-Router-only. */}
+      <Script
+        id="gtm-consent-default"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{ __html: CONSENT_DEFAULT }}
+      />
+      {/* eslint-disable-next-line @next/next/no-before-interactive-script-outside-document -- see above */}
+      <Script
+        id="gtm-loader"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{ __html: GTM_LOADER }}
+      />
       <noscript>
         <iframe
           src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
@@ -143,7 +163,14 @@ if ("requestIdleCallback" in window) {
 }
 `;
 
-/** PostHog stub + deferred init. Render near the end of <body>. */
+/** PostHog stub + deferred init. `afterInteractive` (Next-managed, not a
+ * hydrated body child); the script itself further defers init to idle. */
 export function PostHogScript() {
-  return <script dangerouslySetInnerHTML={{ __html: POSTHOG }} />;
+  return (
+    <Script
+      id="posthog-init"
+      strategy="afterInteractive"
+      dangerouslySetInnerHTML={{ __html: POSTHOG }}
+    />
+  );
 }
