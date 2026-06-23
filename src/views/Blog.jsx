@@ -8,6 +8,7 @@ import { getPostTopics, localizeBlogLabel } from '../utils/blogUtils';
 import { BlogCard } from './BlogCard';
 import { BlogFilters } from './BlogFilters';
 import { BlogPagination } from './BlogPagination';
+import { trackNewsletterSignup } from '@/lib/analytics';
 
 const POSTS_PER_PAGE = 12;
 
@@ -25,8 +26,44 @@ export const Blog = ({ initialPosts = null }) => {
   const [selectedTopics, setSelectedTopics] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [showMobileFilters, setShowMobileFilters] = useState(false);
+  // Blog-index newsletter CTA state (the "Stay Updated" section). Mirrors the
+  // in-article InlineBlogCTA submit so the index form actually subscribes
+  // instead of silently doing nothing.
+  const [newsletterEmail, setNewsletterEmail] = useState('');
+  const [newsletterSubmitting, setNewsletterSubmitting] = useState(false);
+  const [newsletterSuccess, setNewsletterSuccess] = useState(false);
   const baseUrl = getBaseUrl();
   const blogTopRef = useRef(null);
+
+  const handleNewsletterSubmit = async (e) => {
+    e.preventDefault();
+    if (!newsletterEmail || newsletterSubmitting) return;
+    setNewsletterSubmitting(true);
+    try {
+      const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || '';
+      const response = await fetch(`${API_URL}/api/leads`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: newsletterEmail,
+          name: '',
+          company: '',
+          role: '',
+          source: 'blog-index-newsletter',
+          interests: ['Blog Newsletter'],
+          timestamp: new Date().toISOString(),
+        }),
+      });
+      if (response.ok) {
+        setNewsletterSuccess(true);
+        trackNewsletterSignup({ source: 'blog-index-newsletter' });
+      }
+    } catch (err) {
+      console.error('Blog newsletter submission failed:', err.message);
+    } finally {
+      setNewsletterSubmitting(false);
+    }
+  };
 
   useEffect(() => {
     // Server already seeded the list for this locale (keyed remount on locale
@@ -239,10 +276,31 @@ export const Blog = ({ initialPosts = null }) => {
           <div className="max-w-3xl mx-auto text-center text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">{t('pages.blog.stayUpdated', 'Stay Updated')}</h2>
             <p className="text-lg text-white/90 mb-8">{t('pages.blog.stayUpdatedDesc', 'Get the latest insights on digital credentialing delivered to your inbox')}</p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input type="email" placeholder={t('pages.blog.emailPlaceholder', 'Enter your email')} className="flex-1 px-6 py-3 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50" />
-              <button className="px-8 py-3 bg-white text-[#5B22D6] rounded-xl font-semibold hover:bg-white/90 transition-colors">{t('pages.blog.subscribe', 'Subscribe')}</button>
-            </div>
+            {newsletterSuccess ? (
+              <p className="text-lg font-semibold text-white" data-testid="blog-newsletter-success">
+                {t('inlineCTA.success', "You're subscribed! Check your inbox for insights.")}
+              </p>
+            ) : (
+              <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <input
+                  type="email"
+                  required
+                  value={newsletterEmail}
+                  onChange={(e) => setNewsletterEmail(e.target.value)}
+                  placeholder={t('pages.blog.emailPlaceholder', 'Enter your email')}
+                  data-testid="blog-newsletter-email"
+                  className="flex-1 px-6 py-3 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50"
+                />
+                <button
+                  type="submit"
+                  disabled={newsletterSubmitting}
+                  data-testid="blog-newsletter-submit"
+                  className="px-8 py-3 bg-white text-[#5B22D6] rounded-xl font-semibold hover:bg-white/90 transition-colors disabled:opacity-50"
+                >
+                  {newsletterSubmitting ? '...' : t('pages.blog.subscribe', 'Subscribe')}
+                </button>
+              </form>
+            )}
           </div>
         </div>
       </section>

@@ -10,6 +10,32 @@ The Next.js site on Vercel now serves `credsure.io` — the old Emergent/CRA sit
 
 ---
 
+## 🔎 Blog audit (2026-06-23)
+Full-stack blog audit (frontend SSR/SEO/i18n + FastAPI backend), verified against the running app + production API. Overall healthy — SSR/SEO correct, filters work, sanitization in place, EN/DE i18n complete.
+
+### ✅ Fixed this session
+- **Dead newsletter form on `/[locale]/blog`** — the "Stay Updated" CTA (`src/views/Blog.jsx`) had no `<form>`, no handler, an uncontrolled input and a no-op Subscribe button. Wired it to `/api/leads` (mirrors `InlineBlogCTA`, `source: "blog-index-newsletter"`) with success state. Verified live: captured POST + success render, no navigation.
+- **Soft-404 on missing post slugs** — `blog/[slug]/page.tsx` returned HTTP 200 + perpetual spinner for unknown slugs (Google soft-404). Now calls `notFound()` when the post is null. Verified: bad slug → 404, real post → 200.
+
+### 🟠 Open — backend hardening (`backend/routes/...`, needs Railway deploy)
+- **Stored XSS — HTML never sanitized on write** (`admin/blogs.py:182/208`, `ai_blog.py`). Sanitization is read-path only (frontend `sanitize-html`/DOMPurify); the DB trusts the client. Sanitize server-side on write with `nh3`/`bleach` (defense-in-depth).
+- **Public view-ping unbounded** (`blogs.py:150`) — `POST /blogs/{slug}/view` has no auth, no rate limit, no IP/session dedupe; `view_count` is trivially inflatable. Docstring wrongly claims it's capped. Add `@limiter.limit` + per-IP+slug+hour dedupe.
+- **DE half-translation** (`blogs.py:79`) — `has_de` keys only on `title_de`, so a German title with an empty German body serves `served_lang="de"` + empty article. Gate on title AND body; use truthy (`or`) fallbacks for empty strings.
+- **Editor role can delete/publish/run paid AI** — only bulk-delete re-checks `admin` (`admin/blogs.py` vs `utils/auth.py`). Decide policy; AI-generate endpoints also lack a cost/rate ceiling.
+- **Regex injection / ReDoS** in admin search (`admin/blogs.py:38`) — `re.escape(search)` + cap length.
+- **`BlogPostUpdate.status` unvalidated** (`models/blog.py:42`) — arbitrary status silently hides a post; add the create model's `draft|published|scheduled` pattern.
+
+### 🟡 Open — frontend lower priority
+- **Latent search-filter crash** (`Blog.jsx:60-61`) — `post.title.toLowerCase()` throws if a post lacks `title`/`excerpt` (not triggerable on current data; add `(post.title || '')` guards).
+- **Redundant double-translation** — list API already returns localized `title`/`excerpt`, yet cards re-translate via `t('${slug}.title')` from `blog.json`. Two sources of truth; **126 API posts vs 123 catalog entries** (3 fall through to `defaultValue`).
+- **Post hero `<img loading="lazy">`** (`BlogPost.jsx:209`) is the LCP element — lazy + 40% opacity hurts LCP; use eager/priority (ties into mobile-LCP work).
+- **List endpoint omits `served_lang`/`date_modified`/`ai_generated`** so cards can't reflect per-post language — minor SEO inconsistency vs detail endpoint.
+
+### ⚠️ Out of scope (noted)
+- **Hydration mismatch in `<GtmScripts>`** (GTM/PostHog injection) at the layout level — affects every page incl. blog; not blog code. Worth a separate look.
+
+---
+
 ## 🔐 Security — rotate keys (priority, needs your dashboards)
 De-tokenizing is done; **the already-exposed secrets still need rotating** (I can't — needs GitHub/Atlas/Supabase consoles):
 1. **Rotate the GitHub PAT** (GitHub → Settings → Developer settings → Personal access tokens → revoke + regenerate). Also rotate Supabase + MongoDB keys if ever exposed, and the old `bilingual-lead-gen` Mongo password (exposed in chat; nothing depends on it now).

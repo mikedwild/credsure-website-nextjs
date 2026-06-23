@@ -8,6 +8,7 @@
  * the server-fetched post), so crawlers get a unique, fully-rendered page.
  */
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { getMessages } from "next-intl/server";
 import PageShell from "@/components/PageShell";
 import { ScopedMessagesProvider } from "@/components/ScopedMessagesProvider";
@@ -88,6 +89,10 @@ export default async function Page({
   const { locale, slug } = await params;
   const loc = locale === "de" ? "de" : "en";
   const post = await getBlogPost(slug, loc);
+  // A missing post must return a real 404, not a 200 with a perpetual spinner
+  // (that's a soft-404 — Google flags it, the exact failure the SSR refactor
+  // was meant to fix). generateMetadata already emits a generic title for null.
+  if (!post) notFound();
   const blogMessages = await getBlogMessages(await getMessages(), locale);
   return (
     <ScopedMessagesProvider extra={blogMessages}>
