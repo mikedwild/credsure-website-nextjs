@@ -29,6 +29,10 @@ HERE = Path(__file__).parent
 BACKEND = os.environ.get("BACKEND_ORIGIN", "").rstrip("/")
 TOKEN = os.environ.get("ADMIN_TOKEN", "")
 APPLY = "--apply" in sys.argv
+# --only <substr>: restrict the run to files/slugs matching <substr>. Lets you
+# re-publish a single post without re-touching (and slowly re-translating) the
+# rest. e.g. --only what-are-digital-badges
+ONLY = (sys.argv[sys.argv.index("--only") + 1] if "--only" in sys.argv else "")
 
 
 def _req(method, url, body=None):
@@ -38,7 +42,9 @@ def _req(method, url, body=None):
     if TOKEN:
         req.add_header("Authorization", f"Bearer {TOKEN}")
     try:
-        with urllib.request.urlopen(req, timeout=30) as r:
+        # Long timeout: the create/update endpoints auto-translate the article to
+        # German via an LLM on save, which can take well over 30s for a long post.
+        with urllib.request.urlopen(req, timeout=int(os.environ.get("PUBLISH_TIMEOUT", "600"))) as r:
             return r.status, json.loads(r.read() or "{}")
     except urllib.error.HTTPError as e:
         return e.code, {"error": (e.read() or b"").decode()[:300]}
@@ -83,6 +89,10 @@ def main():
         slug = f.stem[len("update--"):]
         body = json.loads(f.read_text())
         plan.append(("PUT", slug, f.name, body))
+
+    if ONLY:
+        plan = [p for p in plan if ONLY in p[1] or ONLY in p[2]]
+        print(f"Filter:  --only '{ONLY}' -> {len(plan)} matching file(s)\n")
 
     for verb, slug, name, body in plan:
         title = body.get("title", "(no title change)")
