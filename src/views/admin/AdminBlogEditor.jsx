@@ -684,7 +684,19 @@ export default function AdminBlogEditor({ token, slug, userRole, onBack }) {
               Content ({activeLang === 'en' ? 'English' : 'German'})
             </label>
             <div className="admin-quill-wrapper bg-white  border border-gray-200   rounded-xl overflow-hidden">
+              {/* key={activeLang} forces a fresh editor instance per language.
+                  Without it, the SAME react-quill instance has its `value` AND
+                  `onChange` swapped in one render on a language switch. The new
+                  `value` makes react-quill call setContents(); Quill normalizes
+                  the HTML so its emitted value differs from the raw input, which
+                  re-fires onChange — but during shouldComponentUpdate the
+                  instance still holds the PREVIOUS render's props, so the old
+                  language's onChange runs and writes the incoming content into
+                  the wrong field (e.g. German body overwriting content_html).
+                  Remounting gives the new instance the correct props from mount,
+                  so the normalization onChange targets the right field. */}
               <QuillEditor
+                key={activeLang}
                 ref={quillRef}
                 modules={quillModules}
                 value={activeLang === 'en' ? form.content_html : form.content_html_de}
