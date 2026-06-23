@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect, useCallback } from 'react';
-import { Save, CheckCircle, AlertTriangle } from 'lucide-react';
+import { Save, CheckCircle, AlertTriangle, Copy, RefreshCw, Trash2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || '';
@@ -25,10 +25,16 @@ export default function AdminSettings({ token }) {
   const [keyMeta, setKeyMeta] = useState({
     anthropic_api_key_set: false, anthropic_api_key_hint: '',
     openai_api_key_set: false, openai_api_key_hint: '',
+    publishing_token_set: false, publishing_token_hint: '',
   });
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
   const [saveError, setSaveError] = useState('');
+  // Publishing service token: generate/revoke (not paste). The full token is
+  // returned once on generate and shown in `newToken` until the next reload.
+  const [tokenBusy, setTokenBusy] = useState(false);
+  const [newToken, setNewToken] = useState('');
+  const [tokenMsg, setTokenMsg] = useState('');
 
   // Apply a masked settings payload ({...fields, *_set, *_hint}) to local
   // state: blank the secret inputs (they're write-only) and refresh the
@@ -40,6 +46,8 @@ export default function AdminSettings({ token }) {
       anthropic_api_key_hint: s.anthropic_api_key_hint || '',
       openai_api_key_set: !!s.openai_api_key_set,
       openai_api_key_hint: s.openai_api_key_hint || '',
+      publishing_token_set: !!s.publishing_token_set,
+      publishing_token_hint: s.publishing_token_hint || '',
     });
   }, []);
 
@@ -82,6 +90,44 @@ export default function AdminSettings({ token }) {
   };
 
   const setField = (key, value) => setForm(prev => ({ ...prev, [key]: value }));
+
+  const generatePublishingToken = async () => {
+    if (keyMeta.publishing_token_set &&
+        !window.confirm('Generate a new publishing token? The current one stops working immediately.')) return;
+    setTokenBusy(true); setTokenMsg(''); setNewToken('');
+    try {
+      const res = await fetch(`${API_URL}/api/admin/settings/publishing-token`, {
+        method: 'POST', headers: { 'Authorization': `Bearer ${token}` },
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.detail || `HTTP ${res.status}`);
+      setNewToken(data.token);
+      setKeyMeta(prev => ({ ...prev, publishing_token_set: true, publishing_token_hint: data.hint || '' }));
+    } catch (e) {
+      setTokenMsg(e.message || 'Failed to generate token');
+    } finally { setTokenBusy(false); }
+  };
+
+  const revokePublishingToken = async () => {
+    if (!window.confirm('Revoke the publishing token? Scripts using it will stop working.')) return;
+    setTokenBusy(true); setTokenMsg(''); setNewToken('');
+    try {
+      const res = await fetch(`${API_URL}/api/admin/settings/publishing-token`, {
+        method: 'DELETE', headers: { 'Authorization': `Bearer ${token}` },
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data.detail || `HTTP ${res.status}`);
+      setKeyMeta(prev => ({ ...prev, publishing_token_set: false, publishing_token_hint: '' }));
+      setTokenMsg('Token revoked');
+    } catch (e) {
+      setTokenMsg(e.message || 'Failed to revoke token');
+    } finally { setTokenBusy(false); }
+  };
+
+  const copyToken = async () => {
+    try { await navigator.clipboard.writeText(newToken); setTokenMsg('Copied to clipboard'); }
+    catch { setTokenMsg('Copy failed — select the token and copy manually'); }
+  };
 
   const Field = ({ label, field, type, rows }) => (
     <div>
@@ -168,6 +214,50 @@ export default function AdminSettings({ token }) {
         </div>
         <KeyField label="Anthropic API Key" field="anthropic_api_key" placeholder="sk-ant-..." />
         <KeyField label="OpenAI API Key" field="openai_api_key" placeholder="sk-..." />
+      </div>
+
+      <div className="bg-white border border-gray-200 rounded-2xl p-6 space-y-4" data-testid="settings-publishing-token">
+        <div>
+          <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider flex items-center justify-between">
+            <span>Publishing API Token</span>
+            {keyMeta.publishing_token_set ? (
+              <span className="inline-flex items-center gap-1 text-emerald-600 normal-case tracking-normal font-medium text-xs">
+                <CheckCircle className="w-3.5 h-3.5" /> Active {keyMeta.publishing_token_hint && <code className="text-gray-400">{keyMeta.publishing_token_hint}</code>}
+              </span>
+            ) : (
+              <span className="inline-flex items-center gap-1 text-amber-600 normal-case tracking-normal font-medium text-xs">
+                <AlertTriangle className="w-3.5 h-3.5" /> Not set
+              </span>
+            )}
+          </h3>
+          <p className="text-xs text-gray-500 mt-1">
+            A long-lived token for publishing posts from scripts/CLI without signing in.
+            Editor-scoped (manages posts; cannot change settings). Stored hashed and shown only once.
+          </p>
+        </div>
+
+        {newToken && (
+          <div className="bg-amber-50 border border-amber-200 rounded-xl p-3 space-y-2" data-testid="settings-new-token">
+            <p className="text-xs text-amber-800 font-medium">Copy this token now — it won&apos;t be shown again.</p>
+            <div className="flex items-center gap-2">
+              <code className="flex-1 break-all text-xs bg-white border border-amber-200 rounded-lg px-3 py-2 font-mono text-gray-800">{newToken}</code>
+              <Button size="sm" variant="outline" onClick={copyToken} aria-label="Copy token"><Copy className="w-3.5 h-3.5" /></Button>
+            </div>
+          </div>
+        )}
+
+        <div className="flex items-center gap-3 flex-wrap">
+          <Button onClick={generatePublishingToken} disabled={tokenBusy} variant="outline" data-testid="settings-generate-token">
+            <RefreshCw className={`w-4 h-4 mr-2 ${tokenBusy ? 'animate-spin' : ''}`} />
+            {keyMeta.publishing_token_set ? 'Regenerate' : 'Generate token'}
+          </Button>
+          {keyMeta.publishing_token_set && (
+            <Button onClick={revokePublishingToken} disabled={tokenBusy} variant="outline" className="border-red-300 text-red-600 hover:bg-red-50" data-testid="settings-revoke-token">
+              <Trash2 className="w-4 h-4 mr-2" /> Revoke
+            </Button>
+          )}
+          {tokenMsg && <span className="text-xs text-gray-500" data-testid="settings-token-msg">{tokenMsg}</span>}
+        </div>
       </div>
 
       <div className="flex items-center gap-4">

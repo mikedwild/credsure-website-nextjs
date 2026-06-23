@@ -1,5 +1,6 @@
 import os
 import secrets
+import hashlib
 import bcrypt
 import jwt
 import pyotp
@@ -94,6 +95,36 @@ def generate_recovery_codes() -> list:
     return [secrets.token_hex(4).upper() for _ in range(RECOVERY_CODE_COUNT)]
 
 
+# ── Publishing service token ─────────────────────────────────────────────
+# A long-lived bearer token (generated in admin Settings) that lets scripts
+# publish blog posts without the interactive OAuth flow. Stored hashed at rest;
+# resolves to an editor-scoped principal so it can manage blogs but NOT reach
+# settings / user-management / token minting (those require the admin role).
+PUBLISHING_TOKEN_PREFIX = "csk_"
+
+
+def hash_publishing_token(token: str) -> str:
+    return hashlib.sha256(token.encode("utf-8")).hexdigest()
+
+
+async def _publishing_token_user(db, token: str):
+    if not token or not token.startswith(PUBLISHING_TOKEN_PREFIX):
+        return None
+    settings = await db.site_settings.find_one(
+        {"key": "global"}, {"_id": 0, "publishing_token_hash": 1}
+    )
+    stored = (settings or {}).get("publishing_token_hash") or ""
+    if stored and secrets.compare_digest(stored, hash_publishing_token(token)):
+        return {
+            "email": "publishing-token@credsure.io",
+            "name": "Publishing API token",
+            "role": "editor",
+            "active": True,
+            "is_service_token": True,
+        }
+    return None
+
+
 async def get_current_admin(request: Request) -> dict:
     """
     Resolve the current admin/editor.
@@ -101,7 +132,8 @@ async def get_current_admin(request: Request) -> dict:
     Auth precedence:
       1. `session_token` cookie (Emergent Google OAuth — primary path)
       2. `session_token` from Authorization: Bearer header (testing / API clients)
-      3. Legacy JWT in Authorization: Bearer header (kept for any existing
+      3. Publishing service token (`csk_…`) — editor-scoped, for scripted publishing
+      4. Legacy JWT in Authorization: Bearer header (kept for any existing
          scripted callers; the React UI no longer issues these)
 
     Any active+whitelisted user is acceptable.
@@ -135,7 +167,13 @@ async def get_current_admin(request: Request) -> dict:
                 raise HTTPException(status_code=403, detail="Account deactivated")
             return user
 
-    # --- 3: Legacy JWT fallback ------------------------------------------
+    # --- 3: Publishing service token (csk_…) -----------------------------
+    if token:
+        svc = await _publishing_token_user(db, token)
+        if svc:
+            return svc
+
+    # --- 4: Legacy JWT fallback ------------------------------------------
     auth_header = request.headers.get("Authorization", "")
     if not auth_header.startswith("Bearer "):
         raise HTTPException(status_code=401, detail="Not authenticated")

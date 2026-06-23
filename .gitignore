@@ -48,3 +48,7 @@ __pycache__/
 venv/
 *.egg-info/
 .pytest_cache/
+
+# Blog publishing service token (read by content/seo-blog-2026/publish.py).
+# NEVER commit — it grants editor-level write access to the live blog.
+.publish-token

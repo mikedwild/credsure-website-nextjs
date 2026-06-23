@@ -14,9 +14,14 @@ skip all of that.
 
 Dry run by default. Pass --apply to actually send requests. Stdlib only.
 
+Auth (priority order, so you never paste a token each run):
+  1. ADMIN_TOKEN env var
+  2. a `.publish-token` file next to this script (gitignored) — write the
+     publishing token from admin Settings into it once, then just run --apply.
+
 Env:
-  BACKEND_ORIGIN   e.g. https://credsure-website-nextjs-production.up.railway.app
-  ADMIN_TOKEN      admin JWT (bearer) — required only with --apply
+  BACKEND_ORIGIN   defaults to the Railway prod URL; override for staging/local
+  ADMIN_TOKEN      bearer token (publishing token `csk_…`, session token, or JWT)
 """
 import json
 import os
@@ -26,8 +31,24 @@ import urllib.error
 from pathlib import Path
 
 HERE = Path(__file__).parent
-BACKEND = os.environ.get("BACKEND_ORIGIN", "").rstrip("/")
-TOKEN = os.environ.get("ADMIN_TOKEN", "")
+# Default to Railway prod so a fresh checkout works without extra env setup.
+BACKEND = (
+    os.environ.get("BACKEND_ORIGIN")
+    or "https://credsure-website-nextjs-production.up.railway.app"
+).rstrip("/")
+
+
+def _resolve_token() -> str:
+    env = os.environ.get("ADMIN_TOKEN", "").strip()
+    if env:
+        return env
+    f = HERE / ".publish-token"
+    if f.exists():
+        return f.read_text().strip()
+    return ""
+
+
+TOKEN = _resolve_token()
 APPLY = "--apply" in sys.argv
 # --only <substr>: restrict the run to files/slugs matching <substr>. Lets you
 # re-publish a single post without re-touching (and slowly re-translating) the
@@ -77,8 +98,10 @@ def main():
     print(f"Token:   {'present' if TOKEN else 'MISSING'}")
     print(f"Files:   {len(creates)} create, {len(updates)} update\n")
 
-    if APPLY and (not BACKEND or not TOKEN):
-        print("ERROR: --apply needs BACKEND_ORIGIN and ADMIN_TOKEN.")
+    if APPLY and not TOKEN:
+        print("ERROR: --apply needs a token. Set ADMIN_TOKEN, or write the "
+              "publishing token from admin Settings into\n"
+              "       content/seo-blog-2026/.publish-token")
         return 2
 
     plan = []
