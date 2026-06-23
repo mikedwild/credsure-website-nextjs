@@ -2,9 +2,7 @@ from fastapi import APIRouter, HTTPException, Query, Request
 from fastapi.responses import JSONResponse
 from datetime import datetime, timezone
 
-from slowapi.util import get_remote_address
-
-from utils.rate_limit import limiter
+from utils.rate_limit import limiter, client_ip
 
 router = APIRouter()
 
@@ -185,7 +183,7 @@ async def record_blog_view(request: Request, slug: str):
     bucket = now.replace(minute=0, second=0, microsecond=0).isoformat()
 
     # Dedupe: only the first hit from this IP for this slug+hour counts.
-    ip = get_remote_address(request)
+    ip = client_ip(request)
     dedupe = await db.blog_view_dedupe.update_one(
         {"ip": ip, "slug": slug, "hour": bucket},
         {"$setOnInsert": {"ip": ip, "slug": slug, "hour": bucket, "created_at": now}},
