@@ -116,6 +116,14 @@ export default function AdminBlogEditor({ token, slug, userRole, onBack }) {
   // 'body'     = insert <img src="..."> at the current Quill cursor position
   const [libraryTarget, setLibraryTarget] = useState('featured');
   const quillRef = useRef(null);
+  // Quill's Delta model can't represent tables, so its value→Delta round-trip
+  // flattens <thead>/<th> into a single concatenated <td> — and because
+  // setContents re-fires onChange, merely OPENING a table post overwrites the
+  // body with the mangled HTML (no edit needed). So edit bodies that contain a
+  // <table> as raw HTML in a plain textarea, bypassing Quill. The server
+  // sanitizer preserves the table markup on save (verified). Auto-enabled on
+  // load when a table is present.
+  const [htmlMode, setHtmlMode] = useState(false);
 
   useEffect(() => {
     if (!slug) {
@@ -154,6 +162,11 @@ export default function AdminBlogEditor({ token, slug, userRole, onBack }) {
         };
         setForm(next);
         lastSavedRef.current = JSON.stringify(next);
+        // A table in either language can't survive Quill — open it in raw-HTML
+        // mode so the editor never flattens it.
+        if (/<table[\s>]/i.test(next.content_html) || /<table[\s>]/i.test(next.content_html_de)) {
+          setHtmlMode(true);
+        }
       });
   }, [slug, token]);
 
@@ -678,11 +691,51 @@ export default function AdminBlogEditor({ token, slug, userRole, onBack }) {
             />
           </div>
 
-          {/* Content (WYSIWYG) */}
+          {/* Content (WYSIWYG / raw HTML) */}
           <div>
-            <label className="block text-xs font-semibold text-gray-500  uppercase tracking-wider mb-2">
-              Content ({activeLang === 'en' ? 'English' : 'German'})
-            </label>
+            <div className="flex items-center justify-between mb-2">
+              <label className="block text-xs font-semibold text-gray-500  uppercase tracking-wider">
+                Content ({activeLang === 'en' ? 'English' : 'German'})
+              </label>
+              <button
+                type="button"
+                onClick={() => {
+                  // Check BOTH languages, not just the active one: a table in
+                  // the other language would still be flattened by Quill once
+                  // that tab is opened in rich-text mode.
+                  const hasTable =
+                    /<table[\s>]/i.test(form.content_html) ||
+                    /<table[\s>]/i.test(form.content_html_de);
+                  if (
+                    htmlMode &&
+                    hasTable &&
+                    !window.confirm(
+                      "This content has a table. The rich-text editor can't represent tables and will flatten it on save. Switch to rich text anyway?"
+                    )
+                  ) {
+                    return;
+                  }
+                  setHtmlMode(m => !m);
+                }}
+                className="text-[11px] font-semibold text-[#5B22D6] hover:underline"
+                data-testid="admin-editor-html-toggle"
+              >
+                {htmlMode ? '← Rich text' : 'Edit as HTML </>'}
+              </button>
+            </div>
+            {htmlMode ? (
+              // Raw-HTML editing surface. Bound straight to the body field and
+              // saved verbatim (never through Quill), so tables and other markup
+              // Quill can't model survive. Server-side sanitizer cleans on save.
+              <textarea
+                value={activeLang === 'en' ? form.content_html : form.content_html_de}
+                onChange={e => setField(activeLang === 'en' ? 'content_html' : 'content_html_de', e.target.value)}
+                placeholder="Write HTML — tables, etc. Saved as-is and sanitized server-side."
+                spellCheck={false}
+                data-testid="admin-editor-html-source"
+                className="w-full h-[350px] font-mono text-xs leading-relaxed bg-white  border border-gray-200  rounded-xl p-4 text-gray-800  focus:border-[#5B22D6] focus:outline-none resize-y"
+              />
+            ) : (
             <div className="admin-quill-wrapper bg-white  border border-gray-200   rounded-xl overflow-hidden">
               {/* key={activeLang} forces a fresh editor instance per language.
                   Without it, the SAME react-quill instance has its `value` AND
@@ -704,6 +757,7 @@ export default function AdminBlogEditor({ token, slug, userRole, onBack }) {
                 placeholder="Write your post content..."
               />
             </div>
+            )}
             {/* Live word count + reading-time pill. Mirrors the CMS-style
                 feedback writers expect from Notion / Medium / Ghost. */}
             <div className="mt-2 flex items-center justify-end gap-3 text-[11px] text-gray-500" data-testid="admin-editor-metrics">
