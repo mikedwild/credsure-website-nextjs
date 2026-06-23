@@ -33,17 +33,35 @@ ALLOWED_PROTOCOLS = ["http", "https", "mailto"]
 HTML_FIELDS = ("content_html", "content_html_de")
 
 
+def _normalize_nbsp(html):
+    """Replace non-breaking spaces with ordinary spaces.
+
+    The translation LLM emits U+00A0 between words; bleach then serializes those
+    as &nbsp; entities. A non-breaking space prevents line wrapping, so a body
+    full of them becomes one unbreakable string that overflows the page. Plain
+    blog copy never needs nbsp, so normalize every form back to a normal space.
+    """
+    if not isinstance(html, str) or not html:
+        return html
+    for form in ("\u00a0", "&nbsp;", "&#160;", "&#xa0;", "&#xA0;"):
+        html = html.replace(form, " ")
+    return html
+
+
 def sanitize_html(html):
     """Strip disallowed tags/attributes/protocols. Non-strings pass through."""
     if not isinstance(html, str) or not html:
         return html
-    return bleach.clean(
+    cleaned = bleach.clean(
         html,
         tags=ALLOWED_TAGS,
         attributes=ALLOWED_ATTRIBUTES,
         protocols=ALLOWED_PROTOCOLS,
         strip=True,
     )
+    # Run after bleach: bleach serializes U+00A0 to the &nbsp; entity, so the
+    # entity form is what we need to strip from its output.
+    return _normalize_nbsp(cleaned)
 
 
 def sanitize_blog_fields(doc):

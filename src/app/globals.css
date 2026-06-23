@@ -134,6 +134,11 @@ h1, h2, h3, h4, h5, h6 {
    reset strips list markers and table borders, so rich content (tables, lists)
    rendered unstyled. Restore the elements the blog sanitizer allows. Scoped to
    .blog-content. */
+/* Safety net: long unbreakable strings (e.g. URLs, or content where the
+   translator emitted runs of non-breaking spaces) must wrap instead of pushing
+   body text off the page. overflow-wrap is inherited, so this covers all
+   descendants. */
+.blog-content { overflow-wrap: break-word; }
 .blog-content table {
   width: 100%;
   border-collapse: collapse;
