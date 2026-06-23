@@ -888,9 +888,9 @@
       "keywords": "credential platform features, credentialing workflow"
     },
     "verification": {
-      "title": "Instant Verification | Tamper-Proof Credential Checks",
-      "description": "Let anyone verify a credential in seconds with a public, blockchain-anchored verification page — no logins, no friction.",
-      "keywords": "credential verification, verify digital certificate, instant verification"
+      "title": "Certificate Verification Online | Verify Credentials Instantly",
+      "description": "Verify a certificate or credential online in seconds with a public, blockchain-anchored verification page — no logins, no friction.",
+      "keywords": "certificate verification online, verify certificate online, credential verification, verify digital certificate"
     },
     "credentialManagement": {
       "title": "Credential Management | Issue & Manage at Scale",

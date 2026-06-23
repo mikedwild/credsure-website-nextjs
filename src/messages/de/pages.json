@@ -888,9 +888,9 @@
       "keywords": "Plattform-Funktionen, Credential-Workflow"
     },
     "verification": {
-      "title": "Sofortige Verifizierung | Fälschungssichere Prüfung",
-      "description": "Jeder kann ein Zertifikat in Sekunden über eine öffentliche, blockchain-verankerte Seite verifizieren – ohne Login.",
-      "keywords": "Zertifikat verifizieren, digitale Verifizierung, Sofortprüfung"
+      "title": "Zertifikatsprüfung online | Zertifikate sofort verifizieren",
+      "description": "Verifizieren Sie ein Zertifikat oder einen Berechtigungsnachweis online in Sekunden – über eine öffentliche, blockchain-verankerte Seite, ohne Login.",
+      "keywords": "Zertifikat online verifizieren, Zertifikatsprüfung online, Zertifikat verifizieren, digitale Verifizierung"
     },
     "credentialManagement": {
       "title": "Zertifikatsverwaltung | Ausstellen & Verwalten im großen Stil",
