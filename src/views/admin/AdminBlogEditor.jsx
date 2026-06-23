@@ -39,6 +39,23 @@ const readingTime = (html) => {
 // successful manual save so we don't restore stale drafts.
 const draftKey = (slug) => `credsure-draft-${slug || 'new'}`;
 
+// scheduled_at is stored as a UTC ISO string, but <input type="datetime-local">
+// shows/reads LOCAL wall-clock. Convert UTC→local for display so a writer in
+// (say) Berlin sees the hour they actually scheduled, not the raw UTC digits.
+// onChange does the inverse (new Date(localValue).toISOString()).
+const isoToLocalInput = (iso) => {
+  if (!iso) return '';
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return '';
+  return new Date(d.getTime() - d.getTimezoneOffset() * 60000)
+    .toISOString()
+    .slice(0, 16);
+};
+const LOCAL_TZ = (() => {
+  try { return Intl.DateTimeFormat().resolvedOptions().timeZone || ''; }
+  catch { return ''; }
+})();
+
 // Base toolbar layout — handlers are wired per-render so we can capture
 // the current `setLibraryTarget` closure. See the useMemo below.
 const QUILL_TOOLBAR_LAYOUT = [
@@ -375,9 +392,15 @@ export default function AdminBlogEditor({ token, slug, userRole, onBack }) {
       const data = await res.json();
       if (res.ok) {
         setMessage(data.message || 'Saved!');
+        // On a brand-new post the server assigns the slug. Fold it into BOTH
+        // the form and the dirty-tracking snapshot — snapshotting `form` while
+        // its slug is still empty would leave the editor looking dirty the
+        // instant the assigned slug renders.
+        const savedForm = isNew && data.post?.slug
+          ? { ...form, slug: data.post.slug }
+          : form;
         if (isNew && data.post?.slug) setField('slug', data.post.slug);
-        // Snapshot the just-saved form so dirty tracking flips clean.
-        lastSavedRef.current = JSON.stringify(form);
+        lastSavedRef.current = JSON.stringify(savedForm);
         setAutoSaveStatus({ at: new Date().toISOString(), dirty: false });
         // Drop any local draft now that the server has the canonical copy.
         try { localStorage.removeItem(draftKey(slug || null)); } catch (e) { /* noop */ }
@@ -871,11 +894,14 @@ export default function AdminBlogEditor({ token, slug, userRole, onBack }) {
               <label className="block text-xs text-gray-500  mb-1">Publish Date & Time</label>
               <input
                 type="datetime-local"
-                value={form.scheduled_at?.slice(0, 16) || ''}
+                value={isoToLocalInput(form.scheduled_at)}
                 onChange={e => setField('scheduled_at', e.target.value ? new Date(e.target.value).toISOString() : '')}
                 className="w-full px-3 py-2 bg-gray-50  border border-gray-300  rounded-lg text-sm text-gray-900  outline-none"
                 data-testid="admin-editor-schedule-date"
               />
+              {LOCAL_TZ && (
+                <p className="text-[11px] text-gray-400 mt-1">Times shown in your timezone ({LOCAL_TZ})</p>
+              )}
             </div>
             <p className="text-xs text-gray-500 ">
               Status: <span className={`font-semibold ${form.status === 'published' ? 'text-emerald-400' : form.status === 'scheduled' ? 'text-amber-400' : 'text-gray-500 '}`}>{form.status}</span>

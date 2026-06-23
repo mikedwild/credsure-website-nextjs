@@ -55,8 +55,19 @@ export default function AdminBlogList({ token, onEdit, onNew }) {
 
   const handleDelete = async (slug) => {
     if (!window.confirm(`Delete "${slug}"?`)) return;
-    await fetch(`${API_URL}/api/admin/blogs/${slug}`, { method: 'DELETE', headers: authHeader });
-    fetchPosts();
+    setMessage('');
+    try {
+      const res = await fetch(`${API_URL}/api/admin/blogs/${slug}`, { method: 'DELETE', headers: authHeader });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        setMessage(`Error: ${data.detail || `Delete failed (HTTP ${res.status})`}`);
+        return;
+      }
+      setMessage('Post deleted');
+      fetchPosts();
+    } catch {
+      setMessage('Connection error during delete');
+    }
   };
 
   const handleDuplicate = async (slug) => {
