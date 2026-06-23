@@ -7,10 +7,7 @@
  * seeding Blog with the server-fetched list.
  */
 import type { Metadata } from "next";
-import { getMessages } from "next-intl/server";
 import PageShell from "@/components/PageShell";
-import { ScopedMessagesProvider } from "@/components/ScopedMessagesProvider";
-import { getBlogMessages } from "@/i18n/messageScopes";
 import { Blog } from "@/views/Blog";
 import { getBlogList } from "@/lib/blogApi";
 import { buildPageMetadata } from "@/lib/pageMetadata";
@@ -31,12 +28,9 @@ export default async function Page({
 }) {
   const { locale } = await params;
   const posts = await getBlogList(locale);
-  const blogMessages = await getBlogMessages(await getMessages(), locale);
   return (
-    <ScopedMessagesProvider extra={blogMessages}>
-      <PageShell>
-        <Blog key={locale} initialPosts={posts} />
-      </PageShell>
-    </ScopedMessagesProvider>
+    <PageShell>
+      <Blog key={locale} initialPosts={posts} />
+    </PageShell>
   );
 }

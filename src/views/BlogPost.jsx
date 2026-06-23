@@ -139,8 +139,12 @@ export const BlogPost = ({ initialPost = null }) => {
   if (!postMeta) return null;
 
   const image = getPostImage(postMeta);
-  const translatedTitle = t(`${slug}.title`, { ns: 'blog', defaultValue: postMeta.title });
-  const translatedExcerpt = t(`${slug}.excerpt`, { ns: 'blog', defaultValue: postMeta.excerpt });
+  // The API/DB is the single source of truth for translated content: the
+  // backend already serves title/excerpt in the requested locale (title_de etc).
+  // (Previously these were re-translated from the static blog.json catalog,
+  // which shadowed the DB so CMS edits to German never rendered.)
+  const translatedTitle = postMeta.title;
+  const translatedExcerpt = postMeta.excerpt;
 
   const breadcrumbs = [
     { name: 'Home', path: '/' },

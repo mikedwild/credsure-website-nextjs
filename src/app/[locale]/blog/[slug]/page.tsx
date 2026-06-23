@@ -9,10 +9,7 @@
  */
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getMessages } from "next-intl/server";
 import PageShell from "@/components/PageShell";
-import { ScopedMessagesProvider } from "@/components/ScopedMessagesProvider";
-import { getBlogMessages } from "@/i18n/messageScopes";
 import { BlogPost } from "@/views/BlogPost";
 import { getBlogPost } from "@/lib/blogApi";
 
@@ -93,12 +90,9 @@ export default async function Page({
   // (that's a soft-404 — Google flags it, the exact failure the SSR refactor
   // was meant to fix). generateMetadata already emits a generic title for null.
   if (!post) notFound();
-  const blogMessages = await getBlogMessages(await getMessages(), locale);
   return (
-    <ScopedMessagesProvider extra={blogMessages}>
-      <PageShell>
-        <BlogPost key={slug} initialPost={post} />
-      </PageShell>
-    </ScopedMessagesProvider>
+    <PageShell>
+      <BlogPost key={slug} initialPost={post} />
+    </PageShell>
   );
 }

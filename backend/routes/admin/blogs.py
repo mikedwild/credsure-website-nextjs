@@ -12,7 +12,10 @@ import uuid
 
 from models.blog import BlogPostCreate, BlogPostUpdate
 from utils.auth import get_current_admin
-from utils.blog_translate import auto_translate_missing as _auto_translate_missing
+from utils.blog_translate import (
+    auto_translate_missing as _auto_translate_missing,
+    retranslate_changed_fields as _retranslate_changed_fields,
+)
 from utils.sanitize import sanitize_blog_fields
 
 
@@ -252,6 +255,13 @@ async def admin_update_blog(request: Request, slug: str, body: BlogPostUpdate):
         ]:
             if key not in updates and translated.get(key) != existing.get(key) and translated.get(key):
                 updates[key] = translated[key]
+
+        # Edit-aware dirty-tracking: if the editor changed English on an
+        # already-translated post, refresh ONLY the German fields whose English
+        # source changed (existing posts/fields untouched; hand-edited German in
+        # this same save is preserved). Runs after the fill-missing merge above
+        # so a just-filled German field is skipped (it's already in `updates`).
+        updates.update(await _retranslate_changed_fields(existing, updates, db=db))
 
     # Sanitize any HTML body fields being written (defense-in-depth).
     updates = sanitize_blog_fields(updates)

@@ -30,12 +30,18 @@ Backend changes verified by py_compile + a real `bleach` unit test of the saniti
 - **✅ Verified live on Railway (2026-06-23):** clean startup (no `view-dedupe index error`); per-client dedupe works (fresh client IP → `counted:true` then `counted:false`); rate limit fires at 30/min keyed on the real client IP (`slowapi ... (78.145.129.123) exceeded`, 28×200 + 12×429); DE fallback `served_lang=de`; frontend soft-404 live (`credsure.io` bad slug → 404, real → 200).
 - **Minor residual (noted):** `client_ip` uses the leftmost XFF entry, which is client-supplied; a determined attacker could rotate it to evade the view-dedupe/limit on this vanity metric. Acceptable for a view counter; revisit (trust only Railway-appended IP, or Mongo/Redis-backed limit storage for cross-replica limits) if it ever matters.
 
-### 🟡 Open — deliberately deferred (not a bug)
-- **Redundant double-translation** — list API already returns localized `title`/`excerpt`, yet cards re-translate via `t('${slug}.title')` from `blog.json`. Both sources are genuine German (DE catalog 122/123 translated), so **no visible bug** — pure tech debt. Removing it is a 126-page, SEO-affecting refactor with ~zero user benefit; left as-is intentionally.
-- **List endpoint omits `served_lang`/`date_modified`/`ai_generated`** — cards can't reflect per-post language; minor SEO nicety vs the detail endpoint. Low value, deferred.
+### ✅ Fixed — single-source blog translations + edit-aware re-translation (2026-06-23) — NEEDS RAILWAY DEPLOY for the backend half
+The DB/API is now the single source of truth for blog translations (was a real correctness trap: the static `blog.json` catalog shadowed the DB, so CMS edits to German never rendered, and `<title>` could drift from `<h1>`).
+- **Frontend:** `BlogCard`/`BlogPost` render `post.title`/`post.excerpt` straight from the API (the backend already serves them in the requested locale). Dropped the per-slug `t('${slug}.title')` catalog override and the now-dead `ScopedMessagesProvider`/`getBlogMessages` merge on both blog routes (removed the unused `getBlogMessages` export). **Verified live (SSR + client):** `/de/blog` cards + post `<h1>` render German from the API, `/en` English, chrome still localized (no missing-key leaks), console clean of new errors. Bonus: blog routes no longer ship the ~45 KB per-slug catalog.
+- **Backend (deploys via Railway):** edit-aware dirty-tracking in `admin_update_blog` — when an editor changes English on an already-translated post, `retranslate_changed_fields` re-translates **only the changed German field(s)**. Never a blanket pass; existing untouched posts/fields are never re-translated; German edited in the **same save** is preserved. (Because English is the source of truth, a German field edited in a *prior* save will be refreshed the next time its English changes — intended.) Pure selection logic (`changed_en_fields`) unit-tested (7 cases); gated by `AI_FEATURE_AUTO_TRANSLATE`; swallows errors so a save never breaks; re-translated HTML is sanitized on write.
+- **Auto-translate context (corrected):** the Anthropic key is configured in the **blog admin Settings** (resolved by `utils/llm_keys.py`: site_settings → env → legacy), so auto-translate is **live**: new posts get German on save; the existing 126 (both languages filled) hit the fill-missing no-op and stay untouched. (Supersedes the old "no LLM key on Railway" note.)
+- **Follow-up cleanup (deferrable):** `blog.json` is now only read by `getGlobalMessages` to omit those slug keys from the global flight; it + that omit-logic can be deleted entirely in a later pass (touches the global i18n path, so kept out of this change).
 
-### ⚠️ Out of scope (noted)
-- **Hydration mismatch in `<GtmScripts>`** (GTM/PostHog injection) at the layout level — affects every page incl. blog; not blog code. Worth a separate look.
+### 🟡 Open — deliberately deferred (low value)
+- **List endpoint omits `served_lang`/`date_modified`/`ai_generated`** — cards can't show an AI badge / "updated" date / per-card language; minor SEO/UX nicety vs the detail endpoint. Additive + low-risk, but no current consumer — do only on demand.
+
+### ⚠️ Out of scope (noted) — recommended next, as its own task
+- **Hydration mismatch in `<GtmScripts>`** (GTM/PostHog injection, `src/components/AnalyticsScripts.tsx`) at the layout level — raw inline `<script>` in the hydrated `<body>` mutates the DOM before hydration → React falls back to client-re-rendering the body (hurts LCP/TBT) and logs an every-page error. Fix: move to `next/script` (`beforeInteractive` for consent+GTM to preserve GDPR ordering, `afterInteractive`/`lazyOnload` for PostHog). Highest site-wide value; affects every page incl. blog; not blog code.
 
 ---
 

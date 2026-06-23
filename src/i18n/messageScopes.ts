@@ -59,13 +59,10 @@ export async function getGlobalMessages(
   return omit(all, [...blogKeys, ...legalKeys]);
 }
 
-/** Blog post-slug namespaces — merged back on /blog and /blog/[slug]. */
-export async function getBlogMessages(
-  all: AbstractIntlMessages,
-  locale: string
-): Promise<AbstractIntlMessages> {
-  return pick(all, await loadKeys(locale, "blog"));
-}
+// (getBlogMessages removed — the blog views now read translated title/excerpt
+// straight from the API/DB, so the per-slug catalog is no longer merged into
+// the blog routes. `blog.json` is still loaded by getGlobalMessages below to
+// omit those slug keys from the global flight.)
 
 /** Legal namespaces (privacy/terms/impressum) — merged back on legal routes. */
 export async function getLegalMessages(

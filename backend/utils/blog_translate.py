@@ -19,6 +19,69 @@ from ai import feature_flags as ai_flags
 logger = logging.getLogger(__name__)
 
 
+# English source field -> its German counterpart. Used by the edit-aware
+# dirty-tracking path (retranslate_changed_fields). Tags are intentionally
+# excluded — they're low-value and handled by the fill-missing path.
+_EN_TO_DE = {
+    "title": "title_de",
+    "excerpt": "excerpt_de",
+    "content_html": "content_html_de",
+    "seo_title": "seo_title_de",
+    "seo_description": "seo_description_de",
+}
+
+
+def changed_en_fields(existing: dict, updates: dict) -> set:
+    """English source fields whose value changed in THIS update AND whose German
+    counterpart the caller did not also set in the same save.
+
+    Pure/deterministic so it's unit-testable without the LLM stack. `updates`
+    only contains fields the caller actually sent (the route drops None), so a
+    field's presence means "the editor touched it".
+    """
+    changed = set()
+    for en_f, de_f in _EN_TO_DE.items():
+        if en_f in updates and updates.get(en_f) != existing.get(en_f) and de_f not in updates:
+            changed.add(en_f)
+    return changed
+
+
+async def retranslate_changed_fields(
+    existing: dict, updates: dict, *, db=None, user_email: Optional[str] = None
+) -> dict:
+    """Edit-aware dirty-tracking: when an editor changes English on an already-
+    translated post, refresh ONLY the German fields whose English source
+    changed. Never a blanket re-translate — untouched posts/fields and
+    hand-edited German are preserved. Returns {de_field: value} to merge into
+    the update. No-op (and swallows errors) so a translate hiccup never blocks a
+    save; complements `auto_translate_missing` (which only fills empty sides)."""
+    if not ai_flags.auto_translate_on_save():
+        return {}
+    changed = changed_en_fields(existing, updates)
+    if not changed:
+        return {}
+    try:
+        tr = await translate_fields(
+            title=updates.get("title", "") if "title" in changed else "",
+            excerpt=updates.get("excerpt", "") if "excerpt" in changed else "",
+            content_html=updates.get("content_html", "") if "content_html" in changed else "",
+            tags="",
+            seo_title=updates.get("seo_title", "") if "seo_title" in changed else "",
+            seo_description=updates.get("seo_description", "") if "seo_description" in changed else "",
+            source_lang="en", target_lang="de",
+            db=db, workflow="blog.retranslate_changed", user_email=user_email,
+        )
+    except Exception as e:
+        logger.warning(f"Re-translate changed EN→DE failed: {e}")
+        return {}
+    out = {}
+    for en_f in changed:
+        val = tr.get(en_f)
+        if val:
+            out[_EN_TO_DE[en_f]] = val
+    return out
+
+
 async def auto_translate_missing(doc: dict, *, db=None, user_email: Optional[str] = None) -> dict:
     """If one language is filled and the other is empty, auto-translate.
 

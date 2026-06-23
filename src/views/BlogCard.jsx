@@ -44,10 +44,10 @@ export const BlogCard = ({ post, isHero, index }) => {
             <div className="flex items-center gap-1"><Clock className="w-3.5 h-3.5" />{post.readTime}</div>
           </div>
           <h3 className={`${isHero ? 'text-2xl' : 'text-base'} font-bold text-[#0F0E1A]  mb-2 group-hover:text-[#5B22D6] transition-colors line-clamp-2`}>
-            {t(`${post.slug}.title`, { ns: 'blog', defaultValue: post.title })}
+            {post.title}
           </h3>
           <p className={`text-gray-600  mb-4 leading-relaxed ${isHero ? 'line-clamp-3 text-sm' : 'line-clamp-2 text-xs'}`}>
-            {t(`${post.slug}.excerpt`, { ns: 'blog', defaultValue: post.excerpt })}
+            {post.excerpt}
           </p>
           <div className="flex flex-wrap gap-1 mb-3">
             {postTopics.slice(0, 3).map(topic => (
