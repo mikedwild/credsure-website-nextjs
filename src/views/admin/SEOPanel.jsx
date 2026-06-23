@@ -1,6 +1,6 @@
 "use client";
 import React, { useMemo, useState } from 'react';
-import { CheckCircle, Circle, Search, BarChart3, Type, Globe, ChevronDown, ChevronUp } from 'lucide-react';
+import { CheckCircle, CircleDot, Circle, Search, BarChart3, Type, Globe, ChevronDown, ChevronUp } from 'lucide-react';
 
 // ─── Helpers ────────────────────────────────────────────────────────
 
@@ -27,15 +27,47 @@ function densityColor(pct) {
   return 'bg-slate-700/40 text-gray-500 ';
 }
 
-function Check({ pass, label }) {
+// ─── Graduated scorers (0..1) ───────────────────────────────────────
+// Partial credit so a near-miss (e.g. a 55-char title that's slightly long, or
+// a solid 550-word post) isn't treated the same as an empty field.
+function gradeLen(len, lo, hi, slo, shi) {
+  if (!len) return 0;
+  if (len >= lo && len <= hi) return 1;
+  if (len >= slo && len <= shi) return 0.5;
+  return 0.2;
+}
+function gradeCount(n, target) {
+  if (n <= 0) return 0;
+  return Math.min(1, n / target);
+}
+function gradeWords(w, target) {
+  if (w <= 0) return 0;
+  if (w >= target) return 1;
+  if (w >= target * 0.6) return 0.7;
+  if (w >= target * 0.35) return 0.4;
+  return 0.15;
+}
+function gradeDensity(pct) {
+  if (pct >= 1 && pct <= 3) return 1;
+  if (pct > 0 && pct < 4) return 0.5;
+  return 0;
+}
+
+// A checklist row now carries a 0..1 score (full / partial / none) instead of a
+// bare boolean, so the weighted total reflects how close each item is.
+function Check({ score, label }) {
+  const full = score >= 1;
+  const partial = score > 0 && score < 1;
   return (
     <div className="flex items-start gap-2 py-1">
-      {pass ? (
+      {full ? (
         <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
+      ) : partial ? (
+        <CircleDot className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" />
       ) : (
         <Circle className="w-4 h-4 text-gray-600  mt-0.5 flex-shrink-0" />
       )}
-      <span className={`text-xs ${pass ? 'text-gray-600 ' : 'text-gray-500 '}`}>{label}</span>
+      <span className={`text-xs ${full ? 'text-gray-600 ' : partial ? 'text-amber-600' : 'text-gray-500 '}`}>{label}</span>
     </div>
   );
 }
@@ -124,44 +156,63 @@ export default function SEOPanel({ form, activeLang }) {
   const kwList = tags.split(',').map(k => k.trim()).filter(Boolean);
   const primaryKw = kwList[0] || '';
 
-  // ─── SEO Checks ────────────────────────────────────────────────
+  // ─── SEO Checks (weighted, graduated) ──────────────────────────
+  // Each row carries a `weight` (relative importance) and a 0..1 `score`. The
+  // headline % is the weighted average — so the factors that actually move
+  // rankings (meta, headings, keyword placement, internal links, depth) count
+  // for more than housekeeping fields (read time, author).
   const checks = useMemo(() => {
     const lower = contentText.toLowerCase();
     const titleLower = title.toLowerCase();
+    const pk = primaryKw.toLowerCase();
     const hasH1 = /<h1[\s>]/i.test(contentHtml);
     const h2Count = (contentHtml.match(/<h2[\s>]/gi) || []).length;
     const imgCount = (contentHtml.match(/<img[\s>]/gi) || []).length;
     const linkCount = (contentHtml.match(/<a[\s>]/gi) || []).length;
     const imgAltMissing = (contentHtml.match(/<img(?![^>]*alt=)[^>]*>/gi) || []).length;
+    const pkRe = pk
+      ? new RegExp(`\\b${pk.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'gi')
+      : null;
+    const pkCount = pkRe ? (lower.match(pkRe) || []).length : 0;
+    const pkDensity = words ? (pkCount / words) * 100 : 0;
+    const b = (cond) => (cond ? 1 : 0); // boolean → score
 
     return [
-      { pass: seoTitle.length >= 50 && seoTitle.length <= 60, label: `Meta title length (${seoTitle.length}/50-60 chars)` },
-      { pass: seoDesc.length >= 150 && seoDesc.length <= 160, label: `Meta description length (${seoDesc.length}/150-160 chars)` },
-      { pass: hasH1 || title.length > 0, label: 'H1 title present' },
-      { pass: title.length >= 20 && title.length <= 70, label: `Title length optimal (${title.length}/20-70 chars)` },
-      { pass: h2Count >= 2, label: `H2 subheadings used (${h2Count} found)` },
-      { pass: kwList.length >= 3 && kwList.length <= 5, label: `Target keywords (${kwList.length}/3-5 tags)` },
-      { pass: !!form.featured_image, label: 'Featured image included' },
-      { pass: words >= 800, label: `Content length (${words}/800+ words)` },
-      { pass: form.slug && form.slug.length > 5 && !form.slug.includes(' '), label: 'URL slug optimized' },
-      { pass: form.slug && !/\b(the|a|an|is|are|and|or|but|in|on|at|to|for)\b/i.test(form.slug), label: 'Slug has no stop words' },
-      { pass: primaryKw && titleLower.includes(primaryKw.toLowerCase()), label: 'Primary keyword in title' },
-      { pass: primaryKw && seoDesc.toLowerCase().includes(primaryKw.toLowerCase()), label: 'Primary keyword in meta description' },
-      { pass: primaryKw && lower.includes(primaryKw.toLowerCase()), label: 'Primary keyword in content' },
-      { pass: linkCount >= 1, label: `Links in content (${linkCount} found)` },
-      { pass: imgCount >= 1, label: `Images in content (${imgCount} found)` },
-      { pass: imgAltMissing === 0 && imgCount > 0, label: imgCount > 0 ? `All images have alt text (${imgAltMissing} missing)` : 'Add images with alt text' },
-      { pass: !!excerpt, label: 'Excerpt provided' },
-      { pass: kwList.length > 0, label: 'Tags defined' },
-      { pass: form.category && form.category !== 'Uncategorized', label: 'Category set' },
-      { pass: !!form.author, label: 'Author defined' },
-      { pass: activeLang === 'en' ? !!form.title_de : !!form.title, label: 'Translation provided (both languages)' },
-      { pass: !!form.read_time, label: 'Read time set' },
+      // Metadata that shows in the SERP — highest leverage.
+      { weight: 8, score: gradeLen(seoTitle.length, 50, 60, 35, 65), label: `Meta title length (${seoTitle.length}/50-60 chars)` },
+      { weight: 8, score: gradeLen(seoDesc.length, 150, 160, 120, 170), label: `Meta description length (${seoDesc.length}/150-160 chars)` },
+      // Structure & depth.
+      { weight: 8, score: gradeWords(words, 700), label: `Content depth (${words} words; 700+ ideal)` },
+      { weight: 7, score: gradeCount(h2Count, 2), label: `H2 subheadings (${h2Count}; 2+ ideal)` },
+      { weight: 4, score: gradeLen(title.length, 20, 70, 10, 80), label: `Title length (${title.length}/20-70 chars)` },
+      { weight: 2, score: b(hasH1 || title.length > 0), label: 'H1 / title present' },
+      // Keyword targeting.
+      { weight: 7, score: b(primaryKw && titleLower.includes(pk)), label: 'Primary keyword in title' },
+      { weight: 5, score: b(primaryKw && lower.includes(pk)), label: 'Primary keyword in body' },
+      { weight: 4, score: b(primaryKw && seoDesc.toLowerCase().includes(pk)), label: 'Primary keyword in meta description' },
+      { weight: 4, score: primaryKw ? gradeDensity(pkDensity) : 0, label: `Keyword density (${pkDensity.toFixed(1)}%; 1-3% ideal)` },
+      { weight: 3, score: kwList.length >= 3 && kwList.length <= 5 ? 1 : kwList.length >= 1 ? 0.5 : 0, label: `Target keywords (${kwList.length}; 3-5 ideal)` },
+      // Linking & media.
+      { weight: 6, score: gradeCount(linkCount, 2), label: `Internal/outbound links (${linkCount}; 2+ ideal)` },
+      { weight: 3, score: b(imgCount >= 1), label: `Images in content (${imgCount})` },
+      { weight: 4, score: imgCount > 0 ? (imgCount - imgAltMissing) / imgCount : 1, label: imgCount > 0 ? `Image alt text (${imgCount - imgAltMissing}/${imgCount})` : 'Image alt text (no images)' },
+      { weight: 4, score: b(!!form.featured_image), label: 'Featured image set' },
+      // Housekeeping.
+      { weight: 3, score: b(form.slug && form.slug.length > 5 && !form.slug.includes(' ')), label: 'URL slug optimized' },
+      { weight: 1, score: b(form.slug && !/\b(the|a|an|is|are|and|or|but|in|on|at|to|for)\b/i.test(form.slug)), label: 'Slug has no stop words' },
+      { weight: 2, score: b(!!excerpt), label: 'Excerpt provided' },
+      { weight: 2, score: b(form.category && form.category !== 'Uncategorized'), label: 'Category set' },
+      { weight: 1, score: b(!!form.author), label: 'Author set' },
+      { weight: 1, score: b(!!form.read_time), label: 'Read time set' },
+      // Localization (clearly states the direction; lower weight).
+      { weight: 4, score: b(activeLang === 'en' ? !!form.title_de : !!form.title), label: activeLang === 'en' ? 'German translation added' : 'English version present' },
     ];
-  }, [title, seoTitle, seoDesc, contentHtml, contentText, words, form, kwList, primaryKw, activeLang]);
+  }, [title, seoTitle, seoDesc, contentHtml, contentText, words, form, kwList, primaryKw, activeLang, excerpt]);
 
-  const passCount = checks.filter(c => c.pass).length;
-  const score = Math.round((passCount / checks.length) * 100);
+  const totalWeight = checks.reduce((s, c) => s + c.weight, 0);
+  const earned = checks.reduce((s, c) => s + c.weight * c.score, 0);
+  const score = Math.round((earned / totalWeight) * 100);
+  const doneCount = checks.filter(c => c.score >= 1).length;
   const scoreColor = score >= 80 ? 'text-emerald-400' : score >= 50 ? 'text-amber-400' : 'text-red-400';
 
   return (
@@ -173,9 +224,9 @@ export default function SEOPanel({ form, activeLang }) {
       >
         <div className="flex items-center gap-3">
           <Search className="w-4 h-4 text-gray-500 " />
-          <span className="text-xs font-semibold text-gray-600  uppercase tracking-wider">SEO Score</span>
+          <span className="text-xs font-semibold text-gray-600  uppercase tracking-wider">SEO Score · {activeLang === 'de' ? 'DE' : 'EN'}</span>
           <span className={`text-sm font-bold ${scoreColor}`}>{score}%</span>
-          <span className="text-[10px] text-gray-500 ">({passCount}/{checks.length})</span>
+          <span className="text-[10px] text-gray-500 ">({doneCount}/{checks.length} done)</span>
         </div>
         {expanded ? <ChevronUp className="w-4 h-4 text-gray-500 " /> : <ChevronDown className="w-4 h-4 text-gray-500 " />}
       </button>
@@ -221,10 +272,10 @@ export default function SEOPanel({ form, activeLang }) {
           {/* Checklist */}
           <div>
             <h4 className="text-[10px] font-semibold text-gray-500  uppercase tracking-wider mb-2">
-              Checklist ({passCount}/{checks.length})
+              Checklist ({doneCount}/{checks.length})
             </h4>
             <div className="bg-gray-50  rounded-xl p-3 max-h-64 overflow-y-auto">
-              {checks.map((c) => <Check key={c.label} pass={c.pass} label={c.label} />)}
+              {checks.map((c) => <Check key={c.label} score={c.score} label={c.label} />)}
             </div>
           </div>
         </div>
