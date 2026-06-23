@@ -58,6 +58,44 @@ const getPostImage = (post) => {
   return catMap[post.category] || topicImages.default;
 };
 
+// ─── FAQ structured data ─────────────────────────────────────────────
+// Parse the post's "Frequently asked questions" section into Q&A pairs so we
+// can emit FAQPage JSON-LD (helps AI search engines; valid schema even though
+// Google's FAQ rich result is now limited to gov/health). Normalizes non-
+// breaking spaces (the translator emits them) and strips tags/entities to plain
+// text. Pure string work — SSR-safe (no DOM APIs).
+const decodeEntities = (s) =>
+  s.replace(/&nbsp;|&#160;/g, ' ')
+    .replace(/&amp;/g, '&').replace(/&quot;/g, '"')
+    .replace(/&#0?39;|&apos;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+const toPlainText = (html) =>
+  decodeEntities(html.replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
+const buildFaqSchema = (html) => {
+  if (!html) return null;
+  const normalized = html.replace(/&nbsp;|&#160;|\u00a0/g, ' ');
+  const section = normalized.match(
+    /<h2[^>]*>\s*Frequently asked questions\s*<\/h2>([\s\S]*?)(?=<h2|$)/i,
+  );
+  if (!section) return null;
+  const faqs = [];
+  const re = /<h3[^>]*>([\s\S]*?)<\/h3>([\s\S]*?)(?=<h3|$)/gi;
+  let m;
+  while ((m = re.exec(section[1])) !== null) {
+    const q = toPlainText(m[1]);
+    const a = toPlainText(m[2]);
+    if (q && a) faqs.push({ q, a });
+  }
+  if (faqs.length < 2) return null;
+  return {
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  };
+};
+
 /**
  * @param {{ initialPost?: Record<string, unknown> | null }} props
  *   `initialPost` is the server-fetched post (SSR seed). When omitted the
@@ -172,6 +210,9 @@ export const BlogPost = ({ initialPost = null }) => {
     url: `/blog/${slug}`
   };
 
+  // FAQPage schema, derived from the post's "Frequently asked questions"
+  // section if it has one. Added to the @graph only when present.
+  const faqSchema = buildFaqSchema(contentHtml);
   const combinedSchema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -183,7 +224,8 @@ export const BlogPost = ({ initialPost = null }) => {
           "cssSelector": ["h1", ".blog-lead", ".blog-content h2", ".blog-content p:first-of-type"]
         },
         "keywords": postMeta.category ? [postMeta.category, "digital credentials", "blockchain certificates"] : undefined
-      }
+      },
+      ...(faqSchema ? [faqSchema] : [])
     ]
   };
 
