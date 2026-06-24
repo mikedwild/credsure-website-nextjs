@@ -29,9 +29,9 @@
       }
     },
     "credentialManagement": {
-      "badge": "Credential Management",
-      "title": "Credential Management System",
-      "subtitle": "Issue, manage, verify, and track digital credentials from a single dashboard",
+      "badge": "Digital Certificates",
+      "title": "Digital Certificates",
+      "subtitle": "Issue, manage, verify, and track digital certificates from a single dashboard",
       "items": [
         "Bulk issuance and management",
         "Template library with version control",
