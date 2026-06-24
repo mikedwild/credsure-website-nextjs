@@ -29,15 +29,27 @@
       }
     },
     "credentialManagement": {
-      "badge": "Digitale Zertifikate",
-      "title": "Digitale Zertifikate",
-      "subtitle": "Digitale Zertifikate von einem einzigen Dashboard aus ausstellen, verwalten und verifizieren",
+      "badge": "Credential-Management",
+      "title": "Credential-Management-System",
+      "subtitle": "Den gesamten Credential-Lebenszyklus von einem einzigen Dashboard aus ausstellen, verwalten, erneuern, widerrufen und verfolgen",
       "items": [
         "Massenausstellung und -verwaltung",
         "Vorlagenbibliothek mit Versionskontrolle",
         "Ablauf- und Erneuerungsverwaltung",
         "Rollenbasierte Zugriffskontrolle",
         "Detaillierte Prüfprotokolle"
+      ]
+    },
+    "digitalCertificates": {
+      "badge": "Digitale Zertifikate",
+      "title": "Digitale Zertifikate",
+      "subtitle": "Markenkonforme digitale Zertifikate gestalten, im großen Stil ausstellen und sofort verifizieren lassen",
+      "items": [
+        "Drag-and-drop-Zertifikatsdesigner",
+        "Markenkonforme Vorlagen",
+        "Massenausstellung aus CSV",
+        "Automatische Zustellung an Empfänger",
+        "Sofortige öffentliche Verifizierung"
       ]
     },
     "blockchain": {

@@ -53,6 +53,7 @@ const AnalyticsInsights = lazy(() => import('../views/features/AnalyticsInsights
 const SecurityCompliance = lazy(() => import('../views/features/SecurityCompliance').then(m => ({ default: m.SecurityCompliance })));
 const InstantVerification = lazy(() => import('../views/features/InstantVerification').then(m => ({ default: m.InstantVerification })));
 const CredentialManagement = lazy(() => import('../views/features/CredentialManagement').then(m => ({ default: m.CredentialManagement })));
+const DigitalCertificates = lazy(() => import('../views/features/DigitalCertificates').then(m => ({ default: m.DigitalCertificates })));
 const BulkIssuance = lazy(() => import('../views/features/BulkIssuance').then(m => ({ default: m.BulkIssuance })));
 const ApiIntegration = lazy(() => import('../views/features/ApiIntegration').then(m => ({ default: m.ApiIntegration })));
 const AutoIssue = lazy(() => import('../views/features/AutoIssue').then(m => ({ default: m.AutoIssue })));
@@ -107,7 +108,7 @@ export const routeConfig = [
   { en: 'features/security', de: 'funktionen/sicherheit', component: SecurityCompliance },
   { en: 'features/verification', de: 'funktionen/verifizierung', component: InstantVerification },
   { en: 'features/credential-management', de: 'funktionen/zertifikatsverwaltung', component: CredentialManagement },
-  { en: 'features/digital-certificates', de: 'funktionen/digitale-zertifikate', component: CredentialManagement },
+  { en: 'features/digital-certificates', de: 'funktionen/digitale-zertifikate', component: DigitalCertificates },
   { en: 'features/bulk-issuance', de: 'funktionen/massenausstellung', component: BulkIssuance },
   { en: 'features/api-integration', de: 'funktionen/api-integration', component: ApiIntegration },
   { en: 'features/auto-issue', de: 'funktionen/automatische-ausstellung', component: AutoIssue },

@@ -22,7 +22,7 @@ export const featureContent = {
     ],
   },
   credentialManagement: {
-    description: 'CredSure\'s Digital Certificates hub gives administrators a single pane of glass to issue, track, revoke, and renew digital certificates and badges. Built for teams of any size, the centralized dashboard eliminates spreadsheets and manual processes while giving you real-time visibility into your entire certification program.',
+    description: 'CredSure gives administrators a single dashboard to manage the entire credential lifecycle — issue, organize, renew, revoke, and track every certificate and badge in one place. Built for programs of any size, it replaces spreadsheets and manual work with real-time visibility, role-based access, and complete audit trails across your whole credentialing operation.',
     useCases: [
       { title: 'University Registrar', desc: 'Issue 10,000+ digital diplomas in a single batch, automatically sending each graduate a personalized credential email.' },
       { title: 'HR Compliance Manager', desc: 'Track which employees have valid certifications and receive automated alerts 90 days before any credential expires.' },
@@ -36,6 +36,23 @@ export const featureContent = {
     faq: [
       { q: 'How many credentials can I manage?', a: 'There is no limit. Our platform handles everything from 10 credentials to millions, scaling automatically with your needs.' },
       { q: 'Can I revoke a credential after issuance?', a: 'Yes. Administrators can revoke any credential instantly. The revocation is reflected in real-time on the verification page and blockchain record.' },
+    ],
+  },
+  digitalCertificates: {
+    description: 'Design beautiful, on-brand digital certificates and issue them at scale in minutes. CredSure turns course completions and achievements into tamper-proof, instantly verifiable certificates your recipients are proud to share — with a drag-and-drop designer, branded templates, bulk issuance from a spreadsheet, and automatic delivery. No design tools or engineering required.',
+    useCases: [
+      { title: 'Training Provider', desc: 'Upload a CSV of course completions and issue thousands of branded certificates in a single batch, each delivered automatically to the recipient.' },
+      { title: 'Event & Webinar Host', desc: 'Reward attendees with a shareable certificate of completion the moment your session ends — no manual design or mail merge.' },
+      { title: 'Professional Body', desc: 'Issue official, tamper-proof certificates members can verify instantly and add to their LinkedIn profile with one click.' },
+    ],
+    metrics: [
+      { value: 'Minutes', label: 'From upload to issued' },
+      { value: '100%', label: 'Tamper-proof & verifiable' },
+      { value: 'Unlimited', label: 'Branded templates' },
+    ],
+    faq: [
+      { q: 'Can I use my own certificate design?', a: 'Yes. Upload your own design or start from a template, then customize colors, logo, fonts, and fields with the drag-and-drop editor — no design tools needed.' },
+      { q: 'How are certificates delivered to recipients?', a: 'Automatically. Each recipient receives a personalized email with their certificate and a public verification link; you can also share or download in bulk.' },
     ],
   },
   blockchain: {

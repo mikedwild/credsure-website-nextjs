@@ -20,7 +20,7 @@
         ]
       },
       "credentialManagement": {
-        "description": "Der Hub für digitale Zertifikate von CredSure gibt Administratoren ein zentrales Dashboard, um digitale Zertifikate und Badges auszustellen, zu verfolgen, zu widerrufen und zu erneuern. Konzipiert für Teams jeder Größe, beseitigt das zentrale Dashboard Tabellen und manuelle Prozesse und gibt Ihnen zugleich Echtzeit-Einblick in Ihr gesamtes Zertifizierungsprogramm.",
+        "description": "CredSure gibt Administratoren ein zentrales Dashboard, um den gesamten Credential-Lebenszyklus zu verwalten — jedes Zertifikat und Badge an einem Ort ausstellen, organisieren, erneuern, widerrufen und verfolgen. Konzipiert für Programme jeder Größe, ersetzt es Tabellen und manuelle Prozesse durch Echtzeit-Einblick, rollenbasierten Zugriff und lückenlose Prüfprotokolle über Ihren gesamten Credentialing-Betrieb.",
         "useCases": [
           { "title": "Universitäts-Studierendensekretariat", "desc": "Stellen Sie über 10.000 digitale Diplome in einem einzigen Stapel aus und senden Sie jedem Absolventen automatisch eine personalisierte Credential-E-Mail." },
           { "title": "HR-Compliance-Manager", "desc": "Verfolgen Sie, welche Mitarbeitenden gültige Zertifizierungen haben, und erhalten Sie automatische Warnungen 90 Tage vor Ablauf eines Credentials." },
@@ -34,6 +34,23 @@
         "faq": [
           { "q": "Wie viele Credentials kann ich verwalten?", "a": "Es gibt keine Begrenzung. Unsere Plattform bewältigt alles von 10 Credentials bis zu Millionen und skaliert automatisch mit Ihrem Bedarf." },
           { "q": "Kann ich ein Credential nach der Ausstellung widerrufen?", "a": "Ja. Administratoren können jedes Credential sofort widerrufen. Der Widerruf wird in Echtzeit auf der Verifizierungsseite und im Blockchain-Datensatz abgebildet." }
+        ]
+      },
+      "digitalCertificates": {
+        "description": "Gestalten Sie ansprechende, markenkonforme digitale Zertifikate und stellen Sie sie in Minuten im großen Stil aus. CredSure verwandelt Kursabschlüsse und Leistungen in fälschungssichere, sofort verifizierbare Zertifikate, die Ihre Empfänger gerne teilen — mit Drag-and-drop-Designer, Markenvorlagen, Massenausstellung aus einer Tabelle und automatischer Zustellung. Ganz ohne Design- oder Entwicklungsaufwand.",
+        "useCases": [
+          { "title": "Schulungsanbieter", "desc": "Laden Sie eine CSV-Datei mit Kursabschlüssen hoch und stellen Sie Tausende markenkonforme Zertifikate in einem einzigen Stapel aus, die jeweils automatisch an die Empfänger zugestellt werden." },
+          { "title": "Event- & Webinar-Veranstalter", "desc": "Belohnen Sie Teilnehmende mit einem teilbaren Abschlusszertifikat, sobald Ihre Sitzung endet — ohne manuelles Design oder Serienbrief." },
+          { "title": "Berufsverband", "desc": "Stellen Sie offizielle, fälschungssichere Zertifikate aus, die Mitglieder sofort verifizieren und mit einem Klick zu ihrem LinkedIn-Profil hinzufügen können." }
+        ],
+        "metrics": [
+          { "value": "Minuten", "label": "Vom Upload bis zur Ausstellung" },
+          { "value": "100%", "label": "Fälschungssicher & verifizierbar" },
+          { "value": "Unbegrenzt", "label": "Markenvorlagen" }
+        ],
+        "faq": [
+          { "q": "Kann ich mein eigenes Zertifikatsdesign verwenden?", "a": "Ja. Laden Sie Ihr eigenes Design hoch oder starten Sie mit einer Vorlage und passen Sie Farben, Logo, Schriften und Felder im Drag-and-drop-Editor an — ganz ohne Designtools." },
+          { "q": "Wie werden Zertifikate an die Empfänger zugestellt?", "a": "Automatisch. Jeder Empfänger erhält eine personalisierte E-Mail mit dem Zertifikat und einem öffentlichen Verifizierungslink; Sie können auch im Stapel teilen oder herunterladen." }
         ]
       },
       "blockchain": {

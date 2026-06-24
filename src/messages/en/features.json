@@ -29,15 +29,27 @@
       }
     },
     "credentialManagement": {
-      "badge": "Digital Certificates",
-      "title": "Digital Certificates",
-      "subtitle": "Issue, manage, verify, and track digital certificates from a single dashboard",
+      "badge": "Credential Management",
+      "title": "Credential Management System",
+      "subtitle": "Issue, manage, renew, revoke, and track every credential from a single dashboard",
       "items": [
         "Bulk issuance and management",
         "Template library with version control",
         "Expiration and renewal management",
         "Role-based access control",
         "Detailed audit logs"
+      ]
+    },
+    "digitalCertificates": {
+      "badge": "Digital Certificates",
+      "title": "Digital Certificates",
+      "subtitle": "Design, issue, and deliver tamper-proof digital certificates your recipients can share and anyone can verify in seconds",
+      "items": [
+        "Drag-and-drop certificate designer",
+        "Branded, on-brand templates",
+        "Bulk issuance from CSV",
+        "Automatic recipient delivery",
+        "Instant public verification"
       ]
     },
     "blockchain": {
