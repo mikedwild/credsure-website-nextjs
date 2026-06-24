@@ -52,3 +52,8 @@ venv/
 # Blog publishing service token (read by content/seo-blog-2026/publish.py).
 # NEVER commit — it grants editor-level write access to the live blog.
 .publish-token
+
+# GSC performance exports (business query data) + generated content inventory.
+content/seo-blog-2026/gsc/
+content/seo-blog-2026/content-inventory.json
+content/seo-blog-2026/SEO-ROADMAP.md

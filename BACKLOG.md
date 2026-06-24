@@ -10,6 +10,18 @@ The Next.js site on Vercel now serves `credsure.io` — the old Emergent/CRA sit
 
 ---
 
+## 🔭 SEO growth program (2026-06-24)
+Full **GSC + competitor-gap** audit complete. Goal: grow organic from ~1,000 → **~10–12k clicks/mo (peer parity with virtualbadge/sertifier)** in 12–18 mo. Diagnosis: NOT authority-constrained (DA 53 ≥ all direct peers) — coverage/targeting-constrained; ~98% of impressions are off-topic certificate-of-appreciation vanity (0.4% sitewide CTR). Plan + growth model + tiers + competitor layers live in **`content/seo-blog-2026/SEO-ROADMAP.md`** (gitignored — embeds GSC data) and the `credsure-seo-strategy` memory. Execution rule: **all live content changes require user approval** (draft → before/after → approve → publish).
+
+### 🅿️ Backlog — Free badge/certificate generator (NEEDS PRODUCT TEAM)
+A public, indexable free badge/credential maker on credsure.io to capture transactional volume ("badge maker" 2,900, "certificate generator" 2,900, "create a badge" 1,000) + funnel to signup. **Requires the product team / platform API** — this marketing repo has NO issuance/verification (blog/leads/admin only); issuance lives in the separate platform app.
+- **Recommended architecture (model C):** public/no-login front door (so it ranks + indexes) that issues ONE real **verifiable** credential via the platform API, with a public verifier page — NOT a static-image maker (a static image would recreate the vanity-traffic problem and undercut the "verifiable" USP). Freemium upsell (bulk/branding/integrations/analytics); "Issued via CredSure" watermark = distribution; email-to-claim = lead capture. **Synergy:** every free issue seeds an indexed verifier page → feeds the parked G6 public-credential-directory play (verifier pages already exist for all issued creds).
+- **Interim** if anon issuance is too heavy: email-gated issuance (free preview → email → verifiable credential).
+- **Open Qs for product:** does the platform expose a free/anonymous single-issue API? free-tier limits, abuse/rate controls, branding/watermark.
+- **Difficulty:** high-competition SERP (template giants) — months + backlinks; sequence AFTER the quick wins (LinkedIn page + definitional pillars).
+
+---
+
 ## 🔎 Blog audit (2026-06-23)
 Full-stack blog audit (frontend SSR/SEO/i18n + FastAPI backend), verified against the running app + production API. Overall healthy — SSR/SEO correct, filters work, sanitization in place, EN/DE i18n complete.
 
