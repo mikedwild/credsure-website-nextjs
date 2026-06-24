@@ -1,0 +1,262 @@
+# Blog meta review — apply on approval
+
+**Group A — 5 pillar fixes** (already had meta; fixing topic/length)
+
+- `what-are-digital-badges`
+  - title (58): What Are Digital Badges? Types, Uses & Examples | CredSure
+  - desc (166): A digital badge is a verifiable online credential for a skill or achievement. Learn how digital badges work, how they differ from certificates, and how to share them.
+- `open-badges-explained`
+  - title (60): Open Badges Explained: How Verifiable Badges Work | CredSure
+  - desc (160): Open badges are portable, verifiable digital badges with metadata built in. Learn the 1EdTech Open Badges 3.0 standard and how to earn, issue, and display them.
+- `digital-badges-for-students-and-universities`
+  - title (53): Digital Badges for Students & Universities | CredSure
+  - desc (155): How digital badges work for students and universities — the benefits, how institutions issue them, and how students display them on LinkedIn and their CVs.
+- `best-digital-credentialing-platforms-2026`
+  - title (55): Best Digital Credentialing Platforms in 2026 | CredSure
+  - desc (160): Compare the best digital credentialing platforms in 2026 — Credly, Accredible, CredSure, BCdiploma and more — on standards, verification, integrations and GDPR.
+- `how-to-verify-degrees-and-diplomas-online`
+  - title: (unchanged)
+  - desc (158): Learn how to verify a degree or diploma online in seconds — a step-by-step guide for employers, plus how institutions issue tamper-proof, verifiable diplomas.
+
+**Group B — 80 posts (no meta before; fallback was truncated body text)**
+
+- `digital-badges-employee-engagement` · kw: _digital badges employee engagement_
+  - title (49): Digital Badges for Employee Engagement | CredSure
+  - desc (151): See how digital badges boost employee engagement and lift L&D completion by 40% through visible recognition, social sharing, and stackable credentials.
+- `gdpr-digital-credentials-compliance` · kw: _GDPR digital credentials compliance_
+  - title (52): GDPR Digital Credentials Compliance Guide | CredSure
+  - desc (154): Learn how to issue GDPR-compliant digital credentials in the EU, covering data minimization, consent, the right to erasure, and blockchain considerations.
+- `digital-credentials-higher-education` · kw: _digital credentials in higher education_
+  - title (56): Digital Credentials in Higher Education Guide | CredSure
+  - desc (151): Discover how universities replace paper diplomas with blockchain digital credentials, with benefits, a phased implementation roadmap, and real results.
+- `how-to-build-a-great-soft-skill-training-program-for-your-employees` · kw: _soft skill training program_
+  - title (56): Soft Skill Training Program: How to Build One | CredSure
+  - desc (155): Learn how to build a soft skill training program for your employees, from choosing key skills to measuring results and driving a high-performing workforce.
+- `certificate-of-appreciation-definition-and-10-examples` · kw: _certificate of appreciation_
+  - title (51): Certificate of Appreciation: 10 Examples | CredSure
+  - desc (151): Learn what a certificate of appreciation is and explore 10 customisable examples to recognise students, faculty, and contributors and boost motivation.
+- `what-are-digital-certificates-and-how-to-use-them` · kw: _digital certificates_
+  - title (60): What Are Digital Certificates and How to Use Them | CredSure
+  - desc (160): Learn what digital certificates are, what they contain, and how to issue, share, and verify blockchain-secured credentials to recognize skills and achievements.
+- `why-should-you-use-a-free-certificate-template-examples` · kw: _free certificate template_
+  - title (60): Free Certificate Templates: 8 Reasons to Use Them | CredSure
+  - desc (157): Discover why free certificate templates save time and money, plus examples to help you design professional, polished certificates without a graphic designer.
+- `what-is-credential-management-best-practice` · kw: _credential management_
+  - title (58): Credential Management: Best Practices Explained | CredSure
+  - desc (152): Learn what credential management is, how credential systems work, and best practices to secure digital identities, prevent breaches, and stay compliant.
+- `top-8-e-learning-platforms-for-2025` · kw: _e-learning platforms_
+  - title (46): Top 8 E-Learning Platforms for 2025 | CredSure
+  - desc (156): Compare the top 8 e-learning platforms for 2025 to find the best fit for skills training, certifications, and career growth, with key features and benefits.
+- `how-do-you-choose-a-professional-credential-service` · kw: _professional credential service_
+  - title (58): How to Choose a Professional Credential Service | CredSure
+  - desc (160): Learn how to choose a professional credential service using key criteria like verification, integrations, and security to issue trusted badges and certificates.
+- `how-do-we-create-job-training-programs` · kw: _how to create a job training program_
+  - title (51): Job Training Programs: How to Create One | CredSure
+  - desc (150): Learn how to create an effective job training program step by step, from defining scope to issuing verifiable certificates that boost employee skills.
+- `whats-a-digital-badge-maker-how-do-you-use-it` · kw: _digital badge maker_
+  - title (58): Digital Badge Maker: What It Is & How to Use It | CredSure
+  - desc (149): Discover what a digital badge maker is and how to use one to create, customise, and issue secure, shareable digital badges that reward your learners.
+- `how-to-sell-an-online-course-7-tipshow-to-sell-an-online-course` · kw: _how to sell an online course_
+  - title (54): How to Sell an Online Course: 7 Proven Tips | CredSure
+  - desc (148): Learn how to sell an online course with 7 proven marketing tips to grow visibility, build demand, and drive more student enrollments to your course.
+- `10-must-have-features-digital-credentialing-solution` · kw: _digital credentialing solution features_
+  - title (54): 10 Must-Have Digital Credentialing Features | CredSure
+  - desc (146): Explore the 10 must-have features of a digital credentialing solution, from custom branding to verification, so you can choose the right platform.
+- `the-transformative-impact-of-artificial-intelligence-in-education` · kw: _artificial intelligence in education_
+  - title (53): AI in Education: The Transformative Impact | CredSure
+  - desc (144): Explore the transformative impact of AI in education, from personalised learning to streamlined admin, and how it makes learning more effective.
+- `how-to-use-digital-badges-for-internal-marketin` · kw: _digital badges for internal marketing_
+  - title (48): Digital Badges for Internal Marketing | CredSure
+  - desc (155): Learn how to use digital badges for internal marketing to boost employee engagement, build trust, and turn your team into authentic brand advocates online.
+- `8-ways-to-enhance-employee-training-programs` · kw: _enhance employee training programs_
+  - title (55): 8 Ways to Enhance Employee Training Programs | CredSure
+  - desc (157): Discover 8 proven ways to enhance employee training programs that boost retention, close skills gaps, and help your organisation attract and grow top talent.
+- `empower-your-workers-with-artificial-intelligence-in-training` · kw: _artificial intelligence in training_
+  - title (49): AI in Training: Empower Your Workforce | CredSure
+  - desc (152): See how artificial intelligence in training can enhance workforce development, boost efficiency, and personalise employee learning at your organisation.
+- `educational-certificates-got-smarter` · kw: _digital educational certificates_
+  - title (53): Digital Educational Certificates Explained | CredSure
+  - desc (152): Learn how blockchain-backed digital educational certificates stop forgery, simplify verification, and give graduates a smarter, tamper-proof credential.
+- `6-benefits-of-competency-based-learning` · kw: _benefits of competency-based learning_
+  - title (50): 6 Benefits of Competency-Based Learning | CredSure
+  - desc (158): Explore 6 key benefits of competency-based learning in education, from deeper skill mastery to better job readiness, and why your institution should adopt it.
+- `how-to-increase-website-traffic-with-digital-certificates` · kw: _increase website traffic with digital certificates_
+  - title (58): Boost Website Traffic With Digital Certificates | CredSure
+  - desc (151): Discover how digital certificates boost website traffic for educational institutions through brand visibility and easy social sharing by your learners.
+- `how-to-digitise-your-certificate` · kw: _how to digitise your certificate_
+  - title (53): How to Digitise Your Certificates: A Guide | CredSure
+  - desc (147): Learn how to digitise your educational certificates with this step-by-step guide, and see why over 80% of employers now prefer digital credentials.
+- `what-is-a-digital-certificate` · kw: _what is a digital certificate_
+  - title (56): What Is a Digital Certificate? Complete Guide | CredSure
+  - desc (149): Learn what a digital certificate is, how it differs from paper certificates, and the verifiable benefits it brings to your organisation and learners.
+- `need-for-skills-training` · kw: _skills training and digital certification_
+  - title (58): Skills Training and Digital Certification Guide | CredSure
+  - desc (152): Explore the causes of skill shortages and how skills training plus digital certification help your organisation close the gap and hire the right talent.
+- `how-to-design-digital-badges` · kw: _how to design digital badges_
+  - title (51): How to Design Digital Badges That Engage | CredSure
+  - desc (153): Learn how to design digital badges that motivate learners and boost branding, with practical tips for creating visually appealing, shareable credentials.
+- `guide-to-digital-badges-in-the-workplace` · kw: _digital badges in the workplace_
+  - title (51): Digital Badges in the Workplace: A Guide | CredSure
+  - desc (155): Discover how digital badges in the workplace help organisations close the skills gap, recognise employee achievements, and place people in the right roles.
+- `enhance-learning-harness-the-power-of-gamification-in-education` · kw: _gamification in education_
+  - title (54): Gamification in Education: A Complete Guide | CredSure
+  - desc (158): Learn how gamification in education boosts learner motivation and engagement, plus practical ways your institution can add game elements to learning programs.
+- `redefining-workforce-development-how-digital-badges-motivate-and-engage-learners` · kw: _digital badges for workforce development_
+  - title (58): How Digital Badges Motivate and Engage Learners | CredSure
+  - desc (152): See how digital badges transform workforce development by recognising achievements, enabling gamification, and motivating learners to boost performance.
+- `5-reasons-why-use-digital-badges` · kw: _why use digital badges_
+  - title (42): 5 Reasons to Use Digital Badges | CredSure
+  - desc (152): Discover 5 reasons your organisation should use digital badges, from recognising achievements and verifying skills to boosting learning and development.
+- `how-to-manage-and-share-digital-credentials` · kw: _manage digital credentials_
+  - title (54): How to Manage and Share Digital Credentials | CredSure
+  - desc (149): Learn how to manage and share your digital credentials securely, including easy verification, portability, and social sharing to advance your career.
+- `academic-certificates-vs-digital-certificates` · kw: _academic certificates vs digital certificates_
+  - title (53): Academic vs Digital Certificates Explained | CredSure
+  - desc (153): Compare academic certificates and digital certificates: explore the pros, cons, security, and cost of each so you can choose the right credential format.
+- `how-to-create-a-linkedin-student-profile` · kw: _how to create a linkedin student profile_
+  - title (51): How to Create a LinkedIn Student Profile | CredSure
+  - desc (159): Learn how to create a strong LinkedIn student profile, build your network, and showcase digital credentials to stand out to recruiters and land your first job.
+- `why-you-must-avoid-ghost-certificates` · kw: _ghost certificates_
+  - title (59): Ghost Certificates: What They Are & How to Avoid | CredSure
+  - desc (155): Discover what ghost certificates are, the cybersecurity risks they pose, and how verifiable digital certificates protect your identity and online security.
+- `digital-certificates-vs-paper-certificates` · kw: _digital certificates vs paper certificates_
+  - title (53): Digital Certificates vs Paper Certificates | CredSure
+  - desc (160): See how digital certificates differ from paper certificates in security, cost, and verification, and learn why digital credentials are the smarter choice today.
+- `rise-of-digital-educational-certificates` · kw: _digital educational certificates_
+  - title (55): The Rise of Digital Educational Certificates | CredSure
+  - desc (156): Explore the rise of digital educational certificates: how blockchain-backed credentials are replacing paper, boosting security, and bridging the skills gap.
+- `micro-credentials-and-its-benefits` · kw: _micro-credentials_
+  - title (60): Micro-Credentials: What They Are & Their Benefits | CredSure
+  - desc (159): Learn what micro-credentials are, how stackable micro-credentials work, and how they benefit businesses and learners with focused, verifiable skill validation.
+- `certificate-fraud-in-the-job-market` · kw: _certificate fraud_
+  - title (60): How to Combat Certificate Fraud in the Job Market | CredSure
+  - desc (155): Certificate fraud is rising fast. Learn how blockchain digital credentials help employers and job seekers verify qualifications and stop fake certificates.
+- `gamification-using-digital-badges` · kw: _gamification with digital badges_
+  - title (52): Gamification With Digital Badges: A Guide | CredSure
+  - desc (150): Discover how organisations use gamification and digital badges to boost engagement, motivation, and learning in education and e-learning environments.
+- `digital-badges-in-education` · kw: _digital badges in education_
+  - title (56): Digital Badges in Education: A Complete Guide | CredSure
+  - desc (155): Learn what digital badges in education are, how to create them for students, and how higher education institutions use them to recognise real achievements.
+- `how-to-choose-digital-credentialing-software` · kw: _digital credentialing software_
+  - title (55): How to Choose Digital Credentialing Software | CredSure
+  - desc (159): A practical guide to choosing the right digital credentialing software, covering security, scalability, user experience, and integration for your organisation.
+- `marketing-guide-for-your-professional-certification-course` · kw: _market professional certification course_
+  - title (57): How to Market a Certification Course: 10 Steps | CredSure
+  - desc (147): Learn how to market your professional certification course in 10 steps, using digital credentials to boost enrollment, brand visibility, and reach.
+- `future-of-medical-professional-credentialing` · kw: _medical professional credentialing_
+  - title (59): Medical Professional Credentialing on Blockchain | CredSure
+  - desc (150): See how blockchain medical professional credentialing speeds verification of licenses and qualifications, cutting cost, fraud risk, and hiring delays.
+- `blockchain-digital-badges-to-promote-skills-and-achievement-recognition` · kw: _blockchain digital badges_
+  - title (58): Blockchain Digital Badges for Skill Recognition | CredSure
+  - desc (146): Discover how blockchain digital badges verify skills and achievements, build a culture of recognition, and help your people become industry-ready.
+- `use-blockchain-to-store-the-entire-lifecycle-of-your-records` · kw: _blockchain record management_
+  - title (60): Blockchain Record Management & Document Lifecycle | CredSure
+  - desc (148): Learn how blockchain record management stores your records' full lifecycle with an immutable, tamper-proof audit trail that stops fraud and forgery.
+- `educational-institutes-to-take-the-next-big-leap-in-automation` · kw: _automation for educational institutes_
+  - title (59): Blockchain Automation for Educational Institutes | CredSure
+  - desc (150): See how educational institutes use blockchain automation to streamline admissions, credentialing, and admin workflows, saving time and cutting effort.
+- `why-to-issue-a-digital-certificate-on-blockchain` · kw: _blockchain digital certificate_
+  - title (58): Blockchain Digital Certificates: Why Issue Them | CredSure
+  - desc (151): Discover why issuing digital certificates on blockchain stops document fraud, making credentials tamper-proof, instantly verifiable, and easy to trace.
+- `mobility-will-drive-the-future-of-credentials-in-higher-education` · kw: _mobile digital credentials_
+  - title (57): Mobile Digital Credentials in Higher Education | CredSure
+  - desc (146): Learn how mobile digital credentials let students and professionals prove skills across borders and stand out fast in a crowded global job market.
+- `smart-tips-on-creating-your-perfect-skillpass` · kw: _SkillPass digital resume_
+  - title (59): SkillPass Tips: Build the Perfect Digital Resume | CredSure
+  - desc (152): Smart tips for creating your perfect SkillPass: build a presentable, shareable digital resume that beats paper CVs and grabs busy recruiters in seconds.
+- `how-will-blockchain-affect-the-future-of-education-and-learning` · kw: _blockchain in education_
+  - title (50): Blockchain in Education: Tim Miller Q&A | CredSure
+  - desc (152): Certif-ID CEO Tim Miller shares how blockchain will shape the future of education, learning and trusted digital credentials for professionals worldwide.
+- `how-can-you-bridge-skills-gap-with-digital-certificates` · kw: _bridge skills gap with digital credentials_
+  - title (57): Bridge the Skills Gap With Digital Credentials | CredSure
+  - desc (154): See how digital credentials bridge the skills gap, helping job seekers prove real, in-demand skills and employers fill millions of unfilled roles by 2030.
+- `meeting-the-demand-for-mechatronics-skills-in-the-workplace` · kw: _mechatronics skills_
+  - title (47): Mechatronics Skills in the Workplace | CredSure
+  - desc (160): Discover why mechatronics skills are in demand as automation reshapes engineering. Learn what new-collar, multi-skilled workers need to thrive in the workplace.
+- `digital-transformation-in-the-education-sector` · kw: _digital transformation in education_ ⚠️low-value
+  - title (52): Digital Transformation in Education Forum | CredSure
+  - desc (160): Join the TUV Rheinland Philippines virtual forum on digital transformation in education, featuring Certif-ID on blockchain, data privacy and resilient learning.
+- `filipino-seafarers-return-to-the-workplace-via-skillpass-event-highlights` · kw: _Filipino seafarers return to work_ ⚠️low-value
+  - title (56): Filipino Seafarers Return to Work: Skill Pass | CredSure
+  - desc (157): Watch event highlights as Certif-ID and TUV Rheinland help Filipino seafarers return to work with Skill Pass, a free blockchain digital credential portfolio.
+- `skills-to-meet-workforce-demands-in-the-4th-industrial-revolution` · kw: _4th industrial revolution skills_
+  - title (59): 4IR Workforce Skills: Communication & Leadership | CredSure
+  - desc (153): Build the coworking skills the 4th Industrial Revolution demands: strong communication, leadership, and adaptability to thrive in an automated workplace.
+- `digital-gurukul-adopts-digital-certificates-placed-on-blockchain` · kw: _blockchain digital certificates_
+  - title (59): Digital Gurukul: Blockchain Digital Certificates | CredSure
+  - desc (146): See how Digital Gurukul uses CredSure to issue blockchain digital certificates, closing the marketing skills gap and building job-ready graduates.
+- `humaci-a-global-training-and-consulting-organization-case-study` · kw: _digital credentials case study_
+  - title (53): HUMACi Case Study: AI Training Credentials | CredSure
+  - desc (156): See how HUMACi, a global AI training and consulting organization, used CredSure blockchain-based digital certificates to optimize processes and prove value.
+- `industry-4-0-skills-to-support-automation-new-technologies` · kw: _industry 4.0 skills_
+  - title (58): Industry 4.0 Skills for Automation and New Tech | CredSure
+  - desc (159): Discover the top Industry 4.0 skills employers need to thrive amid automation and AI, from creativity and emotional intelligence to analytical decision-making.
+- `skill-pass-proof-of-learning-and-development` · kw: _proof of learning_
+  - title (51): Skill Pass: Verifiable Proof of Learning | CredSure
+  - desc (157): See how Skill Pass and blockchain digital certificates give professionals verifiable proof of learning, helping recruiters confirm skills and hire with ease.
+- `festo-introduces-digital-certificates-for-instant-verification-monitoring` · kw: _digital certificates verification_
+  - title (59): Festo Adds Digital Certificates for Verification | CredSure
+  - desc (155): See how Festo uses CredSure blockchain digital certificates for instant verification and monitoring, helping close the manufacturing skills gap with proof.
+- `find-skilled-corporate-trainers-backed-by-digital-certification` · kw: _skilled corporate trainers_
+  - title (60): Find Skilled Corporate Trainers via Certification | CredSure
+  - desc (158): Learn how digital certifications help you find and verify skilled corporate trainers, adding credibility so you hire specialists who meet your training goals.
+- `skills-gap-in-energy-sector-is-the-biggest-roadblock` · kw: _energy sector skills gap_
+  - title (58): Energy Sector Skills Gap: The Biggest Roadblock | CredSure
+  - desc (159): The energy sector skills gap is widening as digitalisation accelerates. Learn why training and digital upskilling are key to building a future-ready workforce.
+- `certificate-fraud-how-to-prevent-unqualified-professionals-from-entering-the-job-market` · kw: _certificate fraud_
+  - title (57): Certificate Fraud: How to Prevent It in Hiring | CredSure
+  - desc (157): Certificate fraud lets unqualified candidates slip into roles. Discover practical steps and credential verification to hire the right talent with confidence.
+- `the-need-for-skill-development-in-the-automotive-industry` · kw: _automotive industry skill development_
+  - title (55): Skill Development in the Automotive Industry | CredSure
+  - desc (158): The automotive industry faces rising demand for new skills as it digitises. Learn why skill development and upskilling matter for employers and professionals.
+- `addressing-the-critical-need-for-skills-training-and-digital-certification` · kw: _skills training and digital certification_
+  - title (55): Skills Training & Digital Certification Need | CredSure
+  - desc (157): Explore how skills training and verifiable digital certificates can reduce unemployment and bridge the gap between worker skills and real job market demands.
+- `get-smart-adopt-a-blockchain-powered-platform-to-enhance-institute-experience` · kw: _blockchain platform for educational institutes_
+  - title (57): Blockchain Platform for Educational Institutes | CredSure
+  - desc (159): See how educational institutions use a blockchain-powered platform to issue digital certificates, elevate the student experience, and stay ahead of disruption.
+- `address-skills-shortage-in-the-global-healthcare-sector` · kw: _healthcare skills shortage_
+  - title (48): Healthcare Skills Shortage: Solutions | CredSure
+  - desc (151): The global healthcare skills shortage is straining care systems. Discover the causes and practical solutions, from upskilling to digital credentialing.
+- `skilled-immigration-act-easier-access-to-the-german-labour-market` · kw: _German Skilled Immigration Act_
+  - title (52): Germany Skilled Immigration Act Explained | CredSure
+  - desc (159): Germany's Skilled Immigration Act opens the labour market to non-EU workers. Learn how the law eases hiring, fast-tracks applications, and tackles skills gaps.
+- `educational-certifications-just-got-smarter` · kw: _digital certificates for education_
+  - title (45): Digital Certificates for Education | CredSure
+  - desc (155): Replace paper certificates with blockchain-backed digital certificates. See how CredSure helps educators issue, verify, and strengthen student credentials.
+- `modular-courses-to-bridge-the-skills-gap` · kw: _modular courses_
+  - title (51): Modular Courses to Bridge the Skills Gap | CredSure
+  - desc (156): Modular short courses teach targeted, job-ready skills fast. Learn how they bridge the skills gap and help companies hire and upskill based on real ability.
+- `transforming-education-certification-with-blockchain` · kw: _blockchain in education certification_
+  - title (48): Blockchain in Education Certification | CredSure
+  - desc (158): Discover how blockchain transforms education certification with tamper-proof digital credentials that cut fraud, speed verification, and close the skills gap.
+- `why-the-world-needs-a-review-system-for-educational-institutions` · kw: _review system for educational institutions_
+  - title (53): Review System for Educational Institutions | CredSure
+  - desc (159): Learn why an independent review system for educational institutions helps students choose accredited, quality courses and avoid unverified, low-value training.
+- `digital-signature-certificates-empower-your-students-to-prove-their-skills` · kw: _digital signature certificates_
+  - title (54): Digital Signature Certificates for Students | CredSure
+  - desc (153): See how blockchain-powered digital signature certificates let your students prove their skills to employers and stand out in the Industry 4.0 job market.
+- `blockchain-platform-to-build-trust-in-global-education-sector` · kw: _blockchain in education_
+  - title (49): Blockchain to Build Trust in Education | CredSure
+  - desc (155): Discover how a blockchain platform stops fake certifications and builds trust in the global education sector with secure, instantly verifiable credentials.
+- `evolution-of-digital-credentials` · kw: _evolution of educational certificates_
+  - title (48): Evolution of Educational Certificates | CredSure
+  - desc (157): Explore the evolution of educational certificates and why institutions are issuing secure, instantly verifiable blockchain digital credentials for graduates.
+- `technical-courses-in-india-an-opportunity-for-youth-to-gain-next-gen-skills` · kw: _technical courses in India_
+  - title (57): Technical Courses in India for Next-Gen Skills | CredSure
+  - desc (158): Discover how short technical courses in India help youth gain next-gen, job-ready skills, bridge the education-employment gap, and prepare for future careers.
+- `a-critical-success-factor-upskill-and-reskill-the-workforce` · kw: _upskilling and reskilling the workforce_
+  - title (50): Upskilling and Reskilling the Workforce | CredSure
+  - desc (148): Discover why upskilling and reskilling your workforce is a critical success factor in the Industry 4.0 era, and how to close the digital skills gap.
+- `worldskills-kazan-2019-a-confluence-of-skill-dedication-and-purpose` · kw: _worldskills kazan 2019_ ⚠️low-value
+  - title (53): WorldSkills Kazan 2019: Olympics of Skills | CredSure
+  - desc (151): WorldSkills Kazan 2019 brings talented learners worldwide to compete across technical fields. See how blockchain digital credentialing takes the stage.
+- `worldskills-2019-took-visitors-on-an-inspiring-journey-around-the-future-of-skills` · kw: _worldskills 2019_ ⚠️low-value
+  - title (49): WorldSkills 2019: The Future of Skills | CredSure
+  - desc (152): WorldSkills 2019 in Kazan gathered 1,300+ competitors to spotlight the future of skills. Explore key takeaways on skilling, education and global talent.
+- `benefits-of-blockchain-promote-transparency-and-raise-education-standards` · kw: _benefits of blockchain in education_
+  - title (46): Benefits of Blockchain in Education | CredSure
+  - desc (147): Explore the benefits of blockchain in education: transparent records, instant credential verification and higher standards that cut cost and fraud.
+- `two-reasons-why-digital-certificate-is-the-way-forward` · kw: _digital certificates_
+  - title (55): Why Digital Certificates Are the Way Forward | CredSure
+  - desc (157): Discover two key reasons digital certificates are the way forward: granular, instant credential verification that reshapes hiring for recruiters and seekers.

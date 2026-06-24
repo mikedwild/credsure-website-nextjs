@@ -1,0 +1,2232 @@
+[
+ {
+  "slug": "digital-badges-employee-engagement",
+  "links": [
+   {
+    "anchor_text": "Micro-badges build towards larger certifications",
+    "target_url": "/en/blog/micro-credentials-and-its-benefits",
+    "reason": "The stackable credentials point is exactly about micro-credentials, so this links to the micro-credentials pillar where the concept is explained in depth."
+   },
+   {
+    "anchor_text": "Recipients can display badges on LinkedIn",
+    "target_url": "/en/blog/how-to-add-digital-badges-to-linkedin",
+    "reason": "Mentions displaying badges on LinkedIn, which is the precise topic of the how-to-add-badges-to-LinkedIn guide."
+   },
+   {
+    "anchor_text": "Analytics reveal which programs drive the most engagement",
+    "target_url": "/en/features/analytics",
+    "reason": "Directly references analytics on engagement, a natural fit for the CredSure analytics feature page."
+   },
+   {
+    "anchor_text": "issue blockchain-verified badges that carry real weight",
+    "target_url": "/en/features/blockchain",
+    "reason": "Talks about blockchain-verified badges, matching the blockchain verification feature page."
+   },
+   {
+    "anchor_text": "CredSure's digital badge platform",
+    "target_url": "/en/digital-badges",
+    "reason": "Names the digital badge platform, ideal anchor for the digital badges product page."
+   }
+  ]
+ },
+ {
+  "slug": "gdpr-digital-credentials-compliance",
+  "links": [
+   {
+    "anchor_text": "Digital credentials contain personal data",
+    "target_url": "/en/blog/what-are-digital-credentials",
+    "reason": "Opening definition of digital credentials links naturally to the pillar explaining what digital credentials are."
+   },
+   {
+    "anchor_text": "Credential metadata on the blockchain contains no personal data",
+    "target_url": "/en/features/blockchain",
+    "reason": "Describes how blockchain stores only hashes, a strong fit for the blockchain verification feature page."
+   },
+   {
+    "anchor_text": "implements end-to-end encryption",
+    "target_url": "/en/platform",
+    "reason": "Describes CredSure's platform security architecture, linking to the platform overview page."
+   },
+   {
+    "anchor_text": "Right to Erasure",
+    "target_url": "/en/blog/what-is-credential-management-best-practice",
+    "reason": "Data deletion/erasure handling is a core credential management practice, linking to the credential management best-practice pillar."
+   }
+  ]
+ },
+ {
+  "slug": "digital-credentials-higher-education",
+  "links": [
+   {
+    "anchor_text": "over 60% of European universities have adopted or are piloting digital credentials",
+    "target_url": "/en/blog/digital-badges-for-students-and-universities",
+    "reason": "Discusses universities adopting digital credentials, matching the students-and-universities badges pillar."
+   },
+   {
+    "anchor_text": "Blockchain verification eliminates diploma mills and fake transcripts",
+    "target_url": "/en/blog/how-to-verify-degrees-and-diplomas-online",
+    "reason": "About verifying diplomas/transcripts and stopping fakes, the exact topic of the verifying degrees/diplomas guide."
+   },
+   {
+    "anchor_text": "Launch micro-credentials and stackable pathways",
+    "target_url": "/en/blog/micro-credentials-and-its-benefits",
+    "reason": "Directly references micro-credentials and stackable pathways, linking to the micro-credentials pillar."
+   },
+   {
+    "anchor_text": "CMU partnered with CredSure",
+    "target_url": "/en/solutions/higher-education",
+    "reason": "University partnership case study links to the higher-education solution page."
+   },
+   {
+    "anchor_text": "Hiring managers can verify credentials in one click",
+    "target_url": "/en/features/verification",
+    "reason": "Describes one-click credential verification, the core of the instant verification feature page."
+   }
+  ]
+ },
+ {
+  "slug": "how-to-build-a-great-soft-skill-training-program-for-your-employees",
+  "links": [
+   {
+    "anchor_text": "issue secure, verifiable certificates for every completed soft skill training course",
+    "target_url": "/en/features/digital-certificates",
+    "reason": "Describes issuing verifiable certificates, a direct fit for the digital certificates feature page."
+   },
+   {
+    "anchor_text": "blockchain-powered digital credentialing platform",
+    "target_url": "/en/platform",
+    "reason": "Names CredSure's credentialing platform, ideal anchor for the platform overview page."
+   },
+   {
+    "anchor_text": "These digital credentials aren\u2019t just pieces of paper",
+    "target_url": "/en/blog/what-are-digital-credentials",
+    "reason": "Introduces digital credentials, linking to the pillar explaining what digital credentials are."
+   },
+   {
+    "anchor_text": "blockchain-based verification",
+    "target_url": "/en/features/blockchain",
+    "reason": "References blockchain-based verification, matching the blockchain feature page."
+   },
+   {
+    "anchor_text": "book a demo today",
+    "target_url": "/en/demo",
+    "reason": "Closing CTA inviting readers to book a demo, the natural demo-booking link."
+   }
+  ]
+ },
+ {
+  "slug": "certificate-of-appreciation-definition-and-10-examples",
+  "links": [
+   {
+    "anchor_text": "blockchain-backed digital credentials",
+    "target_url": "/en/blog/what-are-digital-credentials",
+    "reason": "Introduces blockchain-backed digital credentials, linking to the digital credentials pillar."
+   },
+   {
+    "anchor_text": "Tamper-proof digital certificates that cannot be altered",
+    "target_url": "/en/features/digital-certificates",
+    "reason": "Describes tamper-proof digital certificates, a direct match for the digital certificates feature page."
+   },
+   {
+    "anchor_text": "Easy sharing options for LinkedIn, emails, and resumes",
+    "target_url": "/en/features/sharing",
+    "reason": "Lists credential sharing options, fitting the credential sharing feature page."
+   },
+   {
+    "anchor_text": "Instant verification for recipients and employers",
+    "target_url": "/en/features/verification",
+    "reason": "References instant verification, the core of the instant verification feature page."
+   },
+   {
+    "anchor_text": "Book a quick demo",
+    "target_url": "/en/demo",
+    "reason": "Closing CTA inviting a demo, the natural demo-booking link."
+   }
+  ]
+ },
+ {
+  "slug": "what-are-digital-certificates-and-how-to-use-them",
+  "links": [
+   {
+    "anchor_text": "similar to digital badges",
+    "target_url": "/en/blog/digital-certificates-vs-digital-badges",
+    "reason": "The text directly contrasts digital certificates with digital badges, making the certificates-vs-badges comparison pillar the ideal target."
+   },
+   {
+    "anchor_text": "anchored to the blockchain",
+    "target_url": "/en/features/blockchain",
+    "reason": "Discusses blockchain anchoring for tamper-proof security, matching the blockchain verification feature page."
+   },
+   {
+    "anchor_text": "Instant Verification",
+    "target_url": "/en/features/verification",
+    "reason": "This section describes verifying certificates instantly via QR code, aligning with the instant verification feature."
+   },
+   {
+    "anchor_text": "verified instantly",
+    "target_url": "/en/blog/how-to-verify-degrees-and-diplomas-online",
+    "reason": "Covers instant verification of credentials, relevant to the guide on verifying degrees and diplomas online."
+   },
+   {
+    "anchor_text": "Book a demo with CredSure today",
+    "target_url": "/en/demo",
+    "reason": "Explicit closing CTA inviting readers to book a demo."
+   }
+  ]
+ },
+ {
+  "slug": "why-should-you-use-a-free-certificate-template-examples",
+  "links": [
+   {
+    "anchor_text": "robust digital credentialing platform like CredSure",
+    "target_url": "/en/platform",
+    "reason": "Pitches moving beyond templates to a full credentialing platform, matching the CredSure platform page."
+   },
+   {
+    "anchor_text": "QR codes for easy verification",
+    "target_url": "/en/features/verification",
+    "reason": "References QR-code verification, aligning with the instant verification feature."
+   },
+   {
+    "anchor_text": "digital credentialing providers",
+    "target_url": "/en/blog/best-digital-credentialing-platforms-2026",
+    "reason": "Mentions choosing credentialing providers, relevant to the platform comparison guide."
+   },
+   {
+    "anchor_text": "Book a demo today",
+    "target_url": "/en/demo",
+    "reason": "Closing CTA to book a demo."
+   }
+  ]
+ },
+ {
+  "slug": "what-is-credential-management-best-practice",
+  "links": [
+   {
+    "anchor_text": "Blockchain Security",
+    "target_url": "/en/features/blockchain",
+    "reason": "Describes immutable blockchain-secured credentials, matching the blockchain verification feature."
+   },
+   {
+    "anchor_text": "Instant Verification",
+    "target_url": "/en/features/verification",
+    "reason": "Highlights verifying credentials in seconds, aligning with the instant verification feature."
+   },
+   {
+    "anchor_text": "Digital certificates: Secure transactions and authentication",
+    "target_url": "/en/blog/what-is-a-digital-certificate",
+    "reason": "Lists digital certificates as a credential type; links to the explainer on what a digital certificate is."
+   },
+   {
+    "anchor_text": "Contact CredSure today",
+    "target_url": "/en/demo",
+    "reason": "Closing CTA inviting readers to get in touch and see the platform."
+   }
+  ]
+ },
+ {
+  "slug": "top-8-e-learning-platforms-for-2025",
+  "links": [
+   {
+    "anchor_text": "digital badges or certified credentials",
+    "target_url": "/en/blog/what-are-digital-badges",
+    "reason": "Discusses digital badges as a factor in platform choice, matching the digital badges explainer."
+   },
+   {
+    "anchor_text": "micro-credentials",
+    "target_url": "/en/blog/micro-credentials-and-its-benefits",
+    "reason": "FutureLearn section mentions micro-credentials, directly matching that pillar."
+   },
+   {
+    "anchor_text": "share on LinkedIn",
+    "target_url": "/en/blog/how-to-add-digital-badges-to-linkedin",
+    "reason": "Encourages showcasing achievements on LinkedIn, aligning with the guide on adding badges to LinkedIn."
+   },
+   {
+    "anchor_text": "innovative credentialing solutions",
+    "target_url": "/en/solutions/higher-education",
+    "reason": "E-learning and educational providers are the focus; links to the higher-education solution."
+   }
+  ]
+ },
+ {
+  "slug": "how-do-you-choose-a-professional-credential-service",
+  "links": [
+   {
+    "anchor_text": "digital badges, certificates, and other verifiable credentials",
+    "target_url": "/en/blog/what-are-digital-credentials",
+    "reason": "Defines what credential services provide, ideal anchor for the pillar on what digital credentials are."
+   },
+   {
+    "anchor_text": "share on LinkedIn",
+    "target_url": "/en/blog/how-to-add-digital-badges-to-linkedin",
+    "reason": "Notes recipients can share credentials on LinkedIn, matching the LinkedIn badges guide."
+   },
+   {
+    "anchor_text": "recorded on a decentralised ledger",
+    "target_url": "/en/features/blockchain",
+    "reason": "Explains blockchain decentralised-ledger verification, matching the blockchain feature page."
+   },
+   {
+    "anchor_text": "comprehensive documentation",
+    "target_url": "/en/blog/best-digital-credentialing-platforms-2026",
+    "reason": "Section on evaluating providers; links to the credentialing platform comparison guide."
+   },
+   {
+    "anchor_text": "Book a demo today",
+    "target_url": "/en/demo",
+    "reason": "Closing CTA to book a demo."
+   }
+  ]
+ },
+ {
+  "slug": "how-do-we-create-job-training-programs",
+  "links": [
+   {
+    "anchor_text": "incorporating digital credentials like badges and certificates",
+    "target_url": "/en/blog/what-are-digital-credentials",
+    "reason": "The post recommends adding digital credentials to training programs; linking the phrase to the pillar explainer on what digital credentials are gives readers the foundational concept."
+   },
+   {
+    "anchor_text": "digital badges and certificates",
+    "target_url": "/en/blog/digital-certificates-vs-digital-badges",
+    "reason": "Mentions both badges and certificates together; the certificates-vs-badges comparison helps readers decide which format suits their training program."
+   },
+   {
+    "anchor_text": "issue verifiable, secure, and shareable credentials",
+    "target_url": "/en/features/credential-management",
+    "reason": "This describes CredSure's core credential issuance capability, a natural fit for the credential management feature page."
+   },
+   {
+    "anchor_text": "create a training program for your employees",
+    "target_url": "/en/solutions/corporate-training",
+    "reason": "The post is squarely about corporate/employee training, matching the corporate-training solution page."
+   },
+   {
+    "anchor_text": "Book a quick demo",
+    "target_url": "/en/demo",
+    "reason": "Closing CTA inviting readers to book a demo maps directly to the demo booking page."
+   }
+  ]
+ },
+ {
+  "slug": "whats-a-digital-badge-maker-how-do-you-use-it",
+  "links": [
+   {
+    "anchor_text": "create, customise, and issue digital badges",
+    "target_url": "/en/digital-badges",
+    "reason": "Describes the core badge-maker function; links to the digital badges product page where this is offered."
+   },
+   {
+    "anchor_text": "transform achievements into digital credentials",
+    "target_url": "/en/blog/what-are-digital-badges",
+    "reason": "Reinforces the concept of digital badges as credentials; the what-are-digital-badges pillar gives readers deeper context."
+   },
+   {
+    "anchor_text": "instantly verifiable",
+    "target_url": "/en/features/verification",
+    "reason": "Badges being instantly verifiable maps directly to the instant verification feature page."
+   },
+   {
+    "anchor_text": "shareable on social media and job-search platforms",
+    "target_url": "/en/blog/how-to-add-digital-badges-to-linkedin",
+    "reason": "Sharing badges on social/job platforms is exactly what the add-badges-to-LinkedIn guide covers."
+   },
+   {
+    "anchor_text": "Book a demo and get started",
+    "target_url": "/en/demo",
+    "reason": "Closing CTA to book a demo maps to the demo page."
+   }
+  ]
+ },
+ {
+  "slug": "how-to-sell-an-online-course-7-tipshow-to-sell-an-online-course",
+  "links": [
+   {
+    "anchor_text": "Issue secured and verifiable digital credentials",
+    "target_url": "/en/blog/what-are-digital-credentials",
+    "reason": "Introduces digital credentials as a selling/social-proof tactic; the pillar explainer grounds the concept for readers new to it."
+   },
+   {
+    "anchor_text": "digital certificates and badges",
+    "target_url": "/en/blog/digital-certificates-vs-digital-badges",
+    "reason": "Mentions both certificates and badges; the comparison post helps course creators choose the right format."
+   },
+   {
+    "anchor_text": "shareable certificates and badges",
+    "target_url": "/en/features/sharing",
+    "reason": "Emphasises shareability of credentials to boost course visibility, matching the credential sharing feature page."
+   },
+   {
+    "anchor_text": "issuing digital credentials can make a big impact",
+    "target_url": "/en/features/digital-certificates",
+    "reason": "Discusses issuing digital credentials/certificates for course sales; links to the digital certificates feature."
+   },
+   {
+    "anchor_text": "Book a quick demo today",
+    "target_url": "/en/demo",
+    "reason": "Closing CTA inviting a demo booking maps to the demo page."
+   }
+  ]
+ },
+ {
+  "slug": "10-must-have-features-digital-credentialing-solution",
+  "links": [
+   {
+    "anchor_text": "selecting a digital credentialing platform",
+    "target_url": "/en/blog/best-digital-credentialing-platforms-2026",
+    "reason": "The post is a buyer's guide to choosing a platform; the 2026 platform comparison is the natural next read."
+   },
+   {
+    "anchor_text": "instant verification feature",
+    "target_url": "/en/features/verification",
+    "reason": "Directly names the instant verification feature, matching the verification feature page."
+   },
+   {
+    "anchor_text": "blockchain anchoring",
+    "target_url": "/en/features/blockchain",
+    "reason": "Describes anchoring credentials to the blockchain for tamper-proofing, matching the blockchain feature page."
+   },
+   {
+    "anchor_text": "digital certificates and digital badges",
+    "target_url": "/en/blog/digital-certificates-vs-digital-badges",
+    "reason": "The dynamic-formatting section contrasts the two credential forms; the comparison post expands on the distinction."
+   },
+   {
+    "anchor_text": "book a demo with CredSure today",
+    "target_url": "/en/demo",
+    "reason": "Closing CTA to book a demo maps to the demo page."
+   }
+  ]
+ },
+ {
+  "slug": "the-transformative-impact-of-artificial-intelligence-in-education",
+  "links": [
+   {
+    "anchor_text": "promoting lifelong learning and continuous education",
+    "target_url": "/en/blog/micro-credentials-and-its-benefits",
+    "reason": "The future-of-AI section ties to lifelong learning and skills updating, which micro-credentials directly enable."
+   },
+   {
+    "anchor_text": "stay updated with industry trends",
+    "target_url": "/en/blog/what-are-digital-credentials",
+    "reason": "Discusses individuals continuously updating skills; the digital credentials pillar shows how credentials evidence those updated skills."
+   },
+   {
+    "anchor_text": "digital certificates can enhance your learning programs",
+    "target_url": "/en/features/digital-certificates",
+    "reason": "Closing CredSure mention of digital certificates for learning programs maps to the digital certificates feature page."
+   },
+   {
+    "anchor_text": "Book a demo with CredSure",
+    "target_url": "/en/demo",
+    "reason": "Closing CTA inviting a demo booking maps to the demo page."
+   }
+  ]
+ },
+ {
+  "slug": "how-to-use-digital-badges-for-internal-marketin",
+  "links": [
+   {
+    "anchor_text": "Digital badges are one way to do this",
+    "target_url": "/en/blog/what-are-digital-badges",
+    "reason": "The intro defines digital badges as the recognition tool; linking to the explainer on what digital badges are gives readers the foundational pillar context."
+   },
+   {
+    "anchor_text": "build employee engagement",
+    "target_url": "/en/solutions/corporate-training",
+    "reason": "Employee engagement via badges is a core corporate-training use case, making the corporate-training solution page topically relevant here."
+   },
+   {
+    "anchor_text": "They are easily shareable on social media",
+    "target_url": "/en/features/sharing",
+    "reason": "This sentence is specifically about badges being shareable, which maps directly to the credential sharing feature page."
+   },
+   {
+    "anchor_text": "leading digital badge providers in the world",
+    "target_url": "/en/digital-badges",
+    "reason": "Where CredSure is described as a digital badge provider, linking to the digital badges product page is the natural commercial destination."
+   },
+   {
+    "anchor_text": "book a demo with CredSure today",
+    "target_url": "/en/demo",
+    "reason": "Explicit CTA phrase at the article close, ideal for the book-a-demo conversion link."
+   }
+  ]
+ },
+ {
+  "slug": "8-ways-to-enhance-employee-training-programs",
+  "links": [
+   {
+    "anchor_text": "to introduce digital badges",
+    "target_url": "/en/blog/what-are-digital-badges",
+    "reason": "Where the post first proposes introducing digital badges, linking to the what-are-digital-badges pillar gives readers the foundational definition."
+   },
+   {
+    "anchor_text": "verifiable proof of achievement",
+    "target_url": "/en/blog/what-are-certification-badges",
+    "reason": "Badges as verifiable proof of achievement ties directly to certification badges, an adjacent explainer."
+   },
+   {
+    "anchor_text": "It can integrate with LMS",
+    "target_url": "/en/features/credential-management",
+    "reason": "LMS integration and progress tracking of badges maps to the credential management system feature."
+   },
+   {
+    "anchor_text": "hiring and skills gap assessment",
+    "target_url": "/en/blog/micro-credentials-and-its-benefits",
+    "reason": "The post mentions badges for skills gap assessment, which connects to the micro-credentials benefits explainer covering skill-level credentials."
+   },
+   {
+    "anchor_text": "enhance employee training programs",
+    "target_url": "/en/solutions/corporate-training",
+    "reason": "The article's central theme is corporate training enhancement, mapping cleanly to the corporate-training solution page."
+   }
+  ]
+ },
+ {
+  "slug": "empower-your-workers-with-artificial-intelligence-in-training",
+  "links": [
+   {
+    "anchor_text": "integrate digital badges with your learning management system",
+    "target_url": "/en/blog/what-are-digital-badges",
+    "reason": "Where badges are introduced alongside the LMS, linking to the what-are-digital-badges pillar gives readers the core concept."
+   },
+   {
+    "anchor_text": "set up your learning management system to integrate digital credentials",
+    "target_url": "/en/features/credential-management",
+    "reason": "Automated issuance of digital credentials via the LMS maps to the credential management feature."
+   },
+   {
+    "anchor_text": "Encouraging your employees with digital badges",
+    "target_url": "/en/digital-badges",
+    "reason": "This gamification mention of badges is a natural place to point at the digital badges product page."
+   },
+   {
+    "anchor_text": "how digital badges can help your organisation",
+    "target_url": "/en/solutions/corporate-training",
+    "reason": "The closing line about badges helping the organisation ties to the corporate-training solution for workforce development."
+   },
+   {
+    "anchor_text": "book a demo with CredSure today",
+    "target_url": "/en/demo",
+    "reason": "Explicit CTA phrase at the article close for the book-a-demo conversion link."
+   }
+  ]
+ },
+ {
+  "slug": "educational-certificates-got-smarter",
+  "links": [
+   {
+    "anchor_text": "they transition to digital certificates",
+    "target_url": "/en/blog/what-is-a-digital-certificate",
+    "reason": "The intro pivots educational certificates to digital certificates; linking to the what-is-a-digital-certificate explainer gives the foundational definition."
+   },
+   {
+    "anchor_text": "validate the authenticity of the certificate",
+    "target_url": "/en/features/verification",
+    "reason": "This describes verifying a certificate against a database, mapping directly to the instant verification feature."
+   },
+   {
+    "anchor_text": "anchored on the Blockchain",
+    "target_url": "/en/features/blockchain",
+    "reason": "Tamper-proof immutability via blockchain anchoring maps to the blockchain verification feature page."
+   },
+   {
+    "anchor_text": "verify skills more easily",
+    "target_url": "/en/blog/how-to-verify-degrees-and-diplomas-online",
+    "reason": "Helping recruiters verify educational credentials connects to the guide on verifying degrees and diplomas online."
+   },
+   {
+    "anchor_text": "a credentialing platform like CredSure",
+    "target_url": "/en/platform",
+    "reason": "Where a credentialing platform is named, linking to the CredSure platform page is the natural product destination."
+   }
+  ]
+ },
+ {
+  "slug": "6-benefits-of-competency-based-learning",
+  "links": [
+   {
+    "anchor_text": "your institution can also implement digital badges",
+    "target_url": "/en/blog/digital-badges-for-students-and-universities",
+    "reason": "Badges in a learner/institution context map directly to the badges-for-students-and-universities explainer."
+   },
+   {
+    "anchor_text": "introducing micro-credentials",
+    "target_url": "/en/blog/micro-credentials-and-its-benefits",
+    "reason": "The post recommends micro-credentials for flexible learning pathways, matching the micro-credentials benefits explainer."
+   },
+   {
+    "anchor_text": "help learners track their progress",
+    "target_url": "/en/features/analytics",
+    "reason": "Tracking learner progress with badges maps to the analytics feature page."
+   },
+   {
+    "anchor_text": "the use of digital badges to complement",
+    "target_url": "/en/digital-badges",
+    "reason": "This names digital badges as the innovative solution, a natural anchor for the digital badges product page."
+   },
+   {
+    "anchor_text": "Book a demo with CredSure",
+    "target_url": "/en/demo",
+    "reason": "Explicit CTA phrase at the article close for the book-a-demo conversion link."
+   }
+  ]
+ },
+ {
+  "slug": "how-to-increase-website-traffic-with-digital-certificates",
+  "links": [
+   {
+    "anchor_text": "the digital certificates you issue",
+    "target_url": "/en/blog/what-are-digital-credentials",
+    "reason": "Early framing of digital certificates fits the pillar explaining what digital credentials are."
+   },
+   {
+    "anchor_text": "Make Your Digital Certificates Visually Appealing",
+    "target_url": "/en/digital-badges",
+    "reason": "Visually appealing, shareable certificate/badge design connects naturally to the digital badges product page. (Anchor is body text introducing the visual-appeal discussion.)"
+   },
+   {
+    "anchor_text": "can be shared on social media with a single click",
+    "target_url": "/en/features/sharing",
+    "reason": "Directly about one-click social sharing of credentials, matching the credential sharing feature."
+   },
+   {
+    "anchor_text": "blockchain-anchored tamper-proof digital certificates",
+    "target_url": "/en/features/blockchain",
+    "reason": "Mentions blockchain-anchored tamper-proof certificates, matching the blockchain verification feature."
+   },
+   {
+    "anchor_text": "book a demo today",
+    "target_url": "/en/demo",
+    "reason": "Closing CTA inviting readers to book a demo."
+   }
+  ]
+ },
+ {
+  "slug": "how-to-digitise-your-certificate",
+  "links": [
+   {
+    "anchor_text": "over 80% of employers prefer digital credentials",
+    "target_url": "/en/blog/what-are-digital-credentials",
+    "reason": "Statistic about digital credentials links to the pillar defining them."
+   },
+   {
+    "anchor_text": "manage all your certificates from a single platform",
+    "target_url": "/en/features/credential-management",
+    "reason": "Describes managing all certificates from one platform, matching the credential management feature."
+   },
+   {
+    "anchor_text": "anchoring the certificates on the blockchain",
+    "target_url": "/en/features/blockchain",
+    "reason": "Mentions anchoring certificates on the blockchain, matching the blockchain feature."
+   },
+   {
+    "anchor_text": "Enables Micro-Credentialing",
+    "target_url": "/en/blog/micro-credentials-and-its-benefits",
+    "reason": "Section discusses micro-credentialing, matching the micro-credentials blog. (Anchor appears in body context introducing the concept.)"
+   },
+   {
+    "anchor_text": "Book a demo with CredSure today",
+    "target_url": "/en/demo",
+    "reason": "Closing CTA inviting readers to book a demo."
+   }
+  ]
+ },
+ {
+  "slug": "what-is-a-digital-certificate",
+  "links": [
+   {
+    "anchor_text": "will shape the future of credentialing",
+    "target_url": "/en/blog/what-are-digital-credentials",
+    "reason": "General framing of digital certificates and credentialing links to the digital credentials pillar."
+   },
+   {
+    "anchor_text": "use cryptographic mechanisms like blockchain technology",
+    "target_url": "/en/features/blockchain",
+    "reason": "Authentication via blockchain technology matches the blockchain verification feature."
+   },
+   {
+    "anchor_text": "as easy as clicking a button",
+    "target_url": "/en/features/verification",
+    "reason": "Describes one-click verification of authenticity, matching the instant verification feature."
+   },
+   {
+    "anchor_text": "This is known as micro-credentialing",
+    "target_url": "/en/blog/micro-credentials-and-its-benefits",
+    "reason": "Explicitly introduces micro-credentialing, matching the micro-credentials blog."
+   },
+   {
+    "anchor_text": "Book a demo with CredSure today",
+    "target_url": "/en/demo",
+    "reason": "Closing CTA inviting readers to book a demo."
+   }
+  ]
+ },
+ {
+  "slug": "need-for-skills-training",
+  "links": [
+   {
+    "anchor_text": "by introducing micro-credentials",
+    "target_url": "/en/blog/micro-credentials-and-its-benefits",
+    "reason": "Explicitly references introducing micro-credentials as a solution, matching the micro-credentials blog."
+   },
+   {
+    "anchor_text": "digital certification to verify new employees\u2019 skills",
+    "target_url": "/en/blog/what-are-digital-credentials",
+    "reason": "Introduces digital certification/credentials as a skills-verification tool, fitting the digital credentials pillar."
+   },
+   {
+    "anchor_text": "they can be easily verified compared to paper certificates",
+    "target_url": "/en/features/verification",
+    "reason": "About easy verification of credentials, matching the instant verification feature."
+   },
+   {
+    "anchor_text": "addressing the critical need for skills training",
+    "target_url": "/en/solutions/corporate-training",
+    "reason": "Workforce skills-training context maps to the corporate-training solution."
+   },
+   {
+    "anchor_text": "Book a demo with CredSure today",
+    "target_url": "/en/demo",
+    "reason": "Closing CTA inviting readers to book a demo."
+   }
+  ]
+ },
+ {
+  "slug": "how-to-design-digital-badges",
+  "links": [
+   {
+    "anchor_text": "compared to any other form of digital credentials",
+    "target_url": "/en/blog/what-are-digital-badges",
+    "reason": "Comparing digital badges to other credentials fits the what-are-digital-badges explainer."
+   },
+   {
+    "anchor_text": "a well-known tool used in the gamification of learning programs",
+    "target_url": "/en/blog/what-are-digital-credentials",
+    "reason": "Broad framing of badges as a credentialing/gamification tool links to the digital credentials pillar."
+   },
+   {
+    "anchor_text": "a platform for issuing digital badges",
+    "target_url": "/en/digital-badges",
+    "reason": "References partnering with a platform for issuing digital badges, matching the digital badges product page."
+   },
+   {
+    "anchor_text": "incorporation of metadata into an image",
+    "target_url": "/en/blog/open-badges-explained",
+    "reason": "Metadata embedded in badge images is the core of the Open Badges standard."
+   },
+   {
+    "anchor_text": "Book a demo with CredSure today",
+    "target_url": "/en/demo",
+    "reason": "Closing CTA inviting readers to book a demo."
+   }
+  ]
+ },
+ {
+  "slug": "guide-to-digital-badges-in-the-workplace",
+  "links": [
+   {
+    "anchor_text": "Digital badges are electronic representations",
+    "target_url": "/en/blog/what-are-digital-badges",
+    "reason": "Defines what digital badges are; links to the dedicated explainer pillar where the post introduces the concept."
+   },
+   {
+    "anchor_text": "Organisations offering corporate training",
+    "target_url": "/en/solutions/corporate-training",
+    "reason": "The LMS-integration section discusses corporate training programs; links to the corporate-training solution page."
+   },
+   {
+    "anchor_text": "instantly verifiable",
+    "target_url": "/en/features/verification",
+    "reason": "Credibility section is about verifiable proof of skill; links to the instant verification feature."
+   },
+   {
+    "anchor_text": "Choose a digital badging platform",
+    "target_url": "/en/blog/best-digital-credentialing-platforms-2026",
+    "reason": "Best-practices section advises selecting a platform; links to the credentialing platform comparison."
+   },
+   {
+    "anchor_text": "Book a demo with CredSure",
+    "target_url": "/en/demo",
+    "reason": "Closing CTA inviting readers to book a demo."
+   }
+  ]
+ },
+ {
+  "slug": "enhance-learning-harness-the-power-of-gamification-in-education",
+  "links": [
+   {
+    "anchor_text": "implementation of digital badges",
+    "target_url": "/en/blog/what-are-digital-badges",
+    "reason": "Reward-systems section names digital badges as a gamification method; links to the digital badges explainer."
+   },
+   {
+    "anchor_text": "micro-credentials",
+    "target_url": "/en/blog/digital-badges-for-students-and-universities",
+    "reason": "Article targets educational institutions and learners; links to the students/universities badges pillar (relevant audience)."
+   },
+   {
+    "anchor_text": "providing adequate rewards to the learners",
+    "target_url": "/en/digital-badges",
+    "reason": "Designing reward systems via badges; links to the digital badges product page where badges are issued."
+   },
+   {
+    "anchor_text": "Book a demo with CredSure",
+    "target_url": "/en/demo",
+    "reason": "Closing CTA inviting readers to book a demo."
+   }
+  ]
+ },
+ {
+  "slug": "redefining-workforce-development-how-digital-badges-motivate-and-engage-learners",
+  "links": [
+   {
+    "anchor_text": "selecting digital badge platforms",
+    "target_url": "/en/blog/best-digital-credentialing-platforms-2026",
+    "reason": "Conclusion advises choosing a platform partner; links to the platform comparison guide."
+   },
+   {
+    "anchor_text": "the concept of gamification",
+    "target_url": "/en/blog/what-are-digital-badges",
+    "reason": "Gamification section ties badges to engagement; links to the digital badges explainer pillar."
+   },
+   {
+    "anchor_text": "shared on social media",
+    "target_url": "/en/features/sharing",
+    "reason": "Social recognition section is about sharing badges; links to the credential sharing feature."
+   },
+   {
+    "anchor_text": "track their progress",
+    "target_url": "/en/features/analytics",
+    "reason": "Tracking-progress section is about monitoring learner advancement; links to the analytics feature."
+   },
+   {
+    "anchor_text": "Book a demo with CredSure",
+    "target_url": "/en/demo",
+    "reason": "Closing CTA inviting readers to book a demo."
+   }
+  ]
+ },
+ {
+  "slug": "5-reasons-why-use-digital-badges",
+  "links": [
+   {
+    "anchor_text": "Digital badges are a form of credentialing",
+    "target_url": "/en/blog/what-are-digital-badges",
+    "reason": "Intro defines digital badges; links to the dedicated digital badges explainer pillar."
+   },
+   {
+    "anchor_text": "credible and verifiable proof",
+    "target_url": "/en/features/verification",
+    "reason": "Skill verification section is about verifiable proof of skills; links to the instant verification feature."
+   },
+   {
+    "anchor_text": "blockchain-secured digital badges",
+    "target_url": "/en/features/blockchain",
+    "reason": "Closing mentions blockchain-secured badges; links to the blockchain verification feature."
+   },
+   {
+    "anchor_text": "showcase their badges on professional networking platforms",
+    "target_url": "/en/blog/how-to-add-digital-badges-to-linkedin",
+    "reason": "Learning-community section is about showcasing badges on professional networks; links to the LinkedIn how-to guide."
+   },
+   {
+    "anchor_text": "Book a demo with CredSure",
+    "target_url": "/en/demo",
+    "reason": "Closing CTA inviting readers to book a demo."
+   }
+  ]
+ },
+ {
+  "slug": "how-to-manage-and-share-digital-credentials",
+  "links": [
+   {
+    "anchor_text": "detailed guide to Digital Credentials",
+    "target_url": "/en/blog/what-are-digital-credentials",
+    "reason": "Post explicitly points to a detailed guide on digital credentials; links to the digital credentials pillar."
+   },
+   {
+    "anchor_text": "granular recognition of skills and achievements through micro-credentials",
+    "target_url": "/en/blog/micro-credentials-and-its-benefits",
+    "reason": "Granular Recognition section names micro-credentials; links to the micro-credentials explainer."
+   },
+   {
+    "anchor_text": "Adding your digital credentials to your LinkedIn profile",
+    "target_url": "/en/blog/how-to-add-digital-badges-to-linkedin",
+    "reason": "Management section discusses adding credentials to LinkedIn; links to the LinkedIn how-to guide."
+   },
+   {
+    "anchor_text": "verify the authenticity",
+    "target_url": "/en/features/verification",
+    "reason": "Public verifier page section is about verifying authenticity; links to the instant verification feature."
+   },
+   {
+    "anchor_text": "a dedicated wallet",
+    "target_url": "/en/features/credential-management",
+    "reason": "Management section recommends a dedicated wallet for organising credentials; links to the credential management feature."
+   }
+  ]
+ },
+ {
+  "slug": "academic-certificates-vs-digital-certificates",
+  "links": [
+   {
+    "anchor_text": "the differences between academic certificates and digital certificates",
+    "target_url": "/en/blog/what-is-a-digital-certificate",
+    "reason": "Anchor sits in the intro framing the whole comparison; links to the foundational explainer on what a digital certificate is."
+   },
+   {
+    "anchor_text": "the rise of micro-credentials",
+    "target_url": "/en/blog/micro-credentials-and-its-benefits",
+    "reason": "Direct textual mention of micro-credentials; links to the dedicated micro-credentials pillar."
+   },
+   {
+    "anchor_text": "leveraging blockchain technology",
+    "target_url": "/en/features/blockchain",
+    "reason": "Anchor describes how digital certificates are secured; links to the blockchain verification feature page."
+   },
+   {
+    "anchor_text": "Employers or educational institutions might face difficulties verifying certificates",
+    "target_url": "/en/features/verification",
+    "reason": "Anchor is about verification difficulty with paper certificates; links to the instant verification feature that solves it."
+   },
+   {
+    "anchor_text": "more comprehensive and reliable representations of skills",
+    "target_url": "/en/blog/what-are-digital-credentials",
+    "reason": "Anchor introduces richer digital representations of skills; links to the pillar on what digital credentials are."
+   }
+  ]
+ },
+ {
+  "slug": "how-to-create-a-linkedin-student-profile",
+  "links": [
+   {
+    "anchor_text": "how digital credentials can aid in showcasing your professional skills",
+    "target_url": "/en/blog/what-are-digital-credentials",
+    "reason": "Anchor previews the digital credentials theme; links to the digital credentials pillar."
+   },
+   {
+    "anchor_text": "Visual achievements such as digital badges",
+    "target_url": "/en/blog/what-are-digital-badges",
+    "reason": "Anchor names digital badges directly; links to the explainer on what digital badges are."
+   },
+   {
+    "anchor_text": "display these digital badges directly on your profile",
+    "target_url": "/en/blog/how-to-add-digital-badges-to-linkedin",
+    "reason": "Anchor is about displaying badges on LinkedIn; links to the how-to guide for adding badges to LinkedIn."
+   },
+   {
+    "anchor_text": "badges for students and universities",
+    "target_url": "/en/blog/digital-badges-for-students-and-universities",
+    "reason": "Post targets students; relevant pillar on badges for students/universities."
+   },
+   {
+    "anchor_text": "Book a demo with CredSure today",
+    "target_url": "/en/demo",
+    "reason": "Closing CTA; links to the book-a-demo page."
+   }
+  ]
+ },
+ {
+  "slug": "why-you-must-avoid-ghost-certificates",
+  "links": [
+   {
+    "anchor_text": "the solution to safeguarding your online security through digital certificates",
+    "target_url": "/en/blog/what-is-a-digital-certificate",
+    "reason": "Anchor frames digital certificates as the solution; links to the explainer on what a digital certificate is."
+   },
+   {
+    "anchor_text": "With the right digital credentialing platform",
+    "target_url": "/en/blog/best-digital-credentialing-platforms-2026",
+    "reason": "Anchor references choosing a credentialing platform; links to the platform comparison pillar."
+   },
+   {
+    "anchor_text": "automate credential management processes",
+    "target_url": "/en/features/credential-management",
+    "reason": "Anchor is about automating credential management; links to the credential management system feature."
+   },
+   {
+    "anchor_text": "its instant verification feature",
+    "target_url": "/en/features/verification",
+    "reason": "Anchor names the instant verification feature directly; links to the verification feature page."
+   },
+   {
+    "anchor_text": "Book a demo with CredSure today",
+    "target_url": "/en/demo",
+    "reason": "Closing CTA; links to the book-a-demo page."
+   }
+  ]
+ },
+ {
+  "slug": "digital-certificates-vs-paper-certificates",
+  "links": [
+   {
+    "anchor_text": "What is a Digital Certificate",
+    "target_url": "/en/blog/what-is-a-digital-certificate",
+    "reason": "Anchor matches the section topic defining a digital certificate; links to the dedicated explainer."
+   },
+   {
+    "anchor_text": "such as blockchain technology, to verify the authenticity",
+    "target_url": "/en/features/blockchain",
+    "reason": "Anchor describes blockchain-based authentication; links to the blockchain verification feature."
+   },
+   {
+    "anchor_text": "Verifying a digital certificate",
+    "target_url": "/en/features/verification",
+    "reason": "Anchor is about verifying a digital certificate; links to the instant verification feature page."
+   },
+   {
+    "anchor_text": "Bridging the Skills Gap",
+    "target_url": "/en/blog/micro-credentials-and-its-benefits",
+    "reason": "Anchor is about credentials bridging the skills gap, a core micro-credentials theme; links to that pillar."
+   },
+   {
+    "anchor_text": "Book a demo today",
+    "target_url": "/en/demo",
+    "reason": "Closing CTA; links to the book-a-demo page."
+   }
+  ]
+ },
+ {
+  "slug": "rise-of-digital-educational-certificates",
+  "links": [
+   {
+    "anchor_text": "powered by blockchain technology",
+    "target_url": "/en/features/blockchain",
+    "reason": "Anchor describes blockchain-powered certificates; links to the blockchain verification feature."
+   },
+   {
+    "anchor_text": "Instant Verification",
+    "target_url": "/en/features/verification",
+    "reason": "Anchor is the instant verification section heading topic in body text; links to the instant verification feature."
+   },
+   {
+    "anchor_text": "various digital credentialing platforms",
+    "target_url": "/en/blog/best-digital-credentialing-platforms-2026",
+    "reason": "Anchor references credentialing platforms; links to the platform comparison pillar."
+   },
+   {
+    "anchor_text": "how digital certificates can help its recipients",
+    "target_url": "/en/blog/what-are-digital-credentials",
+    "reason": "Anchor introduces what digital certificates/credentials do; links to the digital credentials pillar."
+   },
+   {
+    "anchor_text": "Book a demo with CredSure",
+    "target_url": "/en/demo",
+    "reason": "Closing CTA; links to the book-a-demo page."
+   }
+  ]
+ },
+ {
+  "slug": "micro-credentials-and-its-benefits",
+  "links": [
+   {
+    "anchor_text": "digital certificates are broader in scope",
+    "target_url": "/en/blog/what-is-a-digital-certificate",
+    "reason": "This sentence contrasts micro-credentials with digital certificates; linking to the explainer on what a digital certificate is gives readers the definitional deep-dive at the exact comparison point."
+   },
+   {
+    "anchor_text": "Digital badges are digital representations",
+    "target_url": "/en/blog/what-are-digital-badges",
+    "reason": "The post defines digital badges here; linking to the dedicated 'what are digital badges' pillar is a natural topical match for readers wanting more."
+   },
+   {
+    "anchor_text": "showcase on professional profiles, social media, and resumes",
+    "target_url": "/en/blog/how-to-add-digital-badges-to-linkedin",
+    "reason": "The text mentions sharing credentials on professional profiles and social media; the LinkedIn guide is the practical how-to for exactly that."
+   },
+   {
+    "anchor_text": "Data-Driven Decision-Making",
+    "target_url": "/en/features/analytics",
+    "reason": "This section is about the data micro-credentials generate for talent decisions, which maps directly to the CredSure analytics feature."
+   },
+   {
+    "anchor_text": "What are Stackable Micro-Credentials",
+    "target_url": "/en/solutions/corporate-training",
+    "reason": "Stackable micro-credentials are framed as a business upskilling tool; the corporate-training solution page is the relevant product destination for that use case."
+   }
+  ]
+ },
+ {
+  "slug": "certificate-fraud-in-the-job-market",
+  "links": [
+   {
+    "anchor_text": "blockchain technology",
+    "target_url": "/en/features/blockchain",
+    "reason": "The post positions blockchain as the anti-fraud solution; the blockchain verification feature page is the directly relevant product reference."
+   },
+   {
+    "anchor_text": "Digital certificates offer a secure and tamper-proof way",
+    "target_url": "/en/features/digital-certificates",
+    "reason": "This sentence describes the value of tamper-proof digital certificates, matching the digital certificates feature page."
+   },
+   {
+    "anchor_text": "QR code or key",
+    "target_url": "/en/features/verification",
+    "reason": "The QR-code/key verification mechanism described here is exactly the instant verification feature."
+   },
+   {
+    "anchor_text": "verify an individual",
+    "target_url": "/en/blog/how-to-verify-degrees-and-diplomas-online",
+    "reason": "The post discusses verifying qualifications and falsified degree certificates; the verifying degrees/diplomas guide is a close topical pillar."
+   },
+   {
+    "anchor_text": "Book a demo with CredSure",
+    "target_url": "/en/demo",
+    "reason": "Natural end-of-post CTA pointing to the demo booking page."
+   }
+  ]
+ },
+ {
+  "slug": "gamification-using-digital-badges",
+  "links": [
+   {
+    "anchor_text": "Digital badges are visual representations",
+    "target_url": "/en/blog/what-are-digital-badges",
+    "reason": "The post defines digital badges here; the 'what are digital badges' pillar is the strongest topical match."
+   },
+   {
+    "anchor_text": "you must choose the right digital credentialing platform",
+    "target_url": "/en/blog/best-digital-credentialing-platforms-2026",
+    "reason": "The text explicitly tells readers to choose the right platform; the platform comparison guide answers that question."
+   },
+   {
+    "anchor_text": "opt for a digital badging platform",
+    "target_url": "/en/digital-badges",
+    "reason": "Readers are advised to use a badging platform; the CredSure digital badges product page is the relevant destination."
+   },
+   {
+    "anchor_text": "These badges often serve as certificates",
+    "target_url": "/en/blog/digital-certificates-vs-digital-badges",
+    "reason": "This line blurs badges and certificates; the certificates-vs-badges comparison clarifies the distinction for the reader."
+   },
+   {
+    "anchor_text": "Book a demo with CredSure",
+    "target_url": "/en/demo",
+    "reason": "Natural end-of-post CTA pointing to the demo booking page."
+   }
+  ]
+ },
+ {
+  "slug": "digital-badges-in-education",
+  "links": [
+   {
+    "anchor_text": "use digital badges for micro-credentialing",
+    "target_url": "/en/blog/micro-credentials-and-its-benefits",
+    "reason": "The micro-credentialing section maps directly to the dedicated micro-credentials pillar."
+   },
+   {
+    "anchor_text": "adheres to Open Badges standards",
+    "target_url": "/en/blog/open-badges-explained",
+    "reason": "The post tells issuers to follow Open Badges standards; the Open Badges explainer is the exact reference."
+   },
+   {
+    "anchor_text": "displaying them on their LinkedIn profiles",
+    "target_url": "/en/blog/how-to-add-digital-badges-to-linkedin",
+    "reason": "This sentence is about showing badges on LinkedIn, which the LinkedIn how-to covers in detail."
+   },
+   {
+    "anchor_text": "multiple digital credentialing platforms available",
+    "target_url": "/en/solutions/higher-education",
+    "reason": "The whole post is about badges in higher education; linking the platform-selection moment to the higher-education solution page is the relevant product destination."
+   },
+   {
+    "anchor_text": "Book a demo with CredSure",
+    "target_url": "/en/demo",
+    "reason": "Natural end-of-post CTA pointing to the demo booking page."
+   }
+  ]
+ },
+ {
+  "slug": "how-to-choose-digital-credentialing-software",
+  "links": [
+   {
+    "anchor_text": "real-time verification",
+    "target_url": "/en/features/verification",
+    "reason": "Real-time verification is listed as a key feature to look for; the instant verification feature page is the direct match."
+   },
+   {
+    "anchor_text": "Security Measures",
+    "target_url": "/en/features/blockchain",
+    "reason": "The security section discusses tamper-resistance and integrity, which CredSure delivers via blockchain verification."
+   },
+   {
+    "anchor_text": "Customisation Options",
+    "target_url": "/en/features/credential-management",
+    "reason": "Customisation of templates, metadata fields and workflows is part of the credential management system feature."
+   },
+   {
+    "anchor_text": "best-suited software",
+    "target_url": "/en/blog/best-digital-credentialing-platforms-2026",
+    "reason": "The conclusion talks about selecting the best-suited software; the platform comparison guide is the perfect companion pillar."
+   },
+   {
+    "anchor_text": "Book a demo with CredSure",
+    "target_url": "/en/demo",
+    "reason": "Natural end-of-post CTA pointing to the demo booking page."
+   }
+  ]
+ },
+ {
+  "slug": "marketing-guide-for-your-professional-certification-course",
+  "links": [
+   {
+    "anchor_text": "help of digital credentials",
+    "target_url": "/en/blog/what-are-digital-credentials",
+    "reason": "Intro promises marketing the course with digital credentials; links to the pillar explaining what digital credentials are."
+   },
+   {
+    "anchor_text": "socially shareable, blockchain-anchored digital credentials",
+    "target_url": "/en/digital-badges",
+    "reason": "Section 10 is about shareable credentials/badges driving brand visibility; the digital badges product page is the natural commercial match."
+   },
+   {
+    "anchor_text": "analytics dashboard",
+    "target_url": "/en/features/analytics",
+    "reason": "Text references CredSure's analytics dashboard to track shares and marketing ROI; links directly to the analytics feature."
+   },
+   {
+    "anchor_text": "global digital credentialing platform",
+    "target_url": "/en/platform",
+    "reason": "Describes CredSure as a credentialing platform; links to the platform overview page."
+   }
+  ]
+ },
+ {
+  "slug": "future-of-medical-professional-credentialing",
+  "links": [
+   {
+    "anchor_text": "medical credentialing process",
+    "target_url": "/en/blog/what-is-credential-management-best-practice",
+    "reason": "Post centers on managing/verifying medical credentials; links to the credential management best-practice pillar."
+   },
+   {
+    "anchor_text": "use the CredSure platform",
+    "target_url": "/en/platform",
+    "reason": "Sentence directly invites using the CredSure platform to issue credentials; links to the platform page."
+   },
+   {
+    "anchor_text": "Instant verification",
+    "target_url": "/en/features/verification",
+    "reason": "Lists instant verification as a key benefit; links to the instant verification feature page."
+   },
+   {
+    "anchor_text": "blockchain technology can help",
+    "target_url": "/en/features/blockchain",
+    "reason": "Introduces blockchain as the solution for tamper-proof credentialing; links to the blockchain verification feature."
+   }
+  ]
+ },
+ {
+  "slug": "blockchain-digital-badges-to-promote-skills-and-achievement-recognition",
+  "links": [
+   {
+    "anchor_text": "A digital badge is a virtual representation",
+    "target_url": "/en/blog/what-are-digital-badges",
+    "reason": "Defines what a digital badge is; links to the pillar explaining digital badges."
+   },
+   {
+    "anchor_text": "known as micro-credentials",
+    "target_url": "/en/blog/micro-credentials-and-its-benefits",
+    "reason": "Text equates digital badges with micro-credentials; links to the micro-credentials explainer."
+   },
+   {
+    "anchor_text": "digital badges powered by blockchain",
+    "target_url": "/en/features/blockchain",
+    "reason": "Describes badges issued on blockchain for security and traceability; links to the blockchain feature."
+   },
+   {
+    "anchor_text": "issue digital badges to students",
+    "target_url": "/en/digital-badges",
+    "reason": "Closing CTA about CredSure issuing badges to students and employees; links to the digital badges product page."
+   },
+   {
+    "anchor_text": "adopt digital credentialing",
+    "target_url": "/en/solutions/higher-education",
+    "reason": "Highlights educational and training institutions adopting credentialing; links to the higher-education solution."
+   }
+  ]
+ },
+ {
+  "slug": "use-blockchain-to-store-the-entire-lifecycle-of-your-records",
+  "links": [
+   {
+    "anchor_text": "digital record management",
+    "target_url": "/en/features/credential-management",
+    "reason": "Post is about immutable digital record management; links to the credential management system feature."
+   },
+   {
+    "anchor_text": "convert paper documents into digital records",
+    "target_url": "/en/features/digital-certificates",
+    "reason": "Describes converting paper into digital certificates stored on blockchain; links to the digital certificates feature."
+   },
+   {
+    "anchor_text": "open for verification by anyone",
+    "target_url": "/en/features/verification",
+    "reason": "Explains anyone-anywhere verification via QR/URL; links to the instant verification feature."
+   },
+   {
+    "anchor_text": "digital certificates with a QR code",
+    "target_url": "/en/blog/what-is-a-digital-certificate",
+    "reason": "References verifiable digital certificates; links to the pillar explaining what a digital certificate is."
+   }
+  ]
+ },
+ {
+  "slug": "educational-institutes-to-take-the-next-big-leap-in-automation",
+  "links": [
+   {
+    "anchor_text": "issue digital certificates",
+    "target_url": "/en/features/digital-certificates",
+    "reason": "Institutes use the platform to issue digital certificates; links to the digital certificates feature."
+   },
+   {
+    "anchor_text": "blockchain-powered certification process",
+    "target_url": "/en/features/blockchain",
+    "reason": "Describes a blockchain certification process bringing trust and security; links to the blockchain verification feature."
+   },
+   {
+    "anchor_text": "digital certificates issued on CredSure",
+    "target_url": "/en/solutions/higher-education",
+    "reason": "Post addresses educational institutions automating credential issuance; links to the higher-education solution."
+   },
+   {
+    "anchor_text": "look for candidates based on competency",
+    "target_url": "/en/blog/digital-badges-for-students-and-universities",
+    "reason": "Discusses skill-driven student credentials and placement; links to the students/universities badges pillar."
+   }
+  ]
+ },
+ {
+  "slug": "why-to-issue-a-digital-certificate-on-blockchain",
+  "links": [
+   {
+    "anchor_text": "blockchain technology can help",
+    "target_url": "/en/features/blockchain",
+    "reason": "Anchor sits where the post first argues blockchain combats document fraud; links to the blockchain verification feature page."
+   },
+   {
+    "anchor_text": "issue digital versions of these documents",
+    "target_url": "/en/blog/what-are-digital-credentials",
+    "reason": "Introduces the core concept of issuing digital documents/credentials; links to the pillar explaining what digital credentials are."
+   },
+   {
+    "anchor_text": "immediately verify its authenticity",
+    "target_url": "/en/features/verification",
+    "reason": "Describes instant verification of a certificate via QR/link; maps directly to the instant verification feature."
+   },
+   {
+    "anchor_text": "Platforms like CredSure",
+    "target_url": "/en/platform",
+    "reason": "Names the CredSure platform as the issuing tool; links to the platform page."
+   },
+   {
+    "anchor_text": "get on a call with us",
+    "target_url": "/en/demo",
+    "reason": "Closing CTA inviting the reader to talk to CredSure; natural fit for the book-a-demo page."
+   }
+  ]
+ },
+ {
+  "slug": "mobility-will-drive-the-future-of-credentials-in-higher-education",
+  "links": [
+   {
+    "anchor_text": "Mobile digital credentials are the quickest",
+    "target_url": "/en/blog/what-are-digital-credentials",
+    "reason": "Verbatim body phrase introducing mobile digital credentials; links to the digital credentials pillar."
+   },
+   {
+    "anchor_text": "uses blockchain technology",
+    "target_url": "/en/features/blockchain",
+    "reason": "Explains that CredSure anchors certificates in the blockchain; links to the blockchain feature."
+   },
+   {
+    "anchor_text": "verify the authenticity of certificates instantly",
+    "target_url": "/en/features/verification",
+    "reason": "Describes instant verification of credentials by recruiters; maps to the instant verification feature."
+   },
+   {
+    "anchor_text": "higher education institutions",
+    "target_url": "/en/solutions/higher-education",
+    "reason": "Mentions sharing credentials with higher education institutions; links to the higher-education solution page."
+   },
+   {
+    "anchor_text": "Please schedule a demo",
+    "target_url": "/en/demo",
+    "reason": "Explicit CTA to schedule a demo; natural fit for the demo page."
+   }
+  ]
+ },
+ {
+  "slug": "smart-tips-on-creating-your-perfect-skillpass",
+  "links": [
+   {
+    "anchor_text": "digital profile powered by CredSure",
+    "target_url": "/en/platform",
+    "reason": "Describes SkillPass as powered by the CredSure platform; links to the platform page."
+   },
+   {
+    "anchor_text": "backed by blockchain technology",
+    "target_url": "/en/features/blockchain",
+    "reason": "States the profile is secured by blockchain; links to the blockchain verification feature."
+   },
+   {
+    "anchor_text": "earn digital certificates",
+    "target_url": "/en/blog/what-are-digital-credentials",
+    "reason": "Mentions earning digital certificates through courses; links to the digital credentials pillar."
+   },
+   {
+    "anchor_text": "can be verified instantly",
+    "target_url": "/en/features/verification",
+    "reason": "Says certificates can be verified instantly; maps to the instant verification feature."
+   }
+  ]
+ },
+ {
+  "slug": "how-will-blockchain-affect-the-future-of-education-and-learning",
+  "links": [
+   {
+    "anchor_text": "blockchain technology combined with data analytics",
+    "target_url": "/en/features/blockchain",
+    "reason": "Explains the choice of blockchain for trust and traceability; links to the blockchain feature."
+   },
+   {
+    "anchor_text": "earn digital certificates",
+    "target_url": "/en/blog/what-are-digital-credentials",
+    "reason": "Mentions learners earning digital certificates after courses; links to the digital credentials pillar."
+   },
+   {
+    "anchor_text": "which can be verified instantly",
+    "target_url": "/en/features/verification",
+    "reason": "Describes contactless certificates verified instantly; maps to the instant verification feature."
+   },
+   {
+    "anchor_text": "data analytics to gain insights",
+    "target_url": "/en/features/analytics",
+    "reason": "Notes institutions get data analytics for insights and business value; links to the analytics feature."
+   }
+  ]
+ },
+ {
+  "slug": "how-can-you-bridge-skills-gap-with-digital-certificates",
+  "links": [
+   {
+    "anchor_text": "this skills gap can be bridged with digital credentials",
+    "target_url": "/en/blog/what-are-digital-credentials",
+    "reason": "Core thesis introducing digital credentials as the solution; links to the digital credentials pillar."
+   },
+   {
+    "anchor_text": "also known as digital badges",
+    "target_url": "/en/blog/what-are-digital-badges",
+    "reason": "Explicitly equates digital certificates with digital badges; links to the what-are-digital-badges post."
+   },
+   {
+    "anchor_text": "These credentials also serve as micro-credentials",
+    "target_url": "/en/blog/micro-credentials-and-its-benefits",
+    "reason": "Describes credentials as micro-credentials giving a granular skills view; links to the micro-credentials post."
+   },
+   {
+    "anchor_text": "new ecosystem of digital credentialing platforms",
+    "target_url": "/en/blog/best-digital-credentialing-platforms-2026",
+    "reason": "Discusses the rise of digital credentialing platforms; links to the platform comparison post."
+   },
+   {
+    "anchor_text": "Book a demo with CredSure",
+    "target_url": "/en/demo",
+    "reason": "Closing CTA inviting readers to book a demo; natural fit for the demo page."
+   }
+  ]
+ },
+ {
+  "slug": "meeting-the-demand-for-mechatronics-skills-in-the-workplace",
+  "links": [
+   {
+    "anchor_text": "64% are looking at external training and certification",
+    "target_url": "/en/blog/micro-credentials-and-its-benefits",
+    "reason": "The skill-gap section discusses external training and certification as a workforce solution, which maps naturally to the micro-credentials pillar on bite-sized upskilling credentials."
+   },
+   {
+    "anchor_text": "prove their skills with digital certificates",
+    "target_url": "/en/blog/what-are-digital-credentials",
+    "reason": "The closing mentions students proving skills with digital certificates; linking to the digital credentials pillar gives readers the foundational explainer."
+   },
+   {
+    "anchor_text": "a skills-driven platform built on blockchain",
+    "target_url": "/en/features/blockchain",
+    "reason": "Describes CredSure's blockchain foundation, a precise match for the blockchain verification feature page."
+   },
+   {
+    "anchor_text": "educational institutes looking to do the same",
+    "target_url": "/en/solutions/higher-education",
+    "reason": "Addresses educational institutions seeking to upskill, the exact audience of the higher-education solution page."
+   },
+   {
+    "anchor_text": "new platforms such as CredSure",
+    "target_url": "/en/platform",
+    "reason": "Directly introduces the CredSure platform, a natural link to the platform overview page."
+   }
+  ]
+ },
+ {
+  "slug": "digital-transformation-in-the-education-sector",
+  "links": [
+   {
+    "anchor_text": "blockchain technology, virtual reality, and data privacy",
+    "target_url": "/en/features/blockchain",
+    "reason": "The forum topics lead with blockchain technology, relevant to the blockchain verification feature."
+   },
+   {
+    "anchor_text": "digital transformation for educational institutions",
+    "target_url": "/en/solutions/higher-education",
+    "reason": "The forum targets educational institutions undergoing digital transformation, matching the higher-education solution page."
+   },
+   {
+    "anchor_text": "building more resilient national education systems",
+    "target_url": "/en/blog/digital-badges-for-students-and-universities",
+    "reason": "Resilient education systems connect topically to the pillar on digital badges for students and universities."
+   }
+  ]
+ },
+ {
+  "slug": "filipino-seafarers-return-to-the-workplace-via-skillpass-event-highlights",
+  "links": [
+   {
+    "anchor_text": "verified by potential recruiters or further educational institutes",
+    "target_url": "/en/features/verification",
+    "reason": "Describes credentials being verified by recruiters and institutes, a direct match for the instant verification feature."
+   },
+   {
+    "anchor_text": "secured with blockchain technology",
+    "target_url": "/en/features/blockchain",
+    "reason": "Skill Pass portfolios are secured with blockchain technology, mapping to the blockchain verification feature."
+   },
+   {
+    "anchor_text": "showcase skills in a way that can be verified",
+    "target_url": "/en/blog/what-are-digital-credentials",
+    "reason": "The theme of verifiable skills ties to the digital credentials pillar explaining what verifiable credentials are."
+   },
+   {
+    "anchor_text": "recognise qualifications within and across borders",
+    "target_url": "/en/blog/how-to-verify-degrees-and-diplomas-online",
+    "reason": "UNESCO's cross-border qualification recognition aligns with the pillar on verifying degrees and diplomas online."
+   },
+   {
+    "anchor_text": "digitise their portfolio of credentials",
+    "target_url": "/en/features/credential-management",
+    "reason": "Seafarers digitising their portfolio of credentials maps to the credential management system feature."
+   }
+  ]
+ },
+ {
+  "slug": "skills-to-meet-workforce-demands-in-the-4th-industrial-revolution",
+  "links": [
+   {
+    "anchor_text": "digital certificates and other new tools",
+    "target_url": "/en/blog/what-are-digital-credentials",
+    "reason": "The closing references digital certificates as a hiring tool, linking to the digital credentials pillar."
+   },
+   {
+    "anchor_text": "a certification, allowing professionals to prove their skills",
+    "target_url": "/en/blog/micro-credentials-and-its-benefits",
+    "reason": "Continuous, cross-functional retraining and certification to prove skills aligns with the micro-credentials pillar."
+   },
+   {
+    "anchor_text": "automate processes such as student enrollment and placement",
+    "target_url": "/en/solutions/higher-education",
+    "reason": "The CTA about automating student enrollment and placement targets educational institutions, matching the higher-education solution."
+   },
+   {
+    "anchor_text": "book an exclusive meeting",
+    "target_url": "/en/demo",
+    "reason": "Explicit CTA to book a meeting, a natural fit for the book-a-demo page."
+   }
+  ]
+ },
+ {
+  "slug": "digital-gurukul-adopts-digital-certificates-placed-on-blockchain",
+  "links": [
+   {
+    "anchor_text": "CredSure delivered a blockchain-powered platform",
+    "target_url": "/en/features/blockchain",
+    "reason": "Describes CredSure's blockchain-powered delivery, a precise match for the blockchain verification feature."
+   },
+   {
+    "anchor_text": "an integrated solution to grow and engage their students",
+    "target_url": "/en/blog/digital-badges-for-students-and-universities",
+    "reason": "Engaging students through credentials maps to the pillar on digital badges for students and universities."
+   },
+   {
+    "anchor_text": "prioritize digital development and technological innovation",
+    "target_url": "/en/platform",
+    "reason": "Digital Gurukul's adoption of CredSure for digital development links naturally to the platform overview page."
+   }
+  ]
+ },
+ {
+  "slug": "humaci-a-global-training-and-consulting-organization-case-study",
+  "links": [
+   {
+    "anchor_text": "issuing digital certificates to graduates",
+    "target_url": "/en/features/digital-certificates",
+    "reason": "Directly describes issuing digital certificates, matching the digital certificates feature page."
+   },
+   {
+    "anchor_text": "blockchain-based platform",
+    "target_url": "/en/features/blockchain",
+    "reason": "References CredSure's blockchain platform, ideal anchor for the blockchain verification feature."
+   },
+   {
+    "anchor_text": "industry-relevant courses",
+    "target_url": "/en/solutions/corporate-training",
+    "reason": "HUMACi is a training/consulting org delivering courses, relevant to the corporate-training solution."
+   }
+  ]
+ },
+ {
+  "slug": "industry-4-0-skills-to-support-automation-new-technologies",
+  "links": [
+   {
+    "anchor_text": "Industry 4.0 skills",
+    "target_url": "/en/blog/micro-credentials-and-its-benefits",
+    "reason": "Workforce upskilling for Industry 4.0 maps naturally to micro-credentials and their benefits."
+   },
+   {
+    "anchor_text": "helping educational institutes adopt digital transformation",
+    "target_url": "/en/solutions/higher-education",
+    "reason": "Discusses helping educational institutes, relevant to the higher-education solution."
+   },
+   {
+    "anchor_text": "digital certification",
+    "target_url": "/en/features/digital-certificates",
+    "reason": "Mentions digital certification as part of CredSure's offering, links to the digital certificates feature."
+   },
+   {
+    "anchor_text": "book an exclusive meeting",
+    "target_url": "/en/demo",
+    "reason": "Closing CTA inviting a meeting, natural fit for the book-a-demo page."
+   }
+  ]
+ },
+ {
+  "slug": "skill-pass-proof-of-learning-and-development",
+  "links": [
+   {
+    "anchor_text": "obtaining a certificate",
+    "target_url": "/en/blog/what-are-digital-credentials",
+    "reason": "Discusses certificates as proof of skill, links to the pillar on digital credentials."
+   },
+   {
+    "anchor_text": "create and send digital certificates to graduates",
+    "target_url": "/en/features/digital-certificates",
+    "reason": "Describes creating/sending digital certificates, matching the digital certificates feature."
+   },
+   {
+    "anchor_text": "embedded in blockchain technology",
+    "target_url": "/en/features/blockchain",
+    "reason": "Certificates embedded in blockchain map directly to the blockchain verification feature."
+   },
+   {
+    "anchor_text": "contain QR codes and links that can be verified",
+    "target_url": "/en/features/verification",
+    "reason": "Describes instant verification of certificates via QR/links, relevant to the verification feature."
+   }
+  ]
+ },
+ {
+  "slug": "festo-introduces-digital-certificates-for-instant-verification-monitoring",
+  "links": [
+   {
+    "anchor_text": "adopt a blockchain-powered platform",
+    "target_url": "/en/features/blockchain",
+    "reason": "Festo adopting a blockchain-powered platform maps to the blockchain verification feature."
+   },
+   {
+    "anchor_text": "shortage of skilled workers",
+    "target_url": "/en/solutions/corporate-training",
+    "reason": "Manufacturing skills shortage context is relevant to the corporate-training solution."
+   },
+   {
+    "anchor_text": "increased efficiency of our processes",
+    "target_url": "/en/platform",
+    "reason": "Quote about process efficiency from using CredSure links to the platform overview page."
+   }
+  ]
+ },
+ {
+  "slug": "find-skilled-corporate-trainers-backed-by-digital-certification",
+  "links": [
+   {
+    "anchor_text": "Speciality digital certifications",
+    "target_url": "/en/blog/what-are-certification-badges",
+    "reason": "Trainers' specialty certifications relate closely to certification badges."
+   },
+   {
+    "anchor_text": "platform built on blockchain technology",
+    "target_url": "/en/features/blockchain",
+    "reason": "CredSure described as a blockchain platform, links to the blockchain verification feature."
+   },
+   {
+    "anchor_text": "Blockchain certificate verification",
+    "target_url": "/en/features/verification",
+    "reason": "Section on verifying certificates maps directly to the instant verification feature."
+   },
+   {
+    "anchor_text": "issue graduates with digital certificates",
+    "target_url": "/en/features/digital-certificates",
+    "reason": "Describes issuing digital certificates to graduates, matching the digital certificates feature."
+   },
+   {
+    "anchor_text": "book a demo",
+    "target_url": "/en/demo",
+    "reason": "Explicit closing CTA to book a demo, natural fit for the demo page."
+   }
+  ]
+ },
+ {
+  "slug": "skills-gap-in-energy-sector-is-the-biggest-roadblock",
+  "links": [
+   {
+    "anchor_text": "creating and sending digital certificates",
+    "target_url": "/en/features/digital-certificates",
+    "reason": "The closing section is explicitly about issuing digital certificates to prove skill \u2014 links directly to the digital certificates feature."
+   },
+   {
+    "anchor_text": "digital certificates placed on blockchain technology",
+    "target_url": "/en/features/blockchain",
+    "reason": "This phrase describes blockchain-anchored issuance, the exact subject of the blockchain verification feature page."
+   },
+   {
+    "anchor_text": "upskilling and reskilling the workforce",
+    "target_url": "/en/solutions/corporate-training",
+    "reason": "Workforce upskilling/reskilling in an enterprise context maps to the corporate-training solution."
+   },
+   {
+    "anchor_text": "provide proof of skill",
+    "target_url": "/en/blog/micro-credentials-and-its-benefits",
+    "reason": "Proving discrete skills learned is the core idea of micro-credentials; topically relevant pillar link."
+   },
+   {
+    "anchor_text": "verifiable links and a QR code",
+    "target_url": "/en/features/verification",
+    "reason": "Verifiable links and QR codes are the mechanism behind instant verification \u2014 relevant feature page."
+   }
+  ]
+ },
+ {
+  "slug": "certificate-fraud-how-to-prevent-unqualified-professionals-from-entering-the-job-market",
+  "links": [
+   {
+    "anchor_text": "blockchain-anchored digital certificates",
+    "target_url": "/en/features/blockchain",
+    "reason": "Direct mention of blockchain-anchored certificates aligns with the blockchain verification feature page."
+   },
+   {
+    "anchor_text": "allows instant verification",
+    "target_url": "/en/features/verification",
+    "reason": "Instant verification of a candidate's credentials is exactly the instant verification feature."
+   },
+   {
+    "anchor_text": "verify candidate credentials with a single click",
+    "target_url": "/en/blog/how-to-verify-degrees-and-diplomas-online",
+    "reason": "Verifying applicants' qualifications/degrees online is the topic of this pillar post."
+   },
+   {
+    "anchor_text": "Blockchain verification is the ideal solution",
+    "target_url": "/en/blog/what-are-digital-credentials",
+    "reason": "Anchors the fraud-prevention discussion to the core digital credentials pillar explaining the concept."
+   },
+   {
+    "anchor_text": "book an exclusive meeting",
+    "target_url": "/en/demo",
+    "reason": "Natural CTA at the end of the post inviting a meeting/demo."
+   }
+  ]
+ },
+ {
+  "slug": "the-need-for-skill-development-in-the-automotive-industry",
+  "links": [
+   {
+    "anchor_text": "blockchain-powered digital certification",
+    "target_url": "/en/features/digital-certificates",
+    "reason": "The post's closing pitch is about issuing blockchain-powered certificates to verify skills \u2014 maps to the digital certificates feature."
+   },
+   {
+    "anchor_text": "verify skills set",
+    "target_url": "/en/features/verification",
+    "reason": "Verifying a graduate's skill set is the instant verification feature."
+   },
+   {
+    "anchor_text": "established training institutions",
+    "target_url": "/en/solutions/corporate-training",
+    "reason": "Connecting upskilling professionals to training providers aligns with the corporate-training solution."
+   },
+   {
+    "anchor_text": "upskill and/or upgrade their career",
+    "target_url": "/en/blog/micro-credentials-and-its-benefits",
+    "reason": "Career upskilling via stackable skills is the micro-credentials topic; relevant pillar link."
+   }
+  ]
+ },
+ {
+  "slug": "addressing-the-critical-need-for-skills-training-and-digital-certification",
+  "links": [
+   {
+    "anchor_text": "verifiable digital certificates",
+    "target_url": "/en/features/digital-certificates",
+    "reason": "Verifiable digital certificates are the subject of the digital certificates feature page."
+   },
+   {
+    "anchor_text": "internationally recognisable certifications",
+    "target_url": "/en/blog/what-are-digital-credentials",
+    "reason": "Recognisable, portable certifications is the core digital credentials concept \u2014 links to the pillar."
+   },
+   {
+    "anchor_text": "relevant skills training",
+    "target_url": "/en/blog/micro-credentials-and-its-benefits",
+    "reason": "Targeted skills training to close the skills mismatch maps to the micro-credentials benefits post."
+   }
+  ]
+ },
+ {
+  "slug": "get-smart-adopt-a-blockchain-powered-platform-to-enhance-institute-experience",
+  "links": [
+   {
+    "anchor_text": "issuing digital certificates based in blockchain",
+    "target_url": "/en/features/blockchain",
+    "reason": "Directly references blockchain-based certificate issuance \u2014 the blockchain verification feature."
+   },
+   {
+    "anchor_text": "blockchain-based platform",
+    "target_url": "/en/platform",
+    "reason": "References the platform institutions adopt \u2014 links to the CredSure platform page."
+   },
+   {
+    "anchor_text": "leading educational institutions",
+    "target_url": "/en/solutions/higher-education",
+    "reason": "Educational institutions adopting the platform maps to the higher-education solution."
+   },
+   {
+    "anchor_text": "elevate the student-institute experience",
+    "target_url": "/en/blog/digital-badges-for-students-and-universities",
+    "reason": "Student-and-institution experience aligns with the badges for students and universities pillar."
+   }
+  ]
+ },
+ {
+  "slug": "address-skills-shortage-in-the-global-healthcare-sector",
+  "links": [
+   {
+    "anchor_text": "digital credentials\u2014a transformative solution",
+    "target_url": "/en/blog/what-are-digital-credentials",
+    "reason": "The post pivots to digital credentials as the core solution; linking to the pillar explaining what digital credentials are is highly relevant here."
+   },
+   {
+    "anchor_text": "digital badges or certificates",
+    "target_url": "/en/blog/digital-certificates-vs-digital-badges",
+    "reason": "This phrase defines credentials as badges or certificates, a natural anchor for the certificates-vs-badges explainer."
+   },
+   {
+    "anchor_text": "standardising skill assessment and quality assurance",
+    "target_url": "/en/blog/what-is-credential-management-best-practice",
+    "reason": "This section is about standardised credentialing frameworks and quality assurance, which maps to credential management best practice."
+   },
+   {
+    "anchor_text": "securely stored and shared through digital platforms",
+    "target_url": "/en/features/credential-management",
+    "reason": "Describes secure storage and sharing of credentials, the exact function of the credential management system feature."
+   },
+   {
+    "anchor_text": "Book a demo with CredSure",
+    "target_url": "/en/demo",
+    "reason": "Closing CTA explicitly invites booking a demo, the natural place for the demo link."
+   }
+  ]
+ },
+ {
+  "slug": "skilled-immigration-act-easier-access-to-the-german-labour-market",
+  "links": [
+   {
+    "anchor_text": "issue verifiable certificates to their graduates",
+    "target_url": "/en/features/digital-certificates",
+    "reason": "The post calls for institutes to issue verifiable certificates; links to the digital certificates feature page."
+   },
+   {
+    "anchor_text": "applicants will have to demonstrate German language skills",
+    "target_url": "/en/blog/how-to-verify-degrees-and-diplomas-online",
+    "reason": "The immigration process hinges on verifying qualifications and credentials; the verify-degrees-online guide is topically relevant to recognition checks."
+   },
+   {
+    "anchor_text": "issue blockchain-powered digital certificates to graduates",
+    "target_url": "/en/features/blockchain",
+    "reason": "Directly references blockchain-powered certificate issuance, matching the blockchain verification feature."
+   },
+   {
+    "anchor_text": "easy verification of credentials in less time",
+    "target_url": "/en/features/verification",
+    "reason": "Describes fast credential verification, the core of the instant verification feature."
+   },
+   {
+    "anchor_text": "book a demonstration",
+    "target_url": "/en/demo",
+    "reason": "Closing line invites booking a demonstration, the natural demo CTA anchor."
+   }
+  ]
+ },
+ {
+  "slug": "educational-certifications-just-got-smarter",
+  "links": [
+   {
+    "anchor_text": "digital certificates anchored in blockchain technology",
+    "target_url": "/en/features/blockchain",
+    "reason": "The post's premise is blockchain-anchored certificates; links to the blockchain verification feature."
+   },
+   {
+    "anchor_text": "Issue digital certificates, enabling one-click verification",
+    "target_url": "/en/features/verification",
+    "reason": "Highlights one-click verification of issued certificates, matching the instant verification feature."
+   },
+   {
+    "anchor_text": "CredSure\u2019s blockchain-powered global platform",
+    "target_url": "/en/platform",
+    "reason": "Names the CredSure platform directly; links to the platform overview page."
+   }
+  ]
+ },
+ {
+  "slug": "modular-courses-to-bridge-the-skills-gap",
+  "links": [
+   {
+    "anchor_text": "issue blockchain-powered digital certificates",
+    "target_url": "/en/features/digital-certificates",
+    "reason": "Describes institutes issuing digital certificates for course completion, matching the digital certificates feature."
+   },
+   {
+    "anchor_text": "upskill their employees in various emerging technologies",
+    "target_url": "/en/blog/micro-credentials-and-its-benefits",
+    "reason": "Modular short courses for upskilling are the essence of micro-credentials; the explainer is highly relevant."
+   },
+   {
+    "anchor_text": "Our blockchain-powered platform",
+    "target_url": "/en/platform",
+    "reason": "Refers to the CredSure platform that powers the credentialing; links to the platform page."
+   },
+   {
+    "anchor_text": "book a demo",
+    "target_url": "/en/demo",
+    "reason": "Closing CTA invites booking a demo, the natural demo link."
+   }
+  ]
+ },
+ {
+  "slug": "transforming-education-certification-with-blockchain",
+  "links": [
+   {
+    "anchor_text": "educational certification, and digital credentialing",
+    "target_url": "/en/blog/what-are-digital-credentials",
+    "reason": "Introduces digital credentialing as the central theme; links to the digital credentials pillar."
+   },
+   {
+    "anchor_text": "Issued through blockchain\u2019s decentralised framework",
+    "target_url": "/en/features/blockchain",
+    "reason": "Describes blockchain-issued certificates, matching the blockchain verification feature."
+   },
+   {
+    "anchor_text": "Digital Badges: Badges act as proof of skill",
+    "target_url": "/en/blog/what-are-digital-badges",
+    "reason": "This section explains digital badges as proof of skill, a direct match for the what-are-digital-badges explainer."
+   },
+   {
+    "anchor_text": "verify an individual\u2019s records with one click",
+    "target_url": "/en/features/verification",
+    "reason": "Describes one-click verification of records, the core of the instant verification feature."
+   },
+   {
+    "anchor_text": "Schedule a demo today",
+    "target_url": "/en/demo",
+    "reason": "Closing CTA explicitly invites scheduling a demo, the natural demo link."
+   }
+  ]
+ },
+ {
+  "slug": "why-the-world-needs-a-review-system-for-educational-institutions",
+  "links": [
+   {
+    "anchor_text": "digital certificates after completing a course",
+    "target_url": "/en/features/digital-certificates",
+    "reason": "Describes institutions issuing digital certificates on course completion; links to the digital certificates feature page."
+   },
+   {
+    "anchor_text": "blockchain-powered platform provides trust",
+    "target_url": "/en/features/blockchain",
+    "reason": "Directly references the blockchain-powered trust mechanism, matching the blockchain verification feature page."
+   },
+   {
+    "anchor_text": "review, assess and rate",
+    "target_url": "/en/solutions/certification-bodies",
+    "reason": "Independent third-party assessment of institutions maps to the certification-bodies solution."
+   },
+   {
+    "anchor_text": "schedule a meeting",
+    "target_url": "/en/demo",
+    "reason": "Closing CTA inviting readers to meet with experts; natural fit for the book-a-demo page."
+   }
+  ]
+ },
+ {
+  "slug": "digital-signature-certificates-empower-your-students-to-prove-their-skills",
+  "links": [
+   {
+    "anchor_text": "issue digital signature certificates",
+    "target_url": "/en/features/digital-certificates",
+    "reason": "Core topic is institutions issuing digital signature certificates; links to the digital certificates feature."
+   },
+   {
+    "anchor_text": "verified using blockchain technology",
+    "target_url": "/en/features/blockchain",
+    "reason": "Explains blockchain-based verification of the certificates, matching the blockchain feature page."
+   },
+   {
+    "anchor_text": "niche set of skills",
+    "target_url": "/en/solutions/higher-education",
+    "reason": "Context is educational institutions helping students prove niche skills to employers; relevant to the higher-education solution."
+   },
+   {
+    "anchor_text": "book a demonstration",
+    "target_url": "/en/demo",
+    "reason": "Explicit CTA to book a demonstration; ideal for the demo page."
+   }
+  ]
+ },
+ {
+  "slug": "blockchain-platform-to-build-trust-in-global-education-sector",
+  "links": [
+   {
+    "anchor_text": "blockchain-based digital certification system",
+    "target_url": "/en/features/blockchain",
+    "reason": "Central proposed solution is a blockchain certification system, matching the blockchain verification feature."
+   },
+   {
+    "anchor_text": "verify educational certificates",
+    "target_url": "/en/features/verification",
+    "reason": "Discusses the cost and need to verify educational certificates; links to the instant verification feature."
+   },
+   {
+    "anchor_text": "fake degree certificate scams",
+    "target_url": "/en/blog/how-to-verify-degrees-and-diplomas-online",
+    "reason": "Mentions fake degree scams; relevant to the pillar on verifying degrees and diplomas online."
+   },
+   {
+    "anchor_text": "Issue digital certificates that cannot be duplicated",
+    "target_url": "/en/features/digital-certificates",
+    "reason": "Describes issuing tamper-proof digital certificates, matching the digital certificates feature page."
+   },
+   {
+    "anchor_text": "Explore the CredSure platform",
+    "target_url": "/en/platform",
+    "reason": "Direct invitation to explore the platform; links to the CredSure platform page."
+   }
+  ]
+ },
+ {
+  "slug": "evolution-of-digital-credentials",
+  "links": [
+   {
+    "anchor_text": "industry-specific micro-credentials",
+    "target_url": "/en/blog/micro-credentials-and-its-benefits",
+    "reason": "Cites students seeking micro-credentials; links to the micro-credentials pillar."
+   },
+   {
+    "anchor_text": "instantly verifiable digital certificates",
+    "target_url": "/en/blog/what-is-a-digital-certificate",
+    "reason": "Core subject is digital certificates and what they are; links to the what-is-a-digital-certificate pillar."
+   },
+   {
+    "anchor_text": "right digital credentialing platform",
+    "target_url": "/en/blog/best-digital-credentialing-platforms-2026",
+    "reason": "Advises choosing the right credentialing platform; relevant to the platform comparison pillar."
+   },
+   {
+    "anchor_text": "can be easily shared across social media",
+    "target_url": "/en/features/sharing",
+    "reason": "Discusses shareability of digital certificates across social media, matching the credential sharing feature."
+   },
+   {
+    "anchor_text": "blockchain-based digital certificates",
+    "target_url": "/en/features/blockchain",
+    "reason": "References CredSure's blockchain-based certificate issuance; links to the blockchain feature page."
+   }
+  ]
+ },
+ {
+  "slug": "technical-courses-in-india-an-opportunity-for-youth-to-gain-next-gen-skills",
+  "links": [
+   {
+    "anchor_text": "blockchain-powered digital certificates",
+    "target_url": "/en/features/blockchain",
+    "reason": "Institutions issuing blockchain-powered certificates maps to the blockchain verification feature."
+   },
+   {
+    "anchor_text": "gain access to job opportunities",
+    "target_url": "/en/solutions/corporate-training",
+    "reason": "Graduates showcasing skills to recruiters for jobs relates to the corporate-training / workforce solution."
+   },
+   {
+    "anchor_text": "digital profile to showcase those skills",
+    "target_url": "/en/digital-badges",
+    "reason": "Equipping students with a digital profile to showcase skills aligns with the digital badges product page."
+   },
+   {
+    "anchor_text": "schedule a meeting with our experts",
+    "target_url": "/en/demo",
+    "reason": "Closing action point invites readers to schedule a meeting with experts; fits the demo CTA."
+   }
+  ]
+ },
+ {
+  "slug": "a-critical-success-factor-upskill-and-reskill-the-workforce",
+  "links": [
+   {
+    "anchor_text": "blockchain-powered digital certifications",
+    "target_url": "/en/features/digital-certificates",
+    "reason": "Directly describes CredSure issuing blockchain-anchored certificates, the exact subject of the digital certificates feature page."
+   },
+   {
+    "anchor_text": "verify their credentials",
+    "target_url": "/en/features/verification",
+    "reason": "Refers to one-click credential verification, matching the instant verification feature."
+   },
+   {
+    "anchor_text": "upskill and reskill",
+    "target_url": "/en/blog/micro-credentials-and-its-benefits",
+    "reason": "Upskilling/reskilling the workforce is the core use case for micro-credentials, the related pillar post."
+   },
+   {
+    "anchor_text": "certification program",
+    "target_url": "/en/blog/what-are-certification-badges",
+    "reason": "Topically links workforce certification to the certification badges explainer."
+   },
+   {
+    "anchor_text": "Book an exclusive meeting",
+    "target_url": "/en/demo",
+    "reason": "Natural CTA phrase inviting the reader to experience CredSure, maps to the book-a-demo page."
+   }
+  ]
+ },
+ {
+  "slug": "worldskills-kazan-2019-a-confluence-of-skill-dedication-and-purpose",
+  "links": [
+   {
+    "anchor_text": "digital credentialing service",
+    "target_url": "/en/blog/best-digital-credentialing-platforms-2026",
+    "reason": "Mentions building a digital credentialing service, relevant to the credentialing platform comparison pillar."
+   },
+   {
+    "anchor_text": "bringing digital certificates anchored in blockchain technology",
+    "target_url": "/en/features/blockchain",
+    "reason": "Describes blockchain-anchored certificates, matching the blockchain verification feature."
+   },
+   {
+    "anchor_text": "easy sharing and verification of credentials",
+    "target_url": "/en/features/verification",
+    "reason": "Refers to one-click credential verification, the instant verification feature."
+   },
+   {
+    "anchor_text": "store all academic qualifications in one secure place",
+    "target_url": "/en/blog/what-is-credential-management-best-practice",
+    "reason": "Describes a digital repository for qualifications, the core of credential management best practice."
+   },
+   {
+    "anchor_text": "schedule meetings",
+    "target_url": "/en/demo",
+    "reason": "Reflects the invitation to schedule a meeting/demo with the team, mapping to the demo CTA."
+   }
+  ]
+ },
+ {
+  "slug": "worldskills-2019-took-visitors-on-an-inspiring-journey-around-the-future-of-skills",
+  "links": [
+   {
+    "anchor_text": "blockchain technology can bring to the education and skills sector",
+    "target_url": "/en/features/blockchain",
+    "reason": "Discusses blockchain's benefits for credentials, matching the blockchain verification feature."
+   },
+   {
+    "anchor_text": "modernising student certification process",
+    "target_url": "/en/blog/digital-badges-for-students-and-universities",
+    "reason": "Student certification in the education sector aligns with the badges-for-students pillar post."
+   },
+   {
+    "anchor_text": "the future of skills",
+    "target_url": "/en/blog/micro-credentials-and-its-benefits",
+    "reason": "The future-of-skills theme connects naturally to the micro-credentials benefits post."
+   },
+   {
+    "anchor_text": "on a single platform",
+    "target_url": "/en/platform",
+    "reason": "References the unified CredSure platform connecting institutes, students and recruiters."
+   }
+  ]
+ },
+ {
+  "slug": "benefits-of-blockchain-promote-transparency-and-raise-education-standards",
+  "links": [
+   {
+    "anchor_text": "issue blockchain-powered certificates",
+    "target_url": "/en/features/blockchain",
+    "reason": "Describes issuing blockchain-powered certificates, the exact subject of the blockchain feature page."
+   },
+   {
+    "anchor_text": "verify an individual\u2019s credentials or transcripts with a single click",
+    "target_url": "/en/features/verification",
+    "reason": "Describes one-click credential verification, matching the instant verification feature."
+   },
+   {
+    "anchor_text": "verify a person\u2019s qualifications against their CV",
+    "target_url": "/en/blog/how-to-verify-degrees-and-diplomas-online",
+    "reason": "Verifying qualifications/degrees is precisely the topic of the verifying degrees and diplomas pillar."
+   },
+   {
+    "anchor_text": "Certificate Wallet",
+    "target_url": "/en/blog/what-is-credential-management-best-practice",
+    "reason": "The Certificate Wallet stores and manages credentials, aligning with credential management best practice."
+   },
+   {
+    "anchor_text": "Schedule a demo",
+    "target_url": "/en/demo",
+    "reason": "Explicit closing CTA inviting the reader to book a demo of CredSure."
+   }
+  ]
+ },
+ {
+  "slug": "two-reasons-why-digital-certificate-is-the-way-forward",
+  "links": [
+   {
+    "anchor_text": "Digital certificates that allow instant validation",
+    "target_url": "/en/blog/what-is-a-digital-certificate",
+    "reason": "Defines digital certificates with instant validation, the exact topic of the what-is-a-digital-certificate pillar."
+   },
+   {
+    "anchor_text": "digital micro-credentialing",
+    "target_url": "/en/blog/micro-credentials-and-its-benefits",
+    "reason": "Directly references micro-credentialing, matching the micro-credentials benefits post."
+   },
+   {
+    "anchor_text": "blockchain-enabled digital certificates",
+    "target_url": "/en/features/digital-certificates",
+    "reason": "Describes issuing blockchain-enabled digital certificates, the digital certificates feature page."
+   },
+   {
+    "anchor_text": "view and validate a record with a single click",
+    "target_url": "/en/features/verification",
+    "reason": "Describes one-click validation by employers, matching the instant verification feature."
+   },
+   {
+    "anchor_text": "digital certificates or badges",
+    "target_url": "/en/blog/digital-certificates-vs-digital-badges",
+    "reason": "Mentions certificates and badges together, the exact comparison covered by the certificates-vs-badges pillar."
+   }
+  ]
+ }
+]
