@@ -42,7 +42,7 @@
     },
     "blockchain": {
       "badge": "Blockchain Verification",
-      "title": "Tamper-Proof Blockchain Verification",
+      "title": "Tamper-Proof Blockchain Credentials",
       "subtitle": "Anchor your credentials on blockchain for instant, cryptographic verification that can never be forged",
       "items": [
         "Immutable blockchain records",

@@ -740,9 +740,9 @@
       "keywords": "digital certificates, blockchain certificates, verifiable certificates, certificate issuance"
     },
     "blockchain": {
-      "title": "Blockchain Verification | Tamper-Proof Credentials",
-      "description": "Secure credentials with blockchain technology. Every certificate is immutable, instantly verifiable, and fraud-proof.",
-      "keywords": "blockchain verification, tamper-proof credentials, immutable certificates, credential security"
+      "title": "Blockchain Digital Credentials: Tamper-Proof | CredSure",
+      "description": "Issue blockchain digital credentials that are tamper-proof, immutable, and instantly verifiable. Anchor every certificate on-chain for fraud-proof trust.",
+      "keywords": "blockchain digital credentials, blockchain credentials, tamper-proof credentials, immutable certificates, blockchain verification"
     },
     "sharing": {
       "title": "Social Sharing | Share Credentials Everywhere",
