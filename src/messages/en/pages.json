@@ -720,9 +720,9 @@
       "keywords": "CredSure help, credential platform support, digital certificates FAQ"
     },
     "digitalBadges": {
-      "title": "Digital Badges | Recognise Skills & Achievements",
-      "description": "Issue verifiable digital badges for micro-credentials, skills, and achievements. Shareable on LinkedIn, portfolios, and social media.",
-      "keywords": "digital badges, micro-credentials, skill badges, achievement badges, verifiable badges"
+      "title": "Digital Badge Platform: Issue & Verify Badges | CredSure",
+      "description": "CredSure is a digital badge platform to issue verifiable digital badges for skills, micro-credentials, and achievements, shareable on LinkedIn and beyond.",
+      "keywords": "digital badge platform, digital badges, micro-credentials, skill badges, verifiable badges"
     },
     "compareAccredible": {
       "title": "CredSure vs Accredible | Digital Credential Platform Comparison",
@@ -893,9 +893,9 @@
       "keywords": "certificate verification online, verify certificate online, credential verification, verify digital certificate"
     },
     "credentialManagement": {
-      "title": "Credential Management | Issue & Manage at Scale",
-      "description": "Create, organize, revoke, and track every credential from one dashboard — built for programs of any size.",
-      "keywords": "credential management, manage digital certificates, credential dashboard"
+      "title": "Credential Management System | Issue & Track | CredSure",
+      "description": "Manage the full credential lifecycle from one dashboard — issue, organize, renew, revoke, and track every digital credential at scale with CredSure.",
+      "keywords": "credential management, credential management system, manage digital credentials, credential dashboard"
     },
     "recipientWall": {
       "title": "Recipient Wall | Shareable Credential Profiles",
