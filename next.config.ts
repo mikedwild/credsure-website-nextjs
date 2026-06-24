@@ -16,6 +16,14 @@ const nextConfig: NextConfig = {
     return [
       { source: "/about-us", destination: "/about", permanent: true },
       { source: "/privacy-policy", destination: "/privacy", permanent: true },
+      // Consolidate the legacy plural blog URLs (served by the [...slug]
+      // catch-all with stale titles, no JSON-LD, and a self-referential
+      // canonical) onto the optimized /[locale]/blog/<slug> pages. 301 so
+      // search engines transfer the existing rankings. `:slug*` also matches
+      // the bare index (/blogs -> /en/blog). next.config redirects run before
+      // the next-intl middleware, so these win over its locale-prefixing.
+      { source: "/:locale(en|de)/blogs/:slug*", destination: "/:locale/blog/:slug*", permanent: true },
+      { source: "/blogs/:slug*", destination: "/en/blog/:slug*", permanent: true },
     ];
   },
 };
