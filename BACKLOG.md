@@ -20,6 +20,9 @@ A public, indexable free badge/credential maker on credsure.io to capture transa
 - **Open Qs for product:** does the platform expose a free/anonymous single-issue API? free-tier limits, abuse/rate controls, branding/watermark.
 - **Difficulty:** high-competition SERP (template giants) — months + backlinks; sequence AFTER the quick wins (LinkedIn page + definitional pillars).
 
+### 🅿️ Backlog — noindex internal-search (`?s=`) URLs (minor, GSC hygiene)
+GSC "Crawled – currently not indexed" surfaced `/de/?s=%7Bsearch_term_string%7D` — an internal site-search results URL with an unfilled `{search_term_string}` placeholder leaking into a crawlable URL. Fix: `noindex`/robots-disallow all `?s=` search URLs (EN + DE) and fix the placeholder leak (likely a `SearchAction` JSON-LD `target` or a search form action exposing the template token). Do NOT touch real `/de/*` content pages — German must stay indexable. Also a `/de/api-dokumentation` soft-404 (German API-docs route missing). Low priority; stops crawl budget going to junk.
+
 ---
 
 ## 🔎 Blog audit (2026-06-23)
