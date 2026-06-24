@@ -12,7 +12,6 @@ import logging
 
 from utils.auth import get_current_admin
 from utils.ai_content import recommend_topics, generate_blog_post
-from utils.blog_translate import auto_translate_missing as _auto_translate_missing
 from utils.sanitize import sanitize_blog_fields
 from utils.rate_limit import limiter
 from ai import feature_flags as ai_flags
@@ -95,9 +94,9 @@ async def admin_ai_generate(request: Request, body: GenerateRequest):
         "updated_at": now,
     }
 
-    # Auto-translate to German
-    doc = await _auto_translate_missing(doc, db=db)
-
+    # German is deferred: generated drafts are EN-only so generation returns
+    # fast (one LLM pass, not two). admin_update_blog backfills the German on
+    # the next Save/Publish in the editor.
     # Sanitize LLM-produced HTML on write — model output is untrusted input.
     doc = sanitize_blog_fields(doc)
 
@@ -343,7 +342,8 @@ async def _perform_generate_draft(db, body: "GenerateDraftRequest") -> dict:
         "created_at": now,
         "updated_at": now,
     }
-    doc = await _auto_translate_missing(doc, db=db)
+    # German is deferred to Save/Publish (admin_update_blog auto-translates),
+    # so generation returns fast instead of doing a second blocking LLM pass.
     # Sanitize LLM-produced HTML on write — model output is untrusted input.
     doc = sanitize_blog_fields(doc)
     await db.blog_posts.insert_one(doc)
