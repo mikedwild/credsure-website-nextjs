@@ -24,6 +24,12 @@ const nextConfig: NextConfig = {
       // the next-intl middleware, so these win over its locale-prefixing.
       { source: "/:locale(en|de)/blogs/:slug*", destination: "/:locale/blog/:slug*", permanent: true },
       { source: "/blogs/:slug*", destination: "/en/blog/:slug*", permanent: true },
+      // Recover backlink equity: the legacy /solutions/digital-badges URL (~50
+      // referring domains) otherwise lands (via locale middleware) on the
+      // noindexed alternate /en/solutions/digital-badges. Point it at the
+      // indexable canonical /en/digital-badges instead.
+      { source: "/solutions/digital-badges", destination: "/en/digital-badges", permanent: true },
+      { source: "/en/solutions/digital-badges", destination: "/en/digital-badges", permanent: true },
     ];
   },
 };
