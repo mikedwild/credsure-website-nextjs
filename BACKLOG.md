@@ -32,11 +32,15 @@ https://credsure.io/de/digitale-badges
 ### ✅ Done — blog internal-link sweep (2026-06-24)
 Audit: **120 of 131 posts had ZERO internal links** (median 0). Added **363 contextual links across 80 topical posts** (now ~4.5/post; blog went 11→91 posts with internal links) from a **verified 27-URL allow-list** (strict 200-AND-not-noindex; excluded the noindex `verifiable-credentials-explained`). Multi-agent proposals (anchor copied verbatim from each body) → strict-recheck every link + HTML-balance check → pilot 5 verified live → applied rest to `content_html`. Top targets: /en/demo (48), /features/blockchain (46), /features/verification (39). Artifacts: `content/seo-blog-2026/link-{proposals.json,review.md}`.
 
-### ✅ Done — first G1/G2 definitional pillars (2026-06-24)
-Competitor-gap content (grounded; rivals win whole pd1 clusters from single pillars). Published live (EN + auto-DE):
-- **NEW `/en/blog/what-are-technical-skills`** (~1,800 words) — targets the "technical skills" cluster (~30k, pd1: technical skills 12,100, technical proficiency 6,600) Accredible/Certifier own and we were absent for. Bridges to verifiable credentials. FAQ schema, 6 internal links.
-- **EXPANDED `/en/blog/what-is-a-digital-certificate`** → "What Is a Certificate? Definition & Types" (~2,090 words, was ~1,416) — broadened to own the "certificate definition" cluster (~30k, pd1: certificate definition 8,100, certifications meaning 8,100) while keeping all digital-certificate depth.
-**Next pillars (queued, roadmap "Competitor-gap REFRESH"):** "Digital Badging Explained" (badging meaning ~5k, pd1) · "How to Put Certifications on Resume" (2,900 + resume-skills ~33k) · CPD pillar (cpd meaning 2,900, pd1) · deep-optimize micro-credentials.
+### ✅ Done — competitor-gap definitional pillars, full batch (2026-06-24)
+Grounded competitor-gap content (rivals win whole pd1 clusters from single pillars). All published live (EN + auto-DE), FAQ schema, strict-link-checked, single H1:
+- **NEW `/en/blog/what-are-technical-skills`** (~1,800w) — "technical skills" cluster (~30k, pd1; Accredible/Certifier owned, we were absent).
+- **EXPANDED `/en/blog/what-is-a-digital-certificate`** → "What Is a Certificate? Definition & Types" (~2,090w, was ~1,416) — "certificate definition" cluster (~30k, pd1) + kept digital depth.
+- **NEW `/en/blog/digital-badging-explained`** (~1,420w) — "badging meaning" (4,400, pd1), framed as the practice.
+- **NEW `/en/blog/how-to-put-certifications-on-resume`** (~1,640w) — "certifications on resume" (2,900) + resume-skills (~33k).
+- **NEW `/en/blog/what-is-cpd`** (~1,420w) — "cpd meaning" (2,900, pd1) + cpd certification.
+- **EXPANDED `/en/blog/micro-credentials-and-its-benefits`** → "What Are Micro-Credentials?" (~1,770w, was ~976) — "micro credentials" (3,600, $8.56 CPC) + stackable.
+**Note:** the 5 NEW posts got auto-DE on create; the 2 EXPANDED posts' DE *bodies* are stale (PUT only auto-translates *missing* DE) — DE body re-translation is a follow-up (DE meta is current). Add the 5 new URLs to the GSC request-indexing list. **Still-open competitor gaps (lower priority):** professional-development head terms (very broad), free badge/cert *tool* (G5, needs product), G6 directory (product).
 
 ### 🅿️ Backlog — Free badge/certificate generator (NEEDS PRODUCT TEAM)
 A public, indexable free badge/credential maker on credsure.io to capture transactional volume ("badge maker" 2,900, "certificate generator" 2,900, "create a badge" 1,000) + funnel to signup. **Requires the product team / platform API** — this marketing repo has NO issuance/verification (blog/leads/admin only); issuance lives in the separate platform app.
