@@ -70,25 +70,53 @@ const decodeEntities = (s) =>
     .replace(/&#0?39;|&apos;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>');
 const toPlainText = (html) =>
   decodeEntities(html.replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
+// Heading text (EN + DE) that introduces an FAQ block. Broad on purpose so we
+// don't miss "FAQ", "FAQs", "Common Questions", "Q&A" or the German variants.
+const FAQ_HEADING_RE =
+  /(frequently\s+asked\s+questions|\bfaqs?\b|common\s+questions|questions?\s*&\s*answers|\bq\s*&\s*a\b|h\u00e4ufig\s+gestellte\s+fragen|h\u00e4ufige\s+fragen)/i;
+
 const buildFaqSchema = (html) => {
   if (!html) return null;
   const normalized = html.replace(/&nbsp;|&#160;|\u00a0/g, ' ');
-  const section = normalized.match(
-    /<h2[^>]*>\s*Frequently asked questions\s*<\/h2>([\s\S]*?)(?=<h2|$)/i,
-  );
-  if (!section) return null;
   const faqs = [];
-  const re = /<h3[^>]*>([\s\S]*?)<\/h3>([\s\S]*?)(?=<h3|$)/gi;
-  let m;
-  while ((m = re.exec(section[1])) !== null) {
-    const q = toPlainText(m[1]);
-    const a = toPlainText(m[2]);
+
+  // 1) A section under an FAQ <h2>; questions are the <h3>/<h4> inside it,
+  //    answers the text up to the next heading.
+  const h2Re = /<h2[^>]*>([\s\S]*?)<\/h2>([\s\S]*?)(?=<h2|$)/gi;
+  let s;
+  while ((s = h2Re.exec(normalized)) !== null) {
+    if (!FAQ_HEADING_RE.test(toPlainText(s[1]))) continue;
+    const qRe = /<h([34])[^>]*>([\s\S]*?)<\/h\1>([\s\S]*?)(?=<h[1-4]|$)/gi;
+    let m;
+    while ((m = qRe.exec(s[2])) !== null) {
+      const q = toPlainText(m[2]);
+      const a = toPlainText(m[3]);
+      if (q && a) faqs.push({ q, a });
+    }
+  }
+
+  // 2) Accordion fallback: <details><summary>Q</summary>A</details> anywhere.
+  const detailsRe =
+    /<details[^>]*>\s*<summary[^>]*>([\s\S]*?)<\/summary>([\s\S]*?)<\/details>/gi;
+  let d;
+  while ((d = detailsRe.exec(normalized)) !== null) {
+    const q = toPlainText(d[1]);
+    const a = toPlainText(d[2]);
     if (q && a) faqs.push({ q, a });
   }
-  if (faqs.length < 2) return null;
+
+  // Dedupe by question; FAQPage needs 2+ entries to be valid.
+  const seen = new Set();
+  const unique = faqs.filter((f) => {
+    const k = f.q.toLowerCase();
+    if (seen.has(k)) return false;
+    seen.add(k);
+    return true;
+  });
+  if (unique.length < 2) return null;
   return {
     '@type': 'FAQPage',
-    mainEntity: faqs.map((f) => ({
+    mainEntity: unique.map((f) => ({
       '@type': 'Question',
       name: f.q,
       acceptedAnswer: { '@type': 'Answer', text: f.a },
