@@ -4,7 +4,7 @@
       "badge": "Platform Overview",
       "title": "The Complete Digital",
       "titleHighlight": "Credentialing Platform",
-      "subtitle": "Everything you need to issue, manage, and verify digital certificates at scale",
+      "subtitle": "Everything you need to issue, manage, and verify digital credentials at scale",
       "coreFeatures": "Core Features",
       "automation": "Automation",
       "customization": "Customization",
@@ -865,8 +865,8 @@
       "keywords": "certificate templates, credential designs, certificate template gallery"
     },
     "platform": {
-      "title": "Platform | The Complete Digital Credentialing System",
-      "description": "Issue, manage, verify, and govern digital credentials end to end on one platform. Blockchain-backed, GDPR-compliant, built for scale.",
+      "title": "Digital Credentialing Platform to Issue & Verify | CredSure",
+      "description": "CredSure is a digital credentialing platform to issue, manage, and verify digital credentials end to end — blockchain-backed, GDPR-compliant, built for scale.",
       "keywords": "credentialing platform, digital certificate platform, credential management system"
     },
     "resources": {
