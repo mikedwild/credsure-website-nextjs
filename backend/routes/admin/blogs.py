@@ -55,7 +55,11 @@ async def admin_list_blogs(
         "scheduled_at": 1, "ai_generated": 1, "featured_image": 1, "read_time": 1,
         "view_count": 1, "last_viewed_at": 1,
     }
-    posts = await db.blog_posts.find(query, ADMIN_LIST_PROJECTION).sort("updated_at", -1).skip((page - 1) * limit).limit(limit).to_list(limit)
+    # Sort needs a unique tiebreaker (_id): many posts share an `updated_at`
+    # (bulk migration), and skip/limit over a non-unique sort is unstable in
+    # MongoDB — it repeats some rows and skips others across pages, so the full
+    # list was never enumerable (141 total but only ~94 reachable via paging).
+    posts = await db.blog_posts.find(query, ADMIN_LIST_PROJECTION).sort([("updated_at", -1), ("_id", 1)]).skip((page - 1) * limit).limit(limit).to_list(limit)
 
     # Per-post lead count attribution. Leads opt-in by sending the
     # `blog_slug` field (InlineBlogCTA does this); legacy leads w/o
