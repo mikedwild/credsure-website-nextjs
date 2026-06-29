@@ -122,7 +122,7 @@ export const useMegaMenuData = () => {
 
   const navItems = [
     { key: 'platform', labelKey: 'nav.platform', menuData: megaMenus.platform, width: '800px', cols: 4 },
-    { key: 'solutions', labelKey: 'nav.solutions', menuData: megaMenus.solutions, width: '800px', cols: 4 },
+    { key: 'solutions', labelKey: 'nav.solutions', menuData: megaMenus.solutions, width: '920px', cols: 4 },
   ];
 
   return { megaMenus, navItems };

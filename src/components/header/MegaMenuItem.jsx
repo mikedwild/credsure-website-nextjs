@@ -26,15 +26,15 @@ export const MegaMenuItem = ({ item, isFocused, onMouseEnter, onClick }) => {
           isFocused ? 'text-brand-purple' : 'text-brand-purple-light'
         }`}
       />
-      <div>
+      <div className="min-w-0">
         <div
-          className={`font-semibold text-sm transition-colors ${
+          className={`font-semibold text-sm break-words hyphens-auto transition-colors ${
             isFocused ? 'text-brand-purple' : 'text-slate-900 group-hover:text-brand-purple'
           }`}
         >
           {item.label}
         </div>
-        <div className="text-xs text-slate-500 mt-0.5">{item.description}</div>
+        <div className="text-xs text-slate-500 mt-0.5 break-words">{item.description}</div>
       </div>
     </a>
   );

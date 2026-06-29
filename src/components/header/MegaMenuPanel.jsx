@@ -66,8 +66,8 @@ export const MegaMenuPanel = ({
                 </div>
               );
             })()}
-            <h4 className="font-bold text-white mb-2 text-lg leading-tight">{menuData.featured.subtitle}</h4>
-            <p className="text-sm text-white/90 mb-4">{menuData.featured.description}</p>
+            <h4 className="font-bold text-white mb-2 text-lg leading-tight break-words hyphens-auto">{menuData.featured.subtitle}</h4>
+            <p className="text-sm text-white/90 mb-4 break-words">{menuData.featured.description}</p>
             <a
               href={menuData.featured.href}
               onClick={(e) => {
