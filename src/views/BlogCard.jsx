@@ -30,6 +30,7 @@ export const BlogCard = ({ post, isHero, index }) => {
             alt={post.title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             loading="lazy"
+            onError={(e) => { if (!e.currentTarget.dataset.fallback) { e.currentTarget.dataset.fallback = '1'; e.currentTarget.src = '/img/blog/heroes/default.webp'; } }}
           />
           <div className="absolute top-4 left-4 flex items-center gap-2">
             <span className="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold text-[#5B22D6]">{post.category}</span>
