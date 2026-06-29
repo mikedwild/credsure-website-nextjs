@@ -109,7 +109,7 @@ export async function GET(
       >
         <div style={{ position: "absolute", top: -180, right: -60, width: 600, height: 600, borderRadius: 9999, background: "rgba(255,255,255,0.06)" }} />
         <div style={{ position: "absolute", bottom: -120, right: 60, width: 400, height: 400, borderRadius: 9999, background: "rgba(255,255,255,0.05)" }} />
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%", height: "100%", padding: "0 64px" }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%", height: "100%", padding: "0 96px" }}>
           {noTitle ? (
             <div style={{ display: "flex" }} />
           ) : (
