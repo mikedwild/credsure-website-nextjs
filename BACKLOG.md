@@ -23,6 +23,17 @@ All 136 posts shared ~15 repeating Unsplash/Pexels stock photos (via `getPostIma
 
 ### 🅿️ TODO (Mike) — request indexing in GSC (2026-06-24)
 URL Inspection → Request Indexing for each (all verified 200 + indexable). ~10–15/day limit; also resubmit `https://credsure.io/sitemap.xml`.
+**A — new/expanded pillars this session (EN, priority); `verifiable-credentials-explained` was a 404 before publish so re-submitting is key:**
+```
+https://credsure.io/en/blog/what-are-technical-skills
+https://credsure.io/en/blog/what-is-a-digital-certificate
+https://credsure.io/en/blog/verifiable-credentials-explained
+https://credsure.io/en/blog/micro-credentials-and-its-benefits
+https://credsure.io/en/blog/how-to-put-certifications-on-resume
+https://credsure.io/en/blog/digital-badging-explained
+https://credsure.io/en/blog/what-is-cpd
+```
+**B — earlier list (some may already be done):**
 ```
 https://credsure.io/en/blog/best-digital-credentialing-platforms-2026
 https://credsure.io/en/blog/open-badges-explained
@@ -32,7 +43,8 @@ https://credsure.io/de/platform
 https://credsure.io/de/funktionen/blockchain
 https://credsure.io/de/digitale-badges
 ```
-(Earlier batch already covered: /en/platform, /en/features/{blockchain,credential-management,digital-certificates,verification}, /en/digital-badges, and the top EN blog pillars.) Then in ~2–4 weeks: Indexing → Pages → "Validate Fix" on error groups.
+**C — DE versions of the A pillars (after EN):** same slugs under `/de/blog/…` (all verified 200 + indexable 2026-06-29).
+(Earlier batch already covered: /en/platform, /en/features/{blockchain,credential-management,digital-certificates,verification}, /en/digital-badges, top EN blog pillars.) Then in ~2–4 weeks: Indexing → Pages → "Validate Fix" on error groups.
 
 ### ✅ Done — blog internal-link sweep (2026-06-24)
 Audit: **120 of 131 posts had ZERO internal links** (median 0). Added **363 contextual links across 80 topical posts** (now ~4.5/post; blog went 11→91 posts with internal links) from a **verified 27-URL allow-list** (strict 200-AND-not-noindex; excluded the noindex `verifiable-credentials-explained`). Multi-agent proposals (anchor copied verbatim from each body) → strict-recheck every link + HTML-balance check → pilot 5 verified live → applied rest to `content_html`. Top targets: /en/demo (48), /features/blockchain (46), /features/verification (39). Artifacts: `content/seo-blog-2026/link-{proposals.json,review.md}`.
