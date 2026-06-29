@@ -22,29 +22,12 @@ All 136 posts shared ~15 repeating Unsplash/Pexels stock photos (via `getPostIma
 **SUPERSEDED by dynamic route (5435a49):** on-site card/hero images now come from a **`/blog-hero/<slug>` next/og route** (Inter font, per-locale, edge-cached) — `getPostImage(post, lang)` returns `/blog-hero/<slug>?lang=<l>`. So **new posts auto-get a unique on-brand hero** (incl. correct German titles) with no pre-generation. `/blog-hero` is excluded from the next-intl proxy matcher; font at `src/app/blog-hero/[slug]/Inter-ExtraBold.ttf`. og:image still = existing `/api/og` card. **The 136 static `public/img/blog/heroes/*.webp` + the sharp generator are now legacy** (only `default.webp` still used as the onError fallback; the per-post webps + `featured_image` DB values are unreferenced and can be deleted in a cleanup). **Still-stock:** `CustomerStorySpotlight.jsx`; Customer-Success posts could use real photos/logos.
 
 ### 🅿️ TODO (Mike) — request indexing in GSC (2026-06-24)
-URL Inspection → Request Indexing for each (all verified 200 + indexable). ~10–15/day limit; also resubmit `https://credsure.io/sitemap.xml`.
-**A — new/expanded pillars this session (EN, priority); `verifiable-credentials-explained` was a 404 before publish so re-submitting is key:**
+URL Inspection → Request Indexing; ~10–15/day. **Status (2026-06-29): Mike submitted everything (A/B/C lists + sitemap) EXCEPT the two below.** Remaining pending:
 ```
-https://credsure.io/en/blog/what-are-technical-skills
-https://credsure.io/en/blog/what-is-a-digital-certificate
-https://credsure.io/en/blog/verifiable-credentials-explained
-https://credsure.io/en/blog/micro-credentials-and-its-benefits
-https://credsure.io/en/blog/how-to-put-certifications-on-resume
-https://credsure.io/en/blog/digital-badging-explained
-https://credsure.io/en/blog/what-is-cpd
+https://credsure.io/de/blog/digital-badging-explained
+https://credsure.io/de/blog/what-is-cpd
 ```
-**B — earlier list (some may already be done):**
-```
-https://credsure.io/en/blog/best-digital-credentialing-platforms-2026
-https://credsure.io/en/blog/open-badges-explained
-https://credsure.io/en/blog/best-credly-alternatives-for-badging
-https://credsure.io/en/blog/accredible-alternative
-https://credsure.io/de/platform
-https://credsure.io/de/funktionen/blockchain
-https://credsure.io/de/digitale-badges
-```
-**C — DE versions of the A pillars (after EN):** same slugs under `/de/blog/…` (all verified 200 + indexable 2026-06-29).
-(Earlier batch already covered: /en/platform, /en/features/{blockchain,credential-management,digital-certificates,verification}, /en/digital-badges, top EN blog pillars.) Then in ~2–4 weeks: Indexing → Pages → "Validate Fix" on error groups.
+Then in ~2–4 weeks: Indexing → Pages → "Validate Fix" on error groups.
 
 ### ✅ Done — blog internal-link sweep (2026-06-24)
 Audit: **120 of 131 posts had ZERO internal links** (median 0). Added **363 contextual links across 80 topical posts** (now ~4.5/post; blog went 11→91 posts with internal links) from a **verified 27-URL allow-list** (strict 200-AND-not-noindex; excluded the noindex `verifiable-credentials-explained`). Multi-agent proposals (anchor copied verbatim from each body) → strict-recheck every link + HTML-balance check → pilot 5 verified live → applied rest to `content_html`. Top targets: /en/demo (48), /features/blockchain (46), /features/verification (39). Artifacts: `content/seo-blog-2026/link-{proposals.json,review.md}`.
