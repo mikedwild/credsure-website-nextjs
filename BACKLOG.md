@@ -27,6 +27,7 @@ URL Inspection → Request Indexing; ~10–15/day. **Status (2026-06-29): Mike s
 https://credsure.io/de/blog/digital-badging-explained
 https://credsure.io/de/blog/what-is-cpd
 ```
+**Also (2026-06-29): the 6 DE product pages got new grounded titles/metas — worth re-submitting** so Google picks up the change: `/de/platform`, `/de/funktionen/{blockchain,zertifikatsverwaltung,digitale-zertifikate,verifizierung}`, `/de/digitale-badges`.
 Then in ~2–4 weeks: Indexing → Pages → "Validate Fix" on error groups.
 
 ### ✅ Done — blog internal-link sweep (2026-06-24)
