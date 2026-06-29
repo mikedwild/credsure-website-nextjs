@@ -11,7 +11,7 @@ const contentCards = [
     description: 'Latest insights on digital credentialing, industry trends, and best practices.',
     href: '/blog',
     image: '/img/resources/blog.webp',
-    badge: '123 Articles',
+    badge: '130+ Articles',
     color: 'from-purple-500 to-indigo-600',
   },
   {
