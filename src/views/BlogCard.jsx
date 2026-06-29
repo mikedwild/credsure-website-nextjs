@@ -26,7 +26,7 @@ export const BlogCard = ({ post, isHero, index }) => {
       <Link to={`/blog/${post.slug}`} className="block h-full">
         <div className={`relative overflow-hidden ${isHero ? 'aspect-[21/9]' : 'aspect-video'}`}>
           <img
-            src={getPostImage(post)}
+            src={getPostImage(post, i18n.language)}
             alt={post.title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             loading="lazy"

@@ -160,7 +160,7 @@ export const BlogPost = ({ initialPost = null }) => {
 
   if (!postMeta) return null;
 
-  const image = getPostImage(postMeta);
+  const image = getPostImage(postMeta, i18n.language);
   // The API/DB is the single source of truth for translated content: the
   // backend already serves title/excerpt in the requested locale (title_de etc).
   // (Previously these were re-translated from the static blog.json catalog,

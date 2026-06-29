@@ -1,14 +1,14 @@
-// Per-post branded hero images live in /public/img/blog/heroes/<slug>.webp
-// (CredSure gradient + topic icon + post title, generated from the post list).
-// Replaces the old shared Unsplash/Pexels stock set, which repeated the same
-// few photos across many posts and hotlinked external CDNs. Falls back to a
-// branded default (BlogCard/BlogPost also guard with onError) for any post
-// whose hero file hasn't been generated yet.
+// Per-post branded hero, rendered on the fly by the /blog-hero/<slug> route
+// (next/og: CredSure gradient + topic icon + the post's title, in Inter, per
+// locale). Replaces the old repeating Unsplash/Pexels stock set. Every post —
+// including new ones — gets a unique on-brand hero automatically; the image is
+// edge-cached. `HERO_DEFAULT` is the static onError fallback if the route fails.
 export const HERO_DEFAULT = '/img/blog/heroes/default.webp';
 
-export const getPostImage = (post) => {
-  const slug = post && post.slug ? String(post.slug).toLowerCase() : '';
-  return slug ? `/img/blog/heroes/${slug}.webp` : HERO_DEFAULT;
+export const getPostImage = (post, lang = 'en') => {
+  const slug = post && post.slug ? encodeURIComponent(String(post.slug)) : '';
+  const l = lang === 'de' ? 'de' : 'en';
+  return slug ? `/blog-hero/${slug}?lang=${l}` : HERO_DEFAULT;
 };
 
 export const formatDate = (dateStr, lang = 'en') => {
