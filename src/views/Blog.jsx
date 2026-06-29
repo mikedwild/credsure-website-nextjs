@@ -289,7 +289,7 @@ export const Blog = ({ initialPosts = null }) => {
                   onChange={(e) => setNewsletterEmail(e.target.value)}
                   placeholder={t('pages.blog.emailPlaceholder', 'Enter your email')}
                   data-testid="blog-newsletter-email"
-                  className="flex-1 px-6 py-3 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50"
+                  className="flex-1 px-6 py-3 rounded-xl bg-white text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50"
                 />
                 <button
                   type="submit"
