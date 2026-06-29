@@ -236,7 +236,7 @@ export const BlogPost = ({ initialPost = null }) => {
 
       {/* Hero */}
       <div className="relative bg-gradient-to-br from-[#5B22D6] to-[#3F2BD9] overflow-hidden">
-        <img src={image} alt={postMeta.title} className="absolute inset-0 w-full h-full object-cover opacity-40" loading="eager" fetchPriority="high" />
+        <img src={`${image}&bg=1`} alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover opacity-40" loading="eager" fetchPriority="high" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#5B22D6]/90 via-[#5B22D6]/50 to-[#3F2BD9]/30" />
         <div className="relative container mx-auto px-6 lg:px-12 py-20 md:py-28">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="max-w-5xl mx-auto text-center text-white">

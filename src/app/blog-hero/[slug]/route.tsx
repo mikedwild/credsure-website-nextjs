@@ -77,7 +77,12 @@ export async function GET(
   { params }: { params: Promise<{ slug: string }> }
 ) {
   const { slug } = await params;
-  const lang = new URL(request.url).searchParams.get("lang") === "de" ? "de" : "en";
+  const sp = new URL(request.url).searchParams;
+  const lang = sp.get("lang") === "de" ? "de" : "en";
+  // `bg=1` renders a title-less variant (gradient + icon only) — used as the
+  // faded post-page hero background, where the page already shows the H1, so the
+  // baked title would just duplicate it.
+  const noTitle = sp.get("bg") === "1";
 
   const post = await getBlogPost(slug, lang).catch(() => null);
   const title = (post?.title || slug.replace(/-/g, " ")).trim();
@@ -105,9 +110,13 @@ export async function GET(
         <div style={{ position: "absolute", top: -180, right: -60, width: 600, height: 600, borderRadius: 9999, background: "rgba(255,255,255,0.06)" }} />
         <div style={{ position: "absolute", bottom: -120, right: 60, width: 400, height: 400, borderRadius: 9999, background: "rgba(255,255,255,0.05)" }} />
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%", height: "100%", padding: "0 64px" }}>
-          <div style={{ display: "flex", color: "#ffffff", fontWeight: 800, fontSize, lineHeight: 1.12, letterSpacing: -1.5, maxWidth: 700 }}>
-            {title}
-          </div>
+          {noTitle ? (
+            <div style={{ display: "flex" }} />
+          ) : (
+            <div style={{ display: "flex", color: "#ffffff", fontWeight: 800, fontSize, lineHeight: 1.12, letterSpacing: -1.5, maxWidth: 700 }}>
+              {title}
+            </div>
+          )}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={iconUri} width={170} height={170} alt="" />
         </div>
