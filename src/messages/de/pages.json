@@ -720,8 +720,8 @@
       "keywords": "CredSure Hilfe, Credential-Plattform Support, FAQ digitale Zertifikate"
     },
     "digitalBadges": {
-      "title": "Digitale Badges | Fähigkeiten & Leistungen Anerkennen",
-      "description": "Verifizierbare digitale Badges für Micro-Credentials und Fähigkeiten ausstellen. Teilbar auf LinkedIn und sozialen Medien.",
+      "title": "Digitale Badges & Open Badges ausstellen | CredSure",
+      "description": "Stellen Sie verifizierbare digitale Badges und Open Badges für Fähigkeiten und Leistungen aus – teilbar auf LinkedIn und sofort online verifizierbar.",
       "keywords": "digitale Badges, Micro-Credentials, Skill-Badges, verifizierbare Badges"
     },
     "compareAccredible": {
@@ -735,13 +735,13 @@
       "keywords": "CredSure vs Credly, Credly Alternative, Badge-Plattform Vergleich"
     },
     "digitalCertificates": {
-      "title": "Digitale Zertifikate | Blockchain-Verifiziert",
-      "description": "Fälschungssichere digitale Zertifikate mit Blockchain-Verifizierung ausstellen. Anpassbare Vorlagen und Massenausstellung.",
+      "title": "Digitale Zertifikate erstellen & verifizieren | CredSure",
+      "description": "Digitale Zertifikate erstellen, ausstellen und verifizieren – mit Markenvorlagen, Massenausstellung und fälschungssicherer Blockchain-Verifizierung.",
       "keywords": "digitale Zertifikate, Blockchain-Zertifikate, verifizierbare Zertifikate"
     },
     "blockchain": {
-      "title": "Blockchain-Verifizierung | Fälschungssichere Credentials",
-      "description": "Credentials mit Blockchain-Technologie sichern. Unveränderlich, sofort verifizierbar und betrugssicher.",
+      "title": "Blockchain für digitale Zertifikate | CredSure",
+      "description": "Sichern Sie digitale Zertifikate mit Blockchain: unveränderlich, fälschungssicher und in Sekunden verifizierbar – ganz ohne Konto für Prüfende.",
       "keywords": "Blockchain-Verifizierung, fälschungssichere Credentials, unveränderliche Zertifikate"
     },
     "sharing": {
@@ -865,8 +865,8 @@
       "keywords": "Zertifikatsvorlagen, Credential-Designs, Vorlagengalerie"
     },
     "platform": {
-      "title": "Plattform | Das komplette System für digitale Zeugnisse",
-      "description": "Zertifikate durchgängig ausstellen, verwalten, verifizieren und steuern – auf einer Plattform. Blockchain-gestützt, DSGVO-konform, skalierbar.",
+      "title": "Plattform für digitale Zertifikate & Badges | CredSure",
+      "description": "CredSure ist die Plattform, um digitale Zertifikate und Badges durchgängig auszustellen, zu verwalten und zu verifizieren – blockchain-gestützt, DSGVO-konform.",
       "keywords": "Zertifikatsplattform, Plattform für digitale Zeugnisse, Credential-Management"
     },
     "resources": {
@@ -888,13 +888,13 @@
       "keywords": "Plattform-Funktionen, Credential-Workflow"
     },
     "verification": {
-      "title": "Zertifikatsprüfung online | Zertifikate sofort verifizieren",
+      "title": "Zertifikat verifizieren: Echtheit online prüfen | CredSure",
       "description": "Verifizieren Sie ein Zertifikat oder einen Berechtigungsnachweis online in Sekunden – über eine öffentliche, blockchain-verankerte Seite, ohne Login.",
       "keywords": "Zertifikat online verifizieren, Zertifikatsprüfung online, Zertifikat verifizieren, digitale Verifizierung"
     },
     "credentialManagement": {
-      "title": "Zertifikatsverwaltung | Ausstellen & Verwalten im großen Stil",
-      "description": "Zertifikate erstellen, organisieren, widerrufen und nachverfolgen – alles in einem Dashboard.",
+      "title": "Zertifikatsverwaltung: ausstellen & verwalten | CredSure",
+      "description": "Verwalten Sie den gesamten Lebenszyklus Ihrer Zertifikate aus einem Dashboard: ausstellen, organisieren, erneuern, widerrufen und nachverfolgen.",
       "keywords": "Zertifikatsverwaltung, digitale Zertifikate verwalten, Dashboard"
     },
     "recipientWall": {
