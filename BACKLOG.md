@@ -21,6 +21,9 @@ All 136 posts shared ~15 repeating Unsplash/Pexels stock photos (via `getPostIma
 
 **SUPERSEDED by dynamic route (5435a49):** on-site card/hero images now come from a **`/blog-hero/<slug>` next/og route** (Inter font, per-locale, edge-cached) — `getPostImage(post, lang)` returns `/blog-hero/<slug>?lang=<l>`. So **new posts auto-get a unique on-brand hero** (incl. correct German titles) with no pre-generation. `/blog-hero` is excluded from the next-intl proxy matcher; font at `src/app/blog-hero/[slug]/Inter-ExtraBold.ttf`. og:image still = existing `/api/og` card. **The 136 static `public/img/blog/heroes/*.webp` + the sharp generator are now legacy** (only `default.webp` still used as the onError fallback; the per-post webps + `featured_image` DB values are unreferenced and can be deleted in a cleanup). **Still-stock:** `CustomerStorySpotlight.jsx`; Customer-Success posts could use real photos/logos.
 
+### ℹ️ GSC property setup — settled (2026-06-30)
+Two properties exist: **`credsure.io` (Domain, DNS-verified)** and **`https://credsure.io/` (URL-prefix)**. They show different click totals (155 vs 441) **not** because of a bug — the Domain property was verified ~28 Apr so it lacks the Mar–Apr history the prefix property has, and the prefix property excludes `www`/other subdomains. **Decision: report from the Domain property as the single source of truth** (most complete — all subdomains + http/https); keep the prefix property for older look-back only. Do **not** delete the prefix property (deleting it loses the extra month of history; GSC won't backfill). Always match date ranges before comparing the two.
+
 ### 🅿️ TODO (Mike) — request indexing in GSC (2026-06-24)
 URL Inspection → Request Indexing; ~10–15/day. **Status (2026-06-29): Mike submitted everything (A/B/C lists + sitemap) EXCEPT the two below.** Remaining pending:
 ```
@@ -29,6 +32,9 @@ https://credsure.io/de/blog/what-is-cpd
 ```
 **Also (2026-06-29): the 6 DE product pages got new grounded titles/metas — worth re-submitting** so Google picks up the change: `/de/platform`, `/de/funktionen/{blockchain,zertifikatsverwaltung,digitale-zertifikate,verifizierung}`, `/de/digitale-badges`.
 Then in ~2–4 weeks: Indexing → Pages → "Validate Fix" on error groups.
+
+### ✅ Resolved (stale flag) — `/en/blog/verifiable-credentials-explained` is now indexable (2026-06-30)
+Investigated the old NOINDEX/soft-404 flag (from the 2026-06-24 meta sweep): **it's stale — the page is fully indexable now.** Verified live EN + DE: HTTP **200**, **no** `noindex` meta tag, **no** `X-Robots-Tag` header, self-referential canonical, present in `/sitemap.xml` with en/de/x-default hreflang, full body served by the API. Almost certainly was draft/empty-body at audit time; publishing + the body restore + the `notFound()`-only-on-null fix cleared it. **Action: just submit it to GSC** (EN `https://credsure.io/en/blog/verifiable-credentials-explained` + DE `/de/...`) alongside the other pending URLs — no code fix needed. (It can also be re-added to the internal-link allow-list now.)
 
 ### ✅ Done — blog internal-link sweep (2026-06-24)
 Audit: **120 of 131 posts had ZERO internal links** (median 0). Added **363 contextual links across 80 topical posts** (now ~4.5/post; blog went 11→91 posts with internal links) from a **verified 27-URL allow-list** (strict 200-AND-not-noindex; excluded the noindex `verifiable-credentials-explained`). Multi-agent proposals (anchor copied verbatim from each body) → strict-recheck every link + HTML-balance check → pilot 5 verified live → applied rest to `content_html`. Top targets: /en/demo (48), /features/blockchain (46), /features/verification (39). Artifacts: `content/seo-blog-2026/link-{proposals.json,review.md}`.
